@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Email Reply Generator (Free & Instant) | CaptionStudio</title>
+<meta name="description" content="Write better email replies instantly. Paste any email and generate professional responses in seconds. Free tool, no login required.">
+
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://captionstudio.in/tools/email-reply-generator.html">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Free Email Reply Generator">
+<meta property="og:description" content="Generate professional email replies instantly.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=DM+Sans&display=swap" rel="stylesheet">
+
+<style>
+body{font-family:'DM Sans',sans-serif;background:#faf9f6;margin:0;color:#111}
+h1,h2{font-family:'Syne'}
+
+nav{padding:15px 5%;display:flex;justify-content:space-between;background:#fff;border-bottom:1px solid #eee}
+
+.container{max-width:900px;margin:40px auto;padding:0 5%}
+
+textarea,select{
+width:100%;padding:14px;margin-top:10px;border:1px solid #eee;background:#fff;
+}
+
+button{
+width:100%;padding:14px;margin-top:10px;border:none;background:#111;color:#fff;cursor:pointer;
+}
+button:hover{background:#ff4d00}
+
+.actions{display:flex;gap:8px}
+.actions button{flex:1;background:#222}
+
+.result{
+background:#fff;padding:14px;margin-top:10px;border:1px solid #eee;
+position:relative;
+}
+
+.copy{
+position:absolute;top:10px;right:10px;
+padding:6px 10px;font-size:12px;background:#eee;border:none;cursor:pointer;
+}
+
+footer{background:#000;color:#fff;text-align:center;padding:20px;margin-top:40px}
+
+@media(max-width:600px){
+h1{font-size:24px}
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<b>CaptionStudio</b>
+<div>
+<a href="../index.html">Home</a>
+</div>
+</nav>
+
+<div class="container">
+
+<h1>Email Reply Generator</h1>
+<p style="color:#666;">Write better replies in seconds</p>
+
+<textarea id="email" placeholder="Paste the email here..."></textarea>
+
+<select id="tone">
+<option value="professional">Professional</option>
+<option value="friendly">Friendly</option>
+<option value="formal">Formal</option>
+<option value="assertive">Assertive</option>
+</select>
+
+<button onclick="generate()">Generate Replies</button>
+
+<div class="actions">
+<button onclick="more()">🔄 Regenerate</button>
+<button onclick="clearAll()">❌ Clear</button>
+</div>
+
+<div id="results"></div>
+
+</div>
+
+<!-- SEO TEXT -->
+<div class="container">
+<h2>Email Reply Writing Tool</h2>
+<p>This tool helps you quickly write clear and professional email replies. It works for work emails, client communication and daily conversations.</p>
+</div>
+
+<!-- PRIVACY -->
+<div class="container">
+<h3>Privacy</h3>
+<p>Your text stays in your browser. Nothing is stored or tracked.</p>
+</div>
+
+<footer>© 2026 CaptionStudio</footer>
+
+<script>
+
+let lastEmail="", lastTone="";
+
+function generate(){
+
+let email=document.getElementById('email').value.trim();
+let tone=document.getElementById('tone').value;
+
+if(!email){alert("Enter email");return;}
+
+lastEmail=email;
+lastTone=tone;
+
+document.getElementById('results').innerHTML="Generating...";
+
+setTimeout(makeReplies,800);
+}
+
+function more(){
+if(!lastEmail){alert("Generate first");return;}
+makeReplies();
+}
+
+function makeReplies(){
+
+let email=lastEmail;
+let tone=lastTone;
+
+let openers=[
+"Hi,",
+"Hello,",
+"Hi there,"
+];
+
+let closings=[
+"Best regards,",
+"Thanks,",
+"Kind regards,"
+];
+
+let bodyTypes=[
+"Thanks for your email. I will review this and get back to you shortly.",
+"I appreciate your message. I will look into this and respond soon.",
+"Got your email. I will check and update you.",
+"Thanks for reaching out. I will follow up shortly."
+];
+
+// variation
+let replies=[];
+
+for(let i=0;i<3;i++){
+let text = `${random(openers)}
+
+${random(bodyTypes)}
+
+${random(closings)}`;
+replies.push(text);
+}
+
+show(replies);
+}
+
+function show(list){
+
+let results=document.getElementById('results');
+results.innerHTML="";
+
+list.forEach(r=>{
+
+let div=document.createElement("div");
+div.className="result";
+
+div.innerHTML=`
+<div>${r}</div>
+<button class="copy">Copy</button>
+`;
+
+div.querySelector('.copy').onclick = ()=>{
+navigator.clipboard.writeText(r);
+div.querySelector('.copy').innerText="✓";
+setTimeout(()=>div.querySelector('.copy').innerText="Copy",1500);
+};
+
+results.appendChild(div);
+
+});
+}
+
+function random(arr){
+return arr[Math.floor(Math.random()*arr.length)];
+}
+
+function clearAll(){
+document.getElementById('results').innerHTML="";
+}
+
+</script>
+
+</body>
+</html>
