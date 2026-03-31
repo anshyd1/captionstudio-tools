@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Hashtag Generator | Instagram, Reels, TikTok | CaptionStudio</title>
+<meta name="description" content="Generate trending and niche hashtags for Instagram, Reels, and TikTok instantly. Free, fast, and easy to use hashtag generator for more reach.">
+<link rel="canonical" href="https://captionstudio.in/tools/hashtag-generator.html">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#faf9f6;
+--card:#fff;
+--text:#0a0a0a;
+--border:#eee;
+--accent:#000;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:'DM Sans',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height: 1.5;
+}
+
+h1,h2,h3{font-family:'Syne'}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:15px 5%;
+background:#fff;
+border-bottom:1px solid var(--border);
+}
+nav a{text-decoration:none;color:#333;margin-left:15px;font-size:14px}
+
+.container{
+max-width:800px;
+margin:40px auto;
+padding:0 5%;
+}
+
+textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+border:1px solid var(--border);
+border-radius:8px;
+background:#fff;
+font-size:15px;
+font-family:inherit;
+outline:none;
+height: 100px;
+resize: vertical;
+}
+
+.main-btn{
+width:100%;
+padding:14px;
+margin-top:15px;
+border:none;
+background:#000;
+color:#fff;
+font-weight:600;
+cursor:pointer;
+border-radius:8px;
+transition:0.2s;
+font-size:16px;
+}
+
+.main-btn:hover{ opacity:0.8; }
+
+.actions{
+display:flex;
+gap:8px;
+margin-top:10px;
+}
+
+.sub-btn{
+flex:1;
+padding:12px;
+background:#f0f0f0;
+color:#000;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+.result{
+background:var(--card);
+padding:20px;
+margin-top:15px;
+border:1px solid var(--border);
+border-radius:10px;
+font-size:15px;
+color:#333;
+word-wrap: break-word;
+}
+
+.copy-box{
+display: flex;
+justify-content: flex-end;
+margin-top: 10px;
+}
+
+.copy{
+padding:6px 12px;
+font-size:12px;
+background:#000;
+color:#fff;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:#000;
+color:#fff;
+text-align:center;
+padding:30px;
+margin-top:60px;
+font-size:14px;
+}
+
+@media(max-width:600px){
+h1{font-size:28px}
+.container{margin:20px auto}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b>CaptionStudio</b>
+<div>
+<a href="../index.html">Home</a>
+<a href="index.html">Tools</a>
+</div>
+</nav>
+
+<div class="container">
+<h1>Hashtag Generator</h1>
+<p style="color:#666;margin-top:6px;">Find the best trending hashtags for your content reach.</p>
+
+<textarea id="input" placeholder="Enter keywords e.g. fitness, travel, photography..."></textarea>
+
+<button class="main-btn" onclick="generate()">Generate Hashtags</button>
+
+<div class="actions">
+<button class="sub-btn" onclick="generate()">🔄 More</button>
+<button class="sub-btn" onclick="clearAll()">❌ Clear</button>
+</div>
+
+<div id="results"></div>
+</div>
+
+<div class="container" style="border-top:1px solid #eee; padding-top:30px;">
+<h2>How to grow with Hashtags?</h2>
+<p>Don't just use popular hashtags. Mix them with niche ones related to your specific topic. This tool provides a balanced set for better engagement.</p>
+</div>
+
+<footer>
+© 2026 CaptionStudio | Free AI Tools
+</footer>
+
+<script>
+let lastInput = "";
+
+function generate(){
+    let input = document.getElementById("input").value.trim();
+    if(!input){
+        alert("Pehle keyword likhein!");
+        return;
+    }
+    lastInput = input;
+    document.getElementById("results").innerHTML = "<p style='text-align:center;padding:20px;'>Searching hashtags...</p>";
+    setTimeout(makeTags, 600);
+}
+
+function makeTags(){
+    let words = lastInput.toLowerCase().replace(/,/g, "").split(" ");
+    let viralBase = ["viral", "explorepage", "trending", "instagood", "foryou", "reelsindia", "explore", "reelsitfeelit", "fyp", "photography"];
+    
+    let resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    for(let i=0; i<3; i++){
+        let finalSet = [];
+        
+        // Add niche tags based on input
+        words.forEach(w => {
+            if(w.length > 2) {
+                finalSet.push("#" + w);
+                finalSet.push("#" + w + "life");
+                finalSet.push("#" + w + "gram");
+                finalSet.push("#" + w + "style");
+            }
+        });
+
+        // Add viral base tags
+        for(let j=0; j<10; j++){
+            let randomViral = viralBase[Math.floor(Math.random() * viralBase.length)];
+            if(!finalSet.includes("#" + randomViral)) {
+                finalSet.push("#" + randomViral);
+            }
+        }
+
+        // Shuffle and take 20
+        let shuffled = finalSet.sort(() => 0.5 - Math.random()).slice(0, 20);
+        let tagString = shuffled.join(" ");
+
+        let div = document.createElement("div");
+        div.className = "result";
+        div.innerHTML = `
+            <div>${tagString}</div>
+            <div class="copy-box">
+                <button class="copy" onclick="copyText(this, '${tagString}')">Copy Hashtags</button>
+            </div>
+        `;
+        resultsDiv.appendChild(div);
+    }
+}
+
+function copyText(btn, text) {
+    navigator.clipboard.writeText(text).then(() => {
+        btn.innerText = "✓ Copied";
+        btn.style.background = "#28a745";
+        setTimeout(() => {
+            btn.innerText = "Copy Hashtags";
+            btn.style.background = "#000";
+        }, 1500);
+    });
+}
+
+function clearAll(){
+    document.getElementById("input").value = "";
+    document.getElementById("results").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
