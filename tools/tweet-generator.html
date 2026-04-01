@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Tweet Generator | Viral Twitter (X) Posts | CaptionStudio</title>
+<meta name="description" content="Generate viral tweets and X posts instantly. Create engaging hooks, threads, and motivational tweets for growth. Free tool for creators.">
+<link rel="canonical" href="https://captionstudio.in/tools/tweet-generator.html">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#faf9f6;
+--card:#fff;
+--text:#0a0a0a;
+--border:#eee;
+--accent:#000;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:'DM Sans',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height: 1.5;
+}
+
+h1,h2,h3{font-family:'Syne'}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:15px 5%;
+background:#fff;
+border-bottom:1px solid var(--border);
+}
+nav a{text-decoration:none;color:#333;margin-left:15px;font-size:14px}
+
+.container{
+max-width:800px;
+margin:40px auto;
+padding:0 5%;
+}
+
+textarea{
+width:100%;
+padding:14px;
+margin-top:12px;
+border:1px solid var(--border);
+border-radius:8px;
+background:#fff;
+font-size:15px;
+font-family:inherit;
+outline:none;
+height: 90px;
+resize: none;
+}
+
+.main-btn{
+width:100%;
+padding:14px;
+margin-top:15px;
+border:none;
+background:#000;
+color:#fff;
+font-weight:600;
+cursor:pointer;
+border-radius:8px;
+transition:0.2s;
+font-size:16px;
+}
+
+.main-btn:hover{ opacity:0.8; }
+
+.actions{
+display:flex;
+gap:8px;
+margin-top:10px;
+}
+
+.sub-btn{
+flex:1;
+padding:12px;
+background:#f0f0f0;
+color:#000;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+.result{
+background:var(--card);
+padding:20px;
+margin-top:15px;
+border:1px solid var(--border);
+border-radius:10px;
+font-size:16px;
+color:#222;
+line-height: 1.5;
+}
+
+.copy-box{
+display: flex;
+justify-content: flex-end;
+margin-top: 10px;
+}
+
+.copy{
+padding:6px 12px;
+font-size:12px;
+background:#000;
+color:#fff;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+background:#000;
+color:#fff;
+text-align:center;
+padding:30px;
+margin-top:60px;
+font-size:14px;
+}
+
+@media(max-width:600px){
+h1{font-size:28px}
+.container{margin:20px auto}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<b>CaptionStudio</b>
+<div>
+<a href="../index.html">Home</a>
+<a href="index.html">Tools</a>
+</div>
+</nav>
+
+<div class="container">
+<h1>Tweet Generator</h1>
+<p style="color:#666;margin-top:6px;">Create engaging Twitter (X) posts that drive engagement.</p>
+
+<textarea id="topicInput" placeholder="Enter your topic (e.g. success, coding, life hacks, money)"></textarea>
+
+<button class="main-btn" onclick="generate()">Generate Viral Tweets</button>
+
+<div class="actions">
+<button class="sub-btn" onclick="generate()">🔄 Give Me More</button>
+<button class="sub-btn" onclick="clearAll()">❌ Clear</button>
+</div>
+
+<div id="results"></div>
+</div>
+
+<div class="container" style="border-top:1px solid #eee; padding-top:30px;">
+<h2>Why Twitter Hooks Matter?</h2>
+<p>On X, the first line determines if someone will read your post. Our tool focuses on high-performing hooks that are proven to get likes and retweets.</p>
+</div>
+
+<footer>
+© 2026 CaptionStudio | Free AI Tools
+</footer>
+
+<script>
+let lastTopic = "";
+
+function generate(){
+    let topic = document.getElementById("topicInput").value.trim();
+    if(!topic){
+        alert("Pehle topic likhein!");
+        return;
+    }
+    lastTopic = topic;
+    document.getElementById("results").innerHTML = "<p style='text-align:center;padding:20px;'>Drafting tweets...</p>";
+    setTimeout(makeTweets, 600);
+}
+
+function makeTweets(){
+    let topic = lastTopic;
+    let resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    // Viral Twitter Hook Formats
+    let formats = [
+        `${topic} is the most underrated skill in 2026.\n\nHere’s why you should start today:`,
+        `Unpopular opinion: Most people are doing ${topic} completely wrong.`,
+        `I spent 100+ hours studying ${topic} so you don't have to.\n\nHere are 5 things I learned:`,
+        `If you’re still struggling with ${topic}, read this. It will change your perspective.`,
+        `How to master ${topic} without losing your mind (Thread):`,
+        `99% of people fail at ${topic} because of this one simple mistake.`,
+        `The secret to ${topic} isn’t hard work. It’s consistency.`,
+        `Stop waiting for the perfect time for ${topic}. The time is now.`,
+        `${topic} is 10% talent and 90% systems. Build better systems.`,
+        `If you can't explain ${topic} simply, you don't understand it well enough.`
+    ];
+
+    // Shuffle and pick 3 unique tweets
+    let shuffled = formats.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    shuffled.forEach(tweet => {
+        let div = document.createElement("div");
+        div.className = "result";
+        div.innerHTML = `
+            <div>${tweet}</div>
+            <div class="copy-box">
+                <button class="copy" onclick="copyText(this, \`${tweet.replace(/\n/g, '\\n')}\`)">Copy Tweet</button>
+            </div>
+        `;
+        resultsDiv.appendChild(div);
+    });
+}
+
+function copyText(btn, text) {
+    navigator.clipboard.writeText(text).then(() => {
+        btn.innerText = "✓ Copied";
+        btn.style.background = "#28a745";
+        setTimeout(() => {
+            btn.innerText = "Copy Tweet";
+            btn.style.background = "#000";
+        }, 1500);
+    });
+}
+
+function clearAll(){
+    document.getElementById("topicInput").value = "";
+    document.getElementById("results").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
