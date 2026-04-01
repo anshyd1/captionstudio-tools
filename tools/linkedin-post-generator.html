@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free AI LinkedIn Post Generator | Professional & Viral Content | CaptionStudio</title>
+<meta name="description" content="Generate thousands of unique LinkedIn posts instantly. Professional storytelling AI tool for career growth, leadership, and personal branding.">
+<link rel="canonical" href="https://captionstudio.in/tools/linkedin-post-generator.html">
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{ --bg:#faf9f6; --card:#fff; --text:#0a0a0a; --border:#eee; --accent:#000; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{ font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); line-height: 1.6; }
+h1,h2,h3{font-family:'Syne'}
+
+nav{ display:flex; justify-content:space-between; align-items: center; padding:15px 5%; background:#fff; border-bottom:1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+nav a{text-decoration:none;color:#333;margin-left:15px;font-size:14px; font-weight: 600;}
+
+.container{ max-width:800px; margin:40px auto; padding:0 5%; }
+
+.hero-section{ text-align: center; margin-bottom: 30px; }
+.hero-section h1{ font-size: 2.2rem; margin-bottom: 10px; }
+
+.tool-box{ background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 15px rgba(0,0,0,0.03); }
+
+textarea{ width:100%; padding:15px; margin-top:12px; border:1px solid var(--border); border-radius:8px; font-size:16px; outline:none; height: 100px; }
+
+.main-btn{ width:100%; padding:16px; margin-top:15px; border:none; background:#000; color:#fff; font-weight:600; cursor:pointer; border-radius:8px; font-size:16px; }
+
+.actions{ display:flex; gap:10px; margin-top:10px; }
+.sub-btn{ flex:1; padding:12px; background:#f0f0f0; border:none; border-radius:8px; cursor:pointer; font-weight:600; }
+
+.result-card{ background:var(--card); padding:25px; margin-top:20px; border:1px solid var(--border); border-radius:12px; white-space: pre-line; position: relative; }
+
+.copy-btn{ margin-top: 15px; padding:10px; background:#000; color:#fff; border:none; border-radius:6px; cursor:pointer; width: 100%; font-weight: 500; }
+
+footer{ background:#000; color:#fff; text-align:center; padding:40px 5%; margin-top:60px; }
+
+@media(max-width:600px){ .hero-section h1{ font-size: 1.8rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+<b>CaptionStudio</b>
+<div><a href="../index.html">Home</a> <a href="index.html">Tools</a></div>
+</nav>
+
+<main class="container">
+    <header class="hero-section">
+        <h1>LinkedIn Post Generator</h1>
+        <p>Infinite variations for your professional growth.</p>
+    </header>
+
+    <div class="tool-box">
+        <textarea id="topicInput" placeholder="Enter topic: Career, AI, Marketing, Struggle..."></textarea>
+        <button class="main-btn" onclick="generate()">Generate Viral Posts</button>
+        <div class="actions">
+            <button class="sub-btn" onclick="generate()">🔄 New Variation</button>
+            <button class="sub-btn" onclick="clearAll()">❌ Clear</button>
+        </div>
+    </div>
+
+    <div id="results"></div>
+</main>
+
+<footer>© 2026 CaptionStudio | SEO Optimized AI Tools</footer>
+
+<script>
+const hooks = [
+    "Unpopular opinion: [TOPIC] is not about luck.",
+    "I've spent 5 years learning about [TOPIC], here is the truth:",
+    "Stop doing [TOPIC] the old way. Do this instead.",
+    "Most people fail at [TOPIC] because of one simple reason.",
+    "What nobody tells you about [TOPIC]...",
+    "If I had to start my journey in [TOPIC] from scratch, I'd do this:",
+    "The secret to mastering [TOPIC] in 2026 is simple.",
+    "I used to struggle with [TOPIC] until I realized this:"
+];
+
+const bodies = [
+    "It’s easy to get overwhelmed, but consistency beats intensity every single time.",
+    "Don't compare your Chapter 1 to someone else's Chapter 20. Just keep building.",
+    "Success is 10% strategy and 90% execution. Most people get stuck in the 10%.",
+    "The best time to start was yesterday. The second best time is right now.",
+    "It's not about being the best; it's about being better than you were yesterday.",
+    "Focus on building systems, not just chasing goals. Systems last forever."
+];
+
+const lessons = [
+    "1️⃣ Focus on value, not noise.\n2️⃣ Build a network of winners.\n3️⃣ Never stop being a student.",
+    "My 3 rules for success:\n- Be curious\n- Stay humble\n- Execute fast.",
+    "Remember: Failure is not the opposite of success; it's part of it."
+];
+
+const ctas = [
+    "Agree? Let's discuss in the comments! 👇",
+    "What’s your #1 tip for [TOPIC]? Share below!",
+    "Drop a 'YES' if you're ready to grow! 🚀",
+    "Tag someone who needs to see this today. 💎"
+];
+
+function generate(){
+    let topic = document.getElementById("topicInput").value.trim();
+    if(!topic) return alert("Topic please!");
+
+    let resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    for(let i=0; i<3; i++){
+        let hook = hooks[Math.floor(Math.random()*hooks.length)].replace("[TOPIC]", topic);
+        let body = bodies[Math.floor(Math.random()*bodies.length)];
+        let lesson = lessons[Math.floor(Math.random()*lessons.length)];
+        let cta = ctas[Math.floor(Math.random()*ctas.length)].replace("[TOPIC]", topic);
+        
+        let finalPost = `${hook}\n\n${body}\n\n${lesson}\n\n${cta}\n\n#${topic.replace(/\s/g, '')} #Career #Growth`;
+
+        let div = document.createElement("div");
+        div.className = "result-card";
+        div.innerHTML = `<div>${finalPost}</div><button class="copy-btn" onclick="copyText(this, \`${finalPost.replace(/\n/g, '\\n').replace(/'/g, "\\'")}\`)">Copy Post</button>`;
+        resultsDiv.appendChild(div);
+    }
+}
+
+function copyText(btn, text) {
+    navigator.clipboard.writeText(text).then(() => {
+        btn.innerText = "✓ Copied!";
+        setTimeout(() => btn.innerText = "Copy Post", 2000);
+    });
+}
+
+function clearAll(){ document.getElementById("topicInput").value = ""; document.getElementById("results").innerHTML = ""; }
+</script>
+
+</body>
+</html>
