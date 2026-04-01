@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /tools/
+Allow: /blog/
+
+# Block unnecessary (optional future use)
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://captionstudio.in/sitemap.xml
