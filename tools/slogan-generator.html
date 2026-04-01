@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>AI Slogan Generator – 200+ Smart Variations | CaptionStudio</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Free AI Slogan Generator with 200+ smart variations. Political, attitude, fitness, business, emotional — context-aware slogans instantly. No login required.">
+    <meta name="keywords" content="slogan generator, AI slogan, free slogan maker, political slogan, business tagline, caption studio">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="CaptionStudio">
+    <link rel="canonical" href="https://captionstudio.in/tools/slogan-generator.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Slogan Generator – 200+ Smart Variations">
+    <meta property="og:description" content="Generate 200+ smart slogans instantly. Context-aware, emotional intelligence, free forever.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://captionstudio.in/tools/slogan-generator.html">
+    <meta property="og:site_name" content="CaptionStudio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="AI Slogan Generator – 200+ Variations | CaptionStudio">
+    <meta name="twitter:description" content="Free slogan generator with emotional detection and smart context logic.">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AI Slogan Generator",
+      "url": "https://captionstudio.in/tools/slogan-generator.html",
+      "description": "Generate 200+ smart slogan variations with emotional and context detection. Free, no login required.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+      "creator": { "@type": "Organization", "name": "CaptionStudio", "url": "https://captionstudio.in" }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Syne:wght@800&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --bg: #fafafa; --border: #eeeeee; --primary: #000; --accent: #ff4d00; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--bg); color: #000;
+            overflow-x: hidden; min-height: 100vh;
+        }
+
+        /* NAV */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 6%; background: #fff;
+            border-bottom: 1px solid var(--border);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-family: 'Syne'; font-size: 1.4rem; letter-spacing: -1px; font-weight: 800; text-decoration: none; color: #000; }
+        .loc { font-size: 11px; color: #999; font-weight: 700; }
+
+        /* LAYOUT */
+        .container { max-width: 480px; margin: 30px auto; padding: 0 15px 60px; }
+        header { text-align: center; margin-bottom: 25px; }
+        header h1 { font-family: 'Syne'; font-size: 2.2rem; letter-spacing: -1.5px; line-height: 1; }
+        header p { color: #888; font-size: 12px; margin-top: 5px; }
+
+        /* MOOD BADGE */
+        #moodBadge {
+            display: none; margin: 10px auto 0; padding: 5px 14px;
+            border-radius: 100px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.5px; text-transform: uppercase;
+            border: 1.5px solid currentColor; width: fit-content;
+            transition: all 0.3s;
+        }
+
+        /* INPUT SECTION */
+        .input-section {
+            background: #fff; border: 1px solid var(--border);
+            padding: 20px; border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        input {
+            width: 100%; padding: 16px; border: 1px solid var(--border);
+            border-radius: 14px; font-size: 16px; outline: none;
+            margin-bottom: 10px; background: #fcfcfc;
+            transition: 0.3s; font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-appearance: none;
+        }
+        input:focus {
+            border-color: #000; background: #fff;
+            box-shadow: 0 0 0 4px rgba(0,0,0,0.04);
+        }
+
+        /* FILTER ROW */
+        .filter-row {
+            display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;
+        }
+        .filter-chip {
+            padding: 7px 14px; border-radius: 100px; border: 1.5px solid var(--border);
+            font-size: 11px; font-weight: 800; cursor: pointer; background: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif; transition: all 0.15s;
+            text-transform: uppercase; letter-spacing: 0.3px; user-select: none;
+        }
+        .filter-chip.active, .filter-chip:hover { background: #000; color: #fff; border-color: #000; }
+
+        .count-row {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px; font-size: 11px; color: #999; font-weight: 700;
+        }
+
+        /* GENERATE BUTTON */
+        .gen-btn {
+            width: 100%; background: var(--primary); color: #fff; padding: 16px;
+            border: none; border-radius: 14px; font-weight: 800; font-size: 15px;
+            cursor: pointer; font-family: 'Syne'; text-transform: uppercase;
+            letter-spacing: 1px; transition: transform 0.15s, box-shadow 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gen-btn:active { transform: scale(0.98); }
+        .gen-btn:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+
+        /* RESULTS */
+        #results { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+
+        .slogan-card {
+            background: #fff; border: 1px solid var(--border);
+            padding: 18px; border-radius: 16px; font-weight: 600;
+            font-size: 15px; text-align: center; cursor: pointer;
+            transition: all 0.2s; position: relative; line-height: 1.4;
+            display: flex; align-items: center; justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+        .slogan-card:hover { border-color: #000; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+        .slogan-card:active { transform: scale(0.98); }
+
+        /* Emotion color left-border */
+        .slogan-card.emo-political { border-left: 3px solid #1a6be0; }
+        .slogan-card.emo-attitude  { border-left: 3px solid #000; }
+        .slogan-card.emo-fitness   { border-left: 3px solid #e05c1a; }
+        .slogan-card.emo-business  { border-left: 3px solid #1ae06b; }
+        .slogan-card.emo-emotional { border-left: 3px solid #c01ae0; }
+        .slogan-card.emo-spiritual { border-left: 3px solid #e0b81a; }
+        .slogan-card.emo-romantic  { border-left: 3px solid #e01a6b; }
+        .slogan-card.emo-rebel     { border-left: 3px solid #e01a1a; }
+
+        .copy-tag {
+            position: absolute; top: 0; right: 0; background: #000; color: #fff;
+            font-size: 8px; padding: 3px 8px; font-weight: 800;
+            border-radius: 0 14px 0 14px; display: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* STATS BAR */
+        #statsBar {
+            display: none; background: #fff; border: 1px solid var(--border);
+            border-radius: 14px; padding: 12px 16px; margin-top: 12px;
+            font-size: 11px; font-weight: 700; color: #888;
+            text-align: center; letter-spacing: 0.3px;
+        }
+
+        /* SHIMMER LOADING */
+        .shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #fafafa 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1s infinite;
+            border-radius: 16px; height: 60px;
+        }
+        @keyframes shimmer { to { background-position: -200% 0; } }
+
+        footer { text-align: center; padding: 40px 0; color: #ccc; font-size: 10px; font-weight: 700; }
+
+        @media(max-width: 400px) {
+            header h1 { font-size: 1.8rem; }
+            .slogan-card { font-size: 14px; padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" class="logo">CaptionStudio</a>
+    <div class="loc">Gorakhpur UP 53</div>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>AI Slogan Pro</h1>
+        <p>200+ Variations | Smart Context + Emotion Logic</p>
+        <div id="moodBadge"></div>
+    </header>
+
+    <div class="input-section">
+        <input type="text" id="targetInput" placeholder="Brand, Person, or Vibe..." autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60">
+
+        <div class="filter-row" id="filterRow">
+            <div class="filter-chip active" data-mode="auto" onclick="setMode(this)">🧠 Auto</div>
+            <div class="filter-chip" data-mode="political" onclick="setMode(this)">🗳️ Political</div>
+            <div class="filter-chip" data-mode="attitude" onclick="setMode(this)">👑 Attitude</div>
+            <div class="filter-chip" data-mode="fitness" onclick="setMode(this)">💪 Fitness</div>
+            <div class="filter-chip" data-mode="business" onclick="setMode(this)">💼 Business</div>
+            <div class="filter-chip" data-mode="emotional" onclick="setMode(this)">💜 Emotional</div>
+            <div class="filter-chip" data-mode="romantic" onclick="setMode(this)">❤️ Romantic</div>
+            <div class="filter-chip" data-mode="spiritual" onclick="setMode(this)">🕉️ Spiritual</div>
+            <div class="filter-chip" data-mode="rebel" onclick="setMode(this)">🔥 Rebel</div>
+        </div>
+
+        <div class="count-row">
+            <span>Show:</span>
+            <div style="display:flex;gap:6px;">
+                <div class="filter-chip active" data-count="15" onclick="setCount(this)">15</div>
+                <div class="filter-chip" data-count="25" onclick="setCount(this)">25</div>
+                <div class="filter-chip" data-count="40" onclick="setCount(this)">40</div>
+            </div>
+        </div>
+
+        <button class="gen-btn" onclick="startEngine()">⚡ Generate Smart Slogans</button>
+    </div>
+
+    <div id="statsBar"></div>
+    <div id="results"></div>
+</div>
+
+<footer>PRO AGENCY SUITE | VERSION 4.0 | CAPTIONSTUDIO</footer>
+
+<script>
+// ============================================================
+// MEGA BRAIN v4 — Full Emotional + Context Intelligence
+// ============================================================
+const BRAIN = {
+
+    // DETECTION KEYWORDS
+    detect: {
+        political:  /(bjp|congress|aap|samajwadi|sp|bsp|rjd|neta|vote|party|election|chunav|sansad|mantri|sarkar|vidhayak|swaraj|azaad|jan|janta|desh|bharat|india|pradhan|modi|yogi|rahul|kejriwal)/i,
+        attitude:   /(ansh|king|boss|alpha|solo|legend|attitude|swag|blood|vibe|drip|grind|hustle|savage|flex|lit|goat|sigma|no\.1|number one|khatarnak|sher|sher dil|badshah)/i,
+        fitness:    /(gym|workout|body|power|fitness|muscle|gains|beast|lifting|run|athlete|sport|health|strong|iron|sweat|push|pull|squat|zid|determination)/i,
+        business:   /(brand|startup|company|shop|store|agency|premium|elite|product|service|tech|app|digital|market|luxury|logo|design|price|deal|offer)/i,
+        emotional:  /(feel|emotion|heart|pain|cry|sad|happy|joy|love|hurt|broken|heal|peace|anxiety|stress|struggle|journey|growth|life|soul|deep)/i,
+        spiritual:  /(god|bhagwan|mandir|prayer|yoga|meditation|karma|dharm|shakti|devi|shiv|ram|krishna|gita|om|jai|namaste|divya|atma|moksha|spiritual)/i,
+        romantic:   /(love|pyar|ishq|dil|beloved|partner|girlfriend|boyfriend|couple|romance|passion|crush|heart|dear|sweetheart|zindagi|mohabbat)/i,
+        rebel:      /(rebel|fight|resist|revolution|break|rules|system|against|anti|rise|revolution|underdog|underground|wild|untamed|fearless|rogue|outlaw)/i,
+    },
+
+    // HOOK WORDS per mood
+    hooks: {
+        political:  ["Swaraj", "Vikas", "Nyay", "Shakti", "Vision", "Voice", "Leader", "Awaaz", "Jan", "Desh", "Bharat", "Future", "Change", "Power"],
+        attitude:   ["Rule", "Original", "Alpha", "King", "Unfiltered", "Legacy", "Code", "Savage", "Sigma", "Untamed", "Boss", "Drip", "Elite", "Icon"],
+        fitness:    ["Iron", "Power", "Sweat", "Unstoppable", "Core", "Fire", "Zid", "Beast", "Grind", "Grit", "Gains", "Fuel", "Push", "Drive"],
+        business:   ["Premium", "Elite", "Signature", "Global", "Next-Gen", "Standard", "Impact", "Bold", "Smart", "Future", "Edge", "Vision", "Peak", "Pro"],
+        emotional:  ["Real", "Raw", "Deep", "True", "Honest", "Pure", "Whole", "Brave", "Gentle", "Healing", "Human", "Authentic", "Unbroken", "Still"],
+        spiritual:  ["Divine", "Dharma", "Shakti", "Om", "Moksha", "Karma", "Prana", "Ananda", "Satya", "Shanti", "Light", "Soul", "Eternal", "Grace"],
+        romantic:   ["Forever", "Always", "Only", "Yours", "Complete", "Infinite", "Pure", "Rare", "Limitless", "Timeless", "Precious", "Sacred", "Tender", "Wild"],
+        rebel:      ["Rage", "Rise", "Resist", "Break", "Revolt", "Unruly", "Raw", "Fearless", "Rogue", "Storm", "Blaze", "Untamed", "Outlawed", "Fury"],
+    },
+
+    // SENTENCE MATRIX — 30 templates
+    matrix: [
+        "The [H] of [T].",
+        "[T]: [H] Redefined.",
+        "Experience [T] [H].",
+        "Beyond [H], Simply [T].",
+        "Pure [T] [H].",
+        "The [H] Statement: [T].",
+        "Born for [H], Made for [T].",
+        "Living the [T] [H].",
+        "[T] | The [H] Standard.",
+        "Everything [T], Nothing Else.",
+        "[T]: Where [H] Meets Passion.",
+        "Defining the Future of [T].",
+        "The [H] Side of [T].",
+        "[T]: Absolute [H].",
+        "Unleashing [T] [H].",
+        "Legacy of [H]: [T].",
+        "[T] Vibes Only.",
+        "True [H], True [T].",
+        "The [T] Evolution.",
+        "[H] is the New [T].",
+        "[T]: Built on [H].",
+        "No [T] Without [H].",
+        "This is [T]. This is [H].",
+        "[T] Speaks [H].",
+        "One [T]. One [H]. Forever.",
+        "Where [T] Meets [H].",
+        "[H] Runs in [T]'s Blood.",
+        "Make it [H]. Make it [T].",
+        "[T]: Too [H] for Average.",
+        "They Said Impossible. [T] Said [H].",
+    ],
+
+    // EMOTION-ONLY bonus lines (no [H] token — pure raw lines)
+    emotionLines: {
+        emotional:  [
+            "[T]: Feeling Everything, Hiding Nothing.",
+            "The World Needs More [T] Energy.",
+            "[T]: Human. Real. Unfiltered.",
+            "Healing One [T] Day at a Time.",
+            "[T]: It's Okay to Not Be Okay.",
+        ],
+        spiritual:  [
+            "[T]: Where the Soul Finds Stillness.",
+            "Guided by Dharma, Driven by [T].",
+            "[T]: Seek the Light Within.",
+            "With Every [T], Jai Shri Ram.",
+            "[T]: The Universe Listens.",
+        ],
+        romantic:   [
+            "[T]: My Forever and Always.",
+            "In Every Lifetime, It's [T].",
+            "[T]: Where Love Has No Limits.",
+            "You Are My [T]. You Are My Home.",
+            "[T]: Written in the Stars.",
+        ],
+        rebel:      [
+            "[T]: Rules Were Made to Break.",
+            "They Tried to Stop [T]. They Failed.",
+            "[T] Doesn't Follow. [T] Leads.",
+            "No Permission Needed. Just [T].",
+            "[T]: Born Wild. Staying Wild.",
+        ],
+        political:  [
+            "[T]: Ek Awaaz, Ek Wada.",
+            "Janta Ki Zaroorat: [T].",
+            "[T]: Sab Ka Saath, Sab Ka Vikas.",
+            "Desh Pehle, Phir [T].",
+            "Chunav Mein Ek Hi Naam: [T].",
+        ],
+        attitude:   [
+            "[T] Don't Chase. [T] Attract.",
+            "Built Different. Named [T].",
+            "[T]: Love It or Leave It.",
+            "You Either Know [T] or You Don't.",
+            "Average is Busy. [T] is Different.",
+        ],
+        fitness:    [
+            "[T]: Pain Today, Glory Tomorrow.",
+            "No Days Off. No Excuses. Just [T].",
+            "[T]: When the Body Says No, the Mind Says Go.",
+            "Sweat is Just [T] Crying Fat.",
+            "[T]: The Grind Never Stops.",
+        ],
+        business:   [
+            "[T]: Where Vision Becomes Value.",
+            "Invest in [T]. Win in Life.",
+            "[T]: Premium by Default.",
+            "The Market Has Many. There's Only One [T].",
+            "[T]: Excellence is Not Optional.",
+        ],
+    }
+};
+
+// STATE
+let currentMode = "auto";
+let currentCount = 15;
+
+function setMode(el) {
+    document.querySelectorAll('[data-mode]').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    currentMode = el.dataset.mode;
+}
+
+function setCount(el) {
+    document.querySelectorAll('[data-count]').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    currentCount = parseInt(el.dataset.count);
+}
+
+function detectMood(val) {
+    if (currentMode !== "auto") return currentMode;
+    for (const [mood, pattern] of Object.entries(BRAIN.detect)) {
+        if (pattern.test(val)) return mood;
+    }
+    return "business"; // fallback
+}
+
+function showMoodBadge(mood) {
+    const badge = document.getElementById('moodBadge');
+    const config = {
+        political:  { label: "🗳️ Political Mode",  color: "#1a6be0" },
+        attitude:   { label: "👑 Attitude Mode",   color: "#000" },
+        fitness:    { label: "💪 Fitness Mode",    color: "#e05c1a" },
+        business:   { label: "💼 Business Mode",   color: "#1ae06b" },
+        emotional:  { label: "💜 Emotional Mode",  color: "#c01ae0" },
+        spiritual:  { label: "🕉️ Spiritual Mode",  color: "#e0b81a" },
+        romantic:   { label: "❤️ Romantic Mode",   color: "#e01a6b" },
+        rebel:      { label: "🔥 Rebel Mode",      color: "#e01a1a" },
+    };
+    const c = config[mood] || config.business;
+    badge.textContent = c.label;
+    badge.style.color = c.color;
+    badge.style.borderColor = c.color;
+    badge.style.display = 'block';
+}
+
+function showShimmer() {
+    const out = document.getElementById('results');
+    out.innerHTML = '';
+    for (let i = 0; i < 5; i++) {
+        const d = document.createElement('div');
+        d.className = 'shimmer';
+        out.appendChild(d);
+    }
+}
+
+function startEngine() {
+    const val = document.getElementById('targetInput').value.trim();
+    if (!val) {
+        document.getElementById('targetInput').focus();
+        document.getElementById('targetInput').style.borderColor = '#ff4d00';
+        setTimeout(() => document.getElementById('targetInput').style.borderColor = '#eeeeee', 1000);
+        return;
+    }
+
+    showShimmer();
+    document.getElementById('statsBar').style.display = 'none';
+
+    setTimeout(() => {
+        const mood = detectMood(val);
+        showMoodBadge(mood);
+
+        const hookWords = BRAIN.hooks[mood];
+        let pool = [];
+
+        // Matrix combinations
+        BRAIN.matrix.forEach(sentence => {
+            hookWords.forEach(hook => {
+                const res = sentence.replace(/\[T\]/g, val).replace(/\[H\]/g, hook);
+                pool.push({ text: res, mood });
+            });
+        });
+
+        // Emotion bonus lines
+        const bonusLines = BRAIN.emotionLines[mood] || [];
+        bonusLines.forEach(line => {
+            pool.push({ text: line.replace(/\[T\]/g, val), mood });
+        });
+
+        // Dedupe + shuffle
+        const seen = new Set();
+        const unique = pool.filter(item => {
+            if (seen.has(item.text)) return false;
+            seen.add(item.text);
+            return true;
+        });
+
+        const final = unique.sort(() => 0.5 - Math.random()).slice(0, currentCount);
+
+        // Render
+        const out = document.getElementById('results');
+        out.innerHTML = '';
+
+        final.forEach(item => {
+            const card = document.createElement('div');
+            card.className = `slogan-card emo-${item.mood}`;
+            card.innerHTML = `${item.text} <span class="copy-tag">COPIED ✓</span>`;
+
+            card.onclick = () => {
+                navigator.clipboard.writeText(item.text).catch(() => {
+                    // Fallback for older devices
+                    const el = document.createElement('textarea');
+                    el.value = item.text;
+                    document.body.appendChild(el);
+                    el.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(el);
+                });
+                const tag = card.querySelector('.copy-tag');
+                tag.style.display = 'block';
+                card.style.background = '#f8f8f8';
+                setTimeout(() => {
+                    tag.style.display = 'none';
+                    card.style.background = '#fff';
+                }, 1200);
+            };
+
+            out.appendChild(card);
+        });
+
+        // Stats
+        const statsBar = document.getElementById('statsBar');
+        statsBar.style.display = 'block';
+        statsBar.textContent = `✅ ${final.length} slogans generated · Mood: ${mood.toUpperCase()} · Tap any card to copy`;
+
+    }, 600);
+}
+
+// Enter key support
+document.getElementById('targetInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') startEngine();
+});
+</script>
+</body>
+</html>
