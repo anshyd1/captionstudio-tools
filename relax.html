@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relax Playground</title>
+
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: sans-serif;
+  touch-action: none;
+}
+canvas { display: block; }
+
+/* Top Info */
+.info {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Bottom Button */
+.bigBtn {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 28px;
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(45deg,#00f2ff,#ff00c8);
+  color: #fff;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="info" id="infoText">💧 Flow Mode • Touch & Move</div>
+<canvas id="c"></canvas>
+<button class="bigBtn" onclick="nextMode()">Change Mode</button>
+
+<script>
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+let mode = 0;
+let particles = [];
+let touches = {};
+
+const modes = [
+  "💧 Flow Mode • Smooth motion",
+  "🎲 Burst Mode • Random spread",
+  "🐍 Snake Mode • Trail follow",
+  "✨ Pulse Mode • Expand & fade"
+];
+
+function nextMode() {
+  mode = (mode + 1) % 4;
+  particles = [];
+  document.getElementById("infoText").innerText = modes[mode];
+}
+
+// spawn logic per mode
+function spawn(x, y) {
+
+  if (mode === 0) {
+    for (let i = 0; i < 6; i++) {
+      particles.push({x,y,angle:Math.random()*6.28,life:1});
+    }
+  }
+
+  if (mode === 1) {
+    for (let i = 0; i < 8; i++) {
+      particles.push({
+        x,y,
+        vx:(Math.random()-0.5)*4,
+        vy:(Math.random()-0.5)*4,
+        life:1
+      });
+    }
+  }
+
+  if (mode === 2) {
+    particles.push({trail:[{x,y}],life:1});
+  }
+
+  if (mode === 3) {
+    particles.push({x,y,r:0,life:1});
+  }
+}
+
+// animation
+function animate() {
+  ctx.fillStyle = "rgba(0,0,0,0.12)";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  particles.forEach((p,i)=>{
+
+    if (mode === 0) {
+      p.angle += 0.1;
+      p.x += Math.cos(p.angle)*2;
+      p.y += Math.sin(p.angle)*2;
+      p.life -= 0.02;
+
+      ctx.fillStyle=`rgba(0,200,255,${p.life})`;
+      ctx.fillRect(p.x,p.y,2,2);
+    }
+
+    if (mode === 1) {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vx *= 0.96;
+      p.vy *= 0.96;
+      p.life -= 0.02;
+
+      ctx.fillStyle=`rgba(255,150,0,${p.life})`;
+      ctx.fillRect(p.x,p.y,3,3);
+    }
+
+    if (mode === 2) {
+      let last = p.trail[p.trail.length-1];
+      p.trail.push({x:last.x + (Math.random()-0.5)*5, y:last.y + (Math.random()-0.5)*5});
+      if (p.trail.length > 20) p.trail.shift();
+
+      ctx.beginPath();
+      p.trail.forEach(pt=>ctx.lineTo(pt.x,pt.y));
+      ctx.strokeStyle=`rgba(0,255,150,0.5)`;
+      ctx.stroke();
+
+      p.life -= 0.02;
+    }
+
+    if (mode === 3) {
+      p.r += 2;
+      p.life -= 0.02;
+
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(255,255,255,${p.life})`;
+      ctx.stroke();
+    }
+
+    if (p.life <= 0) particles.splice(i,1);
+  });
+
+  requestAnimationFrame(animate);
+}
+
+// multi-touch fix
+canvas.addEventListener("touchstart", e => {
+  for (let t of e.touches) {
+    touches[t.identifier] = {x:t.clientX,y:t.clientY};
+    spawn(t.clientX,t.clientY);
+  }
+});
+
+canvas.addEventListener("touchmove", e => {
+  for (let t of e.touches) {
+    touches[t.identifier] = {x:t.clientX,y:t.clientY};
+    spawn(t.clientX,t.clientY);
+  }
+});
+
+canvas.addEventListener("touchend", e => {
+  for (let t of e.changedTouches) {
+    delete touches[t.identifier];
+  }
+});
+
+// mouse
+canvas.addEventListener("mousemove", e => spawn(e.clientX,e.clientY));
+
+animate();
+</script>
+
+</body>
+  </html>
