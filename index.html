@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Free AI Tools for Captions & Online Earning | CaptionStudio</title>
-
-<meta name="description" content="Discover free AI tools for captions, hashtags & content. Learn how students earn online using Instagram & Telegram. Start now.">
+<meta name="description" content="Discover free AI tools for captions, hashtags & content. Learn how students earn online using Instagram & Telegram.">
 
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans&display=swap" rel="stylesheet">
 
@@ -14,11 +13,35 @@
 body{margin:0;font-family:'DM Sans';background:#faf9f6;color:#111}
 h1,h2,h3{font-family:'Syne'}
 
-nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0}
-.menu{display:none;flex-direction:column;position:absolute;top:60px;right:20px;background:#fff;padding:15px;border-radius:12px;border:1px solid #eee}
-.menu a{margin:8px 0;text-decoration:none;color:#000}
+nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000}
 
 .hamburger{font-size:22px;cursor:pointer}
+
+/* MENU */
+.menu{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:60px;
+right:20px;
+background:#fff;
+padding:15px;
+border-radius:12px;
+border:1px solid #eee;
+
+opacity:0;
+transform:translateY(-10px);
+pointer-events:none;
+transition:all 0.25s ease;
+}
+
+.menu.show{
+opacity:1;
+transform:translateY(0);
+pointer-events:auto;
+}
+
+.menu a{margin:8px 0;text-decoration:none;color:#000}
 
 /* HERO */
 .hero{padding:80px 5%;text-align:center}
@@ -54,12 +77,12 @@ footer a:hover{color:#fff}
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 
 <div class="menu" id="menu">
-<a href="#">Home</a>
-<a href="tools/">Tools</a>
-<a href="blog/">Blog</a>
-<a href="support.html">Support</a>
-<a href="contact.html">Contact</a>
-<a href="relax.html">Relax 😌</a>
+<a href="/index.html">Home</a>
+<a href="/tools/">Tools</a>
+<a href="/blog/">Blog</a>
+<a href="/support.html">Support</a>
+<a href="/contact.html">Contact</a>
+<a href="/relax.html">Relax 😌</a>
 </div>
 </nav>
 
@@ -68,7 +91,7 @@ footer a:hover{color:#fff}
 <h1>Create <span>Viral Content</span> & Start <span>Earning Online</span> 🚀</h1>
 <p>Free AI tools + real strategies for students & creators</p>
 
-<a href="tools/" class="btn">Explore Tools</a>
+<a href="/tools/" class="btn">Explore Tools</a>
 <a href="https://t.me/skill2incomehub" class="btn">Join Telegram</a>
 </section>
 
@@ -102,7 +125,7 @@ No investment, no fake promises — sirf real tools aur practical methods.
 <div class="card"><h3>Email Tool</h3></div>
 </div>
 
-<a href="tools/" class="btn">View All Tools</a>
+<a href="/tools/" class="btn">View All Tools</a>
 </section>
 
 <!-- RELAX SECTION -->
@@ -119,7 +142,7 @@ No investment, no fake promises — sirf real tools aur practical methods.
 Move your finger and watch calming animations. Perfect for stress relief.
 </p>
 
-<a href="relax.html" class="btn">Try Now 😌</a>
+<a href="/relax.html" class="btn">Try Now 😌</a>
 
 </div>
 
@@ -136,7 +159,7 @@ Move your finger and watch calming animations. Perfect for stress relief.
 <!-- SUPPORT -->
 <section class="section alt">
 <h2>Support Our Work 💙</h2>
-<a href="support.html" class="btn">Support Page</a>
+<a href="/support.html" class="btn">Support Page</a>
 </section>
 
 <!-- FOOTER -->
@@ -152,22 +175,22 @@ Free AI tools & earning guides for creators.
 
 <div>
 <h3>Tools</h3>
-<a href="tools/">All Tools</a>
-<a href="tools/caption-generator.html">Caption Tool</a>
-<a href="tools/hashtag-generator.html">Hashtags</a>
+<a href="/tools/">All Tools</a>
+<a href="/tools/caption-generator.html">Caption Tool</a>
+<a href="/tools/hashtag-generator.html">Hashtags</a>
 </div>
 
 <div>
 <h3>Company</h3>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="support.html">Support</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+<a href="/support.html">Support</a>
 </div>
 
 <div>
 <h3>Legal</h3>
-<a href="privacy.html">Privacy Policy</a>
-<a href="terms.html">Terms</a>
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
 </div>
 
 </div>
@@ -180,9 +203,24 @@ Free AI tools & earning guides for creators.
 <script>
 function toggleMenu(){
 let menu=document.getElementById("menu");
-menu.style.display=menu.style.display==="flex"?"none":"flex";
+menu.classList.toggle("show");
 }
+
+document.addEventListener("click", function(e){
+let menu=document.getElementById("menu");
+let hamburger=document.querySelector(".hamburger");
+
+if(!menu.contains(e.target) && !hamburger.contains(e.target)){
+menu.classList.remove("show");
+}
+});
+
+document.querySelectorAll("#menu a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.getElementById("menu").classList.remove("show");
+});
+});
 </script>
 
 </body>
-  </html>
+</html>
