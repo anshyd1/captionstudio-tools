@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Support CaptionStudio 💙</title>
+
+<meta name="description" content="Support CaptionStudio and help us build more free AI tools for creators.">
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=DM+Sans&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'DM Sans';background:#faf9f6;color:#111}
+h1,h2{font-family:'Syne'}
+
+nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee}
+nav a{text-decoration:none;color:#333;margin-left:15px}
+
+.hero{text-align:center;padding:70px 20px}
+.hero h1{font-size:32px}
+.hero p{color:#666;margin-top:10px}
+
+.box{background:#fff;padding:25px;border-radius:15px;border:1px solid #eee;max-width:500px;margin:30px auto;text-align:center}
+
+.btn{padding:12px 25px;background:#ff4d00;color:#fff;border:none;border-radius:25px;cursor:pointer;margin-top:10px}
+
+.section{padding:50px 20px;text-align:center}
+
+footer{text-align:center;padding:30px;background:#111;color:#fff;margin-top:40px}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<b>CaptionStudio</b>
+<div>
+<a href="index.html">Home</a>
+<a href="tools/">Tools</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Support Our Work 💙</h1>
+<p>If our free tools helped you, you can support us</p>
+</section>
+
+<!-- DONATION BOX -->
+<div class="box">
+<h2>UPI Support</h2>
+<p id="upi">dkr38338-1@okhdfcbank</p>
+
+<button class="btn" onclick="copyUPI()">Copy UPI ID</button>
+<br>
+<button class="btn" onclick="pay()">Pay Now</button>
+
+<p style="margin-top:15px;font-size:13px;color:#777">
+Every support helps us improve tools 🚀
+</p>
+</div>
+
+<!-- WHY SUPPORT -->
+<section class="section">
+<h2>Why Support?</h2>
+<p>
+We provide free tools without ads or login.  
+Your support helps us maintain servers and build new tools.
+</p>
+</section>
+
+<!-- TRUST -->
+<section class="section" style="background:#fff">
+<h2>What You Get</h2>
+<p>
+✔️ Free tools forever  
+✔️ Better updates  
+✔️ Faster features  
+✔️ Community support  
+</p>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+<h2>FAQ</h2>
+
+<p><b>Is payment safe?</b><br>Yes, UPI is secure.</p>
+
+<p><b>Is support mandatory?</b><br>No, it's optional 💙</p>
+
+<p><b>Can I use tools for free?</b><br>Yes, always.</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 CaptionStudio</p>
+</footer>
+
+<script>
+function copyUPI(){
+let upi=document.getElementById("upi").innerText;
+navigator.clipboard.writeText(upi);
+alert("UPI ID Copied!");
+}
+
+function pay(){
+window.location.href="upi://pay?pa=dkr38338-1@okhdfcbank&pn=CaptionStudio&cu=INR";
+}
+</script>
+
+</body>
+</html>
