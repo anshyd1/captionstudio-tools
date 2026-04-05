@@ -1,267 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi-IN">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Instagram Caption Generator | Free AI Tool</title>
-<meta name="description" content="Generate Instagram captions instantly with hashtags. Get fresh captions every click. Save, copy & use for reels, posts & stories.">
-
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://captionstudio.in/tools/caption-generator.html">
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=DM+Sans&display=swap" rel="stylesheet">
-
-<style>
-body{font-family:'DM Sans',sans-serif;background:#faf9f6;margin:0;color:#111}
-h1,h2{font-family:'Syne'}
-
-nav{padding:15px 5%;display:flex;justify-content:space-between;background:#fff;border-bottom:1px solid #eee}
-nav a{text-decoration:none;color:#333;margin-left:15px}
-
-.container{max-width:900px;margin:40px auto;padding:0 5%}
-
-textarea,select{
-width:100%;padding:14px;margin-top:10px;border:1px solid #eee;background:#fff;
-}
-
-button{
-width:100%;padding:14px;margin-top:10px;border:none;background:#111;color:#fff;cursor:pointer;
-}
-button:hover{background:#ff4d00}
-
-.actions{display:flex;gap:8px}
-.actions button{flex:1;background:#222}
-
-.result{
-background:#fff;padding:12px;margin-top:10px;border:1px solid #eee;
-}
-
-.result button{
-margin-top:5px;padding:6px;font-size:12px;background:#eee;color:#000;border:none;
-}
-
-.tags{font-size:12px;color:#666;margin-top:5px}
-
-.saved{background:#fff3ec;border:1px solid #ff4d00}
-
-footer{background:#000;color:#fff;text-align:center;padding:20px;margin-top:40px}
-
-@media(max-width:600px){
-h1{font-size:24px}
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viral AI Caption Generator | CaptionStudio UP 53</title>
+    <meta name="description" content="Generate viral Hinglish Instagram captions with AI. Free growth strategy for 100k followers.">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #ff4d00; --bg: #0a0a0a; --card: #111; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: #fff; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: 50px auto; }
+        .logo { font-family: 'Syne'; color: var(--primary); font-size: 24px; text-align: center; display: block; text-decoration: none; margin-bottom: 40px; }
+        .input-card { background: var(--card); padding: 25px; border-radius: 20px; border: 1px solid #222; }
+        textarea { width: 100%; background: #1a1a1a; border: 1px solid #333; padding: 15px; color: #fff; border-radius: 12px; resize: none; box-sizing: border-box; font-size: 16px; }
+        .btn-gen { width: 100%; padding: 16px; background: var(--primary); color: #fff; border: none; border-radius: 12px; font-weight: 700; margin-top: 15px; cursor: pointer; transition: 0.3s; }
+        .btn-gen:hover { opacity: 0.9; transform: scale(0.98); }
+        #results { margin-top: 25px; }
+        .res-card { background: var(--card); border-left: 5px solid var(--primary); padding: 20px; border-radius: 15px; animation: fadeIn 0.5s ease; }
+        .tip { background: rgba(255,77,0,0.1); padding: 12px; border-radius: 10px; font-size: 13px; color: #ddd; margin: 15px 0; border: 1px solid rgba(255,77,0,0.2); }
+        .stats { display: flex; gap: 20px; font-size: 14px; color: #888; }
+        @keyframes fadeIn { from { opacity: 0; translateY(10px); } to { opacity: 1; translateY(0); } }
+    </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-<b>CaptionStudio</b>
-<div>
-<a href="../index.html">Home</a>
-<a href="../tools/index.html">Tools</a>
-</div>
-</nav>
-
 <div class="container">
-
-<h1>Instagram Caption Generator</h1>
-<p style="color:#666;">Generate fresh captions every click 🚀</p>
-
-<textarea id="topic" placeholder="Enter topic (travel, gym, love...)"></textarea>
-
-<select id="category">
-<option value="all">All</option>
-<option value="attitude">Attitude</option>
-<option value="love">Love</option>
-<option value="funny">Funny</option>
-<option value="emotional">Emotional</option>
-</select>
-
-<button onclick="generate()">Generate Captions</button>
-
-<div class="actions">
-<button onclick="more()">🔄 More</button>
-<button onclick="clearAll()">❌ Clear</button>
+    <a href="#" class="logo">CaptionStudio</a>
+    <div class="input-card">
+        <textarea id="topic" rows="3" placeholder="Explain your post (e.g. New car, Gym workout)..."></textarea>
+        <button class="btn-gen" onclick="generate()">Generate Viral Caption ✨</button>
+    </div>
+    <div id="results"></div>
 </div>
-
-<div id="results"></div>
-
-<h2>❤️ Saved Captions</h2>
-<p style="color:#666;font-size:14px;">Saved captions stay in your browser only.</p>
-<div id="saved"></div>
-
-</div>
-
-<!-- SEO -->
-<div class="container">
-<h2>Best Instagram Caption Generator</h2>
-<p>This free tool helps you generate captions for Instagram posts, reels and stories with hashtags. Better captions increase engagement, reach and visibility.</p>
-</div>
-
-<!-- Privacy -->
-<div class="container">
-<h3>Privacy Notice</h3>
-<p>Your input is processed in your browser only. We do not store or track your data.</p>
-</div>
-
-<footer>
-<p>© 2026 CaptionStudio</p>
-</footer>
 
 <script>
+    async function generate() {
+        const topic = document.getElementById('topic').value.trim();
+        const results = document.getElementById('results');
+        if(!topic) return;
 
-let topicGlobal="", categoryGlobal="";
-let savedCaptions = JSON.parse(localStorage.getItem("saved")) || [];
+        results.innerHTML = "<div class='res-card' style='text-align:center;'>Filtering intent & applying growth logic... 📈</div>";
 
-function random(arr){
-return arr[Math.floor(Math.random()*arr.length)];
-}
-
-function generate(){
-let topic=document.getElementById('topic').value.trim();
-let category=document.getElementById('category').value;
-
-if(!topic){alert("Enter topic");return;}
-
-topicGlobal=topic;
-categoryGlobal=category;
-
-document.getElementById('results').innerHTML="Generating...";
-setTimeout(makeBatch,800);
-}
-
-function more(){
-if(!topicGlobal){alert("Generate first");return;}
-makeBatch();
-}
-
-function makeBatch(){
-
-let topic=topicGlobal;
-
-let baseCaptions=[
-`Living my best ${topic} life`,
-`${topic} vibes never lie`,
-`Too real for fake ${topic}`,
-`${topic} mood all day`,
-`Lost in ${topic}`,
-`${topic} is my personality`,
-`${topic} just feels right`,
-`${topic} energy unmatched`,
-`${topic} forever mood`,
-`${topic} hits different`,
-`${topic} speaks louder`,
-`${topic} is everything`,
-`${topic} state of mind`,
-`${topic} feels different`,
-`${topic} always wins`,
-`${topic} no filter needed`,
-`${topic} just happens`,
-`${topic} moment unlocked`,
-`${topic} is the vibe`,
-`${topic} doing its thing`
-];
-
-let suffix=[
-"just vibes",
-"no explanation",
-"main character energy",
-"say less",
-"feels right",
-"too real"
-];
-
-let premium=[
-`${topic} isn't just a vibe, it's a lifestyle 🔥`,
-`In a world full of trends, I choose ${topic} ✨`,
-`Stay real, stay ${topic} 💯`
-];
-
-let hashtags=[
-`#${topic.replace(/\s+/g,"")}`,
-"#instagram","#reels","#viral","#trending","#explore"
-];
-
-// create pool
-let pool=[];
-for(let i=0;i<50;i++){
-let line=random(baseCaptions);
-let emoji=random(["🔥","✨","😎","💯","❤️","🚀"]);
-pool.push(line+" "+emoji+" "+random(suffix));
-}
-
-pool.sort(()=>Math.random()-0.5);
-
-// final 4
-let finalCaptions=[
-random(premium),
-pool[0],
-pool[1],
-pool[2]
-];
-
-show(finalCaptions,hashtags);
-}
-
-function show(list,tags){
-
-let results=document.getElementById('results');
-results.innerHTML="";
-
-list.forEach((c,i)=>{
-
-let div=document.createElement("div");
-div.className="result";
-
-let tag=i===0?"💎 Premium":"";
-
-div.innerHTML=`
-<div>${c}</div>
-<small>${tag}</small><br>
-<button onclick='copyText(${JSON.stringify(c)})'>Copy</button>
-<button onclick='saveCaption(${JSON.stringify(c)})'>❤️ Save</button>
-<div class="tags">${tags.join(" ")}</div>
-`;
-
-results.appendChild(div);
-});
-}
-
-function copyText(text){
-navigator.clipboard.writeText(text);
-}
-
-function saveCaption(text){
-if(!savedCaptions.includes(text)){
-savedCaptions.push(text);
-localStorage.setItem("saved", JSON.stringify(savedCaptions));
-renderSaved();
-}
-}
-
-function renderSaved(){
-let saved=document.getElementById('saved');
-saved.innerHTML="";
-
-savedCaptions.forEach(c=>{
-let div=document.createElement("div");
-div.className="result saved";
-div.innerText=c;
-saved.appendChild(div);
-});
-}
-
-function clearAll(){
-document.getElementById('results').innerHTML="";
-}
-
-renderSaved();
-
+        try {
+            const res = await fetch("https://project-v3t9n.vercel.app/api/generate", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ topic, category: "Viral Hinglish" })
+            });
+            const data = await res.json();
+            
+            results.innerHTML = `
+                <div class="res-card">
+                    <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--primary); font-weight:700;">
+                        <span>VIRAL PROBABILITY: 98%</span>
+                        <span>${data.type}</span>
+                    </div>
+                    <p id="cap" style="font-size:17px; margin:20px 0; line-height:1.6;">${data.caption}</p>
+                    <div class="tip"><b>Growth Tip:</b> ${data.tip}</div>
+                    <div class="stats">
+                        <span><b>${data.analytics.reach}+</b> Reach</span>
+                        <span><b>${data.analytics.likes}+</b> Likes</span>
+                    </div>
+                    <button onclick="copy()" style="width:100%; margin-top:15px; padding:10px; border-radius:8px; border:none; cursor:pointer; font-weight:700;">Copy Caption 🚀</button>
+                </div>
+            `;
+        } catch (e) {
+            results.innerHTML = "<div class='res-card'>System Busy. Try again!</div>";
+        }
+    }
+    function copy() {
+        navigator.clipboard.writeText(document.getElementById('cap').innerText);
+        alert("Copied! 🔥");
+    }
 </script>
-
 </body>
 </html>
