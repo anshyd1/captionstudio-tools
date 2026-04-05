@@ -3,224 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Free AI Tools for Captions & Online Earning | CaptionStudio</title>
-<meta name="description" content="Discover free AI tools for captions, hashtags & content. Learn how students earn online using Instagram & Telegram.">
-
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans&display=swap" rel="stylesheet">
-
 <style>
 body{margin:0;font-family:'DM Sans';background:#faf9f6;color:#111}
 h1,h2,h3{font-family:'Syne'}
-
 nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000}
-
 .hamburger{font-size:22px;cursor:pointer}
-
-/* MENU */
-.menu{
-display:flex;
-flex-direction:column;
-position:absolute;
-top:60px;
-right:20px;
-background:#fff;
-padding:15px;
-border-radius:12px;
-border:1px solid #eee;
-
-opacity:0;
-transform:translateY(-10px);
-pointer-events:none;
-transition:all 0.25s ease;
-}
-
-.menu.show{
-opacity:1;
-transform:translateY(0);
-pointer-events:auto;
-}
-
-.menu a{margin:8px 0;text-decoration:none;color:#000}
-
-/* HERO */
+.menu{display:flex;flex-direction:column;position:absolute;top:60px;right:20px;background:#fff;padding:15px;border-radius:12px;border:1px solid #eee;opacity:0;transform:translateY(-10px);pointer-events:none;transition:all 0.25s ease}
+.menu.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.menu a{margin:8px 0;text-decoration:none;color:#000;font-weight:500}
 .hero{padding:80px 5%;text-align:center}
 .hero h1{font-size:38px;line-height:1.3}
 .hero span{color:#ff4d00}
-.hero p{color:#666;margin-top:10px}
-
-.btn{padding:12px 25px;background:#ff4d00;color:#fff;border:none;border-radius:25px;text-decoration:none;margin:10px;display:inline-block}
-
-/* SECTIONS */
+.btn{padding:12px 25px;background:#ff4d00;color:#fff;border:none;border-radius:25px;text-decoration:none;margin:10px;display:inline-block;font-weight:bold}
+.loot-bar{padding:12px 5%; background:#fff5f0; border-bottom:1px solid #ffe0d0; display:flex; align-items:center; gap:10px}
+.loot-tag{background:#ff4d00; color:#fff; padding:3px 8px; border-radius:4px; font-size:11px; font-weight:800; animation:pulse 1.5s infinite}
+@keyframes pulse{0%{opacity:1} 50%{opacity:0.5} 100%{opacity:1}}
 .section{padding:70px 5%;text-align:center}
 .alt{background:#fff}
-
-/* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:20px}
-.card{background:#fff;padding:20px;border-radius:14px;border:1px solid #eee;transition:0.2s}
+.card{background:#fff;padding:25px;border-radius:14px;border:1px solid #eee;transition:0.2s}
 .card:hover{border-color:#ff4d00;transform:translateY(-4px)}
-
-/* FOOTER */
 footer{background:#111;color:#fff;padding:50px 5%}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px}
 footer a{color:#bbb;text-decoration:none;display:block;margin:6px 0;font-size:14px}
-footer a:hover{color:#fff}
 .footer-bottom{text-align:center;margin-top:30px;color:#777;font-size:13px}
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
 <nav>
-<b>CaptionStudio</b>
+<b onclick="location.href='index.html'" style="cursor:pointer">CaptionStudio</b>
 <div class="hamburger" onclick="toggleMenu()">☰</div>
-
 <div class="menu" id="menu">
-<a href="/index.html">Home</a>
+<a href="index.html">Home</a>
+<a href="earning.html" style="color:#ff4d00; font-weight:bold">Earning Hub 💰</a>
 <a href="/tools/">Tools</a>
 <a href="/blog/">Blog</a>
-<a href="/support.html">Support</a>
-<a href="/contact.html">Contact</a>
 <a href="/relax.html">Relax 😌</a>
 </div>
 </nav>
 
-<!-- HERO -->
+<div class="loot-bar">
+<span class="loot-tag">LIVE LOOT</span>
+<marquee style="font-family:'Syne'; font-weight:700; font-size:14px">
+🔥 MobiKwik ₹1000 Cashback | 👕 Free Punjab Kings IPL T-shirt | New Earning Gigs Added! Check Earning Hub 🚀
+</marquee>
+</div>
+
 <section class="hero">
 <h1>Create <span>Viral Content</span> & Start <span>Earning Online</span> 🚀</h1>
-<p>Free AI tools + real strategies for students & creators</p>
-
-<a href="/tools/" class="btn">Explore Tools</a>
-<a href="https://t.me/skill2incomehub" class="btn">Join Telegram</a>
+<p>Free AI tools + real student earning strategies (Gorakhpur UP 53)</p>
+<a href="earning.html" class="btn">Start Earning 💰</a>
+<a href="https://t.me/skill2incomehub" class="btn" style="background:#0088cc">Join Telegram</a>
 </section>
 
-<!-- VALUE -->
 <section class="section alt">
 <h2>Why This Platform?</h2>
-
 <div class="cards">
 <div class="card">⚡ Free AI tools (no login)</div>
 <div class="card">📈 Instagram growth strategies</div>
-<div class="card">💸 Real earning methods</div>
+<div class="card">💸 Real earning methods (Daily Loot)</div>
 </div>
 </section>
 
-<!-- STORY -->
 <section class="section">
-<h2>Start From Zero</h2>
-<p>
-Agar tum beginner ho, ye platform tumhare liye bana hai.  
-No investment, no fake promises — sirf real tools aur practical methods.
-</p>
-</section>
-
-<!-- TOOLS -->
-<section class="section alt">
-<h2>Popular Tools</h2>
-
+<h2>Today's Verified Gigs 💰</h2>
 <div class="cards">
-<div class="card"><h3>Caption Generator</h3></div>
-<div class="card"><h3>Hashtag Generator</h3></div>
-<div class="card"><h3>Email Tool</h3></div>
+<div class="card">
+<h3>MobiKwik</h3>
+<p>Get up to ₹1000 instant bank cashback.</p>
+<a href="earning.html" style="color:#ff4d00; font-weight:bold">View Steps →</a>
 </div>
-
-<a href="/tools/" class="btn">View All Tools</a>
-</section>
-
-<!-- RELAX SECTION -->
-<section class="section">
-
-<h2>Feeling Overwhelmed? 😌</h2>
-<p>Take a quick break and enjoy this relaxing playground</p>
-
-<div style="background:linear-gradient(135deg,#000,#222);color:#fff;padding:30px;border-radius:20px;max-width:500px;margin:30px auto;box-shadow:0 10px 30px rgba(0,0,0,0.2)">
-
-<h3 style="margin-bottom:10px">✨ Try Relax Mode</h3>
-
-<p style="color:#aaa;font-size:14px">
-Move your finger and watch calming animations. Perfect for stress relief.
-</p>
-
-<a href="/relax.html" class="btn">Try Now 😌</a>
-
+<div class="card">
+<h3>Free IPL Kit</h3>
+<p>Earn points for Punjab Kings Free T-shirt.</p>
+<a href="earning.html" style="color:#ff4d00; font-weight:bold">Claim Now →</a>
 </div>
-
+</div>
 </section>
 
-<!-- CTA -->
-<section class="section">
-<h2>Want to Learn Daily?</h2>
-<p>Join Telegram for latest earning tricks & tools</p>
-
-<a href="https://t.me/skill2incomehub" class="btn">Join Now</a>
-</section>
-
-<!-- SUPPORT -->
-<section class="section alt">
-<h2>Support Our Work 💙</h2>
-<a href="/support.html" class="btn">Support Page</a>
-</section>
-
-<!-- FOOTER -->
 <footer>
 <div class="footer-grid">
-
-<div>
-<h3>CaptionStudio</h3>
-<p style="color:#aaa;font-size:14px">
-Free AI tools & earning guides for creators.
-</p>
+<div><h3>CaptionStudio</h3><p style="color:#aaa">Free tools & student earning guides.</p></div>
+<div><h3>Quick Links</h3><a href="earning.html">Earning Hub</a><a href="/blog/">Blog</a><a href="/tools/">Tools</a></div>
+<div><h3>Company</h3><a href="/contact.html">Contact</a><a href="/support.html">Support</a></div>
 </div>
-
-<div>
-<h3>Tools</h3>
-<a href="/tools/">All Tools</a>
-<a href="/tools/caption-generator.html">Caption Tool</a>
-<a href="/tools/hashtag-generator.html">Hashtags</a>
-</div>
-
-<div>
-<h3>Company</h3>
-<a href="/about.html">About</a>
-<a href="/contact.html">Contact</a>
-<a href="/support.html">Support</a>
-</div>
-
-<div>
-<h3>Legal</h3>
-<a href="/privacy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-© 2026 CaptionStudio • All rights reserved
-</div>
+<div class="footer-bottom">© 2026 CaptionStudio • Gorakhpur UP 53</div>
 </footer>
 
 <script>
-function toggleMenu(){
+function toggleMenu(){document.getElementById("menu").classList.toggle("show")}
+document.addEventListener("click",function(e){
 let menu=document.getElementById("menu");
-menu.classList.toggle("show");
-}
-
-document.addEventListener("click", function(e){
-let menu=document.getElementById("menu");
-let hamburger=document.querySelector(".hamburger");
-
-if(!menu.contains(e.target) && !hamburger.contains(e.target)){
-menu.classList.remove("show");
-}
-});
-
-document.querySelectorAll("#menu a").forEach(link=>{
-link.addEventListener("click",()=>{
-document.getElementById("menu").classList.remove("show");
-});
+let hb=document.querySelector(".hamburger");
+if(!menu.contains(e.target)&&!hb.contains(e.target)) menu.classList.remove("show");
 });
 </script>
-
 </body>
 </html>
