@@ -13,6 +13,9 @@
 <meta name="p:domain_verify" content="5a8c4edbc759e99bcece5dbc826f21cb"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
 <title>CaptionStudio | Free AI Caption Generator, Video Edit Tool Assets & Online Earning</title>
 <meta name="description" content="CaptionStudio: Best AI tool for Caption Art, Viral Hashtag & Bio. Download Video Edit Tool assets, AI Learning guides & Learn how to Earn Money Online for Free.">
 <meta name="keywords" content="Caption Studio, Caption Art, Viral Hashtag, Variation, Idea Skill, Sikhe, AI Learning, Video Edit Tool, Caption Generator, Free Money, Earn Money, Online Earn">
@@ -23,6 +26,8 @@
 body{margin:0;font-family:'DM Sans';background:#faf9f6;color:#111}
 h1,h2,h3{font-family:'Syne'}
 nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000}
+.logo-container{display:flex;align-items:center;gap:10px;cursor:pointer}
+.logo-img{width:30px;height:30px;border-radius:5px}
 .hamburger{font-size:22px;cursor:pointer}
 .menu{display:flex;flex-direction:column;position:absolute;top:60px;right:20px;background:#fff;padding:15px;border-radius:12px;border:1px solid #eee;opacity:0;transform:translateY(-10px);pointer-events:none;transition:all 0.25s ease}
 .menu.show{opacity:1;transform:translateY(0);pointer-events:auto}
@@ -48,7 +53,10 @@ footer a{color:#bbb;text-decoration:none;display:block;margin:6px 0;font-size:14
 <body>
 
 <nav>
-<b onclick="location.href='index.html'" style="cursor:pointer">CaptionStudio</b>
+<div class="logo-container" onclick="location.href='index.html'">
+    <img src="favicon.png" alt="CaptionStudio Logo" class="logo-img">
+    <b style="font-family:'Syne'">CaptionStudio</b>
+</div>
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 <div class="menu" id="menu">
 <a href="index.html">Home</a>
