@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sitemap Generator</title>
+</head>
+<body>
+
+<h2>Generate Sitemap</h2>
+<button onclick="generate()">Generate Sitemap</button>
+
+<pre id="output"></pre>
+
+<script>
+function generate(){
+
+fetch('/data/blog.json')
+.then(res=>res.json())
+.then(data=>{
+
+let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+// homepage
+xml += `
+<url>
+<loc>https://captionstudio.in/</loc>
+<priority>1.0</priority>
+</url>`;
+
+// blogs
+data.forEach(blog=>{
+ xml += `
+<url>
+<loc>https://captionstudio.in${blog.link}</loc>
+<priority>0.7</priority>
+</url>`;
+});
+
+xml += `</urlset>`;
+
+document.getElementById('output').textContent = xml;
+
+});
+}
+</script>
+
+</body>
+</html>
