@@ -5,83 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Latest Blogs | CaptionStudio</title>
-<meta name="description" content="Latest AI earning, loot offers & growth blogs.">
 
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
-:root { --primary:#ff4d00; --black:#111; --gray:#666; --bg:#faf9f6; }
+:root { --primary:#ff4d00; --black:#111; --bg:#faf9f6; }
 
-body { margin:0; font-family:'DM Sans',sans-serif; background:var(--bg); }
+body { margin:0; font-family:'DM Sans'; background:var(--bg); }
 
 /* NAV */
 nav {
  display:flex; justify-content:space-between; align-items:center;
  padding:15px 6%; background:#fff;
  position:sticky; top:0; z-index:1000;
- border-bottom:1px solid #eee;
 }
-
 .logo { font-family:'Syne'; font-weight:800; text-decoration:none; color:#111; }
 .logo span { color:var(--primary); }
 
-/* DESKTOP NAV */
-.nav-links {
- display:flex;
- gap:20px;
-}
+.nav-links { display:flex; gap:20px; }
+.nav-links a { text-decoration:none; color:#333; }
 
-.nav-links a {
- text-decoration:none;
- color:#333;
- font-size:14px;
-}
-
-/* HAMBURGER */
-.menu-btn {
- display:none;
- font-size:22px;
- cursor:pointer;
-}
+.menu-btn { display:none; font-size:24px; cursor:pointer; }
 
 /* MOBILE MENU */
 .mobile-menu {
  position:fixed;
  top:0;
  right:-100%;
- width:70%;
+ width:80%;
  height:100%;
  background:#fff;
- box-shadow:-5px 0 20px rgba(0,0,0,0.1);
- padding:40px 20px;
- transition:0.4s;
+ z-index:2000;
+ padding:25px 20px;
+ transition:0.4s ease;
  display:flex;
  flex-direction:column;
- gap:20px;
 }
 
 .mobile-menu.active { right:0; }
 
-.mobile-menu a {
+/* MENU ITEMS */
+.menu-item {
+ display:flex;
+ align-items:center;
+ gap:12px;
+ padding:14px;
+ margin-bottom:10px;
+ border-radius:12px;
+ background:#f5f5f5;
  text-decoration:none;
- font-size:16px;
  color:#111;
+ font-weight:500;
+ transition:0.3s;
 }
+
+.menu-item:hover {
+ background:#ffece4;
+ transform:translateX(5px);
+}
+
+/* CTA */
+.menu-cta { 
+  margin-top: 20px;
+}
+
+.menu-btn-main {
+ display:block;
+ text-align:center;
+ padding:14px;
+ border-radius:30px;
+ background:linear-gradient(135deg,#ff4d00,#ff7a00);
+ color:#fff;
+ font-weight:700;
+ text-decoration:none;
+}
+
+/* OVERLAY */
+.overlay {
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ background:rgba(0,0,0,0.4);
+ display:none;
+ z-index:1500;
+}
+.overlay.active { display:block; }
 
 /* HERO */
-.hero {
- padding:70px 6%;
- text-align:center;
-}
+.hero { padding:60px 6%; text-align:center; }
+.hero h1 { font-family:'Syne'; }
 
-.hero h1 {
- font-family:'Syne';
- font-size:34px;
-}
-
-.hero span { color:var(--primary); }
-
-/* BLOG GRID */
+/* BLOG */
 .section { padding:30px 6%; }
 
 .cards {
@@ -97,8 +113,8 @@ nav {
  border:1px solid #eee;
  text-decoration:none;
  color:#111;
- transition:0.3s;
  position:relative;
+ transition:0.3s;
 }
 
 .card:hover {
@@ -106,13 +122,7 @@ nav {
  border-color:var(--primary);
 }
 
-.tag {
- font-size:11px;
- color:var(--primary);
- font-weight:700;
- margin-bottom:8px;
- display:inline-block;
-}
+.tag { font-size:11px; color:var(--primary); font-weight:700; }
 
 .urgent {
  position:absolute;
@@ -125,12 +135,22 @@ nav {
  border-radius:5px;
 }
 
-/* FOOTER */
-footer {
- background:#111;
- color:#fff;
- padding:50px 6%;
+/* LIQUID BUTTON */
+.liquid-btn {
+ margin-top:30px;
+ padding:14px 28px;
+ border-radius:50px;
+ background:rgba(255,255,255,0.2);
+ backdrop-filter:blur(10px);
+ border:1px solid rgba(255,255,255,0.3);
+ color:#111;
+ font-weight:600;
+ text-decoration:none;
+ display:inline-block;
 }
+
+/* FOOTER */
+footer { background:#111; color:#fff; padding:50px 6%; }
 
 .footer-grid {
  display:grid;
@@ -138,20 +158,7 @@ footer {
  gap:30px;
 }
 
-footer a {
- color:#aaa;
- text-decoration:none;
- font-size:14px;
- display:block;
- margin:8px 0;
-}
-
-.footer-bottom {
- text-align:center;
- margin-top:30px;
- color:#555;
- font-size:13px;
-}
+footer a { color:#aaa; text-decoration:none; display:block; }
 
 /* MOBILE */
 @media(max-width:768px){
@@ -179,16 +186,25 @@ footer a {
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="menu">
- <a href="/">Home</a>
- <a href="/earning.html">Earning Hub</a>
- <a href="/tools/">AI Tools</a>
- <a href="/blog/">Blog</a>
+
+  <a href="/" class="menu-item">🏠 Home</a>
+  <a href="/earning.html" class="menu-item">💰 Earning Hub</a>
+  <a href="/tools/" class="menu-item">🤖 AI Tools</a>
+  <a href="/blog/" class="menu-item">📝 Blogs</a>
+
+  <div class="menu-cta">
+    <a href="https://t.me/skill2incomehub" class="menu-btn-main">
+      Join Telegram 🚀
+    </a>
+  </div>
+
 </div>
+
+<div class="overlay" id="overlay"></div>
 
 <!-- HERO -->
 <section class="hero">
- <h1>Latest <span>Blogs</span> 🚀</h1>
- <p>AI Earning • Loot • Growth Hacks</p>
+ <h1>Latest Blogs 🚀</h1>
 </section>
 
 <!-- BLOG -->
@@ -196,19 +212,22 @@ footer a {
  <div class="cards" id="blog-container"></div>
 </section>
 
+<!-- CTA -->
+<div style="text-align:center;">
+ <a href="https://t.me/skill2incomehub" class="liquid-btn">Join Telegram 🚀</a>
+</div>
+
 <!-- FOOTER -->
 <footer>
  <div class="footer-grid">
 
   <div>
    <h3>CaptionStudio</h3>
-   <p style="color:#aaa;font-size:14px;">
-    AI tools + earning hacks + growth system
-   </p>
+   <p style="color:#aaa;">AI tools + earning hacks + growth system</p>
   </div>
 
   <div>
-   <h3>Quick Links</h3>
+   <h3>Explore</h3>
    <a href="/">Home</a>
    <a href="/earning.html">Earning Hub</a>
    <a href="/tools/">AI Tools</a>
@@ -216,43 +235,60 @@ footer a {
   </div>
 
   <div>
-   <h3>Legal</h3>
-   <a href="/privacy.html">Privacy Policy</a>
-   <a href="/sitemap.xml">Sitemap</a>
-  </div>
-
-  <div>
    <h3>Community</h3>
    <a href="https://t.me/skill2incomehub">Telegram Join</a>
   </div>
 
+  <div>
+   <h3 style="color:#555;">Legal</h3>
+   <a href="/privacy.html" style="color:#555;">Privacy Policy</a>
+  </div>
+
  </div>
 
- <div class="footer-bottom">
+ <div style="text-align:center;margin-top:20px;color:#555;">
   © 2026 CaptionStudio • Built by Ansh
  </div>
 </footer>
 
-<!-- SCRIPT -->
 <script>
-// HAMBURGER
+// TOGGLE MENU
 function toggleMenu(){
  document.getElementById('menu').classList.toggle('active');
+ document.getElementById('overlay').classList.toggle('active');
 }
 
-// BLOG FETCH
-fetch('/data/blog.json')
-.then(res => res.json())
-.then(data => {
- const container = document.getElementById('blog-container');
+// CLICK OUTSIDE CLOSE
+document.addEventListener('click', function(e){
+ const menu = document.getElementById('menu');
+ const btn = document.querySelector('.menu-btn');
 
- data.reverse().slice(0,50).forEach(blog => {
-  container.innerHTML += `
-   <a href="${blog.link}" class="card" ${blog.hot ? 'style="border:1px solid var(--primary);"' : ''}>
-    ${blog.hot ? '<div class="urgent">HOT 🔥</div>' : ''}
-    <div class="tag">${blog.tag || ''}</div>
+ if (!menu.contains(e.target) && !btn.contains(e.target)) {
+  menu.classList.remove('active');
+  document.getElementById('overlay').classList.remove('active');
+ }
+});
+
+// LINK CLICK CLOSE
+document.querySelectorAll('.mobile-menu a').forEach(link=>{
+ link.addEventListener('click', ()=>{
+  document.getElementById('menu').classList.remove('active');
+  document.getElementById('overlay').classList.remove('active');
+ });
+});
+
+// BLOG LOAD
+fetch('/data/blog.json')
+.then(res=>res.json())
+.then(data=>{
+ const container=document.getElementById('blog-container');
+ data.reverse().forEach(blog=>{
+  container.innerHTML+=`
+   <a href="${blog.link}" class="card" ${blog.hot?'style="border:1px solid var(--primary);"' : ''}>
+    ${blog.hot?'<div class="urgent">HOT 🔥</div>':''}
+    <div class="tag">${blog.tag||''}</div>
     <h3>${blog.title}</h3>
-    <p>${blog.desc || ''}</p>
+    <p>${blog.desc||''}</p>
    </a>
   `;
  });
@@ -260,4 +296,4 @@ fetch('/data/blog.json')
 </script>
 
 </body>
-</html>
+ </html>
