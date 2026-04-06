@@ -44,7 +44,6 @@ nav {
 
 .mobile-menu.active { right:0; }
 
-/* MENU ITEMS */
 .menu-item {
  display:flex;
  align-items:center;
@@ -64,10 +63,7 @@ nav {
  transform:translateX(5px);
 }
 
-/* CTA */
-.menu-cta { 
-  margin-top: 20px;
-}
+.menu-cta { margin-top:20px; }
 
 .menu-btn-main {
  display:block;
@@ -186,7 +182,6 @@ footer a { color:#aaa; text-decoration:none; display:block; }
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="menu">
-
   <a href="/" class="menu-item">🏠 Home</a>
   <a href="/earning.html" class="menu-item">💰 Earning Hub</a>
   <a href="/tools/" class="menu-item">🤖 AI Tools</a>
@@ -197,7 +192,6 @@ footer a { color:#aaa; text-decoration:none; display:block; }
       Join Telegram 🚀
     </a>
   </div>
-
 </div>
 
 <div class="overlay" id="overlay"></div>
@@ -252,7 +246,7 @@ footer a { color:#aaa; text-decoration:none; display:block; }
 </footer>
 
 <script>
-// TOGGLE MENU
+// MENU TOGGLE
 function toggleMenu(){
  document.getElementById('menu').classList.toggle('active');
  document.getElementById('overlay').classList.toggle('active');
@@ -277,23 +271,31 @@ document.querySelectorAll('.mobile-menu a').forEach(link=>{
  });
 });
 
-// BLOG LOAD
+// BLOG LOAD (FINAL)
 fetch('/data/blog.json')
-.then(res=>res.json())
-.then(data=>{
- const container=document.getElementById('blog-container');
- data.reverse().forEach(blog=>{
-  container.innerHTML+=`
-   <a href="${blog.link}" class="card" ${blog.hot?'style="border:1px solid var(--primary);"' : ''}>
-    ${blog.hot?'<div class="urgent">HOT 🔥</div>':''}
-    <div class="tag">${blog.tag||''}</div>
+.then(res => res.json())
+.then(data => {
+
+ const container = document.getElementById('blog-container');
+
+ data.sort((a,b)=> new Date(b.date) - new Date(a.date));
+
+ data.forEach(blog => {
+  container.innerHTML += `
+   <a href="${blog.link}" class="card" ${blog.hot ? 'style="border:1px solid var(--primary);"' : ''}>
+    ${blog.hot ? '<div class="urgent">HOT 🔥</div>' : ''}
+    <div class="tag">${blog.tag || ''}</div>
     <h3>${blog.title}</h3>
-    <p>${blog.desc||''}</p>
+    <p>${blog.desc || ''}</p>
    </a>
   `;
  });
+
+})
+.catch(()=>{
+ document.getElementById('blog-container').innerHTML = "Error loading blogs";
 });
 </script>
 
 </body>
- </html>
+</html>
