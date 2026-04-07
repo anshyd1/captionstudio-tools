@@ -2,12 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <!-- MAIN PAGES -->
-<url><loc>https://captionstudio.in/</loc><lastmod>2026-04-07</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>https://captionstudio.in/earning.html</loc><lastmod>2026-04-07</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
-<url><loc>https://captionstudio.in/guide.html</loc><lastmod>2026-04-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url>
+  <loc>https://captionstudio.in/</loc>
+  <lastmod>2026-04-07</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
 
-<!-- BLOG HUB -->
-<url><loc>https://captionstudio.in/blog/</loc><lastmod>2026-04-07</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+<url>
+  <loc>https://captionstudio.in/blog/</loc>
+  <lastmod>2026-04-07</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://captionstudio.in/earning.html</loc>
+  <lastmod>2026-04-07</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://captionstudio.in/guide.html</loc>
+  <lastmod>2026-04-07</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
 
 <!-- TOOLS -->
 <url><loc>https://captionstudio.in/tools/caption-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -21,17 +42,18 @@
 <url><loc>https://captionstudio.in/tools/tweet-generator.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://captionstudio.in/tools/youtube-title-generator.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
-<!-- BLOG POSTS -->
+<!-- NEW BLOGS -->
 <url><loc>https://captionstudio.in/blog/ai-tools-instagram-reach.html</loc><lastmod>2026-04-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://captionstudio.in/blog/instagram-growth-0-to-10k.html</loc><lastmod>2026-04-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://captionstudio.in/blog/ai-tools-make-money.html</loc><lastmod>2026-04-07</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 <url><loc>https://captionstudio.in/blog/faceless-instagram-earn-money.html</loc><lastmod>2026-04-10</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-<url><loc>https://captionstudio.in/blog/ai-earning-guide-2026.html</loc><lastmod>2026-04-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://captionstudio.in/blog/best-captions-boys-2026.html</loc><lastmod>2026-04-05</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<!-- EXISTING BLOGS -->
+<url><loc>https://captionstudio.in/blog/biggest-money-loot-offers-april-2026.html</loc><lastmod>2026-04-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://captionstudio.in/blog/best-earning-apps-students-2026.html</loc><lastmod>2026-04-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://captionstudio.in/blog/best-instagram-captions-reels-2026.html</loc><lastmod>2026-04-03</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://captionstudio.in/blog/biggest-money-loot-offers-april-2026.html</loc><lastmod>2026-04-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://captionstudio.in/blog/ai-earning-guide-2026.html</loc><lastmod>2026-04-06</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://captionstudio.in/blog/best-captions-boys-2026.html</loc><lastmod>2026-04-05</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://captionstudio.in/blog/best-instagram-captions-reels-2026.html</loc><lastmod>2026-04-03</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://captionstudio.in/blog/email-writing-guide.html</loc><lastmod>2026-04-01</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://captionstudio.in/blog/instagram-bio-ideas-2026.html</loc><lastmod>2026-03-30</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://captionstudio.in/blog/master-ai-guide-2026.html</loc><lastmod>2026-03-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
