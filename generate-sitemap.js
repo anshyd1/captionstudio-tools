@@ -8,15 +8,20 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
 // MAIN
 xml += `
 <url>
-<loc>https://captionstudio.in/</loc>
-<priority>1.0</priority>
+  <loc>https://captionstudio.in/</loc>
+  <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>https://captionstudio.in/blog/</loc>
+  <priority>0.9</priority>
 </url>`;
 
 // BLOGS AUTO
 blogs.forEach(blog => {
   xml += `
   <url>
-    <loc>https://captionstudio.in${blog.link}</loc>
+    <loc>https://captionstudio.in/blog/${blog.link}</loc>
     <lastmod>${blog.date || '2026-04-06'}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${blog.hot ? '0.9' : '0.7'}</priority>
@@ -25,7 +30,7 @@ blogs.forEach(blog => {
 
 xml += `</urlset>`;
 
-// SAVE FILE
-fs.writeFileSync('./public/sitemap.xml', xml);
+// SAVE FILE (ROOT me save karo, public me nahi)
+fs.writeFileSync('./sitemap.xml', xml);
 
-console.log("Sitemap generated!");
+console.log("✅ Sitemap generated!");
