@@ -71,5 +71,11 @@
 <url><loc>https://captionstudio.in/terms.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
 <url><loc>https://captionstudio.in/support.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
 <url><loc>https://captionstudio.in/relax.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url>
+  <loc>https://captionstudio.in/blog/viral-reels-strategy-2026.html</loc>
+  <lastmod>2026-04-08</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
 
 </urlset>
