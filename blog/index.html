@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — CaptionStudio Creator Insights</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --orange: #e8440a;
+      --orange-pale: #fff3ee;
+      --black: #0d0d0d;
+      --ink: #191919;
+      --muted: #6b6b6b;
+      --rule: #e5e5e5;
+      --bg: #ffffff;
+      --serif: 'Lora', Georgia, serif;
+      --sans: 'Source Sans 3', sans-serif;
+      --display: 'Syne', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.7; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: 0.2s; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV & HAMBURGER */
+    nav { border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.97); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
+    .logo { display: flex; align-items: center; gap: 9px; font-family: var(--display); font-size: 1.05rem; font-weight: 800; color: var(--ink); }
+    .hbg { background: none; border: none; cursor: pointer; padding: 8px; display: flex; flex-direction: column; gap: 5px; z-index: 1200; }
+    .hbg span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: 0.3s; }
+    
+    body.menu-open .hbg span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    body.menu-open .hbg span:nth-child(2) { opacity: 0; }
+    body.menu-open .hbg span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* DRAWER */
+    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); visibility: hidden; opacity: 0; transition: .3s; z-index: 1100; }
+    .drawer { position: fixed; top: 0; right: -320px; width: 300px; height: 100%; background: var(--bg); z-index: 1200; transition: 0.4s cubic-bezier(.16,1,.3,1); padding: 40px 0; box-shadow: -10px 0 30px rgba(0,0,0,0.05); }
+    body.menu-open .drawer { right: 0; }
+    body.menu-open .overlay { visibility: visible; opacity: 1; }
+    .drawer a { display: block; padding: 18px 30px; font-family: var(--sans); font-weight: 600; font-size: 1.1rem; border-bottom: 1px solid #f9f9f9; }
+
+    /* BLOG HERO */
+    .blog-hero { padding: 80px 0 50px; text-align: center; }
+    .blog-hero h1 { font-family: var(--display); font-size: clamp(2.2rem, 8vw, 4rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 20px; }
+    .blog-hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto; }
+
+    /* CATEGORIES */
+    .cat-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 60px; flex-wrap: wrap; }
+    .cat-btn { padding: 9px 22px; border-radius: 40px; border: 1.5px solid var(--rule); font-family: var(--sans); font-size: 0.8rem; font-weight: 700; cursor: pointer; background: transparent; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.05em; }
+    .cat-btn.active { background: var(--orange); color: #fff; border-color: var(--orange); }
+
+    /* POSTS GRID */
+    .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 45px 35px; margin-bottom: 100px; min-height: 400px; }
+    .post-card { display: block; }
+    .post-img-box { width: 100%; aspect-ratio: 16/10; border-radius: 14px; overflow: hidden; margin-bottom: 22px; background: #f4f4f4; }
+    .post-img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s cubic-bezier(.16,1,.3,1); }
+    .post-card:hover .post-img-box img { transform: scale(1.06); }
+    
+    .post-cat { font-family: var(--sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--orange); letter-spacing: 0.12em; margin-bottom: 10px; display: block; }
+    .post-title { font-family: var(--display); font-size: 1.4rem; font-weight: 700; line-height: 1.25; margin-bottom: 12px; color: var(--ink); }
+    .post-excerpt { font-size: 0.95rem; color: var(--muted); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* FOOTER */
+    footer { background: var(--black); padding: 80px 0 40px; color: #777; font-family: var(--sans); }
+    .ft-logo { font-family: var(--display); font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 15px; }
+    .ft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 50px; }
+    .ft-title { color: #fff; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px; }
+    .ft-links a { display: block; font-size: 0.9rem; margin-bottom: 10px; }
+    .ft-links a:hover { color: var(--orange); }
+    .ft-bottom { border-top: 1px solid #1a1a1a; padding-top: 30px; text-align: center; font-size: 0.75rem; }
+
+    /* ANIMATIONS */
+    .fade { opacity: 0; transform: translateY(20px); transition: 0.6s cubic-bezier(.16,1,.3,1); }
+    .fade.in { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <div class="overlay" onclick="toggleMenu()"></div>
+  <aside class="drawer">
+    <nav style="display: flex; flex-direction: column;">
+      <a href="../index.html">Home</a>
+      <a href="../tools/caption-generator.html">AI Tools</a>
+      <a href="../earning.html">Earning Hub</a>
+      <a href="index.html" style="color: var(--orange);">Creator Blog</a>
+      <a href="https://t.me/skill2incomehub" target="_blank" style="margin-top: 20px; background: var(--orange-pale); color: var(--orange); text-align:center;">Join Telegram</a>
+    </nav>
+  </aside>
+
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="index.html" class="logo">CaptionStudio <span style="font-weight: 400; opacity: 0.4; margin-left: 5px;">/ Blog</span></a>
+      <button class="hbg" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="blog-hero wrap">
+    <h1 id="hero-title">🔥 Latest Creator Blogs</h1>
+    <p id="hero-sub">Learn Instagram growth, AI tools & earning strategies.</p>
+  </header>
+
+  <main class="wrap">
+    <div class="cat-row" id="categories"></div>
+    <div class="post-grid" id="post-container">
+      </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="ft-grid">
+        <div style="grid-column: span 1.5;">
+          <div class="ft-logo">CaptionStudio</div>
+          <p style="max-width: 260px;">Helping creators scale digital assets with AI and smart automation.</p>
+        </div>
+        <div>
+          <h4 class="ft-title">Resources</h4>
+          <div class="ft-links">
+            <a href="../index.html">Home</a>
+            <a href="../earning.html">Earning Hub</a>
+            <a href="../tools/caption-generator.html">Caption AI</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="ft-title">Contact</h4>
+          <div class="ft-links">
+            <a href="https://t.me/skill2incomehub">Telegram</a>
+            <a href="mailto:captionstudio02@gmail.com">Email Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        &copy; 2026 CaptionStudio &middot; Built by Ansh Yadav &middot; Gorakhpur, UP
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.body.classList.toggle('menu-open'); }
+
+    async function loadBlog() {
+      try {
+        // Path fix: Adjusted to reach data folder from blog folder
+        const response = await fetch('../data/blog.json');
+        const data = await response.json();
+
+        const catContainer = document.getElementById('categories');
+        // Extract unique categories from the array of objects
+        const categories = ["all", ...new Set(data.map(post => post.category.toLowerCase()))];
+
+        catContainer.innerHTML = '';
+        categories.forEach((cat, index) => {
+          const btn = document.createElement('button');
+          btn.className = `cat-btn ${index === 0 ? 'active' : ''}`;
+          btn.innerText = cat;
+          btn.onclick = () => {
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterPosts(cat);
+          };
+          catContainer.appendChild(btn);
+        });
+
+        window.allPosts = data;
+        renderPosts(data);
+
+      } catch (error) {
+        console.error("Data load failed:", error);
+        document.getElementById('post-container').innerHTML = "<p>Failed to load blog posts. Check data/blog.json path.</p>";
+      }
+    }
+
+    function renderPosts(posts) {
+      const postContainer = document.getElementById('post-container');
+      postContainer.innerHTML = '';
+
+      posts.forEach((post, index) => {
+        // Dynamic Unsplash images based on category
+        const imgUrl = `https://images.unsplash.com/photo-${1600000000000 + (index * 12345)}?q=80&w=800&auto=format&fit=crop&sig=${index}`;
+        
+        const postHTML = `
+          <a href="../${post.link}" class="post-card fade">
+            <div class="post-img-box">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="${post.title}" loading="lazy">
+            </div>
+            <span class="post-cat">${post.category}</span>
+            <h2 class="post-title">${post.title}</h2>
+            <p class="post-excerpt">${post.desc}</p>
+            <div style="margin-top:15px; display:flex; justify-content:space-between; align-items:center; font-family:var(--sans); font-size:0.8rem; color:#bbb;">
+               <span>${post.date}</span>
+               <span style="color:var(--orange); font-weight:600;">Read &rarr;</span>
+            </div>
+          </a>
+        `;
+        postContainer.innerHTML += postHTML;
+      });
+
+      // Trigger animations
+      setTimeout(() => {
+        document.querySelectorAll('.fade').forEach(el => el.classList.add('in'));
+      }, 50);
+    }
+
+    function filterPosts(category) {
+      if (category === "all") {
+        renderPosts(window.allPosts);
+      } else {
+        const filtered = window.allPosts.filter(p => p.category.toLowerCase() === category);
+        renderPosts(filtered);
+      }
+    }
+
+    window.onload = loadBlog;
+  </script>
+</body>
+</html>
