@@ -77,7 +77,8 @@
     "link": "blog/best-earning-apps-students-2026.html",
     "date": "2026-04-05",
     "tag": "💸 EARNING",
-    "category": "earning"
+    "category": "earning",
+    "hot": false
   },
   {
     "title": "Biggest Money Loot Offers April 2026",
@@ -94,7 +95,8 @@
     "link": "blog/mobikwik-loot-2026.html",
     "date": "2026-04-05",
     "tag": "💰 LOOT",
-    "category": "earning"
+    "category": "earning",
+    "hot": false
   },
   {
     "title": "Ai Earning Guide 2026",
@@ -102,7 +104,8 @@
     "link": "blog/ai-earning-guide-2026.html",
     "date": "2026-04-04",
     "tag": "🤖 AI",
-    "category": "ai"
+    "category": "ai",
+    "hot": false
   },
   {
     "title": "Master AI Guide 2026",
@@ -110,7 +113,8 @@
     "link": "blog/master-ai-guide-2026.html",
     "date": "2026-04-04",
     "tag": "🤖 AI",
-    "category": "ai"
+    "category": "ai",
+    "hot": false
   },
   {
     "title": "New Era AI 2026",
@@ -118,7 +122,8 @@
     "link": "blog/new-era-ai-2026.html",
     "date": "2026-04-04",
     "tag": "🤖 AI",
-    "category": "ai"
+    "category": "ai",
+    "hot": false
   },
   {
     "title": "Pro AI Guide 2026",
@@ -126,7 +131,8 @@
     "link": "blog/pro-ai-guide-2026.html",
     "date": "2026-04-04",
     "tag": "🤖 AI",
-    "category": "ai"
+    "category": "ai",
+    "hot": false
   },
   {
     "title": "Success Mindset 2026",
@@ -134,7 +140,8 @@
     "link": "blog/success-mindset-2026.html",
     "date": "2026-04-04",
     "tag": "🧠 MINDSET",
-    "category": "mindset"
+    "category": "mindset",
+    "hot": false
   },
   {
     "title": "Viral Caption Strategy 2026",
@@ -142,7 +149,8 @@
     "link": "blog/viral-caption-strategy-2026.html",
     "date": "2026-04-04",
     "tag": "✍️ CONTENT",
-    "category": "content"
+    "category": "content",
+    "hot": false
   },
   {
     "title": "Instagram Viral Hacks 2026",
@@ -150,7 +158,8 @@
     "link": "blog/viral-hacks-2026.html",
     "date": "2026-04-04",
     "tag": "🚀 VIRAL",
-    "category": "instagram"
+    "category": "instagram",
+    "hot": false
   },
   {
     "title": "Best Captions for Boys 2026",
@@ -158,7 +167,8 @@
     "link": "blog/best-captions-boys-2026.html",
     "date": "2026-04-02",
     "tag": "🔥 CAPTION",
-    "category": "captions"
+    "category": "captions",
+    "hot": false
   },
   {
     "title": "Best Instagram Captions for Reels 2026",
@@ -166,7 +176,8 @@
     "link": "blog/best-instagram-captions-reels-2026.html",
     "date": "2026-04-02",
     "tag": "📈 GROWTH",
-    "category": "instagram"
+    "category": "instagram",
+    "hot": false
   },
   {
     "title": "Email Writing Guide",
@@ -174,7 +185,8 @@
     "link": "blog/email-writing-guide.html",
     "date": "2026-04-02",
     "tag": "✉️ SKILL",
-    "category": "skill"
+    "category": "skill",
+    "hot": false
   },
   {
     "title": "Instagram Bio Ideas 2026",
@@ -182,6 +194,7 @@
     "link": "blog/instagram-bio-ideas-2026.html",
     "date": "2026-04-02",
     "tag": "📱 INSTAGRAM",
-    "category": "instagram"
+    "category": "instagram",
+    "hot": false
   }
 ]
