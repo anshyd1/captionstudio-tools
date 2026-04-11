@@ -224,5 +224,11 @@
   <changefreq>yearly</changefreq>
   <priority>0.4</priority>
 </url>
+  <url>
+  <loc>https://captionstudio.in/blog/ultimate-instagram-captions.html</loc>
+  <lastmod>2026-04-11</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.95</priority>
+</url>
 
 </urlset>
