@@ -1,69 +1,374 @@
 <!DOCTYPE html>
 <html lang="hi-IN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viral AI Caption Generator | CaptionStudio</title>
-<meta name="description" content="Free AI Instagram caption generator for viral growth. Made for creators in Gorakhpur.">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-    body{margin:0;font-family:'DM Sans';background:#faf9f6;color:#111}
-    h1,h2,h3{font-family:'Syne'}
-    nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:100}
-    nav b{font-family:'Syne';color:#ff4d00;font-size:20px}
-    .header{text-align:center;padding:50px 20px}
-    .generator-box{max-width:600px;margin:0 auto 60px;padding:0 20px}
-    .card-main{background:#fff;padding:25px;border-radius:18px;border:1px solid #eee;box-shadow:0 10px 30px rgba(0,0,0,0.05)}
-    textarea{width:100%;border:1px solid #eee;background:#f9f9f9;padding:15px;border-radius:12px;font-size:16px;resize:none;box-sizing:border-box}
-    .btn-generate{width:100%;background:#ff4d00;color:#fff;border:none;padding:16px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;margin-top:15px}
-    .res-card{background:#fff;border:1px solid #eee;padding:25px;border-radius:18px;border-left:6px solid #ff4d00;margin-top:30px;animation:fadeIn 0.5s ease}
-    .growth-tip{background:rgba(255,77,0,0.05);padding:15px;border-radius:12px;font-size:14px;color:#444;margin:20px 0;border:1px dashed #ff4d00}
-    .stats-grid{display:flex;gap:20px;border-top:1px solid #eee;padding-top:15px;color:#777;font-size:13px}
-    footer{background:#111;color:#fff;padding:40px 5%;text-align:center;margin-top:80px}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viral AI Caption Generator | CaptionStudio</title>
+  <meta name="description" content="Free AI Instagram caption generator for viral growth. Made for creators in Gorakhpur.">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'DM Sans',sans-serif;
+      background:#faf9f6;
+      color:#111;
+    }
+    h1,h2,h3{font-family:'Syne',sans-serif}
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 5%;
+      background:#fff;
+      border-bottom:1px solid #eee;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    nav b{
+      color:#ff4d00;
+      font-size:20px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      font-weight:600;
+    }
+
+    .header{
+      text-align:center;
+      padding:50px 20px 30px;
+    }
+
+    .header h1{
+      margin:0 0 10px;
+      font-size:38px;
+      line-height:1.1;
+    }
+
+    .header p{
+      margin:0;
+      color:#666;
+      font-size:16px;
+    }
+
+    .generator-box{
+      max-width:700px;
+      margin:0 auto 60px;
+      padding:0 20px;
+    }
+
+    .card-main{
+      background:#fff;
+      padding:25px;
+      border-radius:18px;
+      border:1px solid #eee;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    textarea{
+      width:100%;
+      border:1px solid #eee;
+      background:#f9f9f9;
+      padding:15px;
+      border-radius:12px;
+      font-size:16px;
+      resize:none;
+      box-sizing:border-box;
+      font-family:'DM Sans',sans-serif;
+      outline:none;
+    }
+
+    textarea:focus{
+      border-color:#ff4d00;
+      background:#fff;
+    }
+
+    .meta-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      margin-top:10px;
+      color:#777;
+      font-size:13px;
+      flex-wrap:wrap;
+    }
+
+    .btn-generate{
+      width:100%;
+      background:#ff4d00;
+      color:#fff;
+      border:none;
+      padding:16px;
+      border-radius:12px;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      margin-top:15px;
+      transition:.2s ease;
+    }
+
+    .btn-generate:hover{transform:translateY(-1px)}
+    .btn-generate:disabled{
+      opacity:.7;
+      cursor:not-allowed;
+      transform:none;
+    }
+
+    .res-card{
+      background:#fff;
+      border:1px solid #eee;
+      padding:25px;
+      border-radius:18px;
+      border-left:6px solid #ff4d00;
+      margin-top:30px;
+      animation:fadeIn .45s ease;
+      box-shadow:0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .growth-tip{
+      background:rgba(255,77,0,0.05);
+      padding:15px;
+      border-radius:12px;
+      font-size:14px;
+      color:#444;
+      margin:20px 0;
+      border:1px dashed #ff4d00;
+      line-height:1.6;
+    }
+
+    .stats-grid{
+      display:flex;
+      gap:20px;
+      border-top:1px solid #eee;
+      padding-top:15px;
+      color:#777;
+      font-size:13px;
+      flex-wrap:wrap;
+    }
+
+    .copy-btn{
+      width:100%;
+      margin-top:20px;
+      padding:12px;
+      background:#111;
+      color:#fff;
+      border:none;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .helper-box{
+      margin-top:16px;
+      padding:12px 14px;
+      background:#fff7f2;
+      border:1px solid #ffd7c7;
+      color:#6a4333;
+      border-radius:12px;
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .status{
+      margin-top:12px;
+      font-size:13px;
+      color:#777;
+      text-align:center;
+      min-height:18px;
+    }
+
+    footer{
+      background:#111;
+      color:#fff;
+      padding:40px 5%;
+      text-align:center;
+      margin-top:80px;
+    }
+
+    footer p{
+      color:#aaa;
+      font-size:14px;
+      margin:8px 0 0;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    @media (max-width:640px){
+      .header h1{font-size:30px}
+      .stats-grid{flex-direction:column;gap:8px}
+    }
+  </style>
 </head>
 <body>
-<nav><b>CaptionStudio</b><div><a href="index.html" style="text-decoration:none;color:#333;">Home</a></div></nav>
-<section class="header"><h1>Viral AI Generator ✍️</h1><p>Hinglish captions & growth strategy for 100k followers.</p></section>
-<section class="generator-box">
+
+  <nav>
+    <a href="/"><b>CaptionStudio</b></a>
+    <div><a href="/tools/index.html">All Tools</a></div>
+  </nav>
+
+  <section class="header">
+    <h1>Viral AI Generator ✍️</h1>
+    <p>Hinglish captions & growth strategy for 100k followers.</p>
+  </section>
+
+  <section class="generator-box">
     <div class="card-main">
-        <textarea id="topic" rows="3" placeholder="Explain your post (e.g. Aaj nayi bike li hai...)"></textarea>
-        <button class="btn-generate" onclick="generate()">Generate Viral Choice ✨</button>
+      <textarea id="topic" rows="4" maxlength="240" placeholder="Explain your post (e.g. Aaj nayi bike li hai, dream complete feel ho raha hai...)"></textarea>
+
+      <div class="meta-row">
+        <span id="charCount">0 / 240</span>
+        <span>9 Gemini + 1 Groq backup enabled</span>
+      </div>
+
+      <button class="btn-generate" id="generateBtn" onclick="generate()">Generate Viral Choice ✨</button>
+
+      <div class="helper-box">
+        <b>Example:</b> Aaj first salary aayi hai / gym consistency / solo bike ride / heartbreak wali post
+      </div>
+
+      <div class="status" id="status"></div>
     </div>
+
     <div id="results"></div>
-</section>
-<footer>
+  </section>
+
+  <footer>
     <h3>CaptionStudio</h3>
-    <p style="color:#aaa;font-size:14px">Gorakhpur, Uttar Pradesh 53 | Founder: Ansh Yadav</p>
-</footer>
-<script>
-async function generate() {
-    const topic = document.getElementById('topic').value.trim();
-    const results = document.getElementById('results');
-    if(!topic) return;
-    results.innerHTML = "<div class='res-card' style='text-align:center;'>Applying Growth Logic... 🚀</div>";
-    try {
-        const res = await fetch("https://project-v3t9n.vercel.app/api/generate", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ topic, category: "Viral Hinglish" })
+    <p>Gorakhpur, Uttar Pradesh 53 | Founder: Ansh Yadav</p>
+  </footer>
+
+  <script>
+    const topicEl = document.getElementById('topic');
+    const charCountEl = document.getElementById('charCount');
+    const resultsEl = document.getElementById('results');
+    const btnEl = document.getElementById('generateBtn');
+    const statusEl = document.getElementById('status');
+
+    topicEl.addEventListener('input', () => {
+      charCountEl.innerText = `${topicEl.value.length} / 240`;
+    });
+
+    function escapeHTML(str) {
+      return String(str || "").replace(/[&<>"']/g, function (m) {
+        return {
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        }[m];
+      });
+    }
+
+    async function copyText(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          alert("Copied! 🔥");
+          return;
+        }
+
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        alert("Copied! 🔥");
+      } catch {
+        alert("Copy failed");
+      }
+    }
+
+    async function generate() {
+      const topic = topicEl.value.trim();
+
+      if (!topic) {
+        alert("Topic likho pehle bhai.");
+        return;
+      }
+
+      btnEl.disabled = true;
+      btnEl.innerText = "Generating...";
+      statusEl.innerText = "AI se caption aa raha hai...";
+      resultsEl.innerHTML = "<div class='res-card' style='text-align:center;'>Applying Growth Logic... 🚀</div>";
+
+      try {
+        const res = await fetch("/api/generate", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            topic,
+            category: "Viral Hinglish"
+          })
         });
-        const data = await res.json();
-        results.innerHTML = `
-            <div class="res-card">
-                <div style="display:flex;justify-content:space-between;align-items:center;">
-                    <span style="font-size:10px;font-weight:800;color:#ff4d00;">AI PRO CHOICE</span>
-                    <small style="color:#aaa;font-size:10px;">via ${data.type}</small>
-                </div>
-                <p id="cap" style="font-size:18px;margin:20px 0;line-height:1.6;font-weight:500;">${data.caption}</p>
-                <div class="growth-tip"><b style="color:#ff4d00;">💡 Growth Tip:</b> ${data.tip}</div>
-                <div class="stats-grid"><span>Reach: <b>${data.analytics.reach.toLocaleString()}+</b></span><span>Engagement: <b>${data.analytics.likes.toLocaleString()}+</b></span></div>
-                <button onclick="copy()" style="width:100%;margin-top:20px;padding:12px;background:#111;color:#fff;border:none;border-radius:10px;font-weight:700;cursor:pointer;">Copy & Post 🚀</button>
-            </div>`;
-    } catch (e) { results.innerHTML = "<div class='res-card'>Server Busy. 1 min ruko bhai.</div>"; }
-}
-function copy() { navigator.clipboard.writeText(document.getElementById('cap').innerText); alert("Copied! 🔥"); }
-</script>
+
+        const raw = await res.text();
+        let data = {};
+
+        try {
+          data = JSON.parse(raw);
+        } catch {
+          throw new Error("Invalid server response");
+        }
+
+        if (!res.ok) {
+          throw new Error(data.error || "Server busy");
+        }
+
+        const caption = String(data.caption || "").trim();
+        const tip = String(data.tip || "").trim();
+        const source = String(data.type || "AI").trim();
+
+        const reach = Number(data?.analytics?.reach || 0);
+        const likes = Number(data?.analytics?.likes || 0);
+
+        resultsEl.innerHTML = `
+          <div class="res-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+              <span style="font-size:10px;font-weight:800;color:#ff4d00;">AI PRO CHOICE</span>
+              <small style="color:#aaa;font-size:10px;">via ${escapeHTML(source)}</small>
+            </div>
+
+            <p id="cap" style="font-size:18px;margin:20px 0;line-height:1.7;font-weight:500;white-space:pre-line;">${escapeHTML(caption)}</p>
+
+            <div class="growth-tip">
+              <b style="color:#ff4d00;">💡 Growth Tip:</b> ${escapeHTML(tip)}
+            </div>
+
+            <div class="stats-grid">
+              <span>Reach: <b>${reach.toLocaleString()}+</b></span>
+              <span>Engagement: <b>${likes.toLocaleString()}+</b></span>
+            </div>
+
+            <button class="copy-btn" onclick="copyText(document.getElementById('cap').innerText)">Copy & Post 🚀</button>
+          </div>
+        `;
+
+        statusEl.innerText = "Ready ✔";
+      } catch (e) {
+        resultsEl.innerHTML = "<div class='res-card'>Server Busy. 1 min ruko bhai.</div>";
+        statusEl.innerText = e.message || "Something went wrong";
+      } finally {
+        btnEl.disabled = false;
+        btnEl.innerText = "Generate Viral Choice ✨";
+      }
+    }
+  </script>
 </body>
-</html>
+    </html>
