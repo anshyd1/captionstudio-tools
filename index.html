@@ -239,12 +239,22 @@
     .btn-ghost { background: transparent; color: #888; border: 1.5px solid #ddd; padding: 12px 24px; font-size: 0.92rem; }
     .btn-ghost:hover { border-color: #aaa; color: var(--ink); }
 
-    /* ============ HERO IMAGE ============ */
-    .hero-img-block { margin-top: 20px; }
-    .hero-img-block img {
+    /* ============ HERO IMAGE — FIXED ASPECT RATIO ============ */
+    .hero-img-block {
       width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
       border-radius: 14px;
       box-shadow: 0 16px 50px rgba(0,0,0,.12);
+      margin-top: 20px;
+      background: #f5f5f5;
+    }
+    .hero-img-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
     }
     .img-caption {
       font-family: var(--sans);
@@ -394,7 +404,7 @@
     }
     .prose h2:not(:first-child) { margin-top: 44px; }
 
-    /* ============ ASSET DUO ============ */
+    /* ============ ASSET DUO — FIXED ASPECT RATIO ============ */
     .asset-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-bottom: 40px; }
     .asset-card {
       display: block;
@@ -407,8 +417,19 @@
       color: inherit;
     }
     .asset-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,0,0,.09); }
-    .asset-img { position: relative; height: 230px; overflow: hidden; }
-    .asset-img img { width: 100%; height: 100%; object-fit: cover; }
+    .asset-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      position: relative;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+    .asset-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .asset-stamp {
       position: absolute;
       top: 14px;
@@ -442,6 +463,9 @@
       line-height: 1.7;
       letter-spacing: 0.005em;
     }
+
+    /* Relax Mode card image — wider aspect */
+    .relax-card .asset-img { aspect-ratio: 21 / 9; }
 
     /* ============ EARN LIST ============ */
     .earn-list { display: grid; gap: 0; }
@@ -583,6 +607,12 @@
       .asset-duo { grid-template-columns: 1fr; }
       .ft-brand { grid-column: span 1; }
       .ft-grid { gap: 36px; }
+
+      /* Image aspect ratios for tablet */
+      .hero-img-block { aspect-ratio: 4 / 3; border-radius: 12px; }
+      .hero-img-block img { border-radius: 12px; }
+      .asset-img { aspect-ratio: 16 / 9; }
+      .relax-card .asset-img { aspect-ratio: 16 / 9; }
     }
     @media(max-width:480px){
       .stats-row { grid-template-columns: 1fr; }
@@ -594,6 +624,12 @@
       .prose p { font-size: 1rem; line-height: 1.85; }
       .rule-label { margin: 56px 0 36px; }
       .seo-section { margin: 50px 0 20px; }
+
+      /* Image aspect ratios for mobile */
+      .hero-img-block { aspect-ratio: 1 / 1; border-radius: 10px; }
+      .hero-img-block img { border-radius: 10px; }
+      .asset-img { aspect-ratio: 4 / 3; }
+      .relax-card .asset-img { aspect-ratio: 4 / 3; }
     }
   </style>
 </head>
@@ -674,7 +710,7 @@
         </div>
 
         <div class="hero-img-block fade">
-          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop" alt="AI caption generator for Instagram reels India - CaptionStudio free tools" width="1200" height="675" fetchpriority="high" />
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop" alt="AI caption generator for Instagram reels India - CaptionStudio free tools" fetchpriority="high" />
         </div>
         <p class="img-caption fade">CaptionStudio &middot; Free AI Tools for Indian Creators &middot; 2026</p>
       </div>
@@ -789,8 +825,8 @@
         <h2 class="sec-title">Enter Relax Mode.</h2>
         <p class="sec-body">High-performance creation requires high-quality rest. Find your flow state.</p>
       </div>
-      <div class="asset-card fade" style="margin-bottom: 80px;">
-        <div class="asset-img" style="height: 300px;">
+      <div class="asset-card relax-card fade" style="margin-bottom: 80px;">
+        <div class="asset-img">
           <img loading="lazy" src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=1000&auto=format&fit=crop" alt="Digital wellness and relaxation mode for creators" />
         </div>
         <div class="asset-body" style="text-align: center; padding: 44px 28px;">
