@@ -34,7 +34,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -51,151 +51,549 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.8;
+      letter-spacing: 0.005em;
+      font-stretch: normal;
+      font-synthesis: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
 
-    /* ====== FIX 1: WIDER WRAP ====== */
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
 
-    /* LOOT BAR — FIXED: marquee removed, static banner */
-    .loot-bar { background: var(--black); color: #fff; padding: 10px 0; overflow: hidden; }
-    .loot-inner { display: flex; align-items: center; gap: 12px; }
-    .loot-pill { flex-shrink: 0; background: var(--orange); color: #fff; font-family: var(--sans); font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; }
-    .loot-text { font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: #999; white-space: nowrap; animation: lootScroll 20s linear infinite; }
+    /* ============ LOOT BAR ============ */
+    .loot-bar { background: var(--black); color: #fff; padding: 12px 0; overflow: hidden; }
+    .loot-inner { display: flex; align-items: center; gap: 14px; }
+    .loot-pill {
+      flex-shrink: 0;
+      background: var(--orange);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 3px;
+      line-height: 1.4;
+    }
+    .loot-scroll { overflow: hidden; flex: 1; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .loot-track {
+      display: inline-flex;
+      gap: 40px;
+      white-space: nowrap;
+      animation: lootScroll 35s linear infinite;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: #b5b5b5;
+      letter-spacing: 0.015em;
+      line-height: 1.5;
+    }
+    .loot-track span { padding-right: 40px; }
     @keyframes lootScroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
 
-    /* NAV */
+    /* ============ NAV ============ */
     nav { border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.97); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
-    .logo { display: flex; align-items: center; gap: 9px; font-family: var(--display); font-size: 1.05rem; font-weight: 800; color: var(--black); letter-spacing: -.01em; }
-    .logo img { width: 28px; height: 28px; border-radius: 5px; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+    .logo img { width: 30px; height: 30px; border-radius: 6px; }
     .hbg { background: none; border: none; cursor: pointer; padding: 8px; display: flex; flex-direction: column; gap: 5px; position: relative; z-index: 1200; }
-    .hbg span { width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: transform .3s, opacity .3s; display: block; }
+    .hbg span { width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: transform .3s, opacity .3s; display: block; }
     body.menu-open .hbg span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     body.menu-open .hbg span:nth-child(2) { opacity: 0; }
     body.menu-open .hbg span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* DRAWER */
+    /* ============ DRAWER ============ */
     .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); visibility: hidden; opacity: 0; transition: .3s; z-index: 1000; }
-    .drawer { position: fixed; top: 0; right: -320px; width: 300px; height: 100%; background: var(--bg); z-index: 1100; box-shadow: -2px 0 24px rgba(0,0,0,.12); transition: right .4s cubic-bezier(.16,1,.3,1); overflow-y: auto; }
+    .drawer { position: fixed; top: 0; right: -340px; width: 320px; height: 100%; background: var(--bg); z-index: 1100; box-shadow: -2px 0 24px rgba(0,0,0,.12); transition: right .4s cubic-bezier(.16,1,.3,1); overflow-y: auto; }
     body.menu-open { overflow: hidden; }
     body.menu-open .overlay { visibility: visible; opacity: 1; }
     body.menu-open .drawer { right: 0; }
-    .drawer-head { padding: 28px 28px 20px; border-bottom: 1px solid var(--rule); font-family: var(--display); font-size: 1.1rem; font-weight: 800; color: var(--black); }
-    .drawer-nav { padding: 12px 0 28px; }
-    .drawer-nav a { display: block; font-family: var(--sans); font-size: 1rem; font-weight: 500; color: var(--ink); padding: 13px 28px; border-bottom: 1px solid #f7f7f7; transition: color .2s, padding-left .2s; }
-    .drawer-nav a:hover { color: var(--orange); padding-left: 34px; }
-    .nav-badge { display: inline-block; background: var(--orange); color: #fff; font-size: 8px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; vertical-align: middle; margin-left: 6px; }
-    .nav-new { display: inline-block; background: #111; color: #fff; font-size: 8px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; vertical-align: middle; margin-left: 6px; }
+    .drawer-head {
+      padding: 30px 30px 22px;
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+    .drawer-nav { padding: 14px 0 30px; }
+    .drawer-nav a {
+      display: block;
+      font-family: var(--sans);
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: var(--ink);
+      padding: 16px 30px;
+      border-bottom: 1px solid #f7f7f7;
+      transition: color .2s, padding-left .2s;
+      letter-spacing: 0.005em;
+      line-height: 1.5;
+    }
+    .drawer-nav a:hover { color: var(--orange); padding-left: 36px; }
+    .nav-badge { display: inline-block; background: var(--orange); color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 3px; vertical-align: middle; margin-left: 8px; line-height: 1.4; }
+    .nav-new { display: inline-block; background: #111; color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 7px; border-radius: 3px; vertical-align: middle; margin-left: 8px; line-height: 1.4; }
 
-    /* HERO */
-    .hero { padding: 80px 0 72px; }
-    .hero-kicker { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; }
-    .hero h1 { font-family: var(--display); font-size: clamp(2.4rem, 7vw, 3.4rem); font-weight: 800; line-height: 1.05; color: var(--black); letter-spacing: -.02em; margin-bottom: 24px; }
+    /* ============ HERO ============ */
+    .hero { padding: 90px 0 80px; }
+    .hero-kicker {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.5rem, 7vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--black);
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+      padding-bottom: 4px;
+    }
     .hero h1 em { color: var(--orange); font-style: normal; }
-    .hero-sub { font-family: var(--serif); font-size: 1.18rem; color: var(--muted); line-height: 1.75; max-width: 560px; margin-bottom: 16px; }
+    .hero-sub {
+      font-family: var(--serif);
+      font-size: 1.22rem;
+      color: var(--muted);
+      line-height: 1.85;
+      letter-spacing: 0.005em;
+      max-width: 580px;
+      margin-bottom: 24px;
+    }
 
-    /* ====== FIX 2: CONVERSION TELEGRAM CTA ====== */
-    .telegram-cta { color: var(--orange); font-weight: 600; font-family: var(--sans); font-size: .95rem; margin-bottom: 28px; }
-    .telegram-cta a { color: var(--orange); text-decoration: underline; text-underline-offset: 3px; }
+    .telegram-cta {
+      color: var(--orange);
+      font-weight: 600;
+      font-family: var(--sans);
+      font-size: 1rem;
+      letter-spacing: 0.005em;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .telegram-cta a { color: var(--orange); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
     .telegram-cta a:hover { text-decoration-thickness: 2px; }
 
-    /* ====== FIX 3: TRUST SIGNAL ====== */
-    .trust-signal { font-family: var(--sans); font-size: .88rem; color: var(--muted); margin-bottom: 40px; }
+    .trust-signal {
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
 
-    /* BUTTONS — FIXED: justify-content center */
-    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 56px; align-items: center; justify-content: center; }
-    .btn { display: inline-flex; align-items: center; gap: 6px; font-family: var(--sans); font-weight: 600; font-size: .9rem; letter-spacing: .01em; padding: 10px 22px; border-radius: 40px; transition: transform .2s, box-shadow .2s, background .2s; cursor: pointer; border: none; white-space: nowrap; }
+    /* ============ BUTTONS ============ */
+    .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 60px; align-items: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--sans);
+      font-weight: 600;
+      font-size: 0.94rem;
+      letter-spacing: 0.015em;
+      line-height: 1.4;
+      padding: 13px 26px;
+      border-radius: 40px;
+      transition: transform .2s, box-shadow .2s, background .2s;
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+    }
     .btn-fill { background: var(--black); color: #fff; }
     .btn-fill:hover { background: #333; transform: translateY(-2px); }
     .btn-orange { background: var(--orange); color: #fff; }
-    .btn-orange:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(232,68,10,.25); }
-    .btn-ghost { background: transparent; color: #aaa; border: 1.5px solid #ddd; padding: 9px 20px; font-size: .86rem; }
+    .btn-orange:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(232,68,10,.28); }
+    .btn-ghost { background: transparent; color: #888; border: 1.5px solid #ddd; padding: 12px 24px; font-size: 0.92rem; }
     .btn-ghost:hover { border-color: #aaa; color: var(--ink); }
 
-    /* ====== FIX 4: STATS MOBILE ====== */
-    .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; margin: 56px 0; }
-    .stat-cell { background: #fff; padding: 24px 16px; text-align: center; }
-    .stat-n { font-family: var(--display); font-size: 1.9rem; font-weight: 800; color: var(--orange); line-height: 1; margin-bottom: 5px; }
-    .stat-l { font-family: var(--sans); font-size: .78rem; color: var(--muted); font-weight: 600; }
+    /* ============ HERO IMAGE ============ */
+    .hero-img-block { margin-top: 20px; }
+    .hero-img-block img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 16px 50px rgba(0,0,0,.12);
+    }
+    .img-caption {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 16px;
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+      font-style: italic;
+    }
 
-    /* RULE LABEL */
-    .rule-label { display: flex; align-items: center; gap: 16px; margin: 72px 0 48px; }
+    /* ============ STATS ============ */
+    .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; margin: 60px 0; }
+    .stat-cell { background: #fff; padding: 32px 18px; text-align: center; }
+    .stat-n {
+      font-family: var(--display);
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--orange);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      padding-bottom: 2px;
+    }
+    .stat-l {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
+
+    /* ============ RULE LABEL ============ */
+    .rule-label { display: flex; align-items: center; gap: 18px; margin: 80px 0 52px; }
     .rule-label::before, .rule-label::after { content:''; flex:1; height:1px; background: var(--rule); }
-    .rule-label span { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #bbb; white-space: nowrap; }
+    .rule-label span {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #999;
+      white-space: nowrap;
+      line-height: 1.6;
+    }
 
-    /* SECTION HEAD */
-    .sec-head { margin-bottom: 44px; }
-    .sec-kicker { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
-    .sec-title { font-family: var(--display); font-size: clamp(1.6rem,4vw,2.1rem); font-weight: 800; color: var(--black); line-height: 1.15; letter-spacing: -.02em; margin-bottom: 14px; }
-    .sec-body { font-family: var(--serif); font-size: 1.05rem; color: var(--muted); line-height: 1.78; max-width: 560px; }
+    /* ============ SECTION HEAD ============ */
+    .sec-head { margin-bottom: 48px; }
+    .sec-kicker {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-size: clamp(1.7rem,4vw,2.2rem);
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      padding-bottom: 4px;
+    }
+    .sec-body {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      color: var(--muted);
+      line-height: 1.85;
+      letter-spacing: 0.005em;
+      max-width: 580px;
+    }
 
-    /* TOOL ROWS */
+    /* ============ TOOL ROWS ============ */
     .tool-list { display: grid; gap: 0; }
-    .tool-row { display: grid; grid-template-columns: 52px 1fr auto; align-items: center; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--rule); transition: opacity .2s; text-decoration: none; color: inherit; }
+    .tool-row { display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: 22px; padding: 30px 0; border-bottom: 1px solid var(--rule); transition: opacity .2s; text-decoration: none; color: inherit; }
     .tool-row:first-child { border-top: 1px solid var(--rule); }
-    .tool-row:hover { opacity: .75; }
-    .tool-icon-box { width: 46px; height: 46px; border-radius: 8px; background: var(--orange-pale); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: .78rem; font-weight: 800; color: var(--orange); flex-shrink: 0; letter-spacing: -.01em; }
-    .tool-info h3 { font-family: var(--display); font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 4px; }
-    .tool-info p { font-family: var(--sans); font-size: .88rem; color: var(--muted); line-height: 1.5; }
-    .tool-cta { font-family: var(--sans); font-size: .82rem; font-weight: 600; color: var(--orange); white-space: nowrap; flex-shrink: 0; }
+    .tool-row:hover { opacity: .7; }
+    .tool-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 9px;
+      background: var(--orange-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--orange);
+      flex-shrink: 0;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+    .tool-info h3 {
+      font-family: var(--display);
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .tool-info p {
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.65;
+      letter-spacing: 0.005em;
+    }
+    .tool-cta {
+      font-family: var(--sans);
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--orange);
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+      line-height: 1.5;
+      flex-shrink: 0;
+    }
 
-    /* ====== FIX 5: SEO CONTENT PROSE SECTION ====== */
-    .seo-section { margin: 60px 0 20px; }
-    .prose h2 { font-family: var(--display); font-size: 1.5rem; font-weight: 800; color: var(--black); margin: 0 0 14px; letter-spacing: -.015em; }
-    .prose p { font-family: var(--serif); font-size: 1.08rem; color: #444; line-height: 1.8; margin-bottom: 18px; }
+    /* ============ SEO PROSE ============ */
+    .seo-section { margin: 70px 0 30px; }
+    .prose h2 {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -0.018em;
+      line-height: 1.35;
+      margin: 0 0 18px;
+      padding-bottom: 4px;
+    }
+    .prose p {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.9;
+      letter-spacing: 0.005em;
+      margin-bottom: 30px;
+    }
+    .prose h2:not(:first-child) { margin-top: 44px; }
 
-    /* FULL IMAGE */
-    .full-img { width: 100%; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,.08); margin-bottom: 12px; }
+    /* ============ ASSET DUO ============ */
+    .asset-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-bottom: 40px; }
+    .asset-card {
+      display: block;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      transition: transform .3s, box-shadow .3s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .asset-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,0,0,.09); }
+    .asset-img { position: relative; height: 230px; overflow: hidden; }
+    .asset-img img { width: 100%; height: 100%; object-fit: cover; }
+    .asset-stamp {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--orange);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 4px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.5;
+      z-index: 2;
+    }
+    .asset-body { padding: 26px 22px; }
+    .asset-body h3 {
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .asset-body p {
+      font-family: var(--sans);
+      font-size: 0.94rem;
+      color: var(--muted);
+      line-height: 1.7;
+      letter-spacing: 0.005em;
+    }
 
-    /* EARN LIST */
+    /* ============ EARN LIST ============ */
     .earn-list { display: grid; gap: 0; }
-    .earn-item { display: grid; grid-template-columns: 44px 1fr; gap: 22px; padding: 30px 0; border-bottom: 1px solid var(--rule); align-items: start; text-decoration: none; color: inherit; transition: opacity .2s; }
+    .earn-item { display: grid; grid-template-columns: 50px 1fr; gap: 24px; padding: 34px 0; border-bottom: 1px solid var(--rule); align-items: start; text-decoration: none; color: inherit; transition: opacity .2s; }
     .earn-item:first-child { border-top: 1px solid var(--rule); }
-    .earn-item:hover { opacity: .75; }
-    .earn-num { font-family: var(--display); font-size: 2rem; font-weight: 800; color: #dedede; line-height: 1; margin-top: 2px; }
-    .earn-body h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 700; color: var(--black); margin-bottom: 7px; }
-    .earn-body p { font-family: var(--serif); font-size: .97rem; color: var(--muted); line-height: 1.7; }
-    .earn-arrow { display: inline-block; margin-top: 10px; font-family: var(--sans); font-size: .8rem; font-weight: 600; color: var(--orange); }
+    .earn-item:hover { opacity: .7; }
+    .earn-num {
+      font-family: var(--display);
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #dedede;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-top: 0;
+    }
+    .earn-body h3 {
+      font-family: var(--display);
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .earn-body p {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      letter-spacing: 0.005em;
+    }
+    .earn-arrow {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: var(--sans);
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--orange);
+      letter-spacing: 0.015em;
+      line-height: 1.5;
+    }
 
-    /* CTA BAND */
-    .cta-band { background: var(--black); border-radius: 12px; padding: 56px 36px; text-align: center; margin: 72px 0; position: relative; overflow: hidden; }
-    .cta-band h2 { font-family: var(--display); font-size: clamp(1.5rem,4vw,2rem); font-weight: 800; color: #fff; letter-spacing: -.02em; margin-bottom: 12px; }
-    .cta-band p { font-family: var(--serif); font-size: 1.05rem; color: #888; margin-bottom: 32px; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    /* ============ CTA BAND ============ */
+    .cta-band { background: var(--black); border-radius: 14px; padding: 64px 40px; text-align: center; margin: 80px 0; }
+    .cta-band h2 {
+      font-family: var(--display);
+      font-size: clamp(1.6rem,4vw,2.1rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      padding-bottom: 4px;
+    }
+    .cta-band p {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      color: #999;
+      letter-spacing: 0.005em;
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-band .btn-row { justify-content: center; margin-bottom: 0; }
 
-    /* FOOTER GRID */
+    /* ============ FOOTER ============ */
     footer { background: #0d0d0d; padding: 80px 0 40px; font-family: var(--sans); }
-    .ft-logo { font-family: var(--display); font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
-    .ft-links { display: flex; flex-direction: column; gap: 12px; }
-    .ft-links a { color: #666; font-size: .88rem; transition: color .2s; }
+    .ft-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 44px; text-align: left; margin-bottom: 60px; }
+    .ft-brand { grid-column: span 2; }
+    .ft-logo {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.015em;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .ft-brand p {
+      color: #777;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      letter-spacing: 0.005em;
+      margin-top: 18px;
+      max-width: 340px;
+    }
+    .ft-col h4 {
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: 1.5;
+    }
+    .ft-links { display: flex; flex-direction: column; gap: 14px; }
+    .ft-links a {
+      color: #777;
+      font-size: 0.92rem;
+      letter-spacing: 0.005em;
+      line-height: 1.6;
+      transition: color .2s;
+    }
     .ft-links a:hover { color: var(--orange); }
-    .ft-seo { color: #2a2a2a; font-size: .7rem; max-width: 100%; margin: 40px 0 30px; line-height: 1.7; text-align: center; border-top: 1px solid #1a1a1a; padding-top: 30px; }
-    .ft-copy { color: #3a3a3a; font-size: .76rem; text-align: center; }
+    .ft-tagline {
+      color: #555;
+      font-size: 0.88rem;
+      max-width: 700px;
+      margin: 40px auto 28px;
+      line-height: 1.8;
+      letter-spacing: 0.005em;
+      text-align: center;
+      border-top: 1px solid #1a1a1a;
+      padding-top: 32px;
+    }
+    .ft-copy {
+      color: #444;
+      font-size: 0.8rem;
+      text-align: center;
+      letter-spacing: 0.02em;
+      line-height: 1.6;
+    }
 
-    /* FADE */
+    /* ============ FADE ============ */
     .fade { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
     .fade.in { opacity: 1; transform: none; }
 
-    /* ====== FIX 6: RESPONSIVE BREAKPOINTS ====== */
+    /* ============ RESPONSIVE ============ */
     @media(max-width:768px){
-      .wrap { padding: 0 18px; }
-      .hero { padding: 52px 0 44px; }
-      .cta-band { padding: 40px 22px; }
-      .tool-row { grid-template-columns: 46px 1fr; }
+      body { font-size: 16px; line-height: 1.75; }
+      .wrap { padding: 0 20px; }
+      .hero { padding: 56px 0 48px; }
+      .hero h1 { line-height: 1.18; }
+      .cta-band { padding: 48px 24px; }
+      .tool-row { grid-template-columns: 50px 1fr; }
       .tool-cta { display: none; }
       .asset-duo { grid-template-columns: 1fr; }
-      .hero-img-block img { border-radius: 10px; }
+      .ft-brand { grid-column: span 1; }
+      .ft-grid { gap: 36px; }
     }
     @media(max-width:480px){
       .stats-row { grid-template-columns: 1fr; }
-      .btn-row { gap: 8px; }
-      .btn { font-size: .84rem; padding: 9px 18px; }
-      .hero h1 { font-size: 2rem; }
-      .hero-sub { font-size: 1.02rem; }
+      .btn-row { gap: 10px; }
+      .btn { font-size: 0.88rem; padding: 12px 20px; }
+      .hero h1 { font-size: 2.1rem; line-height: 1.2; }
+      .hero-sub { font-size: 1.05rem; line-height: 1.8; }
+      .prose h2 { font-size: 1.35rem; line-height: 1.35; }
+      .prose p { font-size: 1rem; line-height: 1.85; }
+      .rule-label { margin: 56px 0 36px; }
+      .seo-section { margin: 50px 0 20px; }
     }
   </style>
 </head>
@@ -218,16 +616,22 @@
     </nav>
   </aside>
 
-  <!-- ====== FIXED: marquee removed, static CSS-scroll banner ====== -->
+  <!-- LOOT BAR -->
   <div class="loot-bar">
     <div class="wrap">
       <div class="loot-inner">
         <span class="loot-pill">Live</span>
-        <div style="overflow:hidden;flex:1;">
-          <span class="loot-text">
-            Free Viral Hashtag &amp; Caption Art Pack &nbsp;&middot;&nbsp; 5000+ Motion Graphics — Free Download &nbsp;&middot;&nbsp; AI Learning Guides Added &nbsp;&middot;&nbsp; Earn Money Online India 2026 &nbsp;&middot;&nbsp;
-            Free Viral Hashtag &amp; Caption Art Pack &nbsp;&middot;&nbsp; 5000+ Motion Graphics — Free Download &nbsp;&middot;&nbsp; AI Learning Guides Added &nbsp;&middot;&nbsp; Earn Money Online India 2026
-          </span>
+        <div class="loot-scroll">
+          <div class="loot-track">
+            <span>🎯 Free Viral Hashtag &amp; Caption Pack</span>
+            <span>🎬 5000+ Motion Graphics — Free Download</span>
+            <span>🤖 AI Learning Guides Added</span>
+            <span>💰 Earn Money Online India 2026</span>
+            <span>🎯 Free Viral Hashtag &amp; Caption Pack</span>
+            <span>🎬 5000+ Motion Graphics — Free Download</span>
+            <span>🤖 AI Learning Guides Added</span>
+            <span>💰 Earn Money Online India 2026</span>
+          </div>
         </div>
       </div>
     </div>
@@ -236,10 +640,10 @@
   <nav>
     <div class="wrap nav-inner">
       <a href="index.html" class="logo">
-        <img src="favicon.png" alt="CaptionStudio AI Caption Generator" width="28" height="28" />
+        <img src="favicon.png" alt="CaptionStudio AI Caption Generator" width="30" height="30" />
         CaptionStudio
       </a>
-      <button class="hbg" id="hbg" onclick="toggleMenu()" aria-label="Open menu">
+      <button class="hbg" id="hbg" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -251,19 +655,16 @@
         <p class="hero-kicker fade">India's Free Creator Toolkit &middot; Est. 2024</p>
         <h1 class="fade">AI Caption Generator<br>&amp; <em>Digital Growth</em> Hub</h1>
 
-        <!-- ====== FIXED: Improved hero hook ====== -->
         <p class="hero-sub fade">
           Get viral captions, trending hashtags, and proven ways to earn online — all in one place, 100% free.
         </p>
 
-        <!-- ====== FIXED: Conversion CTA ====== -->
         <p class="telegram-cta fade">
           🎁 Get 500+ Viral Captions Free — <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener">Join Telegram Now</a>
         </p>
 
-        <!-- ====== FIXED: Trust signal ====== -->
         <p class="trust-signal fade">
-          Growing community of creators &middot; Daily updated viral strategies &middot; 100% Free tools
+          Growing creator community &middot; Daily viral strategies &middot; 100% Free tools
         </p>
 
         <div class="btn-row fade">
@@ -271,8 +672,9 @@
           <a href="earning.html" class="btn btn-fill">Earning Hub</a>
           <a href="tools/" class="btn btn-ghost">All Tools</a>
         </div>
+
         <div class="hero-img-block fade">
-          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" alt="AI caption generator for Instagram reels India - CaptionStudio free tools" width="1000" height="562" />
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop" alt="AI caption generator for Instagram reels India - CaptionStudio free tools" width="1200" height="675" fetchpriority="high" />
         </div>
         <p class="img-caption fade">CaptionStudio &middot; Free AI Tools for Indian Creators &middot; 2026</p>
       </div>
@@ -280,7 +682,7 @@
 
     <div class="wrap">
 
-      <!-- ====== FIXED: SEO Content Section (added after hero) ====== -->
+      <!-- SEO Content -->
       <section class="seo-section prose fade">
         <h2>Free AI Caption Generator for Instagram Reels in India (2026)</h2>
         <p>
@@ -289,7 +691,7 @@
 
         <h2>How to Go Viral on Instagram Reels in 2026</h2>
         <p>
-          Viral growth on Instagram depends on strong hooks, optimized captions, and the right hashtags at the right time. CaptionStudio uses trend-based AI suggestions and real-time data to help increase your reach, engagement, and follower growth — completely free.
+          Viral growth on Instagram depends on strong hooks, optimized captions, and the right hashtags at the right time. CaptionStudio uses trend-based AI suggestions to help increase your reach, engagement, and follower growth — completely free.
         </p>
 
         <h2>Why Indian Creators Trust CaptionStudio</h2>
@@ -298,7 +700,7 @@
         </p>
       </section>
 
-      <!-- ====== FIXED: Stats mobile responsive ====== -->
+      <!-- Stats -->
       <div class="stats-row fade">
         <div class="stat-cell">
           <div class="stat-n">5K+</div>
@@ -309,11 +711,12 @@
           <div class="stat-l">Free AI Tools</div>
         </div>
         <div class="stat-cell">
-          <div class="stat-n">60+</div>
-          <div class="stat-l">Community Members</div>
+          <div class="stat-n">24/7</div>
+          <div class="stat-l">Updated Daily</div>
         </div>
       </div>
 
+      <!-- AI Tools -->
       <div class="rule-label fade"><span>AI Tools</span></div>
       <div class="sec-head fade">
         <p class="sec-kicker">Free &middot; No signup required</p>
@@ -348,6 +751,7 @@
         </a>
       </div>
 
+      <!-- Free Downloads -->
       <div class="rule-label fade"><span>Free Downloads</span></div>
       <div class="sec-head fade">
         <p class="sec-kicker">Free &middot; No signup required</p>
@@ -378,23 +782,25 @@
         </a>
       </div>
 
+      <!-- Relax Mode -->
       <div class="rule-label fade"><span>Mindfulness</span></div>
       <div class="sec-head fade">
         <p class="sec-kicker">Digital Wellness</p>
         <h2 class="sec-title">Enter Relax Mode.</h2>
         <p class="sec-body">High-performance creation requires high-quality rest. Find your flow state.</p>
       </div>
-      <div class="asset-card fade" style="margin-bottom: 72px; border-color: var(--orange-pale);">
-        <div class="asset-img" style="height: 280px;">
+      <div class="asset-card fade" style="margin-bottom: 80px;">
+        <div class="asset-img" style="height: 300px;">
           <img loading="lazy" src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=1000&auto=format&fit=crop" alt="Digital wellness and relaxation mode for creators" />
         </div>
-        <div class="asset-body" style="text-align: center; padding: 40px 24px;">
+        <div class="asset-body" style="text-align: center; padding: 44px 28px;">
           <h3>Quiet the Noise</h3>
-          <p style="margin-bottom: 24px;">Escape the scrolling loop and reclaim your focus.</p>
+          <p style="margin-bottom: 26px;">Escape the scrolling loop and reclaim your focus.</p>
           <a href="relax.html" class="btn btn-orange">Launch Relax Mode</a>
         </div>
       </div>
 
+      <!-- Monetization -->
       <div class="rule-label fade"><span>Monetization</span></div>
       <div class="sec-head fade">
         <p class="sec-kicker">Earn Online &middot; Verified Methods</p>
@@ -428,12 +834,13 @@
         </a>
       </div>
 
+      <!-- CTA Band -->
       <div class="cta-band fade" id="nexgen">
         <h2>Ready to level up?</h2>
-        <p>Join 60+ creators getting daily viral strategies and exclusive free assets.</p>
-        <div class="btn-row" style="justify-content: center;">
+        <p>Join our creator community for daily viral strategies and exclusive free assets.</p>
+        <div class="btn-row">
           <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="btn btn-orange">Join Telegram</a>
-          <a href="tools/caption-generator.html" class="btn btn-ghost" style="color:#777;border-color:#333;">Try Tools &rarr;</a>
+          <a href="tools/caption-generator.html" class="btn btn-ghost" style="color:#aaa;border-color:#333;">Try Tools &rarr;</a>
         </div>
       </div>
 
@@ -442,31 +849,29 @@
 
   <footer>
     <div class="wrap">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 40px; text-align: left; margin-bottom: 60px;">
-        <div style="grid-column: span 2;">
+      <div class="ft-grid">
+        <div class="ft-brand">
           <div class="ft-logo">CaptionStudio</div>
-          <p style="color: #666; font-size: 0.88rem; line-height: 1.7; margin-top: 15px; max-width: 320px;">
-            Empowering Indian creators with high-end AI tools and earning strategies. Built in Gorakhpur, Uttar Pradesh by Ansh Yadav.
-          </p>
+          <p>Empowering Indian creators with high-end AI tools and earning strategies. Built in Gorakhpur, Uttar Pradesh by Ansh Yadav.</p>
         </div>
-        <div>
-          <h4 style="color: #fff; font-size: 0.85rem; margin-bottom: 22px; text-transform: uppercase; letter-spacing: .05em;">AI Toolbox</h4>
+        <div class="ft-col">
+          <h4>AI Toolbox</h4>
           <div class="ft-links">
             <a href="tools/caption-generator.html">Caption Generator</a>
             <a href="tools/">Hashtag Lab</a>
             <a href="tools/">Bio Architect</a>
           </div>
         </div>
-        <div>
-          <h4 style="color: #fff; font-size: 0.85rem; margin-bottom: 22px; text-transform: uppercase; letter-spacing: .05em;">Resources</h4>
+        <div class="ft-col">
+          <h4>Resources</h4>
           <div class="ft-links">
             <a href="earning.html">Earning Hub</a>
             <a href="guide.html">Growth Guide</a>
             <a href="blog/">Blog &amp; Strategy</a>
           </div>
         </div>
-        <div>
-          <h4 style="color: #fff; font-size: 0.85rem; margin-bottom: 22px; text-transform: uppercase; letter-spacing: .05em;">Support</h4>
+        <div class="ft-col">
+          <h4>Support</h4>
           <div class="ft-links">
             <a href="mailto:captionstudio02@gmail.com">Contact Us</a>
             <a href="privacy.html">Privacy Policy</a>
@@ -474,16 +879,27 @@
           </div>
         </div>
       </div>
-      <p class="ft-seo">
-        Caption Art Generator &middot; Viral Hashtags &middot; AI Learning India &middot; Video Edit Tool &middot; Earn Money Online 2026 &middot; Ansh Yadav &middot; Gorakhpur UP &middot; Free Instagram Caption Generator India
+      <p class="ft-tagline">
+        India's free AI toolkit for content creators — caption generation, hashtag research, video editing assets, and verified online earning strategies for 2026.
       </p>
       <div class="ft-copy">&copy; 2026 CaptionStudio &middot; Crafted by Ansh Yadav &middot; All Rights Reserved</div>
     </div>
   </footer>
 
   <script>
-    function toggleMenu() { document.body.classList.toggle('menu-open'); }
-    function closeMenu()  { document.body.classList.remove('menu-open'); }
+    function toggleMenu() {
+      document.body.classList.toggle('menu-open');
+      const btn = document.getElementById('hbg');
+      const isOpen = document.body.classList.contains('menu-open');
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    }
+    function closeMenu() {
+      document.body.classList.remove('menu-open');
+      const btn = document.getElementById('hbg');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open menu');
+    }
 
     /* Intersection Observer for fade-in animations */
     const io = new IntersectionObserver(entries => {
@@ -507,4 +923,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
