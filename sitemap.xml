@@ -4,14 +4,14 @@
 <!-- MAIN -->
 <url>
   <loc>https://captionstudio.in/</loc>
-  <lastmod>2026-04-10</lastmod>
+  <lastmod>2026-04-19</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
 </url>
 
 <url>
   <loc>https://captionstudio.in/blog/</loc>
-  <lastmod>2026-04-10</lastmod>
+  <lastmod>2026-04-19</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.95</priority>
 </url>
@@ -23,7 +23,57 @@
   <priority>0.85</priority>
 </url>
 
+<url>
+  <loc>https://captionstudio.in/guide.html</loc>
+  <lastmod>2026-04-19</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+
+<url>
+  <loc>https://captionstudio.in/relax.html</loc>
+  <lastmod>2026-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.65</priority>
+</url>
+
+<url>
+  <loc>https://captionstudio.in/support.html</loc>
+  <lastmod>2026-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.60</priority>
+</url>
+
+<url>
+  <loc>https://captionstudio.in/terms.html</loc>
+  <lastmod>2026-04-10</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.4</priority>
+</url>
+
+<!-- 🔥🔥 NEW — VIRAL REELS BUNDLE BLOG (HIGHEST PRIORITY) -->
+<url>
+  <loc>https://captionstudio.in/blog/viral-reels-bundle-free-download-2026.html</loc>
+  <lastmod>2026-04-19</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.95</priority>
+</url>
+
 <!-- 🔥 HIGH PRIORITY BLOGS -->
+<url>
+  <loc>https://captionstudio.in/blog/professional-development-guide.html</loc>
+  <lastmod>2026-04-13</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+
+<url>
+  <loc>https://captionstudio.in/blog/ultimate-instagram-captions.html</loc>
+  <lastmod>2026-04-11</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.95</priority>
+</url>
+
 <url>
   <loc>https://captionstudio.in/blog/hinglish-instagram-captions-2026.html</loc>
   <lastmod>2026-04-10</lastmod>
@@ -223,12 +273,6 @@
   <lastmod>2026-04-10</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.4</priority>
-</url>
-  <url>
-  <loc>https://captionstudio.in/blog/ultimate-instagram-captions.html</loc>
-  <lastmod>2026-04-11</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.95</priority>
 </url>
 
 </urlset>
