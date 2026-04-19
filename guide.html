@@ -1,36 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Growth Guide | CaptionStudio Viral Secrets 📈</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans&display=swap" rel="stylesheet">
-<style>
-    body{margin:0;font-family:'DM Sans';background:#faf9f6;color:#111;line-height:1.6}
-    h1,h2,h3{font-family:'Syne'}
-    nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000}
-    .content-area{max-width:850px; margin:0 auto; padding:50px 5%}
-    .guide-card{background:#fff; padding:30px; border-radius:20px; border:1px solid #eee; margin-bottom:30px}
-    .btn{padding:12px 25px;background:#ff4d00;color:#fff;border:none;border-radius:25px;text-decoration:none;display:inline-block;font-weight:bold; width:100%; text-align:center; box-sizing:border-box}
-    .tg-banner{background:#0088cc; color:#fff; padding:30px; border-radius:20px; text-align:center}
-    .pack-features{padding-left:20px; margin:15px 0; font-size:14px; color:#444}
-    .pack-features li{margin-bottom:8px}
-    footer{text-align:center; padding:40px; color:#777; font-size:12px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Guide | CaptionStudio Viral Secrets 📈</title>
+    <meta name="description" content="Free viral reels packs, motion graphics & growth tips by CaptionStudio">
+    <meta name="keywords" content="viral reels, motion graphics, capcut pack, free editing resources, facts reels">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #faf9f6;
+            color: #111;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 5%;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-logo {
+            font-weight: bold;
+            color: #111;
+            font-size: 18px;
+            text-decoration: none;
+            font-family: 'Syne', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff4d00;
+        }
+
+        .nav-links a.active {
+            color: #ff4d00;
+            font-weight: 700;
+        }
+
+        .nav-home-btn {
+            background: #ff4d00;
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: bold !important;
+            font-size: 13px !important;
+        }
+
+        .nav-home-btn:hover {
+            background: #e04400;
+            color: #fff !important;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .content-area {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 5%;
+        }
+
+        .content-area > h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .content-area > p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* ===== GUIDE CARDS ===== */
+        .guide-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .guide-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .guide-card h2 {
+            color: #ff4d00;
+            margin-bottom: 10px;
+        }
+
+        .guide-card p {
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .guide-card img {
+            width: 100%;
+            height: 220px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        /* ===== PACK FEATURES ===== */
+        .pack-features {
+            padding-left: 0;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #444;
+            list-style: none;
+        }
+
+        .pack-features li {
+            margin-bottom: 8px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            padding: 14px 25px;
+            background: #ff4d00;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 77, 0, 0.3);
+        }
+
+        /* ===== WARNING BOX ===== */
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .warning-box p.warning-title {
+            margin: 0 0 8px 0;
+            font-weight: bold;
+            color: #e65100;
+        }
+
+        .warning-box ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #555;
+            line-height: 1.8;
+            list-style: none;
+        }
+
+        /* ===== TELEGRAM BANNER ===== */
+        .tg-banner {
+            background: linear-gradient(135deg, #0088cc, #005f8f);
+            color: #fff;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .tg-banner h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .tg-banner p {
+            margin-bottom: 15px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .tg-banner .btn {
+            background: #fff;
+            color: #0088cc;
+            width: auto;
+            display: inline-block;
+            padding: 14px 35px;
+        }
+
+        .tg-banner .btn:hover {
+            box-shadow: 0 5px 20px rgba(0, 136, 204, 0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #111;
+            color: #aaa;
+            padding: 50px 5% 30px;
+        }
+
+        .footer-grid {
+            max-width: 850px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-family: 'Syne', sans-serif;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: #888;
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: #ff4d00;
+        }
+
+        .footer-col p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #222;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .footer-bottom a {
+            color: #ff4d00;
+            text-decoration: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            .content-area {
+                padding: 30px 4%;
+            }
+
+            .content-area > h1 {
+                font-size: 1.5rem;
+            }
+
+            .guide-card {
+                padding: 20px;
+            }
+
+            .guide-card img {
+                height: 160px;
+            }
+
+            .tg-banner {
+                padding: 25px 20px;
+            }
+
+            .tg-banner .btn {
+                width: 100%;
+                display: block;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-<b onclick="location.href='index.html'" style="cursor:pointer">CaptionStudio</b>
-<a href="index.html" style="text-decoration:none; color:#ff4d00; font-weight:bold">← Use AI Tool</a>
-</nav>
+<!-- ===== NAVBAR ===== -->
+<header>
+    <nav>
+        <a href="index.html" class="nav-logo">CaptionStudio</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-home-btn">← Home</a>
+            <a href="earning.html">Earning 💰</a>
+            <a href="guide.html" class="active">Guide 📈</a>
+            <a href="blog/">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+</header>
 
-<div class="content-area">
+<!-- ===== MAIN CONTENT ===== -->
+<main class="content-area">
+
     <h1>Viral Growth <span style="color:#ff4d00">Masterclass</span> 📈</h1>
     <p>Ye platform aapko wo premium resources de raha hai jo log bechte hain. Inhe kaise use karke viral hona hai, niche dekho.</p>
 
-    <div class="guide-card">
-        <h2 style="color:#ff4d00">01. 5000+ Motion Graphics Pack 💀</h2>
+    <!-- ===== SECTION 01: Motion Graphics ===== -->
+    <section class="guide-card">
+        <h2>01. 5000+ Motion Graphics Pack 💀</h2>
         <p>Video editing ko professional banane ke liye ye best pack hai. Isme transitions aur effects ka bhandar hai.</p>
         <ul class="pack-features">
             <li>✅ Cinematic Flash & Glitch Effects</li>
@@ -38,11 +374,15 @@
             <li>✅ Text Animations & PNG Overlays</li>
             <li>✅ Ready to use in CapCut, VN & Premiere Pro</li>
         </ul>
-        <a href="https://drive.google.com/drive/folders/1mmNWXU52geX9IDvSaky979kerUXYP26T" class="btn">Download Graphics Pack 📥</a>
-    </div>
+        <a href="https://drive.google.com/drive/folders/1mmNWXU52geX9IDvSaky979kerUXYP26T"
+           class="btn" target="_blank" rel="noopener noreferrer">
+            Download Graphics Pack 📥
+        </a>
+    </section>
 
-    <div class="guide-card">
-        <h2 style="color:#ff4d00">02. Mad Scientist Reels Pack 🧬</h2>
+    <!-- ===== SECTION 02: Mad Scientist ===== -->
+    <section class="guide-card">
+        <h2>02. Mad Scientist Reels Pack 🧬</h2>
         <p>AI aesthetic videos abhi trending hain. Bina face dikhaye viral hone ka ye sabse asan tareeka hai.</p>
         <ul class="pack-features">
             <li>✅ 100+ High-Resolution Dark AI Clips</li>
@@ -50,11 +390,15 @@
             <li>✅ Just add Hinglish Captions & Post</li>
             <li>✅ No Watermark, No Copyright issues</li>
         </ul>
-        <a href="https://drive.google.com/drive/folders/1unpmYt_y8O8anjPu_n3BlOENXCu3ayw-" class="btn" style="background:#333">Get AI Reels Pack 🚀</a>
-    </div>
+        <a href="https://drive.google.com/drive/folders/1unpmYt_y8O8anjPu_n3BlOENXCu3ayw-"
+           class="btn" style="background:#333" target="_blank" rel="noopener noreferrer">
+            Get AI Reels Pack 🚀
+        </a>
+    </section>
 
-    <div class="guide-card">
-        <h2 style="color:#ff4d00">03. Viral Torch Video Bundle 🔦</h2>
+    <!-- ===== SECTION 03: Torch Bundle ===== -->
+    <section class="guide-card">
+        <h2>03. Viral Torch Video Bundle 🔦</h2>
         <p>User ka dhyan kheenchna hai? Ye torch effects video mein cinematic look aur reach dono badhate hain.</p>
         <ul class="pack-features">
             <li>✅ Viral Light Leak Transitions</li>
@@ -62,20 +406,99 @@
             <li>✅ Easy to use (Screen/Lighten Mode)</li>
             <li>✅ Best for Motivation & Dark Content</li>
         </ul>
-        <a href="https://drive.google.com/drive/mobile/folders/12h7mdNkWLPyhHoJSUfmEa45UUenwkC6c" class="btn" style="background:#000">Grab Torch Bundle 🔦</a>
-    </div>
+        <a href="https://drive.google.com/drive/mobile/folders/12h7mdNkWLPyhHoJSUfmEa45UUenwkC6c"
+           class="btn" style="background:#000" target="_blank" rel="noopener noreferrer">
+            Grab Torch Bundle 🔦
+        </a>
+    </section>
 
+    <!-- ===== SECTION 04: Facts Reels Bundle ===== -->
+    <section class="guide-card">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=850&h=400&fit=crop&crop=center"
+             alt="Facts Reels Bundle — Science, Space, Psychology">
+
+        <h2>04. Facts Reels Bundle ♥️</h2>
+        <p>Viral facts reels banao bina face dikhaye! Ready-made clips se sirf caption lagao aur post karo. 🔥</p>
+
+        <ul class="pack-features">
+            <li>✅ High-Quality Facts Video Clips</li>
+            <li>✅ Trending Topics — Science, Space, Psychology</li>
+            <li>✅ Perfect for Instagram Reels & YouTube Shorts</li>
+            <li>✅ No Face Needed — Just Add Captions!</li>
+        </ul>
+
+        <div class="warning-box">
+            <p class="warning-title">⚠️ YouTube Upload Karne Se Pehle Zaroor Padho:</p>
+            <ul>
+                <li>🔹 Video me jo <b>stamp/watermark</b> hai usko <b>hide</b> kar lena (crop/blur/overlay se)</li>
+                <li>🔹 Thoda <b>edit</b> zaroor karna — zoom, speed change, color grade lagao</li>
+                <li>🔹 Apna <b>caption/voiceover</b> add karo taaki unique lage</li>
+                <li>🔹 Ye sab karoge toh <b>copyright claim nahi aayega</b> 👍</li>
+            </ul>
+        </div>
+
+        <a href="https://drive.google.com/drive/folders/1KYp84Jzngrk7Qrtmz7vDolUjXMNX5gC2"
+           class="btn" style="background:linear-gradient(135deg, #ff4d00, #ff0066);"
+           target="_blank" rel="noopener noreferrer">
+            Download Facts Reels Bundle ♥️📥
+        </a>
+    </section>
+
+    <!-- ===== TELEGRAM BANNER ===== -->
     <div class="tg-banner">
         <h3>🚨 Important: Save It Now!</h3>
         <p>Ye sara content hamara nahi hai, hum bas aapki help ke liye resources share kar rahe hain. Google Drive links <b>kabhi bhi remove ho sakte hain</b>, isliye abhi save/download kar lo.</p>
         <p>Naye links aur earning tips ke liye Telegram join karo:</p>
-        <a href="https://t.me/skill2incomehub" class="btn" style="background:#fff; color:#0088cc">JOIN TELEGRAM CHANNEL 🚀</a>
+        <a href="https://t.me/skill2incomehub" class="btn" target="_blank" rel="noopener noreferrer">
+            JOIN TELEGRAM CHANNEL 🚀
+        </a>
     </div>
-</div>
 
+</main>
+
+<!-- ===== FOOTER ===== -->
 <footer>
-    © 2026 CaptionStudio • Gorakhpur UP 53 • Founder: Ansh Yadav
+    <div class="footer-grid">
+
+        <!-- Column 1: Brand -->
+        <div class="footer-col">
+            <h4>CaptionStudio</h4>
+            <p>Free AI tools, viral resources aur earning tips — sab ek jagah. Made with ♥️ from Gorakhpur.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">🏠 Home</a>
+            <a href="earning.html">💰 Earning Tips</a>
+            <a href="guide.html">📈 Growth Guide</a>
+            <a href="blog/">📝 Blog</a>
+            <a href="relax.html">🎧 Relax Zone</a>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="tools/">🛠️ All Tools</a>
+            <a href="about.html">👤 About Us</a>
+            <a href="contact.html">📩 Contact</a>
+            <a href="support.html">💖 Support Us</a>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="privacy.html">🔒 Privacy Policy</a>
+            <a href="terms.html">📄 Terms of Service</a>
+            <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer">📢 Telegram</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 <a href="index.html">CaptionStudio</a> • Gorakhpur UP 53 • Founder: Ansh Yadav
+    </div>
 </footer>
 
 </body>
-</html>
+    </html>
