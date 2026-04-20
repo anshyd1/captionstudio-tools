@@ -25,9 +25,9 @@
 
 <url>
   <loc>https://captionstudio.in/earning.html</loc>
-  <lastmod>2026-04-10</lastmod>
+  <lastmod>2026-04-20</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.85</priority>
+  <priority>0.90</priority>
 </url>
 
 <url>
@@ -48,10 +48,17 @@
   <loc>https://captionstudio.in/terms.html</loc>
   <lastmod>2026-04-10</lastmod>
   <changefreq>yearly</changefreq>
-  <priority>0.4</priority>
+  <priority>0.40</priority>
 </url>
 
 <!-- 🔥🔥 HIGH PRIORITY BLOGS (0.95) -->
+<url>
+  <loc>https://captionstudio.in/blog/ugc-creator-complete-guide-2026.html</loc>
+  <lastmod>2026-04-20</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+
 <url>
   <loc>https://captionstudio.in/blog/behind-the-scenes-content-strategy-2026.html</loc>
   <lastmod>2026-04-20</lastmod>
