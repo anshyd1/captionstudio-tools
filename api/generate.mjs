@@ -8,8 +8,9 @@ const GEMINI_KEYS = [
   process.env.GEMINI_KEY_7,
   process.env.GEMINI_KEY_8,
   process.env.GEMINI_KEY_9,
-  process.env.GEMINI_KEY_10,
-].filter(Boolean); // Empty strings/null ko hata dega
+].filter(Boolean);
+
+const GROQ_KEY = process.env.GROQ_KEY;
 
 let currentKeyIndex = 0;
 
@@ -22,32 +23,49 @@ function getNextGeminiKey() {
 
 async function callGemini(prompt, apiKey) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-  const res = await fetch(url, {
+  
+  const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       contents: [{ parts: [{ text: prompt }] }],
       generationConfig: {
-        temperature: 0.9,
-        maxOutputTokens: 2048,     // Increased for better responses
+        temperature: 0.85,
+        maxOutputTokens: 2048,
         topP: 0.95,
-      },
-    }),
+      }
+    })
   });
 
-  const data = await res.json();
-
-  if (!res.ok) {
-    const errorMessage = data?.error?.message || 'Unknown error';
-    throw new Error(`Gemini Error (${res.status}): ${errorMessage}`);
+  if (!response.ok) {
+    throw new Error(`Gemini HTTP ${response.status}`);
   }
 
-  if (data.candidates?.[0]?.content?.parts?.[0]?.text) {
-    return data.candidates[0].content.parts[0].text.trim();
-  }
+  const data = await response.json();
+  return data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || null;
+}
 
-  throw new Error('Invalid response from Gemini');
+async function callGroq(prompt) {
+  if (!GROQ_KEY) throw new Error('No Groq key');
+  
+  const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${GROQ_KEY}`
+    },
+    body: JSON.stringify({
+      model: 'llama3-70b-8192',   // ya 'mixtral-8x7b-32768' jo fast ho
+      messages: [{ role: 'user', content: prompt }],
+      temperature: 0.85,
+      max_tokens: 2048
+    })
+  });
+
+  if (!response.ok) throw new Error(`Groq HTTP ${response.status}`);
+  
+  const data = await response.json();
+  return data?.choices?.[0]?.message?.content?.trim() || null;
 }
 
 export default async function handler(req, res) {
@@ -59,47 +77,54 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
 
   try {
-    const { prompt, tool } = req.body;
-
-    if (!prompt || typeof prompt !== 'string' || prompt.trim().length < 5) {
-      return res.status(400).json({ error: 'Valid prompt is required (minimum 5 characters)' });
+    const { prompt } = req.body;
+    if (!prompt || prompt.trim().length < 10) {
+      return res.status(400).json({ error: 'Prompt too short' });
     }
 
-    if (GEMINI_KEYS.length === 0) {
-      return res.status(500).json({ error: 'No Gemini API keys configured' });
-    }
+    let result = null;
+    let provider = '';
 
-    let lastError = null;
-
-    // Try all 10 keys one by one
+    // Try all Gemini keys first
     for (let i = 0; i < GEMINI_KEYS.length; i++) {
-      const key = getNextGeminiKey();
       try {
-        const result = await callGemini(prompt, key);
-
-        return res.status(200).json({
-          success: true,
-          result,
-          tool: tool || 'unknown',
-          provider: 'gemini',
-          keyUsed: i + 1
-        });
-
-      } catch (err) {
-        lastError = err;
-        console.error(`Key ${i + 1} failed:`, err.message);
-        // Continue to next key
+        const key = getNextGeminiKey();
+        result = await callGemini(prompt, key);
+        if (result) {
+          provider = 'gemini';
+          break;
+        }
+      } catch (e) {
+        console.error(`Gemini key failed: ${e.message}`);
       }
     }
 
-    // Sab keys fail ho gaye
-    console.error('All Gemini keys failed. Last error:', lastError?.message);
-    return res.status(500).json({
-      error: 'All API keys failed. Please try again in some time.'
-    });
+    // Agar Gemini sab fail ho gaye to Groq try karo
+    if (!result && GROQ_KEY) {
+      try {
+        result = await callGroq(prompt);
+        provider = 'groq';
+      } catch (e) {
+        console.error(`Groq also failed: ${e.message}`);
+      }
+    }
+
+    if (result) {
+      return res.status(200).json({ 
+        success: true, 
+        result, 
+        provider 
+      });
+    } else {
+      return res.status(500).json({ 
+        error: 'All providers failed. Server busy, try after 1 min.' 
+      });
+    }
 
   } catch (error) {
-    console.error('Handler Error:', error);
-    return res.status(500).json({ error: 'Server error', message: error.message });
+    console.error('API Error:', error.message);
+    return res.status(500).json({ 
+      error: 'Invalid server response. Server Busy. 1 min ruko bhai.' 
+    });
   }
-}
+          }
