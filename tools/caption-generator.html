@@ -1,374 +1,1778 @@
 <!DOCTYPE html>
-<html lang="hi-IN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viral AI Caption Generator | CaptionStudio</title>
-  <meta name="description" content="Free AI Instagram caption generator for viral growth. Made for creators in Gorakhpur.">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'DM Sans',sans-serif;
-      background:#faf9f6;
-      color:#111;
+    <!-- ═══ SEO ═══ -->
+    <title>Free Caption Generator for Instagram, Twitter & LinkedIn | CaptionStudio</title>
+    <meta name="description" content="Generate viral captions for Instagram, Twitter & LinkedIn in seconds. Choose your tone — Funny, Casual or Formal. Free tool by CaptionStudio.">
+    <meta name="keywords" content="caption generator, instagram captions, free caption tool, social media captions, funny captions, formal captions, caption studio">
+    <meta name="author" content="CaptionStudio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://captionstudio.in/">
+
+    <!-- ═══ Open Graph (WhatsApp / Facebook Preview) ═══ -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://captionstudio.in/">
+    <meta property="og:title" content="CaptionStudio — Free Caption Generator">
+    <meta property="og:description" content="Generate viral captions for Instagram, Twitter & LinkedIn instantly. Free tool!">
+    <meta property="og:image" content="https://captionstudio.in/og-image.png">
+    <meta property="og:image:alt" content="CaptionStudio caption generator preview">
+
+    <!-- ═══ Twitter Card ═══ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CaptionStudio — Free Caption Generator">
+    <meta name="twitter:description" content="Generate viral captions instantly. Funny, Casual or Formal tone. Free!">
+    <meta name="twitter:image" content="https://captionstudio.in/og-image.png">
+
+    <!-- ═══ Schema.org Structured Data ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CaptionStudio",
+      "url": "https://captionstudio.in",
+      "description": "Free Caption Generator for Instagram, Twitter and LinkedIn",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
     }
-    h1,h2,h3{font-family:'Syne',sans-serif}
+    </script>
 
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:15px 5%;
-      background:#fff;
-      border-bottom:1px solid #eee;
-      position:sticky;
-      top:0;
-      z-index:100;
+    <!-- ═══ FAQ Schema (Change #4) ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this caption generator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CaptionStudio is 100% free to use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate Instagram captions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can generate captions for Instagram, Twitter, and LinkedIn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many captions can I generate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can generate unlimited captions anytime. No login required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these captions unique?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, captions are randomly generated and unique each time."
+          }
+        }
+      ]
     }
+    </script>
 
-    nav b{
-      color:#ff4d00;
-      font-size:20px;
+    <!-- ═══ Favicon ═══ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <!-- ═══ DNS Prefetch + Fonts — Preload for Speed ═══ -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ═══ Confetti ═══ -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <style>
+    /* ═══════════════════════════════════
+       VARIABLES
+    ═══════════════════════════════════ */
+    :root {
+        --bg-primary:   #ffffff;
+        --bg-secondary: #f9fafb;
+        --bg-card:      #ffffff;
+        --text-dark:    #111827;
+        --text-light:   #6b7280;
+        --border:       #e5e7eb;
+        --orange:       #f97316;
+        --orange-dark:  #ea6c0a;
+        --green:        #22c55e;
+        --blue:         #2AABEE;
+        --purple:       #8b5cf6;
+        --shadow:       rgba(0,0,0,0.06);
+        --radius:       14px;
+        --t:            0.3s;
     }
-
-    nav a{
-      text-decoration:none;
-      color:#333;
-      font-weight:600;
-    }
-
-    .header{
-      text-align:center;
-      padding:50px 20px 30px;
-    }
-
-    .header h1{
-      margin:0 0 10px;
-      font-size:38px;
-      line-height:1.1;
-    }
-
-    .header p{
-      margin:0;
-      color:#666;
-      font-size:16px;
-    }
-
-    .generator-box{
-      max-width:700px;
-      margin:0 auto 60px;
-      padding:0 20px;
-    }
-
-    .card-main{
-      background:#fff;
-      padding:25px;
-      border-radius:18px;
-      border:1px solid #eee;
-      box-shadow:0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    textarea{
-      width:100%;
-      border:1px solid #eee;
-      background:#f9f9f9;
-      padding:15px;
-      border-radius:12px;
-      font-size:16px;
-      resize:none;
-      box-sizing:border-box;
-      font-family:'DM Sans',sans-serif;
-      outline:none;
-    }
-
-    textarea:focus{
-      border-color:#ff4d00;
-      background:#fff;
-    }
-
-    .meta-row{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      margin-top:10px;
-      color:#777;
-      font-size:13px;
-      flex-wrap:wrap;
-    }
-
-    .btn-generate{
-      width:100%;
-      background:#ff4d00;
-      color:#fff;
-      border:none;
-      padding:16px;
-      border-radius:12px;
-      font-size:16px;
-      font-weight:700;
-      cursor:pointer;
-      margin-top:15px;
-      transition:.2s ease;
-    }
-
-    .btn-generate:hover{transform:translateY(-1px)}
-    .btn-generate:disabled{
-      opacity:.7;
-      cursor:not-allowed;
-      transform:none;
-    }
-
-    .res-card{
-      background:#fff;
-      border:1px solid #eee;
-      padding:25px;
-      border-radius:18px;
-      border-left:6px solid #ff4d00;
-      margin-top:30px;
-      animation:fadeIn .45s ease;
-      box-shadow:0 10px 30px rgba(0,0,0,0.04);
+    [data-theme="dark"] {
+        --bg-primary:   #1f2937;
+        --bg-secondary: #111827;
+        --bg-card:      #1f2937;
+        --text-dark:    #f9fafb;
+        --text-light:   #9ca3af;
+        --border:       #374151;
+        --shadow:       rgba(0,0,0,0.25);
     }
 
-    .growth-tip{
-      background:rgba(255,77,0,0.05);
-      padding:15px;
-      border-radius:12px;
-      font-size:14px;
-      color:#444;
-      margin:20px 0;
-      border:1px dashed #ff4d00;
-      line-height:1.6;
+    /* ═══════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Inter', sans-serif;
+        background: var(--bg-secondary);
+        color: var(--text-dark);
+        line-height: 1.6;
+        transition: background var(--t), color var(--t);
+    }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    img { max-width: 100%; }
+
+    .container {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .container-wide {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
-    .stats-grid{
-      display:flex;
-      gap:20px;
-      border-top:1px solid #eee;
-      padding-top:15px;
-      color:#777;
-      font-size:13px;
-      flex-wrap:wrap;
+    /* ═══════════════════════════════════
+       HEADER
+    ═══════════════════════════════════ */
+    .site-header {
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        transition: background var(--t), border-color var(--t);
+    }
+    .header-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+        height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+    .logo {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        white-space: nowrap;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .logo-icon {
+        background: var(--orange);
+        color: #fff;
+        width: 32px; height: 32px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .logo span { color: var(--orange); }
+
+    /* Desktop Nav */
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        flex: 1;
+        justify-content: center;
+    }
+    .nav-links a {
+        color: var(--text-light);
+        font-size: 0.88rem;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 8px;
+        transition: all 0.2s;
+        white-space: nowrap;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: var(--bg-secondary);
+        color: var(--orange);
     }
 
-    .copy-btn{
-      width:100%;
-      margin-top:20px;
-      padding:12px;
-      background:#111;
-      color:#fff;
-      border:none;
-      border-radius:10px;
-      font-weight:700;
-      cursor:pointer;
+    /* Header Right */
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+    .tg-pill {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: linear-gradient(135deg, #2AABEE, #1a8fcc);
+        color: #fff;
+        padding: 7px 14px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+    }
+    .tg-pill:hover { opacity: 0.88; }
+
+    .theme-btn {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        width: 36px; height: 36px;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+    .theme-btn:hover { border-color: var(--orange); }
+
+    /* Hamburger */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 4px;
+    }
+    .hamburger span {
+        display: block;
+        width: 22px; height: 2px;
+        background: var(--text-dark);
+        border-radius: 2px;
+        transition: all var(--t);
     }
 
-    .helper-box{
-      margin-top:16px;
-      padding:12px 14px;
-      background:#fff7f2;
-      border:1px solid #ffd7c7;
-      color:#6a4333;
-      border-radius:12px;
-      font-size:13px;
-      line-height:1.5;
+    /* Mobile Nav */
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        background: var(--bg-primary);
+        border-top: 1px solid var(--border);
+        padding: 12px 20px 16px;
+        gap: 2px;
+    }
+    .mobile-nav a {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 10px 12px;
+        border-radius: 10px;
+        transition: all 0.2s;
+        display: block;
+    }
+    .mobile-nav a:hover { background: var(--bg-secondary); color: var(--orange); }
+    .mobile-nav .tg-mobile {
+        margin-top: 8px;
+        background: linear-gradient(135deg, #2AABEE22, #2AABEE11);
+        border: 1px solid #2AABEE44;
+        color: #2AABEE;
+        font-weight: 600;
+        text-align: center;
+        padding: 11px;
+        border-radius: 10px;
+    }
+    .mobile-nav.open { display: flex; }
+
+    /* ═══════════════════════════════════
+       HERO
+    ═══════════════════════════════════ */
+    .hero {
+        text-align: center;
+        padding: 52px 20px 0;
+    }
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(249,115,22,0.1);
+        border: 1px solid rgba(249,115,22,0.25);
+        color: var(--orange);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 4px 14px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .hero h1 {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 14px;
+        letter-spacing: -0.5px;
+    }
+    .hero h1 span { color: var(--orange); }
+    .hero p {
+        color: var(--text-light);
+        font-size: 1.05rem;
+        max-width: 560px;
+        margin: 0 auto 28px;
+    }
+    .hero-stats {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    .stat {
+        text-align: center;
+    }
+    .stat strong {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--orange);
+    }
+    .stat span {
+        font-size: 0.78rem;
+        color: var(--text-light);
+        font-weight: 500;
     }
 
-    .status{
-      margin-top:12px;
-      font-size:13px;
-      color:#777;
-      text-align:center;
-      min-height:18px;
+    /* ═══════════════════════════════════
+       TOOL CARD
+    ═══════════════════════════════════ */
+    .tool-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 32px 28px;
+        box-shadow: 0 8px 40px var(--shadow);
+        margin-bottom: 30px;
+        transition: background var(--t), border-color var(--t);
     }
 
-    footer{
-      background:#111;
-      color:#fff;
-      padding:40px 5%;
-      text-align:center;
-      margin-top:80px;
+    /* Filter Groups */
+    .filter-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+    .filter-group { }
+    .filter-group label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+    .filter-buttons {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+    }
+    .filter-btn {
+        padding: 7px 15px;
+        border: 1.5px solid var(--border);
+        background: var(--bg-secondary);
+        color: var(--text-light);
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.85rem;
+        transition: all 0.2s;
+        font-family: 'Inter', sans-serif;
+    }
+    .filter-btn:hover {
+        border-color: var(--orange);
+        color: var(--orange);
+    }
+    .filter-btn.active {
+        background: var(--orange);
+        color: #fff;
+        border-color: var(--orange);
+        font-weight: 600;
     }
 
-    footer p{
-      color:#aaa;
-      font-size:14px;
-      margin:8px 0 0;
+    /* Platform Pills */
+    .platform-row {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    .plat-btn {
+        padding: 6px 16px;
+        border: 1.5px solid var(--border);
+        background: var(--bg-secondary);
+        color: var(--text-light);
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.82rem;
+        font-weight: 600;
+        transition: all 0.2s;
+        font-family: 'Inter', sans-serif;
+    }
+    .plat-btn.active {
+        background: #6366f1;
+        color: #fff;
+        border-color: #6366f1;
     }
 
-    @keyframes fadeIn{
-      from{opacity:0;transform:translateY(10px)}
-      to{opacity:1;transform:translateY(0)}
+    /* Caption Box */
+    .caption-wrapper { position: relative; margin-bottom: 8px; }
+    #caption-display {
+        min-height: 115px;
+        padding: 22px 55px 22px 22px;
+        background: var(--bg-secondary);
+        border: 2px solid var(--border);
+        border-radius: var(--radius);
+        font-size: 1.15rem;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: text;
+        outline: none;
+        line-height: 1.6;
+        color: var(--text-dark);
+        transition: border-color 0.2s, box-shadow 0.2s;
+        word-break: break-word;
+    }
+    #caption-display:focus {
+        border-color: var(--orange);
+        box-shadow: 0 0 0 4px rgba(249,115,22,0.1);
+    }
+    .fade-out { opacity: 0; transform: translateY(-8px); transition: all 0.28s ease; }
+
+    /* Fav Button */
+    #fav-btn {
+        position: absolute;
+        top: 12px; right: 12px;
+        background: var(--bg-primary);
+        border: 1.5px solid var(--border);
+        border-radius: 50%;
+        width: 36px; height: 36px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        color: var(--text-light);
+    }
+    #fav-btn:hover { border-color: #ef4444; transform: scale(1.1); }
+    #fav-btn.saved { color: #ef4444; border-color: #ef4444; background: #fee2e2; }
+
+    /* Char Counter */
+    .counter-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+    }
+    #char-counter {
+        font-size: 0.78rem;
+        color: var(--text-light);
+        font-weight: 500;
+    }
+    #char-counter.over { color: #ef4444; font-weight: 700; }
+    .kbd-hint {
+        font-size: 0.75rem;
+        color: var(--text-light);
+    }
+    kbd {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 1px 6px;
+        font-size: 0.73rem;
+        font-family: 'Inter', sans-serif;
     }
 
-    @media (max-width:640px){
-      .header h1{font-size:30px}
-      .stats-grid{flex-direction:column;gap:8px}
+    /* Hashtag Row */
+    .hashtag-box {
+        background: var(--bg-secondary);
+        border: 1.5px dashed var(--border);
+        border-radius: var(--radius);
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
     }
-  </style>
+    #hashtag-display {
+        color: var(--orange);
+        font-size: 0.85rem;
+        font-weight: 500;
+        flex: 1;
+        word-break: break-word;
+    }
+    .copy-hash-btn {
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 4px 12px;
+        font-size: 0.78rem;
+        color: var(--text-light);
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.2s;
+    }
+    .copy-hash-btn:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* Action Buttons */
+    .action-row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .btn {
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.92rem;
+        cursor: pointer;
+        border: 1.5px solid transparent;
+        transition: all 0.2s;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .btn-primary {
+        background: var(--orange);
+        color: #fff;
+        border-color: var(--orange);
+    }
+    .btn-primary:hover { background: var(--orange-dark); }
+    .btn-secondary {
+        background: var(--bg-secondary);
+        color: var(--text-dark);
+        border-color: var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ═══════════════════════════════════
+       GLASS AD
+    ═══════════════════════════════════ */
+    .glass-ad-wrap { margin: 10px 0 40px; }
+    .glass-ad {
+        background: linear-gradient(135deg,
+            rgba(249,115,22,0.10),
+            rgba(251,191,36,0.06));
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(249,115,22,0.22);
+        border-radius: 18px;
+        padding: 22px 26px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+        box-shadow:
+            0 8px 32px rgba(249,115,22,0.08),
+            inset 0 1px 0 rgba(255,255,255,0.12);
+        position: relative;
+        overflow: hidden;
+    }
+    .glass-ad::before {
+        content: '';
+        position: absolute;
+        top: -50px; right: -50px;
+        width: 150px; height: 150px;
+        background: radial-gradient(circle, rgba(249,115,22,0.15), transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .glass-ad::after {
+        content: '';
+        position: absolute;
+        bottom: -30px; left: -30px;
+        width: 100px; height: 100px;
+        background: radial-gradient(circle, rgba(251,191,36,0.12), transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .ad-text { flex: 1; min-width: 180px; position: relative; z-index: 1; }
+    .ad-label {
+        display: inline-block;
+        background: var(--orange);
+        color: #fff;
+        font-size: 0.67rem;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+    }
+    .ad-title {
+        font-size: 1.08rem;
+        font-weight: 800;
+        color: var(--text-dark);
+        line-height: 1.35;
+    }
+    .ad-title span { color: var(--orange); }
+    .ad-sub {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        margin-top: 5px;
+        line-height: 1.5;
+    }
+    .ad-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+    }
+    .ad-wa {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--green);
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-size: 0.88rem;
+        font-weight: 700;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+    }
+    .ad-wa:hover { opacity: 0.88; }
+    .ad-wa svg { width: 17px; height: 17px; fill: #fff; flex-shrink: 0; }
+    .ad-tg {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(42,171,238,0.1);
+        border: 1px solid rgba(42,171,238,0.3);
+        color: var(--blue);
+        padding: 8px 18px;
+        border-radius: 10px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        transition: background 0.2s;
+        white-space: nowrap;
+    }
+    .ad-tg:hover { background: rgba(42,171,238,0.18); }
+
+    /* ═══════════════════════════════════
+       SAVED SECTIONS (Favorites + History)
+    ═══════════════════════════════════ */
+    .saved-section {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 26px 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 20px var(--shadow);
+    }
+    .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+    .section-head h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    .clear-btn {
+        background: none;
+        border: 1px solid var(--border);
+        color: var(--text-light);
+        border-radius: 8px;
+        padding: 5px 12px;
+        font-size: 0.78rem;
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+        transition: all 0.2s;
+    }
+    .clear-btn:hover { border-color: #ef4444; color: #ef4444; }
+
+    .saved-list { display: flex; flex-direction: column; gap: 0; }
+    .saved-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 4px;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.15s;
+    }
+    .saved-item:last-child { border-bottom: none; }
+    .saved-item:hover { background: var(--bg-secondary); border-radius: 8px; }
+    .saved-item-text {
+        flex: 1;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        line-height: 1.4;
+    }
+    .item-del-btn {
+        background: none;
+        border: 1px solid var(--border);
+        color: #ef4444;
+        border-radius: 50%;
+        width: 28px; height: 28px;
+        cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        transition: background 0.2s;
+    }
+    .item-del-btn:hover { background: #fee2e2; }
+    .item-restore-btn {
+        background: none;
+        border: 1px solid var(--border);
+        color: var(--text-light);
+        border-radius: 50%;
+        width: 28px; height: 28px;
+        cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+        transition: all 0.2s;
+    }
+    .item-restore-btn:hover { border-color: var(--orange); color: var(--orange); }
+    .empty-state {
+        text-align: center;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        padding: 20px 0;
+    }
+    .empty-state span { display: block; font-size: 2rem; margin-bottom: 6px; }
+
+    /* ═══════════════════════════════════
+       FEATURES ROW (below tool)
+    ═══════════════════════════════════ */
+    .features-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+    .feat-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 18px 16px;
+        text-align: center;
+        box-shadow: 0 2px 10px var(--shadow);
+    }
+    .feat-icon { font-size: 1.6rem; margin-bottom: 8px; }
+    .feat-card h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; }
+    .feat-card p { font-size: 0.78rem; color: var(--text-light); }
+
+    /* ═══════════════════════════════════
+       SEO CONTENT SECTION
+    ═══════════════════════════════════ */
+    .seo-section {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 28px 26px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 20px var(--shadow);
+    }
+    .seo-section h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: var(--text-dark);
+    }
+    .seo-section h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 18px 0 10px;
+        color: var(--text-dark);
+    }
+    .seo-section p {
+        font-size: 0.92rem;
+        color: var(--text-light);
+        line-height: 1.75;
+    }
+    .seo-section ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .seo-section ul li {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .seo-section ul li::before {
+        content: '✅';
+        flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════
+       TOAST
+    ═══════════════════════════════════ */
+    #toast {
+        position: fixed;
+        bottom: 28px; left: 50%;
+        transform: translateX(-50%) translateY(120px);
+        background: #111827;
+        color: #fff;
+        padding: 11px 24px;
+        border-radius: 12px;
+        font-size: 0.88rem;
+        font-weight: 500;
+        z-index: 9999;
+        transition: transform 0.35s cubic-bezier(.21,1.02,.73,1);
+        pointer-events: none;
+        white-space: nowrap;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ═══════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════ */
+    .site-footer {
+        background: var(--bg-primary);
+        border-top: 1px solid var(--border);
+        margin-top: 50px;
+    }
+    .footer-top {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 44px 20px 32px;
+        display: grid;
+        grid-template-columns: 1.8fr 1fr 1fr 1fr;
+        gap: 32px;
+    }
+    .footer-brand p {
+        color: var(--text-light);
+        font-size: 0.86rem;
+        margin-top: 10px;
+        line-height: 1.7;
+    }
+    .footer-earn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: linear-gradient(135deg, #2AABEE, #1a8fcc);
+        color: #fff;
+        padding: 9px 16px;
+        border-radius: 10px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        margin-top: 14px;
+        transition: opacity 0.2s;
+    }
+    .footer-earn:hover { opacity: 0.88; }
+    .footer-col h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text-light);
+        margin-bottom: 14px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul a {
+        color: var(--text-light);
+        font-size: 0.86rem;
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+    .footer-col ul a:hover { color: var(--orange); }
+    .footer-wa-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--green);
+        color: #fff;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-top: 10px;
+        transition: opacity 0.2s;
+    }
+    .footer-wa-btn:hover { opacity: 0.88; }
+
+    .footer-bottom {
+        border-top: 1px solid var(--border);
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 16px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text-light); }
+    .footer-bottom-links {
+        display: flex;
+        gap: 16px;
+    }
+    .footer-bottom-links a {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        transition: color 0.2s;
+    }
+    .footer-bottom-links a:hover { color: var(--orange); }
+
+    /* ═══════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════ */
+    @media (max-width: 768px) {
+        .nav-links, .tg-pill { display: none; }
+        .hamburger { display: flex; }
+        .filter-row { grid-template-columns: 1fr; }
+        .features-row { grid-template-columns: 1fr 1fr; }
+        .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
+        .hero h1 { font-size: 1.7rem; }
+        .tool-card { padding: 22px 16px; }
+        .features-row { grid-template-columns: 1fr; }
+        .footer-top { grid-template-columns: 1fr; }
+        .glass-ad { flex-direction: column; text-align: center; }
+        .ad-actions { width: 100%; }
+        .ad-wa, .ad-tg { justify-content: center; }
+        .footer-bottom { flex-direction: column; text-align: center; }
+        .action-row .btn { flex: 1; justify-content: center; }
+    }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <a href="/"><b>CaptionStudio</b></a>
-    <div><a href="/tools/index.html">All Tools</a></div>
-  </nav>
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">✍️</div>
+            Caption<span>Studio</span>
+        </a>
 
-  <section class="header">
-    <h1>Viral AI Generator ✍️</h1>
-    <p>Hinglish captions & growth strategy for 100k followers.</p>
-  </section>
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="tools" class="active">🛠️ Tools</a>
+            <a href="blog">📝 Blog</a>
+            <a href="guide.html">📖 Guide</a>
+            <a href="earning.html">💰 Earning</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
-  <section class="generator-box">
-    <div class="card-main">
-      <textarea id="topic" rows="4" maxlength="240" placeholder="Explain your post (e.g. Aaj nayi bike li hai, dream complete feel ho raha hai...)"></textarea>
-
-      <div class="meta-row">
-        <span id="charCount">0 / 240</span>
-        <span>9 Gemini + 1 Groq backup enabled</span>
-      </div>
-
-      <button class="btn-generate" id="generateBtn" onclick="generate()">Generate Viral Choice ✨</button>
-
-      <div class="helper-box">
-        <b>Example:</b> Aaj first salary aayi hai / gym consistency / solo bike ride / heartbreak wali post
-      </div>
-
-      <div class="status" id="status"></div>
+        <div class="header-right">
+            <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="tg-pill">
+                ✈️ Join Telegram
+            </a>
+            <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </div>
 
-    <div id="results"></div>
-  </section>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">🏠 Home</a>
+        <a href="tools">🛠️ Tools</a>
+        <a href="blog">📝 Blog</a>
+        <a href="guide.html">📖 Guide</a>
+        <a href="earning.html">💰 Earning</a>
+        <a href="relax.html">🧘 Relax</a>
+        <a href="about.html">👤 About</a>
+        <a href="contact.html">📬 Contact</a>
+        <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="tg-mobile">
+            ✈️ Want to Earn? Join Telegram Free
+        </a>
+    </nav>
+</header>
 
-  <footer>
-    <h3>CaptionStudio</h3>
-    <p>Gorakhpur, Uttar Pradesh 53 | Founder: Ansh Yadav</p>
-  </footer>
 
-  <script>
-    const topicEl = document.getElementById('topic');
-    const charCountEl = document.getElementById('charCount');
-    const resultsEl = document.getElementById('results');
-    const btnEl = document.getElementById('generateBtn');
-    const statusEl = document.getElementById('status');
+<main>
+<div class="container">
 
-    topicEl.addEventListener('input', () => {
-      charCountEl.innerText = `${topicEl.value.length} / 240`;
-    });
+    <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero section">
+        <div class="hero-badge">✨ 100% Free Tool — No Login Required</div>
 
-    function escapeHTML(str) {
-      return String(str || "").replace(/[&<>"']/g, function (m) {
-        return {
-          "&": "&amp;",
-          "<": "&lt;",
-          ">": "&gt;",
-          '"': "&quot;",
-          "'": "&#039;"
-        }[m];
-      });
+        <!-- ✅ Change #1: H1 with primary keyword -->
+        <h1>Free <span>Caption Generator</span> for Instagram, Twitter &amp; LinkedIn <span style="font-size:0.65em;opacity:0.75;">(No Login)</span></h1>
+
+        <!-- ✅ Change #2: Secondary keywords in hero paragraph -->
+        <p>Use our free caption generator to create viral Instagram captions, Twitter posts, and LinkedIn captions instantly. Choose tone &amp; category to generate engaging social media content — no login required.</p>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <strong>50+</strong>
+                <span>Unique Captions</span>
+            </div>
+            <div class="stat">
+                <strong>3</strong>
+                <span>Platforms</span>
+            </div>
+            <div class="stat">
+                <strong>3</strong>
+                <span>Tone Styles</span>
+            </div>
+            <div class="stat">
+                <strong>Free</strong>
+                <span>Forever</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         TOOL CARD
+    ══════════════════════════════════════ -->
+    <section aria-label="Caption generator tool">
+        <div class="tool-card">
+
+            <!-- Category + Tone -->
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>📂 Category</label>
+                    <div class="filter-buttons" id="cat-filters">
+                        <button class="filter-btn active" data-cat="travel">✈️ Travel</button>
+                        <button class="filter-btn" data-cat="food">🍜 Food</button>
+                        <button class="filter-btn" data-cat="motivation">🔥 Motivation</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>🎭 Tone</label>
+                    <div class="filter-buttons" id="tone-filters">
+                        <button class="filter-btn active" data-tone="casual">Casual</button>
+                        <button class="filter-btn" data-tone="funny">😂 Funny</button>
+                        <button class="filter-btn" data-tone="formal">💼 Formal</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform -->
+            <div class="platform-row" id="platform-filters" aria-label="Select platform">
+                <button class="plat-btn active" data-limit="2200">📸 Instagram</button>
+                <button class="plat-btn" data-limit="280">🐦 Twitter</button>
+                <button class="plat-btn" data-limit="700">💼 LinkedIn</button>
+            </div>
+
+            <!-- Caption Display -->
+            <div class="caption-wrapper">
+                <div id="caption-display"
+                     contenteditable="true"
+                     spellcheck="true"
+                     role="textbox"
+                     aria-label="Generated caption, editable"
+                     aria-multiline="true">
+                    Select your options and hit ⚡ Generate!
+                </div>
+                <button id="fav-btn" aria-label="Save to favorites">❤️</button>
+            </div>
+
+            <!-- Counter Row -->
+            <div class="counter-row">
+                <span id="char-counter">0 / 2200</span>
+                <span class="kbd-hint">
+                    <kbd>Enter</kbd> Generate &nbsp; <kbd>Ctrl+C</kbd> Copy
+                </span>
+            </div>
+
+            <!-- Hashtags -->
+            <div class="hashtag-box" aria-label="Generated hashtags">
+                <span id="hashtag-display">Hashtags appear here after generating...</span>
+                <button class="copy-hash-btn" id="copy-hash-btn">📋 Copy</button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-row">
+                <button class="btn btn-primary" id="generate-btn">⚡ Generate</button>
+                <button class="btn btn-secondary" id="copy-btn">📋 Copy</button>
+                <button class="btn btn-secondary" id="share-btn">🔗 Share</button>
+                <button class="btn btn-secondary" id="export-btn">📥 Export</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         GLASS AD
+    ══════════════════════════════════════ -->
+    <div class="glass-ad-wrap" aria-label="Advertisement">
+        <div class="glass-ad">
+            <div class="ad-text">
+                <span class="ad-label">🌐 Website Offer</span>
+                <div class="ad-title">
+                    Create Your Own Caption Generator Website<br>
+                    Starting <span>₹999</span> Only!
+                </div>
+                <p class="ad-sub">
+                    Blog • Tool Site • Portfolio • Business Page<br>
+                    ⚡ Fast Delivery &nbsp;|&nbsp; 📱 Mobile Ready &nbsp;|&nbsp; 🔍 SEO Done
+                </p>
+            </div>
+            <div class="ad-actions">
+                <a href="https://wa.me/919918996096?text=Hi%2C%20I%20want%20a%20website%20like%20CaptionStudio%20starting%20from%20%E2%82%B9999"
+                   target="_blank" rel="noopener" class="ad-wa">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    WhatsApp Now
+                </a>
+                <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="ad-tg">
+                    ✈️ Free Tips — Join Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         FEATURE CARDS
+    ══════════════════════════════════════ -->
+    <section aria-label="Features" style="margin-bottom:30px;">
+        <div class="features-row">
+            <div class="feat-card">
+                <div class="feat-icon">🎭</div>
+                <h3>3 Tone Styles</h3>
+                <p>Casual, Funny & Formal captions for every mood</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📱</div>
+                <h3>Platform Ready</h3>
+                <p>Auto character limits for Instagram, Twitter & LinkedIn</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">❤️</div>
+                <h3>Save Favorites</h3>
+                <p>Save & export your best captions anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         ✅ SEO CONTENT SECTION
+    ══════════════════════════════════════ -->
+    <section class="seo-section" aria-label="About CaptionStudio">
+        <h2>Free Caption Generator Tool</h2>
+        <p>
+            CaptionStudio is a free caption generator designed to help creators, influencers, and businesses generate high-quality captions for Instagram, Twitter, and LinkedIn. Whether you need funny captions, motivational captions, or professional LinkedIn posts, this tool makes content creation fast and easy.
+        </p>
+        <!-- Change #3: Internal links -->
+        <p style="margin-top:12px;">
+            Learn how to write viral captions in our
+            <a href="/guide.html" style="color:var(--orange);font-weight:600;">Caption Writing Guide</a>
+            or explore more free tools in our
+            <a href="/tools" style="color:var(--orange);font-weight:600;">Tools section</a>.
+        </p>
+
+        <h3>Why Use CaptionStudio?</h3>
+        <ul>
+            <li>Generate captions instantly — no waiting, no signup</li>
+            <li>Optimized for social media growth on all major platforms</li>
+            <li>No login required — open and use anytime</li>
+            <li>100% free tool, forever</li>
+        </ul>
+    </section>
+
+    <!-- ✅ Change #4: Keyword Variations Section -->
+    <section class="seo-section" aria-label="Platforms covered">
+        <h2>Generate Captions for Every Platform</h2>
+        <p>Use CaptionStudio to create:</p>
+        <ul>
+            <li>Instagram captions for posts &amp; reels</li>
+            <li>Short Twitter captions under 280 characters</li>
+            <li>Professional LinkedIn captions</li>
+            <li>Funny and viral captions for social media</li>
+        </ul>
+        <!-- Change #8: Long-tail keywords naturally embedded -->
+        <p style="margin-top:14px;font-size:0.88rem;color:var(--text-light);">
+            Looking for an instagram caption generator free tool? A caption generator without login? CaptionStudio is the best social media caption maker and caption generator tool online — completely free.
+        </p>
+    </section>
+
+    <!-- ✅ Change #5: How to Use — step-by-step for SEO -->
+    <section class="seo-section" aria-label="How to use CaptionStudio">
+        <h2>How to Use CaptionStudio</h2>
+        <ol style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:8px;">
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.92rem;color:var(--text-light);">
+                <span style="background:var(--orange);color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0;">1</span>
+                Select a category like <strong style="color:var(--text-dark);">Travel, Food</strong> or <strong style="color:var(--text-dark);">Motivation</strong>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.92rem;color:var(--text-light);">
+                <span style="background:var(--orange);color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0;">2</span>
+                Choose your tone — <strong style="color:var(--text-dark);">Funny, Casual</strong> or <strong style="color:var(--text-dark);">Formal</strong>
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.92rem;color:var(--text-light);">
+                <span style="background:var(--orange);color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0;">3</span>
+                Click <strong style="color:var(--text-dark);">⚡ Generate</strong> to get your caption instantly
+            </li>
+            <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.92rem;color:var(--text-light);">
+                <span style="background:var(--orange);color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;flex-shrink:0;">4</span>
+                Copy or save your caption — then paste directly to Instagram, Twitter or LinkedIn
+            </li>
+        </ol>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         FAVORITES
+    ══════════════════════════════════════ -->
+    <section class="saved-section" aria-label="Favorite captions">
+        <div class="section-head">
+            <h2>❤️ My Favorites</h2>
+            <button class="clear-btn" id="clear-fav-btn">🗑️ Clear All</button>
+        </div>
+        <div class="saved-list" id="favorites-list"></div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         HISTORY
+    ══════════════════════════════════════ -->
+    <section class="saved-section" aria-label="Caption history">
+        <div class="section-head">
+            <h2>📜 Recent History</h2>
+            <button class="clear-btn" id="clear-hist-btn">🗑️ Clear</button>
+        </div>
+        <div class="saved-list" id="history-list"></div>
+    </section>
+
+</div><!-- /container -->
+</main>
+
+<!-- FAQ SECTION -->
+<section style="margin:40px 0;">
+    <div class="container">
+        <h2 style="font-size:1.4rem; font-weight:700; margin-bottom:16px;">
+            ❓ Frequently Asked Questions
+        </h2>
+
+        <div class="saved-section">
+            <p><strong>1. Is this caption generator free?</strong><br>
+            Yes, CaptionStudio is 100% free to use. No login required.</p>
+
+            <p style="margin-top:12px;"><strong>2. Can I use captions for Instagram?</strong><br>
+            Yes, you can generate captions for Instagram, Twitter, and LinkedIn.</p>
+
+            <p style="margin-top:12px;"><strong>3. How many captions can I generate?</strong><br>
+            You can generate unlimited captions anytime.</p>
+
+            <p style="margin-top:12px;"><strong>4. Are these captions unique?</strong><br>
+            Yes, captions are randomly generated and unique each time.</p>
+        </div>
+    </div>
+</section>
+
+<section style="text-align:center; margin:30px 0;">
+    <h2>🚀 Grow Faster on Instagram</h2>
+    <p>Join our Telegram for daily viral caption ideas & growth tips</p>
+    <a href="https://t.me/skill2incomehub" target="_blank"
+       style="background:#f97316;color:#fff;padding:10px 20px;border-radius:8px;display:inline-block;margin-top:10px;">
+       Join Now
+    </a>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="footer-top">
+
+        <div class="footer-col footer-brand">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">✍️</div>
+                Caption<span>Studio</span>
+            </a>
+            <!-- ✅ Change #7: SEO text in footer -->
+            <p>CaptionStudio is a free AI caption generator tool for Instagram, Twitter, and LinkedIn. Create viral captions, hashtags, and social media content easily.</p>
+            <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="footer-earn">
+                ✈️ Want to Earn? Join Telegram
+            </a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="tools">🛠️ Tools</a></li>
+                <li><a href="blog">📝 Blog</a></li>
+                <li><a href="guide.html">📖 Guide</a></li>
+                <li><a href="earning.html">💰 Earning</a></li>
+                <li><a href="relax.html">🧘 Relax</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">👤 About Us</a></li>
+                <li><a href="contact.html">📬 Contact</a></li>
+                <li><a href="support.html">🆘 Support</a></li>
+                <li><a href="data">🗂️ Data</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="privacy.html">🔒 Privacy Policy</a></li>
+                <li><a href="terms.html">📄 Terms of Use</a></li>
+                <li><a href="sitemap.xml">🗺️ Sitemap</a></li>
+            </ul>
+            <h4 style="margin-top:18px;">Website Banwao</h4>
+            <a href="https://wa.me/919918996096?text=Hi%2C%20I%20want%20a%20website%20starting%20from%20%E2%82%B9999"
+               target="_blank" rel="noopener" class="footer-wa-btn">
+                💬 ₹999 se Shuru — WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 CaptionStudio. All rights reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="sitemap.xml">Sitemap</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Toast -->
+<div id="toast" role="status" aria-live="polite"></div>
+
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+/* ═══════════════════════════
+   DATA
+═══════════════════════════ */
+const TEMPLATES = {
+    travel: {
+        casual: ["Exploring {place} like a local 🌍","Sunset at {place} hit different 🌅","Wanderlust and city dust in {place} ✨","Not all those who wander are lost — currently in {place} 🗺️","Living my best life in {place} 📸"],
+        funny:  ["I need a 6-month vacation, twice a year. Currently: {place}!","My wallet is crying, but my feed in {place} looks GREAT 😂","Came to {place} to find myself. Found the bar instead 🍹","Told my boss I needed a mental health day. Ended up in {place} 🤣","WiFi weak. Excuse strong. Posting from {place} anyway 😅"],
+        formal: ["Immersing in the cultural tapestry of {place}.","Witnessing the breathtaking vistas of {place}.","A journey through the historic landscapes of {place}.","Documenting the architectural marvels found in {place}.","Exploring the rich heritage and traditions of {place}."]
+    },
+    food: {
+        casual: ["Just tried {dish} and I'm OBSESSED 🍜","Nothing beats {dish} on a {day} 🍲","My happy place is anywhere with good {dish} 😍","First bite of {dish} and I forgot all my problems 🙌","This {dish} just changed my life, no exaggeration 🤌"],
+        funny:  ["This {dish} is so good I'm writing it a love letter 💌","I'm on a seafood diet. I see {dish} and I eat it 😂","Calories in {dish} don't count if no one sees you eat it 🙈","My diet said no. My heart said {dish}. Heart won. 🏆","Warning: looking at this {dish} may cause extreme hunger 😅"],
+        formal: ["Savoring the exquisite flavors of this masterfully prepared {dish}.","A culinary delight: the signature {dish} of the evening.","An impeccable presentation of {dish} — a true gastronomic experience.","The refined palette of flavors in this {dish} is truly commendable.","A testament to culinary excellence: the renowned {dish}."]
+    },
+    motivation: {
+        casual: ["Small steps every {day} lead to big results 🌱","Your {goal} is closer than you think 🔥","Stop doubting. Start doing. 💪","Progress, not perfection. Keep going! 🚀","Every expert was once a beginner. Trust your {goal} 🌟"],
+        funny:  ["I'm not procrastinating, I'm on energy-saving mode before tackling my {goal} 😴","My {goal} today: survive. Nailed it. 🏆","I need coffee to achieve my {goal} of drinking coffee ☕","They said follow your dreams. I went back to sleep 😂","Hustle hard… after this one last scroll 📱"],
+        formal: ["Perseverance is the key to achieving one's {goal}.","Maintaining unwavering focus on the designated {goal}.","The strategic pursuit of our primary {goal} remains paramount.","Discipline and consistency are the cornerstones of achieving any {goal}.","Excellence is not a destination but a continuous journey toward your {goal}."]
     }
+};
 
-    async function copyText(text) {
-      try {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(text);
-          alert("Copied! 🔥");
-          return;
-        }
+const FILLS = {
+    place: ["Paris","Tokyo","Goa","the mountains","New York","Bali","Jaipur","Dubai"],
+    dish:  ["pasta","ramen","pizza","sushi","biryani","tacos","pav bhaji","butter chicken"],
+    day:   ["cozy day","rainy day","Monday","lazy Sunday","tough week"],
+    goal:  ["dream","objective","vision","ambition","purpose"]
+};
 
-        const ta = document.createElement("textarea");
-        ta.value = text;
-        ta.style.position = "fixed";
-        ta.style.left = "-9999px";
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-        document.execCommand("copy");
-        ta.remove();
-        alert("Copied! 🔥");
-      } catch {
-        alert("Copy failed");
-      }
+const HASHTAGS = {
+    travel: {
+        casual: ["#wanderlust","#travel","#exploremore","#travelgram","#roamtheearth","#instatravel"],
+        funny:  ["#travelproblems","#lostbutmakingit","#wanderlustwallet","#brokebutbooked","#travelhumor"],
+        formal: ["#sustainabletravel","#culturalexchange","#globetrotter","#traveljournal","#travelphotography"]
+    },
+    food: {
+        casual: ["#foodie","#instafood","#yummy","#foodporn","#homecooking","#foodlover"],
+        funny:  ["#dietstartsmonday","#foodcoma","#hangrynomore","#treatyourself","#nocaloriesday"],
+        formal: ["#gastronomy","#culinaryarts","#finedining","#chefskiss","#foodphotography"]
+    },
+    motivation: {
+        casual: ["#grind","#motivated","#goals","#hustlehard","#believeinyourself","#mindset"],
+        funny:  ["#pretendingtowork","#motivationmaybe","#sendhelp","#adulting","#relatable"],
+        formal: ["#leadership","#professionalgrowth","#excellence","#mindset","#successmindset"]
     }
+};
 
-    async function generate() {
-      const topic = topicEl.value.trim();
+/* ═══════════════════════════
+   STATE
+═══════════════════════════ */
+let currentCat    = 'travel';
+let currentTone   = 'casual';
+let platformLimit = 2200;
+let seen          = new Set();
+let favorites     = JSON.parse(localStorage.getItem('cs_favorites')) || [];
+let history       = JSON.parse(localStorage.getItem('cs_history'))   || [];
 
-      if (!topic) {
-        alert("Topic likho pehle bhai.");
+/* ═══════════════════════════
+   DOM
+═══════════════════════════ */
+const $ = id => document.getElementById(id);
+const capBox       = $('caption-display');
+const genBtn       = $('generate-btn');
+const copyBtn      = $('copy-btn');
+const shareBtn     = $('share-btn');
+const exportBtn    = $('export-btn');
+const favBtn       = $('fav-btn');
+const charCounter  = $('char-counter');
+const hashDisplay  = $('hashtag-display');
+const copyHashBtn  = $('copy-hash-btn');
+const favList      = $('favorites-list');
+const histList     = $('history-list');
+const clearFavBtn  = $('clear-fav-btn');
+const clearHistBtn = $('clear-hist-btn');
+const themeBtn     = $('theme-toggle');
+const hamburger    = $('hamburger');
+const mobileNav    = $('mobile-nav');
+const toastEl      = $('toast');
+
+/* ═══════════════════════════
+   TOAST
+═══════════════════════════ */
+let toastTimer;
+function toast(msg) {
+    clearTimeout(toastTimer);
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2300);
+}
+
+/* ═══════════════════════════
+   DARK MODE
+═══════════════════════════ */
+if (localStorage.getItem('cs_theme') === 'dark') {
+    document.documentElement.setAttribute('data-theme','dark');
+    themeBtn.textContent = '🌙';
+}
+themeBtn.addEventListener('click', () => {
+    const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (dark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('cs_theme','light');
+        themeBtn.textContent = '☀️';
+    } else {
+        document.documentElement.setAttribute('data-theme','dark');
+        localStorage.setItem('cs_theme','dark');
+        themeBtn.textContent = '🌙';
+    }
+});
+
+/* ═══════════════════════════
+   HAMBURGER
+═══════════════════════════ */
+hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+
+/* ═══════════════════════════
+   ACTIVE NAV
+═══════════════════════════ */
+const page = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a, .mobile-nav a').forEach(a => {
+    if (a.getAttribute('href') === page) a.classList.add('active');
+});
+
+/* ═══════════════════════════
+   HELPERS
+═══════════════════════════ */
+const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+
+function fill(tpl) {
+    return tpl.replace(/\{(\w+)\}/g, (_, k) => FILLS[k] ? rand(FILLS[k]) : k);
+}
+
+/* ═══════════════════════════
+   COUNTER
+═══════════════════════════ */
+function updateCounter() {
+    const len = capBox.textContent.trim().length;
+    charCounter.textContent = `${len} / ${platformLimit}`;
+    charCounter.classList.toggle('over', len > platformLimit);
+}
+
+/* ═══════════════════════════
+   HASHTAGS
+═══════════════════════════ */
+function renderHashtags() {
+    const tags = HASHTAGS[currentCat]?.[currentTone] || [];
+    hashDisplay.textContent = tags.join('  ');
+}
+
+copyHashBtn.addEventListener('click', () => {
+    const t = hashDisplay.textContent;
+    if (t.includes('appear here')) { toast('Generate a caption first!'); return; }
+    navigator.clipboard.writeText(t).then(() => toast('Hashtags copied! #️⃣'));
+});
+
+/* ═══════════════════════════
+   GENERATE
+═══════════════════════════ */
+function generateCaption() {
+    const pool = TEMPLATES[currentCat]?.[currentTone];
+    if (!pool) return;
+
+    capBox.style.opacity = '0';
+    capBox.style.transform = 'translateY(-8px)';
+
+    setTimeout(() => {
+        let caption, tries = 0;
+        do { caption = fill(rand(pool)); tries++; }
+        while (seen.has(caption) && tries < 30);
+
+        if (seen.size > 60) seen.clear();
+        seen.add(caption);
+
+        capBox.textContent = caption;
+        capBox.style.opacity = '1';
+        capBox.style.transform = 'translateY(0)';
+        capBox.style.transition = 'all 0.28s ease';
+
+        updateCounter();
+        updateFavState();
+        renderHashtags();
+        addHistory(caption);
+    }, 280);
+}
+
+/* ═══════════════════════════
+   FAVORITES
+═══════════════════════════ */
+function renderFavorites() {
+    favList.innerHTML = '';
+    if (!favorites.length) {
+        favList.innerHTML = '<div class="empty-state"><span>❤️</span>No favorites yet. Save some!</div>';
         return;
-      }
-
-      btnEl.disabled = true;
-      btnEl.innerText = "Generating...";
-      statusEl.innerText = "AI se caption aa raha hai...";
-      resultsEl.innerHTML = "<div class='res-card' style='text-align:center;'>Applying Growth Logic... 🚀</div>";
-
-      try {
-        const res = await fetch("/api/generate", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            topic,
-            category: "Viral Hinglish"
-          })
-        });
-
-        const raw = await res.text();
-        let data = {};
-
-        try {
-          data = JSON.parse(raw);
-        } catch {
-          throw new Error("Invalid server response");
-        }
-
-        if (!res.ok) {
-          throw new Error(data.error || "Server busy");
-        }
-
-        const caption = String(data.caption || "").trim();
-        const tip = String(data.tip || "").trim();
-        const source = String(data.type || "AI").trim();
-
-        const reach = Number(data?.analytics?.reach || 0);
-        const likes = Number(data?.analytics?.likes || 0);
-
-        resultsEl.innerHTML = `
-          <div class="res-card">
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
-              <span style="font-size:10px;font-weight:800;color:#ff4d00;">AI PRO CHOICE</span>
-              <small style="color:#aaa;font-size:10px;">via ${escapeHTML(source)}</small>
-            </div>
-
-            <p id="cap" style="font-size:18px;margin:20px 0;line-height:1.7;font-weight:500;white-space:pre-line;">${escapeHTML(caption)}</p>
-
-            <div class="growth-tip">
-              <b style="color:#ff4d00;">💡 Growth Tip:</b> ${escapeHTML(tip)}
-            </div>
-
-            <div class="stats-grid">
-              <span>Reach: <b>${reach.toLocaleString()}+</b></span>
-              <span>Engagement: <b>${likes.toLocaleString()}+</b></span>
-            </div>
-
-            <button class="copy-btn" onclick="copyText(document.getElementById('cap').innerText)">Copy & Post 🚀</button>
-          </div>
-        `;
-
-        statusEl.innerText = "Ready ✔";
-      } catch (e) {
-        resultsEl.innerHTML = "<div class='res-card'>Server Busy. 1 min ruko bhai.</div>";
-        statusEl.innerText = e.message || "Something went wrong";
-      } finally {
-        btnEl.disabled = false;
-        btnEl.innerText = "Generate Viral Choice ✨";
-      }
     }
-  </script>
+    favorites.forEach(fav => {
+        const row = document.createElement('div');
+        row.className = 'saved-item';
+
+        const txt = document.createElement('span');
+        txt.className = 'saved-item-text';
+        txt.textContent = fav;
+
+        const del = document.createElement('button');
+        del.className = 'item-del-btn';
+        del.title = 'Remove';
+        del.textContent = '×';
+        del.onclick = () => deleteFav(fav);
+
+        row.append(txt, del);
+        favList.appendChild(row);
+    });
+}
+
+function saveFav() {
+    const cap = capBox.textContent.trim();
+    if (cap.includes('Select your') || cap.includes('No captions')) return;
+    if (favorites.includes(cap)) { toast('Already in favorites!'); return; }
+
+    favorites.push(cap);
+    localStorage.setItem('cs_favorites', JSON.stringify(favorites));
+    renderFavorites();
+    updateFavState();
+
+    confetti({ particleCount: 130, spread: 72, origin: { y: 0.6 },
+        colors: ['#f97316','#fbbf24','#34d399','#818cf8'] });
+    toast('Saved to favorites! ❤️');
+}
+
+function deleteFav(cap) {
+    favorites = favorites.filter(f => f !== cap);
+    localStorage.setItem('cs_favorites', JSON.stringify(favorites));
+    renderFavorites();
+    updateFavState();
+    toast('Removed!');
+}
+
+function updateFavState() {
+    const cur = capBox.textContent.trim();
+    favBtn.classList.toggle('saved', favorites.includes(cur));
+}
+
+clearFavBtn.addEventListener('click', () => {
+    if (!favorites.length) { toast('Nothing to clear!'); return; }
+    favorites = [];
+    localStorage.removeItem('cs_favorites');
+    renderFavorites();
+    updateFavState();
+    toast('Favorites cleared!');
+});
+
+favBtn.addEventListener('click', saveFav);
+
+/* ═══════════════════════════
+   HISTORY
+═══════════════════════════ */
+function addHistory(cap) {
+    if (history.includes(cap)) return;
+    history.unshift(cap);
+    history = history.slice(0, 10);
+    localStorage.setItem('cs_history', JSON.stringify(history));
+    renderHistory();
+}
+
+function renderHistory() {
+    histList.innerHTML = '';
+    if (!history.length) {
+        histList.innerHTML = '<div class="empty-state"><span>📜</span>No history yet.</div>';
+        return;
+    }
+    history.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'saved-item';
+
+        const txt = document.createElement('span');
+        txt.className = 'saved-item-text';
+        txt.textContent = item;
+
+        const restore = document.createElement('button');
+        restore.className = 'item-restore-btn';
+        restore.title = 'Restore';
+        restore.textContent = '↩';
+        restore.onclick = () => {
+            capBox.textContent = item;
+            updateCounter();
+            updateFavState();
+            toast('Caption restored! ↩');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        row.append(txt, restore);
+        histList.appendChild(row);
+    });
+}
+
+clearHistBtn.addEventListener('click', () => {
+    history = [];
+    localStorage.removeItem('cs_history');
+    renderHistory();
+    toast('History cleared! 🗑️');
+});
+
+/* ═══════════════════════════
+   COPY / SHARE / EXPORT
+═══════════════════════════ */
+copyBtn.addEventListener('click', () => {
+    const t = capBox.textContent.trim();
+    if (t.includes('Select your')) { toast('Generate a caption first!'); return; }
+    navigator.clipboard.writeText(t).then(() => toast('Caption copied! ✅'));
+});
+
+shareBtn.addEventListener('click', async () => {
+    const t = capBox.textContent.trim();
+    if (t.includes('Select your')) { toast('Generate a caption first!'); return; }
+    if (navigator.share) {
+        try { await navigator.share({ title: 'CaptionStudio', text: t }); } catch(_){}
+    } else {
+        navigator.clipboard.writeText(t).then(() => toast('Copied for sharing! 📋'));
+    }
+});
+
+exportBtn.addEventListener('click', () => {
+    if (!favorites.length) { toast('No favorites to export!'); return; }
+    const content = favorites.map((f, i) => `${i+1}. ${f}`).join('\n\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([content], { type: 'text/plain' }));
+    a.download = 'captionstudio-favorites.txt';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    toast('Exported! 📥');
+});
+
+/* ═══════════════════════════
+   FILTER CLICKS
+═══════════════════════════ */
+function filterGroup(containerId, key) {
+    $(containerId).addEventListener('click', e => {
+        const btn = e.target.closest('button');
+        if (!btn || btn.classList.contains('active')) return;
+        $(containerId).querySelector('.active').classList.remove('active');
+        btn.classList.add('active');
+        if (key === 'cat')  currentCat  = btn.dataset.cat;
+        if (key === 'tone') currentTone = btn.dataset.tone;
+        seen.clear();
+        generateCaption();
+    });
+}
+filterGroup('cat-filters',  'cat');
+filterGroup('tone-filters', 'tone');
+
+$('platform-filters').addEventListener('click', e => {
+    const btn = e.target.closest('.plat-btn');
+    if (!btn) return;
+    $('platform-filters').querySelector('.active').classList.remove('active');
+    btn.classList.add('active');
+    platformLimit = parseInt(btn.dataset.limit);
+    updateCounter();
+});
+
+/* ═══════════════════════════
+   KEYBOARD
+═══════════════════════════ */
+document.addEventListener('keydown', e => {
+    if (document.activeElement === capBox) return;
+    if (e.key === 'Enter') generateCaption();
+});
+
+capBox.addEventListener('input', () => {
+    updateCounter();
+    updateFavState();
+});
+
+capBox.style.transition = 'all 0.28s ease';
+
+/* ═══════════════════════════
+   GENERATE BUTTON
+═══════════════════════════ */
+genBtn.addEventListener('click', generateCaption);
+
+/* ═══════════════════════════
+   INIT
+═══════════════════════════ */
+renderFavorites();
+renderHistory();
+updateFavState();
+updateCounter();
+
+// Change #10: Auto-generate on load — reduces bounce rate
+window.addEventListener('load', generateCaption);
+</script>
+
 </body>
-    </html>
+</html>
