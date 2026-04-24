@@ -784,6 +784,25 @@
         © 2026 <a href="index.html" title="CaptionStudio">CaptionStudio</a> • Gorakhpur UP 53 • Founder: <strong>Ansh Yadav</strong> • <a href="tel:+919918996096">9918996096</a>
     </div>
 </footer>
+<script>
+document.querySelectorAll('a').forEach(link => {
+  let href = link.getAttribute('href');
 
+  if (!href) return;
+
+  // Ignore external / special links
+  if (
+    href.startsWith('http') ||
+    href.startsWith('#') ||
+    href.startsWith('mailto:') ||
+    href.startsWith('tel:')
+  ) return;
+
+  // Fix relative links
+  if (!href.startsWith('/')) {
+    link.setAttribute('href', '/' + href);
+  }
+});
+</script>
 </body>
       </html>
