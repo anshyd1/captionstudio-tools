@@ -787,10 +787,8 @@
 <script>
 document.querySelectorAll('a').forEach(link => {
   let href = link.getAttribute('href');
-
   if (!href) return;
 
-  // Ignore external / special links
   if (
     href.startsWith('http') ||
     href.startsWith('#') ||
@@ -798,10 +796,8 @@ document.querySelectorAll('a').forEach(link => {
     href.startsWith('tel:')
   ) return;
 
-  // Fix relative links
-  if (!href.startsWith('/')) {
-    link.setAttribute('href', '/' + href);
-  }
+  // Always force root URL
+  link.href = window.location.origin + '/' + href.replace(/^\/+/, '');
 });
 </script>
 </body>
