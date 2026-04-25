@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
 
+<!-- ===== FOUC PREVENTION — MUST BE FIRST ===== -->
+<script>
+(function(){
+  try{
+    var s=localStorage.getItem('csDark');
+    var sysDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+    if(s==='1'||(s===null&&sysDark)){
+      document.documentElement.setAttribute('data-theme','dark');
+    }
+  }catch(e){}
+})();
+</script>
+
 <!-- ===== PRIMARY SEO ===== -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +26,9 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#ff4d00">
 <meta name="last-modified" content="2026-04-20">
-<link rel="canonical" href="https://captionstudio.in/blog/ai-manipulation-guide">
+<link rel="canonical" href="https://captionstudio.in/ai-manipulation-guide.html">
 
-<!-- ===== OPEN GRAPH ===== -->
+<!-- OG -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="CaptionStudio.in">
 <meta property="og:title" content="AI ko Manipulate Kaise Kare? (90% Log Galat Samajh Rahe Hain) | 2026">
@@ -24,1013 +37,1063 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="AI Manipulation Guide Hindi - Prompt Engineering for Indian Creators 2026">
-<meta property="og:url" content="https://captionstudio.in/blog/ai-manipulation-guide">
+<meta property="og:url" content="https://captionstudio.in/ai-manipulation-guide.html">
 <meta property="article:published_time" content="2025-01-15T10:00:00+05:30">
 <meta property="article:modified_time" content="2026-04-20T10:00:00+05:30">
 <meta property="article:author" content="CaptionStudio Team">
 <meta property="article:section" content="AI Tools">
 <meta property="article:tag" content="AI Prompts, ChatGPT Hindi, Content Creation, Prompt Engineering">
 
-<!-- ===== TWITTER CARD ===== -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI ko Manipulate Kaise Kare? Best Prompt Engineering Tips for Beginners">
 <meta name="twitter:description" content="ChatGPT prompts for Instagram Hindi — real AI system jo smart creators use karte hain. 2026 updated.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80">
 <meta name="twitter:image:alt" content="AI Manipulation Hindi Guide CaptionStudio 2026">
 
-<!-- ===== SCHEMAS ===== -->
+<!-- Schemas -->
 <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Article",
-  "headline":"AI ko Manipulate Kaise Kare? (90% Log Galat Samajh Rahe Hain)",
-  "description":"ChatGPT prompts for Instagram Hindi, best prompt engineering tips for beginners aur complete AI content system guide.",
-  "image":{"@type":"ImageObject","url":"https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80","width":1200,"height":630},
-  "author":{"@type":"Organization","name":"CaptionStudio","url":"https://captionstudio.in"},
-  "publisher":{"@type":"Organization","name":"CaptionStudio","logo":{"@type":"ImageObject","url":"https://captionstudio.in/favicon.png","width":60,"height":60}},
-  "datePublished":"2025-01-15",
-  "dateModified":"2026-04-20",
-  "mainEntityOfPage":{"@type":"WebPage","@id":"https://captionstudio.in/blog/ai-manipulation-guide"},
-  "keywords":"AI manipulation, ChatGPT prompts Hindi, prompt engineering beginners, Instagram AI tools",
-  "wordCount":"2600",
-  "inLanguage":"hi-IN"
-}
+{"@context":"https://schema.org","@type":"Article","headline":"AI ko Manipulate Kaise Kare? (90% Log Galat Samajh Rahe Hain)","description":"ChatGPT prompts for Instagram Hindi, best prompt engineering tips for beginners aur complete AI content system guide.","image":{"@type":"ImageObject","url":"https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80","width":1200,"height":630},"author":{"@type":"Organization","name":"CaptionStudio","url":"https://captionstudio.in"},"publisher":{"@type":"Organization","name":"CaptionStudio","logo":{"@type":"ImageObject","url":"https://captionstudio.in/favicon.png","width":60,"height":60}},"datePublished":"2025-01-15","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://captionstudio.in/ai-manipulation-guide.html"},"keywords":"AI manipulation, ChatGPT prompts Hindi, prompt engineering beginners, Instagram AI tools","wordCount":"2600","inLanguage":"hi-IN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://captionstudio.in"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://captionstudio.in/blog.html"},{"@type":"ListItem","position":3,"name":"AI Manipulation Guide 2026","item":"https://captionstudio.in/ai-manipulation-guide.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kya AI ko sach mein manipulate kiya ja sakta hai?","acceptedAnswer":{"@type":"Answer","text":"Haan, lekin manipulation ka matlab trick karna nahi — balki AI ko itna clear direction dena ki wo best possible output de. Isko prompt engineering kehte hain."}},{"@type":"Question","name":"Best prompt engineering tips for beginners kya hain?","acceptedAnswer":{"@type":"Answer","text":"5 best tips: Role define karo, context do, output format specify karo, constraints lagao, aur iterate karo."}},{"@type":"Question","name":"ChatGPT prompts for Instagram Hindi mein kaise likhein?","acceptedAnswer":{"@type":"Answer","text":"Formula: Act as [role]. Topic: [topic]. Tone: [tone]. Language: Hinglish. Output: [X] captions under [Y] words."}},{"@type":"Question","name":"Best free AI caption tool kaunsa hai?","acceptedAnswer":{"@type":"Answer","text":"CaptionStudio.in ek free AI tool hai jo instantly Instagram captions, hooks, bios aur hashtags generate karta hai bina login ke."}}]}
 </script>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://captionstudio.in"},
-    {"@type":"ListItem","position":2,"name":"Blog","item":"https://captionstudio.in/blog"},
-    {"@type":"ListItem","position":3,"name":"AI Manipulation Guide 2026","item":"https://captionstudio.in/blog/ai-manipulation-guide"}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Kya AI ko sach mein manipulate kiya ja sakta hai?","acceptedAnswer":{"@type":"Answer","text":"Haan, lekin manipulation ka matlab trick karna nahi — balki AI ko itna clear direction dena ki wo best possible output de. Isko prompt engineering kehte hain."}},
-    {"@type":"Question","name":"Best prompt engineering tips for beginners kya hain?","acceptedAnswer":{"@type":"Answer","text":"5 best tips: Role define karo, context do, output format specify karo, constraints lagao, aur iterate karo. Ek hafte ki practice se significant improvement aayegi."}},
-    {"@type":"Question","name":"ChatGPT prompts for Instagram Hindi mein kaise likhein?","acceptedAnswer":{"@type":"Answer","text":"Formula: Act as [role]. Topic: [topic]. Tone: [tone]. Language: Hinglish. Output: [X] captions under [Y] words. Ya CaptionStudio.in use karo — free mein, bina login ke."}},
-    {"@type":"Question","name":"Best free AI caption tool kaunsa hai?","acceptedAnswer":{"@type":"Answer","text":"CaptionStudio.in ek free AI tool hai jo instantly Instagram captions, hooks, bios aur hashtags generate karta hai bina login ke."}}
-  ]
-}
-</script>
-
-<!-- ===== PERFORMANCE: PRECONNECT ===== -->
+<!-- Performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
+<link rel="dns-prefetch" href="https://t.me">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.png" type="image/png">
 
 <style>
 
-/* ========================================
+/* =====================================================
+   CSS CUSTOM PROPERTIES — THEME SYSTEM
+   Both light + dark defined here — no flicker
+===================================================== */
+:root {
+  --bg:          #faf9f6;
+  --bg2:         #fff;
+  --bg3:         #f8f9fa;
+  --text:        #111;
+  --text2:       #333;
+  --text3:       #555;
+  --text4:       #888;
+  --text5:       #aaa;
+  --border:      #eee;
+  --border2:     #f0f0f0;
+  --accent:      #ff4d00;
+  --accent2:     #ff8c00;
+  --accent-bg:   #fff3e0;
+  --accent-border:#ffd5c2;
+  --hook-bg:     linear-gradient(135deg,#fff8f5,#fff3ee);
+  --callout-o:   linear-gradient(135deg,#fff8f5,#fff3ee);
+  --callout-b:   linear-gradient(135deg,#f0f7ff,#e8f3ff);
+  --callout-g:   linear-gradient(135deg,#f0fff4,#e6ffed);
+  --compare-bad: #fff5f5;
+  --compare-good:#f0fff4;
+  --shadow1:     0 2px 10px rgba(0,0,0,0.04);
+  --shadow2:     0 6px 25px rgba(0,0,0,0.06);
+  --shadow3:     0 8px 32px rgba(0,0,0,0.08);
+  --nav-bg:      #fff;
+  --footer-bg:   #111;
+  --footer-text: #666;
+  --footer-head: #fff;
+  --toc-active:  #fff3e0;
+  --stat-bg:     #fff;
+  --prompt-border:rgba(255,255,255,0);
+}
+
+[data-theme="dark"] {
+  --bg:          #0f0f0f;
+  --bg2:         #1a1a1a;
+  --bg3:         #222;
+  --text:        #f0f0f0;
+  --text2:       #ddd;
+  --text3:       #bbb;
+  --text4:       #888;
+  --text5:       #555;
+  --border:      #2a2a2a;
+  --border2:     #333;
+  --accent-bg:   #1a0a00;
+  --accent-border:#3a1a00;
+  --hook-bg:     linear-gradient(135deg,#1a0800,#120500);
+  --callout-o:   linear-gradient(135deg,#1a0800,#100500);
+  --callout-b:   linear-gradient(135deg,#001020,#000a18);
+  --callout-g:   linear-gradient(135deg,#001a08,#000f05);
+  --compare-bad: #1a0000;
+  --compare-good:#001a08;
+  --shadow1:     0 2px 10px rgba(0,0,0,0.3);
+  --shadow2:     0 6px 25px rgba(0,0,0,0.4);
+  --shadow3:     0 8px 32px rgba(0,0,0,0.5);
+  --nav-bg:      #1a1a1a;
+  --footer-bg:   #0a0a0a;
+  --footer-text: #555;
+  --footer-head: #f0f0f0;
+  --toc-active:  #1a0a00;
+  --stat-bg:     #1a1a1a;
+  --prompt-border:rgba(255,255,255,0.05);
+}
+
+/* =====================================================
    RESET & BASE
-======================================== */
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
+===================================================== */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
   font-family:'DM Sans',sans-serif;
-  background:#faf9f6;color:#111;
-  line-height:1.75;font-size:16px
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  font-size:16px;
+  transition:background 0.3s, color 0.3s;
 }
-h1,h2,h3,h4,h5{font-family:'Syne',sans-serif;line-height:1.25}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;height:auto;display:block}
+h1,h2,h3,h4,h5 { font-family:'Syne',sans-serif; line-height:1.25; color:var(--text); }
+a { text-decoration:none; color:inherit; }
+img { max-width:100%; height:auto; display:block; }
 
-/* ===== REDUCED MOTION ===== */
 @media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  *, *::before, *::after {
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important;
+    scroll-behavior:auto !important;
+  }
 }
 
-/* ========================================
-   PROGRESS BAR
-======================================== */
-#progress-bar{
-  position:fixed;top:0;left:0;height:3px;
+/* =====================================================
+   READING PROGRESS BAR
+===================================================== */
+#progress-bar {
+  position:fixed; top:0; left:0; height:3px;
   background:linear-gradient(90deg,#ff4d00,#ff8c00,#ffcc00);
-  width:0%;z-index:9999;transition:width 0.1s linear
+  width:0%; z-index:9999;
+  transition:width 0.1s linear;
+  will-change:width;
 }
 
-/* ========================================
+/* =====================================================
    SCROLL TO TOP
-======================================== */
-#scroll-top{
-  position:fixed;bottom:28px;right:22px;
-  width:46px;height:46px;
+===================================================== */
+#scroll-top {
+  position:fixed; bottom:28px; right:22px;
+  width:46px; height:46px;
   background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  color:#fff;border:none;border-radius:50%;
-  font-size:20px;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
+  color:#fff; border:none; border-radius:50%;
+  font-size:20px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
   box-shadow:0 6px 20px rgba(255,77,0,0.4);
-  opacity:0;transform:translateY(20px);
-  transition:opacity 0.3s,transform 0.3s;
-  z-index:998;pointer-events:none;
-  font-family:'DM Sans',sans-serif
-}
-#scroll-top.visible{opacity:1;transform:translateY(0);pointer-events:all}
-#scroll-top:hover{transform:translateY(-3px)}
-
-/* ========================================
-   DARK MODE
-======================================== */
-body.dark-mode{background:#0f0f0f;color:#e0e0e0}
-body.dark-mode header{background:#1a1a1a;border-color:#222}
-body.dark-mode .nav-logo{color:#fff}
-body.dark-mode nav a{color:#aaa}
-body.dark-mode .offer-card,
-body.dark-mode .toc-box,
-body.dark-mode .sidebar-card,
-body.dark-mode .callout.orange,
-body.dark-mode .reality-card,
-body.dark-mode .quote-block,
-body.dark-mode .steps-list li,
-body.dark-mode .illusion-item,
-body.dark-mode .author-box,
-body.dark-mode .share-section,
-body.dark-mode .faq-item,
-body.dark-mode .also-read,
-body.dark-mode .more-grid a{background:#1a1a1a!important;border-color:#2a2a2a!important;color:#ddd!important}
-body.dark-mode .blog-main p,
-body.dark-mode .blog-main li{color:#ccc}
-body.dark-mode h1,body.dark-mode h2,
-body.dark-mode h3,body.dark-mode h4{color:#f0f0f0}
-body.dark-mode footer{background:#0a0a0a}
-body.dark-mode .footer-bottom{border-color:#1a1a1a}
-body.dark-mode .hook-block{background:#1a0a00;border-color:#ff4d0040}
-body.dark-mode .compare-box.bad{background:#1a0000;border-color:#ff000030}
-body.dark-mode .compare-box.good{background:#001a08;border-color:#00ff4430}
-body.dark-mode td{color:#ccc}
-body.dark-mode tr:hover td{background:#1a1a1a}
-body.dark-mode .s-cp{background:#2a2a2a;color:#ddd}
-body.dark-mode .nav-links a:hover,
-body.dark-mode .tool-link:hover{background:#2a2a2a}
-body.dark-mode .breadcrumb span{color:#444}
-
-/* ========================================
-   DARK MODE TOGGLE BUTTON
-======================================== */
-#dark-toggle{
-  background:none;border:1px solid #eee;
-  border-radius:20px;padding:6px 12px;
-  cursor:pointer;font-size:16px;
-  transition:all 0.2s;
-  display:flex;align-items:center;gap:5px;
+  opacity:0; transform:translateY(20px) scale(0.8);
+  transition:opacity 0.3s, transform 0.3s;
+  z-index:998; pointer-events:none;
   font-family:'DM Sans',sans-serif;
-  color:#555;font-size:13px
 }
-#dark-toggle:hover{background:#f5f5f5}
-body.dark-mode #dark-toggle{
-  border-color:#333;background:#1a1a1a;color:#ddd
-}
+#scroll-top.visible { opacity:1; transform:translateY(0) scale(1); pointer-events:all; }
+#scroll-top:hover { transform:translateY(-3px) scale(1.05) !important; }
 
-/* ========================================
+/* =====================================================
+   DARK MODE TOGGLE
+===================================================== */
+#dark-toggle {
+  background:var(--bg2); border:1.5px solid var(--border);
+  border-radius:25px; padding:6px 14px;
+  cursor:pointer; font-size:13px;
+  font-family:'DM Sans',sans-serif; color:var(--text3);
+  transition:all 0.2s; display:flex; align-items:center; gap:6px;
+  white-space:nowrap;
+}
+#dark-toggle:hover { border-color:var(--accent); color:var(--accent); }
+
+/* =====================================================
    HEADER
-======================================== */
-header{
-  background:#fff;
-  border-bottom:1px solid #eee;
-  position:sticky;top:3px;z-index:1000;
-  box-shadow:0 2px 20px rgba(0,0,0,0.06)
+===================================================== */
+header {
+  background:var(--nav-bg);
+  border-bottom:1px solid var(--border);
+  position:sticky; top:3px; z-index:1000;
+  box-shadow:0 2px 20px rgba(0,0,0,0.06);
+  transition:background 0.3s, border-color 0.3s;
 }
-.nav-top{
-  display:flex;justify-content:space-between;
-  align-items:center;padding:13px 5%;
-  max-width:1200px;margin:0 auto;gap:10px
+.nav-top {
+  display:flex; justify-content:space-between;
+  align-items:center; padding:12px 5%;
+  max-width:1200px; margin:0 auto; gap:10px;
 }
-.nav-logo{
-  font-family:'Syne',sans-serif;
-  font-size:20px;font-weight:800;
-  color:#111;cursor:pointer;
-  display:flex;align-items:center;gap:6px;
-  flex-shrink:0
+.nav-logo {
+  font-family:'Syne',sans-serif; font-size:20px;
+  font-weight:800; color:var(--text); cursor:pointer;
+  display:flex; align-items:center; gap:6px; flex-shrink:0;
 }
-.nav-logo span{color:#ff4d00}
-.nav-logo img{width:28px;height:28px;border-radius:6px}
-.nav-links{
-  display:flex;align-items:center;
-  gap:3px;list-style:none;flex-wrap:wrap
+.nav-logo span { color:#ff4d00; }
+.nav-logo img { width:28px; height:28px; border-radius:6px; }
+.nav-links {
+  display:flex; align-items:center; gap:3px;
+  list-style:none; flex-wrap:wrap;
 }
-.nav-links a{
-  font-size:13px;color:#555;
-  padding:6px 10px;border-radius:20px;
-  transition:all 0.2s;font-weight:500
+.nav-links a {
+  font-size:13px; color:var(--text3);
+  padding:6px 10px; border-radius:20px;
+  transition:all 0.2s; font-weight:500;
 }
-.nav-links a:hover{background:#f5f5f5;color:#111}
-.nav-links a.active{background:#fff3e0;color:#ff4d00;font-weight:700}
-.nav-links .btn-nav{
-  background:#ff4d00;color:#fff;
-  padding:8px 16px;border-radius:25px;
-  font-weight:700;font-size:13px;transition:all 0.2s
+.nav-links a:hover { background:var(--bg3); color:var(--text); }
+.nav-links a.active { background:var(--accent-bg); color:#ff4d00; font-weight:700; }
+.nav-links .btn-nav {
+  background:#ff4d00; color:#fff;
+  padding:8px 16px; border-radius:25px;
+  font-weight:700; font-size:13px; transition:all 0.2s;
 }
-.nav-links .btn-nav:hover{background:#e63d00}
-.nav-right-controls{
-  display:flex;align-items:center;gap:8px;flex-shrink:0
-}
-.hamburger{
-  display:none;flex-direction:column;
-  gap:5px;cursor:pointer;padding:6px;
-  background:none;border:none
-}
-.hamburger span{
-  width:22px;height:2px;background:#111;
-  border-radius:2px;transition:all 0.3s;
-  display:block
-}
-.mobile-menu{
-  display:none;flex-direction:column;
-  background:#fff;border-top:1px solid #eee;
-  padding:12px 5%;gap:4px
-}
-body.dark-mode .mobile-menu{background:#1a1a1a;border-color:#2a2a2a}
-.mobile-menu a{
-  font-size:14px;color:#444;padding:10px 15px;
-  border-radius:8px;font-weight:500;transition:background 0.2s
-}
-.mobile-menu a:hover{background:#f5f5f5}
-.mobile-menu.open{display:flex}
+.nav-links .btn-nav:hover { background:#e63d00; }
+.nav-right-controls { display:flex; align-items:center; gap:8px; flex-shrink:0; }
 
-/* ========================================
+/* Hamburger */
+.hamburger {
+  display:none; flex-direction:column; gap:5px;
+  cursor:pointer; padding:6px; background:none; border:none;
+}
+.hamburger span {
+  width:22px; height:2px; background:var(--text);
+  border-radius:2px; display:block; transition:all 0.3s;
+}
+.hamburger.is-open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+.hamburger.is-open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+/* Mobile Menu */
+.mobile-menu {
+  display:none; flex-direction:column;
+  background:var(--nav-bg); border-top:1px solid var(--border);
+  padding:12px 5%; gap:4px; max-height:0;
+  overflow:hidden; transition:max-height 0.3s ease;
+}
+.mobile-menu.open { display:flex; max-height:500px; }
+.mobile-menu a {
+  font-size:14px; color:var(--text3);
+  padding:10px 14px; border-radius:8px;
+  font-weight:500; transition:background 0.2s;
+}
+.mobile-menu a:hover { background:var(--bg3); color:var(--text); }
+
+/* =====================================================
    BREADCRUMB
-======================================== */
-.breadcrumb{
-  max-width:1100px;margin:0 auto;
-  padding:11px 5%;font-size:12px;color:#999;
-  display:flex;align-items:center;
-  gap:6px;flex-wrap:wrap
+===================================================== */
+.breadcrumb {
+  max-width:1100px; margin:0 auto;
+  padding:11px 5%; font-size:12px; color:var(--text4);
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap;
 }
-.breadcrumb a{color:#ff4d00}
-.breadcrumb span{color:#ccc}
+.breadcrumb a { color:#ff4d00; }
+.breadcrumb a:hover { text-decoration:underline; }
+.breadcrumb .sep { color:var(--border2); }
 
-/* ========================================
-   UPDATED BADGE
-======================================== */
-.updated-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  background:#e8f5e9;border:1px solid #c8e6c9;
-  color:#2e7d32;padding:5px 14px;
-  border-radius:25px;font-size:12px;
-  font-weight:700;margin-bottom:18px
+/* =====================================================
+   BADGES
+===================================================== */
+.updated-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  background:#e8f5e9; border:1px solid #c8e6c9;
+  color:#2e7d32; padding:5px 14px;
+  border-radius:25px; font-size:12px;
+  font-weight:700; margin-bottom:16px;
 }
-body.dark-mode .updated-badge{
-  background:#0a2010;border-color:#1a4a20;color:#4caf50
+[data-theme="dark"] .updated-badge {
+  background:#0a2010; border-color:#1a4a20; color:#66bb6a;
+}
+.read-time-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--bg2); border:1px solid var(--border);
+  padding:5px 14px; border-radius:25px;
+  font-size:12px; color:var(--text3);
+  box-shadow:var(--shadow1); margin-bottom:14px;
 }
 
-/* ========================================
-   LAYOUT
-======================================== */
-.page-wrapper{
-  max-width:1100px;margin:0 auto;
-  padding:0 5% 80px;
-  display:grid;
-  grid-template-columns:1fr 320px;
-  gap:40px;align-items:start
+/* =====================================================
+   LAYOUT — HERO
+===================================================== */
+.hero { padding:45px 5% 0; max-width:1100px; margin:0 auto; }
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--bg2); border:1px solid var(--border);
+  padding:6px 16px; border-radius:25px;
+  font-size:12px; color:var(--text3);
+  margin-bottom:14px; box-shadow:var(--shadow1);
 }
-.blog-main{min-width:0}
-.blog-sidebar{position:sticky;top:80px}
-
-/* ========================================
-   HERO
-======================================== */
-.hero{padding:45px 5% 0;max-width:1100px;margin:0 auto}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#fff;border:1px solid #eee;
-  padding:6px 16px;border-radius:25px;
-  font-size:12px;color:#666;
-  margin-bottom:14px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05)
+.hero-badge .badge-tag {
+  background:#ff4d00; color:#fff;
+  padding:2px 10px; border-radius:12px;
+  font-size:10px; font-weight:800;
+  text-transform:uppercase; letter-spacing:0.5px;
 }
-body.dark-mode .hero-badge{background:#1a1a1a;border-color:#333;color:#aaa}
-.hero-badge .badge-tag{
-  background:#ff4d00;color:#fff;
-  padding:2px 10px;border-radius:12px;
-  font-size:10px;font-weight:800;
-  text-transform:uppercase;letter-spacing:0.5px
+.hero h1 {
+  font-size:clamp(24px,4.5vw,43px);
+  line-height:1.15; margin-bottom:16px; letter-spacing:-0.5px;
 }
-.hero h1{
-  font-size:clamp(25px,4.5vw,43px);
-  line-height:1.15;margin-bottom:16px;letter-spacing:-0.5px
-}
-.hero h1 em{
+.hero h1 em {
   font-style:normal;
   background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
 }
-.hero-intro{
-  font-size:17px;color:#555;
-  max-width:700px;margin-bottom:20px;line-height:1.75
+.hero-intro {
+  font-size:17px; color:var(--text3);
+  max-width:700px; margin-bottom:20px; line-height:1.75;
 }
-body.dark-mode .hero-intro{color:#aaa}
-.hero-meta{
-  display:flex;align-items:center;
-  gap:16px;font-size:13px;color:#999;
-  flex-wrap:wrap;margin-bottom:25px
+.hero-meta {
+  display:flex; align-items:center; gap:16px;
+  font-size:13px; color:var(--text4);
+  flex-wrap:wrap; margin-bottom:25px;
 }
-.hero-meta .meta-dot{color:#ddd}
-.hero-image-wrap{
-  border-radius:20px;overflow:hidden;
-  margin-bottom:45px;position:relative;height:380px
+.meta-dot { color:var(--border2); }
+.hero-image-wrap {
+  border-radius:20px; overflow:hidden;
+  margin-bottom:45px; position:relative; height:380px;
 }
-.hero-image-wrap img{
-  width:100%;height:100%;
-  object-fit:cover;transition:transform 0.5s ease
+.hero-image-wrap img {
+  width:100%; height:100%; object-fit:cover;
+  transition:transform 0.6s ease;
 }
-.hero-image-wrap:hover img{transform:scale(1.02)}
-.hero-image-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.55))
+.hero-image-wrap:hover img { transform:scale(1.03); }
+.hero-image-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.6));
 }
-.hero-image-caption{
-  position:absolute;bottom:16px;left:20px;
-  color:rgba(255,255,255,0.75);font-size:12px
+.hero-image-caption {
+  position:absolute; bottom:16px; left:20px;
+  color:rgba(255,255,255,0.7); font-size:12px;
 }
 
-/* ========================================
+/* =====================================================
+   PAGE LAYOUT
+===================================================== */
+.page-wrapper {
+  max-width:1100px; margin:0 auto;
+  padding:0 5% 80px;
+  display:grid; grid-template-columns:1fr 320px;
+  gap:40px; align-items:start;
+}
+.blog-main { min-width:0; }
+.blog-sidebar { position:sticky; top:80px; }
+
+/* =====================================================
    DIVIDER
-======================================== */
-.divider{
-  width:60px;height:3px;
+===================================================== */
+.divider {
+  width:60px; height:3px;
   background:linear-gradient(90deg,#ff4d00,#ff8c00);
-  border-radius:5px;margin:32px 0
+  border-radius:5px; margin:32px 0;
 }
 
-/* ========================================
+/* =====================================================
    SECTION LABELS
-======================================== */
-.section-label{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:11px;font-weight:800;
-  text-transform:uppercase;letter-spacing:2px;
-  color:#ff4d00;margin-bottom:12px;
-  background:#fff3e0;padding:5px 14px;border-radius:25px
+===================================================== */
+.section-label {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:11px; font-weight:800;
+  text-transform:uppercase; letter-spacing:2px;
+  color:#ff4d00; margin-bottom:12px;
+  background:var(--accent-bg); padding:5px 14px; border-radius:25px;
 }
-body.dark-mode .section-label{background:#1a0a00}
 
-/* ========================================
+/* =====================================================
    TYPOGRAPHY
-======================================== */
-.blog-main p{
-  font-size:16px;color:#333;
-  margin-bottom:16px;line-height:1.85
-}
-body.dark-mode .blog-main p{color:#ccc}
-.blog-main h2{font-size:clamp(19px,3vw,26px);margin:38px 0 12px;color:#111}
-.blog-main h3{font-size:18px;margin:26px 0 10px}
-.blog-main ul,.blog-main ol{padding-left:22px;margin-bottom:16px}
-.blog-main li{font-size:15px;color:#333;margin-bottom:8px;line-height:1.8}
-body.dark-mode .blog-main li{color:#ccc}
-.blog-main strong{color:#111}
-body.dark-mode .blog-main strong{color:#f0f0f0}
+===================================================== */
+.blog-main p { font-size:16px; color:var(--text2); margin-bottom:16px; line-height:1.85; }
+.blog-main h2 { font-size:clamp(19px,3vw,26px); margin:38px 0 12px; }
+.blog-main h3 { font-size:18px; margin:26px 0 10px; }
+.blog-main ul, .blog-main ol { padding-left:22px; margin-bottom:16px; }
+.blog-main li { font-size:15px; color:var(--text2); margin-bottom:8px; line-height:1.8; }
+.blog-main strong { color:var(--text); }
 
-/* ========================================
+/* =====================================================
    HOOK BLOCK
-======================================== */
-.hook-block{
-  background:linear-gradient(135deg,#fff8f5,#fff3ee);
-  border:1px solid #ffd5c2;border-left:5px solid #ff4d00;
+===================================================== */
+.hook-block {
+  background:var(--hook-bg);
+  border:1px solid var(--accent-border);
+  border-left:5px solid #ff4d00;
   border-radius:0 14px 14px 0;
-  padding:26px 28px;margin-bottom:38px
+  padding:26px 28px; margin-bottom:38px;
 }
-.hook-block p{font-size:17px;line-height:1.85;color:#222}
-body.dark-mode .hook-block p{color:#ddd}
-.hook-highlight{
-  font-size:19px;font-weight:700;color:#ff4d00;
-  margin-top:14px;display:block;font-family:'Syne',sans-serif
-}
-
-/* ========================================
-   INLINE IMAGE
-======================================== */
-.inline-img{border-radius:16px;overflow:hidden;margin:26px 0}
-.inline-img img{width:100%;height:250px;object-fit:cover}
-.img-caption{
-  text-align:center;font-size:12px;
-  color:#999;margin-top:8px;font-style:italic
+.hook-block p { font-size:17px; line-height:1.85; color:var(--text2); }
+.hook-highlight {
+  font-size:19px; font-weight:700; color:#ff4d00;
+  margin-top:14px; display:block; font-family:'Syne',sans-serif;
 }
 
-/* ========================================
+/* =====================================================
+   INLINE IMAGES
+===================================================== */
+.inline-img { border-radius:16px; overflow:hidden; margin:26px 0; }
+.inline-img img {
+  width:100%; height:250px; object-fit:cover;
+  opacity:0; transform:translateY(12px);
+  transition:opacity 0.5s ease, transform 0.5s ease;
+}
+.inline-img img.loaded { opacity:1; transform:translateY(0); }
+.img-caption { text-align:center; font-size:12px; color:var(--text4); margin-top:8px; font-style:italic; }
+
+/* =====================================================
    CALLOUT BOXES
-======================================== */
-.callout{border-radius:14px;padding:22px 26px;margin:24px 0}
-.callout.orange{
-  background:linear-gradient(135deg,#fff8f5,#fff3ee);
-  border:1px solid #ffd5c2
+===================================================== */
+.callout { border-radius:14px; padding:22px 26px; margin:24px 0; }
+.callout.orange { background:var(--callout-o); border:1px solid var(--accent-border); }
+.callout.blue   { background:var(--callout-b); border:1px solid #bfdbfe; }
+.callout.green  { background:var(--callout-g); border:1px solid #b2f0c5; }
+.callout.dark   { background:#111; border:none; }
+.callout.dark p,
+.callout.dark li { color:#ccc; }
+.callout.dark h3 { color:#fff; }
+.callout-title {
+  font-family:'Syne',sans-serif; font-size:15px;
+  font-weight:700; margin-bottom:10px;
+  display:flex; align-items:center; gap:8px;
 }
-.callout.blue{
-  background:linear-gradient(135deg,#f0f7ff,#e8f3ff);
-  border:1px solid #bfdbfe
-}
-.callout.green{
-  background:linear-gradient(135deg,#f0fff4,#e6ffed);
-  border:1px solid #b2f0c5
-}
-.callout.dark{background:#111;color:#fff;border:none}
-.callout.dark p,.callout.dark li{color:#ccc}
-.callout.dark h3{color:#fff}
-.callout-title{
-  font-family:'Syne',sans-serif;font-size:15px;
-  font-weight:700;margin-bottom:10px;
-  display:flex;align-items:center;gap:8px
-}
+[data-theme="dark"] .callout.blue   { border-color:#003060; }
+[data-theme="dark"] .callout.green  { border-color:#003010; }
 
-/* ========================================
+/* =====================================================
    ILLUSION GRID
-======================================== */
-.illusion-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:12px;margin:20px 0
+===================================================== */
+.illusion-grid {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:12px; margin:20px 0;
 }
-.illusion-item{
-  background:#fff;border:1px solid #eee;
-  border-radius:12px;padding:16px;text-align:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.04);
-  transition:transform 0.2s
+.illusion-item {
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:12px; padding:16px; text-align:center;
+  box-shadow:var(--shadow1); transition:transform 0.2s, box-shadow 0.2s;
+  cursor:default;
 }
-.illusion-item:hover{transform:translateY(-3px)}
-.illusion-item .icon{font-size:24px;margin-bottom:7px}
-.illusion-item b{display:block;font-size:14px;color:#111;margin-bottom:4px;font-family:'Syne',sans-serif}
-.illusion-item span{font-size:12px;color:#999}
+.illusion-item:hover { transform:translateY(-3px); box-shadow:var(--shadow2); }
+.illusion-item .icon { font-size:24px; margin-bottom:7px; }
+.illusion-item b { display:block; font-size:14px; color:var(--text); margin-bottom:4px; font-family:'Syne',sans-serif; }
+.illusion-item span { font-size:12px; color:var(--text4); }
 
-/* ========================================
+/* =====================================================
    COMPARE BLOCK
-======================================== */
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
-.compare-box{border-radius:14px;padding:18px}
-.compare-box.bad{background:#fff5f5;border:1.5px solid #ffcccc}
-.compare-box.good{background:#f0fff4;border:1.5px solid #b2f0c5}
-.cmp-label{
-  font-size:11px;font-weight:800;text-transform:uppercase;
-  letter-spacing:1.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px
+===================================================== */
+.compare { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:20px 0; }
+.compare-box { border-radius:14px; padding:18px; }
+.compare-box.bad  { background:var(--compare-bad);  border:1.5px solid #ffcccc; }
+.compare-box.good { background:var(--compare-good); border:1.5px solid #b2f0c5; }
+[data-theme="dark"] .compare-box.bad  { border-color:#5a0000; }
+[data-theme="dark"] .compare-box.good { border-color:#005020; }
+.cmp-label {
+  font-size:11px; font-weight:800; text-transform:uppercase;
+  letter-spacing:1.5px; margin-bottom:10px;
+  display:flex; align-items:center; gap:6px;
 }
-.compare-box.bad .cmp-label{color:#e53e3e}
-.compare-box.good .cmp-label{color:#38a169}
-.compare-box p{font-size:13px;color:#555;margin-bottom:8px}
-body.dark-mode .compare-box p{color:#aaa}
+.compare-box.bad  .cmp-label { color:#e53e3e; }
+.compare-box.good .cmp-label { color:#38a169; }
+.compare-box p { font-size:13px; color:var(--text3); margin-bottom:8px; }
+.compare-box code {
+  display:block; background:rgba(0,0,0,0.07);
+  padding:10px; border-radius:8px;
+  font-family:monospace; font-size:12px;
+  color:var(--text2); line-height:1.6;
+  white-space:pre-wrap; word-break:break-word;
+  overflow-wrap:break-word; overflow-x:auto;
+}
+[data-theme="dark"] .compare-box code { background:rgba(255,255,255,0.07); }
 
-/* ===== PROMPT BOX — MOBILE FIXED ===== */
-.prompt-box{
-  background:#1e1e2e;border-radius:14px;
-  margin:18px 0;font-family:monospace;
-  overflow:hidden;
-  position:relative
+/* =====================================================
+   PROMPT BOX
+===================================================== */
+.prompt-box {
+  background:#1e1e2e; border-radius:14px;
+  margin:18px 0; font-family:monospace;
+  overflow:hidden; position:relative;
+  border:1px solid var(--prompt-border);
+  box-shadow:0 8px 30px rgba(0,0,0,0.2);
 }
-.prompt-box-header{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 20px 10px;background:rgba(255,255,255,0.04);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-  flex-wrap:wrap;gap:8px
-}
-.prompt-dots{display:flex;align-items:center;gap:6px}
-.prompt-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
-.prompt-dot.red{background:#ff5f57}
-.prompt-dot.yellow{background:#ffbd2e}
-.prompt-dot.green{background:#28c840}
-.prompt-label-text{
-  font-size:11px;color:#888;
-  font-family:'DM Sans',sans-serif;
-  letter-spacing:0.8px;margin-left:4px
-}
-/* ✅ COPY BUTTON */
-.copy-btn{
-  background:rgba(255,255,255,0.1);
-  color:#aaa;border:1px solid rgba(255,255,255,0.15);
-  border-radius:8px;padding:4px 12px;
-  font-size:12px;cursor:pointer;
-  font-family:'DM Sans',sans-serif;
-  transition:all 0.2s
-}
-.copy-btn:hover{background:rgba(255,77,0,0.3);color:#ff8c00;border-color:#ff4d0050}
-.copy-btn.copied{background:rgba(40,200,64,0.2);color:#28c840;border-color:#28c84040}
-.prompt-box pre{
-  color:#e2e8f0;font-size:13.5px;
-  line-height:1.75;
-  white-space:pre-wrap;       /* ✅ FIX: wraps on mobile */
-  word-break:break-word;      /* ✅ FIX: breaks long words */
-  overflow-wrap:break-word;   /* ✅ FIX: extra safety */
-  overflow-x:auto;            /* ✅ FIX: scroll if needed */
-  margin:0;padding:18px 20px
-}
-.prompt-box .highlight{color:#ff8c00;font-weight:bold}
-.prompt-box .string{color:#68d391}
-.prompt-box .comment{color:#718096}
-
-/* Compare code also fixed */
-.compare-box code{
-  display:block;background:rgba(0,0,0,0.07);
-  padding:10px;border-radius:8px;
-  font-family:monospace;font-size:12px;
-  color:#333;line-height:1.6;
-  white-space:pre-wrap;      /* ✅ FIX */
-  word-break:break-word;     /* ✅ FIX */
-  overflow-wrap:break-word;
-  overflow-x:auto
-}
-body.dark-mode .compare-box code{
-  background:rgba(255,255,255,0.07);color:#ddd
-}
-
-/* ========================================
-   NUMBERED STEPS
-======================================== */
-.steps-list{list-style:none;padding:0;margin:18px 0;counter-reset:steps}
-.steps-list li{
-  counter-increment:steps;
-  display:flex;align-items:flex-start;gap:14px;
-  padding:15px;background:#fff;border:1px solid #eee;
-  border-radius:12px;margin-bottom:10px;font-size:15px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.04)
-}
-.steps-list li::before{
-  content:counter(steps);
-  min-width:30px;height:30px;
-  background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  color:#fff;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-weight:700;font-size:13px;font-family:'Syne',sans-serif;flex-shrink:0
-}
-
-/* ========================================
-   FLOW MACHINE
-======================================== */
-.flow-machine{background:#111;border-radius:20px;padding:30px;margin:28px 0}
-.flow-machine h3{color:#fff;font-size:19px;margin-bottom:22px;display:flex;align-items:center;gap:10px}
-.flow-steps{display:flex;flex-direction:column;gap:4px}
-.flow-step{
-  display:flex;align-items:center;gap:16px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.09);
-  border-radius:12px;padding:14px 18px;transition:background 0.2s
-}
-.flow-step:hover{background:rgba(255,77,0,0.15)}
-.step-icon{
-  width:40px;height:40px;
-  background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  border-radius:11px;display:flex;align-items:center;
-  justify-content:center;font-size:17px;flex-shrink:0
-}
-.step-text b{display:block;color:#fff;font-size:14px;font-family:'Syne',sans-serif;margin-bottom:2px}
-.step-text span{color:#888;font-size:12px}
-.flow-arrow{text-align:center;color:rgba(255,77,0,0.5);font-size:16px;padding:1px 0}
-.flow-result{
-  background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  border-radius:12px;padding:16px 18px;
-  text-align:center;margin-top:12px;
-  color:#fff;font-weight:700;
-  font-family:'Syne',sans-serif;font-size:14px
-}
-
-/* ========================================
-   MIND SHIFT
-======================================== */
-.mindshift{
-  background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  border-radius:20px;padding:32px;margin:32px 0;color:#fff
-}
-.mindshift h3{font-size:22px;color:#fff;margin-bottom:7px}
-.mindshift .subtitle{color:rgba(255,255,255,0.8);margin-bottom:22px;font-size:15px}
-.shift-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
-.shift-item{
-  background:rgba(255,255,255,0.15);
-  border:1px solid rgba(255,255,255,0.2);
-  border-radius:12px;padding:16px;font-size:14px;color:#fff
-}
-.shift-item .sl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:0.65;margin-bottom:7px;display:block}
-.shift-item p{margin:0;font-size:15px;font-weight:500}
-.shift-arrow{font-size:22px;color:rgba(255,255,255,0.6);text-align:center}
-
-/* ========================================
-   STAT BOXES
-======================================== */
-.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:25px 0}
-.stat-box{
-  background:#fff;border:1px solid #eee;
-  border-radius:14px;padding:20px;text-align:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.04)
-}
-.stat-num{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;color:#ff4d00;display:block}
-.stat-label{font-size:12px;color:#888;margin-top:4px}
-
-/* ========================================
-   QUOTE BLOCK
-======================================== */
-.quote-block{
-  border-left:4px solid #ff4d00;padding:18px 22px;margin:26px 0;
-  background:#fff;border-radius:0 12px 12px 0;
-  box-shadow:0 2px 10px rgba(0,0,0,0.04)
-}
-.quote-block blockquote{font-size:18px;font-family:'Syne',sans-serif;color:#111;line-height:1.5}
-body.dark-mode .quote-block blockquote{color:#f0f0f0}
-.quote-block cite{display:block;font-size:12px;color:#999;margin-top:8px}
-
-/* ========================================
-   TABLE
-======================================== */
-.table-wrap{overflow-x:auto;margin:22px 0;border-radius:12px}
-table{width:100%;border-collapse:collapse;font-size:14px;min-width:480px}
-th{background:#111;color:#fff;padding:12px 14px;text-align:left;font-family:'Syne',sans-serif;font-size:13px}
-th:first-child{border-radius:10px 0 0 0}
-th:last-child{border-radius:0 10px 0 0}
-td{padding:12px 14px;border-bottom:1px solid #f0f0f0;color:#444}
-body.dark-mode td{color:#ccc;border-color:#2a2a2a}
-tr:hover td{background:#faf9f6}
-body.dark-mode tr:hover td{background:#1a1a1a}
-td:first-child{font-weight:600;color:#111}
-body.dark-mode td:first-child{color:#f0f0f0}
-.td-bad{color:#e53e3e;font-weight:600}
-.td-good{color:#38a169;font-weight:600}
-
-/* ========================================
-   REALITY CARD
-======================================== */
-.reality-card{
-  background:#fff;border-radius:16px;
-  border:1.5px solid #eee;padding:28px;margin:26px 0;
-  box-shadow:0 6px 25px rgba(0,0,0,0.06)
-}
-.punch-line{font-family:'Syne',sans-serif;font-size:21px;color:#111;line-height:1.35;margin-bottom:16px}
-.punch-line span{color:#ff4d00}
-
-/* ========================================
-   FINAL SECTION
-======================================== */
-.final-section{
-  background:#111;color:#fff;border-radius:20px;
-  padding:38px;margin:38px 0;text-align:center
-}
-.final-section h3{font-size:clamp(19px,3vw,29px);color:#fff;margin-bottom:10px}
-.final-section h3 span{color:#ff8c00}
-.final-section p{color:#aaa;font-size:15px;max-width:500px;margin:0 auto}
-
-/* ========================================
-   CTA BLOCK
-======================================== */
-.cta-block{
-  background:linear-gradient(135deg,#fff8f5,#fff3ee);
-  border:2px solid #ffd5c2;border-radius:22px;
-  padding:46px 32px;text-align:center;margin:46px 0
-}
-body.dark-mode .cta-block{background:linear-gradient(135deg,#1a0a00,#150800);border-color:#3a1a00}
-.cta-block h3{font-size:26px;margin-bottom:10px}
-.cta-desc{
-  color:#666;margin-bottom:26px;
-  font-size:15px;max-width:480px;
-  margin-left:auto;margin-right:auto
-}
-body.dark-mode .cta-desc{color:#aaa}
-.cta-btn-wrap{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
-.cta-btn{
-  display:inline-flex;align-items:center;gap:8px;
-  background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  color:#fff;padding:15px 36px;border-radius:50px;
-  font-weight:700;font-size:15px;font-family:'Syne',sans-serif;
-  box-shadow:0 8px 25px rgba(255,77,0,0.35);
-  animation:pulse-btn 2.5s infinite;transition:transform 0.2s
-}
-.cta-btn:hover{transform:translateY(-2px)}
-.cta-tg{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#0088cc;color:#fff;padding:15px 30px;
-  border-radius:50px;font-weight:700;font-size:15px;
-  font-family:'Syne',sans-serif;transition:all 0.2s;
-  box-shadow:0 8px 25px rgba(0,136,204,0.3)
-}
-.cta-tg:hover{background:#006fa8;transform:translateY(-2px)}
-@keyframes pulse-btn{
-  0%,100%{box-shadow:0 8px 25px rgba(255,77,0,0.35)}
-  50%{box-shadow:0 12px 35px rgba(255,77,0,0.6)}
-}
-.cta-note{font-size:12px;color:#aaa;margin-top:13px}
-
-/* ========================================
-   TOC
-======================================== */
-.toc-box{
-  background:#fff;border:1px solid #eee;
-  border-radius:16px;padding:22px;margin:32px 0;
-  box-shadow:0 2px 10px rgba(0,0,0,0.04)
-}
-.toc-title{
-  font-family:'Syne',sans-serif;font-size:15px;
-  font-weight:700;margin-bottom:14px;color:#111;
-  display:flex;align-items:center;gap:8px
-}
-.toc-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px}
-.toc-list a{
-  font-size:13px;color:#555;display:flex;
-  align-items:center;gap:8px;padding:7px 10px;
-  border-radius:8px;transition:all 0.2s
-}
-.toc-list a:hover,.toc-list a.toc-active{background:#fff3e0;color:#ff4d00}
-body.dark-mode .toc-list a:hover,
-body.dark-mode .toc-list a.toc-active{background:#1a0a00}
-.toc-list a span{font-size:10px;color:#aaa;min-width:18px;font-weight:700;font-family:'Syne',sans-serif}
-
-/* ========================================
-   ALSO READ
-======================================== */
-.also-read{
-  background:#f8f9fa;border:1px solid #eee;
-  border-radius:12px;padding:14px 18px;margin:18px 0;
-  display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#444;
-  flex-wrap:wrap
-}
-.also-read .ar-label{
-  font-size:10px;text-transform:uppercase;
-  letter-spacing:1.5px;color:#ff4d00;font-weight:800;
-  white-space:nowrap;padding-top:2px
-}
-.also-read a{
-  color:#111;font-weight:600;
-  border-bottom:1px dashed #ff4d00;transition:color 0.2s
-}
-.also-read a:hover{color:#ff4d00}
-
-/* ========================================
-   MORE FROM BLOG GRID
-======================================== */
-.more-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:10px
-}
-.more-grid a{
-  display:block;padding:13px;background:#faf9f6;
-  border-radius:10px;border:1px solid #eee;
-  font-size:13px;color:#333;font-weight:600;
-  transition:all 0.2s
-}
-.more-grid a:hover{background:#fff3e0;color:#ff4d00;border-color:#ffd5c2}
-
-/* ========================================
-   READ TIME BADGE
-======================================== */
-.read-time-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  background:#fff;border:1px solid #eee;
-  padding:5px 14px;border-radius:25px;
-  font-size:12px;color:#666;
-  box-shadow:0 2px 8px rgba(0,0,0,0.05);
-  margin-bottom:14px
-}
-body.dark-mode .read-time-badge{background:#1a1a1a;border-color:#333;color:#aaa}
-
-/* ========================================
-   SIDEBAR
-======================================== */
-.sidebar-card{
-  background:#fff;border:1px solid #eee;
-  border-radius:16px;padding:20px;
-  margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,0.04)
-}
-.sidebar-title{
-  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
-  margin-bottom:14px;color:#111;padding-bottom:9px;
-  border-bottom:2px solid #ff4d00;display:inline-block
-}
-.related-post{display:flex;gap:11px;margin-bottom:13px;align-items:flex-start}
-.related-post:last-child{margin-bottom:0}
-.related-post img{width:62px;height:62px;border-radius:10px;object-fit:cover;flex-shrink:0}
-.related-post-info a{
-  font-size:13px;color:#111;font-weight:600;
-  line-height:1.4;display:block;margin-bottom:3px;transition:color 0.2s
-}
-.related-post-info a:hover{color:#ff4d00}
-.related-post-info span{font-size:11px;color:#aaa}
-.tool-links{display:flex;flex-direction:column;gap:7px}
-.tool-link{
-  display:flex;align-items:center;gap:9px;
-  padding:10px 13px;background:#faf9f6;
-  border-radius:10px;font-size:14px;color:#333;
-  transition:all 0.2s;border:1px solid #f0f0f0
-}
-.tool-link:hover{
-  background:#fff3e0;color:#ff4d00;
-  border-color:#ffd5c2;transform:translateX(3px)
-}
-.tool-link span{font-size:15px;flex-shrink:0}
-
-/* ========================================
-   GLASS AD
-======================================== */
-.glass-ad{
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,0.5);
-  border-radius:20px;padding:23px;margin-bottom:20px;
-  background:linear-gradient(135deg,rgba(255,77,0,0.08),rgba(255,140,0,0.05),rgba(37,211,102,0.06));
-  box-shadow:0 8px 32px rgba(255,77,0,0.1),inset 0 1px 0 rgba(255,255,255,0.6);
-  position:relative;overflow:hidden
-}
-.glass-ad::before{
-  content:'';position:absolute;top:-40px;right:-40px;
-  width:120px;height:120px;
-  background:radial-gradient(circle,rgba(255,77,0,0.12),transparent 70%);
-  pointer-events:none
-}
-.glass-ad-badge{
-  display:inline-block;background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  color:#fff;font-size:10px;padding:3px 10px;border-radius:12px;
-  font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px
-}
-.glass-ad h4{font-size:15px;color:#111;margin-bottom:7px;line-height:1.35}
-.glass-ad p{font-size:13px;color:#666;margin-bottom:14px;line-height:1.6}
-.glass-ad-btn{
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  background:linear-gradient(135deg,#25d366,#128c7e);
-  color:#fff;padding:12px 18px;border-radius:12px;
-  font-weight:700;font-size:14px;width:100%;transition:all 0.2s;
-  box-shadow:0 4px 15px rgba(37,211,102,0.3)
-}
-.glass-ad-btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(37,211,102,0.45)}
-.glass-ad-note{text-align:center;font-size:11px;color:#999;margin-top:7px}
-
-/* ========================================
-   SHARE
-======================================== */
-.share-section{
-  text-align:center;padding:26px;background:#fff;
-  border-radius:16px;border:1px solid #eee;
-  margin:38px 0;box-shadow:0 2px 10px rgba(0,0,0,0.04)
-}
-.share-section p{color:#888;font-size:14px;margin-bottom:14px}
-.share-btns{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
-.share-btn{
-  padding:9px 20px;border-radius:25px;font-size:13px;
-  font-weight:700;cursor:pointer;border:none;
-  transition:all 0.2s;font-family:'DM Sans',sans-serif
-}
-.share-btn:hover{transform:scale(1.05)}
-.s-wa{background:#25d366;color:#fff}
-.s-tg{background:#0088cc;color:#fff}
-.s-tw{background:#1da1f2;color:#fff}
-.s-cp{background:#f0f0f0;color:#333}
-
-/* ========================================
-   AUTHOR BOX
-======================================== */
-.author-box{
-  background:#fff;border:1px solid #eee;
-  border-radius:16px;padding:23px;margin:38px 0;
-  display:flex;gap:18px;align-items:flex-start;
-  box-shadow:0 2px 10px rgba(0,0,0,0.04)
-}
-.author-avatar{
-  width:56px;height:56px;
-  background:linear-gradient(135deg,#ff4d00,#ff8c00);
-  border-radius:50%;display:flex;align-items:center;
-  justify-content:center;font-size:24px;flex-shrink:0
-}
-.author-info h4{font-size:15px;margin-bottom:4px}
-.author-info p{font-size:14px;color:#666;margin:0}
-body.dark-mode .author-info p{color:#aaa}
-
-/* ========================================
-   FAQ
-======================================== */
-.faq-item{
-  border:1px solid #eee;border-radius:12px;
-  margin-bottom:10px;overflow:hidden;background:#fff
-}
-.faq-q{
-  padding:16px 18px;cursor:pointer;
-  display:flex;align-items:center;
+.prompt-box-header {
+  display:flex; align-items:center;
   justify-content:space-between;
-  font-weight:600;font-size:15px;
-  user-select:none;transition:background 0.2s;gap:10px
+  padding:14px 20px 10px;
+  background:rgba(255,255,255,0.04);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  flex-wrap:wrap; gap:8px;
 }
-.faq-q:hover{background:#faf9f6}
-.faq-q .faq-icon{font-size:18px;color:#ff4d00;transition:transform 0.3s;flex-shrink:0}
-.faq-a{display:none;padding:0 18px 16px;font-size:14px;color:#555;line-height:1.75}
-body.dark-mode .faq-a{color:#aaa}
-.faq-item.open .faq-a{display:block}
-.faq-item.open .faq-icon{transform:rotate(45deg)}
+.prompt-dots { display:flex; align-items:center; gap:6px; }
+.prompt-dot { width:11px; height:11px; border-radius:50%; flex-shrink:0; }
+.prompt-dot.red    { background:#ff5f57; }
+.prompt-dot.yellow { background:#ffbd2e; }
+.prompt-dot.green  { background:#28c840; }
+.prompt-label-text {
+  font-size:11px; color:#888;
+  font-family:'DM Sans',sans-serif;
+  letter-spacing:0.8px; margin-left:4px;
+}
+.copy-btn {
+  background:rgba(255,255,255,0.08);
+  color:#aaa; border:1px solid rgba(255,255,255,0.12);
+  border-radius:8px; padding:4px 12px;
+  font-size:12px; cursor:pointer;
+  font-family:'DM Sans',sans-serif; transition:all 0.2s;
+}
+.copy-btn:hover { background:rgba(255,77,0,0.25); color:#ff8c00; border-color:rgba(255,77,0,0.4); }
+.copy-btn.copied { background:rgba(40,200,64,0.2); color:#28c840; border-color:rgba(40,200,64,0.3); }
+.prompt-box pre {
+  color:#e2e8f0; font-size:13.5px; line-height:1.75;
+  white-space:pre-wrap; word-break:break-word;
+  overflow-wrap:break-word; overflow-x:auto;
+  margin:0; padding:18px 20px;
+}
+.prompt-box .hl  { color:#ff8c00; font-weight:bold; }
+.prompt-box .str { color:#68d391; }
+.prompt-box .cmt { color:#718096; font-style:italic; }
 
-/* ========================================
+/* =====================================================
+   STEPS LIST
+===================================================== */
+.steps-list {
+  list-style:none; padding:0;
+  margin:18px 0; counter-reset:steps;
+}
+.steps-list li {
+  counter-increment:steps;
+  display:flex; align-items:flex-start; gap:14px;
+  padding:15px; background:var(--bg2);
+  border:1px solid var(--border);
+  border-radius:12px; margin-bottom:10px;
+  font-size:15px; box-shadow:var(--shadow1);
+  transition:border-color 0.2s, box-shadow 0.2s;
+}
+.steps-list li:hover { border-color:var(--accent-border); box-shadow:var(--shadow2); }
+.steps-list li::before {
+  content:counter(steps);
+  min-width:30px; height:30px;
+  background:linear-gradient(135deg,#ff4d00,#ff8c00);
+  color:#fff; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:700; font-size:13px;
+  font-family:'Syne',sans-serif; flex-shrink:0;
+}
+
+/* =====================================================
+   FLOW MACHINE
+===================================================== */
+.flow-machine {
+  background:#111; border-radius:20px;
+  padding:30px; margin:28px 0;
+  border:1px solid rgba(255,255,255,0.05);
+}
+.flow-machine h3 { color:#fff; font-size:19px; margin-bottom:22px; display:flex; align-items:center; gap:10px; }
+.flow-steps { display:flex; flex-direction:column; gap:4px; }
+.flow-step {
+  display:flex; align-items:center; gap:16px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px; padding:14px 18px;
+  transition:background 0.2s, transform 0.2s;
+}
+.flow-step:hover { background:rgba(255,77,0,0.15); transform:translateX(4px); }
+.step-icon {
+  width:40px; height:40px;
+  background:linear-gradient(135deg,#ff4d00,#ff8c00);
+  border-radius:11px; display:flex;
+  align-items:center; justify-content:center;
+  font-size:17px; flex-shrink:0;
+}
+.step-text b  { display:block; color:#fff; font-size:14px; font-family:'Syne',sans-serif; margin-bottom:2px; }
+.step-text span { color:#888; font-size:12px; }
+.flow-arrow { text-align:center; color:rgba(255,77,0,0.4); font-size:16px; padding:1px 0; }
+.flow-result {
+  background:linear-gradient(135deg,#ff4d00,#ff8c00);
+  border-radius:12px; padding:16px 18px;
+  text-align:center; margin-top:12px;
+  color:#fff; font-weight:700;
+  font-family:'Syne',sans-serif; font-size:14px;
+}
+
+/* =====================================================
+   MIND SHIFT
+===================================================== */
+.mindshift {
+  background:linear-gradient(135deg,#ff4d00,#ff8c00);
+  border-radius:20px; padding:32px;
+  margin:32px 0; color:#fff;
+}
+.mindshift h3 { font-size:22px; color:#fff; margin-bottom:7px; }
+.mindshift .subtitle { color:rgba(255,255,255,0.8); margin-bottom:22px; font-size:15px; }
+.shift-grid {
+  display:grid; grid-template-columns:1fr auto 1fr;
+  gap:10px; align-items:center;
+}
+.shift-item {
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:12px; padding:16px;
+  color:#fff; transition:background 0.2s;
+}
+.shift-item:hover { background:rgba(255,255,255,0.22); }
+.shift-item .sl {
+  font-size:10px; text-transform:uppercase;
+  letter-spacing:1.5px; opacity:0.65;
+  margin-bottom:7px; display:block;
+}
+.shift-item p { margin:0; font-size:15px; font-weight:500; }
+.shift-arrow { font-size:22px; color:rgba(255,255,255,0.6); text-align:center; }
+
+/* =====================================================
+   STAT BOXES
+===================================================== */
+.stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:13px; margin:25px 0; }
+.stat-box {
+  background:var(--stat-bg); border:1px solid var(--border);
+  border-radius:14px; padding:20px; text-align:center;
+  box-shadow:var(--shadow1);
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.stat-box:hover { transform:translateY(-2px); box-shadow:var(--shadow2); }
+.stat-num { font-family:'Syne',sans-serif; font-size:30px; font-weight:800; color:#ff4d00; display:block; }
+.stat-label { font-size:12px; color:var(--text4); margin-top:4px; }
+
+/* =====================================================
+   QUOTE BLOCK
+===================================================== */
+.quote-block {
+  border-left:4px solid #ff4d00;
+  padding:18px 22px; margin:26px 0;
+  background:var(--bg2); border-radius:0 12px 12px 0;
+  box-shadow:var(--shadow1);
+}
+.quote-block blockquote {
+  font-size:18px; font-family:'Syne',sans-serif;
+  color:var(--text); line-height:1.5;
+}
+.quote-block cite { display:block; font-size:12px; color:var(--text4); margin-top:8px; }
+
+/* =====================================================
+   TABLE
+===================================================== */
+.table-wrap { overflow-x:auto; margin:22px 0; border-radius:12px; box-shadow:var(--shadow1); }
+table { width:100%; border-collapse:collapse; font-size:14px; min-width:480px; }
+th {
+  background:#111; color:#fff;
+  padding:12px 14px; text-align:left;
+  font-family:'Syne',sans-serif; font-size:13px;
+}
+[data-theme="dark"] th { background:#222; border-bottom:1px solid #333; }
+th:first-child { border-radius:10px 0 0 0; }
+th:last-child  { border-radius:0 10px 0 0; }
+td { padding:12px 14px; border-bottom:1px solid var(--border2); color:var(--text3); }
+tr:hover td { background:var(--bg3); }
+td:first-child { font-weight:600; color:var(--text); }
+.td-bad  { color:#e53e3e; font-weight:600; }
+.td-good { color:#38a169; font-weight:600; }
+
+/* =====================================================
+   REALITY CARD
+===================================================== */
+.reality-card {
+  background:var(--bg2); border-radius:16px;
+  border:1.5px solid var(--border); padding:28px;
+  margin:26px 0; box-shadow:var(--shadow2);
+}
+.punch-line {
+  font-family:'Syne',sans-serif;
+  font-size:21px; color:var(--text);
+  line-height:1.35; margin-bottom:16px;
+}
+.punch-line span { color:#ff4d00; }
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+.final-section {
+  background:#111; color:#fff;
+  border-radius:20px; padding:38px;
+  margin:38px 0; text-align:center;
+  border:1px solid rgba(255,255,255,0.05);
+}
+.final-section h3 { font-size:clamp(19px,3vw,29px); color:#fff; margin-bottom:10px; }
+.final-section h3 span { color:#ff8c00; }
+.final-section p { color:#aaa; font-size:15px; max-width:500px; margin:12px auto 0; }
+
+/* =====================================================
+   CTA BLOCK
+===================================================== */
+.cta-block {
+  background:var(--callout-o);
+  border:2px solid var(--accent-border);
+  border-radius:22px; padding:46px 32px;
+  text-align:center; margin:46px 0;
+}
+.cta-block h3 { font-size:26px; margin-bottom:10px; }
+.cta-desc {
+  color:var(--text3); font-size:15px;
+  max-width:480px; margin:0 auto 26px;
+  line-height:1.7;
+}
+.cta-btn-wrap { display:flex; justify-content:center; gap:13px; flex-wrap:wrap; }
+.cta-btn {
+  display:inline-flex; align-items:center; gap:8px;
+  background:linear-gradient(135deg,#ff4d00,#ff8c00);
+  color:#fff; padding:15px 36px; border-radius:50px;
+  font-weight:700; font-size:15px;
+  font-family:'Syne',sans-serif;
+  box-shadow:0 8px 25px rgba(255,77,0,0.35);
+  animation:pulse-btn 2.5s infinite; transition:transform 0.2s;
+}
+.cta-btn:hover { transform:translateY(-2px); }
+.cta-tg {
+  display:inline-flex; align-items:center; gap:8px;
+  background:#0088cc; color:#fff;
+  padding:15px 30px; border-radius:50px;
+  font-weight:700; font-size:15px;
+  font-family:'Syne',sans-serif; transition:all 0.2s;
+  box-shadow:0 8px 25px rgba(0,136,204,0.3);
+}
+.cta-tg:hover { background:#006fa8; transform:translateY(-2px); }
+@keyframes pulse-btn {
+  0%,100% { box-shadow:0 8px 25px rgba(255,77,0,0.35); }
+  50%      { box-shadow:0 12px 35px rgba(255,77,0,0.6); }
+}
+.cta-note { font-size:12px; color:var(--text4); margin-top:13px; }
+
+/* =====================================================
+   TOC
+===================================================== */
+.toc-box {
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:16px; padding:22px;
+  margin:32px 0; box-shadow:var(--shadow1);
+}
+.toc-title {
+  font-family:'Syne',sans-serif; font-size:15px;
+  font-weight:700; margin-bottom:14px; color:var(--text);
+  display:flex; align-items:center; gap:8px;
+}
+.toc-list { list-style:none; padding:0; display:flex; flex-direction:column; gap:4px; }
+.toc-list a {
+  font-size:13px; color:var(--text3);
+  display:flex; align-items:center; gap:8px;
+  padding:7px 10px; border-radius:8px; transition:all 0.2s;
+}
+.toc-list a:hover,
+.toc-list a.toc-active {
+  background:var(--toc-active); color:#ff4d00;
+}
+.toc-list a span {
+  font-size:10px; color:var(--text4);
+  min-width:18px; font-weight:700;
+  font-family:'Syne',sans-serif;
+}
+
+/* =====================================================
+   ALSO READ
+===================================================== */
+.also-read {
+  background:var(--bg3); border:1px solid var(--border);
+  border-radius:12px; padding:14px 18px;
+  margin:18px 0; display:flex;
+  align-items:flex-start; gap:10px;
+  font-size:14px; color:var(--text3); flex-wrap:wrap;
+  transition:border-color 0.2s;
+}
+.also-read:hover { border-color:var(--accent-border); }
+.also-read .ar-label {
+  font-size:10px; text-transform:uppercase;
+  letter-spacing:1.5px; color:#ff4d00;
+  font-weight:800; white-space:nowrap; padding-top:2px;
+}
+.also-read a {
+  color:var(--text); font-weight:600;
+  border-bottom:1px dashed #ff4d00;
+  transition:color 0.2s;
+}
+.also-read a:hover { color:#ff4d00; }
+
+/* =====================================================
+   MORE ARTICLES GRID
+===================================================== */
+.more-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:10px;
+}
+.more-grid a {
+  display:block; padding:13px;
+  background:var(--bg3); border-radius:10px;
+  border:1px solid var(--border);
+  font-size:13px; color:var(--text2); font-weight:600;
+  transition:all 0.2s;
+}
+.more-grid a:hover {
+  background:var(--accent-bg); color:#ff4d00;
+  border-color:var(--accent-border);
+  transform:translateY(-2px);
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar-card {
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:16px; padding:20px;
+  margin-bottom:20px; box-shadow:var(--shadow1);
+}
+.sidebar-title {
+  font-family:'Syne',sans-serif; font-size:14px;
+  font-weight:700; margin-bottom:14px; color:var(--text);
+  padding-bottom:9px; border-bottom:2px solid #ff4d00;
+  display:inline-block;
+}
+.related-post { display:flex; gap:11px; margin-bottom:13px; align-items:flex-start; }
+.related-post:last-child { margin-bottom:0; }
+.related-post img {
+  width:62px; height:62px; border-radius:10px;
+  object-fit:cover; flex-shrink:0;
+}
+.related-post-info a {
+  font-size:13px; color:var(--text); font-weight:600;
+  line-height:1.4; display:block; margin-bottom:3px;
+  transition:color 0.2s;
+}
+.related-post-info a:hover { color:#ff4d00; }
+.related-post-info span { font-size:11px; color:var(--text4); }
+.tool-links { display:flex; flex-direction:column; gap:7px; }
+.tool-link {
+  display:flex; align-items:center; gap:9px;
+  padding:10px 13px; background:var(--bg3);
+  border-radius:10px; font-size:14px; color:var(--text2);
+  transition:all 0.2s; border:1px solid var(--border);
+}
+.tool-link:hover {
+  background:var(--accent-bg); color:#ff4d00;
+  border-color:var(--accent-border);
+  transform:translateX(4px);
+}
+.tool-link span { font-size:15px; flex-shrink:0; }
+
+/* =====================================================
+   GLASS AD
+===================================================== */
+.glass-ad {
+  backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:20px; padding:23px; margin-bottom:20px;
+  background:linear-gradient(135deg,rgba(255,77,0,0.08),rgba(255,140,0,0.05),rgba(37,211,102,0.06));
+  box-shadow:0 8px 32px rgba(255,77,0,0.1),inset 0 1px 0 rgba(255,255,255,0.5);
+  position:relative; overflow:hidden;
+}
+[data-theme="dark"] .glass-ad {
+  background:linear-gradient(135deg,rgba(255,77,0,0.05),rgba(0,0,0,0.3));
+  border-color:rgba(255,255,255,0.08);
+  box-shadow:0 8px 32px rgba(0,0,0,0.4);
+}
+.glass-ad::before {
+  content:''; position:absolute; top:-40px; right:-40px;
+  width:120px; height:120px;
+  background:radial-gradient(circle,rgba(255,77,0,0.12),transparent 70%);
+  pointer-events:none;
+}
+.glass-ad-badge {
+  display:inline-block;
+  background:linear-gradient(135deg,#ff4d00,#ff8c00);
+  color:#fff; font-size:10px; padding:3px 10px;
+  border-radius:12px; font-weight:800;
+  text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;
+}
+.glass-ad h4 { font-size:15px; color:var(--text); margin-bottom:7px; line-height:1.35; }
+.glass-ad p  { font-size:13px; color:var(--text3); margin-bottom:14px; line-height:1.6; }
+.glass-ad-btn {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff; padding:12px 18px; border-radius:12px;
+  font-weight:700; font-size:14px; width:100%;
+  transition:all 0.2s; box-shadow:0 4px 15px rgba(37,211,102,0.3);
+}
+.glass-ad-btn:hover { transform:translateY(-2px); box-shadow:0 6px 22px rgba(37,211,102,0.45); }
+.glass-ad-note { text-align:center; font-size:11px; color:var(--text4); margin-top:7px; }
+
+/* =====================================================
+   SHARE SECTION
+===================================================== */
+.share-section {
+  text-align:center; padding:26px;
+  background:var(--bg2); border-radius:16px;
+  border:1px solid var(--border);
+  margin:38px 0; box-shadow:var(--shadow1);
+}
+.share-section p { color:var(--text3); font-size:14px; margin-bottom:14px; }
+.share-btns { display:flex; justify-content:center; gap:9px; flex-wrap:wrap; }
+.share-btn {
+  padding:9px 20px; border-radius:25px; font-size:13px;
+  font-weight:700; cursor:pointer; border:none;
+  transition:all 0.2s; font-family:'DM Sans',sans-serif;
+}
+.share-btn:hover { transform:scale(1.05); }
+.s-wa { background:#25d366; color:#fff; }
+.s-tg { background:#0088cc; color:#fff; }
+.s-tw { background:#1da1f2; color:#fff; }
+.s-cp { background:var(--bg3); color:var(--text2); border:1px solid var(--border); }
+
+/* =====================================================
+   AUTHOR BOX
+===================================================== */
+.author-box {
+  background:var(--bg2); border:1px solid var(--border);
+  border-radius:16px; padding:23px; margin:38px 0;
+  display:flex; gap:18px; align-items:flex-start;
+  box-shadow:var(--shadow1);
+}
+.author-avatar {
+  width:56px; height:56px;
+  background:linear-gradient(135deg,#ff4d00,#ff8c00);
+  border-radius:50%; display:flex;
+  align-items:center; justify-content:center;
+  font-size:24px; flex-shrink:0;
+}
+.author-info h4 { font-size:15px; margin-bottom:4px; }
+.author-info p  { font-size:14px; color:var(--text3); margin:0; }
+
+/* =====================================================
+   FAQ
+===================================================== */
+.faq-item {
+  border:1px solid var(--border); border-radius:12px;
+  margin-bottom:10px; overflow:hidden;
+  background:var(--bg2); transition:border-color 0.2s;
+}
+.faq-item:hover { border-color:var(--accent-border); }
+.faq-q {
+  padding:16px 18px; cursor:pointer;
+  display:flex; align-items:center;
+  justify-content:space-between;
+  font-weight:600; font-size:15px;
+  user-select:none; transition:background 0.2s; gap:10px;
+  color:var(--text);
+}
+.faq-q:hover { background:var(--bg3); }
+.faq-q .faq-icon {
+  font-size:18px; color:#ff4d00;
+  transition:transform 0.3s; flex-shrink:0;
+}
+.faq-a {
+  display:none; padding:0 18px 16px;
+  font-size:14px; color:var(--text3); line-height:1.75;
+}
+.faq-item.open .faq-a   { display:block; }
+.faq-item.open .faq-icon { transform:rotate(45deg); }
+
+/* =====================================================
    FOOTER
-======================================== */
-footer{background:#111;color:#888}
-.footer-top{
-  max-width:1100px;margin:0 auto;
+===================================================== */
+footer { background:var(--footer-bg); color:var(--footer-text); }
+.footer-top {
+  max-width:1100px; margin:0 auto;
   padding:55px 5% 38px;
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:38px;
 }
-.footer-brand .logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:10px}
-.footer-brand .logo span{color:#ff4d00}
-.footer-brand p{font-size:13px;line-height:1.7;color:#666;margin-bottom:16px}
-.footer-tg{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#0088cc;color:#fff;padding:9px 18px;
-  border-radius:25px;font-size:13px;font-weight:700;transition:background 0.2s
+.footer-brand .logo {
+  font-family:'Syne',sans-serif; font-size:20px;
+  font-weight:800; color:var(--footer-head); margin-bottom:10px;
 }
-.footer-tg:hover{background:#006fa8}
-.footer-col h5{
-  font-family:'Syne',sans-serif;font-size:13px;color:#fff;
-  font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px
+.footer-brand .logo span { color:#ff4d00; }
+.footer-brand p { font-size:13px; line-height:1.7; margin-bottom:16px; }
+.footer-tg {
+  display:inline-flex; align-items:center; gap:8px;
+  background:#0088cc; color:#fff; padding:9px 18px;
+  border-radius:25px; font-size:13px; font-weight:700; transition:background 0.2s;
 }
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.footer-col ul a{font-size:13px;color:#666;transition:color 0.2s;display:flex;align-items:center;gap:5px}
-.footer-col ul a:hover{color:#ff4d00}
-.footer-bottom{
-  border-top:1px solid #222;max-width:1100px;margin:0 auto;
-  padding:18px 5%;display:flex;justify-content:space-between;
-  align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:#555
+.footer-tg:hover { background:#006fa8; }
+.footer-col h5 {
+  font-family:'Syne',sans-serif; font-size:13px;
+  color:var(--footer-head); font-weight:700;
+  margin-bottom:14px; text-transform:uppercase; letter-spacing:1px;
 }
-.footer-bottom a{color:#ff8c00}
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.footer-col ul a {
+  font-size:13px; color:var(--footer-text);
+  transition:color 0.2s; display:flex; align-items:center; gap:5px;
+}
+.footer-col ul a:hover { color:#ff4d00; }
+.footer-bottom {
+  border-top:1px solid #222; max-width:1100px; margin:0 auto;
+  padding:18px 5%; display:flex; justify-content:space-between;
+  align-items:center; flex-wrap:wrap; gap:10px; font-size:12px;
+}
+.footer-bottom a { color:#ff8c00; }
 
-/* ========================================
+/* =====================================================
    RESPONSIVE
-======================================== */
+===================================================== */
 @media(max-width:900px){
-  .page-wrapper{grid-template-columns:1fr;gap:0}
-  .blog-sidebar{position:static;margin-top:40px}
-  .footer-top{grid-template-columns:1fr 1fr}
+  .page-wrapper { grid-template-columns:1fr; gap:0; }
+  .blog-sidebar { position:static; margin-top:40px; }
+  .footer-top   { grid-template-columns:1fr 1fr; }
 }
 @media(max-width:600px){
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .hero{padding-top:25px}
-  .hero-image-wrap{height:200px}
-  .illusion-grid{grid-template-columns:1fr}
-  .compare{grid-template-columns:1fr}
-  .shift-grid{grid-template-columns:1fr}
-  .shift-arrow{display:none}
-  .stats-row{grid-template-columns:1fr 1fr}
-  .footer-top{grid-template-columns:1fr}
-  .cta-block{padding:26px 16px}
-  .author-box{flex-direction:column}
-  .flow-machine{padding:18px}
-  .final-section{padding:24px 16px}
-  .hook-block{padding:20px 18px;border-radius:0 10px 10px 0}
-  #scroll-top{bottom:18px;right:14px;width:42px;height:42px;font-size:18px}
-  .more-grid{grid-template-columns:1fr}   /* ✅ FIX: mobile mein 1 column */
-  .prompt-box pre{font-size:12.5px}
-  .nav-right-controls{gap:6px}
+  .nav-links { display:none; }
+  .hamburger { display:flex; }
+  .hero { padding-top:25px; }
+  .hero-image-wrap { height:200px; }
+  .illusion-grid { grid-template-columns:1fr; }
+  .compare       { grid-template-columns:1fr; }
+  .shift-grid    { grid-template-columns:1fr; }
+  .shift-arrow   { display:none; }
+  .stats-row     { grid-template-columns:1fr 1fr; }
+  .more-grid     { grid-template-columns:1fr; }
+  .footer-top    { grid-template-columns:1fr; }
+  .cta-block     { padding:26px 16px; }
+  .author-box    { flex-direction:column; }
+  .flow-machine  { padding:18px; }
+  .final-section { padding:24px 16px; }
+  .hook-block    { padding:20px 18px; }
+  #scroll-top    { bottom:18px; right:14px; width:42px; height:42px; font-size:18px; }
+  .cta-desc      { margin-left:0; margin-right:0; }
+  .prompt-box pre { font-size:12px; padding:14px; }
 }
 
 </style>
 </head>
 <body>
 
-<!-- ===== PROGRESS BAR ===== -->
-<div id="progress-bar" role="progressbar" aria-label="Reading progress"></div>
-
-<!-- ===== SCROLL TO TOP ===== -->
-<button id="scroll-top"
-  onclick="window.scrollTo({top:0,behavior:'smooth'})"
-  aria-label="Scroll to top">↑</button>
+<div id="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"></div>
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 
 <!-- ============================================================
      HEADER
 ============================================================ -->
 <header>
   <div class="nav-top">
-    <div class="nav-logo" onclick="location.href='index.html'" role="link" tabindex="0" aria-label="CaptionStudio Home">
-      <img src="favicon.png" alt="CaptionStudio" loading="lazy" width="28" height="28">
+    <a class="nav-logo" href="index.html" aria-label="CaptionStudio Home">
+      <img src="favicon.png" alt="CaptionStudio logo" loading="lazy" width="28" height="28">
       Caption<span>Studio</span>
-    </div>
+    </a>
 
     <ul class="nav-links" role="navigation" aria-label="Main navigation">
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="tools">⚡ Tools</a></li>
-      <li><a href="blog" class="active" aria-current="page">✍️ Blog</a></li>
+      <li><a href="blog.html" class="active" aria-current="page">✍️ Blog</a></li>
       <li><a href="guide.html">📖 Guide</a></li>
       <li><a href="earning.html">💸 Earning</a></li>
       <li><a href="relax.html">😌 Relax</a></li>
       <li><a href="about.html">👥 About</a></li>
       <li><a href="contact.html">📬 Contact</a></li>
-      <li><a href="https://t.me/skill2incomehub" class="btn-nav">✈️ Telegram</a></li>
+      <li><a href="https://t.me/skill2incomehub" class="btn-nav" rel="noopener noreferrer" target="_blank">✈️ Telegram</a></li>
     </ul>
 
     <div class="nav-right-controls">
-      <!-- ✅ DARK MODE TOGGLE -->
-      <button id="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode" type="button">
-        🌙 Dark
-      </button>
-      <!-- ✅ FIXED: button with aria attributes -->
+      <button id="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode" type="button">🌙 Dark</button>
       <button class="hamburger" id="hamburger"
-        onclick="toggleMenu()"
+        onclick="toggleMenu()" type="button"
         aria-label="Toggle navigation menu"
         aria-expanded="false"
-        aria-controls="mobile-menu"
-        type="button">
+        aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
     <a href="index.html">🏠 Home</a>
     <a href="tools">⚡ Tools</a>
-    <a href="blog">✍️ Blog</a>
+    <a href="blog.html">✍️ Blog</a>
     <a href="guide.html">📖 Guide</a>
     <a href="earning.html">💸 Earning Hub</a>
     <a href="relax.html">😌 Relax Zone</a>
@@ -1038,60 +1101,50 @@ footer{background:#111;color:#888}
     <a href="contact.html">📬 Contact</a>
     <a href="support.html">🛠 Support</a>
     <a href="privacy.html">🔒 Privacy</a>
-    <a href="https://t.me/skill2incomehub" style="color:#0088cc;font-weight:700">✈️ Join Telegram</a>
-  </div>
+    <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer" style="color:#0088cc;font-weight:700">✈️ Join Telegram</a>
+  </nav>
 </header>
 
-<!-- ============================================================
-     BREADCRUMB
-============================================================ -->
+<!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="index.html">Home</a>
-  <span aria-hidden="true">›</span>
-  <a href="blog">Blog</a>
-  <span aria-hidden="true">›</span>
-  <span>AI Manipulation Guide 2026</span>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="blog.html">Blog</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span aria-current="page">AI Manipulation Guide 2026</span>
 </nav>
 
 <!-- ============================================================
      HERO
 ============================================================ -->
 <div class="hero">
-  <div class="updated-badge" role="note">
-    🟢 Last Updated: April 20, 2026
-  </div>
-  <!-- ✅ Dynamic read time badge — JS se fill hoga -->
-  <div class="read-time-badge" id="read-time-display">
-    ⏱️ Calculating read time...
-  </div>
+  <div class="updated-badge" role="note">🟢 Last Updated: April 20, 2026</div>
+  <div class="read-time-badge" id="read-time-display">⏱️ Calculating...</div>
   <div class="hero-badge">
     <span class="badge-tag">🔥 Viral</span>
     AI & Content Creation · Smart Creators Series 2026
   </div>
-
   <h1>AI ko Manipulate Kaise Kare?<br>
     <em>(90% Log Galat Samajh Rahe Hain)</em>
   </h1>
-
   <p class="hero-intro">
     Secret prompts, AI hacks, system bypass — internet pe yahi sab dikhta hai.
     Par kya ye sach mein kaam karta hai? Aaj hum wo real system share kar rahe hain
-    jo top creators secretly use karte hain — aur <strong>ChatGPT prompts for Instagram Hindi</strong> mein
+    jo top creators secretly use karte hain — aur
+    <strong>ChatGPT prompts for Instagram Hindi</strong> mein
     practically kaise likhein ye bhi batayenge. 😳
   </p>
-
   <div class="hero-meta">
-    <div class="meta-item">✍️ CaptionStudio Team</div>
+    <span class="meta-item">✍️ CaptionStudio Team</span>
     <span class="meta-dot">·</span>
-    <div class="meta-item">📅 April 2026</div>
+    <span class="meta-item">📅 April 2026</span>
     <span class="meta-dot">·</span>
-    <div class="meta-item">🔥 2,600+ Words</div>
+    <span class="meta-item">🔥 2,600+ Words</span>
   </div>
-
   <div class="hero-image-wrap">
     <img
       src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80&auto=format&fit=crop"
-      alt="AI prompt engineering guide for Indian creators 2026 - how to manipulate AI outputs correctly using structured prompts"
+      alt="AI prompt engineering guide for Indian creators 2026 — structured prompts give 10x better output"
       loading="eager" fetchpriority="high"
       width="1200" height="380"
     >
@@ -1105,35 +1158,34 @@ footer{background:#111;color:#888}
 ============================================================ -->
 <div class="page-wrapper">
 
-<!-- ============================
+<!-- ===========================
      MAIN BLOG CONTENT
-============================ -->
+=========================== -->
 <main class="blog-main" id="main-content">
 
-  <!-- TABLE OF CONTENTS -->
+  <!-- TOC -->
   <nav class="toc-box" aria-label="Table of contents">
     <div class="toc-title">📋 Is Article Mein Kya Hai?</div>
     <ul class="toc-list" role="list">
-      <li><a href="#hook"><span>01</span> Shocking Reality — Hook</a></li>
-      <li><a href="#illusion"><span>02</span> Internet Ka Illusion</a></li>
-      <li><a href="#twist"><span>03</span> Real Twist — Problem Kahaan Hai</a></li>
-      <li><a href="#reveal"><span>04</span> Real Manipulation Reveal</a></li>
-      <li><a href="#prompts"><span>05</span> Prompt Engineering — Puri Detail</a></li>
+      <li><a href="#hook">     <span>01</span> Shocking Reality — Hook</a></li>
+      <li><a href="#illusion"> <span>02</span> Internet Ka Illusion</a></li>
+      <li><a href="#twist">    <span>03</span> Real Twist — Problem Kahaan</a></li>
+      <li><a href="#reveal">   <span>04</span> Real Manipulation Reveal</a></li>
+      <li><a href="#prompts">  <span>05</span> Prompt Engineering — Puri Detail</a></li>
       <li><a href="#mindshift"><span>06</span> Mind Shift Moment</a></li>
-      <li><a href="#system"><span>07</span> Hidden Content Machine</a></li>
-      <li><a href="#advanced"><span>08</span> Advanced Techniques</a></li>
-      <li><a href="#mistakes"><span>09</span> 7 Common Mistakes</a></li>
-      <li><a href="#reality"><span>10</span> Reality Punch</a></li>
-      <li><a href="#upgrade"><span>11</span> Creator Upgrade</a></li>
-      <li><a href="#faq"><span>12</span> FAQ</a></li>
+      <li><a href="#system">   <span>07</span> Hidden Content Machine</a></li>
+      <li><a href="#advanced"> <span>08</span> Advanced Techniques</a></li>
+      <li><a href="#mistakes"> <span>09</span> 7 Common Mistakes</a></li>
+      <li><a href="#reality">  <span>10</span> Reality Punch</a></li>
+      <li><a href="#upgrade">  <span>11</span> Creator Upgrade</a></li>
+      <li><a href="#faq">      <span>12</span> FAQ</a></li>
     </ul>
   </nav>
 
-  <!-- ======= SECTION 1: HOOK ======= -->
-  <section id="hook" aria-labelledby="hook-heading">
+  <!-- ===================== SECTION 1 ===================== -->
+  <section id="hook" aria-labelledby="h-hook">
     <div class="hook-block">
-      <p>
-        Agar tum soch rahe ho ki AI ko trick karke tum usse
+      <p>Agar tum soch rahe ho ki AI ko trick karke tum usse
         <strong>kuch bhi likhwa sakte ho…</strong>
       </p>
       <p style="margin-top:14px">
@@ -1145,7 +1197,7 @@ footer{background:#111;color:#888}
       <span class="hook-highlight">Kyunki sach thoda shocking hai 👇</span>
       <p style="margin-top:14px;font-size:18px">
         AI ko manipulate kiya <strong>ja sakta hai</strong>…<br>
-        par waise nahi jaise tum soch rahe ho <strong>😳</strong>
+        par waise nahi jaise tum soch rahe ho 😳
       </p>
     </div>
 
@@ -1156,47 +1208,50 @@ footer{background:#111;color:#888}
       </div>
       <div class="stat-box">
         <span class="stat-num">10x</span>
-        <div class="stat-label">Better output structured prompts se aata hai</div>
+        <div class="stat-label">Better output structured prompts se milta hai</div>
       </div>
       <div class="stat-box">
         <span class="stat-num">0</span>
-        <div class="stat-label">Real "secret prompts" jo kaam karte hain</div>
+        <div class="stat-label">Real "secret prompts" jo actually kaam karte hain</div>
       </div>
     </div>
 
     <p>
-      2026 mein AI tools sab ke paas hain — ChatGPT, Gemini, Claude sab free ya
-      affordable hain. Phir bhi kuch creators consistently viral content banate hain
-      aur baaki average output pe stuck rehte hain. Kyu?
+      2026 mein AI tools sab ke paas hain — ChatGPT, Gemini, Claude sab free ya affordable hain.
+      Phir bhi kuch creators consistently viral content banate hain aur baaki average output pe
+      stuck rehte hain. Kyu?
     </p>
     <p>
-      Kyunki <strong>best prompt engineering tips for beginners</strong> internet pe
-      bikhari padi hain — par unhe ek system mein koi nahi jodta. Aaj hum wahi karte hain.
+      Kyunki <strong>best prompt engineering tips for beginners</strong> internet pe bikhari padi
+      hain — par unhe ek system mein koi nahi jodta. Aaj hum wahi karte hain. Poora system,
+      step by step, ek hi jagah.
     </p>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>AI ki nai duniya 2026 mein kaisi hai?
-        <a href="new-era-ai-2026.html">New Era of AI 2026 — Creators ke liye kya badla →</a>
+        <a href="blog/new-era-ai-2026.html">New Era of AI 2026 — Creators ke liye kya badla →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 2: ILLUSION ======= -->
-  <section id="illusion" aria-labelledby="illusion-heading">
+  <!-- ===================== SECTION 2 ===================== -->
+  <section id="illusion" aria-labelledby="h-illusion">
     <div class="section-label">🧠 Section 02</div>
-    <h2 id="illusion-heading">Internet Ka Illusion — Kya Sach Kya Jhooth</h2>
+    <h2 id="h-illusion">Internet Ka Illusion — Kya Sach Kya Jhooth</h2>
 
     <div class="inline-img">
       <img
         src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80&auto=format&fit=crop"
-        alt="AI technology illusion showing why secret prompts and AI jailbreak hacks don't work for content creators"
+        alt="AI technology illusion — why secret prompts and AI hacks don't actually work for content creators"
         loading="lazy" width="800" height="250"
       >
       <p class="img-caption">Jo dikhaya jaata hai aur jo sach hai — dono mein bada fark hai</p>
     </div>
+
+    <p>Ek baar social media pe scroll karo — tumhe ye cheezein zaroor milti hain:</p>
 
     <div class="illusion-grid">
       <div class="illusion-item">
@@ -1226,165 +1281,226 @@ footer{background:#111;color:#888}
         "Lekin kya tumne kabhi notice kiya — same prompts use karne ke baad bhi
         output average hi aata hai? Kyu?"
       </blockquote>
-      <cite>— Yahi sabse important question hai</cite>
+      <cite>— Yahi sabse important question hai aaj ke article ka</cite>
     </div>
 
     <p>
-      Kyunki ye poora narrative ek <strong>illusion</strong> hai. AI koi lock nahi hai
-      jise unlock karna ho. Ye ek <strong>large language model (LLM)</strong> hai jo
-      aapke input ke patterns pe based response generate karta hai.
+      Kyunki ye poora narrative ek <strong>illusion</strong> hai. AI koi lock nahi hai jise
+      unlock karna ho. Ye ek <strong>large language model (LLM)</strong> hai jo aapke input
+      ke statistical patterns pe based response generate karta hai. Jitna better aapka
+      input pattern — utna better output.
+    </p>
+    <p>
+      Ye "manipulation" ka real meaning hai — aur isko technical language mein
+      <strong>Prompt Engineering</strong> kehte hain. Koi hack nahi, koi bypass nahi —
+      sirf ek learnable, improvable skill.
     </p>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>AI tools se Instagram reach kaise badhayein?
-        <a href="ai-tools-instagram-reach.html">AI Tools se Instagram Reach 10x Karo →</a>
+        <a href="blog/ai-tools-instagram-reach.html">AI Tools se Instagram Reach 10x Karo →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 3: TWIST ======= -->
-  <section id="twist" aria-labelledby="twist-heading">
+  <!-- ===================== SECTION 3 ===================== -->
+  <section id="twist" aria-labelledby="h-twist">
     <div class="section-label">⚡ Section 03</div>
-    <h2 id="twist-heading">Real Twist — Problem Asliyat Mein Kahaan Hai</h2>
+    <h2 id="h-twist">Real Twist — Problem Asliyat Mein Kahaan Hai</h2>
+
+    <p>Ab ye samajhna bahut important hai kyunki iske baad sab kuch crystal clear ho jaayega.</p>
 
     <div class="callout orange">
       <div class="callout-title">💡 Key Insight — 2026</div>
       <p><strong>👉 AI words nahi samajhta — wo statistical patterns follow karta hai</strong></p>
-      <p>Jab tum kehte ho <em>"mujhe ek acchi caption likho"</em> — AI ke liye ye incomplete hai. Wo nahi jaanta:</p>
+      <p>Jab tum kehte ho <em>"mujhe ek acchi caption likho"</em> — AI ke liye ye ek
+        incomplete, ambiguous pattern hai. Wo nahi jaanta:</p>
       <ul>
-        <li>Kaunse topic pe? Fitness? Travel? Motivation?</li>
-        <li>Tone kya — funny, emotional, professional?</li>
-        <li>Kitne words? 5 ya 50?</li>
-        <li>Audience kaun? Students? Professionals?</li>
-        <li>Language — Hindi, English, ya Hinglish?</li>
+        <li>Kaunse topic pe? Fitness? Travel? Motivation? Breakup?</li>
+        <li>Kiska tone — funny, emotional, professional, aggressive, sarcastic?</li>
+        <li>Kitne words? 5 words ya 50 words?</li>
+        <li>Kaun se audience ke liye? Students? Working professionals? Moms?</li>
+        <li>Language — pure Hindi, English, ya Hinglish?</li>
+        <li>Koi specific CTA chahiye? Follow karo, link in bio, share karo?</li>
+        <li>Emojis chahiye ya nahi? Hashtags include karne hain?</li>
       </ul>
-      <p style="margin-top:12px;font-weight:700;color:#e65100">➡️ Random input = Random output. Simple math hai.</p>
+      <p style="margin-top:12px;font-weight:700;color:#e65100">
+        ➡️ Random input = Random output. Simple math hai.
+      </p>
     </div>
 
     <div class="inline-img">
       <img
         src="https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&q=80&auto=format&fit=crop"
-        alt="AI input output pattern recognition showing how structured prompts produce 10x better results compared to vague prompts"
+        alt="AI input output pattern recognition — how structured prompts produce 10x better results vs vague prompts"
         loading="lazy" width="800" height="250"
       >
-      <p class="img-caption">Input jitna clear aur structured, output utna better</p>
+      <p class="img-caption">Input jitna clear aur structured, output utna better — hamesha</p>
     </div>
+
+    <p>
+      Toh problem AI mein nahi hai. <strong>Problem tumhare input system mein hai.</strong>
+      Aur jab problem clear ho jaaye — solution bhi automatically clear ho jaata hai.
+      Solution hai: <strong>better, structured prompts likhna seekhna.</strong>
+    </p>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
-      <div>Success ke liye mindset bhi important hai:
-        <a href="success-mindset-2026.html">Success Mindset 2026 — Creators ke liye →</a>
+      <div>Success ke liye mindset shift karna zaroori hai:
+        <a href="blog/success-mindset-2026.html">Success Mindset 2026 — Creators ke liye →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 4: REVEAL ======= -->
-  <section id="reveal" aria-labelledby="reveal-heading">
+  <!-- ===================== SECTION 4 ===================== -->
+  <section id="reveal" aria-labelledby="h-reveal">
     <div class="section-label">🔍 Section 04</div>
-    <h2 id="reveal-heading">Real Manipulation Reveal — Asli Raaz Kya Hai</h2>
+    <h2 id="h-reveal">Real Manipulation Reveal — Asli Raaz Kya Hai</h2>
 
     <p>
-      <strong>"Manipulation"</strong> ka real matlab: <em>AI ko itna clear direction dena ki wo confuse hi na ho.</em>
-      Isko <strong>Prompt Engineering</strong> kehte hain — 2026 mein ye ek high-demand skill hai.
+      <strong>"Manipulation"</strong> ka real matlab hai:
+      <em>AI ko itna clear direction dena ki wo confuse hi na ho.</em>
+      Isko technical language mein <strong>Prompt Engineering</strong> kehte hain —
+      2026 mein ye ek high-demand skill ban chuki hai.
+      Ye koi hack nahi, koi shortcut nahi — ye ek disciplined craft hai.
     </p>
 
-    <h3>Same AI — Different Results (Example):</h3>
+    <h3>Simple Example — Same AI, Completely Different Results:</h3>
     <div class="compare">
       <div class="compare-box bad">
         <span class="cmp-label">❌ Normal User</span>
-        <p>Koi context nahi, koi role nahi, koi format nahi</p>
+        <p>Koi context nahi, koi role nahi, koi format nahi — AI bilkul confuse ho jaata hai</p>
         <code>"caption likho"</code>
       </div>
       <div class="compare-box good">
-        <span class="cmp-label">✅ Smart Creator</span>
-        <p>Role + Topic + Tone + Format + Constraint defined</p>
+        <span class="cmp-label">✅ Smart Creator (ChatGPT prompt for Instagram Hindi)</span>
+        <p>Role + Topic + Tone + Format + Constraint — sab kuch crystal clear</p>
         <code>Act as viral reels creator.
 Topic: breakup recovery.
 Tone: emotional + relatable.
 Language: Hinglish.
-Output: 5 lines, max 10 words.
-No hashtags.</code>
+Output: 5 lines, max 10 words each.
+No hashtags. No formal language.</code>
       </div>
     </div>
 
     <div class="callout green">
       <div class="callout-title">🎯 Result</div>
-      <p><strong>Same AI — Completely Different Output 🤯</strong><br>
-      Fark sirf input ke structure ka hai — koi magic nahi.</p>
+      <p>
+        <strong>Same AI — Completely Different Output 🤯</strong><br>
+        Ek average, generic result deta hai. Doosra viral-worthy, emotional,
+        audience-specific content ready kar deta hai.<br>
+        <strong>Fark sirf input ke structure ka hai — koi magic nahi.</strong>
+      </p>
     </div>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
-      <div>Best Instagram captions ready-made:
-        <a href="best-instagram-captions-reels-2026.html">Best Instagram Captions for Reels 2026 →</a>
+      <div>Best Instagram captions already ready hain:
+        <a href="blog/best-instagram-captions-reels-2026.html">Best Instagram Captions for Reels 2026 — Copy karo →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 5: PROMPTS ======= -->
-  <section id="prompts" aria-labelledby="prompts-heading">
+  <!-- ===================== SECTION 5 ===================== -->
+  <section id="prompts" aria-labelledby="h-prompts">
     <div class="section-label">🧪 Section 05</div>
-    <h2 id="prompts-heading">Prompt Engineering — Puri Detail Mein (Beginners ke liye)</h2>
+    <h2 id="h-prompts">Prompt Engineering — Puri Detail Mein (Beginners ke liye)</h2>
 
     <div class="inline-img">
       <img
         src="https://images.unsplash.com/photo-1686191128892-3b37add4c844?w=800&q=80&auto=format&fit=crop"
-        alt="Best prompt engineering tips for beginners - complete guide to writing ChatGPT prompts for Instagram in Hindi 2026"
+        alt="Best prompt engineering tips for beginners — complete guide to writing ChatGPT prompts for Instagram in Hindi 2026"
         loading="lazy" width="800" height="250"
       >
       <p class="img-caption">Best prompt engineering tips for beginners — ek baar seekho, lifetime kaam aayega</p>
     </div>
 
-    <p>Ek perfect prompt ke <strong>5 essential components</strong> hote hain:</p>
+    <p>
+      Ek perfect prompt ke <strong>5 essential components</strong> hote hain.
+      Ye framework yaad rakh lo — ye tumhara AI game permanently change kar dega.
+      Especially agar tum <strong>ChatGPT prompts for Instagram Hindi</strong> mein
+      likhna chahte ho.
+    </p>
 
     <ol class="steps-list">
-      <li><div><strong>Role</strong> — "Act as a viral Instagram content creator" — jitna specific, utna better</div></li>
-      <li><div><strong>Context</strong> — Topic, audience details, platform — AI ko sab batao</div></li>
-      <li><div><strong>Task</strong> — "Write 5 captions" — measurable aur specific hona chahiye</div></li>
-      <li><div><strong>Format</strong> — Word limit, language, numbered ya paragraph — define karo</div></li>
-      <li><div><strong>Constraints</strong> — "No hashtags", "Under 15 words" — kya nahi chahiye ye batao</div></li>
+      <li>
+        <div>
+          <strong>Role (Kaun hai AI?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            "Act as a viral Instagram content creator" — jitna specific role,
+            utna better output. "Act as a Hinglish motivational reels creator
+            for Gen-Z audience" aur bhi better hai.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Context (Background kya hai?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Topic, background info, audience details, platform — sab kuch batao.
+            AI ko apna mind-reader mat samjho. Jitna doge, utna better milega.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Task (Exactly kya karna hai?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            "Write 5 captions" — clear aur measurable.
+            "Write something good" — useless. Task hamesha
+            specific aur quantifiable hona chahiye.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Format (Kaisa output chahiye?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Word limit, language (Hinglish/Hindi/English), numbered list ya paragraph,
+            with/without emojis, bullet points ya prose — sab define karo.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Constraints (Kya bilkul nahi karna?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            "No hashtags", "No formal language", "Under 15 words only",
+            "Don't use the word amazing" — negative constraints output
+            quality drastically improve karte hain.
+          </span>
+        </div>
+      </li>
     </ol>
 
     <h3>Real Prompt Examples — Copy & Try Karo:</h3>
 
-    <!-- Prompt 1 -->
     <div class="prompt-box">
       <div class="prompt-box-header">
         <div class="prompt-dots">
           <span class="prompt-dot red"></span>
           <span class="prompt-dot yellow"></span>
           <span class="prompt-dot green"></span>
-          <span class="prompt-label-text">EXAMPLE 1 — Instagram Hook (Hinglish)</span>
+          <span class="prompt-label-text">EXAMPLE 1 — Instagram Reel Hook (Hinglish)</span>
         </div>
-        <button type="button" class="copy-btn" onclick="copyPrompt(this,'prompt1')" aria-label="Copy prompt 1">📋 Copy</button>
+        <button type="button" class="copy-btn" onclick="copyPrompt(this,'p1')" aria-label="Copy prompt 1">📋 Copy</button>
       </div>
-      <pre id="prompt1"><span class="highlight">Role:</span> <span class="string">Act as viral Instagram reels scriptwriter
-specializing in Hinglish content for Gen-Z India.</span>
-
-<span class="highlight">Context:</span> <span class="string">Topic: morning routine for students.
-Audience: college students, 18-22 years.
-Platform: Instagram Reels.</span>
-
-<span class="highlight">Task:</span> <span class="string">Write 5 scroll-stopping hook lines
-for the first 3 seconds of a reel.</span>
-
-<span class="highlight">Format:</span> <span class="string">Numbered list. Max 10 words each.
-Hinglish. No hashtags.</span>
-
-<span class="highlight">Constraint:</span> <span class="string">Don't use "amazing", "best", "ultimate".
-Be raw and relatable.</span>
-
-<span class="comment">// ChatGPT prompts for Instagram Hindi — perfect formula</span></pre>
+      <pre id="p1"><span class="hl">Role:</span>       <span class="str">Viral Instagram reels scriptwriter for Hinglish Gen-Z India.</span>
+<span class="hl">Context:</span>    <span class="str">Topic: morning routine for college students. Age: 18-22. Platform: Reels.</span>
+<span class="hl">Task:</span>       <span class="str">Write 5 scroll-stopping hook lines for the first 3 seconds.</span>
+<span class="hl">Format:</span>     <span class="str">Numbered list. Max 10 words each. Hinglish only. No hashtags.</span>
+<span class="hl">Constraint:</span> <span class="str">Don't use "amazing", "best", "ultimate". Be raw and relatable.</span>
+<span class="cmt">// ChatGPT prompts for Instagram Hindi — ye formula use karo</span></pre>
     </div>
 
-    <!-- Prompt 2 -->
     <div class="prompt-box">
       <div class="prompt-box-header">
         <div class="prompt-dots">
@@ -1393,64 +1509,60 @@ Be raw and relatable.</span>
           <span class="prompt-dot green"></span>
           <span class="prompt-label-text">EXAMPLE 2 — Email Subject Lines</span>
         </div>
-        <button type="button" class="copy-btn" onclick="copyPrompt(this,'prompt2')" aria-label="Copy prompt 2">📋 Copy</button>
+        <button type="button" class="copy-btn" onclick="copyPrompt(this,'p2')" aria-label="Copy prompt 2">📋 Copy</button>
       </div>
-      <pre id="prompt2"><span class="highlight">Role:</span> <span class="string">Email marketing expert, 10 years in edtech India.</span>
-
-<span class="highlight">Context:</span> <span class="string">Launching free AI tools course.
-Target: working professionals 25-35. Goal: high open rate.</span>
-
-<span class="highlight">Task:</span> <span class="string">Write 7 subject lines — curiosity + urgency.</span>
-
-<span class="highlight">Constraints:</span> <span class="string">Under 50 chars each. No clickbait.
-No ALL CAPS. No exclamation marks.</span></pre>
+      <pre id="p2"><span class="hl">Role:</span>       <span class="str">Email marketing expert, 10 years in edtech India.</span>
+<span class="hl">Context:</span>    <span class="str">Launching free AI tools course. Target: working professionals 25-35. Goal: high open rate.</span>
+<span class="hl">Task:</span>       <span class="str">Write 7 email subject lines — maximum curiosity + urgency.</span>
+<span class="hl">Constraints:</span><span class="str">Under 50 characters each. No clickbait. No ALL CAPS. No exclamation marks.</span></pre>
     </div>
 
-    <!-- Prompt 3 -->
     <div class="prompt-box">
       <div class="prompt-box-header">
         <div class="prompt-dots">
           <span class="prompt-dot red"></span>
           <span class="prompt-dot yellow"></span>
           <span class="prompt-dot green"></span>
-          <span class="prompt-label-text">EXAMPLE 3 — Instagram Bio</span>
+          <span class="prompt-label-text">EXAMPLE 3 — Instagram Bio (Hinglish Creator)</span>
         </div>
-        <button type="button" class="copy-btn" onclick="copyPrompt(this,'prompt3')" aria-label="Copy prompt 3">📋 Copy</button>
+        <button type="button" class="copy-btn" onclick="copyPrompt(this,'p3')" aria-label="Copy prompt 3">📋 Copy</button>
       </div>
-      <pre id="prompt3"><span class="highlight">Role:</span> <span class="string">Personal branding expert for Indian creators.</span>
-
-<span class="highlight">Context:</span> <span class="string">Niche: AI tools + student earning.
-Audience: college students wanting to earn online.
-Vibe: friendly, aspirational, relatable.</span>
-
-<span class="highlight">Task:</span> <span class="string">Write 5 Instagram bio options.</span>
-
-<span class="highlight">Format:</span> <span class="string">Under 150 chars each.
-Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
+      <pre id="p3"><span class="hl">Role:</span>    <span class="str">Personal branding expert for Indian social media creators.</span>
+<span class="hl">Context:</span> <span class="str">Niche: AI tools + student earning. Audience: college students wanting to earn online. Vibe: friendly, aspirational, relatable.</span>
+<span class="hl">Task:</span>    <span class="str">Write 5 Instagram bio options that convey value + personality.</span>
+<span class="hl">Format:</span>  <span class="str">Under 150 characters each. Hinglish. Include 1 CTA line. Emojis sparingly.</span></pre>
     </div>
 
     <div class="callout blue">
       <div class="callout-title">📌 Pro Tip — Chain Prompting</div>
-      <p><strong>Step 1:</strong> "Write 10 caption ideas for fitness niche"<br>
-      <strong>Step 2:</strong> "Make caption #3 more emotional, add CTA"<br>
-      <strong>Step 3:</strong> "Shorten to under 20 words, keep emotion"</p>
-      <p>Yahi method top copywriters use karte hain. 🎯</p>
+      <p>Ek aur powerful technique: pehle broad output lo, phir refine karte jao:</p>
+      <p>
+        <strong>Step 1:</strong> "Write 10 caption ideas for fitness niche" → broad ideas<br>
+        <strong>Step 2:</strong> "From above, make caption #3 more emotional, add a CTA"<br>
+        <strong>Step 3:</strong> "Shorten it to under 20 words, keep the emotion"
+      </p>
+      <p>Yahi method top copywriters use karte hain. Har step pe output better hota jaata hai. 🎯</p>
     </div>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>Viral captions ki complete strategy:
-        <a href="viral-caption-strategy-2026.html">Viral Caption Strategy 2026 — Complete Breakdown →</a>
+        <a href="blog/viral-caption-strategy-2026.html">Viral Caption Strategy 2026 — Complete Breakdown →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 6: MIND SHIFT ======= -->
-  <section id="mindshift" aria-labelledby="mindshift-heading">
+  <!-- ===================== SECTION 6 ===================== -->
+  <section id="mindshift" aria-labelledby="h-mindshift">
     <div class="section-label">🤯 Section 06</div>
-    <h2 id="mindshift-heading">Mind Shift Moment — Sochne Ka Tarika Badlo</h2>
+    <h2 id="h-mindshift">Mind Shift Moment — Sochne Ka Tarika Badlo</h2>
+
+    <p>
+      Ab sabse important shift aata hai. Dhyan se padho — ye ek line tumhara
+      poora AI journey change kar sakti hai:
+    </p>
 
     <div class="mindshift">
       <h3>🤯 The Real Mind Shift</h3>
@@ -1468,29 +1580,42 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
       </div>
     </div>
 
+    <p>
+      Jab tum AI ko ek <em>vending machine</em> se ek <em>content factory</em> mein
+      convert karte ho — tab poora game change hota hai. 2026 mein jo creators
+      consistently grow kar rahe hain, wo AI ko <strong>ek defined workflow ke andar</strong>
+      use karte hain. Unka system hota hai. Random use nahi.
+    </p>
+
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>Top creators ka behind-the-scenes strategy:
-        <a href="behind-the-scenes-content-strategy-2026.html">Behind-the-Scenes Content Strategy 2026 →</a>
+        <a href="blog/behind-the-scenes-content-strategy-2026.html">Behind-the-Scenes Content Strategy 2026 →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 7: SYSTEM ======= -->
-  <section id="system" aria-labelledby="system-heading">
+  <!-- ===================== SECTION 7 ===================== -->
+  <section id="system" aria-labelledby="h-system">
     <div class="section-label">⚙️ Section 07</div>
-    <h2 id="system-heading">Hidden Content Machine System — Unka Secret Formula</h2>
+    <h2 id="h-system">Hidden Content Machine System — Unka Secret Formula</h2>
 
     <div class="inline-img">
       <img
         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop"
-        alt="Content creation system workflow showing how Indian creators use AI tools in a defined process for consistent viral content 2026"
+        alt="Content creation system workflow for Indian creators using AI tools in 2026 — step by step process"
         loading="lazy" width="800" height="250"
       >
       <p class="img-caption">Smart creators ek complete system follow karte hain — not random AI usage</p>
     </div>
+
+    <p>
+      Top creators ka ek defined flow hota hai. Wo AI ko randomly use nahi karte —
+      <strong>wo ek content machine operate karte hain.</strong>
+      Ye machine har roz fresh content produce karti hai, bina burnout ke.
+    </p>
 
     <div class="flow-machine">
       <h3>🤖 The 2026 Content Machine Flow</h3>
@@ -1499,7 +1624,7 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
           <div class="step-icon" aria-hidden="true">💡</div>
           <div class="step-text">
             <b>Topic Research</b>
-            <span>AI se trending topics, pain points, content angles</span>
+            <span>AI se trending topics, pain points aur content angles generate karo</span>
           </div>
         </div>
         <div class="flow-arrow" aria-hidden="true">↓</div>
@@ -1515,7 +1640,7 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
           <div class="step-icon" aria-hidden="true">✍️</div>
           <div class="step-text">
             <b>Caption Writing</b>
-            <span>Niche + tone + CTA — Hinglish ya Hindi</span>
+            <span>Niche + tone + CTA — Hinglish ya Hindi, audience ke hisab se</span>
           </div>
         </div>
         <div class="flow-arrow" aria-hidden="true">↓</div>
@@ -1523,7 +1648,7 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
           <div class="step-icon" aria-hidden="true">#️⃣</div>
           <div class="step-text">
             <b>Hashtag Strategy</b>
-            <span>Mix of small + medium + large hashtags</span>
+            <span>Mix of small + medium + large hashtags for maximum reach</span>
           </div>
         </div>
         <div class="flow-arrow" aria-hidden="true">↓</div>
@@ -1531,56 +1656,92 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
           <div class="step-icon" aria-hidden="true">💎</div>
           <div class="step-text">
             <b>Human Polish</b>
-            <span>Apni voice + personality + personal touch</span>
+            <span>Apni voice + personality + personal experience add karo</span>
           </div>
         </div>
-        <div class="flow-result">🚀 Result: Daily Content — Zero Burnout — Real Growth</div>
+        <div class="flow-result">
+          🚀 Result: Daily Consistent Content — Zero Burnout — Real Growth
+        </div>
       </div>
     </div>
+
+    <p>
+      Yahi real manipulation hai.
+      <strong>Koi magic nahi — sirf ek disciplined, repeatable system.</strong>
+      Aur is system ko consistently follow karne se unka content
+      har din perform karta hai.
+    </p>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>Faceless creators bhi yahi system use karte hain:
-        <a href="faceless-instagram-earn-money.html">Faceless Instagram se Paise Kaise Kamao →</a>
+        <a href="blog/faceless-instagram-earn-money.html">Faceless Instagram se Paise Kaise Kamao →</a>
       </div>
     </div>
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
-      <div>Ready-made trending hashtags:
-        <a href="trending-hashtags-reels-2026.html">Trending Hashtags for Reels 2026 →</a>
+      <div>Ready-made trending hashtags copy karo:
+        <a href="blog/trending-hashtags-reels-2026.html">Trending Hashtags for Reels 2026 →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 8: ADVANCED ======= -->
-  <section id="advanced" aria-labelledby="advanced-heading">
+  <!-- ===================== SECTION 8 ===================== -->
+  <section id="advanced" aria-labelledby="h-advanced">
     <div class="section-label">🚀 Section 08</div>
-    <h2 id="advanced-heading">Advanced Prompt Techniques — Level Up Karo</h2>
+    <h2 id="h-advanced">Advanced Prompt Techniques — Level Up Karo</h2>
+
+    <p>
+      Basic prompt engineering ke baad, ye advanced techniques try karo.
+      Ye sabse <strong>best prompt engineering tips for beginners</strong> hain
+      jo tumhe intermediate se advanced level par le jaayenge.
+    </p>
 
     <h3>1. Few-Shot Prompting</h3>
-    <p>AI ko examples do taaki wo tumhara exact style samjhe.</p>
+    <p>
+      AI ko examples do taaki wo tumhara exact style samjhe. Jaise ek teacher
+      student ko examples dekar sikhata hai — waise AI ko examples dekar
+      output quality dramatically improve hoti hai.
+    </p>
     <div class="callout orange">
       <div class="callout-title">📝 Few-Shot Example</div>
       <p>"Write captions in this exact style:<br>
       <strong>Example 1:</strong> Subah 5 baje uthna meri choice nahi thi — par ab hai. 💪<br>
       <strong>Example 2:</strong> Log hasenge. Haso. Phir dekho kaun aage hai.<br>
-      Now write 5 more for: financial freedom for students"</p>
+      Now write 5 more captions for topic: financial freedom for students"</p>
     </div>
 
     <h3>2. Persona Assignment</h3>
-    <p>"Act as a 22-year-old fitness influencer from Delhi who speaks Hinglish." Jitni specific identity — utna better brand voice output.</p>
+    <p>
+      AI ko ek specific identity do.
+      <em>"Act as Gary Vee"</em> ya
+      <em>"Act as a 22-year-old fitness influencer from Delhi who speaks Hinglish."</em>
+      Jitni specific identity — utna better brand voice output milega.
+    </p>
 
     <h3>3. Negative Prompting</h3>
-    <p>Sirf ye mat batao ki kya chahiye — <strong>kya bilkul nahi chahiye</strong> ye bhi batao. Output quality surprisingly improve hoti hai.</p>
+    <p>
+      Sirf ye mat batao ki kya chahiye — <strong>kya bilkul nahi chahiye ye bhi batao.</strong>
+      Ye technique output quality surprisingly improve karti hai.
+    </p>
+    <div class="callout green">
+      <div class="callout-title">✅ Negative Prompting Example</div>
+      <p>
+        <strong>Without:</strong> "Write motivational captions" → generic output<br>
+        <strong>With negative:</strong> "Write motivational captions. NO: clichés, overused phrases
+        like 'hustle', 'grind', 'dream big'. NO emojis. NO hashtags. Language: raw Hinglish." → powerful output
+      </p>
+    </div>
 
     <h3>4. Iterative Refinement Loop</h3>
+    <p>Pehle baar perfect output expect mat karo. Ye loop follow karo:</p>
     <ol class="steps-list">
-      <li><div><strong>Initial Broad Prompt</strong> — pehle ideas lo, quantity over quality</div></li>
-      <li><div><strong>Emotion/Tone Refine</strong> — "Make this more emotional"</div></li>
-      <li><div><strong>Length Optimize</strong> — "Shorten to 15 words, keep core message"</div></li>
-      <li><div><strong>Human Touch</strong> — apni voice, personal story add karo</div></li>
+      <li><div><strong>Initial Broad Prompt</strong><br><span style="color:var(--text3);font-size:14px">Pehle ideas lo — quantity over quality in first pass</span></div></li>
+      <li><div><strong>Emotion/Tone Refine</strong><br><span style="color:var(--text3);font-size:14px">"Make this more emotional" ya "Add more urgency and FOMO"</span></div></li>
+      <li><div><strong>Length Optimize</strong><br><span style="color:var(--text3);font-size:14px">"Shorten to 15 words, keep the core message intact"</span></div></li>
+      <li><div><strong>Human Polish</strong><br><span style="color:var(--text3);font-size:14px">Apni voice, personal story ya experience add karo — ye koi nahi replace kar sakta</span></div></li>
     </ol>
 
     <div class="table-wrap">
@@ -1589,12 +1750,12 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
           <tr><th>Technique</th><th>Best For</th><th>Difficulty</th><th>Impact</th></tr>
         </thead>
         <tbody>
-          <tr><td>Basic Prompting</td><td>Simple tasks</td><td class="td-good">Easy</td><td>⭐⭐</td></tr>
-          <tr><td>Role + Context</td><td>Content creation</td><td class="td-good">Easy</td><td>⭐⭐⭐⭐</td></tr>
-          <tr><td>Few-Shot Examples</td><td>Brand voice</td><td>Medium</td><td>⭐⭐⭐⭐</td></tr>
-          <tr><td>Chain Prompting</td><td>Long-form content</td><td>Medium</td><td>⭐⭐⭐⭐⭐</td></tr>
-          <tr><td>Persona Assignment</td><td>Consistent voice</td><td>Medium</td><td>⭐⭐⭐⭐⭐</td></tr>
+          <tr><td>Basic Prompting</td><td>Simple one-off tasks</td><td class="td-good">Easy</td><td>⭐⭐</td></tr>
+          <tr><td>Role + Context</td><td>Content creation, captions</td><td class="td-good">Easy</td><td>⭐⭐⭐⭐</td></tr>
+          <tr><td>Few-Shot Examples</td><td>Brand voice matching</td><td>Medium</td><td>⭐⭐⭐⭐</td></tr>
           <tr><td>Negative Prompting</td><td>Quality filtering</td><td class="td-good">Easy</td><td>⭐⭐⭐⭐</td></tr>
+          <tr><td>Chain Prompting</td><td>Long-form content, scripts</td><td>Medium</td><td>⭐⭐⭐⭐⭐</td></tr>
+          <tr><td>Persona Assignment</td><td>Consistent brand voice</td><td>Medium</td><td>⭐⭐⭐⭐⭐</td></tr>
         </tbody>
       </table>
     </div>
@@ -1602,191 +1763,322 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>Complete AI master guide:
-        <a href="master-ai-guide-2026.html">Master AI Guide 2026 — Zero to Pro →</a>
+        <a href="blog/master-ai-guide-2026.html">Master AI Guide 2026 — Zero to Pro →</a>
       </div>
     </div>
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>AI se professional email likhna seekho:
-        <a href="email-writing-guide.html">AI se Professional Email Guide →</a>
+        <a href="blog/email-writing-guide.html">AI se Professional Email — Complete Guide →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 9: MISTAKES ======= -->
-  <section id="mistakes" aria-labelledby="mistakes-heading">
+  <!-- ===================== SECTION 9 ===================== -->
+  <section id="mistakes" aria-labelledby="h-mistakes">
     <div class="section-label">⚠️ Section 09</div>
-    <h2 id="mistakes-heading">7 Common Mistakes Jo Log Karte Hain</h2>
+    <h2 id="h-mistakes">7 Common Mistakes Jo Log Karte Hain</h2>
 
     <div class="inline-img">
       <img
         src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80&auto=format&fit=crop"
-        alt="7 common AI prompt engineering mistakes that beginner creators make and how to avoid them for better content output"
+        alt="7 common AI prompt engineering mistakes that beginner creators make and how to avoid them for better output"
         loading="lazy" width="800" height="250"
       >
       <p class="img-caption">In mistakes ko avoid karo — output quality instantly improve hogi</p>
     </div>
 
     <ol class="steps-list">
-      <li><div><strong>Vague Instructions</strong><br><span style="color:#666;font-size:14px">"Kuch accha likho" — AI ke liye "accha" undefined hai. Hamesha specific raho.</span></div></li>
-      <li><div><strong>Context Skip Karna</strong><br><span style="color:#666;font-size:14px">AI ko nahi pata tumhara niche, audience, tone. Ye sab define karo.</span></div></li>
-      <li><div><strong>Pehle Output Pe Settle Hona</strong><br><span style="color:#666;font-size:14px">First output sirf starting point hai. Iterate karo.</span></div></li>
-      <li><div><strong>AI Output Directly Post Karna</strong><br><span style="color:#666;font-size:14px">Human polish zaroor karo. Raw AI content easily detectable hota hai.</span></div></li>
-      <li><div><strong>Same Prompt Repeat Karna</strong><br><span style="color:#666;font-size:14px">Experiment karo — alag angles try karo.</span></div></li>
-      <li><div><strong>Negative Constraints Ignore Karna</strong><br><span style="color:#666;font-size:14px">"No emojis", "No hashtags" — ye quality control ke liye critical hain.</span></div></li>
-      <li><div><strong>System Mein Use Na Karna</strong><br><span style="color:#666;font-size:14px">Random use se inconsistent results. Defined workflow banao.</span></div></li>
+      <li>
+        <div>
+          <strong>Vague Instructions Dena</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            "Kuch accha likho" — AI ke liye "accha" ka koi defined standard nahi hai.
+            Hamesha specific raho — jitna specific, utna better.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Context Skip Karna</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            AI ko nahi pata tumhara niche kya hai, audience kaun hai, tone kya chahiye.
+            Ye sab hamesha define karo — every single time.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Pehle Output Pe Settle Ho Jaana</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            First output sirf starting point hai, final result nahi.
+            Refine karo, iterate karo — best output 3rd-4th iteration pe aata hai.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>AI Output Directly Post Karna</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Human polish zaroor karo. Apni voice, personal story add karo.
+            Raw AI content easily detectable hota hai — audience ko robotic lagta hai.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Same Prompt Baar Baar Repeat Karna</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Alag alag angles experiment karo. AI ka output vary karta hai —
+            aur naye creative angles mile sakte hain.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Negative Constraints Ignore Karna</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            "No emojis", "No hashtags", "Don't use formal language" —
+            ye constraints output quality ke liye critical hain. Hamesha add karo.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>AI ko System Mein Use Na Karna</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Random use se limited aur inconsistent results milte hain.
+            Ek defined, repeatable workflow banao aur daily follow karo.
+          </span>
+        </div>
+      </li>
     </ol>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>Viral reels strategy in mistakes se bachke banao:
-        <a href="viral-reels-strategy-2026.html">Viral Reels Strategy 2026 — Step by Step →</a>
+        <a href="blog/viral-reels-strategy-2026.html">Viral Reels Strategy 2026 — Step by Step →</a>
       </div>
     </div>
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>Instagram growth 0 to 10K:
-        <a href="instagram-growth-0-to-10k.html">Instagram Growth 0 to 10K — Real Strategy →</a>
+        <a href="blog/instagram-growth-0-to-10k.html">Instagram Growth 0 to 10K Followers — Real Strategy →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 10: REALITY ======= -->
-  <section id="reality" aria-labelledby="reality-heading">
+  <!-- ===================== SECTION 10 ===================== -->
+  <section id="reality" aria-labelledby="h-reality">
     <div class="section-label">💣 Section 10</div>
-    <h2 id="reality-heading">Reality Punch — Sach Sunne Ka Time</h2>
+    <h2 id="h-reality">Reality Punch — Sach Sunne Ka Time</h2>
 
     <div class="reality-card">
       <p class="punch-line">
         Jab log bolte hain <span>"AI hack kar lo"</span>…<br>
         Sach mein wo kar kya rahe hote hain?
       </p>
-      <p style="font-size:17px"><strong>👉 Bas better prompts + structured system use kar rahe hote hain</strong></p>
-      <p style="color:#888;font-size:14px;margin-top:10px">Koi magic nahi. Koi bypass nahi. Sirf structured thinking + disciplined system.</p>
+      <p style="font-size:17px">
+        <strong>👉 Bas better prompts + structured system use kar rahe hote hain</strong>
+      </p>
+      <p style="font-size:14px;margin-top:10px;color:var(--text4)">
+        Koi magic nahi. Koi bypass nahi. Koi secret nahi.<br>
+        Sirf structured thinking + disciplined system + consistent human creativity.
+      </p>
     </div>
+
+    <p>
+      2026 mein AI literacy ek basic skill ban gayi hai. Har student, har creator,
+      har professional ko ye samajhna chahiye ki
+      <strong>tools sab ke paas equal hain</strong> —
+      difference sirf <em>HOW you use them</em> mein hai.
+    </p>
 
     <div class="callout dark">
       <div class="callout-title" style="color:#ff8c00">🔥 Harsh Truth — 2026</div>
-      <p>ChatGPT free hai. Gemini free hai. Claude free hai. Tools sab ke paas equal hain.</p>
-      <p style="margin-top:10px"><strong style="color:#fff">Jo alag karta hai — HOW you use it.</strong> Yahi skill seekhni chahiye.</p>
+      <p>
+        ChatGPT free hai. Gemini free hai. Claude free hai. CaptionStudio free hai.
+        Tools ka access bilkul equal hai — sab ke paas same weapons hain.
+      </p>
+      <p style="margin-top:10px">
+        <strong style="color:#fff">Jo alag karta hai — wo hai HOW you use it.</strong><br>
+        Aur yahi skill seekhni chahiye. Koi shortcut nahi, koi hack nahi.
+        Sirf smart, consistent practice.
+      </p>
     </div>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>AI se seriously earning karna chahte ho?
-        <a href="ai-earning-guide-2026.html">AI se Paise Kaise Kamao 2026 →</a>
+        <a href="blog/ai-earning-guide-2026.html">AI se Paise Kaise Kamao 2026 — Complete Guide →</a>
       </div>
     </div>
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>Pro level AI strategies:
-        <a href="pro-ai-guide-2026.html">Pro AI Guide 2026 — Advanced Strategies →</a>
+        <a href="blog/pro-ai-guide-2026.html">Pro AI Guide 2026 — Advanced Level Strategies →</a>
       </div>
     </div>
   </section>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- ======= SECTION 11: UPGRADE ======= -->
-  <section id="upgrade" aria-labelledby="upgrade-heading">
+  <!-- ===================== SECTION 11 ===================== -->
+  <section id="upgrade" aria-labelledby="h-upgrade">
     <div class="section-label">🚀 Section 11</div>
-    <h2 id="upgrade-heading">Creator Upgrade — Aage Kya Karna Hai</h2>
+    <h2 id="h-upgrade">Creator Upgrade — Aage Kya Karna Hai</h2>
 
     <div class="inline-img">
       <img
         src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80&auto=format&fit=crop"
-        alt="Instagram creator growth journey 2026 - from beginner to viral using AI content systems and consistent workflow"
+        alt="Instagram creator growth journey 2026 — from beginner to viral using AI content systems and consistent workflow"
         loading="lazy" width="800" height="250"
       >
-      <p class="img-caption">Consistent system + right AI tools = Unstoppable creator growth</p>
+      <p class="img-caption">Consistent system + right AI tools = Unstoppable creator growth in 2026</p>
     </div>
 
+    <p>Ab practically kya karna chahiye? Yahan ek actionable 4-step roadmap hai:</p>
+
     <ol class="steps-list">
-      <li><div><strong>Aaj: First Structured Prompt Likho</strong><br><span style="color:#666;font-size:14px">Role + Context + Task + Format + Constraint — CaptionStudio ya ChatGPT pe try karo</span></div></li>
-      <li><div><strong>Is Hafte: Content Flow Define Karo</strong><br><span style="color:#666;font-size:14px">Hook → Caption → Hashtag → Polish — repeatable daily workflow</span></div></li>
-      <li><div><strong>Is Mahine: Prompt Library Banao</strong><br><span style="color:#666;font-size:14px">Best prompts Google Doc mein save karo — ye tumhara biggest asset banega</span></div></li>
-      <li><div><strong>Hamesha: Human Touch Mat Bhoolna</strong><br><span style="color:#666;font-size:14px">AI assistant hai, replacement nahi. Tumhari voice — tumhara competitive edge</span></div></li>
+      <li>
+        <div>
+          <strong>Aaj: Apna First Structured Prompt Likho</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Role + Context + Task + Format + Constraint — is structure mein ek prompt banao
+            aur CaptionStudio ya ChatGPT pe try karo. Pehle aur baad ka difference dekho.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Is Hafte: Apna Content Flow Define Karo</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Hook → Caption → Hashtag → Polish — ek repeatable daily workflow banao.
+            Ek baar setup karo, baar baar use karo. Time 70% save hoga.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Is Mahine: Personal Prompt Library Banao</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Jo prompts best kaam karte hain unhe ek Google Doc mein save karo.
+            Ye personal prompt library tumhara sabse valuable digital asset ban jaayega.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Hamesha: Human Touch Mat Bhoolna</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            AI ek powerful assistant hai, tumhara replacement nahi. Tumhari personality,
+            tumhari story, tumhara experience — yahi tumhara competitive edge hai jo
+            koi AI copy nahi kar sakta.
+          </span>
+        </div>
+      </li>
     </ol>
 
     <div class="final-section">
       <h3>AI ko manipulate karna matlab<br>usko <span>control karna nahi…</span></h3>
       <h3 style="margin-top:10px">👉 balki uske saath<br><span>system build karna hai 🚀</span></h3>
-      <p style="margin-top:16px">Isliye smart creators 2026 mein consistently grow kar rahe hain.</p>
+      <p>
+        Isliye smart creators 2026 mein consistently grow kar rahe hain —
+        aur baaki log sirf <em>"AI use kar rahe hain."</em>
+      </p>
     </div>
 
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>UGC creator banana chahte ho?
-        <a href="ugc-creator-complete-guide-2026.html">UGC Creator Complete Guide 2026 →</a>
+        <a href="blog/ugc-creator-complete-guide-2026.html">UGC Creator Complete Guide 2026 — ₹50K-2L Monthly →</a>
       </div>
     </div>
     <div class="also-read">
       <span class="ar-label">📖 Also Read</span>
       <div>7 din mein Instagram growth possible hai:
-        <a href="instagram-growth-7-days.html">Instagram Growth in 7 Days — Real Experiment →</a>
+        <a href="blog/instagram-growth-7-days.html">Instagram Growth in 7 Days — Real Experiment →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== MAIN CTA ===== -->
+  <!-- CTA BLOCK -->
   <div class="cta-block">
     <div style="font-size:40px;margin-bottom:12px" aria-hidden="true">🚀</div>
     <h3>Fast Captions + Hooks Chahiye?</h3>
     <p class="cta-desc">
       Bina overthinking ke — sirf topic daalo aur viral-ready content instantly pao.
-      No signup, no login, 100% free.
+      No signup, no login, 100% free. CaptionStudio pe sab kuch already structured hai.
     </p>
     <div class="cta-btn-wrap">
       <a href="https://captionstudio.in" class="cta-btn">⚡ Try CaptionStudio Free →</a>
-      <a href="https://t.me/skill2incomehub" class="cta-tg">✈️ Join Telegram Community</a>
+      <a href="https://t.me/skill2incomehub" class="cta-tg" target="_blank" rel="noopener noreferrer">✈️ Join Telegram Community</a>
     </div>
-    <p class="cta-note">✅ No login &nbsp;·&nbsp; ⚡ Instant output &nbsp;·&nbsp; 👥 500+ creators &nbsp;·&nbsp; 💯 Free forever</p>
+    <p class="cta-note">
+      ✅ No login &nbsp;·&nbsp; ⚡ Instant output &nbsp;·&nbsp;
+      👥 500+ creators &nbsp;·&nbsp; 💯 Free forever
+    </p>
   </div>
 
-  <!-- ======= SECTION 12: FAQ ======= -->
-  <section id="faq" aria-labelledby="faq-heading">
+  <!-- ===================== SECTION 12 FAQ ===================== -->
+  <section id="faq" aria-labelledby="h-faq">
     <div class="section-label">❓ Section 12</div>
-    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <h2 id="h-faq">Frequently Asked Questions</h2>
 
-    <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">Kya AI ko sach mein manipulate kiya ja sakta hai?<span class="faq-icon" aria-hidden="true">+</span></div>
-      <div class="faq-a">Haan, lekin manipulation ka matlab trick karna nahi — balki AI ko itna clear direction dena ki wo best possible output de. Isko prompt engineering kehte hain. 2026 mein ye ek high-demand skill hai jo practice se improve hoti hai.</div>
+      <div class="faq-a">Haan, lekin manipulation ka matlab trick karna nahi — balki AI ko itna clear direction dena ki wo best possible output de. Isko prompt engineering kehte hain. 2026 mein ye ek high-demand skill hai jo consistent practice se improve hoti hai.</div>
     </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
+
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">Best prompt engineering tips for beginners kya hain?<span class="faq-icon" aria-hidden="true">+</span></div>
-      <div class="faq-a">5 best tips: (1) Hamesha role define karo, (2) Context do, (3) Output format specify karo, (4) Constraints lagao, (5) Iterate karo — pehle output final nahi hota. Ek hafte ki practice se significant improvement aayegi.</div>
+      <div class="faq-a">5 best tips: (1) Hamesha role define karo, (2) Context do, (3) Output format specify karo, (4) Constraints lagao — kya nahi chahiye wo batao, (5) Iterate karo — pehle output final nahi hota. Ek hafte ki consistent practice se significant improvement guaranteed hai.</div>
     </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
+
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">ChatGPT prompts for Instagram Hindi mein kaise likhein?<span class="faq-icon" aria-hidden="true">+</span></div>
-      <div class="faq-a">Formula: "Act as [role]. Topic: [topic]. Tone: [tone]. Language: Hinglish. Output: [X] captions under [Y] words. No hashtags." Jitna specific — utna better. Ya phir CaptionStudio.in use karo — free mein, bina login ke.</div>
+      <div class="faq-a">Formula: "Act as [role]. Topic: [topic]. Tone: [tone]. Language: Hinglish. Output: [X] captions under [Y] words. No hashtags." Jitna specific — utna better. Ya phir CaptionStudio.in use karo jahan ye sab already pre-built hai — free mein, bina login ke.</div>
     </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
+
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">CaptionStudio aur ChatGPT mein kya fark hai?<span class="faq-icon" aria-hidden="true">+</span></div>
-      <div class="faq-a">ChatGPT general AI tool hai — aapko khud sab likhna padta hai. CaptionStudio specifically Indian creators ke liye bana hai — ready templates, Instagram-optimized output, hashtags, bios sab ek click mein. Bilkul free, koi login nahi.</div>
+      <div class="faq-a">ChatGPT ek general AI tool hai — aapko khud sab kuch likhna padta hai. CaptionStudio specifically Indian creators ke liye bana hai — ready-made structured templates, Instagram-optimized output, hashtags, bios sab ek click mein milte hain. Plus bilkul free hai, koi login nahi chahiye.</div>
     </div>
-    <div class="faq-item" onclick="toggleFaq(this)">
+
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)"
+      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">Prompt engineering sikhne mein kitna time lagta hai?<span class="faq-icon" aria-hidden="true">+</span></div>
-      <div class="faq-a">Basics ek din mein sikh sakte ho — is article follow karo. Intermediate level ke liye 1-2 hafte. Mastery ke liye 1-3 months consistent practice. Har roz ek naya prompt try karo — improvement guaranteed.</div>
+      <div class="faq-a">Basics ek din mein sikh sakte ho — is article ko follow karo aur aaj hi practice shuru karo. Intermediate level ke liye 1-2 hafte consistent practice. Mastery ke liye 1-3 months. Har roz ek naya prompt try karo, results analyze karo — improvement guaranteed.</div>
     </div>
   </section>
 
-  <!-- MORE FROM BLOG -->
-  <div style="background:#fff;border:1px solid #eee;border-radius:16px;padding:22px;margin:38px 0;box-shadow:0 2px 10px rgba(0,0,0,0.04)">
-    <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:16px;color:#111">📚 Aur Helpful Articles</div>
-    <!-- ✅ FIXED: Class use ki — mobile pe 1 column -->
+  <!-- MORE ARTICLES -->
+  <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:22px;margin:38px 0;box-shadow:var(--shadow1)">
+    <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:16px;color:var(--text)">
+      📚 Aur Helpful Articles
+    </div>
     <div class="more-grid">
-      <a href="hinglish-instagram-captions-2026.html" class="more-grid-link">🗣️ Hinglish Captions 2026 →</a>
-      <a href="instagram-bio-ideas-2026.html" class="more-grid-link">👤 Instagram Bio Ideas 2026 →</a>
-      <a href="viral-hacks-2026.html" class="more-grid-link">🔥 Viral Hacks 2026 →</a>
-      <a href="copy-paste-instagram-captions.html" class="more-grid-link">📋 Copy-Paste Captions →</a>
-      <a href="best-earning-apps-students-2026.html" class="more-grid-link">💸 Best Earning Apps 2026 →</a>
-      <a href="instagram-search-optimization-2026.html" class="more-grid-link">🔍 Instagram SEO 2026 →</a>
-      <a href="viral-reels-bundle-free-download-2026.html" class="more-grid-link">🎁 Free Reels Bundle →</a>
-      <a href="professional-development-guide.html" class="more-grid-link">📈 Professional Development →</a>
+      <a href="blog/hinglish-instagram-captions-2026.html">🗣️ Hinglish Captions 2026 →</a>
+      <a href="blog/instagram-bio-ideas-2026.html">👤 Instagram Bio Ideas 2026 →</a>
+      <a href="blog/viral-hacks-2026.html">🔥 Viral Hacks 2026 →</a>
+      <a href="blog/copy-paste-instagram-captions.html">📋 Copy-Paste Captions →</a>
+      <a href="blog/best-earning-apps-students-2026.html">💸 Best Earning Apps 2026 →</a>
+      <a href="blog/instagram-search-optimization-2026.html">🔍 Instagram SEO 2026 →</a>
+      <a href="blog/viral-reels-bundle-free-download-2026.html">🎁 Free Reels Bundle →</a>
+      <a href="blog/professional-development-guide.html">📈 Professional Development →</a>
     </div>
   </div>
 
@@ -1794,22 +2086,10 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
   <div class="share-section">
     <p>🔥 Ye article helpful laga? Creator friends ko share karo!</p>
     <div class="share-btns">
-      <button type="button" class="share-btn s-wa"
-        onclick="window.open('https://wa.me/?text=AI+ko+Manipulate+Kaise+Kare%3F+%F0%9F%91%89+https://captionstudio.in/blog/ai-manipulation-guide')">
-        📲 WhatsApp
-      </button>
-      <button type="button" class="share-btn s-tg"
-        onclick="window.open('https://t.me/share/url?url=https://captionstudio.in/blog/ai-manipulation-guide&text=AI+Manipulation+ka+sach+janiye')">
-        ✈️ Telegram
-      </button>
-      <button type="button" class="share-btn s-tw"
-        onclick="window.open('https://twitter.com/intent/tweet?text=AI+Manipulation+Real+System+2026&url=https://captionstudio.in/blog/ai-manipulation-guide')">
-        🐦 Twitter
-      </button>
-      <button type="button" class="share-btn s-cp" id="copy-url-btn"
-        onclick="navigator.clipboard.writeText(location.href);this.innerText='✅ Copied!'">
-        🔗 Copy Link
-      </button>
+      <button type="button" class="share-btn s-wa" id="btn-wa">📲 WhatsApp</button>
+      <button type="button" class="share-btn s-tg" id="btn-tg">✈️ Telegram</button>
+      <button type="button" class="share-btn s-tw" id="btn-tw">🐦 Twitter</button>
+      <button type="button" class="share-btn s-cp" id="btn-cp">🔗 Copy Link</button>
     </div>
   </div>
 
@@ -1821,37 +2101,40 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
       <p>
         Hum Indian creators ke liye free AI tools aur actionable guides banate hain.
         Mission: har student ke liye AI accessible banana, bina kisi investment ke.
-        Updated April 2026. <a href="about.html" style="color:#ff4d00;font-weight:600">Hamare baare mein →</a>
+        Updated April 2026.
+        <a href="about.html" style="color:#ff4d00;font-weight:600">Hamare baare mein →</a>
       </p>
     </div>
   </div>
 
 </main>
 
-<!-- ============================
+<!-- ===========================
      SIDEBAR
-============================ -->
+=========================== -->
 <aside class="blog-sidebar" aria-label="Sidebar">
 
   <!-- GLASS AD -->
   <div class="glass-ad">
     <div class="glass-ad-badge">📢 Sponsored</div>
     <h4>Need a Website Like This?</h4>
-    <p>Custom blog, AI tools page, earning hub — affordable price mein. Portfolio + SEO + Mobile optimized. Student-friendly pricing.</p>
+    <p>Custom blog, AI tools page, earning hub — affordable price mein. Portfolio + SEO + Mobile optimized. Student-friendly pricing. Fast delivery.</p>
     <a href="https://wa.me/919918996096?text=Hi!%20I%20need%20a%20website%20like%20CaptionStudio.%20Please%20share%20pricing."
-       class="glass-ad-btn">
+       class="glass-ad-btn" target="_blank" rel="noopener noreferrer">
       📱 WhatsApp Karo
     </a>
     <p class="glass-ad-note">📞 +91 99189 96096 · Fast Response</p>
   </div>
 
-  <!-- TELEGRAM CTA -->
+  <!-- TELEGRAM -->
   <div class="sidebar-card" style="background:linear-gradient(135deg,#0088cc,#005f8f);border:none">
-    <div class="sidebar-title" style="color:#fff;border-color:rgba(255,255,255,0.4)">✈️ Join Community</div>
-    <p style="font-size:13px;color:rgba(255,255,255,0.85);margin-bottom:14px;line-height:1.65">500+ creators ka group. Daily AI tips, earning gigs, free tools alerts.</p>
-    <a href="https://t.me/skill2incomehub"
+    <div class="sidebar-title" style="color:#fff;border-color:rgba(255,255,255,0.35)">✈️ Join Community</div>
+    <p style="font-size:13px;color:rgba(255,255,255,0.85);margin-bottom:14px;line-height:1.65;color:rgba(255,255,255,0.85)">
+      500+ creators ka group. Daily AI tips, earning gigs, free tools alerts aur exclusive content.
+    </p>
+    <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer"
        style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,0.18);color:#fff;padding:12px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid rgba(255,255,255,0.3);transition:background 0.2s"
-       onmouseover="this.style.background='rgba(255,255,255,0.3)'"
+       onmouseover="this.style.background='rgba(255,255,255,0.28)'"
        onmouseout="this.style.background='rgba(255,255,255,0.18)'">
       ✈️ Join Telegram Free →
     </a>
@@ -1874,9 +2157,9 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
     <div class="sidebar-title">📖 Related Articles</div>
     <div class="related-post">
       <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=120&q=70&auto=format&fit=crop"
-        alt="Viral reels strategy guide 2026" loading="lazy" width="62" height="62">
+        alt="Viral reels strategy guide 2026 for Indian creators" loading="lazy" width="62" height="62">
       <div class="related-post-info">
-        <a href="viral-reels-strategy-2026.html">Viral Reels Strategy 2026</a>
+        <a href="blog/viral-reels-strategy-2026.html">Viral Reels Strategy 2026</a>
         <span>⏱️ 6 min read</span>
       </div>
     </div>
@@ -1884,7 +2167,7 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
       <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=120&q=70&auto=format&fit=crop"
         alt="AI tools to make money online India 2026" loading="lazy" width="62" height="62">
       <div class="related-post-info">
-        <a href="ai-tools-make-money.html">AI Tools se Paise Kaise Kamao</a>
+        <a href="blog/ai-tools-make-money.html">AI Tools se Paise Kaise Kamao</a>
         <span>⏱️ 7 min read</span>
       </div>
     </div>
@@ -1892,7 +2175,7 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
       <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=120&q=70&auto=format&fit=crop"
         alt="Best earning apps for students India 2026" loading="lazy" width="62" height="62">
       <div class="related-post-info">
-        <a href="best-earning-apps-students-2026.html">Best Earning Apps for Students</a>
+        <a href="blog/best-earning-apps-students-2026.html">Best Earning Apps 2026</a>
         <span>⏱️ 4 min read</span>
       </div>
     </div>
@@ -1900,7 +2183,7 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
       <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=120&q=70&auto=format&fit=crop"
         alt="UGC creator complete guide India 2026" loading="lazy" width="62" height="62">
       <div class="related-post-info">
-        <a href="ugc-creator-complete-guide-2026.html">UGC Creator Guide 2026</a>
+        <a href="blog/ugc-creator-complete-guide-2026.html">UGC Creator Guide 2026</a>
         <span>⏱️ 8 min read</span>
       </div>
     </div>
@@ -1910,19 +2193,19 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
   <div class="sidebar-card">
     <div class="sidebar-title">🗂️ Explore Site</div>
     <div class="tool-links">
-      <a href="index.html" class="tool-link"><span>🏠</span> Home</a>
+      <a href="index.html"   class="tool-link"><span>🏠</span> Home</a>
       <a href="earning.html" class="tool-link"><span>💸</span> Earning Hub</a>
-      <a href="guide.html" class="tool-link"><span>📖</span> Guide</a>
-      <a href="relax.html" class="tool-link"><span>😌</span> Relax Zone</a>
-      <a href="about.html" class="tool-link"><span>👥</span> About Us</a>
+      <a href="guide.html"   class="tool-link"><span>📖</span> Guide</a>
+      <a href="relax.html"   class="tool-link"><span>😌</span> Relax Zone</a>
+      <a href="about.html"   class="tool-link"><span>👥</span> About Us</a>
       <a href="contact.html" class="tool-link"><span>📬</span> Contact</a>
       <a href="support.html" class="tool-link"><span>🛠</span> Support</a>
-      <a href="privacy.html" class="tool-link"><span>🔒</span> Privacy Policy</a>
+      <a href="privacy.html" class="tool-link"><span>🔒</span> Privacy</a>
     </div>
   </div>
 
 </aside>
-</div>
+</div><!-- end page-wrapper -->
 
 <!-- ============================================================
      FOOTER
@@ -1931,8 +2214,10 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
   <div class="footer-top">
     <div class="footer-brand">
       <div class="logo">Caption<span>Studio</span>.in</div>
-      <p>Free AI tools for Indian students & creators. No login, no investment. Instantly generate captions, hooks, bios, hashtags. Updated April 2026.</p>
-      <a href="https://t.me/skill2incomehub" class="footer-tg">✈️ Join Telegram Community</a>
+      <p>Free AI tools for Indian students & creators. No login, no investment. Instantly generate captions, hooks, bios & hashtags. Updated April 2026.</p>
+      <a href="https://t.me/skill2incomehub" class="footer-tg" target="_blank" rel="noopener noreferrer">
+        ✈️ Join Telegram Community
+      </a>
     </div>
     <div class="footer-col">
       <h5>AI Tools</h5>
@@ -1947,12 +2232,11 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
     <div class="footer-col">
       <h5>Top Posts</h5>
       <ul>
-        <li><a href="master-ai-guide-2026.html">🤖 Master AI Guide</a></li>
-        <li><a href="viral-reels-strategy-2026.html">🎬 Viral Reels Strategy</a></li>
-        <li><a href="instagram-growth-0-to-10k.html">📈 0 to 10K Growth</a></li>
-        <li><a href="ai-earning-guide-2026.html">💸 AI Earning Guide</a></li>
-        <li><a href="hinglish-instagram-captions-2026.html">🗣️ Hinglish Captions</a></li>
-        <li><a href="ugc-creator-complete-guide-2026.html">📹 UGC Creator Guide</a></li>
+        <li><a href="blog/master-ai-guide-2026.html">🤖 Master AI Guide</a></li>
+        <li><a href="blog/viral-reels-strategy-2026.html">🎬 Viral Reels</a></li>
+        <li><a href="blog/instagram-growth-0-to-10k.html">📈 0 to 10K Growth</a></li>
+        <li><a href="blog/ai-earning-guide-2026.html">💸 AI Earning</a></li>
+        <li><a href="blog/ugc-creator-complete-guide-2026.html">📹 UGC Creator</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1969,171 +2253,287 @@ Hinglish. 1 CTA line. Emojis sparingly.</span></pre>
   <div class="footer-bottom">
     <span>© 2026 <a href="index.html">CaptionStudio.in</a> — All rights reserved</span>
     <span>Made with ❤️ for Indian Creators · April 2026</span>
-    <span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="contact.html">Contact</a></span>
+    <span>
+      <a href="privacy.html">Privacy</a> ·
+      <a href="support.html">Support</a> ·
+      <a href="sitemap.xml">Sitemap</a>
+    </span>
   </div>
 </footer>
 
 <!-- ============================================================
-     JAVASCRIPT — ALL FIXED & MERGED
+     JAVASCRIPT — PRO LEVEL, ALL BUGS FIXED
 ============================================================ -->
 <script>
 
-  // ============================================
-  // ✅ FIX: SINGLE SCROLL LISTENER (merged all)
-  // ============================================
-  window.addEventListener('scroll', () => {
-    const scrollTop = document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (scrollTop / docHeight) * 100;
+/* ============================================
+   DARK MODE — CSS VARIABLES APPROACH
+   No FOUC. System preference supported.
+============================================ */
+function applyTheme(dark){
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  const btn = document.getElementById('dark-toggle');
+  if(btn) btn.textContent = dark ? '☀️ Light' : '🌙 Dark';
+}
+
+function toggleDark(){
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const newDark = !isDark;
+  applyTheme(newDark);
+  try { localStorage.setItem('csDark', newDark ? '1' : '0'); } catch(e){}
+}
+
+// Init on DOM ready
+(function(){
+  const saved = localStorage.getItem('csDark');
+  const sysDark = window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches;
+  const shouldDark = saved === '1' || (saved === null && sysDark);
+  applyTheme(shouldDark);
+
+  // Watch system preference change (if no saved preference)
+  if(window.matchMedia){
+    window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', e => {
+      if(localStorage.getItem('csDark') === null) applyTheme(e.matches);
+    });
+  }
+})();
+
+/* ============================================
+   SINGLE OPTIMISED SCROLL LISTENER
+   FIX: Dynamic header offset for TOC scroll
+   FIX: TOC classList.remove before add
+============================================ */
+let _raf = null;
+window.addEventListener('scroll', () => {
+  if(_raf) return;
+  _raf = requestAnimationFrame(() => {
+    _raf = null;
+
+    const scrollTop  = document.documentElement.scrollTop;
+    const docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+    const progress   = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
     // Progress bar
-    document.getElementById('progress-bar').style.width = progress + '%';
-
-    // Scroll to top button — appears after 50%
-    const scrollBtn = document.getElementById('scroll-top');
-    if (progress > 50) {
-      scrollBtn.classList.add('visible');
-    } else {
-      scrollBtn.classList.remove('visible');
+    const pb = document.getElementById('progress-bar');
+    if(pb){
+      pb.style.width = progress + '%';
+      pb.setAttribute('aria-valuenow', Math.round(progress));
     }
 
-    // TOC active highlight
+    // Scroll to top button — show after 40%
+    const topBtn = document.getElementById('scroll-top');
+    if(topBtn) topBtn.classList.toggle('visible', progress > 40);
+
+    // TOC active highlight — FIX: explicit remove then add
     let current = '';
-    document.querySelectorAll('section[id]').forEach(section => {
-      if (window.scrollY >= section.offsetTop - 100) {
-        current = section.getAttribute('id');
-      }
+    document.querySelectorAll('section[id]').forEach(sec => {
+      if(window.scrollY >= sec.offsetTop - 110) current = sec.id;
     });
     document.querySelectorAll('.toc-list a').forEach(link => {
-      link.classList.remove('toc-active');
-      if (link.getAttribute('href') === '#' + current) {
+      link.classList.remove('toc-active');  // ✅ FIX: explicit remove first
+      if(link.getAttribute('href') === '#' + current){
         link.classList.add('toc-active');
       }
     });
-  }, { passive: true }); // ✅ passive for performance
+  });
+}, { passive: true });
 
-  // ============================================
-  // MOBILE MENU
-  // ============================================
-  function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    const btn = document.getElementById('hamburger');
-    const isOpen = menu.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+/* ============================================
+   MOBILE MENU
+   FIX: Body scroll lock
+   FIX: Animated hamburger icon
+   FIX: Outside click to close
+   FIX: Escape key to close
+============================================ */
+function toggleMenu(){
+  const menu = document.getElementById('mobile-menu');
+  const btn  = document.getElementById('hamburger');
+  if(!menu || !btn) return;
+
+  const isOpen = menu.classList.toggle('open');
+  btn.classList.toggle('is-open', isOpen);
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+  // FIX: Body scroll lock when menu is open
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+// Outside click
+document.addEventListener('click', e => {
+  const menu = document.getElementById('mobile-menu');
+  const btn  = document.getElementById('hamburger');
+  if(menu && menu.classList.contains('open') &&
+     !menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove('open');
+    btn.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
   }
+});
 
-  // ✅ FIX: Close on outside click
-  document.addEventListener('click', (e) => {
+// FIX: Escape key closes menu
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){
     const menu = document.getElementById('mobile-menu');
-    const btn = document.getElementById('hamburger');
-    if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
+    const btn  = document.getElementById('hamburger');
+    if(menu && menu.classList.contains('open')){
       menu.classList.remove('open');
+      btn.classList.remove('is-open');
       btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
+  }
+});
+
+/* ============================================
+   FAQ ACCORDION
+   FIX: Keyboard accessible (Enter + Space)
+   FIX: aria-expanded updated
+============================================ */
+function toggleFaq(el){
+  const isOpen = el.classList.contains('open');
+
+  // Close all others
+  document.querySelectorAll('.faq-item').forEach(f => {
+    f.classList.remove('open');
+    f.setAttribute('aria-expanded', 'false');
   });
 
-  // ============================================
-  // DARK MODE
-  // ============================================
-  function toggleDark() {
-    document.body.classList.toggle('dark-mode');
-    const btn = document.getElementById('dark-toggle');
-    const isDark = document.body.classList.contains('dark-mode');
-    btn.textContent = isDark ? '☀️ Light' : '🌙 Dark';
-    // Save preference
-    localStorage.setItem('captionDark', isDark ? '1' : '0');
+  // Toggle current
+  if(!isOpen){
+    el.classList.add('open');
+    el.setAttribute('aria-expanded', 'true');
   }
+}
 
-  // Load saved preference
-  (function(){
-    if (localStorage.getItem('captionDark') === '1') {
-      document.body.classList.add('dark-mode');
-      const btn = document.getElementById('dark-toggle');
-      if (btn) btn.textContent = '☀️ Light';
-    }
-  })();
+/* ============================================
+   TOC SMOOTH SCROLL
+   FIX: Dynamic header offset calculation
+============================================ */
+document.querySelectorAll('.toc-list a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if(!target) return;
 
-  // ============================================
-  // FAQ ACCORDION
-  // ============================================
-  function toggleFaq(el) {
-    document.querySelectorAll('.faq-item').forEach(faq => {
-      if (faq !== el) faq.classList.remove('open');
+    // FIX: Calculate actual header height dynamically
+    const header    = document.querySelector('header');
+    const headerH   = header ? header.offsetHeight : 70;
+    const extraGap  = 12;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - headerH - extraGap;
+
+    window.scrollTo({ top: targetTop, behavior: 'smooth' });
+  });
+});
+
+/* ============================================
+   COPY PROMPT BUTTON
+============================================ */
+function copyPrompt(btn, id){
+  const el = document.getElementById(id);
+  if(!el) return;
+
+  const text = el.innerText || el.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = '✅ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.classList.remove('copied');
+    }, 2500);
+  }).catch(() => {
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    btn.textContent = '✅ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '📋 Copy'; btn.classList.remove('copied'); }, 2500);
+  });
+}
+
+/* ============================================
+   DYNAMIC SHARE BUTTONS
+   FIX: Uses actual window.location.href
+   FIX: Dynamic title from document.title
+============================================ */
+(function(){
+  const url   = encodeURIComponent(window.location.href);
+  const title = encodeURIComponent(document.title);
+  const msg   = encodeURIComponent('AI Manipulation ka sach janiye 🔥 ');
+
+  const wa = document.getElementById('btn-wa');
+  const tg = document.getElementById('btn-tg');
+  const tw = document.getElementById('btn-tw');
+  const cp = document.getElementById('btn-cp');
+
+  if(wa) wa.onclick = () => window.open('https://wa.me/?text=' + msg + url, '_blank');
+  if(tg) tg.onclick = () => window.open('https://t.me/share/url?url=' + url + '&text=' + msg, '_blank');
+  if(tw) tw.onclick = () => window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + title, '_blank');
+
+  if(cp) cp.onclick = () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      cp.textContent = '✅ Copied!';
+      setTimeout(() => { cp.textContent = '🔗 Copy Link'; }, 2500);
     });
-    el.classList.toggle('open');
-  }
+  };
+})();
 
-  // ============================================
-  // TOC SMOOTH SCROLL — ✅ FIX: correct offset
-  // ============================================
-  document.querySelectorAll('.toc-list a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        const offset = 75; // ✅ FIX: sticky header ~70px + 5px breathing room
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
+/* ============================================
+   DYNAMIC READ TIME CALCULATOR
+============================================ */
+(function(){
+  const mc = document.getElementById('main-content');
+  if(!mc) return;
+  const words = (mc.innerText || mc.textContent).trim().split(/\s+/).length;
+  const mins  = Math.ceil(words / 220); // avg 220 wpm
+  const badge = document.getElementById('read-time-display');
+  if(badge) badge.innerHTML = `⏱️ ${mins} min read &nbsp;·&nbsp; 📖 ~${words.toLocaleString()} words`;
+})();
+
+/* ============================================
+   LAZY IMAGE INTERSECTION OBSERVER
+   FIX: Uses CSS class .loaded instead of inline style
+        to allow CSS transitions to work properly
+============================================ */
+if('IntersectionObserver' in window){
+  const imgObs = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('loaded');
+        obs.unobserve(entry.target);
       }
     });
+  }, { rootMargin: '0px 0px 50px 0px', threshold: 0.05 });
+
+  document.querySelectorAll('.inline-img img').forEach(img => {
+    imgObs.observe(img);
   });
+} else {
+  // Fallback for old browsers
+  document.querySelectorAll('.inline-img img').forEach(img => {
+    img.classList.add('loaded');
+  });
+}
 
-  // ============================================
-  // ✅ NEW: COPY PROMPT BUTTON
-  // ============================================
-  function copyPrompt(btn, preId) {
-    const pre = document.getElementById(preId);
-    if (!pre) return;
-    // Get plain text (strip HTML tags)
-    const text = pre.innerText || pre.textContent;
-    navigator.clipboard.writeText(text).then(() => {
-      btn.textContent = '✅ Copied!';
-      btn.classList.add('copied');
-      setTimeout(() => {
-        btn.textContent = '📋 Copy';
-        btn.classList.remove('copied');
-      }, 2000);
-    }).catch(() => {
-      btn.textContent = '❌ Error';
-      setTimeout(() => { btn.textContent = '📋 Copy'; }, 2000);
-    });
-  }
-
-  // ============================================
-  // ✅ NEW: DYNAMIC READ TIME CALCULATOR
-  // ============================================
-  (function(){
-    const mainContent = document.getElementById('main-content');
-    if (!mainContent) return;
-    const text = mainContent.innerText || mainContent.textContent;
-    const words = text.trim().split(/\s+/).length;
-    const mins = Math.ceil(words / 220); // avg reading speed
-    const badge = document.getElementById('read-time-display');
-    if (badge) badge.innerHTML = `⏱️ ${mins} min read &nbsp;·&nbsp; 📖 ~${words.toLocaleString()} words`;
-  })();
-
-  // ============================================
-  // LAZY IMAGE FADE-IN
-  // ============================================
-  const lazyImgs = document.querySelectorAll('img[loading="lazy"]');
-  if ('IntersectionObserver' in window) {
-    const imgObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          imgObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    lazyImgs.forEach(img => {
-      img.style.opacity = '0';
-      img.style.transform = 'translateY(12px)';
-      img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      imgObs.observe(img);
-    });
-  }
+/* ============================================
+   PERFORMANCE: Preload next likely page
+============================================ */
+(function(){
+  const links = ['blog.html', 'index.html'];
+  links.forEach(href => {
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    document.head.appendChild(link);
+  });
+})();
 
 </script>
 
