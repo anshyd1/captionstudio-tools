@@ -1,61 +1,56 @@
 [
   {
-  "title": "AI Manipulation Guide 2026 | Psychology + Prompts Se Logon Ka Attention Kaise Control Kare",
-  "desc": "AI ko use karke audience ka attention, curiosity aur engagement kaise control kare? Learn ethical AI influence, viral hooks, psychology tricks & prompt strategies for reels, content & marketing 🚀",
-  "link": "blog/ai-manipulation-guide.html",
-  "slug": "ai-manipulation-guide",
-  "date": "2026-04-25",
-  "displayTag": "🧠 AI PSYCHOLOGY",
-  "tags": ["ai", "psychology", "viral", "content", "hooks", "marketing"],
-  "category": ["ai", "content", "growth"],
-  "trendScore": 96,
-  "featured": true,
-  "thumbnail": "images/ai-manipulation-guide.jpg",
-  "readTime": "6 min"
+    "title": "AI Manipulation Guide 2026 | Psychology + Prompts Se Logon Ka Attention Kaise Control Kare",
+    "desc": "AI ko use karke audience ka attention, curiosity aur engagement kaise control kare? Learn ethical AI influence, viral hooks, psychology tricks & prompt strategies for reels, content & marketing 🚀",
+    "link": "blog/ai-manipulation-guide.html",
+    "date": "2026-04-25",
+    "displayTag": "🧠 AI PSYCHOLOGY",
+    "category": "ai",
+    "hot": true,
+    "readTime": "6 min"
   },
   {
-  "title": "Instagram Growth in 7 Days 2026",
-  "desc": "7 din me Instagram pe followers aur engagement badhane ka complete plan 🚀",
-  "link": "blog/instagram-growth-7-days.html",
-  "date": "2026-04-06",
-  "tag": "📈 GROWTH",
-  "category": "instagram",
-  "hot": true
+    "title": "Instagram Growth in 7 Days 2026",
+    "desc": "7 din me Instagram pe followers aur engagement badhane ka complete plan 🚀",
+    "link": "blog/instagram-growth-7-days.html",
+    "date": "2026-04-06",
+    "displayTag": "📈 GROWTH",
+    "category": "instagram",
+    "hot": true
   },
   {
-  "title": "Copy-Paste Instagram Captions 2026 | 200+ Viral Reels Hooks 🔥",
-  "desc": "Best copy-paste Instagram captions for attitude, reels & viral posts. Direct copy feature available for 200+ trending hooks and Hinglish captions 🚀",
-  "link": "blog/copy-paste-instagram-captions.html",
-  "date": "2026-04-24",
-  "tag": "🔥 COPY-PASTE",
-  "category": "instagram",
-  "hot": true
-  },
-
-  {
-  "title": "UGC Creator Kaise Bane 2026 | ₹50,000-2 Lakh Monthly Without Followers",
-  "desc": "UGC Creator ban kar ₹50K-2L kamao BINA followers ke! Complete guide — brands kaise approach kare, pricing, portfolio tips. Realistic earnings breakdown + step-by-step strategy 🚀",
-  "link": "blog/ugc-creator-complete-guide-2026.html",
-  "date": "2026-04-20",
-  "tag": "💰 UGC CREATOR",
-  "category": "earning",
-  "hot": true
+    "title": "Copy-Paste Instagram Captions 2026 | 200+ Viral Reels Hooks 🔥",
+    "desc": "Best copy-paste Instagram captions for attitude, reels & viral posts. Direct copy feature available for 200+ trending hooks and Hinglish captions 🚀",
+    "link": "blog/copy-paste-instagram-captions.html",
+    "date": "2026-04-24",
+    "displayTag": "🔥 COPY-PASTE",
+    "category": "instagram",
+    "hot": true
   },
   {
-  "title": "Behind-The-Scenes Content Strategy 2026 | BTS Reels Se Engagement Kaise Badhaye",
-  "desc": "Raw & authentic BTS content ab sabse zyada viral! Complete strategy — behind the scenes reels ideas, authentic content tips, team content aur brand trust building. Step-by-step Hindi guide 🎬",
-  "link": "blog/behind-the-scenes-content-strategy-2026.html",
-  "date": "2026-04-20",
-  "tag": "🎬 BTS CONTENT",
-  "category": "instagram",
-  "hot": true
+    "title": "UGC Creator Kaise Bane 2026 | ₹50,000-2 Lakh Monthly Without Followers",
+    "desc": "UGC Creator ban kar ₹50K-2L kamao BINA followers ke! Complete guide — brands kaise approach kare, pricing, portfolio tips. Realistic earnings breakdown + step-by-step strategy 🚀",
+    "link": "blog/ugc-creator-complete-guide-2026.html",
+    "date": "2026-04-20",
+    "displayTag": "💰 UGC CREATOR",
+    "category": "earning",
+    "hot": true
+  },
+  {
+    "title": "Behind-The-Scenes Content Strategy 2026 | BTS Reels Se Engagement Kaise Badhaye",
+    "desc": "Raw & authentic BTS content ab sabse zyada viral! Complete strategy — behind the scenes reels ideas, authentic content tips, team content aur brand trust building. Step-by-step Hindi guide 🎬",
+    "link": "blog/behind-the-scenes-content-strategy-2026.html",
+    "date": "2026-04-20",
+    "displayTag": "🎬 BTS CONTENT",
+    "category": "instagram",
+    "hot": true
   },
   {
     "title": "Instagram Search Optimization 2026 | How to Rank on Instagram Like Google SEO",
     "desc": "Instagram ab search engine ban gaya hai! Complete Instagram SEO guide 2026 — keyword optimization, hashtags, profile SEO aur ranking tips. Step-by-step Hindi guide 🚀",
     "link": "blog/instagram-search-optimization-2026.html",
     "date": "2026-04-19",
-    "tag": "🔍 INSTAGRAM SEO",
+    "displayTag": "🔍 INSTAGRAM SEO",
     "category": "instagram",
     "hot": true
   },
@@ -64,7 +59,7 @@
     "desc": "Download free viral reels bundle 2026, 5000+ motion graphics pack for CapCut, faceless AI reels, facts reels bundle & earn money from Instagram. Free tools by CaptionStudio 🚀",
     "link": "blog/viral-reels-bundle-free-download-2026.html",
     "date": "2026-04-19",
-    "tag": "🔥 VIRAL PACK",
+    "displayTag": "🔥 VIRAL PACK",
     "category": "instagram",
     "hot": true
   },
@@ -73,7 +68,7 @@
     "desc": "Complete Professional Development Guide Hinglish me. Career growth strategies, skill building, leadership, productivity hacks & networking tips. Indian professionals ke liye actionable advice 🚀",
     "link": "blog/professional-development-guide.html",
     "date": "2026-04-13",
-    "tag": "🚀 CAREER",
+    "displayTag": "🚀 CAREER",
     "category": "career",
     "hot": true
   },
@@ -82,7 +77,7 @@
     "desc": "200+ Hinglish Instagram captions for reels, attitude, sad & bio ideas. Includes Viral reels hooks + Instagram growth strategy 2026 tips. Copy-paste aur post karo 🚀",
     "link": "blog/ultimate-instagram-captions.html",
     "date": "2026-04-11",
-    "tag": "🔥 CAPTIONS",
+    "displayTag": "🔥 CAPTIONS",
     "category": "instagram",
     "hot": true
   },
@@ -91,7 +86,7 @@
     "desc": "100+ Hinglish captions for reels, attitude, love & viral posts 🚀 | Instagram growth strategy 2026 keywords included (viral reels hooks).",
     "link": "blog/hinglish-instagram-captions-2026.html",
     "date": "2026-04-10",
-    "tag": "🔥 CAPTION",
+    "displayTag": "🔥 CAPTION",
     "category": "captions",
     "hot": true
   },
@@ -100,7 +95,7 @@
     "desc": "Copy-paste 200+ trending hashtags to viral your reels instantly 🚀",
     "link": "blog/trending-hashtags-reels-2026.html",
     "date": "2026-04-09",
-    "tag": "🏷️ HASHTAGS",
+    "displayTag": "🏷️ HASHTAGS",
     "category": "instagram",
     "hot": true
   },
@@ -109,7 +104,7 @@
     "desc": "100+ copy-paste viral captions, hooks & Instagram growth strategy 2026. Viral reels hooks ko use karke reach badhao 🚀",
     "link": "blog/viral-captions-for-reels-2026.html",
     "date": "2026-04-08",
-    "tag": "🔥 CAPTION",
+    "displayTag": "🔥 CAPTION",
     "category": "captions",
     "hot": true
   },
@@ -118,7 +113,7 @@
     "desc": "Instagram algorithm samjho aur reels viral karo 🚀",
     "link": "blog/viral-reels-strategy-2026.html",
     "date": "2026-04-08",
-    "tag": "🚀 VIRAL",
+    "displayTag": "🚀 VIRAL",
     "category": "instagram",
     "hot": true
   },
@@ -127,7 +122,7 @@
     "desc": "Faceless reels se earning system seekho 💰",
     "link": "blog/faceless-instagram-earn-money.html",
     "date": "2026-04-07",
-    "tag": "💸 EARNING",
+    "displayTag": "💸 EARNING",
     "category": "instagram",
     "hot": true
   },
@@ -136,7 +131,7 @@
     "desc": "Top AI tools se Instagram growth boost karo, viral reels banao aur fast followers gain karo 🚀",
     "link": "blog/ai-tools-instagram-reach.html",
     "date": "2026-04-07",
-    "tag": "🤖 AI",
+    "displayTag": "🤖 AI",
     "category": "ai",
     "hot": true
   },
@@ -145,7 +140,7 @@
     "desc": "Step-by-step guide to grow Instagram fast 🚀",
     "link": "blog/instagram-growth-0-to-10k.html",
     "date": "2026-04-07",
-    "tag": "📈 GROWTH",
+    "displayTag": "📈 GROWTH",
     "category": "instagram",
     "hot": true
   },
@@ -154,7 +149,7 @@
     "desc": "AI tools se paise kaise kamaye – beginner guide 💰",
     "link": "blog/ai-tools-make-money.html",
     "date": "2026-04-07",
-    "tag": "💸 EARNING",
+    "displayTag": "💸 EARNING",
     "category": "ai",
     "hot": true
   },
@@ -163,7 +158,7 @@
     "desc": "Top apps to earn money without investment.",
     "link": "blog/best-earning-apps-students-2026.html",
     "date": "2026-04-05",
-    "tag": "💸 EARNING",
+    "displayTag": "💸 EARNING",
     "category": "earning",
     "hot": false
   },
@@ -172,7 +167,7 @@
     "desc": "₹500–₹700 earning tricks with proof.",
     "link": "blog/biggest-money-loot-offers-april-2026.html",
     "date": "2026-04-05",
-    "tag": "💰 LOOT",
+    "displayTag": "💰 LOOT",
     "category": "earning",
     "hot": true
   },
@@ -181,7 +176,7 @@
     "desc": "Cashback tricks and earning methods.",
     "link": "blog/mobikwik-loot-2026.html",
     "date": "2026-04-05",
-    "tag": "💰 LOOT",
+    "displayTag": "💰 LOOT",
     "category": "earning",
     "hot": false
   },
@@ -190,7 +185,7 @@
     "desc": "Complete AI earning system for beginners.",
     "link": "blog/ai-earning-guide-2026.html",
     "date": "2026-04-04",
-    "tag": "🤖 AI",
+    "displayTag": "🤖 AI",
     "category": "ai",
     "hot": false
   },
@@ -199,7 +194,7 @@
     "desc": "Advanced AI tools and earning strategies.",
     "link": "blog/master-ai-guide-2026.html",
     "date": "2026-04-04",
-    "tag": "🤖 AI",
+    "displayTag": "🤖 AI",
     "category": "ai",
     "hot": false
   },
@@ -208,7 +203,7 @@
     "desc": "Future of AI tools and automation.",
     "link": "blog/new-era-ai-2026.html",
     "date": "2026-04-04",
-    "tag": "🤖 AI",
+    "displayTag": "🤖 AI",
     "category": "ai",
     "hot": false
   },
@@ -217,7 +212,7 @@
     "desc": "Advanced AI earning system explained.",
     "link": "blog/pro-ai-guide-2026.html",
     "date": "2026-04-04",
-    "tag": "🤖 AI",
+    "displayTag": "🤖 AI",
     "category": "ai",
     "hot": false
   },
@@ -226,7 +221,7 @@
     "desc": "Build winning habits and mindset.",
     "link": "blog/success-mindset-2026.html",
     "date": "2026-04-04",
-    "tag": "🧠 MINDSET",
+    "displayTag": "🧠 MINDSET",
     "category": "mindset",
     "hot": false
   },
@@ -235,7 +230,7 @@
     "desc": "How to write captions that go viral.",
     "link": "blog/viral-caption-strategy-2026.html",
     "date": "2026-04-04",
-    "tag": "✍️ CONTENT",
+    "displayTag": "✍️ CONTENT",
     "category": "content",
     "hot": false
   },
@@ -244,7 +239,7 @@
     "desc": "Increase reach and followers fast.",
     "link": "blog/viral-hacks-2026.html",
     "date": "2026-04-04",
-    "tag": "🚀 VIRAL",
+    "displayTag": "🚀 VIRAL",
     "category": "instagram",
     "hot": false
   },
@@ -253,7 +248,7 @@
     "desc": "Attitude, stylish and viral captions.",
     "link": "blog/best-captions-boys-2026.html",
     "date": "2026-04-02",
-    "tag": "🔥 CAPTION",
+    "displayTag": "🔥 CAPTION",
     "category": "captions",
     "hot": false
   },
@@ -262,7 +257,7 @@
     "desc": "Viral captions to boost reel reach.",
     "link": "blog/best-instagram-captions-reels-2026.html",
     "date": "2026-04-02",
-    "tag": "📈 GROWTH",
+    "displayTag": "📈 GROWTH",
     "category": "instagram",
     "hot": false
   },
@@ -271,7 +266,7 @@
     "desc": "Professional email writing for work & clients.",
     "link": "blog/email-writing-guide.html",
     "date": "2026-04-02",
-    "tag": "✉️ SKILL",
+    "displayTag": "✉️ SKILL",
     "category": "skill",
     "hot": false
   },
@@ -280,7 +275,7 @@
     "desc": "Stylish and viral bio ideas.",
     "link": "blog/instagram-bio-ideas-2026.html",
     "date": "2026-04-02",
-    "tag": "📱 INSTAGRAM",
+    "displayTag": "📱 INSTAGRAM",
     "category": "instagram",
     "hot": false
   }
