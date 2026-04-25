@@ -1,14 +1,11 @@
 User-agent: *
 Allow: /
 
-# Important folders
-Allow: /tools/
-Allow: /blog/
+Block only sensitive / useless paths
 
-# Block useless paths (optional)
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*?*
 
-# Sitemap
+Sitemap
+
 Sitemap: https://captionstudio.in/sitemap.xml
