@@ -1,112 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- ===== FOUC PREVENTION ===== -->
+<script>
+(function(){
+  try{
+    var s=localStorage.getItem('csDark');
+    var sys=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+    if(s==='1'||(s===null&&sys))document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Terms & Conditions | CaptionStudio.in</title>
+<meta name="description" content="CaptionStudio Terms & Conditions — Read our terms of use, earning disclaimer, intellectual property rights, and limitation of liability for using our free AI tools.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://captionstudio.in/terms.html">
 
-<title>Terms & Conditions | CaptionStudio</title>
+<meta property="og:title" content="Terms & Conditions | CaptionStudio.in">
+<meta property="og:description" content="Terms of use for CaptionStudio — free AI tools, earning disclaimers, and user guidelines.">
+<meta property="og:url" content="https://captionstudio.in/terms.html">
+<meta property="og:type" content="website">
 
-<meta name="description" content="Terms and Conditions for using CaptionStudio AI tools and services.">
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.png" type="image/png">
 
 <style>
-body{margin:0;font-family:'DM Sans';background:#faf9f6;color:#111;line-height:1.6}
-h1,h2{font-family:'Syne'}
 
-nav{display:flex;justify-content:space-between;padding:15px 5%;background:#fff;border-bottom:1px solid #eee}
-nav a{text-decoration:none;color:#333;margin-left:15px}
+/* ================================================
+   CSS CUSTOM PROPERTIES
+================================================ */
+:root{
+  --bg:#faf9f6; --bg2:#fff; --bg3:#f8f9fa;
+  --text:#111; --text2:#333; --text3:#555; --text4:#888;
+  --border:#eee; --border2:#f0f0f0;
+  --accent:#ff4d00; --accent2:#ff8c00;
+  --accent-bg:#fff3e0; --accent-border:#ffd5c2;
+  --shadow1:0 2px 10px rgba(0,0,0,0.04);
+  --shadow2:0 6px 25px rgba(0,0,0,0.06);
+  --nav-bg:#fff; --footer-bg:#111;
+  --footer-text:#666; --footer-head:#fff;
+  --card-bg:#fff;
+}
+[data-theme="dark"]{
+  --bg:#0f0f0f; --bg2:#1a1a1a; --bg3:#222;
+  --text:#f0f0f0; --text2:#ddd; --text3:#bbb; --text4:#888;
+  --border:#2a2a2a; --border2:#333;
+  --accent-bg:#1a0a00; --accent-border:#3a1a00;
+  --shadow1:0 2px 10px rgba(0,0,0,0.3);
+  --shadow2:0 6px 25px rgba(0,0,0,0.4);
+  --nav-bg:#1a1a1a; --footer-bg:#0a0a0a;
+  --footer-text:#555; --footer-head:#f0f0f0;
+  --card-bg:#1a1a1a;
+}
 
-.container{max-width:800px;margin:auto;padding:30px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;font-size:16px;transition:background .3s,color .3s}
+h1,h2,h3,h4{font-family:'Syne',sans-serif;line-height:1.25;color:var(--text)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
-h1{font-size:34px}
-h2{margin-top:30px}
+/* ===== HEADER ===== */
+header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:background .3s}
+.nav-top{display:flex;justify-content:space-between;align-items:center;padding:13px 5%;max-width:1200px;margin:0 auto;gap:10px}
+.nav-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--text);display:flex;align-items:center;gap:6px;flex-shrink:0}
+.nav-logo span{color:#ff4d00}
+.nav-logo img{width:28px;height:28px;border-radius:6px}
+.nav-links{display:flex;align-items:center;gap:3px;list-style:none;flex-wrap:wrap}
+.nav-links a{font-size:13px;color:var(--text3);padding:6px 10px;border-radius:20px;transition:all .2s;font-weight:500}
+.nav-links a:hover{background:var(--bg3);color:var(--text)}
+.nav-links a.active{background:var(--accent-bg);color:#ff4d00;font-weight:700}
+.nav-links .btn-nav{background:#ff4d00;color:#fff;padding:8px 16px;border-radius:25px;font-weight:700;font-size:13px;transition:all .2s}
+.nav-links .btn-nav:hover{background:#e63d00}
+.nav-right-controls{display:flex;align-items:center;gap:8px;flex-shrink:0}
+#dark-toggle{background:var(--bg2);border:1.5px solid var(--border);border-radius:25px;padding:6px 14px;cursor:pointer;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text3);transition:all .2s;display:flex;align-items:center;gap:6px;white-space:nowrap}
+#dark-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block;transition:all .3s}
+.hamburger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.is-open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;background:var(--nav-bg);border-top:1px solid var(--border);padding:12px 5%;gap:4px;max-height:80vh;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:14px;color:var(--text3);padding:10px 14px;border-radius:8px;font-weight:500;transition:background .2s}
+.mobile-menu a:hover{background:var(--bg3);color:var(--text)}
 
-footer{background:#111;color:#fff;padding:40px 5%;margin-top:40px}
-footer a{color:#bbb;text-decoration:none;margin:0 8px}
-.footer-bottom{text-align:center;margin-top:20px;color:#777;font-size:13px}
+/* ===== BREADCRUMB ===== */
+.breadcrumb{max-width:900px;margin:0 auto;padding:10px 5%;font-size:12px;color:var(--text4);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.breadcrumb a{color:#ff4d00}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb .sep{color:var(--border2)}
+
+/* ===== HERO SECTION ===== */
+.page-hero{background:linear-gradient(135deg,#fff8f5,#fff3ee);border-bottom:1px solid var(--accent-border);padding:50px 5%;text-align:center}
+[data-theme="dark"] .page-hero{background:linear-gradient(135deg,#1a0800,#120500);border-bottom-color:#3a1a00}
+.page-hero .hero-icon{font-size:48px;margin-bottom:16px}
+.page-hero h1{font-size:clamp(28px,5vw,42px);margin-bottom:12px;letter-spacing:-.5px}
+.page-hero h1 span{background:linear-gradient(135deg,#ff4d00,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-hero p{font-size:16px;color:var(--text3);max-width:520px;margin:0 auto 20px}
+.page-hero .last-updated{display:inline-flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--border);padding:6px 16px;border-radius:25px;font-size:12px;color:var(--text3);box-shadow:var(--shadow1)}
+
+/* ===== LAYOUT ===== */
+.page-wrapper{max-width:900px;margin:0 auto;padding:50px 5% 80px;display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start}
+.content-main{min-width:0}
+.content-sidebar{position:sticky;top:90px}
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc-card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:20px;box-shadow:var(--shadow1)}
+.toc-card-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid #ff4d00;display:flex;align-items:center;gap:8px}
+.toc-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px}
+.toc-links a{font-size:13px;color:var(--text3);padding:7px 10px;border-radius:8px;transition:all .2s;display:flex;align-items:center;gap:8px}
+.toc-links a:hover,.toc-links a.toc-active{background:var(--accent-bg);color:#ff4d00}
+.toc-links a .toc-num{font-size:10px;color:var(--text4);min-width:18px;font-weight:700;font-family:'Syne',sans-serif}
+
+/* ===== TERMS SECTIONS ===== */
+.terms-section{margin-bottom:48px}
+.terms-section:last-child{margin-bottom:0}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.section-icon{width:44px;height:44px;background:linear-gradient(135deg,#ff4d00,#ff8c00);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.section-header-text h2{font-size:20px;color:var(--text);margin-bottom:2px}
+.section-header-text span{font-size:12px;color:var(--text4)}
+.terms-section p{font-size:15px;color:var(--text2);line-height:1.85;margin-bottom:14px}
+.terms-section p:last-child{margin-bottom:0}
+
+/* ===== HIGHLIGHT BOXES ===== */
+.highlight-box{border-radius:12px;padding:16px 20px;margin:16px 0;display:flex;gap:12px;align-items:flex-start}
+.highlight-box.warning{background:linear-gradient(135deg,#fffdf0,#fffbe6);border:1px solid #fde68a}
+.highlight-box.info{background:linear-gradient(135deg,#f0f7ff,#e8f3ff);border:1px solid #bfdbfe}
+.highlight-box.success{background:linear-gradient(135deg,#f0fff4,#e6ffed);border:1px solid #b2f0c5}
+.highlight-box.danger{background:linear-gradient(135deg,#fff5f5,#ffe0e0);border:1px solid #ffcccc}
+[data-theme="dark"] .highlight-box.warning{background:linear-gradient(135deg,#1a1500,#100e00);border-color:#4a3800}
+[data-theme="dark"] .highlight-box.info{background:linear-gradient(135deg,#001020,#000a18);border-color:#003060}
+[data-theme="dark"] .highlight-box.success{background:linear-gradient(135deg,#001a08,#000f05);border-color:#003010}
+[data-theme="dark"] .highlight-box.danger{background:linear-gradient(135deg,#1a0000,#100000);border-color:#5a0000}
+.hb-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.hb-text{font-size:14px;color:var(--text2);line-height:1.7}
+.hb-text strong{color:var(--text)}
+
+/* ===== TERMS LIST ===== */
+.terms-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px}
+.terms-list li{display:flex;gap:10px;font-size:14px;color:var(--text2);align-items:flex-start;padding:10px 14px;background:var(--bg3);border-radius:10px;border-left:3px solid #ff4d00;line-height:1.65}
+.terms-list li .li-icon{color:#ff4d00;font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ===== CONTACT CARD ===== */
+.contact-card{background:linear-gradient(135deg,#001a12,#002a1e);border:1px solid rgba(0,184,148,.3);border-radius:16px;padding:24px;text-align:center;margin-top:16px}
+.contact-card h4{font-family:'Syne',sans-serif;font-size:16px;color:#fff;margin-bottom:8px}
+.contact-card p{font-size:14px;color:rgba(255,255,255,.7);margin-bottom:14px;line-height:1.6}
+.contact-email{display:inline-flex;align-items:center;gap:8px;background:#ff4d00;color:#fff;padding:10px 22px;border-radius:25px;font-weight:700;font-size:14px;transition:all .2s}
+.contact-email:hover{background:#e63d00;transform:translateY(-2px)}
+.contact-tg{display:inline-flex;align-items:center;gap:8px;background:#0088cc;color:#fff;padding:10px 22px;border-radius:25px;font-weight:700;font-size:14px;transition:all .2s;margin-top:10px;width:100%;justify-content:center}
+.contact-tg:hover{background:#006fa8;transform:translateY(-2px)}
+
+/* ===== SIDEBAR QUICK NAV ===== */
+.quick-links{list-style:none;padding:0;display:flex;flex-direction:column;gap:7px;margin-top:16px}
+.quick-links a{display:flex;align-items:center;gap:9px;padding:10px 13px;background:var(--bg3);border-radius:10px;font-size:13px;color:var(--text2);transition:all .2s;border:1px solid var(--border)}
+.quick-links a:hover{background:var(--accent-bg);color:#ff4d00;border-color:var(--accent-border);transform:translateX(3px)}
+.quick-links a span{font-size:15px;flex-shrink:0}
+
+/* ===== FOOTER ===== */
+footer{background:var(--footer-bg);color:var(--footer-text)}
+.footer-top{max-width:1100px;margin:0 auto;padding:50px 5% 35px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px}
+.footer-brand .logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--footer-head);margin-bottom:10px}
+.footer-brand .logo span{color:#ff4d00}
+.footer-brand p{font-size:13px;line-height:1.7;margin-bottom:16px}
+.footer-tg{display:inline-flex;align-items:center;gap:8px;background:#0088cc;color:#fff;padding:9px 18px;border-radius:25px;font-size:13px;font-weight:700;transition:background .2s}
+.footer-tg:hover{background:#006fa8}
+.footer-col h5{font-family:'Syne',sans-serif;font-size:13px;color:var(--footer-head);font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul a{font-size:13px;color:var(--footer-text);transition:color .2s;display:flex;align-items:center;gap:5px}
+.footer-col ul a:hover{color:#ff4d00}
+.footer-bottom{border-top:1px solid #222;max-width:1100px;margin:0 auto;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px;color:#555}
+.footer-bottom a{color:#ff8c00}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:800px){
+  .page-wrapper{grid-template-columns:1fr;gap:0}
+  .content-sidebar{position:static;margin-top:0;order:-1}
+  .toc-card{margin-bottom:30px}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .footer-top{grid-template-columns:1fr}
+  .page-hero{padding:36px 5%}
+  .section-header{flex-direction:column;align-items:flex-start;gap:10px}
+}
+
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-<b>CaptionStudio</b>
-<div>
-<a href="index.html">Home</a>
-<a href="tools/">Tools</a>
-<a href="contact.html">Contact</a>
-</div>
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="nav-top">
+    <a class="nav-logo" href="index.html" aria-label="CaptionStudio Home">
+      <img src="favicon.png" alt="CaptionStudio" loading="lazy" width="28" height="28">
+      Caption<span>Studio</span>
+    </a>
+    <ul class="nav-links" role="navigation" aria-label="Main navigation">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="tools/">⚡ Tools</a></li>
+      <li><a href="blog/">✍️ Blog</a></li>
+      <li><a href="guide.html">📖 Guide</a></li>
+      <li><a href="earning.html">💸 Earning</a></li>
+      <li><a href="relax.html">😌 Relax</a></li>
+      <li><a href="about.html">👥 About</a></li>
+      <li><a href="contact.html">📬 Contact</a></li>
+      <li><a href="https://t.me/skill2incomehub" class="btn-nav" target="_blank" rel="noopener noreferrer">✈️ Telegram</a></li>
+    </ul>
+    <div class="nav-right-controls">
+      <button id="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode" type="button">🌙 Dark</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" type="button"
+        aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">🏠 Home</a>
+    <a href="tools/">⚡ Tools</a>
+    <a href="blog/">✍️ Blog</a>
+    <a href="guide.html">📖 Guide</a>
+    <a href="earning.html">💸 Earning</a>
+    <a href="relax.html">😌 Relax</a>
+    <a href="about.html">👥 About</a>
+    <a href="contact.html">📬 Contact</a>
+    <a href="support.html">🛠 Support</a>
+    <a href="privacy.html">🔒 Privacy</a>
+    <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer" style="color:#0088cc;font-weight:700">✈️ Join Telegram</a>
+  </nav>
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span aria-current="page">Terms & Conditions</span>
 </nav>
 
-<!-- CONTENT -->
-<div class="container">
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="hero-icon" aria-hidden="true">📋</div>
+  <h1>Terms & <span>Conditions</span></h1>
+  <p>Please read these terms carefully before using CaptionStudio's tools and services.</p>
+  <div class="last-updated">📅 Last Updated: April 2026 · Version 2.0</div>
+</div>
 
-<h1>Terms & Conditions</h1>
-<p>Last updated: 2026</p>
+<!-- ===== MAIN CONTENT ===== -->
+<div class="page-wrapper">
 
-<p>
-Welcome to CaptionStudio. By using our website, you agree to the following terms.
-</p>
+  <!-- ===== MAIN TERMS CONTENT ===== -->
+  <main class="content-main">
 
-<h2>Use of Website</h2>
-<p>
-You agree to use this website only for lawful purposes and not misuse any tools or content.
-</p>
+    <!-- INTRO -->
+    <div class="highlight-box info" style="margin-bottom:32px">
+      <span class="hb-icon">ℹ️</span>
+      <div class="hb-text">
+        <strong>Agreement:</strong> By accessing and using CaptionStudio.in, you agree to be bound by these Terms & Conditions. If you do not agree, please discontinue use of our website and tools immediately.
+      </div>
+    </div>
 
-<h2>Free Tools Disclaimer</h2>
-<p>
-All tools are provided for free. We do not guarantee accuracy or results from generated content.
-</p>
+    <!-- S1: ACCEPTANCE -->
+    <section class="terms-section" id="acceptance">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">✅</div>
+        <div class="section-header-text">
+          <h2>1. Acceptance of Terms</h2>
+          <span>Agreement to use our platform</span>
+        </div>
+      </div>
+      <p>
+        By visiting, accessing, or using CaptionStudio.in (<strong>"the Website"</strong>), you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions and all applicable laws and regulations. These terms apply to all users, visitors, and anyone who accesses or uses our services.
+      </p>
+      <p>
+        CaptionStudio reserves the right to change, modify, or revise these terms at any time without prior notice. Continued use of the website after changes constitutes your acceptance of the revised terms.
+      </p>
+      <div class="highlight-box warning">
+        <span class="hb-icon">⚠️</span>
+        <div class="hb-text">
+          <strong>Note:</strong> If you are under 18 years of age, you may use our tools only with the involvement and supervision of a parent or legal guardian.
+        </div>
+      </div>
+    </section>
 
-<h2>Earning Disclaimer</h2>
-<p>
-We may share earning ideas and strategies, but results are not guaranteed. Your success depends on your effort and consistency.
-</p>
+    <!-- S2: USE OF WEBSITE -->
+    <section class="terms-section" id="use">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🌐</div>
+        <div class="section-header-text">
+          <h2>2. Permitted Use of Website</h2>
+          <span>What you can and cannot do</span>
+        </div>
+      </div>
+      <p>
+        You agree to use CaptionStudio.in only for lawful purposes. Our tools are intended to assist creators, students, and professionals with content generation, learning, and productivity.
+      </p>
+      <p><strong>You are permitted to:</strong></p>
+      <ul class="terms-list">
+        <li><span class="li-icon">✅</span> Use our free AI tools for personal and professional content creation</li>
+        <li><span class="li-icon">✅</span> Share generated content on social media platforms</li>
+        <li><span class="li-icon">✅</span> Access our blog, guides, and earning resources for educational purposes</li>
+        <li><span class="li-icon">✅</span> Use our tools for client work and freelancing projects</li>
+      </ul>
+      <p style="margin-top:16px"><strong>You are NOT permitted to:</strong></p>
+      <ul class="terms-list">
+        <li><span class="li-icon" style="color:#e53e3e">❌</span> Use our tools to generate illegal, harmful, abusive, or defamatory content</li>
+        <li><span class="li-icon" style="color:#e53e3e">❌</span> Attempt to reverse-engineer, scrape, or copy our tools without permission</li>
+        <li><span class="li-icon" style="color:#e53e3e">❌</span> Spam, flood, or intentionally overload our servers or API</li>
+        <li><span class="li-icon" style="color:#e53e3e">❌</span> Impersonate CaptionStudio or its team members</li>
+        <li><span class="li-icon" style="color:#e53e3e">❌</span> Use our branding, logo, or name without written permission</li>
+      </ul>
+    </section>
 
-<h2>Intellectual Property</h2>
-<p>
-All content, branding, and tools belong to CaptionStudio and cannot be copied without permission.
-</p>
+    <!-- S3: FREE TOOLS -->
+    <section class="terms-section" id="tools">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">⚡</div>
+        <div class="section-header-text">
+          <h2>3. Free Tools Disclaimer</h2>
+          <span>What our tools provide and don't guarantee</span>
+        </div>
+      </div>
+      <p>
+        All AI tools available on CaptionStudio.in are provided <strong>completely free of charge</strong> with no login or registration required. We strive to maintain uptime and performance, but we cannot guarantee uninterrupted or error-free service.
+      </p>
+      <div class="highlight-box warning">
+        <span class="hb-icon">⚠️</span>
+        <div class="hb-text">
+          <strong>Accuracy Disclaimer:</strong> AI-generated content may contain inaccuracies, errors, or outdated information. Always review and edit AI-generated content before publishing or using professionally. CaptionStudio does not guarantee the accuracy, completeness, or fitness of any generated content for any specific purpose.
+        </div>
+      </div>
+      <p>
+        We reserve the right to modify, discontinue, or limit access to any tool at any time without prior notice. CaptionStudio is not liable for any disruption in services or loss resulting from tool unavailability.
+      </p>
+    </section>
 
-<h2>Third-Party Links</h2>
-<p>
-We may include links to third-party platforms like Telegram or external tools. We are not responsible for their content or services.
-</p>
+    <!-- S4: EARNING DISCLAIMER -->
+    <section class="terms-section" id="earning">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">💸</div>
+        <div class="section-header-text">
+          <h2>4. Earning & Income Disclaimer</h2>
+          <span>Important — read this carefully</span>
+        </div>
+      </div>
+      <p>
+        CaptionStudio shares earning ideas, strategies, AI methods, and income-related content for <strong>educational and informational purposes only.</strong>
+      </p>
+      <div class="highlight-box danger">
+        <span class="hb-icon">🚨</span>
+        <div class="hb-text">
+          <strong>No Income Guarantee:</strong> CaptionStudio does NOT guarantee any specific level of income, earnings, or financial results from using our tools, guides, prompts, or strategies. All income figures mentioned are examples or estimates — not promises or guarantees.
+        </div>
+      </div>
+      <p>
+        Individual results will vary significantly based on factors including, but not limited to: your effort, consistency, skill level, market conditions, niche selection, time invested, and external economic factors.
+      </p>
+      <ul class="terms-list">
+        <li><span class="li-icon">📌</span> All earning examples shared are for illustration purposes only</li>
+        <li><span class="li-icon">📌</span> Past performance of any strategy does not guarantee future results</li>
+        <li><span class="li-icon">📌</span> We are not financial advisors — consult a professional for financial decisions</li>
+        <li><span class="li-icon">📌</span> Any mention of "₹10K", "₹1 Lakh", etc. reflects potential, not guaranteed outcomes</li>
+      </ul>
+    </section>
 
-<h2>Limitation of Liability</h2>
-<p>
-CaptionStudio is not responsible for any loss, damage, or issues arising from the use of our website or tools.
-</p>
+    <!-- S5: INTELLECTUAL PROPERTY -->
+    <section class="terms-section" id="ip">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🔒</div>
+        <div class="section-header-text">
+          <h2>5. Intellectual Property Rights</h2>
+          <span>Our content, branding, and tools</span>
+        </div>
+      </div>
+      <p>
+        All content on CaptionStudio.in — including but not limited to the website design, layout, code, graphics, logos, blog articles, guides, tool interfaces, and brand name — is the intellectual property of CaptionStudio.
+      </p>
+      <div class="highlight-box info">
+        <span class="hb-icon">ℹ️</span>
+        <div class="hb-text">
+          <strong>What's yours:</strong> Content you generate using our tools belongs to you. You retain full rights to the captions, blogs, scripts, and other content produced using our AI tools.
+        </div>
+      </div>
+      <p>
+        <strong>What's ours:</strong> Our website code, design, blog posts, brand name "CaptionStudio," logo, and tool functionality may not be copied, reproduced, distributed, or used commercially without our explicit written permission.
+      </p>
+    </section>
 
-<h2>Changes to Terms</h2>
-<p>
-We may update these terms at any time without prior notice.
-</p>
+    <!-- S6: THIRD PARTY -->
+    <section class="terms-section" id="thirdparty">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🔗</div>
+        <div class="section-header-text">
+          <h2>6. Third-Party Links & Services</h2>
+          <span>External platforms we may reference</span>
+        </div>
+      </div>
+      <p>
+        Our website may contain links to third-party websites, apps, and services including — but not limited to — Telegram, Instagram, YouTube, Fiverr, Upwork, Google, Amazon, Gumroad, and others.
+      </p>
+      <ul class="terms-list">
+        <li><span class="li-icon">🔗</span> We are not responsible for the content, privacy policies, or practices of any third-party websites</li>
+        <li><span class="li-icon">🔗</span> Links are provided for convenience — not as endorsements</li>
+        <li><span class="li-icon">🔗</span> Use third-party services at your own risk — review their terms before use</li>
+        <li><span class="li-icon">🔗</span> Our Telegram community is managed separately — its rules apply within that group</li>
+      </ul>
+    </section>
 
-<h2>Contact</h2>
-<p>
-For any questions, contact us at:
-<br>
-<a href="mailto:captionstudio02@gmail.com" style="color:#ff4d00">
-captionstudio02@gmail.com
-</a>
-</p>
+    <!-- S7: AFFILIATE -->
+    <section class="terms-section" id="affiliate">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">💰</div>
+        <div class="section-header-text">
+          <h2>7. Affiliate & Sponsored Content</h2>
+          <span>Transparency about our partnerships</span>
+        </div>
+      </div>
+      <p>
+        CaptionStudio may include affiliate links or sponsored content in our blogs, guides, and earning resources. When we recommend a product or service, we may earn a commission if you purchase through our link — at <strong>no additional cost to you.</strong>
+      </p>
+      <div class="highlight-box success">
+        <span class="hb-icon">✅</span>
+        <div class="hb-text">
+          <strong>Our Commitment:</strong> We only recommend tools and services that we genuinely believe can help our users. Our opinions are always honest — affiliate relationships do not influence our reviews or recommendations.
+        </div>
+      </div>
+    </section>
+
+    <!-- S8: PRIVACY -->
+    <section class="terms-section" id="privacy">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🛡️</div>
+        <div class="section-header-text">
+          <h2>8. Privacy & Data</h2>
+          <span>How we handle your information</span>
+        </div>
+      </div>
+      <p>
+        CaptionStudio is designed with user privacy in mind. <strong>We do not require registration or login to use our tools.</strong> We do not sell or share personal data with third parties for marketing purposes.
+      </p>
+      <p>
+        Basic analytics may be collected to improve our services. For complete details on what data we collect and how we use it, please refer to our <a href="privacy.html" style="color:#ff4d00;font-weight:600">Privacy Policy →</a>
+      </p>
+    </section>
+
+    <!-- S9: LIMITATION OF LIABILITY -->
+    <section class="terms-section" id="liability">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">⚖️</div>
+        <div class="section-header-text">
+          <h2>9. Limitation of Liability</h2>
+          <span>Our legal responsibilities</span>
+        </div>
+      </div>
+      <p>
+        To the maximum extent permitted by applicable law, CaptionStudio, its creators, team members, and affiliates shall not be liable for:
+      </p>
+      <ul class="terms-list">
+        <li><span class="li-icon" style="color:#e53e3e">⚠️</span> Any direct, indirect, incidental, or consequential damages arising from use of our website</li>
+        <li><span class="li-icon" style="color:#e53e3e">⚠️</span> Loss of income, data, or business opportunity resulting from our tools or advice</li>
+        <li><span class="li-icon" style="color:#e53e3e">⚠️</span> Inaccuracies or errors in AI-generated content</li>
+        <li><span class="li-icon" style="color:#e53e3e">⚠️</span> Actions taken by third-party platforms referenced on our website</li>
+        <li><span class="li-icon" style="color:#e53e3e">⚠️</span> Temporary or permanent unavailability of our tools or services</li>
+      </ul>
+      <p>
+        Use of CaptionStudio.in and its tools is entirely at your own risk.
+      </p>
+    </section>
+
+    <!-- S10: GOVERNING LAW -->
+    <section class="terms-section" id="law">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🏛️</div>
+        <div class="section-header-text">
+          <h2>10. Governing Law</h2>
+          <span>Jurisdiction and legal framework</span>
+        </div>
+      </div>
+      <p>
+        These Terms & Conditions shall be governed by and construed in accordance with the laws of <strong>India.</strong> Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of courts in India.
+      </p>
+      <p>
+        If any provision of these terms is found to be invalid or unenforceable, the remaining provisions shall continue to be valid and enforceable to the fullest extent permitted by law.
+      </p>
+    </section>
+
+    <!-- S11: CHANGES -->
+    <section class="terms-section" id="changes">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">🔄</div>
+        <div class="section-header-text">
+          <h2>11. Changes to These Terms</h2>
+          <span>How we update our policies</span>
+        </div>
+      </div>
+      <p>
+        We reserve the right to update or modify these Terms & Conditions at any time. Changes will be reflected on this page with an updated "Last Updated" date.
+      </p>
+      <div class="highlight-box warning">
+        <span class="hb-icon">📅</span>
+        <div class="hb-text">
+          <strong>Your Responsibility:</strong> We encourage you to review this page periodically. Continued use of CaptionStudio after any changes constitutes your acceptance of the new terms. We will not send individual notifications for updates.
+        </div>
+      </div>
+    </section>
+
+    <!-- S12: CONTACT -->
+    <section class="terms-section" id="contact">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">📬</div>
+        <div class="section-header-text">
+          <h2>12. Contact Us</h2>
+          <span>Questions about our terms</span>
+        </div>
+      </div>
+      <p>
+        If you have any questions, concerns, or feedback about these Terms & Conditions, please reach out to us:
+      </p>
+      <div class="contact-card">
+        <h4>Get In Touch</h4>
+        <p>We typically respond within 24-48 hours on working days.</p>
+        <a href="mailto:captionstudio02@gmail.com" class="contact-email">
+          📧 captionstudio02@gmail.com
+        </a>
+        <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer" class="contact-tg">
+          ✈️ Telegram Community
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside aria-label="Page navigation">
+
+    <!-- TOC -->
+    <div class="toc-card">
+      <div class="toc-card-title">📋 Contents</div>
+      <ul class="toc-links" role="list">
+        <li><a href="#acceptance"><span class="toc-num">01</span> Acceptance of Terms</a></li>
+        <li><a href="#use"><span class="toc-num">02</span> Permitted Use</a></li>
+        <li><a href="#tools"><span class="toc-num">03</span> Free Tools Disclaimer</a></li>
+        <li><a href="#earning"><span class="toc-num">04</span> Earning Disclaimer</a></li>
+        <li><a href="#ip"><span class="toc-num">05</span> Intellectual Property</a></li>
+        <li><a href="#thirdparty"><span class="toc-num">06</span> Third-Party Links</a></li>
+        <li><a href="#affiliate"><span class="toc-num">07</span> Affiliate Content</a></li>
+        <li><a href="#privacy"><span class="toc-num">08</span> Privacy & Data</a></li>
+        <li><a href="#liability"><span class="toc-num">09</span> Limitation of Liability</a></li>
+        <li><a href="#law"><span class="toc-num">10</span> Governing Law</a></li>
+        <li><a href="#changes"><span class="toc-num">11</span> Changes to Terms</a></li>
+        <li><a href="#contact"><span class="toc-num">12</span> Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="toc-card" style="margin-top:20px">
+      <div class="toc-card-title">🗂️ Legal Pages</div>
+      <ul class="quick-links">
+        <li><a href="privacy.html"><span>🔒</span> Privacy Policy</a></li>
+        <li><a href="terms.html"><span>📋</span> Terms & Conditions</a></li>
+        <li><a href="support.html"><span>🛠</span> Support</a></li>
+        <li><a href="contact.html"><span>📬</span> Contact Us</a></li>
+        <li><a href="about.html"><span>👥</span> About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- QUICK LINKS TO TOOLS -->
+    <div class="toc-card" style="margin-top:20px">
+      <div class="toc-card-title">⚡ Quick Tools</div>
+      <ul class="quick-links">
+        <li><a href="tools/caption-generator.html"><span>📸</span> Caption Generator</a></li>
+        <li><a href="tools/hashtag-generator.html"><span>#️⃣</span> Hashtag Generator</a></li>
+        <li><a href="tools/bio-generator.html"><span>👤</span> Bio Generator</a></li>
+        <li><a href="tools/email-reply-generator.html"><span>📧</span> Email Reply</a></li>
+        <li><a href="tools/"><span>⚡</span> All Tools →</a></li>
+      </ul>
+    </div>
+
+  </aside>
 
 </div>
 
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer>
-
-<p style="text-align:center">© 2026 CaptionStudio</p>
-
-<div class="footer-bottom">
-<a href="privacy.html">Privacy</a> |
-<a href="terms.html">Terms</a>
-</div>
-
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">Caption<span>Studio</span>.in</div>
+      <p>Free AI tools for Indian students & creators. No login, no investment. Updated April 2026.</p>
+      <a href="https://t.me/skill2incomehub" class="footer-tg" target="_blank" rel="noopener noreferrer">✈️ Join Telegram Community</a>
+    </div>
+    <div class="footer-col">
+      <h5>AI Tools</h5>
+      <ul>
+        <li><a href="tools/">⚡ All Tools</a></li>
+        <li><a href="tools/caption-generator.html">📸 Caption Generator</a></li>
+        <li><a href="tools/hashtag-generator.html">#️⃣ Hashtag Generator</a></li>
+        <li><a href="tools/bio-generator.html">👤 Bio Generator</a></li>
+        <li><a href="tools/email-reply-generator.html">📧 Email Reply</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="blog/">✍️ Blog</a></li>
+        <li><a href="guide.html">📖 Guide</a></li>
+        <li><a href="earning.html">💸 Earning Hub</a></li>
+        <li><a href="relax.html">😌 Relax Zone</a></li>
+        <li><a href="about.html">👥 About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="privacy.html">🔒 Privacy Policy</a></li>
+        <li><a href="terms.html">📋 Terms & Conditions</a></li>
+        <li><a href="support.html">🛠 Support</a></li>
+        <li><a href="contact.html">📬 Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 <a href="index.html">CaptionStudio.in</a> — All rights reserved</span>
+    <span>Made with ❤️ for Indian Creators · April 2026</span>
+    <span>
+      <a href="privacy.html">Privacy</a> ·
+      <a href="terms.html">Terms</a> ·
+      <a href="contact.html">Contact</a>
+    </span>
+  </div>
 </footer>
 
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+
+/* ===== DARK MODE ===== */
+function applyTheme(dark){
+  document.documentElement.setAttribute('data-theme',dark?'dark':'light');
+  const btn=document.getElementById('dark-toggle');
+  if(btn)btn.textContent=dark?'☀️ Light':'🌙 Dark';
+}
+function toggleDark(){
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  applyTheme(!isDark);
+  try{localStorage.setItem('csDark',!isDark?'1':'0');}catch(e){}
+}
+(function(){
+  const s=localStorage.getItem('csDark');
+  const sys=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+  applyTheme(s==='1'||(s===null&&sys));
+  if(window.matchMedia){
+    window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',e=>{
+      if(localStorage.getItem('csDark')===null)applyTheme(e.matches);
+    });
+  }
+})();
+
+/* ===== MOBILE MENU ===== */
+function toggleMenu(){
+  const m=document.getElementById('mobile-menu');
+  const b=document.getElementById('hamburger');
+  if(!m||!b)return;
+  const open=m.classList.toggle('open');
+  b.classList.toggle('is-open',open);
+  b.setAttribute('aria-expanded',open?'true':'false');
+  document.body.style.overflow=open?'hidden':'';
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobile-menu');
+  const b=document.getElementById('hamburger');
+  if(m&&m.classList.contains('open')&&!m.contains(e.target)&&!b.contains(e.target)){
+    m.classList.remove('open');b.classList.remove('is-open');
+    b.setAttribute('aria-expanded','false');document.body.style.overflow='';
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const m=document.getElementById('mobile-menu');
+    const b=document.getElementById('hamburger');
+    if(m&&m.classList.contains('open')){
+      m.classList.remove('open');b.classList.remove('is-open');
+      b.setAttribute('aria-expanded','false');document.body.style.overflow='';
+    }
+  }
+});
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>600){
+    const m=document.getElementById('mobile-menu');
+    const b=document.getElementById('hamburger');
+    if(m)m.classList.remove('open');
+    if(b){b.classList.remove('is-open');b.setAttribute('aria-expanded','false');}
+    document.body.style.overflow='';
+  }
+},{passive:true});
+
+/* ===== TOC ACTIVE HIGHLIGHT ON SCROLL ===== */
+const sections=document.querySelectorAll('.terms-section[id]');
+const tocLinks=document.querySelectorAll('.toc-links a');
+
+let _raf=null;
+window.addEventListener('scroll',()=>{
+  if(_raf)return;
+  _raf=requestAnimationFrame(()=>{
+    _raf=null;
+    let cur='';
+    sections.forEach(s=>{
+      if(window.scrollY>=s.offsetTop-120)cur=s.id;
+    });
+    tocLinks.forEach(l=>{
+      l.classList.remove('toc-active');
+      if(l.getAttribute('href')==='#'+cur)l.classList.add('toc-active');
+    });
+  });
+},{passive:true});
+
+/* ===== SMOOTH SCROLL FOR TOC ===== */
+tocLinks.forEach(l=>{
+  l.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(l.getAttribute('href'));
+    if(!t)return;
+    const hdr=document.querySelector('header');
+    const off=(hdr?hdr.offsetHeight:60)+16;
+    window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-off,behavior:'smooth'});
+  });
+});
+
+</script>
 </body>
   </html>
