@@ -1,100 +1,1973 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Content Creation Guide 2026 | CaptionStudio</title>
-    
-    <meta name="description" content="Ansh, founder of CaptionStudio, shares a 500+ word guide on using AI tools to earn ₹10,000+ monthly. Learn viral strategies for Instagram & YouTube.">
-    <meta name="author" content="Ansh">
 
-    <style>
-        :root { --primary-orange: #FF5722; --secondary-orange: #E64A19; --white: #ffffff; --text-dark: #333333; }
-        body { background-color: var(--white); color: var(--text-dark); font-family: 'Poppins', sans-serif; margin: 0; line-height: 1.8; }
-        
-        /* CLEAN WHITE-ORANGE HEADER */
-        header { 
-            background: var(--white); padding: 15px 5%; border-bottom: 2px solid #f0f0f0;
-            display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;
-        }
-        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary-orange); letter-spacing: 1px; }
-        nav a { color: var(--text-dark); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
-        nav a:hover { color: var(--primary-orange); }
+<!-- ===== FOUC PREVENTION ===== -->
+<script>
+(function(){
+  try{
+    var s=localStorage.getItem('csDark');
+    var sys=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+    if(s==='1'||(s===null&&sys))document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+})();
+</script>
 
-        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
-        .blog-header { text-align: center; margin-bottom: 40px; }
-        h1 { font-size: 2.5rem; color: var(--text-dark); margin-bottom: 10px; }
-        h1 span { color: var(--primary-orange); }
-        .meta-info { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>AI Prompt Engineering Kya Hai? Aur Log Isse Paise Kaise Bana Rahe Hain | CaptionStudio</title>
+<meta name="description" content="AI prompt engineering kya hai aur isse earning kaise hoti hai — 2026 ka complete guide. Prompt se paisa kaise kamaye, beginners ke liye AI prompts, aur 4 real use cases with copy-paste prompts. 100% free.">
+<meta name="keywords" content="prompt engineering kya hai, AI prompt engineering earning, prompt se paisa kaise kamaye, AI prompts for beginners, AI content strategy 2026, prompt engineering India, AI earning guide Hindi, ChatGPT prompts earning">
+<meta name="author" content="CaptionStudio">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#ff4d00">
+<link rel="canonical" href="https://captionstudio.in/blog/master-ai-guide-2026.html">
 
-        /* BLOG BODY STYLES */
-        .content-box { background: #fff; border-radius: 12px; }
-        h2 { color: var(--primary-orange); border-left: 5px solid var(--primary-orange); padding-left: 15px; margin-top: 40px; }
-        p { margin-bottom: 20px; text-align: justify; }
-        
-        .highlight-card { 
-            background: #FFF5F2; border: 1px solid #FFCCBC; padding: 25px; 
-            border-radius: 10px; margin: 30px 0; font-style: italic;
-        }
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CaptionStudio.in">
+<meta property="og:title" content="AI Prompt Engineering Kya Hai? Aur Log Isse Paise Kaise Bana Rahe Hain 😳">
+<meta property="og:description" content="Prompt engineering kya hota hai, isse earning kaise hoti hai aur 4 real use cases — 2026 ka complete beginner guide. Copy-paste prompts included.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&q=80">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Prompt Engineering Kya Hai - Earning Guide India 2026 Complete Breakdown">
+<meta property="og:url" content="https://captionstudio.in/blog/master-ai-guide-2026.html">
+<meta property="article:published_time" content="2026-04-04T10:00:00+05:30">
+<meta property="article:modified_time" content="2026-04-20T10:00:00+05:30">
+<meta property="article:section" content="AI Learning">
+<meta property="article:tag" content="Prompt Engineering, AI Learning, AI Earning, ChatGPT Hindi, Beginners Guide">
 
-        .cta-section { 
-            text-align: center; margin-top: 50px; padding: 40px; 
-            background: var(--primary-orange); color: white; border-radius: 15px;
-        }
-        .cta-section a { color: white; font-weight: bold; text-decoration: underline; }
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Prompt Engineering Kya Hai? Earning Guide 2026 India">
+<meta name="twitter:description" content="Prompt engineering kya hai aur isse paise kaise kamaye — 4 real use cases + copy-paste prompts + complete system.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&q=80">
 
-        footer { text-align: center; padding: 40px; margin-top: 60px; border-top: 1px solid #eee; color: #999; }
-    </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"AI Prompt Engineering Kya Hai? Aur Log Isse Paise Kaise Bana Rahe Hain","description":"AI prompt engineering kya hai aur isse earning kaise hoti hai — 2026 complete guide for beginners.","image":{"@type":"ImageObject","url":"https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&q=80","width":1200,"height":630},"author":{"@type":"Organization","name":"CaptionStudio","url":"https://captionstudio.in"},"publisher":{"@type":"Organization","name":"CaptionStudio","logo":{"@type":"ImageObject","url":"https://captionstudio.in/favicon.png","width":60,"height":60}},"datePublished":"2026-04-04","dateModified":"2026-04-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://captionstudio.in/blog/master-ai-guide-2026.html"},"keywords":"prompt engineering kya hai, AI prompts earning, prompt se paisa kamaye, AI content strategy, beginners AI guide","wordCount":"2700","inLanguage":"hi-IN"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://captionstudio.in"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://captionstudio.in/blog/"},{"@type":"ListItem","position":3,"name":"Master AI Guide 2026","item":"https://captionstudio.in/blog/master-ai-guide-2026.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI prompt engineering kya hai?","acceptedAnswer":{"@type":"Answer","text":"Prompt engineering matlab AI ko sahi, structured instruction dena taaki best possible output mile. Role + Task + Context + Output format — ye 4 elements ek powerful prompt banate hain."}},{"@type":"Question","name":"Prompt engineering se paise kaise kamaye?","acceptedAnswer":{"@type":"Answer","text":"4 real ways: AI freelancing (captions/blogs/scripts clients ke liye), content creation (viral content → followers → income), blogging (SEO prompts → Google traffic → ads), aur prompt selling (digital products)."}},{"@type":"Question","name":"Prompt engineering beginners ke liye kaise seekhein?","acceptedAnswer":{"@type":"Answer","text":"Start with Role + Task + Context + Output format. CaptionStudio.in pe free tools try karo. Daily ek naya prompt experiment karo. 2 weeks mein noticeable improvement guaranteed."}},{"@type":"Question","name":"Kya coding chahiye prompt engineering ke liye?","acceptedAnswer":{"@type":"Answer","text":"Bilkul nahi. Prompt engineering sirf structured text likhne ki skill hai — no coding, no technical background required. Agar tum Hindi ya Hinglish mein clearly likh sakte ho, tum prompt engineering seekh sakte ho."}}]}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="dns-prefetch" href="https://t.me">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.png" type="image/png">
+
+<style>
+/* ================================================
+   CSS CUSTOM PROPERTIES — COMPLETE THEME
+================================================ */
+:root{
+  --bg:#faf9f6;--bg2:#fff;--bg3:#f8f9fa;
+  --text:#111;--text2:#333;--text3:#555;--text4:#888;--text5:#aaa;
+  --border:#eee;--border2:#f0f0f0;
+  --accent:#ff4d00;--accent2:#ff8c00;
+  --accent-bg:#fff3e0;--accent-border:#ffd5c2;
+  --hook-bg:linear-gradient(135deg,#fff8f5,#fff3ee);
+  --callout-o:linear-gradient(135deg,#fff8f5,#fff3ee);
+  --callout-b:linear-gradient(135deg,#f0f7ff,#e8f3ff);
+  --callout-g:linear-gradient(135deg,#f0fff4,#e6ffed);
+  --callout-y:linear-gradient(135deg,#fffdf0,#fffbe6);
+  --compare-bad:#fff5f5;--compare-good:#f0fff4;
+  --compare-bad-border:#ffcccc;--compare-good-border:#b2f0c5;
+  --callout-b-border:#bfdbfe;--callout-g-border:#b2f0c5;--callout-y-border:#fde68a;
+  --teal:#0d9488;--teal-light:#f0fdfa;--teal-border:#99f6e4;
+  --shadow1:0 2px 10px rgba(0,0,0,0.04);
+  --shadow2:0 6px 25px rgba(0,0,0,0.06);
+  --shadow3:0 8px 32px rgba(0,0,0,0.08);
+  --nav-bg:#fff;--footer-bg:#111;
+  --footer-text:#666;--footer-head:#fff;
+  --toc-active:#fff3e0;--stat-bg:#fff;
+  --quote-bg:#fff;--reality-bg:#fff;
+  --faq-bg:#fff;--author-bg:#fff;
+  --share-bg:#fff;--sidebar-bg:#fff;
+  --step-bg:#fff;--uc-bg:#fff;
+}
+[data-theme="dark"]{
+  --bg:#0f0f0f;--bg2:#1a1a1a;--bg3:#222;
+  --text:#f0f0f0;--text2:#ddd;--text3:#bbb;--text4:#888;--text5:#555;
+  --border:#2a2a2a;--border2:#333;
+  --accent-bg:#1a0a00;--accent-border:#3a1a00;
+  --hook-bg:linear-gradient(135deg,#1a0800,#120500);
+  --callout-o:linear-gradient(135deg,#1a0800,#100500);
+  --callout-b:linear-gradient(135deg,#001020,#000a18);
+  --callout-g:linear-gradient(135deg,#001a08,#000f05);
+  --callout-y:linear-gradient(135deg,#1a1500,#100e00);
+  --compare-bad:#1a0000;--compare-good:#001a08;
+  --compare-bad-border:#5a0000;--compare-good-border:#005020;
+  --callout-b-border:#003060;--callout-g-border:#003010;--callout-y-border:#4a3800;
+  --teal-light:#001a18;--teal-border:#065f58;
+  --shadow1:0 2px 10px rgba(0,0,0,0.3);
+  --shadow2:0 6px 25px rgba(0,0,0,0.4);
+  --shadow3:0 8px 32px rgba(0,0,0,0.5);
+  --nav-bg:#1a1a1a;--footer-bg:#0a0a0a;
+  --footer-text:#555;--footer-head:#f0f0f0;
+  --toc-active:#1a0a00;--stat-bg:#1a1a1a;
+  --quote-bg:#1a1a1a;--reality-bg:#1a1a1a;
+  --faq-bg:#1a1a1a;--author-bg:#1a1a1a;
+  --share-bg:#1a1a1a;--sidebar-bg:#1a1a1a;
+  --step-bg:#1a1a1a;--uc-bg:#1a1a1a;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;font-size:16px;transition:background .3s,color .3s}
+h1,h2,h3,h4,h5{font-family:'Syne',sans-serif;line-height:1.25;color:var(--text)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto;display:block}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* ===== PROGRESS BAR ===== */
+#progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#ff4d00,#0d9488,#ff8c00);width:0%;z-index:9999;transition:width .1s linear;will-change:width}
+
+/* ===== SCROLL TOP ===== */
+#scroll-top{position:fixed;bottom:28px;right:22px;width:46px;height:46px;background:linear-gradient(135deg,#ff4d00,#ff8c00);color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(255,77,0,.4);opacity:0;transform:translateY(20px) scale(.8);transition:opacity .3s,transform .3s;z-index:998;pointer-events:none;font-family:'DM Sans',sans-serif}
+#scroll-top.visible{opacity:1;transform:translateY(0) scale(1);pointer-events:all}
+#scroll-top:hover{transform:translateY(-3px) scale(1.05)!important}
+
+/* ===== DARK TOGGLE ===== */
+#dark-toggle{background:var(--bg2);border:1.5px solid var(--border);border-radius:25px;padding:6px 14px;cursor:pointer;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text3);transition:all .2s;display:flex;align-items:center;gap:6px;white-space:nowrap}
+#dark-toggle:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== FLOATING AD ===== */
+#floating-ad{
+  position:fixed;bottom:90px;right:18px;width:220px;z-index:997;
+  background:linear-gradient(135deg,rgba(255,255,255,0.97),rgba(240,253,250,0.98));
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:2px solid #0d9488;border-radius:16px;padding:16px;
+  box-shadow:0 8px 30px rgba(13,148,136,.3);
+  animation:adPulse 3s ease-in-out infinite;transition:transform .2s;
+}
+[data-theme="dark"] #floating-ad{background:linear-gradient(135deg,rgba(0,26,24,0.97),rgba(0,40,36,0.98))}
+#floating-ad:hover{transform:scale(1.04) translateY(-3px)}
+@keyframes adPulse{
+  0%,100%{box-shadow:0 8px 30px rgba(13,148,136,.3);border-color:#0d9488}
+  50%{box-shadow:0 14px 45px rgba(13,148,136,.6);border-color:#14b8a6}
+}
+#floating-ad.highlight{animation:adHighlight .4s ease-in-out}
+@keyframes adHighlight{0%,100%{transform:scale(1)}50%{transform:scale(1.09) rotate(-1deg)}}
+.ad-badge-float{display:inline-block;background:linear-gradient(135deg,#0d9488,#14b8a6);color:#fff;font-size:9px;padding:2px 8px;border-radius:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+#floating-ad h4{font-family:'Syne',sans-serif;font-size:13px;color:var(--text);margin-bottom:5px;line-height:1.3}
+#floating-ad p{font-size:11px;color:var(--text3);margin-bottom:10px;line-height:1.5}
+.ad-float-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:9px;border-radius:10px;font-weight:700;font-size:12px;width:100%;transition:all .2s;box-shadow:0 4px 12px rgba(37,211,102,.35)}
+.ad-float-btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(37,211,102,.5)}
+.ad-close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--text4);font-size:16px;line-height:1;background:none;border:none;font-family:'DM Sans',sans-serif}
+.ad-close:hover{color:var(--accent)}
+
+/* ===== HEADER ===== */
+header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:sticky;top:3px;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:background .3s,border-color .3s}
+.nav-top{display:flex;justify-content:space-between;align-items:center;padding:12px 5%;max-width:1200px;margin:0 auto;gap:10px}
+.nav-logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.nav-logo span{color:#ff4d00}
+.nav-logo img{width:28px;height:28px;border-radius:6px}
+.nav-links{display:flex;align-items:center;gap:3px;list-style:none;flex-wrap:wrap}
+.nav-links a{font-size:13px;color:var(--text3);padding:6px 10px;border-radius:20px;transition:all .2s;font-weight:500}
+.nav-links a:hover{background:var(--bg3);color:var(--text)}
+.nav-links a.active{background:var(--accent-bg);color:#ff4d00;font-weight:700}
+.nav-links .btn-nav{background:#ff4d00;color:#fff;padding:8px 16px;border-radius:25px;font-weight:700;font-size:13px;transition:all .2s}
+.nav-links .btn-nav:hover{background:#e63d00}
+.nav-right-controls{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block;transition:all .3s}
+.hamburger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.is-open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;background:var(--nav-bg);border-top:1px solid var(--border);padding:12px 5%;gap:4px;max-height:80vh;overflow-y:auto}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:14px;color:var(--text3);padding:10px 14px;border-radius:8px;font-weight:500;transition:background .2s}
+.mobile-menu a:hover{background:var(--bg3);color:var(--text)}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{max-width:1100px;margin:0 auto;padding:11px 5%;font-size:12px;color:var(--text4);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.breadcrumb a{color:#ff4d00}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb .sep{color:var(--border2)}
+
+/* ===== BADGES ===== */
+.updated-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;border:1px solid #c8e6c9;color:#2e7d32;padding:5px 14px;border-radius:25px;font-size:12px;font-weight:700;margin-bottom:16px}
+[data-theme="dark"] .updated-badge{background:#0a2010;border-color:#1a4a20;color:#66bb6a}
+.read-time-badge{display:inline-flex;align-items:center;gap:6px;background:var(--bg2);border:1px solid var(--border);padding:5px 14px;border-radius:25px;font-size:12px;color:var(--text3);box-shadow:var(--shadow1);margin-bottom:14px}
+.skill-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0d9488,#14b8a6);color:#fff;padding:6px 16px;border-radius:25px;font-size:12px;font-weight:700;margin-bottom:14px;box-shadow:0 4px 15px rgba(13,148,136,.3)}
+
+/* ===== LAYOUT ===== */
+.page-wrapper{max-width:1100px;margin:0 auto;padding:0 5% 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+.blog-main{min-width:0}
+.blog-sidebar{position:sticky;top:80px}
+
+/* ===== HERO ===== */
+.hero{padding:45px 5% 0;max-width:1100px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--bg2);border:1px solid var(--border);padding:6px 16px;border-radius:25px;font-size:12px;color:var(--text3);margin-bottom:14px;box-shadow:var(--shadow1)}
+.hero-badge .badge-day{background:#ff4d00;color:#fff;padding:2px 10px;border-radius:12px;font-size:10px;font-weight:800;text-transform:uppercase}
+.hero-badge .badge-skill{background:linear-gradient(135deg,#0d9488,#14b8a6);color:#fff;padding:2px 10px;border-radius:12px;font-size:10px;font-weight:800}
+.hero h1{font-size:clamp(24px,4.5vw,43px);line-height:1.15;margin-bottom:16px;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#0d9488,#ff4d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-intro{font-size:17px;color:var(--text3);max-width:700px;margin-bottom:20px;line-height:1.75}
+.hero-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--text4);flex-wrap:wrap;margin-bottom:25px}
+.meta-dot{color:var(--border2)}
+.hero-image-wrap{border-radius:20px;overflow:hidden;margin-bottom:45px;position:relative;height:380px}
+.hero-image-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.hero-image-wrap:hover img{transform:scale(1.03)}
+.hero-image-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.65))}
+.hero-image-caption{position:absolute;bottom:16px;left:20px;color:rgba(255,255,255,.75);font-size:12px}
+
+/* ===== DIVIDER ===== */
+.divider{width:60px;height:3px;background:linear-gradient(90deg,#ff4d00,#ff8c00);border-radius:5px;margin:32px 0}
+.divider.teal{background:linear-gradient(90deg,#0d9488,#14b8a6)}
+
+/* ===== SECTION LABEL ===== */
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:#ff4d00;margin-bottom:12px;background:var(--accent-bg);padding:5px 14px;border-radius:25px}
+.section-label.teal{color:#0d9488;background:var(--teal-light);border:1px solid var(--teal-border)}
+[data-theme="dark"] .section-label.teal{background:#001a18;color:#14b8a6}
+
+/* ===== TYPOGRAPHY ===== */
+.blog-main p{font-size:16px;color:var(--text2);margin-bottom:16px;line-height:1.85}
+.blog-main h2{font-size:clamp(19px,3vw,26px);margin:38px 0 12px}
+.blog-main h3{font-size:18px;margin:26px 0 10px}
+.blog-main ul,.blog-main ol{padding-left:22px;margin-bottom:16px}
+.blog-main li{font-size:15px;color:var(--text2);margin-bottom:8px;line-height:1.8}
+.blog-main strong{color:var(--text)}
+
+/* ===== HOOK BLOCK ===== */
+.hook-block{background:var(--hook-bg);border:1px solid var(--accent-border);border-left:5px solid #ff4d00;border-radius:0 14px 14px 0;padding:26px 28px;margin-bottom:38px}
+.hook-block p{font-size:17px;line-height:1.85;color:var(--text2)}
+.hook-highlight{font-size:19px;font-weight:700;color:#ff4d00;margin-top:14px;display:block;font-family:'Syne',sans-serif}
+
+/* ===== PROMPT VISUAL ===== */
+.prompt-visual{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
+.pv-box{border-radius:14px;padding:20px}
+.pv-box.bad{background:var(--compare-bad);border:1.5px solid var(--compare-bad-border)}
+.pv-box.good{background:var(--compare-good);border:1.5px solid var(--compare-good-border)}
+[data-theme="dark"] .pv-box.bad{border-color:#5a0000}
+[data-theme="dark"] .pv-box.good{border-color:#005020}
+.pv-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.pv-box.bad .pv-label{color:#e53e3e}
+.pv-box.good .pv-label{color:#38a169}
+.pv-prompt{background:rgba(0,0,0,.06);border-radius:8px;padding:10px 12px;font-family:monospace;font-size:13px;color:var(--text2);margin-bottom:10px;line-height:1.5;white-space:pre-wrap;word-break:break-word}
+[data-theme="dark"] .pv-prompt{background:rgba(255,255,255,.07)}
+.pv-output{font-size:13px;color:var(--text3);font-style:italic}
+.pv-output strong{color:var(--text);font-style:normal}
+
+/* ===== FORMULA BOX ===== */
+.formula-box{background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:20px;padding:30px;margin:28px 0;color:#fff;text-align:center}
+.formula-box h3{font-size:20px;color:#fff;margin-bottom:16px}
+.formula-parts{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.formula-part{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:12px 18px;text-align:center}
+.formula-part .fp-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:.7;display:block;margin-bottom:4px}
+.formula-part .fp-value{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#fff}
+.formula-plus{font-size:22px;color:rgba(255,255,255,.5);font-weight:700}
+.formula-result{margin-top:18px;background:rgba(255,255,255,.15);border-radius:10px;padding:12px 20px;font-size:14px;color:#fff;font-weight:600}
+
+/* ===== USE CASES ===== */
+.use-cases{display:flex;flex-direction:column;gap:18px;margin:24px 0}
+.uc-card{background:var(--uc-bg);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--shadow1);transition:all .25s;position:relative;overflow:hidden}
+.uc-card::after{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#ff4d00,#ff8c00)}
+.uc-card.teal-top::after{background:linear-gradient(90deg,#0d9488,#14b8a6)}
+.uc-card.blue-top::after{background:linear-gradient(90deg,#0088cc,#005f8f)}
+.uc-card.gold-top::after{background:linear-gradient(90deg,#f59e0b,#d97706)}
+.uc-card:hover{transform:translateY(-3px);box-shadow:var(--shadow2)}
+.uc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.uc-title-wrap{display:flex;align-items:center;gap:10px}
+.uc-icon{font-size:26px;flex-shrink:0}
+.uc-title{font-family:'Syne',sans-serif;font-size:17px;color:var(--text)}
+.uc-badge{background:linear-gradient(135deg,#ff4d00,#ff8c00);color:#fff;font-size:11px;font-weight:800;padding:3px 12px;border-radius:12px}
+.uc-card.teal-top .uc-badge{background:linear-gradient(135deg,#0d9488,#14b8a6)}
+.uc-card.blue-top .uc-badge{background:linear-gradient(135deg,#0088cc,#005f8f)}
+.uc-card.gold-top .uc-badge{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.uc-desc{font-size:15px;color:var(--text2);margin-bottom:14px;line-height:1.75}
+.uc-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.uc-flow-item{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:6px 12px;font-size:13px;color:var(--text2);font-weight:600}
+.uc-flow-arrow{color:#ff4d00;font-size:14px;font-weight:700}
+.uc-card.teal-top .uc-flow-arrow{color:#0d9488}
+.uc-card.blue-top .uc-flow-arrow{color:#0088cc}
+.uc-card.gold-top .uc-flow-arrow{color:#f59e0b}
+.uc-earning{font-size:13px;color:var(--text3);background:var(--bg3);border-radius:8px;padding:10px 14px;border-left:3px solid #ff4d00}
+.uc-card.teal-top .uc-earning{border-left-color:#0d9488}
+.uc-card.blue-top .uc-earning{border-left-color:#0088cc}
+.uc-card.gold-top .uc-earning{border-left-color:#f59e0b}
+
+/* ===== CHAIN SYSTEM ===== */
+.chain-system{background:#0a0a0a;border-radius:20px;padding:30px;margin:28px 0;border:1px solid rgba(13,148,136,.3);position:relative;overflow:hidden}
+.chain-system::before{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;background:radial-gradient(circle,rgba(13,148,136,.15),transparent 70%);pointer-events:none}
+.chain-system h3{color:#fff;font-size:19px;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.chain-items{display:flex;flex-direction:column;gap:4px}
+.chain-item{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 18px;transition:all .2s}
+.chain-item:hover{background:rgba(13,148,136,.12);transform:translateX(4px)}
+.chain-step{width:36px;height:36px;background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.chain-text b{display:block;color:#fff;font-size:14px;font-family:'Syne',sans-serif;margin-bottom:2px}
+.chain-text span{color:#888;font-size:12px}
+.chain-arrow{text-align:center;color:rgba(13,148,136,.4);font-size:16px;padding:1px 0}
+.chain-result{background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:12px;padding:16px 18px;text-align:center;margin-top:12px;color:#fff;font-weight:700;font-family:'Syne',sans-serif;font-size:14px}
+
+/* ===== PROMPT BOX ===== */
+.prompt-box{background:#1e1e2e;border-radius:14px;margin:18px 0;overflow:hidden;position:relative;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.prompt-box-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 10px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:8px}
+.prompt-dots{display:flex;align-items:center;gap:6px}
+.prompt-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.prompt-dot.red{background:#ff5f57}
+.prompt-dot.yellow{background:#ffbd2e}
+.prompt-dot.green{background:#28c840}
+.prompt-label-text{font-size:11px;color:#888;font-family:'DM Sans',sans-serif;letter-spacing:.8px;margin-left:4px}
+.copy-btn{background:rgba(255,255,255,.08);color:#aaa;border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:4px 12px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.copy-btn:hover{background:rgba(13,148,136,.25);color:#14b8a6;border-color:rgba(13,148,136,.4)}
+.copy-btn.copied{background:rgba(40,200,64,.2);color:#28c840;border-color:rgba(40,200,64,.3)}
+.prompt-box pre{color:#e2e8f0;font-size:13.5px;line-height:1.75;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;overflow-x:auto;margin:0;padding:18px 20px;font-family:monospace}
+.prompt-box .hl{color:#ff8c00;font-weight:bold}
+.prompt-box .str{color:#68d391}
+.prompt-box .cmt{color:#718096;font-style:italic}
+.prompt-box .teal{color:#2dd4bf;font-weight:bold}
+
+/* ===== OUTPUT BOX ===== */
+.output-box{background:var(--bg2);border:2px dashed var(--border);border-radius:14px;padding:22px;margin:18px 0}
+.output-label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#0d9488;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.output-item{background:var(--teal-light);border-left:3px solid #0d9488;border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:10px;font-size:14px;color:var(--text2);line-height:1.65}
+[data-theme="dark"] .output-item{background:#001a18}
+.output-item:last-child{margin-bottom:0}
+.output-num{color:#0d9488;font-weight:700;margin-right:6px;font-family:'Syne',sans-serif}
+
+/* ===== STEPS LIST ===== */
+.steps-list{list-style:none;padding:0;margin:18px 0;counter-reset:steps}
+.steps-list li{counter-increment:steps;display:flex;align-items:flex-start;gap:14px;padding:15px;background:var(--step-bg);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;font-size:15px;color:var(--text2);box-shadow:var(--shadow1);transition:border-color .2s,transform .2s}
+.steps-list li:hover{border-color:var(--accent-border);transform:translateX(3px)}
+.steps-list li::before{content:counter(steps);min-width:30px;height:30px;background:linear-gradient(135deg,#ff4d00,#ff8c00);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;font-family:'Syne',sans-serif;flex-shrink:0}
+.steps-list.teal-counter li::before{background:linear-gradient(135deg,#0d9488,#14b8a6)}
+
+/* ===== STAT BOXES ===== */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:25px 0}
+.stat-box{background:var(--stat-bg);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;box-shadow:var(--shadow1);transition:transform .2s,box-shadow .2s}
+.stat-box:hover{transform:translateY(-2px);box-shadow:var(--shadow2)}
+.stat-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#0d9488;display:block}
+.stat-num.orange{color:#ff4d00}
+.stat-num.blue{color:#0088cc}
+.stat-label{font-size:12px;color:var(--text4);margin-top:4px}
+
+/* ===== CALLOUTS ===== */
+.callout{border-radius:14px;padding:22px 26px;margin:24px 0}
+.callout.orange{background:var(--callout-o);border:1px solid var(--accent-border)}
+.callout.blue{background:var(--callout-b);border:1px solid var(--callout-b-border)}
+.callout.green{background:var(--callout-g);border:1px solid var(--callout-g-border)}
+.callout.yellow{background:var(--callout-y);border:1px solid var(--callout-y-border)}
+.callout.teal{background:var(--teal-light);border:1px solid var(--teal-border)}
+.callout.dark{background:#111;border:none}
+.callout.dark p,.callout.dark li{color:#ccc}
+.callout.dark h3{color:#fff}
+.callout-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+[data-theme="dark"] .callout.orange p,[data-theme="dark"] .callout.blue p,
+[data-theme="dark"] .callout.green p,[data-theme="dark"] .callout.yellow p,
+[data-theme="dark"] .callout.teal p{color:var(--text2)}
+[data-theme="dark"] .callout.orange li,[data-theme="dark"] .callout.blue li,
+[data-theme="dark"] .callout.green li,[data-theme="dark"] .callout.yellow li,
+[data-theme="dark"] .callout.teal li{color:var(--text2)}
+[data-theme="dark"] .callout.orange .callout-title,
+[data-theme="dark"] .callout.blue .callout-title,
+[data-theme="dark"] .callout.green .callout-title,
+[data-theme="dark"] .callout.yellow .callout-title,
+[data-theme="dark"] .callout.teal .callout-title{color:var(--text)}
+
+/* ===== MISTAKE GRID ===== */
+.mistake-grid{display:flex;flex-direction:column;gap:12px;margin:20px 0}
+.mistake-item{background:var(--reality-bg);border:1px solid var(--border);border-left:4px solid #e53e3e;border-radius:0 12px 12px 0;padding:16px 18px;transition:transform .2s;box-shadow:var(--shadow1)}
+.mistake-item:hover{transform:translateX(3px)}
+.mistake-label{display:inline-block;background:#e53e3e;color:#fff;font-size:11px;font-weight:800;padding:2px 8px;border-radius:8px;margin-bottom:7px;font-family:'Syne',sans-serif}
+.mistake-item h4{font-size:15px;color:var(--text);margin-bottom:4px}
+.mistake-item p{font-size:14px;color:var(--text3);margin:0}
+
+/* ===== UPGRADE FORMULA ===== */
+.upgrade-formula{background:linear-gradient(135deg,#0f0f0f,#001a18);border-radius:20px;padding:32px;margin:28px 0;border:1px solid rgba(13,148,136,.3);text-align:center}
+.upgrade-formula h3{color:#fff;margin-bottom:20px;font-size:20px}
+.upgrade-parts{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.up-part{background:rgba(13,148,136,.2);border:1px solid rgba(13,148,136,.3);border-radius:12px;padding:12px 16px;text-align:center}
+.up-part .up-num{font-size:10px;color:#14b8a6;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:4px}
+.up-part .up-val{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#fff}
+.up-plus{font-size:20px;color:rgba(20,184,166,.5);font-weight:700}
+.upgrade-result{background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:12px;padding:14px 20px;color:#fff;font-weight:700;font-family:'Syne',sans-serif;font-size:15px;display:inline-block}
+
+/* ===== FINAL SECTION ===== */
+.final-section{background:#0a0a0a;color:#fff;border-radius:20px;padding:38px;margin:38px 0;text-align:center;border:1px solid rgba(13,148,136,.3)}
+.final-section h3{font-size:clamp(19px,3vw,28px);color:#fff;margin-bottom:10px}
+.final-section h3 span{color:#14b8a6}
+.final-section p{color:#aaa;font-size:15px;max-width:500px;margin:12px auto 0}
+.verdict-teal{background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:14px;padding:20px;margin:20px auto;max-width:450px}
+.verdict-teal .vt-text{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#fff;display:block;line-height:1.4}
+.verdict-teal .vt-note{font-size:13px;color:rgba(255,255,255,.85);margin-top:6px;display:block}
+
+/* ===== CTA ===== */
+.cta-block{background:linear-gradient(135deg,#001a18,#002a24);border:2px solid #0d9488;border-radius:22px;padding:46px 32px;text-align:center;margin:46px 0;position:relative;overflow:hidden}
+.cta-block::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(13,148,136,.15),transparent 70%);pointer-events:none}
+.cta-block h3{font-size:26px;margin-bottom:10px;color:#fff}
+.cta-desc{color:rgba(255,255,255,.75);font-size:15px;max-width:480px;margin:0 auto 26px;line-height:1.7}
+.cta-btn-wrap{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+.cta-btn-teal{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#0d9488,#14b8a6);color:#fff;padding:15px 36px;border-radius:50px;font-weight:700;font-size:15px;font-family:'Syne',sans-serif;box-shadow:0 8px 25px rgba(13,148,136,.4);animation:pulse-teal 2.5s infinite;transition:transform .2s}
+.cta-btn-teal:hover{transform:translateY(-2px)}
+.cta-tg{display:inline-flex;align-items:center;gap:8px;background:#0088cc;color:#fff;padding:15px 30px;border-radius:50px;font-weight:700;font-size:15px;font-family:'Syne',sans-serif;transition:all .2s;box-shadow:0 8px 25px rgba(0,136,204,.3)}
+.cta-tg:hover{background:#006fa8;transform:translateY(-2px)}
+@keyframes pulse-teal{0%,100%{box-shadow:0 8px 25px rgba(13,148,136,.4)}50%{box-shadow:0 12px 35px rgba(13,148,136,.7)}}
+.cta-note{font-size:12px;color:rgba(255,255,255,.5);margin-top:13px}
+
+/* ===== QUOTE ===== */
+.quote-block{border-left:4px solid #0d9488;padding:18px 22px;margin:26px 0;background:var(--quote-bg);border-radius:0 12px 12px 0;box-shadow:var(--shadow1)}
+.quote-block blockquote{font-size:18px;font-family:'Syne',sans-serif;color:var(--text);line-height:1.5}
+.quote-block cite{display:block;font-size:12px;color:var(--text4);margin-top:8px}
+
+/* ===== TOC ===== */
+.toc-box{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:22px;margin:32px 0;box-shadow:var(--shadow1)}
+.toc-title{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:14px;color:var(--text);display:flex;align-items:center;gap:8px}
+.toc-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:4px}
+.toc-list a{font-size:13px;color:var(--text3);display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;transition:all .2s}
+.toc-list a:hover,.toc-list a.toc-active{background:var(--toc-active);color:#ff4d00}
+.toc-list a span{font-size:10px;color:var(--text4);min-width:18px;font-weight:700;font-family:'Syne',sans-serif}
+
+/* ===== ALSO READ ===== */
+.also-read{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:18px 0;display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text3);flex-wrap:wrap;transition:border-color .2s}
+.also-read:hover{border-color:var(--accent-border)}
+.also-read .ar-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#ff4d00;font-weight:800;white-space:nowrap;padding-top:2px}
+.also-read a{color:var(--text);font-weight:600;border-bottom:1px dashed #ff4d00;transition:color .2s}
+.also-read a:hover{color:#ff4d00}
+
+/* ===== MORE GRID ===== */
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.more-grid a{display:block;padding:13px;background:var(--bg3);border-radius:10px;border:1px solid var(--border);font-size:13px;color:var(--text2);font-weight:600;transition:all .2s}
+.more-grid a:hover{background:var(--accent-bg);color:#ff4d00;border-color:var(--accent-border);transform:translateY(-2px)}
+
+/* ===== SIDEBAR ===== */
+.sidebar-card{background:var(--sidebar-bg);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:20px;box-shadow:var(--shadow1)}
+.sidebar-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:14px;color:var(--text);padding-bottom:9px;border-bottom:2px solid #ff4d00;display:inline-block}
+.related-post{display:flex;gap:11px;margin-bottom:13px;align-items:flex-start}
+.related-post:last-child{margin-bottom:0}
+.related-post img{width:62px;height:62px;border-radius:10px;object-fit:cover;flex-shrink:0}
+.related-post-info a{font-size:13px;color:var(--text);font-weight:600;line-height:1.4;display:block;margin-bottom:3px;transition:color .2s}
+.related-post-info a:hover{color:#ff4d00}
+.related-post-info span{font-size:11px;color:var(--text4)}
+.tool-links{display:flex;flex-direction:column;gap:7px}
+.tool-link{display:flex;align-items:center;gap:9px;padding:10px 13px;background:var(--bg3);border-radius:10px;font-size:14px;color:var(--text2);transition:all .2s;border:1px solid var(--border)}
+.tool-link:hover{background:var(--accent-bg);color:#ff4d00;border-color:var(--accent-border);transform:translateX(4px)}
+.tool-link span{font-size:15px;flex-shrink:0}
+
+/* ===== GLASS AD ===== */
+.glass-ad{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:23px;margin-bottom:20px;background:linear-gradient(135deg,rgba(255,77,0,.08),rgba(255,140,0,.05),rgba(37,211,102,.06));box-shadow:0 8px 32px rgba(255,77,0,.1),inset 0 1px 0 rgba(255,255,255,.5);position:relative;overflow:hidden}
+[data-theme="dark"] .glass-ad{background:linear-gradient(135deg,rgba(255,77,0,.06),rgba(0,0,0,.4));border-color:rgba(255,255,255,.08);box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.glass-ad::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,77,0,.12),transparent 70%);pointer-events:none}
+.glass-ad-badge{display:inline-block;background:linear-gradient(135deg,#ff4d00,#ff8c00);color:#fff;font-size:10px;padding:3px 10px;border-radius:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.glass-ad h4{font-size:15px;color:var(--text);margin-bottom:7px;line-height:1.35}
+.glass-ad p{font-size:13px;color:var(--text3);margin-bottom:14px;line-height:1.6}
+.glass-ad-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700;font-size:14px;width:100%;transition:all .2s;box-shadow:0 4px 15px rgba(37,211,102,.3)}
+.glass-ad-btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(37,211,102,.45)}
+.glass-ad-note{text-align:center;font-size:11px;color:var(--text4);margin-top:7px}
+
+/* ===== SHARE ===== */
+.share-section{text-align:center;padding:26px;background:var(--share-bg);border-radius:16px;border:1px solid var(--border);margin:38px 0;box-shadow:var(--shadow1)}
+.share-section p{color:var(--text3);font-size:14px;margin-bottom:14px}
+.share-btns{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
+.share-btn{padding:9px 20px;border-radius:25px;font-size:13px;font-weight:700;cursor:pointer;border:none;transition:all .2s;font-family:'DM Sans',sans-serif}
+.share-btn:hover{transform:scale(1.05)}
+.s-wa{background:#25d366;color:#fff}
+.s-tg{background:#0088cc;color:#fff}
+.s-tw{background:#1da1f2;color:#fff}
+.s-cp{background:var(--bg3);color:var(--text2);border:1px solid var(--border)}
+
+/* ===== AUTHOR ===== */
+.author-box{background:var(--author-bg);border:1px solid var(--border);border-radius:16px;padding:23px;margin:38px 0;display:flex;gap:18px;align-items:flex-start;box-shadow:var(--shadow1)}
+.author-avatar{width:56px;height:56px;background:linear-gradient(135deg,#0d9488,#14b8a6);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.author-info h4{font-size:15px;margin-bottom:4px}
+.author-info p{font-size:14px;color:var(--text3);margin:0}
+
+/* ===== FAQ ===== */
+.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;background:var(--faq-bg);transition:border-color .2s}
+.faq-item:hover{border-color:var(--teal-border)}
+.faq-q{padding:16px 18px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:15px;user-select:none;transition:background .2s;gap:10px;color:var(--text)}
+.faq-q:hover{background:var(--bg3)}
+.faq-q .faq-icon{font-size:18px;color:#0d9488;transition:transform .3s;flex-shrink:0}
+.faq-a{display:none;padding:0 18px 16px;font-size:14px;color:var(--text3);line-height:1.75}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+
+/* ===== INLINE IMG ===== */
+.inline-img{border-radius:16px;overflow:hidden;margin:26px 0}
+.inline-img img{width:100%;height:250px;object-fit:cover;opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.inline-img img.loaded{opacity:1;transform:translateY(0)}
+.img-caption{text-align:center;font-size:12px;color:var(--text4);margin-top:8px;font-style:italic}
+
+/* ===== FOOTER ===== */
+footer{background:var(--footer-bg);color:var(--footer-text)}
+.footer-top{max-width:1100px;margin:0 auto;padding:55px 5% 38px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px}
+.footer-brand .logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--footer-head);margin-bottom:10px}
+.footer-brand .logo span{color:#ff4d00}
+.footer-brand p{font-size:13px;line-height:1.7;margin-bottom:16px}
+.footer-tg{display:inline-flex;align-items:center;gap:8px;background:#0088cc;color:#fff;padding:9px 18px;border-radius:25px;font-size:13px;font-weight:700;transition:background .2s}
+.footer-tg:hover{background:#006fa8}
+.footer-col h5{font-family:'Syne',sans-serif;font-size:13px;color:var(--footer-head);font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul a{font-size:13px;color:var(--footer-text);transition:color .2s;display:flex;align-items:center;gap:5px}
+.footer-col ul a:hover{color:#ff4d00}
+.footer-bottom{border-top:1px solid #222;max-width:1100px;margin:0 auto;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px}
+.footer-bottom a{color:#ff8c00}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){.page-wrapper{grid-template-columns:1fr;gap:0}.blog-sidebar{position:static;margin-top:40px}.footer-top{grid-template-columns:1fr 1fr}#floating-ad{width:190px}}
+@media(max-width:600px){.nav-links{display:none}.hamburger{display:flex}.hero{padding-top:25px}.hero-image-wrap{height:210px}.prompt-visual,.more-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}.cta-block{padding:26px 16px}.author-box{flex-direction:column}.chain-system{padding:18px}.final-section{padding:24px 16px}.hook-block{padding:20px 18px}.prompt-box pre{font-size:12px;padding:14px}#scroll-top{bottom:18px;right:14px;width:42px;height:42px;font-size:18px}#floating-ad{width:165px;bottom:75px;right:10px;padding:12px}.toc-list a{font-size:12px}.upgrade-parts{gap:6px}.formula-parts{gap:8px}}
+</style>
 </head>
 <body>
 
-<header>
-    <div class="logo">CaptionStudio</div>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="../tools/index.html">Tools</a>
-        <a href="../relax.html">Relax</a>
-        <a href="../contact.html">Contact</a>
-    </nav>
-</header>
+<div id="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
 
-<div class="container">
-    <div class="blog-header">
-        <h1>2026 Mein <span>AI Tools</span> Se Content Game Kaise Jeetein?</h1>
-        <p class="meta-info">Written by <strong>Ansh</strong> | Founder of CaptionStudio | April 2026</p>
-    </div>
-
-    <div class="content-box">
-        <p>Dosto, 2025 mein meri graduation (BSc Maths) complete hui, aur wahan se lekar aaj 2026 tak ka safar kaafi seekhne wala raha hai. Aaj har dusra banda "Nalla" baitha hai, par sach toh ye hai ki agar aapke paas AI ki power hai, toh aap kisi se piche nahi ho. Maine <strong>CaptionStudio.in</strong> ko isliye design kiya taaki har student aur content creator bina kisi advance laptop ya mehnge subscription ke apna kaam kar sake.</p>
-
-        <h2>1. Logic Ki Jagah AI Smartness Use Karo</h2>
-        <p>Bohot se log mujhse puchte hain ki "Bhai, humein coding nahi aati, hum logic kaise lagayein?" Mera unhe hamesha ek hi jawab hota hai—2026 mein aapko code likhne ki zarurat nahi, balki AI se kaam karwane ki zarurat hai. Humare <em>Caption Generator</em> aur <em>Bio Ideas</em> tools ko aise develop kiya gaya hai ki wo aapki mehnat ko zero kar dete hain. Aapko bas apna idea dena hai, baaki "Magic" AI karega.</p>
-
-        <div class="highlight-card">
-            "Agar aapka phone tuta hai ya slow hai, toh pareshan mat ho. CaptionStudio ko maine lightweight banaya hai taaki ye har device par makkhan chale. Aapka dimaag aur humare tools milkar viral content bana sakte hain."
-        </div>
-
-        <h2>2. Monthly ₹10,000 Kaise Kamayein? (Real Strategy)</h2>
-        <p>Sirf tools use karna kaafi nahi hai, unhe "Cash" mein badalna seekho. CaptionStudio ke <em>YouTube Title Generator</em> aur <em>LinkedIn Post Tools</em> se aap freelancing shuru kar sakte hain. Aap apne area ki local shops ya chote startups ko approach kariye. Unhe bolo ki aap unka social media handle karoge. Ek client se agar aap ₹2000 bhi charge karte ho, toh 5 clients se aapka mahine ka ₹10k set ho jayega. Saara content humare free tools se generate karo aur premium quality deliver karo.</p>
-
-        <h2>3. Relax Mode Aur Mental Productivity</h2>
-        <p>Main janta hoon ki din bhar screen dekhne se dimaag thak jata hai. Isliye maine site par <strong>Relax Page</strong> banaya hai. Maine khud mehsoos kiya hai ki jab hum relax hote hain, tabhi sabse ache ideas aate hain. Kaam ke bich mein 5-10 minute ka break lo, relax page check karo, aur fir wapas kaam par lago. Ye strategy aapko long run mein ek successful founder banayegi.</p>
-
-        <h2>4. Contact Aur Help</h2>
-        <p>Agar aapko koi technical dikkat aati hai ya mujhse koi custom website banwani hai, toh purani email (captionstudio02) abhi band hai. Aap mujhe site ke contact page se connect kar sakte hain ya humare Telegram group ko join kar sakte hain. Main hamesha koshish karta hoon ki chote creators ko sahi rasta dikha sakun.</p>
-
-        <div class="cta-section">
-            <h3>Start Your Journey Today!</h3>
-            <p>Abhi jaao aur humare <a href="../tools/index.html">Free AI Tools</a> ko explore karo. No Login, No Hidden Fees.</p>
-        </div>
-
-        <p style="margin-top: 30px;">Conclusion mein bas itna hi kahunga—2026 unka hai jo smart work karte hain. CaptionStudio aapka saathi hai is digital kranti mein. Har student, har creator ab "Founder" ban sakta hai. - <strong>Ansh</strong></p>
-    </div>
+<!-- ===== FLOATING AD ===== -->
+<div id="floating-ad" role="complementary" aria-label="Advertisement">
+  <button class="ad-close" onclick="document.getElementById('floating-ad').style.display='none'" aria-label="Close advertisement" type="button">×</button>
+  <div class="ad-badge-float">🌐 Website</div>
+  <h4>Need a Website Like This?</h4>
+  <p>Blog, tools, earning hub — SEO ready, fast delivery</p>
+  <a href="https://wa.me/919918996096?text=Hi!%20I%20need%20a%20website%20like%20CaptionStudio.%20Please%20share%20pricing."
+     target="_blank" rel="noopener noreferrer" class="ad-float-btn">
+    📱 WhatsApp Karo
+  </a>
 </div>
 
+<!-- HEADER -->
+<header>
+  <div class="nav-top">
+    <a class="nav-logo" href="../index.html" aria-label="CaptionStudio Home">
+      <img src="../favicon.png" alt="CaptionStudio logo" loading="lazy" width="28" height="28">
+      Caption<span>Studio</span>
+    </a>
+    <ul class="nav-links" role="navigation" aria-label="Main navigation">
+      <li><a href="../index.html">🏠 Home</a></li>
+      <li><a href="../tools/">⚡ Tools</a></li>
+      <li><a href="../blog/" class="active" aria-current="page">✍️ Blog</a></li>
+      <li><a href="../guide.html">📖 Guide</a></li>
+      <li><a href="../earning.html">💸 Earning</a></li>
+      <li><a href="../relax.html">😌 Relax</a></li>
+      <li><a href="../about.html">👥 About</a></li>
+      <li><a href="../contact.html">📬 Contact</a></li>
+      <li><a href="https://t.me/skill2incomehub" class="btn-nav" target="_blank" rel="noopener noreferrer">✈️ Telegram</a></li>
+    </ul>
+    <div class="nav-right-controls">
+      <button id="dark-toggle" onclick="toggleDark()" aria-label="Toggle dark mode" type="button">🌙 Dark</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" type="button"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="../index.html">🏠 Home</a>
+    <a href="../tools/">⚡ Tools</a>
+    <a href="../blog/">✍️ Blog</a>
+    <a href="../guide.html">📖 Guide</a>
+    <a href="../earning.html">💸 Earning Hub</a>
+    <a href="../relax.html">😌 Relax Zone</a>
+    <a href="../about.html">👥 About</a>
+    <a href="../contact.html">📬 Contact</a>
+    <a href="../support.html">🛠 Support</a>
+    <a href="../privacy.html">🔒 Privacy</a>
+    <a href="../terms.html">📋 Terms</a>
+    <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer" style="color:#0088cc;font-weight:700">✈️ Join Telegram</a>
+  </nav>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="../index.html">Home</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../blog/">Blog</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span aria-current="page">Master AI Guide 2026</span>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="updated-badge" role="note">🟢 Last Updated: April 20, 2026</div>
+  <div class="read-time-badge" id="read-time-display">⏱️ Calculating...</div>
+  <div class="skill-badge">🧠 Skill Series · Day 3</div>
+  <div class="hero-badge">
+    <span class="badge-day">🔥 Day 3</span>
+    <span class="badge-skill">Prompt Engineering</span>
+    Beginners Guide · India 2026
+  </div>
+  <h1>AI Prompt Engineering Kya Hai?<br><em>(Aur Log Isse Paise Kaise Bana Rahe Hain 😳)</em></h1>
+  <p class="hero-intro">
+    Agar tum soch rahe ho ki AI se paisa kamane ke liye <strong>coding ya high skill chahiye…</strong>
+    to tum galat direction mein ho. Kyunki 2026 mein ek nayi skill aayi hai —
+    <strong>Prompt Engineering.</strong> Aur sach ye hai:
+    <em>jo isko samajh gaya… wo AI se paisa bana raha hai.</em>
+    Aaj hum exactly ye batayenge — kya hai, kaise kaam karta hai,
+    aur <strong>practically earning kaise hoti hai.</strong>
+  </p>
+  <div class="hero-meta">
+    <span>✍️ CaptionStudio Team</span>
+    <span class="meta-dot">·</span>
+    <span>📅 April 2026</span>
+    <span class="meta-dot">·</span>
+    <span>🧠 2,700+ Words</span>
+    <span class="meta-dot">·</span>
+    <span>✅ Beginners Guide</span>
+  </div>
+  <div class="hero-image-wrap">
+    <img
+      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&q=80&auto=format&fit=crop"
+      alt="AI prompt engineering kya hai aur log isse paise kaise kama rahe hain India 2026 — complete beginners guide earning"
+      loading="eager" fetchpriority="high" width="1200" height="380"
+    >
+    <div class="hero-image-overlay" aria-hidden="true"></div>
+    <p class="hero-image-caption">Prompt Engineering — 2026 Ki Sabse Powerful Skill</p>
+  </div>
+</div>
+
+<!-- PAGE WRAPPER -->
+<div class="page-wrapper">
+<main class="blog-main" id="main-content">
+
+  <!-- TOC -->
+  <nav class="toc-box" aria-label="Table of contents">
+    <div class="toc-title">📋 Is Article Mein Kya Hai?</div>
+    <ul class="toc-list" role="list">
+      <li><a href="#hook">      <span>01</span> Hook — Tum Galat Direction Mein Ho?</a></li>
+      <li><a href="#curiosity"> <span>02</span> Curiosity Build — Kya Hai Ye Skill?</a></li>
+      <li><a href="#illusion">  <span>03</span> Illusion Layer — Secret Formula?</a></li>
+      <li><a href="#twist">     <span>04</span> Twist — Reality Kya Hai</a></li>
+      <li><a href="#core">      <span>05</span> Core Concept — Simple Breakdown</a></li>
+      <li><a href="#money">     <span>06</span> Money Angle — 4 Use Cases</a></li>
+      <li><a href="#system">    <span>07</span> System Thinking — Chain Model</a></li>
+      <li><a href="#prompts">   <span>08</span> Copy-Paste Prompts + Output</a></li>
+      <li><a href="#upgrade">   <span>09</span> Upgrade Formula — Role+Task+Context+Output</a></li>
+      <li><a href="#mistakes">  <span>10</span> 90% Log Yahi Galti Karte Hain</a></li>
+      <li><a href="#practice">  <span>11</span> Practice Plan — Aaj Se Shuru Karo</a></li>
+      <li><a href="#mindset">   <span>12</span> Final Mindset Shift</a></li>
+      <li><a href="#faq">       <span>13</span> FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== S1: HOOK ==================== -->
+  <section id="hook" aria-labelledby="h-hook">
+    <div class="hook-block">
+      <p>
+        Agar tum soch rahe ho ki AI se paisa kamane ke liye
+        <strong>coding ya high-level technical skill chahiye…</strong>
+      </p>
+      <p style="margin-top:14px">
+        <span style="color:#ff4d00;font-weight:700" aria-hidden="true">👉</span>
+        to tum <strong>galat direction mein ho.</strong>
+      </p>
+      <p style="margin-top:12px">
+        Kyunki 2026 mein ek nayi skill aayi hai jise
+        <strong>coding nahi aati</strong>, programming nahi aati,
+        aur degree bhi nahi chahiye:
+      </p>
+      <span class="hook-highlight">👉 Prompt Engineering</span>
+      <p style="margin-top:12px;font-size:17px">
+        Aur sach ye hai —
+        <span style="color:#0d9488;font-weight:700">jo isko samajh gaya… wo AI se paisa bana raha hai.</span>
+        Jo nahi samjha… wo abhi bhi "caption de do" type kar raha hai.
+      </p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box"><span class="stat-num">₹0</span><div class="stat-label">Investment required to learn prompt engineering</div></div>
+      <div class="stat-box"><span class="stat-num orange">2 Weeks</span><div class="stat-label">Mein basic mastery possible hai — daily practice se</div></div>
+      <div class="stat-box"><span class="stat-num blue">4</span><div class="stat-label">Real earning use cases jisme ye skill directly kaam aati hai</div></div>
+    </div>
+
+    <p>
+      Prompt engineering — ye naam sunke lagta hai kuch bahut technical hai.
+      Koi bade-bade code likhne padenge. Koi algorithm samajhna padega.
+      <strong>Reality? Iske liye sirf ek cheez chahiye — clearly likhne ki ability.</strong>
+      Agar tum Hindi ya Hinglish mein apni baat clearly express kar sakte ho,
+      tum prompt engineering seekh sakte ho. Guaranteed.
+    </p>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>AI se earning ka complete system: <a href="ai-earning-guide-2026.html">₹1 Lakh/Month AI System — Step by Step Breakdown →</a></div>
+    </div>
+  </section>
+
+  <div class="divider teal" aria-hidden="true"></div>
+
+  <!-- ==================== S2: CURIOSITY ==================== -->
+  <section id="curiosity" aria-labelledby="h-curiosity">
+    <div class="section-label teal">😳 Section 02</div>
+    <h2 id="h-curiosity">Curiosity Build — Ye Skill Exactly Kya Hai Aur Log Isse Kyu Use Kar Rahe Hain?</h2>
+
+    <div class="inline-img">
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80&auto=format&fit=crop"
+        alt="AI prompt engineering curiosity build — what exactly is this skill and why people are earning from it India 2026"
+        loading="lazy" width="800" height="250">
+      <p class="img-caption">Ye skill 2026 mein sabse zyada demand mein hai — aur sikhne mein sabse easy bhi</p>
+    </div>
+
+    <p>
+      Internet pe log bol rahe hain:
+      <em>"prompt likho, earn karo"</em> … <em>"AI se business build karo"</em> …
+      <em>"prompts ki skill = lakhs".</em>
+      Par kisi ne clearly nahi bataya:
+      <strong>prompt engineering actually hota kya hai?</strong>
+    </p>
+    <p>
+      Ek simple definition se shuru karte hain:
+    </p>
+
+    <div class="callout teal">
+      <div class="callout-title" style="color:#0d9488">🧠 Simplest Definition Ever</div>
+      <p style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:var(--text)">
+        Prompt Engineering = AI ko sahi tarike se instruction dena
+      </p>
+      <p style="margin-top:10px">
+        Bas itna hi. Koi coding nahi. Koi algorithm nahi.
+        Sirf ye jaanna ki AI ko kaise bolein taaki wo exactly wo kaam kare jo tum chahte ho.
+        <strong>Ye ek communication skill hai — aur isko seekhna school ke essay likhne se bhi easy hai.</strong>
+      </p>
+    </div>
+
+    <p>
+      Ab sawal ye hai — agar ye itna simple hai, toh ye "skill" kyu hai?
+      Kyunki <em>sahi tarike se instruction dena</em> ek art hai.
+      Ek chhoti si change prompt mein — aur output completely different ho jaata hai.
+      <strong>Yahi fark ₹0 aur ₹50,000/month ke beech hai.</strong>
+    </p>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>AI se paise kaise kamaye 2026 mein: <a href="pro-ai-guide-2026.html">2026 Ka Hidden AI System — 5 Real Money Models →</a></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== S3: ILLUSION ==================== -->
+  <section id="illusion" aria-labelledby="h-illusion">
+    <div class="section-label">🤫 Section 03</div>
+    <h2 id="h-illusion">Illusion Layer — "Secret Prompts" Ka Sach Kya Hai?</h2>
+
+    <p>
+      Internet pe kuch log ise <strong>secret bana ke rakhte hain:</strong>
+      "Hidden prompts", "special commands", "unlock formula"…
+      Aur tumhe lagta hai — <em>shayad koi magic formula hai jo sirf kuch logon ke paas hai.</em>
+    </p>
+    <p>
+      <strong>Sach? Aisa koi secret formula exist nahi karta.</strong>
+      Jo log "secret prompts" bechte hain — wo tumhari curiosity aur desperation ka fayda uthate hain.
+      Real prompt engineering kisi bhi "secret" pe depend nahi karta.
+      Ye ek learnable, systematic skill hai jise koi bhi master kar sakta hai.
+    </p>
+
+    <div class="callout yellow">
+      <div class="callout-title">⚠️ Ye Dhyan Se Samjho</div>
+      <p>
+        <strong>Koi bhi prompt "magical" nahi hota.</strong>
+        Same prompt alag-alag logon ke haath mein alag-alag results deta hai.
+        Kyunki result prompt se nahi aata — <strong>result prompt + context + refinement se aata hai.</strong>
+        Ye system seekhna hai, not a one-time hack.
+      </p>
+    </div>
+
+    <div class="quote-block">
+      <blockquote>"Prompt engineering koi shortcut nahi hai — ye ek skill hai jo consistent practice se built hoti hai."</blockquote>
+      <cite>— CaptionStudio Team, April 2026</cite>
+    </div>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>AI manipulation ka real matlab: <a href="ai-manipulation-guide.html">AI ko Manipulate Kaise Kare — Real System Reveal →</a></div>
+    </div>
+  </section>
+
+  <div class="divider teal" aria-hidden="true"></div>
+
+  <!-- ==================== S4: TWIST ==================== -->
+  <section id="twist" aria-labelledby="h-twist">
+    <div class="section-label teal">⚡ Section 04</div>
+    <h2 id="h-twist">Real Twist — "Bas" Jo Hai, Wo Sabse Powerful Cheez Hai</h2>
+
+    <p>Par ye samajh lo — ye simplicity hi iska power hai:</p>
+
+    <div class="callout teal">
+      <div class="callout-title" style="color:#0d9488">⚡ The Twist</div>
+      <p style="font-size:17px;font-family:'Syne',sans-serif;font-weight:700;color:var(--text)">
+        Prompt engineering = AI ko sahi instruction dena. Bas.
+      </p>
+      <p style="margin-top:10px">
+        Lekin ye <strong>"Bas"</strong> hi sabse powerful cheez hai 😳
+        Kyunki jab tum sahi instruction dete ho —
+        AI tumhare liye wo kaam karta hai jo pehle ek team kiya karti thi.
+        <strong>Ek banda, AI ke through, ek team ka kaam kar sakta hai.</strong>
+      </p>
+    </div>
+
+    <p>
+      2026 mein AI tools itne powerful hain — ChatGPT, Gemini, Claude, CaptionStudio —
+      ki ek sahi prompt se tum paa sakte ho:
+      <strong>viral captions, SEO articles, email sequences, reel scripts, LinkedIn posts,
+      product descriptions</strong> — sab kuch minutes mein.
+    </p>
+    <p>
+      Par same tools use karne ke baad kuch log average output paate hain
+      aur kuch log exceptional output.
+      <strong>Fark prompt engineering ka hai. Always.</strong>
+    </p>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>AI tools se Instagram reach: <a href="ai-tools-instagram-reach.html">Top 10 AI Tools for Instagram Reach 2026 →</a></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== S5: CORE ==================== -->
+  <section id="core" aria-labelledby="h-core">
+    <div class="section-label">🧠 Section 05</div>
+    <h2 id="h-core">Core Concept — Simple Breakdown (Examples Ke Saath)</h2>
+
+    <div class="inline-img">
+      <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80&auto=format&fit=crop"
+        alt="AI prompt engineering core concept simple breakdown with examples for Indian beginners 2026"
+        loading="lazy" width="800" height="250">
+      <p class="img-caption">Same AI, same topic — lekin prompt ka fark output completely change kar deta hai</p>
+    </div>
+
+    <p>
+      AI kya karta hai basically?
+      <strong>Jo tum bolte ho, uska best possible output deta hai.</strong>
+      Problem ye hai ki AI "best possible" ko tumhari situation ke hisab se define nahi kar sakta —
+      ye definition tumhe deni hoti hai.
+    </p>
+
+    <p>Ek direct comparison dekho:</p>
+
+    <div class="prompt-visual">
+      <div class="pv-box bad">
+        <span class="pv-label">❌ Weak Prompt</span>
+        <div class="pv-prompt">"caption de do"</div>
+        <div class="pv-output">Output: <strong>Basic, generic, kisi ke bhi kaam ki nahi.</strong> "Life is beautiful ✨ #motivation #love"</div>
+      </div>
+      <div class="pv-box good">
+        <span class="pv-label">✅ Strong Prompt</span>
+        <div class="pv-prompt">"Act as viral Instagram creator. Hinglish me 5 savage captions do, short aur relatable, fitness niche ke liye, Gen-Z audience."</div>
+        <div class="pv-output">Output: <strong>Targeted, viral-ready, audience-specific captions</strong> 🔥</div>
+      </div>
+    </div>
+
+    <p>
+      <strong>Ye hi prompt engineering ka core hai.</strong>
+      Pehle prompt se AI confuse hota hai — kya topic? kiska audience? kaisi tone?
+      Doosre prompt se AI ke paas exact blueprint hai — wo exactly wahi deliver karta hai.
+    </p>
+
+    <div class="callout orange">
+      <div class="callout-title">💡 Key Insight</div>
+      <p>
+        AI ka output always limited hota hai tumhare input se.
+        <strong>Garbage in = garbage out. Gold in = gold out.</strong>
+        Prompt engineering matlab apna "input" itna gold banana
+        ki AI ke paas koi choice na ho exceptionally deliver karne ke alawa.
+      </p>
+    </div>
+
+    <p>Ek aur comparison — is baar real-world use case pe:</p>
+
+    <div class="prompt-visual">
+      <div class="pv-box bad">
+        <span class="pv-label">❌ Beginner</span>
+        <div class="pv-prompt">"mujhe blog likhna hai AI ke baare mein"</div>
+        <div class="pv-output">Output: <strong>Random, unstructured, 500 words ka generic article.</strong> Client reject karega.</div>
+      </div>
+      <div class="pv-box good">
+        <span class="pv-label">✅ Intermediate</span>
+        <div class="pv-prompt">"Act as SEO content writer for Indian audience. Write a 1000-word blog on 'AI se paise kaise kamaye'. Include H2 headings, bullet points. Tone: conversational Hinglish. Target keyword in first para."</div>
+        <div class="pv-output">Output: <strong>SEO-ready, structured, client-deliverable article.</strong> ₹1,500+ ka kaam.</div>
+      </div>
+    </div>
+
+    <p>
+      Ab tumhe samajh aa gaya hoga kyu ek prompt writer ₹500-2,500 per piece earn kar sakta hai
+      aur ek random person jo sirf "likh do" type karta hai — kuch earn nahi karta.
+      <strong>Same AI, same topic, same output type. Fark sirf prompt mein.</strong>
+    </p>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Best prompts copy-paste ke liye: <a href="copy-paste-instagram-captions.html">Copy-Paste Instagram Captions 2026 — 200+ Hooks →</a></div>
+    </div>
+  </section>
+
+  <div class="divider teal" aria-hidden="true"></div>
+
+  <!-- ==================== S6: MONEY ==================== -->
+  <section id="money" aria-labelledby="h-money">
+    <div class="section-label teal">💸 Section 06</div>
+    <h2 id="h-money">Money Angle — Prompt Engineering Se Actually Paise Kaise Aate Hain (4 Real Use Cases)</h2>
+
+    <p>
+      Ab sabse important part — <strong>prompt engineering ek skill nahi, earning tool hai.</strong>
+      Ye 4 direct ways hain jisme ye skill directly income generate karti hai:
+    </p>
+
+    <div class="use-cases">
+
+      <!-- USE CASE 1 -->
+      <div class="uc-card">
+        <div class="uc-header">
+          <div class="uc-title-wrap">
+            <div class="uc-icon" aria-hidden="true">🧑‍💻</div>
+            <div class="uc-title">Use Case 1: AI Freelancing</div>
+          </div>
+          <span class="uc-badge">₹5K-50K/month</span>
+        </div>
+        <p class="uc-desc">
+          Ye sabse direct aur fast-to-start method hai.
+          Tum clients ke liye AI se high-quality content generate karte ho —
+          captions, blogs, scripts, emails, product descriptions.
+          <strong>Better prompt = better output = better payment = better reviews = more clients.</strong>
+          Ye ek positive cycle hai jo ek baar start ho jaaye to automatically scale karta hai.
+        </p>
+        <div class="uc-flow">
+          <span class="uc-flow-item">Strong Prompt</span>
+          <span class="uc-flow-arrow">→</span>
+          <span class="uc-flow-item">Quality Output</span>
+          <span class="uc-flow-arrow">→</span>
+          <span class="uc-flow-item">Client Deliver</span>
+          <span class="uc-flow-arrow">→</span>
+          <span class="uc-flow-item">Payment</span>
+          <span class="uc-flow-arrow">→</span>
+          <span class="uc-flow-item">Repeat</span>
+        </div>
+        <div class="uc-earning">
+          <strong>Earning Example:</strong> Ek social media manager jo AI prompts use karta hai
+          — 5 clients × ₹8,000/month = ₹40,000/month. Tools: CaptionStudio + ChatGPT.
+        </div>
+      </div>
+
+      <!-- USE CASE 2 -->
+      <div class="uc-card teal-top">
+        <div class="uc-header">
+          <div class="uc-title-wrap">
+            <div class="uc-icon" aria-hidden="true">📱</div>
+            <div class="uc-title">Use Case 2: Content Creation Engine</div>
+          </div>
+          <span class="uc-badge teal">₹0 → ₹80K+/month</span>
+        </div>
+        <p class="uc-desc">
+          Strong prompts se viral content banao — Instagram, YouTube, LinkedIn.
+          Viral content se followers badhte hain.
+          Followers se income aati hai — brand deals, affiliate, digital products.
+          <strong>Ye ek slow build hai — lekin ek baar system run ho jaaye,
+          income multiple streams se aati hai simultaneously.</strong>
+          AI se content 5x fast banta hai, jisse consistency naturally maintain hoti hai.
+        </p>
+        <div class="uc-flow">
+          <span class="uc-flow-item">AI Prompts</span>
+          <span class="uc-flow-arrow" style="color:#0d9488">→</span>
+          <span class="uc-flow-item">Viral Content</span>
+          <span class="uc-flow-arrow" style="color:#0d9488">→</span>
+          <span class="uc-flow-item">Audience</span>
+          <span class="uc-flow-arrow" style="color:#0d9488">→</span>
+          <span class="uc-flow-item">Income</span>
+        </div>
+        <div class="uc-earning" style="border-left-color:#0d9488">
+          <strong>Real Example:</strong> Hinglish motivation content creator — 50K followers, ₹25K/month brand deals + ₹15K affiliate. Prompt-driven content calendar.
+        </div>
+      </div>
+
+      <!-- USE CASE 3 -->
+      <div class="uc-card blue-top">
+        <div class="uc-header">
+          <div class="uc-title-wrap">
+            <div class="uc-icon" aria-hidden="true">🌐</div>
+            <div class="uc-title">Use Case 3: SEO Blog System</div>
+          </div>
+          <span class="uc-badge blue">₹10K-2L/month (passive)</span>
+        </div>
+        <p class="uc-desc">
+          AI se SEO-optimized blog posts banao, Google pe rank karo, traffic lao, passive income generate karo.
+          <strong>SEO prompts ka matlab — tumhare articles mein sahi keywords, sahi structure,
+          sahi readability automatically aati hai.</strong>
+          Ye investment hai — 3-6 months mein results aate hain.
+          Par ek baar traffic aaya to money auto-pilot pe chalta hai.
+        </p>
+        <div class="uc-flow">
+          <span class="uc-flow-item">SEO Prompts</span>
+          <span class="uc-flow-arrow" style="color:#0088cc">→</span>
+          <span class="uc-flow-item">100 Articles</span>
+          <span class="uc-flow-arrow" style="color:#0088cc">→</span>
+          <span class="uc-flow-item">Google Traffic</span>
+          <span class="uc-flow-arrow" style="color:#0088cc">→</span>
+          <span class="uc-flow-item">Passive Income</span>
+        </div>
+        <div class="uc-earning" style="border-left-color:#0088cc">
+          <strong>Key Insight:</strong> Ek well-optimized AI article jo Google pe rank kare
+          — daily ₹100-500 passive income de sakta hai. 100 aise articles = ₹10K-50K/month passive.
+        </div>
+      </div>
+
+      <!-- USE CASE 4 -->
+      <div class="uc-card gold-top">
+        <div class="uc-header">
+          <div class="uc-title-wrap">
+            <div class="uc-icon" aria-hidden="true">📦</div>
+            <div class="uc-title">Use Case 4: Prompt Selling</div>
+          </div>
+          <span class="uc-badge gold">₹99-499/sale · Scalable</span>
+        </div>
+        <p class="uc-desc">
+          Jo tum seekh rahe ho — usko pack karke sell karo.
+          Simple text = digital product.
+          ₹99 se ₹499 per sale. Ek baar create karo, baar baar becho.
+          <strong>Ye model most underutilized hai India mein —
+          aur shuruaat karne mein sabse kam time lagta hai.</strong>
+          Sirf ek Notion page ya PDF chahiye. Gumroad ya Payhip pe free mein list karo.
+        </p>
+        <div class="uc-flow">
+          <span class="uc-flow-item">Prompts Pack Karo</span>
+          <span class="uc-flow-arrow" style="color:#f59e0b">→</span>
+          <span class="uc-flow-item">Digital Product</span>
+          <span class="uc-flow-arrow" style="color:#f59e0b">→</span>
+          <span class="uc-flow-item">Sell Repeatedly</span>
+          <span class="uc-flow-arrow" style="color:#f59e0b">→</span>
+          <span class="uc-flow-item">Passive Sales</span>
+        </div>
+        <div class="uc-earning" style="border-left-color:#f59e0b">
+          <strong>Math:</strong> ₹299 pack × 100 buyers = ₹29,900 ek launch mein.
+          Telegram community se promote karo — 100 buyers realistic hai 500 member community mein.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>UGC creator bhi prompt engineering use karta hai: <a href="ugc-creator-complete-guide-2026.html">UGC Creator Kaise Bane 2026 — ₹50K-2L Monthly →</a></div>
+    </div>
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Viral captions ke liye best prompts: <a href="viral-caption-strategy-2026.html">Viral Caption Strategy 2026 — Complete Breakdown →</a></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== S7: SYSTEM ==================== -->
+  <section id="system" aria-labelledby="h-system">
+    <div class="section-label">⚙️ Section 07</div>
+    <h2 id="h-system">System Thinking — Ye Chain Model Hi Paisa Banata Hai 🔥</h2>
+
+    <p>
+      Ab asli baat samjhate hain — jo beginners miss karte hain aur smart log use karte hain:
+    </p>
+
+    <div class="callout orange">
+      <div class="callout-title">🔑 Beginners vs Smart Log</div>
+      <p><strong>Beginners:</strong> AI use karte hain → output lete hain → done.</p>
+      <p style="margin-top:8px"><strong>Smart log:</strong> AI ko ek system mein fit karte hain jahan har step next step ke liye value create karta hai.</p>
+    </div>
+
+    <div class="chain-system">
+      <h3>⚙️ The Prompt Engineering Chain — Smart System</h3>
+      <div class="chain-items">
+        <div class="chain-item">
+          <div class="chain-step" aria-hidden="true">🎯</div>
+          <div class="chain-text"><b>Strong Prompt</b><span>Role + Task + Context + Format — structured instruction</span></div>
+        </div>
+        <div class="chain-arrow" aria-hidden="true">↓</div>
+        <div class="chain-item">
+          <div class="chain-step" aria-hidden="true">🤖</div>
+          <div class="chain-text"><b>AI Output</b><span>High quality, targeted, client-ready content</span></div>
+        </div>
+        <div class="chain-arrow" aria-hidden="true">↓</div>
+        <div class="chain-item">
+          <div class="chain-step" aria-hidden="true">✍️</div>
+          <div class="chain-text"><b>Human Polish</b><span>Apni voice, personal touch, final edit</span></div>
+        </div>
+        <div class="chain-arrow" aria-hidden="true">↓</div>
+        <div class="chain-item">
+          <div class="chain-step" aria-hidden="true">🚀</div>
+          <div class="chain-text"><b>Content Distribute</b><span>Client deliver karo ya platforms pe publish karo</span></div>
+        </div>
+        <div class="chain-arrow" aria-hidden="true">↓</div>
+        <div class="chain-item">
+          <div class="chain-step" aria-hidden="true">💰</div>
+          <div class="chain-text"><b>Traffic / Clients / Sales</b><span>Har distribution channel se income aati hai</span></div>
+        </div>
+        <div class="chain-result">
+          🔥 Ye chain hi paisa banati hai — random use nahi, system use karta hai
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Is chain ko samjho — <strong>har link important hai.</strong>
+      Strong prompt ke bina, AI output generic hoga.
+      Human polish ke bina, output robotic lagega.
+      Distribution ke bina, best content bhi invisible rahega.
+      <strong>Sab links connected hain. Ye ek system hai.</strong>
+    </p>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Behind the scenes — ye chain kaise run hoti hai: <a href="behind-the-scenes-content-strategy-2026.html">Behind-The-Scenes Content Strategy 2026 →</a></div>
+    </div>
+  </section>
+
+  <div class="divider teal" aria-hidden="true"></div>
+
+  <!-- ==================== S8: PROMPTS ==================== -->
+  <section id="prompts" aria-labelledby="h-prompts">
+    <div class="section-label teal">📦 Section 08</div>
+    <h2 id="h-prompts">Copy-Paste Prompts + Real Output (Aaj Se Use Karo)</h2>
+
+    <p>
+      Theory enough. Ab do real, copy-paste ready prompts — jo tum
+      <strong>aaj se directly client work mein use kar sakte ho.</strong>
+      Koi modification nahi chahiye — sirf square brackets mein apni info fill karo.
+    </p>
+
+    <div class="prompt-box">
+      <div class="prompt-box-header">
+        <div class="prompt-dots"><span class="prompt-dot red"></span><span class="prompt-dot yellow"></span><span class="prompt-dot green"></span>
+          <span class="prompt-label-text">PROMPT 1 — Instagram Captions (High-Converting)</span>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt(this,'pe1')" aria-label="Copy prompt 1">📋 Copy</button>
+      </div>
+      <pre id="pe1"><span class="hl">Role:</span>    <span class="str">Act as a professional copywriter specializing in Instagram marketing for Indian brands.</span>
+
+<span class="hl">Context:</span> <span class="str">Client: [BRAND/CREATOR NAME].
+         Niche: [FITNESS / FOOD / FASHION / FINANCE / MOTIVATION].
+         Target audience: Indian youth, 18-28 years.
+         Platform: Instagram posts + reels.</span>
+
+<span class="hl">Task:</span>    <span class="str">Write 5 high-converting Instagram captions.
+         Each caption must have:
+         - A scroll-stopping hook (first line)
+         - Engaging body (2-3 lines)
+         - Clear call-to-action</span>
+
+<span class="hl">Format:</span>  <span class="str">Hinglish tone. Relatable + engaging.
+         Each caption: max 100 words.
+         Include 3-5 relevant emojis.</span>
+
+<span class="hl">Constraint:</span> <span class="str">No generic phrases like "grind" or "hustle".
+             Sound authentic, not corporate. India-specific.</span>
+
+<span class="teal">// Use Case: Freelancing — charge ₹1,500-4,000 per caption pack</span>
+<span class="cmt">// Or: Your own content creation — grow faster with better hooks</span></pre>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-box-header">
+        <div class="prompt-dots"><span class="prompt-dot red"></span><span class="prompt-dot yellow"></span><span class="prompt-dot green"></span>
+          <span class="prompt-label-text">PROMPT 2 — SEO Blog Outline (Ranking Content)</span>
+        </div>
+        <button type="button" class="copy-btn" onclick="copyPrompt(this,'pe2')" aria-label="Copy prompt 2">📋 Copy</button>
+      </div>
+      <pre id="pe2"><span class="hl">Role:</span>    <span class="str">Act as an SEO expert and content strategist for Indian digital market.</span>
+
+<span class="hl">Context:</span> <span class="str">Blog topic: "AI se paise kaise kamaye 2026" (or replace with your topic).
+         Target audience: Indian beginners wanting to earn online.
+         Goal: Rank on Google India for this keyword.</span>
+
+<span class="hl">Task:</span>    <span class="str">Generate a complete SEO blog outline with:
+         - 1 H1 (title with main keyword)
+         - 6-8 H2 headings (include LSI keywords)
+         - 2-3 H3 sub-headings under each H2
+         - Meta description (under 155 chars)
+         - 5 related keywords to use naturally in article</span>
+
+<span class="hl">Format:</span>  <span class="str">Structured outline. Each heading: descriptive (not just "Introduction").
+         Conversational Hinglish style. India-specific examples.</span>
+
+<span class="teal">// Use Case: Create blog articles → rank on Google → passive income</span>
+<span class="cmt">// Or: Sell blog writing services — charge ₹2,000-5,000 per article</span></pre>
+    </div>
+
+    <p>Is prompt ka sample output dekho — ye exactly kaise dikhta hai:</p>
+
+    <div class="output-box">
+      <div class="output-label">✅ Sample Output — Prompt 1 (Motivation Niche, Caption 1)</div>
+      <div class="output-item">
+        <span class="output-num">Hook:</span>
+        "Kal se karta hoon" — ye 3 words aaj tak kitni dreams ko rok chuke hain? 🤔
+      </div>
+      <div class="output-item">
+        <span class="output-num">Body:</span>
+        Perfect time ka wait karna band karo. Perfect time aata nahi, banata hai. Aaj ka 1% effort kal ka 100% confidence ban jaata hai.
+      </div>
+      <div class="output-item">
+        <span class="output-num">CTA:</span>
+        Aaj kaunsa ek kaam hai jo tum "kal se" kar rahe ho? Comment mein likho 👇 — aur phir aaj hi shuru karo 💪
+      </div>
+    </div>
+
+    <div class="callout green">
+      <div class="callout-title">🎯 Why This Works</div>
+      <p>
+        Ye caption generic nahi hai. <strong>Hook curiosity trigger karta hai.</strong>
+        Body relatable problem address karti hai. CTA engagement drive karta hai.
+        Ye sab isliye possible hua kyunki prompt mein sab kuch define tha —
+        audience, tone, structure. <strong>Yahi prompt engineering ka real power hai.</strong>
+      </p>
+    </div>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Trending hashtags in prompts add karo: <a href="trending-hashtags-reels-2026.html">Trending Hashtags for Reels 2026 — 200+ Copy-Paste →</a></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== S9: UPGRADE ==================== -->
+  <section id="upgrade" aria-labelledby="h-upgrade">
+    <div class="section-label">🚀 Section 09</div>
+    <h2 id="h-upgrade">Upgrade Formula — Role + Task + Context + Output = Next Level</h2>
+
+    <p>
+      Ab ek formula yaad kar lo jo tumhare har prompt ko instantly upgrade kar dega.
+      Ye formula us RTCO framework pe based hai jo professional prompt engineers use karte hain:
+    </p>
+
+    <div class="formula-box">
+      <h3>🔑 The RTCO Prompt Formula</h3>
+      <div class="formula-parts">
+        <div class="formula-part">
+          <span class="fp-label">R</span>
+          <span class="fp-value">Role</span>
+        </div>
+        <span class="formula-plus">+</span>
+        <div class="formula-part">
+          <span class="fp-label">T</span>
+          <span class="fp-value">Task</span>
+        </div>
+        <span class="formula-plus">+</span>
+        <div class="formula-part">
+          <span class="fp-label">C</span>
+          <span class="fp-value">Context</span>
+        </div>
+        <span class="formula-plus">+</span>
+        <div class="formula-part">
+          <span class="fp-label">O</span>
+          <span class="fp-value">Output</span>
+        </div>
+      </div>
+      <div class="formula-result">
+        In 4 elements ko har prompt mein add karo → Output instantly next level ho jaata hai 🔥
+      </div>
+    </div>
+
+    <ol class="steps-list teal-counter">
+      <li>
+        <div>
+          <strong>R — Role (Kaun hai AI?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            "Act as a viral Instagram creator" ya "Act as an SEO expert for India."
+            Role dene se AI us perspective se sochna shuru karta hai.
+            Jitna specific role — utna better output.
+            <em>"Act as a Hinglish fitness influencer for Indian college students"</em> — ye aur bhi better hai.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>T — Task (Exactly Kya Karna Hai?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            "Write 5 captions" — clear. "Write something" — useless.
+            Task hamesha specific, measurable, aur action-oriented hona chahiye.
+            <em>"Write 5 scroll-stopping Instagram captions with hook + body + CTA"</em> — perfect task.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>C — Context (Background Kya Hai?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Niche, audience, platform, brand, goal — sab kuch batao.
+            AI mind-reader nahi hai. Jitna context doge, utna relevant output milega.
+            Ye most skipped step hai — aur most important bhi.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>O — Output Format (Kaisa Chahiye?)</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Word limit, language, structure, tone, constraints — sab define karo.
+            "Hinglish mein, under 100 words, no formal language, include 3 emojis" —
+            ye format instructions AI ko exact deliverable clearly samjha deti hain.
+          </span>
+        </div>
+      </li>
+    </ol>
+
+    <div class="upgrade-formula">
+      <h3>Before vs After — RTCO Formula Ka Fark</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px">
+        <div style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:16px">
+          <p style="font-size:12px;color:#f87171;font-weight:700;margin-bottom:8px;text-transform:uppercase">❌ BEFORE (No Formula)</p>
+          <p style="font-size:14px;color:#ddd;margin:0;font-family:monospace">"blog likhna hai"</p>
+          <p style="font-size:12px;color:#888;margin-top:8px">Output: Random, generic, unusable</p>
+        </div>
+        <div style="background:rgba(13,148,136,.1);border:1px solid rgba(13,148,136,.3);border-radius:12px;padding:16px">
+          <p style="font-size:12px;color:#14b8a6;font-weight:700;margin-bottom:8px;text-transform:uppercase">✅ AFTER (RTCO Formula)</p>
+          <p style="font-size:14px;color:#ddd;margin:0;font-family:monospace">"Act as SEO writer [R]. Write 1000-word blog [T]. Topic: AI earning India, audience: beginners [C]. Hinglish, H2 headings, conversational [O]."</p>
+          <p style="font-size:12px;color:#888;margin-top:8px">Output: Client-ready, SEO-optimized ✅</p>
+        </div>
+      </div>
+      <div class="upgrade-result">
+        🧠 Ye formula yaad rakhlo — ye tumhara life-long prompt engineering cheatcode hai
+      </div>
+    </div>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Prompt engineering earning full guide: <a href="ai-manipulation-guide.html">AI Prompt Engineering Complete Guide — 2026 →</a></div>
+    </div>
+  </section>
+
+  <div class="divider teal" aria-hidden="true"></div>
+
+  <!-- ==================== S10: MISTAKES ==================== -->
+  <section id="mistakes" aria-labelledby="h-mistakes">
+    <div class="section-label teal">⚠️ Section 10</div>
+    <h2 id="h-mistakes">90% Log Yahi Galti Karte Hain (Isliye Result Weak Aata Hai)</h2>
+
+    <div class="inline-img">
+      <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80&auto=format&fit=crop"
+        alt="Common prompt engineering mistakes beginners make India 2026 — why 90% people get weak AI output"
+        loading="lazy" width="800" height="250">
+      <p class="img-caption">In galtiyon se bcho — ye sabse common reasons hain weak output ke</p>
+    </div>
+
+    <div class="mistake-grid">
+      <div class="mistake-item">
+        <span class="mistake-label">MISTAKE #1</span>
+        <h4>Role Define Nahi Karna</h4>
+        <p>"Mujhe ek caption chahiye" — AI ko nahi pata tum kiske liye chahte ho.
+          Role define karo: <em>"Act as viral Hinglish Instagram creator for fitness brands."</em>
+          Ye ek line output quality 3x improve kardi.</p>
+      </div>
+      <div class="mistake-item">
+        <span class="mistake-label">MISTAKE #2</span>
+        <h4>Context Zero — AI Mind-Reader Nahi Hai</h4>
+        <p>AI nahi jaanta tumhara niche kya hai, audience kaun hai, platform kaunsa hai.
+          Agar nahi bataya — wo generic output deta hai jo literally kisi ke bhi kaam ka nahi hota.</p>
+      </div>
+      <div class="mistake-item">
+        <span class="mistake-label">MISTAKE #3</span>
+        <h4>Pehle Output Pe Immediately Use Karna</h4>
+        <p>First output final nahi hota. Refine karo:
+          <em>"Is caption ko aur emotional banao"</em> ya <em>"Shorten karo 15 words mein."</em>
+          Best output hamesha 2nd ya 3rd iteration pe aata hai.</p>
+      </div>
+      <div class="mistake-item">
+        <span class="mistake-label">MISTAKE #4</span>
+        <h4>Output Format Define Nahi Karna</h4>
+        <p>Bina format ke AI kabhi 50 words likhta hai, kabhi 500.
+          Hamesha specify karo: word limit, language, tone, structure.
+          Format define karna = consistent, predictable, client-ready output.</p>
+      </div>
+      <div class="mistake-item">
+        <span class="mistake-label">MISTAKE #5</span>
+        <h4>Negative Constraints Add Nahi Karna</h4>
+        <p>"No clichés", "No formal language", "No hashtags", "Don't use 'amazing'" —
+          ye constraints output quality surprisingly improve karte hain.
+          Ye most underused prompt element hai.</p>
+      </div>
+    </div>
+
+    <div class="callout green">
+      <div class="callout-title">✅ Quick Fix</div>
+      <p>
+        Apna last 3 prompts dekho. Inme se kaunse mistakes thi?
+        Ab RTCO formula use karke unhe rewrite karo aur compare karo.
+        <strong>Guaranteed — new prompts ka output noticeably better hoga.</strong>
+        Ye ek 10-minute exercise jo tumhara AI game permanently change kar sakti hai.
+      </p>
+    </div>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Earning mein bhi yahi mistakes hoti hain: <a href="success-mindset-2026.html">Success Mindset 2026 — Winning Habits Build Karo →</a></div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== S11: PRACTICE ==================== -->
+  <section id="practice" aria-labelledby="h-practice">
+    <div class="section-label">📅 Section 11</div>
+    <h2 id="h-practice">Practice Plan — Prompt Engineering Sikhne Ka 7-Day Challenge</h2>
+
+    <p>
+      Prompt engineering sikhne ka fastest way: <strong>daily deliberate practice.</strong>
+      Ye 7-day challenge follow karo — guaranteed improvement in 1 week:
+    </p>
+
+    <ol class="steps-list">
+      <li>
+        <div>
+          <strong>Day 1: RTCO Formula Samjho + 3 Prompts Banao</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Is article mein diya formula padho. Apni niche choose karo.
+            3 structured prompts banao — Role, Task, Context, Output sab define karke.
+            CaptionStudio ya ChatGPT pe test karo. Results save karo.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Day 2-3: Iteration Practice</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Kal ke prompts ka output lo. Refine karo: tone improve karo, length adjust karo, add constraints.
+            Har refinement ke baad output compare karo. Ye exercise sabse fast skill builder hai.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Day 4-5: Niche-Specific Prompts Library Banao</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Jo best prompts mile — Google Doc mein save karo.
+            5 different content types ke liye prompts banao:
+            captions, hooks, email subjects, blog titles, product descriptions.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Day 6: Real Client Deliverable Banao</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Ek complete caption pack (7 days) banao for a hypothetical brand.
+            Polish karo. Ek PDF ya Google Doc mein package karo.
+            Ye tumhara pehla portfolio piece hai.
+          </span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Day 7: Fiverr/Upwork Profile Banao</strong><br>
+          <span style="color:var(--text3);font-size:14px">
+            Portfolio ready hai. Ab platform pe profile create karo.
+            Service clearly define karo. Portfolio add karo. Gig live karo.
+            <strong>Week 1 mein pehla client aa sakta hai.</strong>
+          </span>
+        </div>
+      </li>
+    </ol>
+
+    <div class="callout teal">
+      <div class="callout-title" style="color:#0d9488">💡 Daily Minimum</div>
+      <p>
+        Ek naya prompt roz. Ye 10-15 minute ka kaam hai.
+        7 din mein 7 prompts — 30 din mein 30 prompts — ye prompt library
+        <strong>tumhara most valuable earning asset ban jaayegi.</strong>
+        Jab bhi client milega — library use karo, fast deliver karo, payment lo.
+      </p>
+    </div>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Faceless Instagram bhi is skill se grow hoti hai: <a href="faceless-instagram-earn-money.html">Faceless Instagram se Paise Kaise Kamaye →</a></div>
+    </div>
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>7 din mein Instagram growth real hai: <a href="instagram-growth-7-days.html">Instagram Growth in 7 Days — Real Experiment →</a></div>
+    </div>
+  </section>
+
+  <div class="divider teal" aria-hidden="true"></div>
+
+  <!-- ==================== S12: MINDSET ==================== -->
+  <section id="mindset" aria-labelledby="h-mindset">
+    <div class="section-label teal">🧠 Section 12</div>
+    <h2 id="h-mindset">Final Mindset Shift — AI Powerful Nahi… Tumhara Prompt Powerful Hai</h2>
+
+    <p>
+      Ek last aur important thought — ye perspective shift tumhara poora AI game change karega:
+    </p>
+
+    <div class="callout dark">
+      <div class="callout-title" style="color:#14b8a6">🧠 The Real Truth About AI</div>
+      <p>
+        AI ek powerful engine hai. Lekin engine akela kuch nahi karta.
+        Engine ko ek skilled driver chahiye, ek defined destination chahiye, aur ek road map chahiye.
+      </p>
+      <p style="margin-top:10px;color:#ccc">
+        <strong style="color:#fff">Tumhara prompt = driver + destination + road map.</strong><br>
+        AI sirf engine hai — wo jaata wahaan hai jahan tum le jaate ho.<br>
+        Better driver = better journey = better destination = better outcome.
+      </p>
+    </div>
+
+    <p>
+      Ye samajhne ke baad, tum AI ko differently dekhoge.
+      Frustration nahi hogi — kyunki tum jaanoge ki output ke liye
+      <strong>tum responsible ho, AI nahi.</strong>
+      Improvement karna chahoge — prompt better karo, output better milega.
+      Aur ye continuous improvement hi tumhe
+      <strong>average AI user se paid AI expert</strong> mein convert karti hai.
+    </p>
+
+    <div class="final-section">
+      <h3>AI Prompt Engineering Koi "Extra Skill" Nahi…</h3>
+      <h3 style="margin-top:8px"><span>Ye AI Se Paisa Banane Ka Base System Hai</span> 🧠</h3>
+      <div class="verdict-teal">
+        <span class="vt-text">RTCO Formula + Daily Practice + System Thinking = AI Income</span>
+        <span class="vt-note">Koi coding nahi, koi degree nahi — sirf structured thinking aur consistent effort</span>
+      </div>
+      <p>
+        Jo log AI se paise bana rahe hain — unka secret koi magic formula nahi hai.
+        Unka secret hai: <strong>wo AI ko sahi direction dena jaante hain.</strong>
+        Aur ab tum bhi jaante ho. Aaj se practice shuru karo.
+        <strong>Results guaranteed hain — agar consistent raho.</strong>
+      </p>
+    </div>
+
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>Complete earning system read karo: <a href="ai-earning-guide-2026.html">₹1 Lakh/Month AI Earning Guide 2026 →</a></div>
+    </div>
+    <div class="also-read">
+      <span class="ar-label">📖 Also Read</span>
+      <div>AI tools se make money — all models: <a href="ai-tools-make-money.html">Best AI Tools to Make Money Online 2026 →</a></div>
+    </div>
+  </section>
+
+  <!-- MAIN CTA -->
+  <div class="cta-block">
+    <div style="font-size:42px;margin-bottom:12px" aria-hidden="true">🚀</div>
+    <h3>Prompts Upgrade Karne Ke Liye Ready Ho?</h3>
+    <p class="cta-desc">
+      CaptionStudio pe free AI tools hain specifically Indian creators ke liye —
+      jo already RTCO formula ke hisab se optimized hain.
+      Aur Telegram pe 500+ creators hain jo daily prompts share karte hain.
+      <strong>Join karo — want to earn? Ye community tumhare liye hai.</strong>
+    </p>
+    <div class="cta-btn-wrap">
+      <a href="https://captionstudio.in" class="cta-btn-teal">⚡ Try CaptionStudio Free →</a>
+      <a href="https://t.me/skill2incomehub" class="cta-tg" target="_blank" rel="noopener noreferrer">✈️ Want to Earn? Join Telegram</a>
+    </div>
+    <p class="cta-note">✅ No login &nbsp;·&nbsp; ⚡ Instant output &nbsp;·&nbsp; 👥 500+ community &nbsp;·&nbsp; 💯 Free forever</p>
+  </div>
+
+  <!-- ==================== S13: FAQ ==================== -->
+  <section id="faq" aria-labelledby="h-faq">
+    <div class="section-label">❓ Section 13</div>
+    <h2 id="h-faq">Frequently Asked Questions</h2>
+
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+      <div class="faq-q">AI prompt engineering kya hai simple words mein?<span class="faq-icon" aria-hidden="true">+</span></div>
+      <div class="faq-a">Prompt engineering = AI ko sahi, structured instruction dena taaki best possible output mile. RTCO formula: Role define karo, Task specify karo, Context do, Output format batao. Koi coding nahi, koi degree nahi — sirf clearly likhne ki ability chahiye.</div>
+    </div>
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+      <div class="faq-q">Prompt engineering se paise kaise kamaye?<span class="faq-icon" aria-hidden="true">+</span></div>
+      <div class="faq-a">4 real ways: (1) AI Freelancing — captions/blogs/scripts clients ke liye, (2) Content Creation — viral content → audience → income, (3) SEO Blogging — Google traffic → passive income, (4) Prompt Selling — digital products banao aur becho. Beginners ke liye AI freelancing fastest hai.</div>
+    </div>
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+      <div class="faq-q">Kya coding chahiye prompt engineering ke liye?<span class="faq-icon" aria-hidden="true">+</span></div>
+      <div class="faq-a">Bilkul nahi. Prompt engineering sirf structured text likhne ki skill hai. Agar tum Hinglish ya Hindi mein clearly bol sakte ho — tum prompt engineering kar sakte ho. Koi technical background required nahi hai. 7-day practice plan follow karo — 1 week mein noticeable improvement guaranteed.</div>
+    </div>
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+      <div class="faq-q">Prompt engineering beginners ke liye kaise seekhein?<span class="faq-icon" aria-hidden="true">+</span></div>
+      <div class="faq-a">Is article mein diya RTCO formula follow karo. CaptionStudio.in pe free tools try karo — already optimized hain. Daily ek naya prompt banao — refine karo — save karo. 7 days mein basic mastery. 30 days mein client-ready skill. Telegram community join karo daily prompts ke liye.</div>
+    </div>
+    <div class="faq-item" role="button" tabindex="0" aria-expanded="false"
+      onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
+      <div class="faq-q">Ek beginner prompt engineering se kitna earn kar sakta hai?<span class="faq-icon" aria-hidden="true">+</span></div>
+      <div class="faq-a">Month 1 realistic: ₹5-15K (AI freelancing social media captions). Month 3: ₹25-40K (multiple clients + retainer). Month 6+: ₹50K-1L+ (multiple models combined). Key factor: consistency. Jo daily practice karte hain wo 3x faster scale karte hain jo randomly try karte hain.</div>
+    </div>
+  </section>
+
+  <!-- MORE ARTICLES -->
+  <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:22px;margin:38px 0;box-shadow:var(--shadow1)">
+    <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:16px;color:var(--text)">📚 Aur Helpful Articles</div>
+    <div class="more-grid">
+      <a href="ai-earning-guide-2026.html">💸 AI Earning Guide 2026 →</a>
+      <a href="pro-ai-guide-2026.html">🔒 Pro AI Guide →</a>
+      <a href="ai-manipulation-guide.html">🤖 AI Manipulation Guide →</a>
+      <a href="ugc-creator-complete-guide-2026.html">💰 UGC Creator Guide →</a>
+      <a href="viral-caption-strategy-2026.html">🔥 Viral Caption Strategy →</a>
+      <a href="faceless-instagram-earn-money.html">📱 Faceless Instagram →</a>
+      <a href="instagram-growth-0-to-10k.html">📈 0 to 10K Growth →</a>
+      <a href="new-era-ai-2026.html">🌐 New Era AI 2026 →</a>
+    </div>
+  </div>
+
+  <!-- SHARE -->
+  <div class="share-section">
+    <p>🧠 Ye skill seekh liya? Friends ke saath share karo — unhe bhi chahiye ye guide!</p>
+    <div class="share-btns">
+      <button type="button" class="share-btn s-wa" id="btn-wa">📲 WhatsApp</button>
+      <button type="button" class="share-btn s-tg" id="btn-tg">✈️ Telegram</button>
+      <button type="button" class="share-btn s-tw" id="btn-tw">🐦 Twitter</button>
+      <button type="button" class="share-btn s-cp" id="btn-cp">🔗 Copy Link</button>
+    </div>
+  </div>
+
+  <!-- AUTHOR -->
+  <div class="author-box">
+    <div class="author-avatar" aria-hidden="true">🧠</div>
+    <div class="author-info">
+      <h4>CaptionStudio Team</h4>
+      <p>Hum Indian creators ke liye free AI tools aur actionable guides banate hain.
+        Prompt engineering ko accessible banana hamara mission hai. Updated April 2026.
+        <a href="../about.html" style="color:#ff4d00;font-weight:600">Hamare baare mein →</a>
+      </p>
+    </div>
+  </div>
+
+</main>
+
+<!-- SIDEBAR -->
+<aside class="blog-sidebar" aria-label="Sidebar">
+
+  <!-- GLASS AD -->
+  <div class="glass-ad">
+    <div class="glass-ad-badge">🌐 Sponsored</div>
+    <h4>Need a Website Like This?</h4>
+    <p>Blog, AI tools, earning hub — SEO ready, mobile optimized, fast delivery.</p>
+    <a href="https://wa.me/919918996096?text=Hi!%20I%20need%20a%20website%20like%20CaptionStudio.%20Please%20share%20pricing."
+       class="glass-ad-btn" target="_blank" rel="noopener noreferrer">📱 WhatsApp Karo</a>
+    <p class="glass-ad-note">📞 +91 99189 96096 · Fast Response</p>
+  </div>
+
+  <!-- TELEGRAM CTA -->
+  <div class="sidebar-card" style="background:linear-gradient(135deg,#0d9488,#14b8a6);border:none">
+    <div class="sidebar-title" style="color:#fff;border-color:rgba(255,255,255,.35)">💸 Want to Earn?</div>
+    <p style="font-size:13px;color:rgba(255,255,255,.9);margin-bottom:14px;line-height:1.65">
+      Daily AI prompts, earning gigs, hidden tips — 500+ creators already in community. Free forever.
+    </p>
+    <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer"
+       style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(255,255,255,.2);color:#fff;padding:12px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid rgba(255,255,255,.35);transition:background .2s"
+       onmouseover="this.style.background='rgba(255,255,255,.3)'"
+       onmouseout="this.style.background='rgba(255,255,255,.2)'">
+      ✈️ Want to Earn? Join →
+    </a>
+  </div>
+
+  <!-- QUICK TOOLS -->
+  <div class="sidebar-card">
+    <div class="sidebar-title">⚡ Quick Tools</div>
+    <div class="tool-links">
+      <a href="../tools/caption-generator.html" class="tool-link"><span>📸</span> Caption Generator</a>
+      <a href="../tools/hashtag-generator.html" class="tool-link"><span>#️⃣</span> Hashtag Generator</a>
+      <a href="../tools/bio-generator.html" class="tool-link"><span>👤</span> Bio Generator</a>
+      <a href="../tools/email-reply-generator.html" class="tool-link"><span>📧</span> Email Reply</a>
+      <a href="../tools/" class="tool-link"><span>⚡</span> All Tools →</a>
+    </div>
+  </div>
+
+  <!-- RELATED POSTS -->
+  <div class="sidebar-card">
+    <div class="sidebar-title">📖 Related Articles</div>
+    <div class="related-post">
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=120&q=70&auto=format&fit=crop"
+        alt="AI manipulation prompt engineering guide Hindi 2026" loading="lazy" width="62" height="62">
+      <div class="related-post-info">
+        <a href="ai-manipulation-guide.html">AI Manipulation Guide</a>
+        <span>🧠 Prompt Engineering Deep Dive</span>
+      </div>
+    </div>
+    <div class="related-post">
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=120&q=70&auto=format&fit=crop"
+        alt="AI earning guide 2026 complete system India" loading="lazy" width="62" height="62">
+      <div class="related-post-info">
+        <a href="ai-earning-guide-2026.html">AI Earning Guide 2026</a>
+        <span>💸 Complete System</span>
+      </div>
+    </div>
+    <div class="related-post">
+      <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=120&q=70&auto=format&fit=crop"
+        alt="Pro AI guide hidden system India 2026" loading="lazy" width="62" height="62">
+      <div class="related-post-info">
+        <a href="pro-ai-guide-2026.html">Pro AI Guide 2026</a>
+        <span>🔒 Hidden System</span>
+      </div>
+    </div>
+    <div class="related-post">
+      <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=120&q=70&auto=format&fit=crop"
+        alt="Viral caption strategy 2026 India creators" loading="lazy" width="62" height="62">
+      <div class="related-post-info">
+        <a href="viral-caption-strategy-2026.html">Viral Caption Strategy</a>
+        <span>🔥 Content Creation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPLORE -->
+  <div class="sidebar-card">
+    <div class="sidebar-title">🗂️ Explore Site</div>
+    <div class="tool-links">
+      <a href="../index.html"   class="tool-link"><span>🏠</span> Home</a>
+      <a href="../earning.html" class="tool-link"><span>💸</span> Earning Hub</a>
+      <a href="../guide.html"   class="tool-link"><span>📖</span> Guide</a>
+      <a href="../relax.html"   class="tool-link"><span>😌</span> Relax Zone</a>
+      <a href="../about.html"   class="tool-link"><span>👥</span> About</a>
+      <a href="../contact.html" class="tool-link"><span>📬</span> Contact</a>
+      <a href="../support.html" class="tool-link"><span>🛠</span> Support</a>
+      <a href="../privacy.html" class="tool-link"><span>🔒</span> Privacy</a>
+    </div>
+  </div>
+
+</aside>
+</div>
+
+<!-- FOOTER -->
 <footer>
-    <p>&copy; 2026 CaptionStudio.in | Built with ❤️ by Ansh | Gorakhpur, UP</p>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">Caption<span>Studio</span>.in</div>
+      <p>Free AI tools for Indian students & creators. No login, no investment. Updated April 2026.</p>
+      <a href="https://t.me/skill2incomehub" class="footer-tg" target="_blank" rel="noopener noreferrer">✈️ Join Telegram Community</a>
+    </div>
+    <div class="footer-col">
+      <h5>AI Tools</h5>
+      <ul>
+        <li><a href="../tools/">⚡ All Tools</a></li>
+        <li><a href="../tools/caption-generator.html">📸 Caption Generator</a></li>
+        <li><a href="../tools/hashtag-generator.html">#️⃣ Hashtag Generator</a></li>
+        <li><a href="../tools/bio-generator.html">👤 Bio Generator</a></li>
+        <li><a href="../tools/email-reply-generator.html">📧 Email Reply</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>AI Guides</h5>
+      <ul>
+        <li><a href="master-ai-guide-2026.html">🧠 Master AI Guide</a></li>
+        <li><a href="ai-earning-guide-2026.html">💸 AI Earning Guide</a></li>
+        <li><a href="pro-ai-guide-2026.html">🔒 Pro AI Guide</a></li>
+        <li><a href="ai-manipulation-guide.html">🤖 AI Manipulation</a></li>
+        <li><a href="new-era-ai-2026.html">🌐 New Era AI</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="../about.html">👥 About Us</a></li>
+        <li><a href="../contact.html">📬 Contact</a></li>
+        <li><a href="../support.html">🛠 Support</a></li>
+        <li><a href="../privacy.html">🔒 Privacy</a></li>
+        <li><a href="../terms.html">📋 Terms</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 <a href="../index.html">CaptionStudio.in</a> — All rights reserved</span>
+    <span>Made with ❤️ for Indian Creators · April 2026</span>
+    <span><a href="../privacy.html">Privacy</a> · <a href="../support.html">Support</a></span>
+  </div>
 </footer>
 
+<!-- JAVASCRIPT — ALL BUGS FIXED -->
+<script>
+
+/* ===== DARK MODE ===== */
+function applyTheme(dark){
+  document.documentElement.setAttribute('data-theme',dark?'dark':'light');
+  const btn=document.getElementById('dark-toggle');
+  if(btn)btn.textContent=dark?'☀️ Light':'🌙 Dark';
+}
+function toggleDark(){
+  const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+  applyTheme(!isDark);
+  try{localStorage.setItem('csDark',!isDark?'1':'0');}catch(e){}
+}
+(function(){
+  const s=localStorage.getItem('csDark');
+  const sys=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;
+  applyTheme(s==='1'||(s===null&&sys));
+  if(window.matchMedia){
+    window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',e=>{
+      if(localStorage.getItem('csDark')===null)applyTheme(e.matches);
+    });
+  }
+})();
+
+/* ===== FLOATING AD HIGHLIGHT ===== */
+let lastHighlight=0;
+function triggerAdHighlight(){
+  const ad=document.getElementById('floating-ad');
+  if(!ad||ad.style.display==='none')return;
+  const now=Date.now();
+  if(now-lastHighlight<8000)return;
+  lastHighlight=now;
+  ad.classList.remove('highlight');
+  void ad.offsetWidth;
+  ad.classList.add('highlight');
+  setTimeout(()=>ad.classList.remove('highlight'),500);
+}
+
+/* ===== SCROLL SECTIONS — ✅ Direct init ===== */
+const _scrollSections=[...document.querySelectorAll('section[id]')];
+const _tocLinks=[...document.querySelectorAll('.toc-list a')];
+
+/* ===== SINGLE SCROLL LISTENER ===== */
+let _raf=null;
+window.addEventListener('scroll',()=>{
+  if(_raf)return;
+  _raf=requestAnimationFrame(()=>{
+    _raf=null;
+    const st=document.documentElement.scrollTop;
+    const dh=document.documentElement.scrollHeight-window.innerHeight;
+    const pct=dh>0?(st/dh)*100:0;
+
+    const pb=document.getElementById('progress-bar');
+    if(pb){pb.style.width=pct+'%';pb.setAttribute('aria-valuenow',Math.round(pct));}
+
+    const tb=document.getElementById('scroll-top');
+    if(tb)tb.classList.toggle('visible',pct>40);
+
+    if(pct>25&&pct<90)triggerAdHighlight();
+
+    let cur='';
+    _scrollSections.forEach(s=>{if(window.scrollY>=s.offsetTop-110)cur=s.id;});
+    _tocLinks.forEach(l=>{
+      l.classList.remove('toc-active');
+      if(l.getAttribute('href')==='#'+cur)l.classList.add('toc-active');
+    });
+  });
+},{passive:true});
+
+/* ===== MOBILE MENU ===== */
+function toggleMenu(){
+  const m=document.getElementById('mobile-menu');
+  const b=document.getElementById('hamburger');
+  if(!m||!b)return;
+  const open=m.classList.toggle('open');
+  b.classList.toggle('is-open',open);
+  b.setAttribute('aria-expanded',open?'true':'false');
+  document.body.style.overflow=open?'hidden':'';
+}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobile-menu');
+  const b=document.getElementById('hamburger');
+  if(m&&m.classList.contains('open')&&!m.contains(e.target)&&!b.contains(e.target)){
+    m.classList.remove('open');b.classList.remove('is-open');
+    b.setAttribute('aria-expanded','false');document.body.style.overflow='';
+  }
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){
+    const m=document.getElementById('mobile-menu');
+    const b=document.getElementById('hamburger');
+    if(m&&m.classList.contains('open')){
+      m.classList.remove('open');b.classList.remove('is-open');
+      b.setAttribute('aria-expanded','false');document.body.style.overflow='';
+    }
+  }
+});
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>600){
+    const m=document.getElementById('mobile-menu');
+    const b=document.getElementById('hamburger');
+    if(m)m.classList.remove('open');
+    if(b){b.classList.remove('is-open');b.setAttribute('aria-expanded','false');}
+    document.body.style.overflow='';
+  }
+},{passive:true});
+
+/* ===== FAQ ===== */
+function toggleFaq(el){
+  const open=el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(f=>{
+    f.classList.remove('open');f.setAttribute('aria-expanded','false');
+  });
+  if(!open){el.classList.add('open');el.setAttribute('aria-expanded','true');}
+}
+
+/* ===== TOC SMOOTH SCROLL ===== */
+_tocLinks.forEach(l=>{
+  l.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(l.getAttribute('href'));
+    if(!t)return;
+    const hdr=document.querySelector('header');
+    const off=(hdr?hdr.offsetHeight:70)+12;
+    window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-off,behavior:'smooth'});
+  });
+});
+
+/* ===== COPY PROMPT ===== */
+function copyPrompt(btn,id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const text=el.innerText||el.textContent;
+  const orig=btn.textContent;
+  const done=()=>{
+    btn.textContent='✅ Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent=orig;btn.classList.remove('copied');},2500);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(()=>{
+      const ta=document.createElement('textarea');ta.value=text;
+      ta.style.cssText='position:fixed;opacity:0';
+      document.body.appendChild(ta);ta.select();document.execCommand('copy');
+      document.body.removeChild(ta);done();
+    });
+  }else{
+    const ta=document.createElement('textarea');ta.value=text;
+    ta.style.cssText='position:fixed;opacity:0';
+    document.body.appendChild(ta);ta.select();document.execCommand('copy');
+    document.body.removeChild(ta);done();
+  }
+}
+
+/* ===== SHARE ===== */
+(function(){
+  const url=encodeURIComponent(window.location.href);
+  const title=encodeURIComponent(document.title);
+  const msg=encodeURIComponent('AI Prompt Engineering Kya Hai? 2026 Complete Guide 👉 ');
+  const set=(id,fn)=>{const el=document.getElementById(id);if(el)el.onclick=fn;};
+  set('btn-wa',()=>window.open('https://wa.me/?text='+msg+url,'_blank'));
+  set('btn-tg',()=>window.open('https://t.me/share/url?url='+url+'&text='+msg,'_blank'));
+  set('btn-tw',()=>window.open('https://twitter.com/intent/tweet?url='+url+'&text='+title,'_blank'));
+  set('btn-cp',()=>{
+    navigator.clipboard.writeText(window.location.href).then(()=>{
+      const btn=document.getElementById('btn-cp');
+      if(btn){btn.textContent='✅ Copied!';setTimeout(()=>{btn.textContent='🔗 Copy Link';},2500);}
+    });
+  });
+})();
+
+/* ===== READ TIME ===== */
+(function(){
+  const mc=document.getElementById('main-content');
+  if(!mc)return;
+  const w=(mc.innerText||mc.textContent).trim().split(/\s+/).length;
+  const m=Math.ceil(w/220);
+  const b=document.getElementById('read-time-display');
+  if(b)b.innerHTML=`⏱️ ${m} min read &nbsp;·&nbsp; 📖 ~${w.toLocaleString()} words`;
+})();
+
+/* ===== LAZY IMAGES ===== */
+(function(){
+  const imgs=document.querySelectorAll('.inline-img img');
+  if('IntersectionObserver' in window){
+    const obs=new IntersectionObserver((entries,o)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){e.target.classList.add('loaded');o.unobserve(e.target);}
+      });
+    },{rootMargin:'0px 0px 60px 0px',threshold:.05});
+    imgs.forEach(img=>obs.observe(img));
+  }else{imgs.forEach(img=>img.classList.add('loaded'));}
+})();
+
+/* ===== PREFETCH ===== */
+(function(){
+  ['../index.html','../blog/','../tools/','../earning.html'].forEach(href=>{
+    const l=document.createElement('link');l.rel='prefetch';l.href=href;
+    document.head.appendChild(l);
+  });
+})();
+
+</script>
 </body>
-</html>
+    </html>
