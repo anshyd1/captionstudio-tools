@@ -958,28 +958,101 @@
     </nav>
   </aside>
 
-  <!-- LOOT BAR -->
-  <div class="loot-bar">
-    <div class="wrap">
-      <div class="loot-inner">
-        <span class="loot-pill">Live</span>
-        <div class="loot-scroll">
-          <div class="loot-track">
-            <span>🎯 Free Viral Hashtag &amp; Caption Pack</span>
-            <span>🎬 5000+ Motion Graphics — Free Download</span>
-            <span>🤖 AI Learning Guides Added</span>
-            <span>💰 Earn Money Online India 2026</span>
-            <span>✨ New: Bio Generator &amp; Hook Creator</span>
-            <span>🎯 Free Viral Hashtag &amp; Caption Pack</span>
-            <span>🎬 5000+ Motion Graphics — Free Download</span>
-            <span>🤖 AI Learning Guides Added</span>
-            <span>💰 Earn Money Online India 2026</span>
-            <span>✨ New: Bio Generator &amp; Hook Creator</span>
-          </div>
-        </div>
-      </div>
+  <!-- 🔥 FINAL TOP LINE (STABLE + NO BUG) -->
+<style>
+body { margin:0; }
+
+/* TOP BAR */
+.top-line {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.9),
+    rgba(255,247,237,0.9),
+    rgba(255,237,213,0.9)
+  );
+  border-bottom: 1px solid rgba(255,140,0,0.3);
+  box-shadow: 0 4px 20px rgba(255,140,0,0.12);
+  z-index: 999; /* 🔥 FIX: menu will come above */
+  font-family: sans-serif;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+/* full clickable */
+.top-line a {
+  display: block;
+  text-decoration: none;
+  color: #222;
+}
+
+/* main text */
+.top-main {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+/* highlight */
+.highlight {
+  color: #ff6a00;
+  font-weight: 700;
+}
+
+/* sub text */
+.top-sub {
+  font-size: 12px;
+  margin-top: 3px;
+  color: #555;
+}
+
+/* live dot */
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff3b30;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+</style>
+
+<!-- 🔴 TOP BAR -->
+<div class="top-line" id="topLine">
+  <a href="https://t.me/skill2incomehub" target="_blank">
+    
+    <div class="top-main">
+      <span class="live-dot"></span>
+      ₹2,000+ Daily Loots Active Now • 
+      <span class="highlight">JOIN FAST</span>
     </div>
-  </div>
+
+    <div class="top-sub">
+      🔥 Cashback • Crypto • IPL • Instant Telegram Updates
+    </div>
+
+  </a>
+</div>
+
+<script>
+/* spacing fix (no cut issue) */
+function adjustTop() {
+  var bar = document.getElementById("topLine");
+  document.body.style.paddingTop = bar.offsetHeight + "px";
+}
+window.addEventListener("load", adjustTop);
+window.addEventListener("resize", adjustTop);
+</script>
 
   <nav>
     <div class="wrap nav-inner">
