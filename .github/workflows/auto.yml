@@ -1,4 +1,4 @@
-name: Auto Blog Stable
+name: Auto Blog Gemini
 
 on:
   workflow_dispatch:
@@ -20,48 +20,83 @@ jobs:
       - name: Install deps
         run: pip install requests
 
-      - name: Run Script
+      - name: Run Blog Script
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY1: ${{ secrets.GEMINI_API_KEY1 }}
+          GEMINI_API_KEY2: ${{ secrets.GEMINI_API_KEY2 }}
+          GEMINI_API_KEY3: ${{ secrets.GEMINI_API_KEY3 }}
         run: |
           cat << 'EOF' > script.py
-          import os, random
+          import requests, os, random
 
-          print("START")
-
-          # fallback keyword
-          keyword = "test captions"
+          # 👉 keyword (later file se bhi le sakte ho)
+          keyword = "instagram captions 2026"
           slug = keyword.replace(" ", "-")
 
-          try:
-              import requests
+          print("Generating:", keyword)
 
-              res = requests.post(
-                  "https://api.groq.com/openai/v1/chat/completions",
-                  headers={
-                      "Authorization": f"Bearer {os.environ.get('GROQ_API_KEY','')}",
-                      "Content-Type": "application/json"
-                  },
-                  json={
-                      "model": "llama3-8b-8192",
-                      "messages": [
-                          {"role": "user", "content": f"Write HTML blog for {keyword}"}
+          # 🔥 keys load
+          keys = [
+              os.environ.get("GEMINI_API_KEY1"),
+              os.environ.get("GEMINI_API_KEY2"),
+              os.environ.get("GEMINI_API_KEY3")
+          ]
+          keys = [k for k in keys if k]
+
+          content = None
+
+          for key in keys:
+              try:
+                  print("Trying key...")
+
+                  url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}"
+
+                  payload = {
+                      "contents": [
+                          {
+                              "parts": [
+                                  {
+                                      "text": f"""
+Write a full SEO optimized HTML blog for "{keyword}"
+
+Include:
+- <title>
+- meta description
+- H1
+- intro paragraph
+- 50 captions in <ul><li>
+- FAQ section
+- clean HTML only (no markdown)
+"""
+                                  }
+                              ]
+                          }
                       ]
-                  },
-                  timeout=15
-              ).json()
+                  }
 
-              print("API RESPONSE:", res)
+                  res = requests.post(url, json=payload, timeout=20)
 
-              content = res['choices'][0]['message']['content']
+                  print("STATUS:", res.status_code)
 
-          except Exception as e:
-              print("API FAILED:", e)
-              content = f"<html><body><h1>{keyword}</h1><p>Fallback content</p></body></html>"
+                  data = res.json()
 
+                  content = data['candidates'][0]['content']['parts'][0]['text']
+
+                  if content:
+                      print("SUCCESS")
+                      break
+
+              except Exception as e:
+                  print("FAILED:", e)
+
+          # fallback
+          if not content:
+              content = f"<html><body><h1>{keyword}</h1><p>API failed</p></body></html>"
+
+          # save
           os.makedirs("blog", exist_ok=True)
 
-          with open(f"blog/{slug}.html", "w") as f:
+          with open(f"blog/{slug}.html", "w", encoding="utf-8") as f:
               f.write(content)
 
           print("FILE CREATED")
@@ -75,6 +110,5 @@ jobs:
           git config user.email "bot@site.com"
 
           git add .
-          git commit -m "auto blog" || echo "No changes"
-
+          git commit -m "new blog" || echo "No changes"
           git push
