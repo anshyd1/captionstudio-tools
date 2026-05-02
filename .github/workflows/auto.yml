@@ -1,4 +1,4 @@
-name: Auto Blog Gemini
+name: Auto Blog Pro
 
 on:
   workflow_dispatch:
@@ -20,83 +20,93 @@ jobs:
       - name: Install deps
         run: pip install requests
 
-      - name: Run Blog Script
+      - name: Run Script
         env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY1: ${{ secrets.GEMINI_API_KEY1 }}
           GEMINI_API_KEY2: ${{ secrets.GEMINI_API_KEY2 }}
           GEMINI_API_KEY3: ${{ secrets.GEMINI_API_KEY3 }}
         run: |
           cat << 'EOF' > script.py
-          import requests, os, random
+          import requests, os
 
-          # 👉 keyword (later file se bhi le sakte ho)
           keyword = "instagram captions 2026"
           slug = keyword.replace(" ", "-")
 
           print("Generating:", keyword)
 
-          # 🔥 keys load
-          keys = [
-              os.environ.get("GEMINI_API_KEY1"),
-              os.environ.get("GEMINI_API_KEY2"),
-              os.environ.get("GEMINI_API_KEY3")
-          ]
-          keys = [k for k in keys if k]
-
           content = None
 
-          for key in keys:
-              try:
-                  print("Trying key...")
-
-                  url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}"
-
-                  payload = {
-                      "contents": [
-                          {
-                              "parts": [
-                                  {
-                                      "text": f"""
-Write a full SEO optimized HTML blog for "{keyword}"
-
-Include:
-- <title>
-- meta description
-- H1
-- intro paragraph
-- 50 captions in <ul><li>
-- FAQ section
-- clean HTML only (no markdown)
-"""
-                                  }
-                              ]
-                          }
+          # 🔥 1. TRY GROQ
+          try:
+              print("Trying GROQ...")
+              res = requests.post(
+                  "https://api.groq.com/openai/v1/chat/completions",
+                  headers={
+                      "Authorization": "Bearer " + os.environ.get("GROQ_API_KEY",""),
+                      "Content-Type": "application/json"
+                  },
+                  json={
+                      "model": "llama3-8b-8192",
+                      "messages": [
+                          {"role": "user", "content": "Write SEO HTML blog for " + keyword + " with 50 captions"}
                       ]
-                  }
+                  },
+                  timeout=20
+              )
+              data = res.json()
+              content = data["choices"][0]["message"]["content"]
+              print("GROQ SUCCESS")
 
-                  res = requests.post(url, json=payload, timeout=20)
+          except Exception as e:
+              print("GROQ FAILED:", e)
 
-                  print("STATUS:", res.status_code)
-
-                  data = res.json()
-
-                  content = data['candidates'][0]['content']['parts'][0]['text']
-
-                  if content:
-                      print("SUCCESS")
-                      break
-
-              except Exception as e:
-                  print("FAILED:", e)
-
-          # fallback
+          # 🔥 2. GEMINI FALLBACK
           if not content:
-              content = f"<html><body><h1>{keyword}</h1><p>API failed</p></body></html>"
+              keys = [
+                  os.environ.get("GEMINI_API_KEY1"),
+                  os.environ.get("GEMINI_API_KEY2"),
+                  os.environ.get("GEMINI_API_KEY3")
+              ]
+              keys = [k for k in keys if k]
+
+              for key in keys:
+                  try:
+                      print("Trying GEMINI...")
+
+                      url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + key
+
+                      payload = {
+                          "contents": [
+                              {
+                                  "parts": [
+                                      {
+                                          "text": "Write SEO HTML blog for " + keyword + " with 50 captions"
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+
+                      res = requests.post(url, json=payload, timeout=20)
+                      data = res.json()
+
+                      content = data['candidates'][0]['content']['parts'][0]['text']
+
+                      if content:
+                          print("GEMINI SUCCESS")
+                          break
+
+                  except Exception as e:
+                      print("GEMINI FAILED:", e)
+
+          # 🔥 3. FINAL FALLBACK
+          if not content:
+              content = "<html><body><h1>" + keyword + "</h1><p>All APIs failed</p></body></html>"
 
           # save
           os.makedirs("blog", exist_ok=True)
-
-          with open(f"blog/{slug}.html", "w", encoding="utf-8") as f:
+          with open("blog/" + slug + ".html", "w", encoding="utf-8") as f:
               f.write(content)
 
           print("FILE CREATED")
@@ -110,5 +120,5 @@ Include:
           git config user.email "bot@site.com"
 
           git add .
-          git commit -m "new blog" || echo "No changes"
+          git commit -m "auto blog" || echo "No changes"
           git push
