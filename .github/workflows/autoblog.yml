@@ -1,0 +1,44 @@
+name: Daily Auto Blog
+on:
+  schedule:
+    - cron: '0 0 * * *' # Har raat 12 baje
+  workflow_dispatch: # Taki aap abhi bhi chala sakein
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate Blog Content
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python -c "
+          import requests, os, datetime
+          url = 'https://groq.com'
+          headers = {'Authorization': f'Bearer {os.environ[\"GROQ_API_KEY\"]}'}
+          prompt = 'Write a 2000-word SEO optimized blog post in HTML format about trending Instagram captions for 2024. Include headings, bullet points, and a professional tone.'
+          data = {'model': 'llama3-8b-8192', 'messages': [{'role': 'user', 'content': prompt}]}
+          res = requests.post(url, headers=headers, json=data).json()
+          content = res['choices'][0]['message']['content']
+          date_str = datetime.datetime.now().strftime('%Y-%m-%d')
+          with open(f'blog-{date_str}.html', 'w') as f: f.write(content)
+          "
+
+      - name: Push to GitHub
+        run: |
+          git config --global user.name 'AutoBot'
+          git config --global user.email 'bot@captionstudio.in'
+          git add .
+          git commit -m "Auto blog post added"
+          git push https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@://github.com{{ github.repository }} HEAD:main
