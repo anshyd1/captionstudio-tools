@@ -1,25 +1,25 @@
-name: Daily Auto Blog
+name: Daily Auto Blog 2026
 on:
   schedule:
     - cron: '0 0 * * *' # Har raat 12 baje
-  workflow_dispatch: # Taki aap abhi bhi chala sakein
+  workflow_dispatch: # Manual button ke liye
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
       - name: Install dependencies
         run: pip install requests
 
-      - name: Generate Blog Content
+      - name: Generate Content
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
@@ -27,18 +27,21 @@ jobs:
           import requests, os, datetime
           url = 'https://groq.com'
           headers = {'Authorization': f'Bearer {os.environ[\"GROQ_API_KEY\"]}'}
-          prompt = 'Write a 2000-word SEO optimized blog post in HTML format about trending Instagram captions for 2024. Include headings, bullet points, and a professional tone.'
-          data = {'model': 'llama3-8b-8192', 'messages': [{'role': 'user', 'content': prompt}]}
+          # 2000 words ke liye heavy prompt
+          prompt = 'Write a 2000-word highly detailed SEO blog post in HTML format about the Best Social Media Caption Trends in 2026. Use <h1>, <h2> tags, bullet points, and include a massive list of captions. Make it look like a professional webpage.'
+          data = {'model': 'llama3-8b-8192', 'messages': [{'role': 'user', 'content': prompt}], 'max_tokens': 4096}
           res = requests.post(url, headers=headers, json=data).json()
-          content = res['choices'][0]['message']['content']
+          content = res['choices']['message']['content']
           date_str = datetime.datetime.now().strftime('%Y-%m-%d')
-          with open(f'blog-{date_str}.html', 'w') as f: f.write(content)
+          # Seedha blog folder mein save karega
+          if not os.path.exists('blog'): os.makedirs('blog')
+          with open(f'blog/post-{date_str}.html', 'w') as f: f.write(content)
           "
 
       - name: Push to GitHub
         run: |
-          git config --global user.name 'AutoBot'
+          git config --global user.name 'AutoBot-2026'
           git config --global user.email 'bot@captionstudio.in'
           git add .
-          git commit -m "Auto blog post added"
+          git commit -m "New Blog Post for 2026-$(date +'%Y-%m-%d')"
           git push https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@://github.com{{ github.repository }} HEAD:main
