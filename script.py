@@ -1,14 +1,14 @@
-import requests, os, random
+import os, random
 
-with open('keywords.txt') as f:
-    keywords = [k.strip() for k in f if k.strip()]
+print("START")
 
-keyword = random.choice(keywords)
-slug = keyword.lower().replace(" ", "-")
-
-print("Keyword:", keyword)
+# fallback keyword
+keyword = "test captions"
+slug = keyword.replace(" ", "-")
 
 try:
+    import requests
+
     res = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={
@@ -18,19 +18,23 @@ try:
         json={
             "model": "llama3-8b-8192",
             "messages": [
-                {"role": "user", "content": f"Create HTML page for {keyword}"}
+                {"role": "user", "content": f"Write HTML blog for {keyword}"}
             ]
-        }
+        },
+        timeout=15
     ).json()
+
+    print("API RESPONSE:", res)
 
     content = res['choices'][0]['message']['content']
 
-except:
-    content = f"<html><body><h1>{keyword}</h1></body></html>"
+except Exception as e:
+    print("API FAILED:", e)
+    content = f"<html><body><h1>{keyword}</h1><p>Fallback content</p></body></html>"
 
 os.makedirs("blog", exist_ok=True)
 
 with open(f"blog/{slug}.html", "w") as f:
     f.write(content)
 
-print("Created:", slug)
+print("FILE CREATED")
