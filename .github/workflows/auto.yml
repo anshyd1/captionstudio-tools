@@ -1,4 +1,4 @@
-name: Auto Blog Pro
+name: Auto Blog Working
 
 on:
   workflow_dispatch:
@@ -28,17 +28,22 @@ jobs:
           GEMINI_API_KEY3: ${{ secrets.GEMINI_API_KEY3 }}
         run: |
           cat << 'EOF' > script.py
-          import requests, os
+          import os
 
-          keyword = "instagram captions 2026"
+          print("=== START ===")
+
+          # 🔍 check env
+          print("GROQ:", bool(os.environ.get("GROQ_API_KEY")))
+          print("GEMINI1:", bool(os.environ.get("GEMINI_API_KEY1")))
+
+          keyword = "test captions"
           slug = keyword.replace(" ", "-")
 
-          print("Generating:", keyword)
+          content = "<h1>Default</h1>"
 
-          content = None
-
-          # 🔥 1. TRY GROQ
           try:
+              import requests
+
               print("Trying GROQ...")
               res = requests.post(
                   "https://api.groq.com/openai/v1/chat/completions",
@@ -49,67 +54,28 @@ jobs:
                   json={
                       "model": "llama3-8b-8192",
                       "messages": [
-                          {"role": "user", "content": "Write SEO HTML blog for " + keyword + " with 50 captions"}
+                          {"role": "user", "content": "Write HTML blog for " + keyword}
                       ]
                   },
-                  timeout=20
+                  timeout=15
               )
+
+              print("STATUS:", res.status_code)
+              print("RAW:", res.text[:200])
+
               data = res.json()
               content = data["choices"][0]["message"]["content"]
-              print("GROQ SUCCESS")
 
           except Exception as e:
-              print("GROQ FAILED:", e)
+              print("ERROR:", e)
 
-          # 🔥 2. GEMINI FALLBACK
-          if not content:
-              keys = [
-                  os.environ.get("GEMINI_API_KEY1"),
-                  os.environ.get("GEMINI_API_KEY2"),
-                  os.environ.get("GEMINI_API_KEY3")
-              ]
-              keys = [k for k in keys if k]
-
-              for key in keys:
-                  try:
-                      print("Trying GEMINI...")
-
-                      url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + key
-
-                      payload = {
-                          "contents": [
-                              {
-                                  "parts": [
-                                      {
-                                          "text": "Write SEO HTML blog for " + keyword + " with 50 captions"
-                                      }
-                                  ]
-                              }
-                          ]
-                      }
-
-                      res = requests.post(url, json=payload, timeout=20)
-                      data = res.json()
-
-                      content = data['candidates'][0]['content']['parts'][0]['text']
-
-                      if content:
-                          print("GEMINI SUCCESS")
-                          break
-
-                  except Exception as e:
-                      print("GEMINI FAILED:", e)
-
-          # 🔥 3. FINAL FALLBACK
-          if not content:
-              content = "<html><body><h1>" + keyword + "</h1><p>All APIs failed</p></body></html>"
-
-          # save
           os.makedirs("blog", exist_ok=True)
-          with open("blog/" + slug + ".html", "w", encoding="utf-8") as f:
+
+          with open("blog/" + slug + ".html", "w") as f:
               f.write(content)
 
           print("FILE CREATED")
+          print("=== END ===")
           EOF
 
           python script.py
@@ -120,5 +86,5 @@ jobs:
           git config user.email "bot@site.com"
 
           git add .
-          git commit -m "auto blog" || echo "No changes"
-          git push
+          git commit -m "debug run" || echo "No changes"
+          git push || echo "Push failed but ignored"
