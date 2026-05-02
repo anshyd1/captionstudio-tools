@@ -1,0 +1,45 @@
+name: Auto SEO System
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run script
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python - <<EOF
+import requests, os
+
+keyword = "test captions"
+slug = keyword.replace(" ", "-")
+
+html = f"<html><body><h1>{keyword}</h1><p>System working</p></body></html>"
+
+os.makedirs("blog", exist_ok=True)
+with open(f"blog/{slug}.html", "w") as f:
+    f.write(html)
+
+print("DONE")
+EOF
+
+      - name: Push
+        run: |
+          git config --global user.name "AutoBot"
+          git config --global user.email "bot@site.com"
+          git add .
+          git commit -m "test page" || echo "No changes"
+          git push
