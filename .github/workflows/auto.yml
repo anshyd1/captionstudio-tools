@@ -1,4 +1,4 @@
-name: Auto Blog System
+name: Auto Blog Stable
 
 on:
   workflow_dispatch:
@@ -20,23 +20,22 @@ jobs:
       - name: Install deps
         run: pip install requests
 
-      - name: Run Blog Generator
+      - name: Run Script
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           cat << 'EOF' > script.py
-          import requests, os, random, datetime
+          import os, random
 
-          # Load keywords
-          with open('keywords.txt') as f:
-              keywords = [k.strip() for k in f if k.strip()]
+          print("START")
 
-          keyword = random.choice(keywords)
+          # fallback keyword
+          keyword = "test captions"
           slug = keyword.replace(" ", "-")
 
-          print("Generating:", keyword)
-
           try:
+              import requests
+
               res = requests.post(
                   "https://api.groq.com/openai/v1/chat/completions",
                   headers={
@@ -46,35 +45,26 @@ jobs:
                   json={
                       "model": "llama3-8b-8192",
                       "messages": [
-                          {"role": "user", "content": f"""
-Write a full SEO optimized HTML blog for: "{keyword}"
-
-Include:
-- <title>
-- meta description
-- H1
-- intro paragraph
-- 50 captions in <ul><li>
-- FAQ section
-- clean HTML only
-"""}
+                          {"role": "user", "content": f"Write HTML blog for {keyword}"}
                       ]
-                  }
+                  },
+                  timeout=15
               ).json()
+
+              print("API RESPONSE:", res)
 
               content = res['choices'][0]['message']['content']
 
           except Exception as e:
-              print("API FAIL:", e)
-              content = f"<html><body><h1>{keyword}</h1><p>Content coming soon...</p></body></html>"
+              print("API FAILED:", e)
+              content = f"<html><body><h1>{keyword}</h1><p>Fallback content</p></body></html>"
 
           os.makedirs("blog", exist_ok=True)
 
-          filename = f"blog/{slug}.html"
-          with open(filename, "w", encoding="utf-8") as f:
+          with open(f"blog/{slug}.html", "w") as f:
               f.write(content)
 
-          print("Created:", filename)
+          print("FILE CREATED")
           EOF
 
           python script.py
@@ -85,5 +75,6 @@ Include:
           git config user.email "bot@site.com"
 
           git add .
-          git commit -m "New blog generated" || echo "No changes"
+          git commit -m "auto blog" || echo "No changes"
+
           git push
