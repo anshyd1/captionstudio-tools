@@ -3,14 +3,14 @@ name: Auto SEO Pages
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 18 * * *'   # 12 AM India (UTC 18:30)
+    - cron: '30 18 * * *'   # 12 AM India
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v3
 
       - name: Setup Python
@@ -24,56 +24,77 @@ jobs:
         run: |
           pip install requests
           python - <<EOF
-import requests, os, random, datetime
+import requests, os, random
 
-# Load keywords
-with open('keywords.txt', 'r') as f:
-    keywords = [k.strip() for k in f if k.strip()]
+print("Starting script...")
+
+# Load keywords safely
+keywords = []
+if os.path.exists('keywords.txt'):
+    with open('keywords.txt') as f:
+        keywords = [k.strip() for k in f if k.strip()]
+
+if not keywords:
+    keywords = ["instagram captions", "attitude captions"]
 
 keyword = random.choice(keywords)
-
 slug = keyword.lower().replace(" ", "-")
 
-prompt = f"""
-Create a clean SEO HTML page for keyword: "{keyword}"
+print("Keyword:", keyword)
+
+# Try API
+content = ""
+
+try:
+    res = requests.post(
+        "https://api.groq.com/openai/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {os.environ.get('GROQ_API_KEY','')}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": "llama3-8b-8192",
+            "messages": [
+                {"role": "user", "content": f"""
+Create a simple SEO HTML page for "{keyword}"
 
 Include:
-- <title>
+- title
 - meta description
-- H1 heading
-- 50 captions (bullet list)
-- FAQ section
-- simple clean HTML
-- internal link to /index.html
+- h1
+- 30 captions list
+- basic HTML only
+"""}
+            ]
+        },
+        timeout=20
+    )
 
-No markdown. Only HTML.
+    data = res.json()
+    print("API response:", data)
+
+    content = data['choices'][0]['message']['content']
+
+except Exception as e:
+    print("API FAILED:", e)
+    content = f"""
+<html>
+<head><title>{keyword}</title></head>
+<body>
+<h1>{keyword}</h1>
+<p>Auto generated fallback content</p>
+</body>
+</html>
 """
 
-res = requests.post(
-    "https://api.groq.com/openai/v1/chat/completions",
-    headers={
-        "Authorization": f"Bearer {os.environ['GROQ_API_KEY']}",
-        "Content-Type": "application/json"
-    },
-    json={
-        "model": "llama3-8b-8192",
-        "messages": [{"role": "user", "content": prompt}]
-    }
-).json()
-
-# Debug print
-print(res)
-
-content = res['choices'][0]['message']['content']
-
+# Save file
 os.makedirs('blog', exist_ok=True)
-
 filename = f"blog/{slug}.html"
 
 with open(filename, "w", encoding="utf-8") as f:
     f.write(content)
 
-print("Created:", filename)
+print("File created:", filename)
 EOF
 
       - name: Commit & Push
@@ -81,5 +102,5 @@ EOF
           git config --global user.name "AutoBot"
           git config --global user.email "bot@site.com"
           git add .
-          git commit -m "New SEO page" || echo "No changes"
+          git commit -m "Auto SEO page" || echo "No changes to commit"
           git push
