@@ -1,47 +1,34 @@
 name: Daily Auto Blog 2026
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Har raat 12 baje
-  workflow_dispatch: # Manual button ke liye
+    - cron: '0 0 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Generate Content
+      - run: pip install requests
+      - name: Run Blog Script
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
           python -c "
           import requests, os, datetime
-          url = 'https://groq.com'
-          headers = {'Authorization': f'Bearer {os.environ[\"GROQ_API_KEY\"]}'}
-          # 2000 words ke liye heavy prompt
-          prompt = 'Write a 2000-word highly detailed SEO blog post in HTML format about the Best Social Media Caption Trends in 2026. Use <h1>, <h2> tags, bullet points, and include a massive list of captions. Make it look like a professional webpage.'
-          data = {'model': 'llama3-8b-8192', 'messages': [{'role': 'user', 'content': prompt}], 'max_tokens': 4096}
-          res = requests.post(url, headers=headers, json=data).json()
-          content = res['choices']['message']['content']
-          date_str = datetime.datetime.now().strftime('%Y-%m-%d')
-          # Seedha blog folder mein save karega
-          if not os.path.exists('blog'): os.makedirs('blog')
-          with open(f'blog/post-{date_str}.html', 'w') as f: f.write(content)
+          res = requests.post('https://groq.com', 
+              headers={'Authorization': f'Bearer {os.environ[\"GROQ_API_KEY\"]}'},
+              json={'model': 'llama3-8b-8192', 'messages': [{'role': 'user', 'content': 'Write a 2000-word SEO blog in HTML about Instagram Captions 2026.'}]}).json()
+          content = res['choices'][0]['message']['content']
+          os.makedirs('blog', exist_ok=True)
+          with open(f'blog/post-{datetime.datetime.now().strftime(\"%Y-%m-%d\")}.html', 'w') as f: f.write(content)
           "
-
-      - name: Push to GitHub
-        run: |
-          git config --global user.name 'AutoBot-2026'
+          git config --global user.name 'AutoBot'
           git config --global user.email 'bot@captionstudio.in'
           git add .
-          git commit -m "New Blog Post for 2026-$(date +'%Y-%m-%d')"
+          git commit -m 'Auto blog post'
           git push https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@://github.com{{ github.repository }} HEAD:main
