@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Blog JSON & Sitemap Generator | Caption Studio Tools</title>
+  <meta name="description" content="Generate Caption Studio blog JSON cards and sitemap XML entries from a blog link instantly.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="author" content="Caption Studio">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --surface:#ffffff;
+      --soft:#fff5f2;
+      --soft2:#fff9f7;
+      --text:#111111;
+      --muted:#555555;
+      --muted2:#777777;
+      --line:rgba(17,17,17,.1);
+      --accent:#ff512f;
+      --accent2:#ff9966;
+      --green:#188038;
+      --red:#d93025;
+      --shadow:0 18px 60px rgba(17,17,17,.09);
+      --shadow2:0 12px 34px rgba(17,17,17,.07);
+      --radius:24px;
+      --radius2:16px;
+      --max:1180px;
+      --font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      --gradient:linear-gradient(135deg,#ff512f,#ff9966);
+    }
+
+    @media (prefers-color-scheme:dark){
+      :root{
+        --bg:#101010;
+        --surface:#171717;
+        --soft:#211512;
+        --soft2:#181412;
+        --text:#f7f3f0;
+        --muted:#c8c0bb;
+        --muted2:#a79f99;
+        --line:rgba(255,255,255,.12);
+        --shadow:0 18px 60px rgba(0,0,0,.32);
+        --shadow2:0 12px 34px rgba(0,0,0,.25);
+      }
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 6% 0%,rgba(255,81,47,.11) 0%,transparent 32rem),
+        radial-gradient(circle at 100% 12%,rgba(255,153,102,.18) 0%,transparent 30rem),
+        var(--bg);
+      color:var(--text);
+      font-family:var(--font);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    ::selection{background:rgba(255,81,47,.18)}
+
+    :focus-visible{
+      outline:3px solid rgba(255,81,47,.45);
+      outline-offset:3px;
+      border-radius:10px;
+    }
+
+    .wrap{
+      width:min(var(--max),100%);
+      margin:auto;
+      padding:0 18px;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.84);
+      backdrop-filter:blur(18px);
+    }
+
+    @media (prefers-color-scheme:dark){
+      .topbar{background:rgba(16,16,16,.82)}
+    }
+
+    .nav{
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:950;
+      letter-spacing:-.04em;
+      font-size:1.04rem;
+    }
+
+    .brand-mark{
+      width:38px;
+      height:38px;
+      border-radius:14px;
+      background:var(--gradient);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      box-shadow:0 12px 28px rgba(255,81,47,.25);
+      font-weight:950;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:.44rem .72rem;
+      border-radius:999px;
+      background:var(--soft);
+      border:1px solid rgba(255,81,47,.15);
+      color:#bb351d;
+      font-size:.82rem;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+    @media (prefers-color-scheme:dark){
+      .badge{color:#ffb198}
+    }
+
+    .hero{
+      padding:48px 0 26px;
+      display:grid;
+      gap:22px;
+    }
+
+    h1,h2,h3{
+      margin:0;
+      line-height:1.08;
+      letter-spacing:-.055em;
+      color:var(--text);
+    }
+
+    h1{
+      font-size:clamp(2.4rem,9vw,5.7rem);
+      max-width:920px;
+    }
+
+    h2{
+      font-size:clamp(1.5rem,4vw,2.6rem);
+      margin-bottom:12px;
+    }
+
+    h3{
+      font-size:1.15rem;
+      letter-spacing:-.025em;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:clamp(1.04rem,3vw,1.24rem);
+      max-width:780px;
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+      align-items:start;
+      padding-bottom:48px;
+    }
+
+    .panel{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:20px;
+    }
+
+    .panel-soft{
+      background:linear-gradient(135deg,rgba(255,81,47,.07),rgba(255,153,102,.13));
+      border:1px solid rgba(255,81,47,.18);
+    }
+
+    .field{
+      display:grid;
+      gap:7px;
+      margin-bottom:14px;
+    }
+
+    label{
+      font-weight:900;
+      color:var(--text);
+      font-size:.92rem;
+    }
+
+    .hint{
+      display:block;
+      color:var(--muted2);
+      font-size:.82rem;
+      line-height:1.45;
+      margin-top:2px;
+    }
+
+    input,select,textarea{
+      width:100%;
+      min-height:48px;
+      border:1px solid var(--line);
+      background:var(--surface);
+      color:var(--text);
+      border-radius:15px;
+      padding:.78rem .9rem;
+      outline:0;
+    }
+
+    textarea{
+      min-height:150px;
+      resize:vertical;
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+      font-size:.9rem;
+      line-height:1.55;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:rgba(255,81,47,.5);
+      box-shadow:0 0 0 4px rgba(255,81,47,.1);
+    }
+
+    .btn-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.5rem;
+      border:0;
+      border-radius:999px;
+      padding:.86rem 1.05rem;
+      min-height:44px;
+      font-weight:950;
+      cursor:pointer;
+      transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+    }
+
+    .btn-primary{
+      background:var(--gradient);
+      color:#fff;
+      box-shadow:0 14px 32px rgba(255,81,47,.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 38px rgba(255,81,47,.3);
+    }
+
+    .btn-soft{
+      background:var(--soft);
+      border:1px solid var(--line);
+      color:var(--text);
+    }
+
+    .btn-soft:hover{
+      transform:translateY(-2px);
+      box-shadow:var(--shadow2);
+    }
+
+    .split{
+      display:grid;
+      gap:14px;
+    }
+
+    .output-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+
+    .copy-btn{
+      border:0;
+      border-radius:999px;
+      background:var(--gradient);
+      color:#fff;
+      padding:.55rem .78rem;
+      font-size:.82rem;
+      font-weight:950;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .mini-card{
+      background:var(--soft2);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px;
+    }
+
+    .mini-card strong{
+      display:block;
+      line-height:1.25;
+      letter-spacing:-.02em;
+    }
+
+    .mini-card span{
+      color:var(--muted);
+      font-size:.88rem;
+      display:block;
+      margin-top:4px;
+    }
+
+    .status{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:.92rem;
+      min-height:26px;
+    }
+
+    .status.good{color:var(--green);font-weight:850}
+    .status.bad{color:var(--red);font-weight:850}
+
+    .preview{
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:var(--soft2);
+      padding:16px;
+      margin-top:16px;
+    }
+
+    .preview small{
+      display:inline-flex;
+      margin-bottom:8px;
+      color:#be3a20;
+      font-weight:950;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .preview h3{
+      font-size:1.25rem;
+      margin-bottom:6px;
+    }
+
+    .preview p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.55;
+    }
+
+    .preview-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      color:var(--muted2);
+      font-size:.84rem;
+      font-weight:750;
+    }
+
+    .history{
+      display:grid;
+      gap:10px;
+      margin-top:16px;
+    }
+
+    .history-item{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:var(--soft2);
+      padding:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+    }
+
+    .history-item span{
+      color:var(--muted);
+      font-size:.86rem;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+
+    .history-item button{
+      border:0;
+      background:var(--surface);
+      color:var(--text);
+      border-radius:999px;
+      padding:.45rem .65rem;
+      font-weight:900;
+      cursor:pointer;
+      border:1px solid var(--line);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:var(--soft2);
+      padding:22px 0;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    @media (min-width:720px){
+      .mini-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .split{grid-template-columns:1fr 1fr}
+    }
+
+    @media (min-width:980px){
+      .grid{grid-template-columns:.92fr 1.08fr}
+      .hero{padding-top:62px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.01ms!important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Caption Studio home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span>Caption Studio</span>
+      </a>
+      <span class="badge">JSON + Sitemap Tool</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <span class="badge">No tension generator</span>
+      <h1>Blog JSON &amp; Sitemap Generator</h1>
+      <p>
+        Sirf blog link paste karo. Tool automatically JSON card aur sitemap XML entry bana dega. Title, tag, category, date, read time sab editable hai.
+      </p>
+    </section>
+
+    <section class="wrap grid" aria-label="Generator tool">
+      <div class="panel panel-soft">
+        <h2>Input</h2>
+
+        <div class="field">
+          <label for="blogLink">Blog link</label>
+          <input id="blogLink" type="text" inputmode="url" autocomplete="off" placeholder="blog/social-media-content-strategy-small-business-2026.html">
+          <span class="hint">Allowed: <strong>blog/page.html</strong>, <strong>/blog/page.html</strong>, or full URL.</span>
+        </div>
+
+        <div class="split">
+          <div class="field">
+            <label for="dateInput">Last modified date</label>
+            <input id="dateInput" type="date">
+          </div>
+
+          <div class="field">
+            <label for="priorityInput">Sitemap priority</label>
+            <select id="priorityInput">
+              <option value="1.00">1.00</option>
+              <option value="0.95" selected>0.95</option>
+              <option value="0.90">0.90</option>
+              <option value="0.85">0.85</option>
+              <option value="0.80">0.80</option>
+              <option value="0.70">0.70</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="field">
+            <label for="categoryInput">Category</label>
+            <select id="categoryInput">
+              <option value="growth">growth</option>
+              <option value="captions">captions</option>
+              <option value="ai">ai</option>
+              <option value="earning">earning</option>
+              <option value="tools">tools</option>
+              <option value="mindset">mindset</option>
+              <option value="guide">guide</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="readTimeInput">Read time</label>
+            <input id="readTimeInput" type="text" value="16 min" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="field">
+            <label for="changefreqInput">Change frequency</label>
+            <select id="changefreqInput">
+              <option value="daily">daily</option>
+              <option value="weekly" selected>weekly</option>
+              <option value="monthly">monthly</option>
+              <option value="yearly">yearly</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="hotInput">Hot post?</label>
+            <select id="hotInput">
+              <option value="true" selected>true</option>
+              <option value="false">false</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="titleInput">Title</label>
+          <input id="titleInput" type="text" autocomplete="off" placeholder="Auto generated from link">
+        </div>
+
+        <div class="field">
+          <label for="descInput">Description</label>
+          <textarea id="descInput" placeholder="Auto generated from link"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="tagInput">Display tag</label>
+          <input id="tagInput" type="text" autocomplete="off" placeholder="📈 GROWTH">
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="generateBtn" type="button">Generate</button>
+          <button class="btn btn-soft" id="resetBtn" type="button">Reset</button>
+          <button class="btn btn-soft" id="saveBtn" type="button">Save to History</button>
+        </div>
+
+        <p class="status" id="status" aria-live="polite"></p>
+
+        <div class="mini-grid" aria-label="Quick checks">
+          <div class="mini-card">
+            <strong id="checkPath">—</strong>
+            <span>Clean blog path</span>
+          </div>
+          <div class="mini-card">
+            <strong id="checkCategory">—</strong>
+            <span>Detected category</span>
+          </div>
+          <div class="mini-card">
+            <strong id="checkDate">—</strong>
+            <span>Lastmod date</span>
+          </div>
+        </div>
+
+        <div class="preview" aria-label="Card preview">
+          <small id="previewTag">📈 GROWTH</small>
+          <h3 id="previewTitle">Generated blog title will appear here</h3>
+          <p id="previewDesc">Generated description will appear here.</p>
+          <div class="preview-meta">
+            <span id="previewDate">2026-05-18</span>
+            <span>•</span>
+            <span id="previewRead">16 min</span>
+            <span>•</span>
+            <span id="previewHot">Hot: true</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Output</h2>
+
+        <div class="split">
+          <div>
+            <div class="output-head">
+              <h3>JSON</h3>
+              <button class="copy-btn" data-copy-target="jsonOutput" type="button">Copy JSON</button>
+            </div>
+            <textarea id="jsonOutput" readonly spellcheck="false"></textarea>
+          </div>
+
+          <div>
+            <div class="output-head">
+              <h3>Sitemap XML</h3>
+              <button class="copy-btn" data-copy-target="sitemapOutput" type="button">Copy XML</button>
+            </div>
+            <textarea id="sitemapOutput" readonly spellcheck="false"></textarea>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn btn-soft" id="downloadJsonBtn" type="button">Download JSON</button>
+          <button class="btn btn-soft" id="downloadXmlBtn" type="button">Download XML</button>
+        </div>
+
+        <h2 style="margin-top:24px;">Saved history</h2>
+        <div class="history" id="historyList" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Caption Studio. Internal generator for blog JSON cards and sitemap entries.
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const DOMAIN = 'https://captionstudio.in';
+
+      const progress = document.getElementById('progress');
+      const blogLink = document.getElementById('blogLink');
+      const dateInput = document.getElementById('dateInput');
+      const priorityInput = document.getElementById('priorityInput');
+      const categoryInput = document.getElementById('categoryInput');
+      const readTimeInput = document.getElementById('readTimeInput');
+      const changefreqInput = document.getElementById('changefreqInput');
+      const hotInput = document.getElementById('hotInput');
+      const titleInput = document.getElementById('titleInput');
+      const descInput = document.getElementById('descInput');
+      const tagInput = document.getElementById('tagInput');
+
+      const jsonOutput = document.getElementById('jsonOutput');
+      const sitemapOutput = document.getElementById('sitemapOutput');
+      const status = document.getElementById('status');
+
+      const checkPath = document.getElementById('checkPath');
+      const checkCategory = document.getElementById('checkCategory');
+      const checkDate = document.getElementById('checkDate');
+
+      const previewTag = document.getElementById('previewTag');
+      const previewTitle = document.getElementById('previewTitle');
+      const previewDesc = document.getElementById('previewDesc');
+      const previewDate = document.getElementById('previewDate');
+      const previewRead = document.getElementById('previewRead');
+      const previewHot = document.getElementById('previewHot');
+
+      const generateBtn = document.getElementById('generateBtn');
+      const resetBtn = document.getElementById('resetBtn');
+      const saveBtn = document.getElementById('saveBtn');
+      const downloadJsonBtn = document.getElementById('downloadJsonBtn');
+      const downloadXmlBtn = document.getElementById('downloadXmlBtn');
+      const historyList = document.getElementById('historyList');
+
+      const today = new Date();
+      const todayIso = today.toISOString().slice(0,10);
+      dateInput.value = todayIso;
+
+      function updateProgress(){
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = max > 0 ? window.scrollY / max : 0;
+        progress.style.transform = 'scaleX(' + Math.min(1, Math.max(0, pct)) + ')';
+      }
+
+      window.addEventListener('scroll', updateProgress, {passive:true});
+      updateProgress();
+
+      function cleanPath(input){
+        let value = String(input || '').trim();
+
+        if(!value) return '';
+
+        value = value.replace(/^https?:\/\/captionstudio\.in\/?/i,'');
+        value = value.replace(/^\/+/,'');
+        value = value.split('#')[0].split('?')[0];
+
+        if(!value.startsWith('blog/')){
+          if(value.includes('/blog/')){
+            value = value.substring(value.indexOf('blog/'));
+          }else{
+            value = 'blog/' + value;
+          }
+        }
+
+        value = value.replace(/\/+/g,'/');
+
+        if(!value.endsWith('.html')){
+          value = value.replace(/\/$/,'') + '.html';
+        }
+
+        return value;
+      }
+
+      function slugFromPath(path){
+        return path.split('/').pop().replace(/\.html$/,'');
+      }
+
+      function titleCaseFromSlug(slug){
+        const special = {
+          'ai':'AI',
+          'seo':'SEO',
+          'ugc':'UGC',
+          '1k':'1K',
+          '10k':'10K',
+          'instagram':'Instagram',
+          'reels':'Reels',
+          'reel':'Reel',
+          'hinglish':'Hinglish',
+          'whatsapp':'WhatsApp',
+          'youtube':'YouTube',
+          'linkedin':'LinkedIn'
+        };
+
+        return slug
+          .split('-')
+          .filter(Boolean)
+          .map(word => special[word.toLowerCase()] || word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ')
+          .replace(/\bFor\b/g,'for')
+          .replace(/\bAnd\b/g,'and')
+          .replace(/\bTo\b/g,'to')
+          .replace(/\bOn\b/g,'on')
+          .replace(/\bIn\b/g,'in')
+          .replace(/\bOf\b/g,'of');
+      }
+
+      function inferCategory(slug){
+        const s = slug.toLowerCase();
+
+        if(s.includes('caption') || s.includes('captions')) return 'captions';
+        if(s.includes('ai') || s.includes('chatgpt')) return 'ai';
+        if(s.includes('earn') || s.includes('money') || s.includes('income') || s.includes('apps')) return 'earning';
+        if(s.includes('tool') || s.includes('generator')) return 'tools';
+        if(s.includes('mindset') || s.includes('success') || s.includes('professional')) return 'mindset';
+        if(s.includes('guide') || s.includes('complete')) return 'guide';
+
+        return 'growth';
+      }
+
+      function inferTag(slug, category){
+        const s = slug.toLowerCase();
+
+        if(s.includes('reels') || s.includes('reel')) return '📱 REELS STRATEGY';
+        if(s.includes('hashtag')) return '🏷️ HASHTAGS';
+        if(s.includes('caption')) return '🔥 CAPTIONS';
+        if(s.includes('ai')) return '🤖 AI TOOLS';
+        if(s.includes('earn') || s.includes('money') || s.includes('apps')) return '💸 EARNING';
+        if(s.includes('ugc')) return '🎬 UGC CREATOR';
+        if(s.includes('bio')) return '✨ INSTAGRAM BIO';
+        if(s.includes('small-business') || s.includes('business')) return '📈 SMALL BUSINESS';
+        if(s.includes('instagram')) return '📈 INSTAGRAM GROWTH';
+
+        const map = {
+          growth:'📈 GROWTH',
+          captions:'🔥 CAPTIONS',
+          ai:'🤖 AI TOOLS',
+          earning:'💸 EARNING',
+          tools:'🧰 TOOLS',
+          mindset:'🧠 MINDSET',
+          guide:'📘 GUIDE'
+        };
+
+        return map[category] || '📘 GUIDE';
+      }
+
+      function inferReadTime(slug){
+        const s = slug.toLowerCase();
+
+        if(s.includes('complete') || s.includes('ultimate') || s.includes('strategy') || s.includes('guide')) return '16 min';
+        if(s.includes('100') || s.includes('captions')) return '12 min';
+        if(s.includes('formula')) return '10 min';
+        if(s.includes('hashtags')) return '8 min';
+
+        return '10 min';
+      }
+
+      function inferDescription(slug, title){
+        const s = slug.toLowerCase();
+
+        if(s.includes('small-business')){
+          return 'Build a simple content system with pillars, Reels, captions, calendars, proof posts, and customer-focused social media ideas.';
+        }
+
+        if(s.includes('1k-views')){
+          return 'Reels stuck at low views? Use this caption formula to improve clarity, reach, and engagement.';
+        }
+
+        if(s.includes('viral-reels-strategy')){
+          return 'Plan stronger Reels with better hooks, pacing, captions, and repeatable short-form content ideas.';
+        }
+
+        if(s.includes('trending-hashtags')){
+          return 'Find useful hashtag ideas for Reels and learn how to use them without making your captions look spammy.';
+        }
+
+        if(s.includes('viral-caption')){
+          return 'Write stronger captions for Reels with hooks, context, emotion, and clear calls to action.';
+        }
+
+        if(s.includes('ai-tools')){
+          return 'Use practical tools to plan ideas, write captions, improve Reels, and create content faster.';
+        }
+
+        if(s.includes('ugc')){
+          return 'Learn practical steps, examples, and content ideas for growing as a UGC creator in 2026.';
+        }
+
+        if(s.includes('instagram-growth')){
+          return 'Learn practical Instagram growth steps for better posts, Reels, captions, reach, and profile clarity.';
+        }
+
+        if(s.includes('bio')){
+          return 'Get practical Instagram bio ideas and profile tips to make your page clearer and more follow-worthy.';
+        }
+
+        if(s.includes('copy-paste')){
+          return 'Use ready caption ideas as starting points for Instagram posts, Reels, Stories, and daily content.';
+        }
+
+        return 'Read this practical Caption Studio guide with examples, tips, and simple steps you can use right away.';
+      }
+
+      function buildJson(data){
+        return JSON.stringify({
+          title:data.title,
+          desc:data.desc,
+          link:data.path,
+          date:data.date,
+          displayTag:data.displayTag,
+          category:data.category,
+          hot:data.hot,
+          readTime:data.readTime
+        }, null, 2);
+      }
+
+      function escapeXml(str){
+        return String(str)
+          .replace(/&/g,'&amp;')
+          .replace(/</g,'&lt;')
+          .replace(/>/g,'&gt;')
+          .replace(/"/g,'&quot;')
+          .replace(/'/g,'&apos;');
+      }
+
+      function buildSitemap(data){
+        return '<url>\n' +
+          '  <loc>' + escapeXml(data.loc) + '</loc>\n' +
+          '  <lastmod>' + escapeXml(data.date) + '</lastmod>\n' +
+          '  <changefreq>' + escapeXml(data.changefreq) + '</changefreq>\n' +
+          '  <priority>' + escapeXml(data.priority) + '</priority>\n' +
+          '</url>';
+      }
+
+      function setStatus(message, type){
+        status.textContent = message || '';
+        status.className = 'status ' + (type || '');
+      }
+
+      function getData(){
+        const path = cleanPath(blogLink.value);
+        const slug = slugFromPath(path);
+        const category = categoryInput.value || inferCategory(slug);
+
+        return {
+          path:path,
+          loc:DOMAIN + '/' + path,
+          slug:slug,
+          title:titleInput.value.trim() || titleCaseFromSlug(slug),
+          desc:descInput.value.trim() || inferDescription(slug, titleCaseFromSlug(slug)),
+          displayTag:tagInput.value.trim() || inferTag(slug, category),
+          category:category,
+          date:dateInput.value || todayIso,
+          readTime:readTimeInput.value.trim() || inferReadTime(slug),
+          hot:hotInput.value === 'true',
+          changefreq:changefreqInput.value || 'weekly',
+          priority:priorityInput.value || '0.95'
+        };
+      }
+
+      function autofillFromLink(){
+        const path = cleanPath(blogLink.value);
+        if(!path || path === 'blog/.html') return;
+
+        const slug = slugFromPath(path);
+        const category = inferCategory(slug);
+
+        categoryInput.value = category;
+
+        if(!titleInput.dataset.touched){
+          titleInput.value = titleCaseFromSlug(slug);
+        }
+
+        if(!descInput.dataset.touched){
+          descInput.value = inferDescription(slug, titleInput.value);
+        }
+
+        if(!tagInput.dataset.touched){
+          tagInput.value = inferTag(slug, category);
+        }
+
+        if(!readTimeInput.dataset.touched){
+          readTimeInput.value = inferReadTime(slug);
+        }
+      }
+
+      function generate(){
+        autofillFromLink();
+
+        const data = getData();
+
+        if(!data.path || data.path === 'blog/.html'){
+          setStatus('Pehle blog link paste karo.', 'bad');
+          return;
+        }
+
+        if(!data.path.startsWith('blog/') || !data.path.endsWith('.html')){
+          setStatus('Link format check karo. Example: blog/page-name.html', 'bad');
+          return;
+        }
+
+        jsonOutput.value = buildJson(data);
+        sitemapOutput.value = buildSitemap(data);
+
+        checkPath.textContent = data.path;
+        checkCategory.textContent = data.category;
+        checkDate.textContent = data.date;
+
+        previewTag.textContent = data.displayTag;
+        previewTitle.textContent = data.title;
+        previewDesc.textContent = data.desc;
+        previewDate.textContent = data.date;
+        previewRead.textContent = data.readTime;
+        previewHot.textContent = 'Hot: ' + data.hot;
+
+        setStatus('Done. JSON aur sitemap ready hai.', 'good');
+      }
+
+      function resetTool(){
+        blogLink.value = '';
+        titleInput.value = '';
+        descInput.value = '';
+        tagInput.value = '';
+        readTimeInput.value = '16 min';
+        dateInput.value = todayIso;
+        priorityInput.value = '0.95';
+        changefreqInput.value = 'weekly';
+        categoryInput.value = 'growth';
+        hotInput.value = 'true';
+
+        delete titleInput.dataset.touched;
+        delete descInput.dataset.touched;
+        delete tagInput.dataset.touched;
+        delete readTimeInput.dataset.touched;
+
+        jsonOutput.value = '';
+        sitemapOutput.value = '';
+
+        checkPath.textContent = '—';
+        checkCategory.textContent = '—';
+        checkDate.textContent = '—';
+
+        previewTag.textContent = '📈 GROWTH';
+        previewTitle.textContent = 'Generated blog title will appear here';
+        previewDesc.textContent = 'Generated description will appear here.';
+        previewDate.textContent = todayIso;
+        previewRead.textContent = '16 min';
+        previewHot.textContent = 'Hot: true';
+
+        setStatus('Reset done.', 'good');
+      }
+
+      async function copyText(id, btn){
+        const el = document.getElementById(id);
+        const text = el ? el.value : '';
+
+        if(!text.trim()){
+          setStatus('Copy karne ke liye pehle generate karo.', 'bad');
+          return;
+        }
+
+        try{
+          await navigator.clipboard.writeText(text);
+          const old = btn.textContent;
+          btn.textContent = 'Copied';
+          setTimeout(() => btn.textContent = old, 1200);
+          setStatus('Copied successfully.', 'good');
+        }catch(e){
+          el.focus();
+          el.select();
+          setStatus('Clipboard blocked. Text select kar diya hai, manually copy kar lo.', 'bad');
+        }
+      }
+
+      function downloadFile(filename, content, type){
+        if(!content.trim()){
+          setStatus('Download ke liye pehle generate karo.', 'bad');
+          return;
+        }
+
+        const blob = new Blob([content], {type:type});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      function saveHistory(){
+        generate();
+
+        const data = getData();
+        if(!data.path || !jsonOutput.value.trim()) return;
+
+        const item = {
+          path:data.path,
+          title:data.title,
+          json:jsonOutput.value,
+          xml:sitemapOutput.value,
+          savedAt:new Date().toISOString()
+        };
+
+        const history = JSON.parse(localStorage.getItem('captionStudioGeneratorHistory') || '[]');
+        const filtered = history.filter(h => h.path !== item.path);
+        filtered.unshift(item);
+        localStorage.setItem('captionStudioGeneratorHistory', JSON.stringify(filtered.slice(0,8)));
+
+        renderHistory();
+        setStatus('Saved to history.', 'good');
+      }
+
+      function renderHistory(){
+        const history = JSON.parse(localStorage.getItem('captionStudioGeneratorHistory') || '[]');
+
+        if(!history.length){
+          historyList.innerHTML = '<div class="history-item"><span>No saved items yet.</span></div>';
+          return;
+        }
+
+        historyList.innerHTML = history.map((item, index) => {
+          return '<div class="history-item">' +
+            '<span title="' + item.path.replace(/"/g,'&quot;') + '">' + item.title + '<br><small>' + item.path + '</small></span>' +
+            '<button type="button" data-load-history="' + index + '">Load</button>' +
+          '</div>';
+        }).join('');
+
+        historyList.querySelectorAll('[data-load-history]').forEach(btn => {
+          btn.addEventListener('click', function(){
+            const idx = Number(btn.getAttribute('data-load-history'));
+            const item = history[idx];
+            if(!item) return;
+
+            blogLink.value = item.path;
+            titleInput.value = item.title;
+            jsonOutput.value = item.json;
+            sitemapOutput.value = item.xml;
+
+            delete titleInput.dataset.touched;
+            delete descInput.dataset.touched;
+            delete tagInput.dataset.touched;
+            delete readTimeInput.dataset.touched;
+
+            generate();
+          });
+        });
+      }
+
+      blogLink.addEventListener('input', function(){
+        autofillFromLink();
+        generate();
+      });
+
+      [titleInput, descInput, tagInput, readTimeInput].forEach(el => {
+        el.addEventListener('input', function(){
+          el.dataset.touched = 'true';
+          generate();
+        });
+      });
+
+      [dateInput, priorityInput, categoryInput, changefreqInput, hotInput].forEach(el => {
+        el.addEventListener('input', generate);
+        el.addEventListener('change', generate);
+      });
+
+      generateBtn.addEventListener('click', generate);
+      resetBtn.addEventListener('click', resetTool);
+      saveBtn.addEventListener('click', saveHistory);
+
+      document.querySelectorAll('[data-copy-target]').forEach(btn => {
+        btn.addEventListener('click', function(){
+          copyText(btn.getAttribute('data-copy-target'), btn);
+        });
+      });
+
+      downloadJsonBtn.addEventListener('click', function(){
+        const path = cleanPath(blogLink.value);
+        const slug = slugFromPath(path || 'blog-card');
+        downloadFile(slug + '.json', jsonOutput.value, 'application/json');
+      });
+
+      downloadXmlBtn.addEventListener('click', function(){
+        const path = cleanPath(blogLink.value);
+        const slug = slugFromPath(path || 'sitemap-entry');
+        downloadFile(slug + '-sitemap.xml', sitemapOutput.value, 'application/xml');
+      });
+
+      renderHistory();
+
+      blogLink.value = 'blog/social-media-content-strategy-small-business-2026.html';
+      generate();
+    })();
+  </script>
+</body>
+  </html>
