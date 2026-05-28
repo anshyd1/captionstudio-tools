@@ -3,273 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Caption Generator 2026 - No API, 100+ Captions | CaptionStudio</title>
-<meta name="description" content="Free Instagram caption generator - 100+ captions, 10 categories. No API, no signup. 1 click generate, copy aur use!">
+<title>Free Instagram Caption Generator 2026 | CaptionStudio</title>
+<meta name="description" content="150+ Instagram captions across 10 categories. 1 click generate, copy aur use karo. Bilkul free!">
 <meta name="author" content="Ansh Yadav">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://captionstudio.in/tools/caption-generator.html">
 <link rel="icon" type="image/png" href="/favicon.png">
-
 <meta property="og:type" content="website">
-<meta property="og:title" content="Free Caption Generator 2026 - CaptionStudio">
-<meta property="og:description" content="100+ Instagram captions in 1 click. Free, no API, no signup.">
+<meta property="og:title" content="Free Instagram Caption Generator | CaptionStudio">
+<meta property="og:description" content="150+ Instagram captions in 1 click. Free!">
 <meta property="og:url" content="https://captionstudio.in/tools/caption-generator.html">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"CaptionStudio Caption Generator","operatingSystem":"Web","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"author":{"@type":"Person","name":"Ansh Yadav"}}
 </script>
-
 <style>
-:root{
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #eef2ff;
-  --accent: #f59e0b;
-  --green: #10b981;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --bg: #f9fafb;
-  --card: #ffffff;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family: 'Inter', -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  font-size: 16px;
-  min-height: 100vh;
-}
-
-/* Header */
-header{
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-  padding: 14px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#ff4757;--primary-dark:#e63946;--accent:#ffa502;--green:#10b981;--text:#1f2937;--muted:#6b7280;--border:#ffebeb;--bg:#fff5f5}
+body{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#fff 0%,#fff5f5 100%);color:var(--text);line-height:1.6;min-height:100vh;font-size:16px}
+header{background:#fff;border-bottom:1px solid var(--border);padding:14px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{width:30px;height:30px;border-radius:6px}
-.brand-name{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.2rem;color:var(--primary-dark)}
-.brand-tag{font-size:.7rem;color:var(--muted);font-weight:500;display:block;margin-top:-2px}
-.header-link{font-size:.85rem;color:var(--primary-dark);text-decoration:none;font-weight:600}
-
-/* Container */
-.wrap{max-width: 700px;margin: 30px auto;padding: 0 16px}
-
-/* Hero */
-.hero{
-  text-align: center;
-  margin-bottom: 28px;
-}
-.hero h1{
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  color: var(--text);
-  margin-bottom: 8px;
-  font-weight: 700;
-}
-.hero p{
-  color: var(--muted);
-  font-size: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* Generator Card */
-.card{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-}
-
-/* Category Selector */
-.label{
-  display: block;
-  font-size: .85rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 10px;
-}
-.cats{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 8px;
-  margin-bottom: 20px;
-}
-.cat-btn{
-  background: #fff;
-  border: 1.5px solid var(--border);
-  color: var(--text);
-  padding: 12px 8px;
-  border-radius: 10px;
-  font-size: .85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  font-family: inherit;
-  text-align: center;
-}
-.cat-btn:hover{
-  border-color: var(--primary);
-  background: var(--primary-light);
-  color: var(--primary-dark);
-}
-.cat-btn.active{
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
-}
-
-/* Generate Button */
-.gen-btn{
-  width: 100%;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 14px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  font-family: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: background 0.15s;
-}
-.gen-btn:hover{background: var(--primary-dark)}
-.gen-btn:active{transform: scale(0.98)}
-
-/* Result */
-.result{
-  background: var(--card);
-  border: 2px solid var(--primary);
-  border-radius: 16px;
-  padding: 22px;
-  margin-bottom: 20px;
-  min-height: 100px;
-}
-.result-label{
-  font-size: .72rem;
-  color: var(--primary-dark);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
-}
-.result-text{
-  font-size: 1.15rem;
-  line-height: 1.6;
-  color: var(--text);
-  margin-bottom: 14px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  font-weight: 500;
-}
-.tags-box{
-  background: var(--primary-light);
-  padding: 12px 14px;
-  border-radius: 10px;
-  font-size: .9rem;
-  color: var(--primary-dark);
-  font-weight: 600;
-  margin-bottom: 14px;
-  line-height: 1.5;
-}
-.actions{
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.btn{
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: .9rem;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: inherit;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.15s;
-}
-.btn:hover{transform: translateY(-1px)}
-.btn-copy{background: var(--green)}
-.btn-shuffle{background: var(--accent)}
-.btn-wa{background: #25D366}
-.btn-tags{background: var(--primary-dark)}
-
-/* Empty state */
-.empty{
-  text-align: center;
-  color: var(--muted);
-  font-size: .95rem;
-  padding: 30px 10px;
-}
-
-/* Toast */
-.toast{
-  position: fixed;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%) translateY(150px);
-  background: var(--green);
-  color: #fff;
-  padding: 12px 22px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: .9rem;
-  box-shadow: 0 8px 20px rgba(16,185,129,0.3);
-  transition: transform 0.3s ease;
-  z-index: 999;
-}
-.toast.show{transform: translateX(-50%) translateY(0)}
-
-/* Info */
-.info{
-  font-size: .82rem;
-  color: var(--muted);
-  text-align: center;
-  margin-top: 16px;
-  line-height: 1.5;
-}
-.info strong{color: var(--text)}
-
-footer{
-  text-align: center;
-  padding: 30px 16px;
-  color: var(--muted);
-  font-size: .82rem;
-  border-top: 1px solid var(--border);
-  margin-top: 40px;
-}
-footer a{color: var(--primary-dark);text-decoration: none;font-weight: 600;margin: 0 8px}
-
-@media (max-width: 500px){
-  .hero h1{font-size: 1.5rem}
-  .hero p{font-size: .9rem}
-  .card{padding: 18px}
-  .cats{grid-template-columns: repeat(2, 1fr)}
-}
+.brand img{width:32px;height:32px;border-radius:8px}
+.brand-name{font-weight:800;font-size:18px;color:var(--primary)}
+.brand-tag{font-size:11px;color:var(--muted);display:block;margin-top:-2px;font-weight:500}
+.header-link{color:var(--primary);text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;border-radius:8px;background:var(--bg)}
+.wrap{max-width:680px;margin:30px auto;padding:0 16px}
+.hero{text-align:center;margin-bottom:30px}
+.hero h1{font-size:32px;font-weight:800;color:var(--text);margin-bottom:10px;letter-spacing:-0.5px}
+.hero h1 span{color:var(--primary)}
+.hero p{color:var(--muted);font-size:15px}
+.stats{display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+.stat{background:#fff;padding:10px 18px;border-radius:50px;font-size:13px;font-weight:600;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.stat strong{color:var(--primary)}
+.card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;display:block}
+.cats{display:flex;flex-wrap:wrap;gap:8px}
+.cat{background:#fff;border:1.5px solid var(--border);color:var(--text);padding:10px 16px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:.15s;font-family:inherit}
+.cat:hover{border-color:var(--primary);color:var(--primary)}
+.cat.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.gen-btn{width:100%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:none;padding:16px;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:18px;box-shadow:0 6px 20px rgba(255,71,87,.3);transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.gen-btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(255,71,87,.4)}
+.result{background:#fff;border:2px solid var(--primary);border-radius:20px;padding:24px;margin-bottom:20px;box-shadow:0 8px 25px rgba(255,71,87,.08);min-height:120px}
+.result-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.result-cat{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:5px 14px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
+.result-num{font-size:11px;color:var(--muted);font-weight:600}
+.caption-text{font-size:18px;line-height:1.6;color:var(--text);font-weight:500;padding:14px 0 16px;white-space:pre-wrap;word-wrap:break-word;border-bottom:1px dashed var(--border);min-height:80px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;padding:14px 0}
+.tag{background:var(--bg);color:var(--primary-dark);padding:5px 10px;border-radius:6px;font-size:13px;font-weight:600}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.btn{background:#f3f4f6;border:none;color:var(--text);padding:13px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;transition:.15s}
+.btn:hover{background:#e5e7eb}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark)}
+.btn.done{background:var(--green);color:#fff}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(150px);background:var(--text);color:#fff;padding:12px 24px;border-radius:50px;font-size:14px;font-weight:600;box-shadow:0 10px 25px rgba(0,0,0,.2);transition:.3s;z-index:999}
+.toast.show{transform:translateX(-50%) translateY(0)}
+footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:13px;margin-top:20px}
+footer a{color:var(--primary);text-decoration:none;font-weight:600;margin:0 8px}
+@media(max-width:480px){.hero h1{font-size:24px}.caption-text{font-size:16px}}
 </style>
 </head>
 <body>
@@ -278,8 +71,8 @@ footer a{color: var(--primary-dark);text-decoration: none;font-weight: 600;margi
   <a href="/" class="brand">
     <img src="/favicon.png" alt="CaptionStudio">
     <div>
-      <span class="brand-name">CaptionStudio</span>
-      <span class="brand-tag">Free Tools</span>
+      <div class="brand-name">CaptionStudio</div>
+      <span class="brand-tag">Free Caption Tools</span>
     </div>
   </a>
   <a href="/blog/" class="header-link">📚 Blog</a>
@@ -288,179 +81,311 @@ footer a{color: var(--primary-dark);text-decoration: none;font-weight: 600;margi
 <div class="wrap">
 
   <div class="hero">
-    <h1>🎯 Caption Generator</h1>
-    <p>1 click me Instagram caption + hashtags. Bilkul free!</p>
+    <h1>🎯 Caption <span>Generator</span></h1>
+    <p>1 click me viral Instagram captions + hashtags</p>
+    <div class="stats">
+      <div class="stat"><strong>150+</strong> Captions</div>
+      <div class="stat"><strong>10</strong> Categories</div>
+      <div class="stat"><strong>100%</strong> Free</div>
+    </div>
   </div>
 
-  <!-- Generator -->
   <div class="card">
-    <label class="label">📂 Category choose karo:</label>
+    <span class="label">📂 Choose Category</span>
     <div class="cats" id="cats">
-      <button class="cat-btn active" data-cat="all">🌐 All</button>
-      <button class="cat-btn" data-cat="cricket">🏏 Cricket</button>
-      <button class="cat-btn" data-cat="attitude">😎 Attitude</button>
-      <button class="cat-btn" data-cat="love">❤️ Love</button>
-      <button class="cat-btn" data-cat="friend">👯 Friend</button>
-      <button class="cat-btn" data-cat="birthday">🎂 Birthday</button>
-      <button class="cat-btn" data-cat="travel">✈️ Travel</button>
-      <button class="cat-btn" data-cat="food">🍕 Food</button>
-      <button class="cat-btn" data-cat="fitness">💪 Fitness</button>
-      <button class="cat-btn" data-cat="motivation">🚀 Motivation</button>
-      <button class="cat-btn" data-cat="funny">😂 Funny</button>
+      <button class="cat active" data-c="all">🌟 All</button>
+      <button class="cat" data-c="cricket">🏏 Cricket</button>
+      <button class="cat" data-c="attitude">😎 Attitude</button>
+      <button class="cat" data-c="love">❤️ Love</button>
+      <button class="cat" data-c="friend">👯 Friend</button>
+      <button class="cat" data-c="birthday">🎂 Birthday</button>
+      <button class="cat" data-c="travel">✈️ Travel</button>
+      <button class="cat" data-c="food">🍕 Food</button>
+      <button class="cat" data-c="fitness">💪 Fitness</button>
+      <button class="cat" data-c="motivation">🚀 Motivation</button>
+      <button class="cat" data-c="funny">😂 Funny</button>
     </div>
-    
-    <button class="gen-btn" id="genBtn">
-      ⚡ Generate Caption
-    </button>
+    <button class="gen-btn" id="genBtn">⚡ Generate Caption</button>
   </div>
 
-  <!-- Result -->
-  <div class="result" id="result">
-    <div class="empty">
-      👆 Upar button dabao caption pane ke liye!
+  <div class="result">
+    <div class="result-head">
+      <span class="result-cat" id="rCat">✨ Caption</span>
+      <span class="result-num" id="rNum">150+ available</span>
+    </div>
+    <div class="caption-text" id="cText">Tap button above to generate ✨</div>
+    <div class="tags" id="tList"></div>
+    <div class="actions">
+      <button class="btn btn-primary" id="copyBtn"><span>📋</span><span>Copy</span></button>
+      <button class="btn" id="shareBtn"><span>💬</span><span>Share</span></button>
     </div>
   </div>
 
-  <p class="info">
-    📝 <strong>100+ captions</strong> · 10 categories · No API · 100% free<br>
-    Database file: <code>captions-database.js</code> (easily editable)
-  </p>
+  <footer>
+    <a href="/">Home</a>·<a href="/blog/">Blog</a>·<a href="/tools/">Tools</a>
+    <p style="margin-top:12px">&copy; 2026 CaptionStudio · By Ansh Yadav ❤️</p>
+  </footer>
 
 </div>
 
-<div class="toast" id="toast">✅ Copied!</div>
-
-<footer>
-  <a href="/">Home</a> · 
-  <a href="/blog/">Blog</a> · 
-  <a href="/blog/viral-captions-for-reels-2026.html">Viral Captions</a><br>
-  <p style="margin-top:10px">&copy; 2026 CaptionStudio · By Ansh Yadav</p>
-</footer>
-
-<!-- Load Caption Database -->
-<script src="captions-database.js"></script>
+<div class="toast" id="toast">Copied!</div>
 
 <script>
-// State
-let selectedCategory = 'all';
-let currentCaption = null;
-let lastCaptionIndex = -1;
+const C=[
+["Khel bada hai, khiladi hum purane 👑","cricket","#Cricket #IPL2026 #CricketFan"],
+["Cricket = Mera pehla pyaar ❤️🏏","cricket","#Cricket #CricketLover #IPL"],
+["Score chahe jo ho, swag wahi rahega 😎","cricket","#Cricket #Attitude #Swag"],
+["Pressure hum par nahi, opponents par 😉","cricket","#Cricket #Confidence #IPL"],
+["Match jeet liya, dil khush ho gaya! 🏏🏆","cricket","#Win #Cricket #Victory"],
+["Last ball drama? Bring it on! ⚡","cricket","#Cricket #LastBall #IPL"],
+["Born to bat, made to win 🏆","cricket","#Cricketer #Batsman #Winner"],
+["Cricket India me religion hai 🙏","cricket","#Cricket #India #IPL"],
+["Trophy uthana hamari purani aadat hai 🏆","cricket","#Champions #Cricket #Trophy"],
+["Stadium ki vibe, dil ki khushi! 🏟️✨","cricket","#Stadium #IPL #Match"],
+["Maa ki chai + IPL match = Perfect ❤️","cricket","#IPL #Cricket #Family"],
+["6 chhakke aur trophy hamari 💛","cricket","#Sixes #Cricket #Trophy"],
+["Cricket > Everything 🏏","cricket","#Cricket #IPL #Fan"],
+["Aaj toh history ban gayi yaar! 🔥","cricket","#History #Cricket #IPL"],
+["Yellow jersey, golden moments ✨","cricket","#IPL #Cricket #Yellow"],
+["Hum raj karne aate hain maidan me 👑","cricket","#Cricket #Kings #IPL"],
+["Helmet on, focus mode ON 🎯","cricket","#Cricket #Focus #Sport"],
+["Powerplay = Magic time ⚡","cricket","#Cricket #Powerplay #IPL"],
+["Boundary marne ka maza alag hi hai 🔥","cricket","#Cricket #Boundary #Sixes"],
+["Wo last over wala tension 😱","cricket","#Cricket #LastOver #Tension"],
 
-// Elements
-const catsContainer = document.getElementById('cats');
-const genBtn = document.getElementById('genBtn');
-const resultBox = document.getElementById('result');
-const toast = document.getElementById('toast');
+["I don't follow trends, I set them 🔥","attitude","#Attitude #Boss #SelfMade"],
+["Born to stand out 💎","attitude","#Attitude #Unique #StandOut"],
+["Self-made, self-paid 💸","attitude","#SelfMade #Hustle #BossLife"],
+["King of my own world 👑","attitude","#King #Attitude #Boss"],
+["Mind your business, mine is doing great 📈","attitude","#Attitude #Success #Boss"],
+["Watch me as I rise 📈","attitude","#Hustle #Success #Rising"],
+["Quiet ambition, loud results 🎯","attitude","#Ambition #Success #Results"],
+["Not your average, not your type 😎","attitude","#Attitude #Unique #Cool"],
+["Built different 💪","attitude","#BuiltDifferent #Strong #Unique"],
+["Born winner, forever learner 🏆","attitude","#Winner #Learner #Hustle"],
+["Vibes only, drama never 💯","attitude","#GoodVibes #Positive #Mindset"],
+["Khud ki kahani, khud ka hero 🦸","attitude","#SelfMade #Hero #Hindi"],
+["Mehnat karo, kismat banao 💪","attitude","#Hindi #Hustle #SelfMade"],
+["Hum apni dhun me chalte hain 🎵","attitude","#Hindi #Attitude #Cool"],
+["Meri jindagi, mere niyam 👑","attitude","#Hindi #Attitude #Boss"],
+["I'm not perfect, I'm me 💯","attitude","#Real #Authentic #SelfLove"],
+["Class apart, miles ahead 🚀","attitude","#Class #Attitude #Boss"],
+["No competition, only growth 📈","attitude","#Growth #SelfLove #Hustle"],
+["My silence is my power 🤫","attitude","#Silence #Power #Wise"],
+["Royalty runs in my blood 👑","attitude","#Royal #Attitude #Boss"],
 
-// Category click handler
-catsContainer.addEventListener('click', function(e) {
-  if (e.target.classList.contains('cat-btn')) {
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-    e.target.classList.add('active');
-    selectedCategory = e.target.dataset.cat;
-  }
+["Tu mera sukoon 💕","love","#Love #Couple #Soulmate"],
+["Found my forever in you 💍","love","#Love #Forever #Couple"],
+["You + Me = Always 💖","love","#Love #Couple #Together"],
+["Tere bina dil khali ❤️","love","#Love #Hindi #Heart"],
+["Love is in the air ❤️","love","#Love #Romance #Couple"],
+["Loyal to one, forever 💯","love","#Love #Loyal #TrueLove"],
+["My favorite person ❤️","love","#Love #Favorite #Couple"],
+["Pyaar tujhse, dua tere liye 🤲","love","#Love #Hindi #Pyaar"],
+["Dil ki dhadkan, mera pyaar 💖","love","#Love #Hindi #Heart"],
+["Heart belongs to you only 💓","love","#Love #Heart #Forever"],
+["Dil se tera, hamesha ke liye ❤️","love","#Love #Hindi #Pyaar"],
+["Best feeling ever 💕","love","#Love #Happy #Couple"],
+["You complete me 💕","love","#Love #Complete #Couple"],
+["My soulmate, my forever 💍","love","#Love #SoulMate #Forever"],
+["Tum aaye, zindagi sajj gayi 🌹","love","#Love #Hindi #Romance"],
+["Together is my favorite place 🏡","love","#Love #Together #Couple"],
+["You're my sunshine ☀️❤️","love","#Love #Sunshine #Couple"],
+["Endless love, timeless heart ⏳❤️","love","#Love #Endless #Forever"],
+["Tujhse zyada koi pyaara nahi 💗","love","#Love #Hindi #Sweet"],
+["Real love stories never end 📖❤️","love","#Love #Story #Forever"],
+
+["Best friends, best memories 👯","friend","#Friends #BFF #Squad"],
+["Dosti hai zindagi 🫶","friend","#Dosti #Friends #Hindi"],
+["Forever squad, no doubt 💕","friend","#Squad #BFF #Forever"],
+["Friends today, family forever 👨‍👩‍👧","friend","#Friends #Family #BFF"],
+["My therapist? My friends 😂","friend","#Friends #Funny #BFF"],
+["Squad goals 💯","friend","#Squad #Goals #Friends"],
+["BFF for life 👯‍♀️","friend","#BFF #Friends #Forever"],
+["Hum saath saath hain 🤝","friend","#Friends #Hindi #Squad"],
+["Dosti me kabhi kami nahi 🥰","friend","#Dosti #Hindi #BFF"],
+["We are not weird, we are limited edition 💎","friend","#Friends #Unique #Squad"],
+["Friends like family ❤️","friend","#Friends #Family #Love"],
+["Crazy friends, crazier memories 😜","friend","#Friends #Crazy #Memories"],
+["My ride or die 🤝","friend","#Friends #RideOrDie #BFF"],
+["Tag your bestie 👯","friend","#BFF #Tag #Friends"],
+["Real friends, real memories 📸","friend","#Friends #Real #Memories"],
+
+["Happy birthday to me! 🎂🎉","birthday","#HappyBirthday #Bday #BirthdayGirl"],
+["Another year, another adventure ✨","birthday","#Birthday #Bday #NewYear"],
+["Birthday vibes only 🎈","birthday","#Birthday #BdayVibes #Celebration"],
+["Born today, slay every day 👑","birthday","#Birthday #Slay #BdayQueen"],
+["Year older, year better 🌟","birthday","#Birthday #Growth #Bday"],
+["Birthday girl alert! 🎉💕","birthday","#BirthdayGirl #Bday #Princess"],
+["Janam din mubarak ho mujhe! 🎂","birthday","#Birthday #Hindi #Bday"],
+["Born blessed, living blessed 🌟","birthday","#Birthday #Blessed #Bday"],
+["Cake, candles, celebrations 🎂🕯️","birthday","#Birthday #Cake #Party"],
+["Birthday mode: ON 🎉","birthday","#Birthday #Mode #Celebration"],
+["Aaj toh sirf mera din hai 🎂","birthday","#Birthday #Hindi #MyDay"],
+["One year wiser ✨","birthday","#Birthday #Wiser #Bday"],
+["Cake first, talk later 🎂","birthday","#Birthday #Cake #Funny"],
+["Birthday glow on 💫","birthday","#Birthday #Glow #Bday"],
+["Cheers to me 🥂","birthday","#Birthday #Cheers #Bday"],
+
+["Wanderlust mode: ON ✈️","travel","#Travel #Wanderlust #Explore"],
+["Travel = Therapy 🌍","travel","#Travel #Therapy #Adventure"],
+["Lost in beautiful places ✨","travel","#Travel #Beautiful #Wanderlust"],
+["Adventures await! 🗺️","travel","#Adventure #Travel #Explore"],
+["Collecting moments, not things 📸","travel","#Travel #Moments #Memories"],
+["Sunset chaser 🌅","travel","#Sunset #Travel #Nature"],
+["Mountain soul, ocean heart 🏔️🌊","travel","#Mountains #Ocean #Travel"],
+["World is my classroom 🌍","travel","#Travel #World #Explore"],
+["Naye safar, nayi kahani ✈️","travel","#Travel #Hindi #Safar"],
+["Beach therapy in progress 🏖️","travel","#Beach #Travel #Therapy"],
+["Hills are calling 🏔️","travel","#Mountains #Hills #Travel"],
+["Travel diaries open 📖","travel","#Travel #Diary #Memories"],
+["Plane tickets > Designer bags ✈️","travel","#Travel #Priority #Plane"],
+["Vacation mode: Activated 🌴","travel","#Vacation #Travel #Mode"],
+["Pahad meri jaan hain 🏔️","travel","#Mountains #Hindi #Love"],
+
+["I eat cake because someone has to 🎂","food","#Food #Cake #Foodie"],
+["Diet starts tomorrow 🍕","food","#Food #Pizza #Foodie"],
+["Foodie heart, happy soul 🍕❤️","food","#Foodie #FoodLover #Food"],
+["Good food, good mood 😊","food","#Food #GoodMood #Foodie"],
+["Food is my love language 💕🍔","food","#Food #FoodLove #Foodie"],
+["Pizza is always a good idea 🍕","food","#Pizza #Food #Foodie"],
+["Khaana = Sukoon 🍛","food","#Food #Hindi #Khana"],
+["Maa ke haath ka khana > Sab kuch ❤️","food","#Hindi #Food #Family"],
+["Carbs are my love language 🍝","food","#Food #Carbs #Foodie"],
+["Chai pe charcha, dil ko sukoon ☕","food","#Chai #Hindi #Tea"],
+["Biryani > Boyfriend 🍚","food","#Biryani #Food #Funny"],
+["Foodaholic, no rehab 🍕","food","#Food #Foodaholic #Funny"],
+["Spicy food = Happy mood 🌶️","food","#Food #Spicy #Happy"],
+["Street food > 5-star restaurants 🍢","food","#StreetFood #Food #Real"],
+["Pani puri pe pyaar tha 💕","food","#PaniPuri #Hindi #Love"],
+
+["Sweat now, shine later 💪","fitness","#Fitness #Gym #Workout"],
+["No pain, no gain 💯","fitness","#NoPainNoGain #Gym #Fitness"],
+["Stronger every day 💪","fitness","#Fitness #Strong #Gym"],
+["Beast mode: ON 🔥","fitness","#BeastMode #Fitness #Gym"],
+["Discipline > Motivation 🎯","fitness","#Discipline #Fitness #Gym"],
+["Train hard, dream big 💭","fitness","#TrainHard #Fitness #Dreams"],
+["Gym is my therapy 🧘","fitness","#Gym #Therapy #Fitness"],
+["Mehnat karo, body banao 💪","fitness","#Fitness #Hindi #Gym"],
+["Weights heavier than my problems 🏋️","fitness","#Gym #Strong #Workout"],
+["Sweat is fat crying 💦","fitness","#Fitness #Sweat #Workout"],
+["Fit life, best life 💪","fitness","#FitLife #Fitness #Healthy"],
+["Push yourself, no one else will 💪","fitness","#Push #Self #Gym"],
+["Don't stop until you're proud 🏆","fitness","#Pride #Goal #Fitness"],
+["Healthy body, happy mind 🧠💪","fitness","#Healthy #Happy #Fitness"],
+["Stronger than excuses 💯","fitness","#Strong #NoExcuses #Gym"],
+
+["Dream big, work harder 🚀","motivation","#Motivation #DreamBig #Hustle"],
+["Believe you can 💪","motivation","#Motivation #Believe #Inspiration"],
+["Hustle in silence 🤫","motivation","#Hustle #Quiet #Success"],
+["Small steps, big results 📈","motivation","#Motivation #Growth #Success"],
+["Stop wishing, start doing 💪","motivation","#Motivation #Action #Hustle"],
+["Trust the process ⏳","motivation","#Trust #Process #Motivation"],
+["Apna time aayega 🕒","motivation","#Hindi #Motivation #Patience"],
+["Pressure makes diamonds 💎","motivation","#Diamond #Motivation #Strong"],
+["Mehnat ka phal meetha hota hai 🌱","motivation","#Hindi #Mehnat #Motivation"],
+["Stay consistent, stay winning 🏆","motivation","#Consistency #Winning #Hustle"],
+["Failure is just a lesson 📚","motivation","#Failure #Lesson #Growth"],
+["Take risk, win big 🎲","motivation","#Risk #Win #Motivation"],
+["Success is built daily 🏗️","motivation","#Success #Daily #Build"],
+["Khud par yakeen rakho 💪","motivation","#Hindi #Believe #Self"],
+["Greatness takes time ⏳","motivation","#Greatness #Time #Patience"],
+
+["I'm not lazy, energy saving mode 🔋","funny","#Funny #Lazy #Mood"],
+["Sarcasm is my superpower 🦸","funny","#Sarcasm #Funny #Humor"],
+["99 problems, bio is one 😅","funny","#Funny #Bio #Mood"],
+["Trust me, I'm an engineer 👨‍💻","funny","#Engineer #Funny #Tech"],
+["Adult-ing badly since 2020 🤡","funny","#Adult #Funny #Mood"],
+["Brain: 50% memes, 50% anxiety 😂","funny","#Memes #Funny #Mood"],
+["Loading... 99% 🔄","funny","#Loading #Funny #Mood"],
+["Born to sleep, forced to work 😴","funny","#Sleep #Work #Funny"],
+["Allergic to Mondays ☀️","funny","#Monday #Funny #Mood"],
+["I run on caffeine and chaos ☕","funny","#Coffee #Funny #Mood"],
+["My bed is my best friend 🛏️","funny","#Bed #Sleep #Funny"],
+["Procrastinator at heart 😴","funny","#Procrastinate #Funny #Mood"],
+["Adult money, kid heart 💸👶","funny","#Adult #Kid #Funny"],
+["Talented in doing nothing 🛋️","funny","#Lazy #Funny #Talent"],
+["Wifi is my love language 📶","funny","#Wifi #Funny #Love"]
+];
+
+const $=(id)=>document.getElementById(id);
+let sel='all',cur=null,lastI=-1;
+
+$('cats').addEventListener('click',(e)=>{
+  const b=e.target.closest('.cat');
+  if(!b)return;
+  document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  sel=b.dataset.c;
+  gen();
 });
 
-// Generate caption
-genBtn.addEventListener('click', generateCaption);
+$('genBtn').addEventListener('click',gen);
 
-function generateCaption() {
-  // Safety check
-  if (typeof CAPTIONS_DATABASE === 'undefined') {
-    resultBox.innerHTML = '<div class="empty" style="color:#dc2626"><strong>⚠️ Database load nahi hua!</strong><br>captions-database.js file check karo.</div>';
+function gen(){
+  const pool=sel==='all'?C:C.filter(x=>x[1]===sel);
+  if(pool.length===0){
+    $('cText').textContent='Coming soon!';
+    $('tList').innerHTML='';
     return;
   }
-  
-  // Filter by category
-  let pool;
-  if (selectedCategory === 'all') {
-    pool = CAPTIONS_DATABASE;
-  } else {
-    pool = CAPTIONS_DATABASE.filter(c => c.category === selectedCategory);
-  }
-  
-  if (pool.length === 0) {
-    resultBox.innerHTML = '<div class="empty">Is category me captions nahi mili!</div>';
-    return;
-  }
-  
-  // Pick random (avoid same as last)
-  let randomIndex;
-  do {
-    randomIndex = Math.floor(Math.random() * pool.length);
-  } while (pool.length > 1 && randomIndex === lastCaptionIndex);
-  lastCaptionIndex = randomIndex;
-  
-  currentCaption = pool[randomIndex];
-  
-  // Render
-  resultBox.innerHTML = `
-    <div class="result-label">✨ Your Caption</div>
-    <div class="result-text">${escapeHTML(currentCaption.text)}</div>
-    <div class="tags-box">${escapeHTML(currentCaption.tags)}</div>
-    <div class="actions">
-      <button class="btn btn-copy" onclick="copyCaption()">📋 Copy Caption</button>
-      <button class="btn btn-tags" onclick="copyTags()">🏷️ Copy Tags</button>
-      <button class="btn btn-shuffle" onclick="generateCaption()">🔄 Shuffle</button>
-      <button class="btn btn-wa" onclick="shareWA()">💬 Share</button>
-    </div>
-  `;
+  let i;
+  do{i=Math.floor(Math.random()*pool.length);}while(pool.length>1&&i===lastI);
+  lastI=i;
+  cur=pool[i];
+  $('cText').textContent=cur[0];
+  $('rCat').textContent='✨ '+cur[1];
+  $('rNum').textContent=pool.length+' available';
+  const tags=cur[2].split(' ').filter(t=>t.startsWith('#'));
+  $('tList').innerHTML=tags.map(t=>'<span class="tag">'+t+'</span>').join('');
+  const cb=$('copyBtn');
+  cb.classList.remove('done');
+  cb.querySelector('span:last-child').textContent='Copy';
 }
 
-function escapeHTML(str) {
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-function copyCaption() {
-  if (!currentCaption) return;
-  copyToClipboard(currentCaption.text, '✅ Caption copied!');
-}
-
-function copyTags() {
-  if (!currentCaption) return;
-  copyToClipboard(currentCaption.tags, '🏷️ Hashtags copied!');
-}
-
-function copyToClipboard(text, msg) {
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(() => showToast(msg)).catch(() => fallbackCopy(text, msg));
-  } else {
-    fallbackCopy(text, msg);
-  }
-}
-
-function fallbackCopy(text, msg) {
-  const ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.left = '-9999px';
-  document.body.appendChild(ta);
-  ta.select();
-  try {
-    document.execCommand('copy');
-    showToast(msg);
-  } catch (e) {
-    showToast('⚠️ Copy fail');
-  }
-  document.body.removeChild(ta);
-}
-
-function shareWA() {
-  if (!currentCaption) return;
-  const text = currentCaption.text + '\n\n' + currentCaption.tags + '\n\nMore: https://captionstudio.in';
-  window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
-}
-
-function showToast(msg) {
-  toast.textContent = msg;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2000);
-}
-
-// Auto-generate first caption on load
-window.addEventListener('load', function() {
-  setTimeout(generateCaption, 300);
+$('copyBtn').addEventListener('click',()=>{
+  if(!cur)return;
+  const t=cur[0]+'\n\n'+cur[2];
+  copy(t,()=>{
+    const b=$('copyBtn');
+    b.classList.add('done');
+    b.querySelector('span:last-child').textContent='Copied!';
+    toast('Caption + hashtags copied!');
+    setTimeout(()=>{
+      b.classList.remove('done');
+      b.querySelector('span:last-child').textContent='Copy';
+    },2000);
+  });
 });
+
+$('shareBtn').addEventListener('click',()=>{
+  if(!cur)return;
+  const t=cur[0]+'\n\n'+cur[2]+'\n\nMore: https://captionstudio.in';
+  if(navigator.share){navigator.share({text:t}).catch(()=>{});}
+  else{window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');}
+});
+
+function copy(t,cb){
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(t).then(cb).catch(fb);
+  }else{fb();}
+  function fb(){
+    const ta=document.createElement('textarea');
+    ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';
+    document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');cb();}catch(e){}
+    document.body.removeChild(ta);
+  }
+}
+
+function toast(m){
+  const t=$('toast');
+  t.textContent=m;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2000);
+}
+
+window.addEventListener('load',()=>setTimeout(gen,200));
 </script>
 
 </body>
