@@ -76,4 +76,59 @@ const CAPTIONS = [
 { text: "Year older, year better 🌟", category: "birthday", tags: "#Birthday #Growth #Bday" },
 { text: "Birthday girl alert! 🎉💕", category: "birthday", tags: "#BirthdayGirl #Bday #Princess" },
 { text: "Janam din mubarak ho mujhe! 🎂", category: "birthday", tags: "#Birthday #Hindi #Bday" },
-{ text: "Born blessed, living blessed 
+{ text: "Born blessed, living blessed 🌟", category: "birthday", tags: "#Birthday #Blessed #Bday" },
+
+// TRAVEL
+{ text: "Wanderlust mode: ON ✈️", category: "travel", tags: "#Travel #Wanderlust #Explore" },
+{ text: "Travel = Therapy 🌍", category: "travel", tags: "#Travel #Therapy #Adventure" },
+{ text: "Lost in beautiful places ✨", category: "travel", tags: "#Travel #Beautiful #Wanderlust" },
+{ text: "Adventures await! 🗺️", category: "travel", tags: "#Adventure #Travel #Explore" },
+{ text: "Collecting moments, not things 📸", category: "travel", tags: "#Travel #Moments #Memories" },
+{ text: "Sunset chaser 🌅", category: "travel", tags: "#Sunset #Travel #Nature" },
+{ text: "Mountain soul, ocean heart 🏔️🌊", category: "travel", tags: "#Mountains #Ocean #Travel" },
+{ text: "World is my classroom 🌍", category: "travel", tags: "#Travel #World #Explore" },
+{ text: "Naye safar, nayi kahani ✈️", category: "travel", tags: "#Travel #Hindi #Safar" },
+
+// FOOD
+{ text: "I eat cake because someone has to 🎂", category: "food", tags: "#Food #Cake #Foodie" },
+{ text: "Diet starts tomorrow 🍕", category: "food", tags: "#Food #Pizza #Foodie" },
+{ text: "Foodie heart, happy soul 🍕❤️", category: "food", tags: "#Foodie #FoodLover #Food" },
+{ text: "Good food, good mood 😊", category: "food", tags: "#Food #GoodMood #Foodie" },
+{ text: "Food is my love language 💕🍔", category: "food", tags: "#Food #FoodLove #Foodie" },
+{ text: "Pizza is always a good idea 🍕", category: "food", tags: "#Pizza #Food #Foodie" },
+{ text: "Khaana = Sukoon 🍛", category: "food", tags: "#Food #Hindi #Khana" },
+{ text: "Maa ke haath ka khana > Sab kuch ❤️", category: "food", tags: "#Hindi #Food #Family" },
+
+// FITNESS
+{ text: "Sweat now, shine later 💪", category: "fitness", tags: "#Fitness #Gym #Workout" },
+{ text: "No pain, no gain 💯", category: "fitness", tags: "#NoPainNoGain #Gym #Fitness" },
+{ text: "Stronger every day 💪", category: "fitness", tags: "#Fitness #Strong #Gym" },
+{ text: "Beast mode: ON 🔥", category: "fitness", tags: "#BeastMode #Fitness #Gym" },
+{ text: "Discipline > Motivation 🎯", category: "fitness", tags: "#Discipline #Fitness #Gym" },
+{ text: "Train hard, dream big 💭", category: "fitness", tags: "#TrainHard #Fitness #Dreams" },
+{ text: "Gym is my therapy 🧘", category: "fitness", tags: "#Gym #Therapy #Fitness" },
+{ text: "Mehnat karo, body banao 💪", category: "fitness", tags: "#Fitness #Hindi #Gym" },
+
+// MOTIVATION
+{ text: "Dream big, work harder 🚀", category: "motivation", tags: "#Motivation #DreamBig #Hustle" },
+{ text: "Believe you can 💪", category: "motivation", tags: "#Motivation #Believe #Inspiration" },
+{ text: "Hustle in silence 🤫", category: "motivation", tags: "#Hustle #Quiet #Success" },
+{ text: "Small steps, big results 📈", category: "motivation", tags: "#Motivation #Growth #Success" },
+{ text: "Stop wishing, start doing 💪", category: "motivation", tags: "#Motivation #Action #Hustle" },
+{ text: "Trust the process ⏳", category: "motivation", tags: "#Trust #Process #Motivation" },
+{ text: "Apna time aayega 🕒", category: "motivation", tags: "#Hindi #Motivation #Patience" },
+{ text: "Pressure makes diamonds 💎", category: "motivation", tags: "#Diamond #Motivation #Strong" },
+{ text: "Mehnat ka phal meetha hota hai 🌱", category: "motivation", tags: "#Hindi #Mehnat #Motivation" },
+
+// FUNNY
+{ text: "I'm not lazy, energy saving mode 🔋", category: "funny", tags: "#Funny #Lazy #Mood" },
+{ text: "Sarcasm is my superpower 🦸", category: "funny", tags: "#Sarcasm #Funny #Humor" },
+{ text: "99 problems, bio is one 😅", category: "funny", tags: "#Funny #Bio #Mood" },
+{ text: "Trust me, I'm an engineer 👨‍💻", category: "funny", tags: "#Engineer #Funny #Tech" },
+{ text: "Adult-ing badly since 2020 🤡", category: "funny", tags: "#Adult #Funny #Mood" },
+{ text: "Brain: 50% memes, 50% anxiety 😂", category: "funny", tags: "#Memes #Funny #Mood" },
+{ text: "Loading... 99% 🔄", category: "funny", tags: "#Loading #Funny #Mood" },
+{ text: "Born to sleep, forced to work 😴", category: "funny", tags: "#Sleep #Work #Funny" },
+{ text: "Allergic to Mondays ☀️", category: "funny", tags: "#Monday #Funny #Mood" }
+
+];
