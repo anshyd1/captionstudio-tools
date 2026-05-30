@@ -1,11 +1,9 @@
 User-agent: *
 Allow: /
 
-Block only sensitive / useless paths
+# Block only sensitive / useless paths
 
 Disallow: /admin/
 Disallow: /private/
-
-Sitemap
 
 Sitemap: https://captionstudio.in/sitemap.xml
