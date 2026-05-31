@@ -78,7 +78,22 @@ body{
 .sh-x{background:#1DA1F215;color:#1DA1F2;border-color:#1DA1F230}
 .sh-f{background:#1877F215;color:#1877F2;border-color:#1877F230}
 .sh-t{background:#0088cc15;color:#0088cc;border-color:#0088cc30}
-.feat{width:100%;border-radius:14px;margin-bottom:24px;display:block;box-shadow:0 4px 20px rgba(0,0,0,0.06);aspect-ratio:1200/630;object-fit:cover}
+.hero-wrap{position:relative;width:100%;border-radius:14px;overflow:hidden;margin-bottom:24px;box-shadow:0 8px 32px rgba(0,0,0,0.15);aspect-ratio:1200/630;background:#1a1a1a}
+.hero-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-wrap .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.55) 40%,rgba(0,0,0,0.15) 70%,transparent 100%);display:flex;flex-direction:column;justify-content:center;padding:6% 7%}
+.hero-wrap .hero-tag{display:inline-block;align-self:flex-start;background:#e84c1d;color:#fff;font-size:0.7rem;font-weight:800;letter-spacing:1.5px;padding:5px 12px;border-radius:4px;margin-bottom:14px;text-transform:uppercase}
+.hero-wrap .hero-title{color:#fff;font-size:2.6rem;font-weight:900;line-height:1.05;margin:0 0 8px;text-shadow:0 4px 20px rgba(0,0,0,0.5);letter-spacing:-1px;max-width:60%}
+.hero-wrap .hero-title em{color:#ff8a5c;font-style:normal}
+.hero-wrap .hero-sub{color:#e0e0e0;font-size:0.95rem;font-weight:500;text-shadow:0 2px 10px rgba(0,0,0,0.6);max-width:55%}
+.hero-wrap .hero-badge{position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);color:#fff;font-size:0.65rem;font-weight:700;padding:6px 12px;border-radius:20px;letter-spacing:0.5px;border:1px solid rgba(255,255,255,0.15)}
+.hero-wrap .hero-badge span{color:#ff8a5c}
+@media(max-width:600px){
+  .hero-wrap .hero-overlay{padding:5% 6%;background:linear-gradient(180deg,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.85) 100%);justify-content:flex-end}
+  .hero-wrap .hero-title{font-size:1.4rem;max-width:100%}
+  .hero-wrap .hero-sub{font-size:0.78rem;max-width:100%}
+  .hero-wrap .hero-tag{font-size:0.6rem;padding:4px 9px;margin-bottom:8px}
+  .hero-wrap .hero-badge{font-size:0.58rem;padding:4px 9px}
+}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0 28px}
 .stats .st{background:#fff;border:1px solid #eee;border-radius:10px;padding:14px 8px;text-align:center}
@@ -229,7 +244,15 @@ body{
     </div>
   </div>
 
-  <img class="feat" src="../img/attitude-captions-2026-hero.jpg" alt="200+ Attitude Captions 2026 for Instagram — Boys Girls Hindi Savage Sigma" loading="eager" width="1200" height="630">
+  <div class="hero-wrap">
+    <img src="../img/attitude-captions-2026-hero.jpg" alt="200+ Attitude Captions 2026 for Instagram — Boys Girls Hindi Savage Sigma" loading="eager" width="1200" height="630">
+    <div class="hero-badge">🔥 <span>HOT</span> · 2026 Edition</div>
+    <div class="hero-overlay">
+      <span class="hero-tag">😎 Instagram Captions</span>
+      <h2 class="hero-title">220+ Attitude<br>Captions <em>2026</em> 🔥</h2>
+      <p class="hero-sub">Boys · Girls · Hindi · Hinglish · Savage · Sigma · King — 1-Tap Copy</p>
+    </div>
+  </div>
 
   <div class="stats">
     <div class="st"><div class="n">220+</div><div class="l">Captions</div></div>
