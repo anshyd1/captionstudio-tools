@@ -2116,7 +2116,21 @@
   </div>
 </div>
 
-<!-- Service worker registration (auto-cleans old Monetag SW) -->
+<!--
+  Service Worker Registration — CLEANUP MODE
+  ------------------------------------------------------------
+  The /sw.js file is now a CLEANUP worker that unregisters
+  the old Monetag/5gvci.com service worker which was silently
+  breaking fetch() calls (search bar, blog feed, etc.) for
+  returning users on adblocked / slow networks.
+
+  KEEP this registration block live for AT LEAST 30–60 days,
+  so every returning user gets the cleanup SW pushed to them.
+  After that window, you may safely remove BOTH:
+    1. The <script> block below
+    2. The /sw.js file from the repo
+  ------------------------------------------------------------
+-->
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
