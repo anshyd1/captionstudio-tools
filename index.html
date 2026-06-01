@@ -1826,7 +1826,7 @@
   });
 
   /* ── Search Bar (client-side, no backend) ── */
-  (function initSearch() {
+  function initSearch() {
     const input = document.getElementById('siteSearch');
     const box = document.getElementById('searchResults');
     const inputM = document.getElementById('siteSearchMobile');
@@ -1854,21 +1854,34 @@
 
     let blogs = [];
     let blogsLoaded = false;
+    let blogsLoadingPromise = null;
 
-    async function loadBlogs() {
-      if (blogsLoaded) return;
-      blogsLoaded = true;
-      try {
-        const res = await fetch('data/blog.json', { cache: 'no-cache' });
-        if (!res.ok) throw new Error();
-        const data = await res.json();
-        blogs = (Array.isArray(data) ? data : []).map(b => ({
-          title: b.title || '',
-          url: b.link || '',
-          meta: b.category ? ('Blog · ' + String(b.category).toUpperCase()) : 'Blog'
-        }));
-      } catch (e) { /* silently ignore — blog.json optional */ }
+    function loadBlogs() {
+      if (blogsLoaded) return Promise.resolve();
+      if (blogsLoadingPromise) return blogsLoadingPromise;
+      blogsLoadingPromise = (async () => {
+        try {
+          const res = await fetch('data/blog.json', { cache: 'no-cache' });
+          if (!res.ok) throw new Error();
+          const data = await res.json();
+          blogs = (Array.isArray(data) ? data : []).map(b => ({
+            title: b.title || '',
+            url: b.link || '',
+            meta: b.category ? ('Blog · ' + String(b.category).toUpperCase()) : 'Blog'
+          }));
+          blogsLoaded = true;
+          // After blogs load, re-render any active searches so user sees blog results
+          [{ inp: input, bx: box }, { inp: inputM, bx: boxM }].forEach(({ inp, bx }) => {
+            if (inp && bx && inp.value.trim()) {
+              render(inp.value.trim().toLowerCase(), bx);
+            }
+          });
+        } catch (e) { /* silently ignore — blog.json optional */ }
+      })();
+      return blogsLoadingPromise;
     }
+    // Preload blogs immediately so they're ready when user types
+    loadBlogs();
 
     function score(item, q) {
       const t = item.title.toLowerCase();
@@ -1962,7 +1975,13 @@
       const q = params.get('q');
       if (q) { input.value = q; loadBlogs().then(() => render(q.toLowerCase(), box)); }
     } catch(e) {}
-  })();
+  }
+  // Wait for full DOM (mobile overlay HTML is below this script tag)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSearch);
+  } else {
+    initSearch();
+  }
 
   /* ── Hero Live Demo (lightweight, no API) ── */
   (function initDemo() {
@@ -2139,5 +2158,5 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a04ed7b1ce66c149',t:'MTc4MDMyMzQ1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
