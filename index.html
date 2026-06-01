@@ -44,7 +44,74 @@
   <meta name="twitter:description" content="Stop writing weak captions. Generate viral Instagram captions, hashtags & bios free. Built for Indian creators." />
   <meta name="twitter:image" content="https://captionstudio.in/og-image.jpg" />
 
-  <!-- ✅ SINGLE FAQPage Schema (JSON-LD) — microdata removed from HTML body -->
+  <!-- ✅ Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CaptionStudio",
+    "alternateName": "Caption Studio",
+    "url": "https://captionstudio.in/",
+    "logo": "https://captionstudio.in/favicon.png",
+    "image": "https://captionstudio.in/og-image.jpg",
+    "description": "India's free AI toolkit for content creators — viral captions, trending hashtags, bios & growth tools.",
+    "foundingDate": "2024",
+    "founder": {
+      "@type": "Person",
+      "name": "Ansh Yadav",
+      "url": "https://captionstudio.in/about.html"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gorakhpur",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://t.me/skill2incomehub"
+    ]
+  }
+  </script>
+
+  <!-- ✅ WebSite Schema with SearchAction (Sitelinks Searchbox) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CaptionStudio",
+    "alternateName": "Caption Studio",
+    "url": "https://captionstudio.in/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://captionstudio.in/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ✅ SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CaptionStudio — AI Caption Generator",
+    "url": "https://captionstudio.in/tools/caption-generator.html",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "featureList": "AI Caption Generator, Hashtag Generator, Bio Generator, Hook Generator, Content Idea Generator",
+    "inLanguage": ["en-IN", "hi-IN"]
+  }
+  </script>
+
+  <!-- ✅ FAQPage Schema (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -115,11 +182,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </noscript>
 
-  <!-- Preload hero image -->
+  <!-- Preload hero image (self-hosted, premium) -->
   <link
     rel="preload"
     as="image"
-    href="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop"
+    href="img/hero-premium.jpg"
     fetchpriority="high"
   />
 
@@ -194,7 +261,112 @@
 
     /* ============ NAV ============ */
     nav { border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.97); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; gap: 16px; }
+
+    /* Search bar */
+    .nav-search {
+      position: relative;
+      flex: 1 1 auto;
+      min-width: 0;
+      max-width: 360px;
+      display: flex;
+      align-items: center;
+      background: #f6f6f6;
+      border: 1px solid #ececec;
+      border-radius: 999px;
+      padding: 0 14px;
+      transition: border-color .15s, background .15s;
+      box-sizing: border-box;
+    }
+    .nav-search:focus-within { background: #fff; border-color: var(--orange); box-shadow: 0 0 0 4px rgba(232,68,10,.08); }
+    .nav-search-icon { color: #888; flex-shrink: 0; }
+    .nav-search input { flex: 1 1 auto; width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; font-family: var(--sans); font-size: 0.92rem; color: var(--ink); padding: 10px 8px; }
+    .nav-search input::placeholder { color: #999; }
+    .nav-kbd { font-family: var(--sans); font-size: 11px; font-weight: 600; color: #888; background: #fff; border: 1px solid #e0e0e0; border-radius: 4px; padding: 2px 6px; box-shadow: 0 1px 0 #ececec; flex-shrink: 0; }
+
+    .search-results { position: absolute; top: calc(100% + 8px); left: 0; right: 0; background: #fff; border: 1px solid var(--rule); border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,.10); max-height: 420px; overflow-y: auto; display: none; z-index: 200; }
+    .search-results.open { display: block; }
+    .search-results .sr-group { font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #999; padding: 12px 16px 6px; }
+    .search-results a { display: block; padding: 10px 16px; font-family: var(--sans); font-size: 0.92rem; color: var(--ink); border-bottom: 1px solid #f5f5f5; transition: background .12s; }
+    .search-results a:last-child { border-bottom: 0; }
+    .search-results a:hover, .search-results a.active { background: var(--orange-pale); color: var(--orange); }
+    .search-results .sr-meta { display: block; font-size: 11px; color: #999; margin-top: 2px; font-weight: 500; }
+    .search-results .sr-empty { padding: 22px 16px; text-align: center; font-family: var(--sans); font-size: 0.88rem; color: #999; }
+
+    /* Mobile/tablet: search icon button that opens overlay */
+    .nav-search-btn {
+      display: none;
+      background: #f6f6f6;
+      border: 1px solid #ececec;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #555;
+      transition: background .15s;
+      flex-shrink: 0;
+    }
+    .nav-search-btn:hover { background: #eee; color: var(--orange); }
+
+    /* Full-screen search overlay (mobile/tablet) */
+    .search-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(6px);
+      z-index: 1500;
+      display: none;
+      padding: 80px 20px 20px;
+    }
+    .search-overlay.open { display: block; animation: fadeUp .25s ease; }
+    .search-overlay-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 24px 60px rgba(0,0,0,.3);
+    }
+    .search-overlay-head { display: flex; align-items: center; gap: 12px; }
+    .search-overlay-head .nav-search-icon { color: var(--orange); }
+    .search-overlay-head input {
+      flex: 1; border: 0; outline: 0;
+      font-family: var(--sans); font-size: 1.05rem; color: var(--ink);
+      padding: 12px 4px; background: transparent;
+    }
+    .search-overlay-close {
+      background: #f3f3f3; border: 0; width: 32px; height: 32px;
+      border-radius: 50%; cursor: pointer; font-size: 18px; color: #666;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .search-overlay-close:hover { background: #e5e5e5; color: var(--orange); }
+    .search-overlay .search-results {
+      position: static; display: block; margin-top: 12px;
+      border: 0; box-shadow: none; padding: 0;
+      max-height: 60vh; border-top: 1px solid var(--rule); border-radius: 0;
+    }
+    .search-overlay .search-results:empty { display: none; }
+
+    /* Desktop nav links */
+    .desktop-nav { display: none; gap: 20px; flex-shrink: 0; }
+    .desktop-nav a { font-family: var(--sans); font-size: 0.92rem; font-weight: 600; color: var(--ink); letter-spacing: 0.01em; transition: color .15s; white-space: nowrap; }
+    .desktop-nav a:hover { color: var(--orange); }
+
+    /* Responsive nav breakpoints */
+    @media (min-width: 900px) {
+      .nav-search { display: flex; }
+      .nav-search-btn { display: none; }
+      .desktop-nav { display: flex; }
+      .hbg { display: none; }
+    }
+    @media (max-width: 899px) {
+      /* Mobile + tablet: hide inline search bar, show icon button */
+      .nav-search { display: none; }
+      .nav-search-btn { display: inline-flex; }
+    }
     .logo {
       display: flex;
       align-items: center;
@@ -298,6 +470,74 @@
       margin-bottom: 48px;
     }
     .trust-signal strong { color: var(--black); font-weight: 600; }
+
+    /* ============ MINI DEMO ============ */
+    .mini-demo { border: 1px solid var(--rule); border-radius: 14px; background: #fff; padding: 0; margin: 28px 0 36px; max-width: 580px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.04); }
+    .mini-demo-head { display: flex; align-items: center; gap: 10px; padding: 12px 18px; background: #fafafa; border-bottom: 1px solid var(--rule); font-family: var(--sans); font-size: 12px; font-weight: 600; color: #666; letter-spacing: 0.04em; text-transform: uppercase; }
+    .mini-demo-dot { width: 8px; height: 8px; border-radius: 50%; background: #16a34a; box-shadow: 0 0 0 4px rgba(22,163,74,.15); animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+    .mini-demo-tag { margin-left: auto; background: var(--orange-pale); color: var(--orange); padding: 3px 8px; border-radius: 999px; font-size: 10px; }
+    .mini-demo-body { padding: 18px; }
+    .mini-demo-label { display: block; font-family: var(--sans); font-size: 12px; font-weight: 600; color: #666; margin-bottom: 8px; letter-spacing: 0.02em; }
+    .mini-demo-row { display: flex; gap: 8px; }
+    .mini-demo-row input { flex: 1; border: 1px solid var(--rule); background: #fafafa; border-radius: 10px; padding: 12px 14px; font-family: var(--sans); font-size: 0.94rem; color: var(--ink); outline: 0; transition: border-color .15s, background .15s; min-width: 0; }
+    .mini-demo-row input:focus { background: #fff; border-color: var(--orange); box-shadow: 0 0 0 4px rgba(232,68,10,.08); }
+    .mini-demo-btn { background: var(--black); color: #fff; border: 0; border-radius: 10px; padding: 0 18px; font-family: var(--sans); font-size: 0.92rem; font-weight: 600; cursor: pointer; transition: background .15s, transform .15s; flex-shrink: 0; }
+    .mini-demo-btn:hover { background: var(--orange); transform: translateY(-1px); }
+    .mini-demo-output { display: none; margin-top: 14px; padding: 14px 16px; background: linear-gradient(180deg,#fffaf6,#fff); border: 1px solid #ffe1d0; border-radius: 10px; font-family: var(--serif); font-size: 1rem; line-height: 1.6; color: var(--ink); }
+    .mini-demo-output.show { display: block; animation: fadeUp .35s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    .mini-demo-output .demo-cap { margin-bottom: 8px; }
+    .mini-demo-output .demo-meta { display: flex; gap: 12px; font-family: var(--sans); font-size: 11px; color: #888; padding-top: 8px; border-top: 1px solid #ffe1d0; margin-top: 8px; }
+    .mini-demo-output .demo-meta strong { color: var(--orange); }
+    .mini-demo-link { display: inline-block; margin-top: 14px; font-family: var(--sans); font-size: 0.86rem; font-weight: 600; color: var(--orange); }
+    .mini-demo-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ============ TRENDING BLOGS ============ */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-bottom: 30px; }
+    .blog-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; transition: transform .25s, box-shadow .25s; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,0,0,.08); }
+    .blog-card-img { aspect-ratio: 16 / 10; overflow: hidden; background: #f3f3f3; position: relative; }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .blog-card:hover .blog-card-img img { transform: scale(1.04); }
+    .blog-card-tag { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,.85); color: #fff; font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; padding: 4px 9px; border-radius: 999px; backdrop-filter: blur(4px); }
+    .blog-card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+    .blog-card-meta { font-family: var(--sans); font-size: 11px; color: #999; letter-spacing: 0.04em; margin-bottom: 10px; text-transform: uppercase; font-weight: 600; }
+    .blog-card-meta span + span::before { content: "·"; margin: 0 7px; color: #ccc; }
+    .blog-card h3 { font-family: var(--display); font-size: 1.04rem; font-weight: 700; color: var(--black); line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 8px; }
+    .blog-card p { font-family: var(--sans); font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 14px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .blog-card-cta { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--orange); margin-top: auto; }
+    .blog-section-foot { text-align: center; margin-top: 10px; }
+    .blog-skeleton { background: linear-gradient(90deg,#f4f4f4 25%,#ececec 50%,#f4f4f4 75%); background-size: 200% 100%; animation: skel 1.4s infinite; border-radius: 14px; height: 360px; }
+    @keyframes skel { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    /* ============ EMAIL CAPTURE ============ */
+    .email-capture { background: #0f0f0f; border-radius: 18px; padding: 48px 36px; margin: 70px 0 40px; color: #fff; text-align: center; position: relative; overflow: hidden; }
+    .email-capture::before { content: ""; position: absolute; inset: -40% 40% auto auto; width: 360px; height: 360px; background: radial-gradient(circle, rgba(232,68,10,.25), transparent 65%); pointer-events: none; }
+    .email-capture h2 { font-family: var(--display); font-size: clamp(1.5rem, 3.4vw, 2rem); font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1.25; margin-bottom: 14px; position: relative; }
+    .email-capture p { font-family: var(--serif); font-size: 1.05rem; color: #bdbdbd; max-width: 520px; margin: 0 auto 26px; line-height: 1.7; position: relative; }
+    .email-form { display: flex; gap: 8px; max-width: 460px; margin: 0 auto; flex-wrap: wrap; justify-content: center; position: relative; }
+    .email-form input { flex: 1; min-width: 220px; padding: 14px 18px; border-radius: 999px; border: 1px solid #2a2a2a; background: #1a1a1a; color: #fff; font-family: var(--sans); font-size: 0.95rem; outline: 0; transition: border-color .15s; }
+    .email-form input:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(232,68,10,.15); }
+    .email-form input::placeholder { color: #777; }
+    .email-form button { background: var(--orange); color: #fff; border: 0; border-radius: 999px; padding: 14px 24px; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+    .email-form button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(232,68,10,.3); }
+    .email-form button:disabled { opacity: .6; cursor: wait; }
+    .email-note { font-family: var(--sans); font-size: 0.8rem; color: #777; margin-top: 16px; position: relative; }
+    .email-success { display: none; margin-top: 18px; padding: 14px 18px; background: rgba(22,163,74,.12); border: 1px solid rgba(22,163,74,.35); border-radius: 12px; color: #4ade80; font-family: var(--sans); font-size: 0.92rem; position: relative; }
+    .email-success.show { display: block; }
+
+    /* ============ COOKIE BANNER ============ */
+    .cookie-banner { position: fixed; bottom: 16px; left: 16px; right: 16px; max-width: 520px; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 16px 18px; box-shadow: 0 16px 40px rgba(0,0,0,.12); font-family: var(--sans); font-size: 0.86rem; color: var(--ink); line-height: 1.6; z-index: 900; display: none; }
+    .cookie-banner.show { display: block; animation: fadeUp .3s ease; }
+    .cookie-banner a { color: var(--orange); text-decoration: underline; }
+    .cookie-banner-row { display: flex; gap: 10px; margin-top: 12px; }
+    .cookie-banner button { flex: 1; border: 0; padding: 9px 14px; border-radius: 999px; font-family: var(--sans); font-weight: 600; font-size: 0.86rem; cursor: pointer; }
+    .cookie-accept { background: var(--black); color: #fff; }
+    .cookie-accept:hover { background: var(--orange); }
+    .cookie-decline { background: transparent; border: 1px solid var(--rule) !important; color: var(--muted); }
 
     /* ============ BUTTONS ============ */
     .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 60px; align-items: center; }
@@ -954,106 +1194,14 @@
       <a href="blog/" onclick="closeMenu()">Blog &amp; Strategy</a>
       <a href="guide.html" onclick="closeMenu()">Growth Guide</a>
       <a href="relax.html" onclick="closeMenu()">Relax Mode</a>
-      <a href="#nexgen" onclick="closeMenu()">NexGen AI Studio <span class="nav-new">Soon</span></a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
       <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" onclick="closeMenu()">Telegram Community</a>
     </nav>
   </aside>
 
-  <!-- 🔥 FINAL TOP LINE (STABLE + NO BUG) -->
-<style>
-body { margin:0; }
-
-/* TOP BAR */
-.top-line {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,0.9),
-    rgba(255,247,237,0.9),
-    rgba(255,237,213,0.9)
-  );
-  border-bottom: 1px solid rgba(255,140,0,0.3);
-  box-shadow: 0 4px 20px rgba(255,140,0,0.12);
-  z-index: 999; /* 🔥 FIX: menu will come above */
-  font-family: sans-serif;
-  padding: 10px 12px;
-  text-align: center;
-}
-
-/* full clickable */
-.top-line a {
-  display: block;
-  text-decoration: none;
-  color: #222;
-}
-
-/* main text */
-.top-main {
-  font-size: 14px;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-
-/* highlight */
-.highlight {
-  color: #ff6a00;
-  font-weight: 700;
-}
-
-/* sub text */
-.top-sub {
-  font-size: 12px;
-  margin-top: 3px;
-  color: #555;
-}
-
-/* live dot */
-.live-dot {
-  width: 8px;
-  height: 8px;
-  background: #ff3b30;
-  border-radius: 50%;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-</style>
-
-<!-- 🔴 TOP BAR -->
-<div class="top-line" id="topLine">
-  <a href="https://t.me/skill2incomehub" target="_blank">
-    
-    <div class="top-main">
-      <span class="live-dot"></span>
-      ₹2,000+ Daily Loots Active Now • 
-      <span class="highlight">JOIN FAST</span>
-    </div>
-
-    <div class="top-sub">
-      🔥 Cashback • Crypto • IPL • Instant Telegram Updates
-    </div>
-
-  </a>
-</div>
-
-<script>
-/* spacing fix (no cut issue) */
-function adjustTop() {
-  var bar = document.getElementById("topLine");
-  document.body.style.paddingTop = bar.offsetHeight + "px";
-}
-window.addEventListener("load", adjustTop);
-window.addEventListener("resize", adjustTop);
-</script>
+  <style>body { margin: 0; }</style>
+  <!-- Top loot bar removed for clean, AdSense-policy-friendly experience -->
 
   <nav>
     <div class="wrap nav-inner">
@@ -1061,6 +1209,39 @@ window.addEventListener("resize", adjustTop);
         <img src="favicon.png" alt="CaptionStudio Logo" width="30" height="30" />
         CaptionStudio
       </a>
+
+      <!-- 🔎 Desktop Search Bar -->
+      <div class="nav-search" role="search">
+        <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          id="siteSearch"
+          type="search"
+          placeholder="Search blogs, tools…"
+          autocomplete="off"
+          aria-label="Search CaptionStudio"
+        />
+        <kbd class="nav-kbd">/</kbd>
+        <div id="searchResults" class="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+
+      <!-- 🔎 Mobile/Tablet Search Icon (opens overlay) -->
+      <button class="nav-search-btn" id="navSearchBtn" onclick="openSearchOverlay()" aria-label="Open search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+
+      <!-- Desktop nav (hidden on mobile/tablet) -->
+      <div class="desktop-nav">
+        <a href="tools/">Tools</a>
+        <a href="blog/">Blog</a>
+        <a href="earning.html">Earn</a>
+        <a href="guide.html">Guide</a>
+        <a href="about.html">About</a>
+      </div>
+
       <button class="hbg" id="hbg" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -1074,8 +1255,8 @@ window.addEventListener("resize", adjustTop);
         <p class="hero-kicker fade">India's Free AI Creator Toolkit &middot; Est. 2024</p>
 
         <h1 class="fade">
-          Stop Writing<br>Weak Captions.<br>
-          <em>Start Going Viral</em> — Free.
+          Free AI <em>Caption Generator</em><br>
+          for Instagram Reels.
         </h1>
 
         <p class="hero-sub fade">
@@ -1088,24 +1269,42 @@ window.addEventListener("resize", adjustTop);
         </p>
 
         <p class="trust-signal fade">
-          <strong>10,000+</strong> captions generated &middot;
+          <strong>75+</strong> in-depth guides &middot;
           <strong>5K+</strong> free motion graphics &middot;
-          <strong>100% free</strong> — no credit card required
+          <strong>100% free</strong> — no signup required
         </p>
 
         <div class="btn-row fade">
-          <a href="tools/caption-generator.html" class="btn btn-orange">⚡ Caption Generator</a>
+          <a href="tools/caption-generator.html" class="btn btn-orange">⚡ Try Caption Generator</a>
           <a href="tools/hashtag-generator.html" class="btn btn-fill">Hashtag Generator</a>
           <a href="tools/" class="btn btn-ghost">All Free Tools</a>
         </div>
 
+        <!-- ⚡ Live Mini Demo -->
+        <div class="mini-demo fade" aria-label="Try a caption preview">
+          <div class="mini-demo-head">
+            <span class="mini-demo-dot"></span>
+            <span>Live preview</span>
+            <span class="mini-demo-tag">Try it free</span>
+          </div>
+          <div class="mini-demo-body">
+            <label class="mini-demo-label" for="demoNiche">Your niche or topic</label>
+            <div class="mini-demo-row">
+              <input id="demoNiche" type="text" placeholder="e.g. fitness motivation, food reels, fashion…" autocomplete="off" />
+              <button id="demoBtn" type="button" class="mini-demo-btn">Preview →</button>
+            </div>
+            <div id="demoOutput" class="mini-demo-output" aria-live="polite"></div>
+            <a href="tools/caption-generator.html" class="mini-demo-link">Open full Caption Generator →</a>
+          </div>
+        </div>
+
         <div class="hero-img-block fade">
           <img
-            src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1200&auto=format&fit=crop"
+            src="img/hero-premium.jpg"
             alt="CaptionStudio — Free AI caption generator for Instagram reels India 2026"
             fetchpriority="high"
-            width="1200"
-            height="675"
+            width="1400"
+            height="787"
           />
         </div>
         <p class="img-caption fade">CaptionStudio &middot; AI Tools for Indian Creators &middot; Gorakhpur, UP &middot; 2026</p>
@@ -1141,8 +1340,8 @@ window.addEventListener("resize", adjustTop);
       <!-- ========== STATS ========== -->
       <div class="stats-row fade">
         <div class="stat-cell">
-          <div class="stat-n">10K+</div>
-          <div class="stat-l">Captions Generated</div>
+          <div class="stat-n">75+</div>
+          <div class="stat-l">Guides Published</div>
         </div>
         <div class="stat-cell">
           <div class="stat-n">5K+</div>
@@ -1237,6 +1436,22 @@ window.addEventListener("resize", adjustTop);
           </div>
           <span class="tool-cta">Explore &rarr;</span>
         </a>
+      </div>
+
+      <!-- ========== TRENDING BLOGS (auto-loaded from data/homepage-blogs.json) ========== -->
+      <div class="rule-label fade"><span>Trending Blogs</span></div>
+      <div class="sec-head fade">
+        <p class="sec-kicker">Fresh &middot; Updated weekly</p>
+        <h2 class="sec-title">What Indian creators<br>are reading now.</h2>
+        <p class="sec-body">Caption packs, hashtag strategies, IPL trends, shayari collections and Instagram growth playbooks — picked from our latest publications.</p>
+      </div>
+      <div class="blog-grid fade" id="trendingBlogs" aria-live="polite">
+        <div class="blog-skeleton"></div>
+        <div class="blog-skeleton"></div>
+        <div class="blog-skeleton"></div>
+      </div>
+      <div class="blog-section-foot fade">
+        <a href="blog/" class="btn btn-ghost">Browse all blogs &rarr;</a>
       </div>
 
       <!-- ========== FEATURES ========== -->
@@ -1456,50 +1671,43 @@ window.addEventListener("resize", adjustTop);
 
     </div><!-- /.wrap -->
 
-    <!-- ========== NEXGEN AI STUDIO WAITLIST ========== -->
+    <!-- ========== EMAIL CAPTURE (Formspree) ========== -->
     <div class="wrap">
-      <div class="nexgen-section fade" id="nexgen">
-        <span class="nexgen-badge">⚡ Coming Soon — Early Access</span>
-        <h2>Meet <em>NexGen AI Studio.</em><br>The Future of Creator Tools.</h2>
-        <p>A full AI-powered content production suite. Reel scripts, voiceovers, thumbnail generation, auto-scheduling, analytics, and personal brand voice training — all in one place. Join the waitlist for early access and founding member perks.</p>
-        <form class="nexgen-form" onsubmit="handleWaitlist(event)">
-          <input
-            type="email"
-            class="nexgen-input"
-            placeholder="Enter your email"
-            required
-            autocomplete="email"
-            aria-label="Email for NexGen AI Studio waitlist"
-          />
-          <button type="submit" class="nexgen-submit">Join Waitlist →</button>
+      <div class="email-capture fade" id="newsletter">
+        <h2>Get viral captions in your inbox.</h2>
+        <p>Weekly drop of trending captions, fresh hashtag sets and Instagram growth tips — built for Indian creators. Unsubscribe anytime.</p>
+        <form
+          class="email-form"
+          id="newsletterForm"
+          action="https://formspree.io/f/mdaplejb"
+          method="POST"
+          novalidate
+        >
+          <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Your email" />
+          <input type="hidden" name="_subject" value="New CaptionStudio newsletter signup" />
+          <input type="hidden" name="source" value="homepage_hero_below_cta" />
+          <button type="submit">Join Free →</button>
         </form>
-        <p class="nexgen-note" id="nexgen-msg">🔒 No spam. Just early access when we launch.</p>
-        <div class="nexgen-features">
-          <span class="nexgen-feat">🎬 Reel Script AI</span>
-          <span class="nexgen-feat">🎙️ AI Voiceovers</span>
-          <span class="nexgen-feat">🖼️ Thumbnail Generator</span>
-          <span class="nexgen-feat">📅 Auto Scheduling</span>
-          <span class="nexgen-feat">📊 Analytics Dashboard</span>
-          <span class="nexgen-feat">🧠 Brand Voice Training</span>
-        </div>
+        <p class="email-note">🔒 No spam. Just creator value, every Sunday.</p>
+        <div class="email-success" id="newsletterMsg">✅ You are in! Check your inbox to confirm.</div>
       </div>
     </div>
 
-    <!-- ========== FINAL CTA BAND ========== -->
+    <!-- ========== FINAL CTA BAND (AdSense-safe language) ========== -->
     <div class="wrap">
-      <div class="cta-band fade" style="border: 2px dashed #e8440a; background: #191919;">
-        <h2 style="color: #ffffff !important;">Want to Earn Money Online? 💰</h2>
-        <p style="color: #b5b5b5 !important; max-width: 500px; margin-left: auto; margin-right: auto;">
-          Join our growing community of <strong>60+ active Indian creators</strong> on Telegram.
-          Get daily earning methods, verified student side-hustles, and free AI tools directly.
+      <div class="cta-band fade">
+        <h2>Daily creator tips on Telegram.</h2>
+        <p>
+          Join our Telegram community for fresh caption packs, hashtag strategies, content ideas
+          and creator updates — sent directly to your inbox every day.
         </p>
         <div class="btn-row" style="justify-content: center; margin-top: 25px;">
           <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="btn btn-orange" style="box-shadow: 0 10px 20px rgba(232,68,10,0.3);">
-            Join Telegram to Start Earning
+            Join Telegram Community →
           </a>
         </div>
         <p style="font-size: 0.8rem; color: #555; margin-top: 20px; font-family: var(--sans);">
-          No fees. No spam. Just real methods.
+          Free forever · No spam · Unsubscribe anytime
         </p>
       </div>
     </div>
@@ -1545,7 +1753,11 @@ window.addEventListener("resize", adjustTop);
       <p class="ft-tagline">
         CaptionStudio — India's free AI toolkit for content creators. Caption generation, hashtag research, Instagram bio generator, 5000+ free video editing assets, and verified online earning strategies for Indian students and creators in 2026. Built in Gorakhpur, Uttar Pradesh.
       </p>
-      <div class="ft-copy">&copy; 2026 CaptionStudio &middot; Crafted by Ansh Yadav &middot; Gorakhpur, Uttar Pradesh &middot; All Rights Reserved</div>
+      <div class="ft-copy">
+        &copy; 2026 CaptionStudio &middot; Crafted by Ansh Yadav &middot; Gorakhpur, Uttar Pradesh &middot; All Rights Reserved
+        <br>
+        <span style="opacity:.7; font-size: 0.78rem;">Page last updated: <time datetime="2026-06-01">June 1, 2026</time></span>
+      </div>
     </div>
   </footer>
 
@@ -1591,24 +1803,327 @@ window.addEventListener("resize", adjustTop);
     }
   }
 
-/* ── NexGen Waitlist ── */
-  function handleWaitlist(e) {
-    e.preventDefault();
-    const msg = document.getElementById('nexgen-msg');
-    msg.textContent = '✅ You are on the list! We will email you first when NexGen launches.';
-    msg.style.color = '#10b981';
-    e.target.querySelector('input').value = '';
+  /* ── Search overlay (mobile/tablet) ── */
+  function openSearchOverlay() {
+    const ov = document.getElementById('searchOverlay');
+    if (!ov) return;
+    ov.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      const inp = document.getElementById('siteSearchMobile');
+      if (inp) inp.focus();
+    }, 50);
+  }
+  function closeSearchOverlay(e) {
+    if (e && e.target && !e.target.classList.contains('search-overlay') && e.type === 'click') return;
+    const ov = document.getElementById('searchOverlay');
+    if (!ov) return;
+    ov.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeSearchOverlay({ target: document.getElementById('searchOverlay'), type: 'click' });
+  });
+
+  /* ── Search Bar (client-side, no backend) ── */
+  (function initSearch() {
+    const input = document.getElementById('siteSearch');
+    const box = document.getElementById('searchResults');
+    const inputM = document.getElementById('siteSearchMobile');
+    const boxM = document.getElementById('searchResultsMobile');
+    if (!input || !box) return;
+
+    // Static tools index (lightweight, no fetch)
+    const tools = [
+      { title: 'Instagram Caption Generator', url: 'tools/caption-generator.html', meta: 'AI Tool' },
+      { title: 'Trending Hashtag Generator', url: 'tools/hashtag-generator.html', meta: 'AI Tool' },
+      { title: 'Instagram Bio Generator', url: 'tools/bio-generator.html', meta: 'AI Tool' },
+      { title: 'Business Name Generator', url: 'tools/business-name-generator.html', meta: 'AI Tool' },
+      { title: 'Email Reply Generator', url: 'tools/email-reply-generator.html', meta: 'AI Tool' },
+      { title: 'LinkedIn Post Generator', url: 'tools/linkedin-post-generator.html', meta: 'AI Tool' },
+      { title: 'Product Description Generator', url: 'tools/product-generator.html', meta: 'AI Tool' },
+      { title: 'Sitemap Generator', url: 'tools/sitemap-generator.html', meta: 'AI Tool' },
+      { title: 'Slogan Generator', url: 'tools/slogan-generator.html', meta: 'AI Tool' },
+      { title: 'Tweet Generator', url: 'tools/tweet-generator.html', meta: 'AI Tool' },
+      { title: 'YouTube Title Generator', url: 'tools/youtube-title-generator.html', meta: 'AI Tool' },
+      { title: 'Earning Hub', url: 'earning.html', meta: 'Resource' },
+      { title: 'Growth Guide', url: 'guide.html', meta: 'Resource' },
+      { title: 'About CaptionStudio', url: 'about.html', meta: 'Page' },
+      { title: 'Contact', url: 'contact.html', meta: 'Page' }
+    ];
+
+    let blogs = [];
+    let blogsLoaded = false;
+
+    async function loadBlogs() {
+      if (blogsLoaded) return;
+      blogsLoaded = true;
+      try {
+        const res = await fetch('data/blog.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        blogs = (Array.isArray(data) ? data : []).map(b => ({
+          title: b.title || '',
+          url: b.link || '',
+          meta: b.category ? ('Blog · ' + String(b.category).toUpperCase()) : 'Blog'
+        }));
+      } catch (e) { /* silently ignore — blog.json optional */ }
+    }
+
+    function score(item, q) {
+      const t = item.title.toLowerCase();
+      if (!t) return 0;
+      if (t === q) return 100;
+      if (t.startsWith(q)) return 80;
+      if (t.includes(' ' + q)) return 60;
+      if (t.includes(q)) return 40;
+      // word match
+      const words = q.split(/\s+/).filter(Boolean);
+      let s = 0;
+      words.forEach(w => { if (t.includes(w)) s += 10; });
+      return s;
+    }
+
+    function buildHtml(q) {
+      const all = [...tools, ...blogs]
+        .map(it => ({ it, s: score(it, q) }))
+        .filter(x => x.s > 0)
+        .sort((a, b) => b.s - a.s)
+        .slice(0, 8);
+
+      if (!all.length) {
+        return '<div class="sr-empty">No results for "' + escapeHtml(q) + '" — try a different keyword.</div>';
+      }
+      const groups = { Tools: [], Blogs: [], Pages: [] };
+      all.forEach(({ it }) => {
+        const m = (it.meta || '').toLowerCase();
+        if (m.startsWith('blog')) groups.Blogs.push(it);
+        else if (m.includes('tool')) groups.Tools.push(it);
+        else groups.Pages.push(it);
+      });
+      let html = '';
+      ['Tools', 'Blogs', 'Pages'].forEach(g => {
+        if (!groups[g].length) return;
+        html += '<div class="sr-group">' + g + '</div>';
+        groups[g].forEach(it => {
+          html += '<a href="' + it.url + '">' + escapeHtml(it.title) +
+                  '<span class="sr-meta">' + escapeHtml(it.meta || '') + '</span></a>';
+        });
+      });
+      return html;
+    }
+
+    function render(q, targetBox) {
+      const b = targetBox || box;
+      if (!q) { b.classList.remove('open'); b.innerHTML = ''; return; }
+      b.innerHTML = buildHtml(q);
+      b.classList.add('open');
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    }
+
+    function bind(inp, bx) {
+      if (!inp || !bx) return;
+      let t;
+      inp.addEventListener('input', () => {
+        clearTimeout(t);
+        const q = inp.value.trim().toLowerCase();
+        t = setTimeout(() => render(q, bx), 80);
+      });
+      inp.addEventListener('focus', () => {
+        loadBlogs();
+        if (inp.value.trim()) render(inp.value.trim().toLowerCase(), bx);
+      });
+    }
+
+    // Desktop inline
+    bind(input, box);
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.nav-search')) box.classList.remove('open');
+    });
+
+    // Mobile overlay
+    bind(inputM, boxM);
+
+    // `/` shortcut (desktop)
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        if (window.innerWidth >= 900) input.focus();
+        else openSearchOverlay();
+      }
+    });
+
+    // Prefill from ?q= (sitelinks searchbox compatibility)
+    try {
+      const params = new URLSearchParams(location.search);
+      const q = params.get('q');
+      if (q) { input.value = q; loadBlogs().then(() => render(q.toLowerCase(), box)); }
+    } catch(e) {}
+  })();
+
+  /* ── Hero Live Demo (lightweight, no API) ── */
+  (function initDemo() {
+    const btn = document.getElementById('demoBtn');
+    const input = document.getElementById('demoNiche');
+    const out = document.getElementById('demoOutput');
+    if (!btn || !input || !out) return;
+
+    const templates = [
+      n => `POV: You finally cracked ${n} — and the algorithm noticed. 🔥`,
+      n => `Nobody talks about this side of ${n}. Save before it disappears.`,
+      n => `Day 1 vs Day 100 of ${n} → the difference will shock you.`,
+      n => `Stop scrolling. This ${n} trick changed everything for me.`,
+      n => `Honest truth about ${n} that nobody on Instagram will tell you.`,
+      n => `If you're into ${n}, this one's a sign. 🌶️`,
+      n => `${capitalize(n)} hits different when you do it like this. 👇`
+    ];
+    function capitalize(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
+
+    function generate() {
+      const v = (input.value || '').trim();
+      if (!v) { input.focus(); input.placeholder = 'Type a niche first… e.g. fitness'; return; }
+      const t = templates[Math.floor(Math.random() * templates.length)];
+      const cap = t(v.toLowerCase());
+      const hook = Math.floor(78 + Math.random() * 18);
+      out.innerHTML = '<div class="demo-cap">' + cap + '</div>' +
+        '<div class="demo-meta">Hook strength: <strong>' + hook + '/100</strong> · Tone: viral · Length: short</div>';
+      out.classList.add('show');
+    }
+    btn.addEventListener('click', generate);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') generate(); });
+  })();
+
+  /* ── Trending Blogs (dynamic fetch from data/homepage-blogs.json) ── */
+  (function loadTrendingBlogs() {
+    const wrap = document.getElementById('trendingBlogs');
+    if (!wrap) return;
+
+    fetch('data/homepage-blogs.json', { cache: 'no-cache' })
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(list => {
+        if (!Array.isArray(list) || !list.length) { wrap.style.display = 'none'; return; }
+        const html = list.slice(0, 6).map(b => {
+          const img = b.image || 'img/hero.jpg';
+          const tag = b.displayTag || (b.category || 'NEW');
+          const cat = b.category || 'Blog';
+          const time = b.readTime || '5 min read';
+          const date = b.date ? new Date(b.date).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' }) : '';
+          const t = escapeHtml(b.title || 'Untitled');
+          const d = escapeHtml(b.desc || '');
+          return (
+            '<a class="blog-card" href="' + (b.link || '#') + '">' +
+              '<div class="blog-card-img">' +
+                '<img src="' + img + '" alt="' + t + '" loading="lazy" width="600" height="375" />' +
+                '<span class="blog-card-tag">' + escapeHtml(tag) + '</span>' +
+              '</div>' +
+              '<div class="blog-card-body">' +
+                '<div class="blog-card-meta"><span>' + escapeHtml(cat) + '</span><span>' + escapeHtml(time) + '</span>' + (date ? '<span>' + escapeHtml(date) + '</span>' : '') + '</div>' +
+                '<h3>' + t + '</h3>' +
+                '<p>' + d + '</p>' +
+                '<span class="blog-card-cta">Read article →</span>' +
+              '</div>' +
+            '</a>'
+          );
+        }).join('');
+        wrap.innerHTML = html;
+      })
+      .catch(() => { wrap.style.display = 'none'; });
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+    }
+  })();
+
+  /* ── Newsletter (Formspree) ── */
+  (function initNewsletter() {
+    const form = document.getElementById('newsletterForm');
+    const msg = document.getElementById('newsletterMsg');
+    if (!form) return;
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = form.querySelector('button');
+      const originalText = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Joining…';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          msg.textContent = '✅ Done! You\'re on the list — check your inbox.';
+          msg.classList.add('show');
+          form.reset();
+        } else {
+          msg.textContent = '⚠️ Something went wrong. Please try again.';
+          msg.classList.add('show');
+        }
+      } catch (err) {
+        msg.textContent = '⚠️ Network error. Please try again.';
+        msg.classList.add('show');
+      } finally {
+        btn.disabled = false; btn.textContent = originalText;
+      }
+    });
+  })();
+
+  /* ── Cookie consent ── */
+  (function initCookie() {
+    const banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    try {
+      if (!localStorage.getItem('cs_cookie_choice')) {
+        setTimeout(() => banner.classList.add('show'), 1200);
+      }
+    } catch (e) {}
+  })();
+  function acceptCookies() {
+    try { localStorage.setItem('cs_cookie_choice', 'accept'); } catch (e) {}
+    document.getElementById('cookieBanner').classList.remove('show');
+  }
+  function declineCookies() {
+    try { localStorage.setItem('cs_cookie_choice', 'decline'); } catch (e) {}
+    document.getElementById('cookieBanner').classList.remove('show');
   }
 </script>
 
-<!-- Monetag Script START -->
+<!-- Monetag ad script removed (AdSense policy compliance) -->
+
+<!-- 🔎 Mobile Search Overlay -->
+<div class="search-overlay" id="searchOverlay" onclick="closeSearchOverlay(event)">
+  <div class="search-overlay-inner" onclick="event.stopPropagation()">
+    <div class="search-overlay-head">
+      <svg class="nav-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="siteSearchMobile" type="search" placeholder="Search blogs, tools…" autocomplete="off" aria-label="Search" />
+      <button class="search-overlay-close" onclick="closeSearchOverlay()" aria-label="Close search">×</button>
+    </div>
+    <div id="searchResultsMobile" class="search-results" role="listbox"></div>
+  </div>
+</div>
+
+<!-- Cookie consent banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie notice">
+  We use cookies for analytics &amp; to improve your experience. By using CaptionStudio you agree to our
+  <a href="privacy.html">Privacy Policy</a>.
+  <div class="cookie-banner-row">
+    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+    <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+  </div>
+</div>
+
+<!-- Service worker registration (auto-cleans old Monetag SW) -->
 <script>
-(function(s){
-s.dataset.zone='11067849',
-s.src='https://nap5k.com/tag.min.js'
-})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function(){});
+  });
+}
 </script>
-<!-- Monetag Script END -->
 
 </body>
 </html>
