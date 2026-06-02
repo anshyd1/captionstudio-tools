@@ -1,509 +1,153 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Bio Generator 2026 - Instagram, LinkedIn, Twitter Bios | CaptionStudio</title>
-<meta name="description" content="200+ ready bios for Instagram, LinkedIn, Twitter & more. 12 categories - boys, girls, attitude, business, aesthetic. 1 click copy. Free!">
-<meta name="author" content="Ansh Yadav">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://captionstudio.in/tools/bio-generator.html">
-<link rel="icon" type="image/png" href="/favicon.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Free Bio Generator 2026 | CaptionStudio">
-<meta property="og:description" content="200+ ready bios in 1 click. Instagram, LinkedIn, Twitter. Free!">
-<meta property="og:url" content="https://captionstudio.in/tools/bio-generator.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CaptionStudio Bio Generator","operatingSystem":"Web","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"author":{"@type":"Person","name":"Ansh Yadav"}}
-</script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#ff4757;--primary-dark:#e63946;--accent:#ffa502;--green:#10b981;--text:#1f2937;--muted:#6b7280;--border:#ffebeb;--bg:#fff5f5}
-body{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#fff 0%,#fff5f5 100%);color:var(--text);line-height:1.6;min-height:100vh;font-size:16px}
-header{background:#fff;border-bottom:1px solid var(--border);padding:14px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{width:32px;height:32px;border-radius:8px}
-.brand-name{font-weight:800;font-size:18px;color:var(--primary)}
-.brand-tag{font-size:11px;color:var(--muted);display:block;margin-top:-2px;font-weight:500}
-.header-link{color:var(--primary);text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;border-radius:8px;background:var(--bg)}
-.wrap{max-width:680px;margin:30px auto;padding:0 16px}
-.hero{text-align:center;margin-bottom:30px}
-.hero h1{font-size:32px;font-weight:800;color:var(--text);margin-bottom:10px;letter-spacing:-0.5px}
-.hero h1 span{color:var(--primary)}
-.hero p{color:var(--muted);font-size:15px}
-.stats{display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
-.stat{background:#fff;padding:10px 18px;border-radius:50px;font-size:13px;font-weight:600;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.stat strong{color:var(--primary)}
-.card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
-.label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;display:block}
-.cats{display:flex;flex-wrap:wrap;gap:8px}
-.cat{background:#fff;border:1.5px solid var(--border);color:var(--text);padding:10px 16px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:.15s;font-family:inherit}
-.cat:hover{border-color:var(--primary);color:var(--primary)}
-.cat.active{background:var(--primary);color:#fff;border-color:var(--primary)}
-.gen-btn{width:100%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:none;padding:16px;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:18px;box-shadow:0 6px 20px rgba(255,71,87,.3);transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px}
-.gen-btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(255,71,87,.4)}
-.result{background:#fff;border:2px solid var(--primary);border-radius:20px;padding:24px;margin-bottom:20px;box-shadow:0 8px 25px rgba(255,71,87,.08);min-height:160px}
-.result-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
-.result-cat{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:5px 14px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
-.result-meta{font-size:11px;color:var(--muted);font-weight:600;display:flex;gap:10px;align-items:center}
-.char-count{background:var(--bg);padding:3px 10px;border-radius:50px;font-weight:700}
-.char-count.warn{background:#fef3c7;color:#d97706}
-.char-count.over{background:#fee2e2;color:#dc2626}
-.bio-text{font-size:17px;line-height:1.6;color:var(--text);font-weight:500;padding:18px 0;white-space:pre-wrap;word-wrap:break-word;border-bottom:1px dashed var(--border);min-height:90px}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.btn{background:#f3f4f6;border:none;color:var(--text);padding:13px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;transition:.15s}
-.btn:hover{background:#e5e7eb}
-.btn-primary{background:var(--primary);color:#fff}
-.btn-primary:hover{background:var(--primary-dark)}
-.btn.done{background:var(--green);color:#fff}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(150px);background:var(--text);color:#fff;padding:12px 24px;border-radius:50px;font-size:14px;font-weight:600;box-shadow:0 10px 25px rgba(0,0,0,.2);transition:.3s;z-index:999}
-.toast.show{transform:translateX(-50%) translateY(0)}
-.tip{background:var(--bg);border-left:4px solid var(--primary);padding:14px 18px;border-radius:10px;margin-top:20px;font-size:13px;line-height:1.6;color:var(--text)}
-.tip strong{color:var(--primary-dark);display:block;margin-bottom:4px}
-footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:13px;margin-top:20px}
-footer a{color:var(--primary);text-decoration:none;font-weight:600;margin:0 8px}
-@media(max-width:480px){.hero h1{font-size:24px}.bio-text{font-size:15px}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="canonical" href="https://captionstudio.in/tools/bio-generator.html" />
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000"
+     crossorigin="anonymous"></script>
+
+  <title>Bio Generator — High Converting Instagram Bios 2026</title>
+  <meta name="description" content="Create a professional Instagram bio in seconds. Proven growth frameworks for creators, students, and businesses. 100% Free." />
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" />
+  
+  <style>
+    :root { --orange: #e8440a; --orange-pale: #fff3ee; --black: #191919; --ink: #2e2e2e; --muted: #6b6b6b; --rule: #e5e5e5; --bg: #ffffff; --serif: 'Lora', Georgia, serif; --sans: 'Source Sans 3', system-ui, sans-serif; --display: 'Syne', sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.8; font-size: 17px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+    a { color: inherit; text-decoration: none; }
+    nav { border-bottom: 1px solid var(--rule); padding: 14px 0; background: rgba(255,255,255,.98); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--display); font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: var(--black); }
+    .logo img { width: 30px; height: 30px; border-radius: 6px; }
+    .nav-links { display: flex; gap: 24px; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--orange); }
+
+    .tool-hero { padding: 60px 0 40px; text-align: center; border-bottom: 1px solid var(--rule); }
+    .kicker { font-family: var(--sans); font-size: 12px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.15em; }
+    .tool-hero h1 { font-family: var(--display); font-size: clamp(2rem, 7vw, 3.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; color: var(--black); }
+    
+    .generator-card { background: #fff; border: 1px solid var(--rule); border-radius: 20px; padding: 35px; max-width: 550px; margin: 0 auto; box-shadow: 0 15px 45px rgba(0,0,0,0.05); text-align: left; }
+    select { width: 100%; padding: 14px 18px; border-radius: 12px; border: 1.5px solid var(--rule); font-family: var(--sans); font-size: 1rem; outline: none; background: #fafafa; cursor: pointer; margin-bottom: 20px; }
+    
+    .btn-gen { width: 100%; background: var(--black); color: #fff; padding: 18px; border-radius: 12px; font-family: var(--sans); font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: 0.2s; }
+    .btn-gen:hover { background: var(--orange); transform: translateY(-2px); }
+
+    #loading { display: none; margin: 25px 0; text-align: center; }
+    .spinner { width: 26px; height: 26px; border: 3px solid var(--orange-pale); border-top-color: var(--orange); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #results { display: none; margin-top: 30px; border-top: 1px solid var(--rule); padding-top: 25px; text-align: center; }
+    .res-content { font-family: var(--sans); font-size: 1.1rem; color: var(--ink); margin-bottom: 25px; white-space: pre-wrap; font-weight: 500; line-height: 1.6; }
+    .btn-copy { background: #fff; border: 1.5px solid var(--rule); padding: 12px; border-radius: 10px; font-family: var(--sans); font-weight: 700; font-size: 0.9rem; cursor: pointer; width: 100%; }
+
+    .prose-section { padding: 80px 0; max-width: 800px; margin: 0 auto; }
+    .prose-section h2 { font-family: var(--display); font-size: 2.2rem; margin-bottom: 25px; color: var(--black); }
+    .prose-section h3 { font-family: var(--display); font-size: 1.5rem; margin: 40px 0 15px; color: var(--black); }
+    .prose-section p { margin-bottom: 25px; font-size: 1.15rem; color: #444; line-height: 1.9; }
+
+    footer { background: #0d0d0d; color: #777; padding: 80px 0 40px; border-top: 1px solid #1a1a1a; text-align: center; }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+  </style>
 </head>
 <body>
+  <nav><div class="wrap nav-inner"><a href="../index.html" class="logo"><img src="../favicon.png"> CaptionStudio</a><div class="nav-links"><a href="../index.html">Home</a><a href="../tools/">Tools</a><a href="../blog/">Blog</a><a href="../earning.html">Earn</a></div></div></nav>
+  <main>
+    <section class="tool-hero"><div class="wrap"><p class="kicker">Identity Builder</p><h1>Bio <em>Generator</em></h1>
+      <div class="generator-card">
+        <label style="display:block; font-family:var(--sans); font-weight:700; font-size:12px; margin-bottom:8px;">DESCRIBE YOURSELF</label>
+        <select id="niche">
+          <option value="creator">🎥 Digital Creator</option>
+          <option value="fitness">💪 Fitness / Athlete</option>
+          <option value="food">🍔 Foodie / Blogger</option>
+          <option value="finance">💰 Trader / Finance</option>
+          <option value="travel">✈️ Traveler / Nomad</option>
+          <option value="fashion">👗 Fashion / Stylist</option>
+          <option value="student">🎓 Student / Learner</option>
+        </select>
+        <button id="genBtn" class="btn-gen" onclick="generateBio()"><span>✨ Build Professional Bio</span></button>
+        <div id="loading"><div class="spinner"></div></div>
+        <div id="results"><div class="res-content" id="final-bio"></div><button class="btn-copy" id="copyBtn" onclick="copyText()">📋 Copy Bio</button></div>
+      </div></div></section>
 
-<header>
-  <a href="/" class="brand">
-    <img src="/favicon.png" alt="CaptionStudio">
-    <div>
-      <div class="brand-name">CaptionStudio</div>
-      <span class="brand-tag">Free Bio Tools</span>
-    </div>
-  </a>
-  <a href="/tools/" class="header-link">🛠️ Tools</a>
-</header>
+    <section class="prose-section wrap">
+      <h2>Instagram Bio Strategy 2026: Clear > Clever</h2>
+      <p>Your Instagram bio is the most important 150 characters on your profile. In 2026, it's not about being 'cool'; it's about being <strong>Clear</strong>. A perfect bio should tell people exactly who you are and why they should follow you.</p>
+      <h3>The 4-Line Bio Framework</h3>
+      <p>Our generator uses the Golden Ratio: Line 1 for Identity, Line 2 for Authority, Line 3 for Value, and Line 4 for a strong Call-to-Action.</p>
+    </section>
+  </main>
+  <footer><div class="wrap"><p>&copy; 2024 CaptionStudio · Crafted by Ansh Yadav</p></div></footer>
 
-<div class="wrap">
+  <script>
+    const bioData = {
+      creator: {
+        id: ["Digital Creator 🎥", "Content Architect 🚀", "Daily Growth Expert ✨", "Viral Content Specialist 🎬", "Storyteller from India 🇮🇳"],
+        auth: ["10k+ Family on Reels 🎥", "Viral Strategy Coach 🏆", "Obsessed with Growth 📈", "Helping you go viral 🚀", "5M+ Views on Reels 📈"],
+        val: ["Making content simple 💡", "Daily growth tips for you ✨", "Turning views into value 💰", "Join the creator economy 🔥", "Mastering the algorithm 🧠"],
+        cta: ["👇 Check my latest reel!", "📩 DM for Collabs", "🚀 Join the journey!", "🔗 Exclusive resources below", "📍 Start growing here"]
+      },
+      fitness: {
+        id: ["Fitness Enthusiast 💪", "Certified Athlete 🏃‍♂️", "Gym Motivation Daily 🔥", "Strength Coach 🏋️", "Hybrid Athlete 🦾"],
+        auth: ["Transformation Specialist 🏆", "Join the 1% grind 🦁", "Pushing limits every day ⚡", "100+ Clients transformed 📈", "Consistency is key 🗝️"],
+        val: ["Turning sweat into strength ⚡", "Helping you build discipline 🧠", "Real fitness, no BS 🚫", "Master your health 🍎", "Your daily workout fuel ⛽"],
+        cta: ["📍 Start your journey below", "💪 Work with me", "👇 Check my workout!", "📩 DM for plans", "🔗 Free diet guide below"]
+      },
+      food: {
+        id: ["Food Blogger 🍔", "Culinarian 👨‍🍳", "Hidden Gem Hunter 📍", "Recipe Developer 🍳", "Taste Explorer 👅"],
+        auth: ["Exploring flavors of India 🇮🇳", "Obsessed with street food 🌯", "Cooking made easy 🔪", "Trusted by 50k Foodies 🍽️", "Taste tester 👅"],
+        val: ["Daily Recipes & Hacks 🍳", "Finding hidden food spots 📍", "Making magic in kitchen ✨", "Eat good, feel good 🥗", "Desi tadka with a twist 🌶️"],
+        cta: ["📩 DM for Collaborations", "👇 Full recipe in bio!", "📍 Visit my blog", "🥘 Let's cook together!", "🔗 Menu linked below"]
+      },
+      finance: {
+        id: ["Trader & Finance 💰", "Wealth Strategist 💡", "Finance Made Simple 📈", "Stock Market Expert 📊", "Economic Enthusiast 🏛️"],
+        auth: ["Join the 1% mindset 🚀", "Trusted by 1000+ people 🤝", "Chasing Financial Freedom 💎", "Mastering the charts 📊", "Wealth builder 🏦"],
+        val: ["Helping you make money 💡", "Trading strategies for you 📈", "Invest in your future 🏛️", "Financial education daily 🧠", "Smart money moves 💰"],
+        cta: ["🔗 Explore strategies below", "📩 DM for Portfolio help", "👇 Free trading guide!", "🚀 Start investing now", "📍 Join the community"]
+      },
+      travel: {
+        id: ["Travel Nomad ✈️", "Adventure Seeker 🏔️", "Visual Storyteller 📸", "Globe Trotter 🌍", "Wanderlust Driven 🧭"],
+        auth: ["50+ Cities & Counting 🧭", "Exploring hidden India 🇮🇳", "Living out of a suitcase 🎒", "Chasing sunsets 🌅", "Bucket list checked ✅"],
+        val: ["Finding beauty everywhere 🌍", "Travel tips on a budget 💰", "Capturing raw moments 📸", "Unfiltered travel life 🏕️", "Your window to the world 🪟"],
+        cta: ["👇 Check my journey!", "📍 Next stop: unknown", "📩 DM for trip advice", "🔗 Guide linked below", "🧭 Let's explore together!"]
+      }
+    };
 
-  <div class="hero">
-    <h1>📝 Bio <span>Generator</span></h1>
-    <p>1 click me ready-to-use bios for Instagram, LinkedIn, Twitter</p>
-    <div class="stats">
-      <div class="stat"><strong>200+</strong> Bios</div>
-      <div class="stat"><strong>12</strong> Categories</div>
-      <div class="stat"><strong>150</strong> Char Limit ✨</div>
-    </div>
-  </div>
+    function pick(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
 
-  <div class="card">
-    <span class="label">📂 Choose Bio Style</span>
-    <div class="cats" id="cats">
-      <button class="cat active" data-c="boy">👦 Boy</button>
-      <button class="cat" data-c="girl">👧 Girl</button>
-      <button class="cat" data-c="attitude">😎 Attitude</button>
-      <button class="cat" data-c="aesthetic">🌸 Aesthetic</button>
-      <button class="cat" data-c="vip">👑 VIP</button>
-      <button class="cat" data-c="funny">😂 Funny</button>
-      <button class="cat" data-c="motivation">🚀 Motivation</button>
-      <button class="cat" data-c="couple">💑 Couple</button>
-      <button class="cat" data-c="business">💼 Business</button>
-      <button class="cat" data-c="linkedin">💻 LinkedIn</button>
-      <button class="cat" data-c="twitter">𝕏 Twitter</button>
-      <button class="cat" data-c="hinglish">🇮🇳 Hinglish</button>
-    </div>
-    <button class="gen-btn" id="genBtn">⚡ Generate Bio</button>
-  </div>
-
-  <div class="result">
-    <div class="result-head">
-      <span class="result-cat" id="rCat">👦 Boy</span>
-      <div class="result-meta">
-        <span class="char-count" id="rCount">0/150</span>
-      </div>
-    </div>
-    <div class="bio-text" id="bText">Tap button above to generate ⚡</div>
-    <div class="actions">
-      <button class="btn btn-primary" id="copyBtn"><span>📋</span><span>Copy Bio</span></button>
-      <button class="btn" id="shareBtn"><span>💬</span><span>Share</span></button>
-    </div>
-  </div>
-
-  <div class="tip">
-    <strong>💡 Bio Pro Tip:</strong>
-    Instagram bio max <strong>150 characters</strong> tak hoti hai. Phone Notes me bio likho with line breaks, phir copy karke Instagram me paste karo - emojis + line breaks work karte hain!
-  </div>
-
-  <footer>
-    <a href="/">Home</a>·<a href="/blog/">Blog</a>·<a href="/tools/">Tools</a>·<a href="/tools/hashtag-generator.html">Hashtags</a>
-    <p style="margin-top:12px">&copy; 2026 CaptionStudio · By Ansh Yadav ❤️</p>
-  </footer>
-
-</div>
-
-<div class="toast" id="toast">Copied!</div>
-
-<script>
-const B={
-boy:[
-"King of my own world 👑\nSelf-made, self-paid 💸\nDM for collabs 📩",
-"Born to stand out 🌟\nLiving my dream 💫\nHustle 24/7 🔥",
-"Mr. Independent 😎\nCoffee + Code ☕\nFuture CEO 💼",
-"Gym 🏋️ | Grind 💪 | Glow ✨\nNo shortcuts to success",
-"Silent worker, loud results 🎯\nWatch me rise 📈",
-"Self-love > Everything 💯\nBuilding empire 🏰\nVibes only ✌️",
-"Dream big 🌌\nWork harder 💪\nStay humble 🙏",
-"Future is mine 🔮\nGoals > Comfort 🎯",
-"Mr. Perfect 😎\nHeart of gold 💛\nMind of steel ⚡",
-"Born to fly ✈️\nMade to shine ⭐",
-"Wolf alone, never weak 🐺\nPack of one 💪",
-"Engineer by day 💻\nDreamer by night 🌙",
-"Made in India 🇮🇳\nSpeaking my mind 🗣️",
-"Less talk, more action 🎯\nWatch & learn 👀",
-"Cricket 🏏 | Coding 💻 | Coffee ☕",
-"Officially unofficial 😏\nDoing my thing 🎶",
-"Born winner 🏆\nForever learner 📚",
-"Foodie 🍕 | Gamer 🎮 | Dreamer 💭",
-"Walking my own path 🚶\nMaking my own rules 📜",
-"Captain of my ship 🚢\nMaster of my fate ⚓"
-],
-
-girl:[
-"Soft heart, savage mind 💕🔥\nSparkle, smile, slay ✨",
-"Queen of my own life 👸\nCoffee + Confidence ☕",
-"Pink lover 💕\nDream chaser 💭\nSelf-made girl 💪",
-"Born to shine ✨\nMade to glow 🌟\nBuilt to slay 💃",
-"Daughter of God 🙏\nPrincess of dreams 👑",
-"Just a girl building her dreams 💭\nCoffee in one hand, world in other ☕🌍",
-"Wildflower 🌸 | Wanderer ✈️\nForever soul 💫",
-"Stay sassy, stay classy 💃\nLive the life you love 💕",
-"Cute but psycho 😈\nBut cute though 🥰",
-"Glamorous 💎\nGlittering ✨\nGlorious 👑",
-"Heels high, head higher 👠\nSmile bright, future brighter 😊",
-"My vibe attracts my tribe ✨\nNo drama, just dreams 💭",
-"Pretty face 😍\nPretty heart 💕\nPrettier soul 🌸",
-"Born to bloom 🌷\nBuilt to shine ✨",
-"Sugar 🍬 | Spice 🌶️ | Everything nice ✨",
-"Mama's girl 💕\nDaddy's princess 👸\nSelf's queen 👑",
-"She believed she could,\nSo she did 💪✨",
-"Sunshine mixed with little hurricane 🌪️☀️",
-"Coffee, books, music 📚☕🎵\nThat's my therapy 💆‍♀️",
-"Just being me 💕\nTake it or leave it 😎"
-],
-
-attitude:[
-"Not your average 💯\nNot your type either 😎",
-"I don't follow trends, I set them 🔥",
-"Be a flamingo in a flock of pigeons 🦩",
-"I'm not weird, I'm limited edition 💎",
-"Built different 💪\nBorn different ⚡",
-"Class apart, miles ahead 🚀\nNo competition, just goals 🎯",
-"My attitude is my identity 🆔\nMy silence is my power 🤫",
-"I'm not arrogant, just better 😏",
-"Throne is mine 👑\nCrown is earned 🏆",
-"No expectations, no disappointments 😎",
-"Born with attitude 😤\nRaised with values 🙏",
-"Be the energy you want to attract ⚡",
-"I'm not for everyone 🚫\nAnd that's okay 💯",
-"Hate me, love me, never ignore me 💯",
-"Mood: Untouchable 💎\nVibe: Unstoppable 🚀",
-"Less drama, more dreams 💭",
-"I'm rare, I'm myself 💎\nLike it or not 😎",
-"Confidence is my outfit 💃\nAttitude is my accessory 👜",
-"Don't follow me, you'll get lost 🚫",
-"Loyal to few 🤝\nCool to many ❄️\nReal to all 💯"
-],
-
-aesthetic:[
-"🌸 soft girl era 🌸\n☁️ healing & growing\n✨ living slowly",
-"💌 just here for the vibes\n🪷 lowercase living\n🤍 uppercase dreams",
-"🌷 chasing slow mornings\n☕ coffee & quiet\n📖 books & blankets",
-"🌙 moon child\n✨ stardust soul\n🪐 cosmic vibes",
-"🌿 grounded & growing\n🌸 blooming softly",
-"🍃 wildflower soul\n🌻 sunny disposition",
-"🤍 quiet luxury\n🪞 self mirror\n🌹 timeless taste",
-"🌊 ocean soul\n🐚 beach heart\n☀️ summer mind",
-"🤎 cozy & quiet\n☕ café days\n📚 book nights",
-"☁️ daydreamer\n🌸 forever romantic\n✨ believer in magic",
-"📷 capturing sunsets\n🎨 painting memories",
-"🌻 always sunny\n🌧️ sometimes rainy\n🌈 every day beautiful",
-"🍂 autumn lover\n☕ pumpkin spice life",
-"📖 living poetically\n🌹 loving deeply",
-"🪷 still water runs deep\n🌙 quiet mind, full heart",
-"🌸 cherry blossom soul\n🌿 sage green heart",
-"☕ slow mornings\n📚 long evenings\n🌙 quiet nights",
-"🤍 minimalist mind\n🌸 maximalist heart",
-"🌅 sunsets > sunrises\n🌊 ocean > mountains",
-"✨ stardust dreams\n🌙 moonlit nights"
-],
-
-vip:[
-"👑 VIP MEMBER 👑\nLimited edition 💎\nPremium only 🌟",
-"⚜ Royal Vibes Only ⚜\n👑 Born to Rule",
-"🏆 ELITE CLASS 🏆\nNo room for ordinary 💯",
-"💎 OFFICIALLY VERIFIED 💎\nPremium member ✨",
-"👑 Royal Vibes 👑\n🏰 King of empire\n⚜ Born blessed ⚜",
-"💎 VIP STATUS 💎\n🏆 Top tier only\n⭐ A-class life",
-"💼 CEO Mode ON 💼\nBuilding empire 🏰",
-"👑 The King 👑\nThrone is mine 🏰",
-"💎 Exclusive Club 💎\nMembers only ✋",
-"⚜ Royal Blood ⚜\nBorn luxe, raised rich 💸",
-"👑 QUEEN OF DREAMS 👑\n💕 Soft heart\n💪 Hard mind",
-"🏰 King of my Castle 🏰\n👑 Lord of my life",
-"💎 Living Luxury 💎\nChampagne taste 🥂",
-"👑 UNTOUCHABLE 👑\nStay below my level 📉",
-"⭐ Elite Circle ⭐\nLimited access only 🔒",
-"💸 Millionaire Mindset 💸\n🏆 Billion dollar dreams",
-"💎 Premium Soul 💎\nDon't dilute me ❌",
-"👑 First Class Only 👑\nEconomy not my style ✈️",
-"💼 Boss Mode ON 💼\nDon't disturb 🔕",
-"💎 One and Only 💎\nNo second copy 🚫"
-],
-
-funny:[
-"Loading... 99% 🔄\n(Don't ask the other 1%)",
-"Allergic to mornings ☀️\nPowered by chai ☕",
-"Professional overthinker 🧠\nAmateur sleeper 😴",
-"I'm not lazy 😴\nEnergy saving mode on 🔋",
-"Diet starts tomorrow 🍕\n(Daily promise) 😂",
-"Maintaining 6-pack 🍕\n(6 packs of biscuits)",
-"99 problems 🤯\nAnd bio is one",
-"Sarcasm is my first language 🗣️\nEnglish is my second 📚",
-"Foodie 🍕 | Sleep enthusiast 😴 | Procrastination expert 📅",
-"Currently: Eating 🍔\nProbably: Eating later 🍕",
-"I'm not weird 🤪\nI'm a limited edition 💎",
-"Trust me, I'm an engineer 👨‍💻\n(Currently debugging life 🐛)",
-"Brain status: 404 Not Found ❌",
-"I'm not addicted to chai ☕\nWe're in committed relationship 💕",
-"My life: Loading... ⏳\nPlease be patient 🙏",
-"Born to sleep 😴\nForced to work 💼",
-"Adult-ing badly 🤡\nSince 2020 📅",
-"Brain: 50% Meme 🤡\n50% Anxiety 😰",
-"My superpower: Falling asleep 😴\nAnywhere, anytime 📍",
-"I'm a mess 🌪️\nBut a fun mess 🎉"
-],
-
-motivation:[
-"Dream big 💭\nWork hard 💪\nStay focused 🎯",
-"Be your own kind of inspiration ✨\nSuccess is the best revenge 🏆",
-"Believe you can 💪\nYou're halfway there ⭐",
-"Hustle in silence 🤫\nLet success make noise 📢",
-"Discipline > Motivation 💪\nAction > Excuses 🎯",
-"Stay hungry 🍴\nStay foolish 🤡\nStay yourself 💯",
-"Your only limit is you 🚫\nBreak free, fly high ✈️",
-"Today's hustle 💪\nTomorrow's miracle 🌟",
-"Failure is just delayed success 🏆\nKeep going 🚀",
-"Be so good, they can't ignore you 🌟",
-"Energy speaks louder than words ⚡\nVibes don't lie 💯",
-"Stay positive 🌞\nStay patient 🙏\nStay persistent 💪",
-"Don't quit your daydream 💭\nBuild it instead 🏗️",
-"Pressure makes diamonds 💎\nTime makes legends ⏰",
-"Believe in yourself 💪\nEven when no one else does ✨",
-"Stop wishing 🌠\nStart doing 💪",
-"Trust the process ⏳\nEven when it hurts 💔",
-"Small steps daily 👣\n= Big results yearly 📈",
-"Strong mind > Strong body 🧠\nStrong heart > Strong words ❤️",
-"Comfort kills dreams ☠️\nDiscipline builds them 💪"
-],
-
-couple:[
-"Tu mera sukoon 💕\nMain teri zindagi 💖",
-"Found my forever in you 💍\nForever yours ❤️",
-"You + Me = Always 💖\nNothing can break us",
-"Tere bina dil khali ❤️\nTujhse pyaar hamesha",
-"Love is in the air ❤️\nWe are couple goals 👫",
-"Loyal to one, forever 💯\nMy heart, your home 🏡",
-"My favorite person ❤️\nMy everything 💕",
-"Made for each other ❤️\n2 hearts, 1 soul 💑",
-"Best feeling ever 💕\nLove of my life ❤️",
-"Together we shine ✨\nForever we stay 💞",
-"You complete me 💕\nI complete you 💖",
-"My soulmate, my forever 💍\nSince day 1 ❤️",
-"Promise: Always & Forever 🤝\nLove never ends ♾️",
-"With you, every day is Valentine's 💕",
-"Two hearts, one love ❤️\nForever yours 💍",
-"My heart smiles when I see you 😊❤️",
-"Couple goals only 💕\nLove story in progress 📖",
-"Forever isn't long enough with you 💍",
-"You're my favorite notification 📱❤️",
-"My everything ❤️\nMy world 🌍\nMy forever 💕"
-],
-
-business:[
-"Founder & CEO 💼\nBuilding the future 🚀\nDM for collabs 📩",
-"Entrepreneur 💼\nDigital Marketer 📱\nBrand Builder 🏗️",
-"Serial Entrepreneur 🚀\nHustle Hard 💪\nDream Bigger 💭",
-"Founder | Strategist | Visionary 💼\nLet's connect 🤝",
-"Startup Founder 🚀\nBuilding ideas into reality 💡",
-"Digital Creator 💻\nBusiness Coach 💼\nMentor 🎯",
-"Building brands that last 🏗️\nDigital strategist 📊",
-"Marketing Expert 📈\nGrowth Hacker 🚀\nResults > Promises 💯",
-"Brand Builder 🏗️\nProblem Solver 🧠\nGoal Achiever 🏆",
-"Future-focused entrepreneur 🔮\nLet's create magic ✨",
-"Tech Founder 💻\nProduct Geek 📱\nGrowth Obsessed 📈",
-"Building a brand, not just business 💼\nFollow the journey 🚀",
-"CEO in making 💼\nBuilding empire one day at a time 🏗️",
-"Visionary | Doer | Achiever 💪",
-"E-commerce Expert 🛒\nDigital Marketing 📱\nBrand Builder 🏗️",
-"Money mindset 💸\nGrowth mindset 📈\nFuture mindset 🔮",
-"Founder × Marketer × Mentor 💼\nLet's build together 🤝",
-"Helping brands grow 🚀\nDigital strategist 📊\nDM to collaborate 📩",
-"Entrepreneur by passion 💼\nCreator by choice 🎨",
-"Business owner 💼\nDream chaser 💭\nGoal getter 🎯"
-],
-
-linkedin:[
-"Founder @ Company | Building Future of Tech 💼",
-"Marketing Lead | 5+ years experience | Growth strategist 📈",
-"Software Engineer @ Tech Co | Open to opportunities 💻",
-"Helping brands grow through digital marketing 🚀 | Open to collab",
-"Product Manager | Building user-first experiences | Tech enthusiast 💡",
-"Content Creator | Marketing Strategist | Speaker 🎤",
-"Sales Professional | B2B Expert | Closing deals daily 💼",
-"HR Business Partner | People-first leader 👥",
-"Digital Marketer | SEO Expert | Growth Hacker 📊",
-"Founder × Designer × Storyteller ✨ | Let's connect",
-"MBA | Marketing Manager | Brand Strategist 💼",
-"Tech Lead | Engineering Manager | Mentor 👨‍💻",
-"Investment Banker | Wealth Manager | Helping you grow 💰",
-"Consultant | Strategy | Operations | Let's collaborate 🤝",
-"UI/UX Designer | Crafting digital experiences ✨",
-"Data Scientist | ML Engineer | AI Enthusiast 🤖",
-"Project Manager | Agile Coach | PMP Certified 📊",
-"Operations Manager | Process Optimization Expert 🎯",
-"CFO | Finance Strategist | Building wealth strategies 💼",
-"Account Manager | Client Success | Relationship Builder 🤝"
-],
-
-twitter:[
-"Tweets, threads, takes 🐦",
-"Just a person on the internet 💻",
-"Sharing thoughts in 280 chars or less ✍️",
-"Building in public 🚀",
-"Coffee, code, cats ☕💻🐱",
-"Marketing nerd 📊\nWriter on weekends ✍️",
-"Tech enthusiast 💻\nFounder in making 🚀",
-"Opinions are mine 💭\nThoughts are loud 🗣️",
-"Daily thoughts, occasional wisdom 🧠",
-"Memes + Marketing = My life 📱",
-"Tweeting for fun, learning for life 📚",
-"Founder × Engineer × Dad 👨‍💼👨‍💻👨‍👧",
-"Sharing my journey, one tweet at a time 🚀",
-"India 🇮🇳 | Tech | Travel | Tea ☕",
-"Builder of things 🔨\nTeller of stories 📖",
-"Just here for the threads 🧵",
-"Software engineer building cool stuff 💻",
-"Investor | Founder | Reader 💼📚",
-"Crypto curious 🪙 | Tech bullish 📈",
-"Be kind, be curious, ship daily 🚀"
-],
-
-hinglish:[
-"Apne mood ka king 👑\nApni life ka boss 💼\nApni story ka hero 🦸",
-"Desi swag 🇮🇳\nInternational dreams 🌍\nLocal heart ❤️",
-"Chai pe charcha ☕\nCode pe focus 💻\nSapne pe yakeen 💭",
-"Dil se Indian 🇮🇳\nDimaag se ambitious 🧠",
-"Apna time aayega 🕒\nPatience + Hustle 💪",
-"Maa ka pyaar 👩\nPapa ki ummeed 👨\nSelf ka pride 💪",
-"Made in India 🇮🇳\nLoved by all ❤️",
-"Mehnat karo, kismat banao 💪\nDua karo, raasta milega 🙏",
-"Sapno ka safar lambha 🛤️\nManzil zaroor milegi 🎯",
-"Khud ki kahani khud likh 📖\nHero bhi tu, director bhi tu 🎬",
-"Attitude meri pehchaan 😎\nManners meri tarbiyat 🙏",
-"Dosti meri jaan 🤝\nPyaar mera dharm ❤️",
-"Mood ka raja 🎭\nTime ka maalik ⏰",
-"Karma believer 🙏\nHard work doer 💪\nSelf-respect lover 💎",
-"Confidence high 💯\nDrama zero 🚫\nVibes only 🌟",
-"Sirf 1 zindagi mili 🎁\nMast jiyo, masti se jiyo ✨",
-"Hum apni dhun me chalte hain 🎵\nDuniya ki nahi sunte 🚫",
-"Family first 👨‍👩‍👧\nCareer second 💼\nDrama never 🚫",
-"Bindaas insaan 😎\nKhulli kitaab 📖\nSachi soch 💯",
-"Dil bada, sapne aur bade 💭\nRisk lene se nahi darta 🎢"
-]
-};
-
-const NAMES={boy:"👦 Boy",girl:"👧 Girl",attitude:"😎 Attitude",aesthetic:"🌸 Aesthetic",vip:"👑 VIP",funny:"😂 Funny",motivation:"🚀 Motivation",couple:"💑 Couple",business:"💼 Business",linkedin:"💻 LinkedIn",twitter:"𝕏 Twitter",hinglish:"🇮🇳 Hinglish"};
-
-const $=(id)=>document.getElementById(id);
-let sel="boy",cur=null,lastI=-1;
-
-$("cats").addEventListener("click",(e)=>{
-  const b=e.target.closest(".cat");
-  if(!b)return;
-  document.querySelectorAll(".cat").forEach(x=>x.classList.remove("active"));
-  b.classList.add("active");
-  sel=b.dataset.c;
-  gen();
-});
-
-$("genBtn").addEventListener("click",gen);
-
-function gen(){
-  const pool=B[sel]||[];
-  if(pool.length===0){
-    $("bText").textContent="Coming soon!";
-    return;
-  }
-  let i;
-  do{i=Math.floor(Math.random()*pool.length);}while(pool.length>1&&i===lastI);
-  lastI=i;
-  cur=pool[i];
-  $("bText").textContent=cur;
-  $("rCat").textContent=NAMES[sel];
-  
-  // Char count
-  const len=cur.length;
-  const cc=$("rCount");
-  cc.textContent=len+"/150";
-  cc.classList.remove("warn","over");
-  if(len>150)cc.classList.add("over");
-  else if(len>120)cc.classList.add("warn");
-  
-  const cb=$("copyBtn");
-  cb.classList.remove("done");
-  cb.querySelector("span:last-child").textContent="Copy Bio";
-}
-
-$("copyBtn").addEventListener("click",()=>{
-  if(!cur)return;
-  copy(cur,()=>{
-    const b=$("copyBtn");
-    b.classList.add("done");
-    b.querySelector("span:last-child").textContent="Copied!";
-    toast("Bio copied!");
-    setTimeout(()=>{
-      b.classList.remove("done");
-      b.querySelector("span:last-child").textContent="Copy Bio";
-    },2000);
-  });
-});
-
-$("shareBtn").addEventListener("click",()=>{
-  if(!cur)return;
-  const t=cur+"\n\nMore bios: https://captionstudio.in/tools/bio-generator.html";
-  if(navigator.share){navigator.share({text:t}).catch(()=>{});}
-  else{window.open("https://wa.me/?text="+encodeURIComponent(t),"_blank");}
-});
-
-function copy(t,cb){
-  if(navigator.clipboard){
-    navigator.clipboard.writeText(t).then(cb).catch(fb);
-  }else{fb();}
-  function fb(){
-    const ta=document.createElement("textarea");
-    ta.value=t;ta.style.position="fixed";ta.style.left="-9999px";
-    document.body.appendChild(ta);ta.select();
-    try{document.execCommand("copy");cb();}catch(e){}
-    document.body.removeChild(ta);
-  }
-}
-
-function toast(m){
-  const t=$("toast");
-  t.textContent=m;
-  t.classList.add("show");
-  setTimeout(()=>t.classList.remove("show"),2000);
-}
-
-window.addEventListener("load",()=>setTimeout(gen,200));
-</script>
-
+    let isGenerating = false;
+    function generateBio() {
+      if (isGenerating) return;
+      isGenerating = true;
+      document.getElementById('results').style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+      const niche = document.getElementById('niche').value;
+      setTimeout(() => {
+        const pool = bioData[niche] || bioData['creator'];
+        const line1 = pick(pool.id);
+        const line2 = pick(pool.auth);
+        const line3 = pick(pool.val);
+        const line4 = pick(pool.cta);
+        
+        document.getElementById('final-bio').innerText = `${line1}\n${line2}\n${line3}\n${line4}`;
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('results').style.display = 'block';
+        isGenerating = false;
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 1000);
+    }
+    async function copyText() {
+      await navigator.clipboard.writeText(document.getElementById('final-bio').innerText);
+      document.getElementById('copyBtn').innerText = '✅ Copied!';
+      setTimeout(() => document.getElementById('copyBtn').innerText = '📋 Copy Bio', 2000);
+    }
+  </script>
 </body>
 </html>
