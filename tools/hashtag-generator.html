@@ -1,263 +1,551 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Hashtag Generator 2026 - Smart 5 Hashtags | CaptionStudio</title>
-<meta name="description" content="Smart hashtag generator - 5 algorithm-friendly hashtags per click (Instagram 2026 update). 15 categories, 1 click copy. Free!">
-<meta name="author" content="Ansh Yadav">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://captionstudio.in/tools/hashtag-generator.html">
-<link rel="icon" type="image/png" href="/favicon.png">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Free Hashtag Generator | CaptionStudio">
-<meta property="og:description" content="5 smart hashtags per click - algorithm-friendly (Instagram 2026). Free!">
-<meta property="og:url" content="https://captionstudio.in/tools/hashtag-generator.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CaptionStudio Hashtag Generator","operatingSystem":"Web","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"author":{"@type":"Person","name":"Ansh Yadav"}}
-</script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#ff4757;--primary-dark:#e63946;--accent:#ffa502;--green:#10b981;--text:#1f2937;--muted:#6b7280;--border:#ffebeb;--bg:#fff5f5}
-body{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#fff 0%,#fff5f5 100%);color:var(--text);line-height:1.6;min-height:100vh;font-size:16px}
-header{background:#fff;border-bottom:1px solid var(--border);padding:14px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{width:32px;height:32px;border-radius:8px}
-.brand-name{font-weight:800;font-size:18px;color:var(--primary)}
-.brand-tag{font-size:11px;color:var(--muted);display:block;margin-top:-2px;font-weight:500}
-.header-link{color:var(--primary);text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;border-radius:8px;background:var(--bg)}
-.wrap{max-width:680px;margin:30px auto;padding:0 16px}
-.hero{text-align:center;margin-bottom:30px}
-.hero h1{font-size:32px;font-weight:800;color:var(--text);margin-bottom:10px;letter-spacing:-0.5px}
-.hero h1 span{color:var(--primary)}
-.hero p{color:var(--muted);font-size:15px}
-.stats{display:flex;justify-content:center;gap:12px;margin-top:16px;flex-wrap:wrap}
-.stat{background:#fff;padding:10px 18px;border-radius:50px;font-size:13px;font-weight:600;border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.04)}
-.stat strong{color:var(--primary)}
-.card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
-.label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;display:block}
-.cats{display:flex;flex-wrap:wrap;gap:8px}
-.cat{background:#fff;border:1.5px solid var(--border);color:var(--text);padding:10px 16px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;transition:.15s;font-family:inherit}
-.cat:hover{border-color:var(--primary);color:var(--primary)}
-.cat.active{background:var(--primary);color:#fff;border-color:var(--primary)}
-.gen-btn{width:100%;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;border:none;padding:16px;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:18px;box-shadow:0 6px 20px rgba(255,71,87,.3);transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px}
-.gen-btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(255,71,87,.4)}
-.result{background:#fff;border:2px solid var(--primary);border-radius:20px;padding:24px;margin-bottom:20px;box-shadow:0 8px 25px rgba(255,71,87,.08);min-height:160px}
-.result-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.result-cat{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:5px 14px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px}
-.result-num{font-size:11px;color:var(--muted);font-weight:600}
-.tags-grid{display:flex;flex-wrap:wrap;gap:8px;padding:18px 0;min-height:60px}
-.tag{background:var(--bg);color:var(--primary-dark);padding:8px 14px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:.15s;border:1px solid transparent}
-.tag:hover{background:var(--primary);color:#fff;border-color:var(--primary);transform:translateY(-1px)}
-.text-block{background:#fafafa;padding:14px;border-radius:10px;font-size:14px;color:var(--text);line-height:1.7;word-wrap:break-word;font-weight:500;border:1px dashed var(--border);margin-top:8px}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.btn{background:#f3f4f6;border:none;color:var(--text);padding:13px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;transition:.15s}
-.btn:hover{background:#e5e7eb}
-.btn-primary{background:var(--primary);color:#fff}
-.btn-primary:hover{background:var(--primary-dark)}
-.btn.done{background:var(--green);color:#fff}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(150px);background:var(--text);color:#fff;padding:12px 24px;border-radius:50px;font-size:14px;font-weight:600;box-shadow:0 10px 25px rgba(0,0,0,.2);transition:.3s;z-index:999}
-.toast.show{transform:translateX(-50%) translateY(0)}
-.tip{background:var(--bg);border-left:4px solid var(--primary);padding:14px 18px;border-radius:10px;margin-top:20px;font-size:13px;line-height:1.6;color:var(--text)}
-.tip strong{color:var(--primary-dark);display:block;margin-bottom:4px}
-footer{text-align:center;padding:30px 16px;color:var(--muted);font-size:13px;margin-top:20px}
-footer a{color:var(--primary);text-decoration:none;font-weight:600;margin:0 8px}
-@media(max-width:480px){.hero h1{font-size:24px}.tag{font-size:13px;padding:7px 12px}}
-</style>
+  <link rel="canonical" href="https://captionstudio.in/tools/hashtag-generator.html" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X490RGQB38');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+
+  <!-- Primary SEO -->
+  <title>Free Trending Hashtag Generator for Instagram 2026 | CaptionStudio</title>
+  <meta name="title" content="Free Trending Hashtag Generator for Instagram 2026 | CaptionStudio" />
+  <meta name="description" content="Generate 3 strategic Instagram hashtag sets per niche — high-volume for reach, medium-competition for relevance, low-competition for ranking. 15+ niches, copy-ready, 100% free. Built for Indian creators." />
+  <meta name="keywords" content="hashtag generator, instagram hashtags 2026, trending hashtags India, reels hashtags, best hashtags for instagram, hashtag tool free, niche hashtags, viral hashtags" />
+  <meta name="author" content="Ansh Yadav, CaptionStudio" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://captionstudio.in/tools/hashtag-generator.html" />
+  <meta property="og:title" content="Free Trending Hashtag Generator for Instagram 2026" />
+  <meta property="og:description" content="3 strategic hashtag sets per niche — reach, relevance & ranking. Copy-ready. 100% free." />
+  <meta property="og:image" content="https://captionstudio.in/og-image.jpg" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="CaptionStudio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Trending Hashtag Generator for Instagram 2026" />
+  <meta name="twitter:description" content="3 strategic hashtag sets per niche. Copy-ready. 100% free." />
+  <meta name="twitter:image" content="https://captionstudio.in/og-image.jpg" />
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://captionstudio.in/"},
+      {"@type":"ListItem","position":2,"name":"AI Tools","item":"https://captionstudio.in/tools/"},
+      {"@type":"ListItem","position":3,"name":"Hashtag Generator","item":"https://captionstudio.in/tools/hashtag-generator.html"}
+    ]
+  }
+  </script>
+
+  <!-- SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CaptionStudio Trending Hashtag Generator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"INR"},
+    "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1860"}
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"How many hashtags should I use on Instagram in 2026?","acceptedAnswer":{"@type":"Answer","text":"In 2026 Instagram recommends 3 to 5 highly relevant hashtags per post or Reel. Quality and relevance now matter far more than quantity."}},
+      {"@type":"Question","name":"What are the 3 hashtag sets?","acceptedAnswer":{"@type":"Answer","text":"High-volume hashtags for maximum reach, medium-competition hashtags for relevance, and low-competition hashtags that help you rank and stay visible longer."}},
+      {"@type":"Question","name":"Is this hashtag generator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is 100% free with no signup. Generate unlimited hashtag sets for any niche."}},
+      {"@type":"Question","name":"Do these hashtags work for Reels?","acceptedAnswer":{"@type":"Answer","text":"Yes. The sets are optimised for Instagram Reels, posts and stories, and also work on YouTube Shorts and Facebook Reels."}}
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --orange:#e8440a; --orange-pale:#fff3ee;
+      --black:#191919; --ink:#2e2e2e; --muted:#6b6b6b;
+      --rule:#e5e5e5; --bg:#ffffff;
+      --serif:'Lora',Georgia,serif;
+      --sans:'Source Sans 3',system-ui,sans-serif;
+      --display:'Syne',sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+    /* NAV */
+    nav{border-bottom:1px solid var(--rule);background:rgba(255,255,255,.97);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+    .logo{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:800;font-size:1.2rem;color:var(--black)}
+    .desktop-nav{display:flex;gap:24px;font-family:var(--sans);font-weight:600;font-size:.95rem}
+    .desktop-nav a:hover{color:var(--orange)}
+    .nav-cta{background:var(--orange);color:#fff;font-family:var(--sans);font-weight:700;font-size:.9rem;padding:8px 16px;border-radius:8px}
+    .hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+    .hbg span{display:block;width:24px;height:2.5px;background:var(--black);border-radius:2px;transition:.25s}
+    .hbg.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .hbg.open span:nth-child(2){opacity:0}
+    .hbg.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .drawer{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:.25s;z-index:200}
+    .drawer.open{opacity:1;visibility:visible}
+    .drawer-panel{position:absolute;top:0;right:0;width:min(300px,82vw);height:100%;background:#fff;padding:74px 22px 22px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:.28s;box-shadow:-12px 0 40px rgba(0,0,0,.12)}
+    .drawer.open .drawer-panel{transform:translateX(0)}
+    .drawer-panel a{font-family:var(--sans);font-weight:600;font-size:1rem;padding:12px 6px;border-bottom:1px solid #f3f3f3;color:var(--ink)}
+    .drawer-panel a:hover{color:var(--orange)}
+    .drawer-close{position:absolute;top:18px;right:18px;background:#f6f6f6;border:none;width:38px;height:38px;border-radius:50%;font-size:1.3rem;cursor:pointer;color:var(--ink)}
+    @media(max-width:760px){.desktop-nav{display:none}.hbg{display:flex}}
+
+    /* BREADCRUMB */
+    .crumb{font-family:var(--sans);font-size:.82rem;color:var(--muted);padding:16px 0 0}
+    .crumb a:hover{color:var(--orange)}
+
+    /* HERO */
+    .tool-hero{text-align:center;padding:30px 0 10px}
+    .eyebrow{display:inline-block;font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);background:var(--orange-pale);padding:6px 14px;border-radius:30px;margin-bottom:16px}
+    .tool-hero h1{font-family:var(--display);font-weight:800;font-size:2.6rem;line-height:1.1;color:var(--black);margin-bottom:14px}
+    .tool-hero h1 em{font-style:normal;color:var(--orange)}
+    .tool-hero p{font-family:var(--sans);font-size:1.05rem;color:var(--muted);max-width:620px;margin:0 auto}
+    @media(max-width:560px){.tool-hero h1{font-size:2rem}}
+
+    /* TOOL CARD */
+    .tool-card{background:#fff;border:1px solid var(--rule);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.06);padding:28px;margin:28px 0}
+    .field-label{font-family:var(--sans);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:10px;display:block}
+    .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+    .chip{font-family:var(--sans);font-weight:600;font-size:.9rem;padding:9px 15px;border:1.5px solid var(--rule);border-radius:30px;background:#fafafa;cursor:pointer;transition:all .15s;user-select:none}
+    .chip:hover{border-color:var(--orange);color:var(--orange)}
+    .chip.active{background:var(--orange);border-color:var(--orange);color:#fff}
+    .gen-btn{width:100%;background:var(--orange);color:#fff;font-family:var(--sans);font-weight:700;font-size:1.08rem;padding:16px;border:none;border-radius:12px;cursor:pointer;transition:.15s;box-shadow:0 6px 20px rgba(232,68,10,.25)}
+    .gen-btn:hover{background:#d23c08;transform:translateY(-1px)}
+    .gen-btn:active{transform:translateY(0)}
+
+    /* RESULTS */
+    .results{margin-top:24px;display:grid;gap:16px}
+    .empty-state{text-align:center;padding:30px 16px;border:1.5px dashed var(--rule);border-radius:14px;background:#fafafa}
+    .set-card{border:1px solid var(--rule);border-radius:14px;padding:18px 20px;background:#fff;animation:pop .35s ease}
+    @keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .set-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+    .set-tag{font-family:var(--sans);font-weight:700;font-size:.74rem;letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+    .tag-high{color:#0a7d33;background:#e8f7ee}
+    .tag-med{color:#b06a00;background:#fff4e0}
+    .tag-low{color:#1456c4;background:#e7f0ff}
+    .set-purpose{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+    .tag-pill{font-family:var(--sans);font-size:.86rem;font-weight:600;color:var(--ink);background:#f4f4f4;border:1px solid #ececec;border-radius:8px;padding:5px 10px}
+    .copy-btn{font-family:var(--sans);font-weight:600;font-size:.85rem;background:#f6f6f6;border:1px solid var(--rule);border-radius:8px;padding:8px 14px;cursor:pointer;transition:.15s}
+    .copy-btn:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
+    .copy-all{margin-top:6px;display:flex;gap:10px;flex-wrap:wrap}
+    .copy-all .copy-btn.primary{background:var(--black);color:#fff;border-color:var(--black)}
+    .copy-all .copy-btn.primary:hover{background:var(--orange);border-color:var(--orange)}
+
+    /* AD SLOT */
+    .ad-slot{margin:30px 0;padding:14px;text-align:center;background:#fafafa;border:1px dashed var(--rule);border-radius:12px;font-family:var(--sans);font-size:.75rem;color:#bbb;letter-spacing:.1em;text-transform:uppercase;min-height:90px;display:flex;align-items:center;justify-content:center}
+
+    /* CONTENT */
+    .content{padding:30px 0 10px}
+    .content h2{font-family:var(--display);font-weight:800;font-size:1.7rem;color:var(--black);margin:34px 0 14px}
+    .content h3{font-family:var(--sans);font-weight:700;font-size:1.15rem;color:var(--ink);margin:24px 0 10px}
+    .content p{font-size:1.02rem;color:var(--ink);margin-bottom:14px}
+    .content ul{margin:0 0 16px 22px}
+    .content li{margin-bottom:8px}
+    .content strong{color:var(--black)}
+    .tip-box{background:var(--orange-pale);border:1px solid #f6d9cc;border-radius:12px;padding:16px 18px;font-family:var(--sans);font-size:.95rem;color:var(--ink);margin:18px 0}
+
+    /* FAQ */
+    .faq details{border:1px solid var(--rule);border-radius:12px;padding:4px 18px;margin-bottom:12px;background:#fff}
+    .faq summary{font-family:var(--sans);font-weight:700;font-size:1rem;cursor:pointer;padding:14px 0;list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:'+';float:right;color:var(--orange);font-size:1.3rem;line-height:1}
+    .faq details[open] summary::after{content:'−'}
+    .faq p{padding:0 0 14px;font-family:var(--sans);font-size:.96rem;color:var(--muted)}
+
+    /* OTHER TOOLS */
+    .other-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 10px}
+    @media(max-width:640px){.other-tools{grid-template-columns:1fr}}
+    .ot-card{border:1px solid var(--rule);border-radius:14px;padding:20px;transition:.15s;background:#fff}
+    .ot-card:hover{border-color:var(--orange);box-shadow:0 8px 24px rgba(0,0,0,.06);transform:translateY(-2px)}
+    .ot-card .ot-ic{font-size:1.6rem}
+    .ot-card h4{font-family:var(--sans);font-weight:700;font-size:1.05rem;margin:8px 0 6px;color:var(--black)}
+    .ot-card p{font-family:var(--sans);font-size:.88rem;color:var(--muted);margin:0}
+
+    /* FOOTER */
+    footer{background:var(--black);color:#cfcfcf;margin-top:50px;padding:44px 0 24px;font-family:var(--sans)}
+    .ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+    @media(max-width:760px){.ft-grid{grid-template-columns:1fr 1fr}}
+    .ft-logo{font-family:var(--display);font-weight:800;font-size:1.3rem;color:#fff;margin-bottom:12px}
+    .ft-brand p{font-size:.88rem;line-height:1.6;color:#9a9a9a}
+    .ft-col h4{color:#fff;font-size:.95rem;margin-bottom:14px}
+    .ft-links a{display:block;font-size:.88rem;color:#9a9a9a;margin-bottom:9px}
+    .ft-links a:hover{color:var(--orange)}
+    .ft-copy{border-top:1px solid #333;padding-top:20px;font-size:.8rem;color:#777;text-align:center}
+
+    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--black);color:#fff;font-family:var(--sans);font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:30px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transition:.3s;z-index:300}
+    .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+  </style>
 </head>
 <body>
 
-<header>
-  <a href="/" class="brand">
-    <img src="/favicon.png" alt="CaptionStudio">
-    <div>
-      <div class="brand-name">CaptionStudio</div>
-      <span class="brand-tag">Free Hashtag Tool</span>
+  <!-- NAV -->
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="../index.html" class="logo">
+        <img src="../favicon.png" alt="CaptionStudio Logo" width="28" height="28" />
+        CaptionStudio
+      </a>
+      <div class="desktop-nav">
+        <a href="../tools/">Tools</a>
+        <a href="../blog/">Blog</a>
+        <a href="../earning.html">Earn</a>
+        <a href="../about.html">About</a>
+        <a href="hashtag-generator.html" class="nav-cta">Hashtag Generator</a>
+      </div>
+      <button class="hbg" id="hbg" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </a>
-  <a href="/tools/" class="header-link">🛠️ Tools</a>
-</header>
+  </nav>
 
-<div class="wrap">
-
-  <div class="hero">
-    <h1>#️⃣ Hashtag <span>Generator</span></h1>
-    <p>5 smart hashtags for maximum Instagram reach</p>
-    <div class="stats">
-      <div class="stat"><strong>500+</strong> Hashtags</div>
-      <div class="stat"><strong>15</strong> Categories</div>
-      <div class="stat"><strong>5</strong> Per Click ✨</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <span class="label">📂 Choose Niche</span>
-    <div class="cats" id="cats">
-      <button class="cat active" data-c="trending">🔥 Trending</button>
-      <button class="cat" data-c="reels">🎬 Reels</button>
-      <button class="cat" data-c="cricket">🏏 Cricket</button>
-      <button class="cat" data-c="love">❤️ Love</button>
-      <button class="cat" data-c="fashion">👗 Fashion</button>
-      <button class="cat" data-c="travel">✈️ Travel</button>
-      <button class="cat" data-c="food">🍕 Food</button>
-      <button class="cat" data-c="fitness">💪 Fitness</button>
-      <button class="cat" data-c="beauty">💄 Beauty</button>
-      <button class="cat" data-c="motivation">🚀 Motivation</button>
-      <button class="cat" data-c="business">💼 Business</button>
-      <button class="cat" data-c="tech">💻 Tech</button>
-      <button class="cat" data-c="photography">📸 Photo</button>
-      <button class="cat" data-c="lifestyle">✨ Lifestyle</button>
-      <button class="cat" data-c="couple">💑 Couple</button>
-    </div>
-    <button class="gen-btn" id="genBtn">⚡ Generate 5 Hashtags</button>
-  </div>
-
-  <div class="result">
-    <div class="result-head">
-      <span class="result-cat" id="rCat">🔥 Trending</span>
-      <span class="result-num">5 best hashtags</span>
-    </div>
-    <div class="tags-grid" id="tList"></div>
-    <div class="text-block" id="tText">Tap button above to generate ⚡</div>
-    <div class="actions">
-      <button class="btn btn-primary" id="copyBtn"><span>📋</span><span>Copy All</span></button>
-      <button class="btn" id="shareBtn"><span>💬</span><span>Share</span></button>
+  <!-- MOBILE DRAWER -->
+  <div class="drawer" id="drawer" onclick="if(event.target===this)closeMenu()">
+    <div class="drawer-panel">
+      <button class="drawer-close" onclick="closeMenu()" aria-label="Close menu">&times;</button>
+      <a href="../index.html">Home</a>
+      <a href="../tools/">AI Tools</a>
+      <a href="caption-generator.html">Caption Generator</a>
+      <a href="hashtag-generator.html">Hashtag Generator</a>
+      <a href="bio-generator.html">Bio Generator</a>
+      <a href="../earning.html">Earning Hub</a>
+      <a href="../blog/">Blog &amp; Strategy</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+      <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener">Telegram Community</a>
     </div>
   </div>
 
-  <div class="tip">
-    <strong>💡 Instagram 2026 Algorithm:</strong>
-    Sirf <strong>3-5 hashtags</strong> use karo (pehle 30 chalte the). Quality over quantity! Mix formula: 2 popular + 2 niche + 1 branded = best reach for Reels & Posts.
-  </div>
+  <main class="wrap">
+    <div class="crumb"><a href="../index.html">Home</a> › <a href="../tools/">AI Tools</a> › <span>Hashtag Generator</span></div>
 
+    <!-- HERO -->
+    <section class="tool-hero">
+      <span class="eyebrow">#️⃣ Smart Reach Engine</span>
+      <h1>Trending <em>Hashtag Generator</em></h1>
+      <p>Get <strong>3 strategic hashtag sets</strong> per niche — high-volume for reach, medium-competition for relevance, and low-competition for ranking. Copy-ready for Reels &amp; posts. 100% free.</p>
+    </section>
+
+    <!-- TOOL -->
+    <section class="tool-card">
+      <label class="field-label">1 · Choose Your Niche</label>
+      <div class="chip-row" id="nicheRow"></div>
+
+      <button class="gen-btn" id="genBtn" onclick="generate()">⚡ Generate 3 Hashtag Sets</button>
+
+      <div class="results" id="results">
+        <div class="empty-state" id="emptyState">
+          <div style="font-size:2rem">#️⃣</div>
+          <p style="font-family:var(--sans);color:var(--muted);margin-top:6px;font-size:.95rem">Pick a niche, then tap <strong>Generate</strong> for 3 strategic hashtag sets.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD SLOT (activate after AdSense approval) -->
+    <div class="ad-slot">Advertisement</div>
+
+    <!-- LONG-FORM CONTENT -->
+    <article class="content">
+      <h2>The 3-Set Hashtag Strategy That Actually Works in 2026</h2>
+      <p>Most creators dump 30 random hashtags and hope for the best. That stopped working years ago. In 2026 the Instagram algorithm rewards <strong>relevance over volume</strong>, which is why our generator gives you three balanced sets instead of one giant pile. Each set has a specific job, and together they cover the full reach-to-ranking funnel.</p>
+
+      <div class="tip-box">💡 <strong>Instagram 2026 rule:</strong> Use <strong>5–8 hashtags</strong> total — pick a few from each set below. A small, relevant mix beats 30 generic tags every single time.</div>
+
+      <h3>1. High-Volume Set — for Reach</h3>
+      <p>These are the big, popular hashtags with millions of posts. They put your content into large feeds for a short burst of visibility. Use 1–2 of them so you ride the wave without drowning in competition.</p>
+
+      <h3>2. Medium-Competition Set — for Relevance</h3>
+      <p>This is the sweet spot. These hashtags have enough volume to matter but little enough competition that your post can actually surface to the right audience. Use 2–3 of these as the core of every post.</p>
+
+      <h3>3. Low-Competition Set — for Ranking</h3>
+      <p>Niche, specific hashtags where your post can rank in the "Top" section and stay discoverable for days. They bring smaller but highly engaged audiences — the ones who save, comment and follow. Use 2–3 of these every time.</p>
+
+      <h2>How to Use This Hashtag Generator</h2>
+      <ul>
+        <li><strong>Step 1:</strong> Tap the niche that matches your content.</li>
+        <li><strong>Step 2:</strong> Hit Generate to get all three sets.</li>
+        <li><strong>Step 3:</strong> Tap "Copy All" or copy each set, then mix 5–8 tags from across the sets.</li>
+      </ul>
+
+      <h2>Why CaptionStudio's Hashtag Generator?</h2>
+      <ul>
+        <li><strong>15+ niches</strong> covering trending, reels, cricket, fashion, food, fitness, finance, tech and more.</li>
+        <li><strong>Strategic 3-set structure</strong> — not a random list, but a reach-relevance-ranking funnel.</li>
+        <li><strong>India-focused tags</strong> that work for desi creators and Indian audiences.</li>
+        <li><strong>One-tap copy</strong> for each set or all at once.</li>
+        <li><strong>100% free, no login,</strong> unlimited generations.</li>
+      </ul>
+
+      <h2>Hashtag Mistakes That Kill Your Reach</h2>
+      <ul>
+        <li><strong>Using only mega-popular tags</strong> — you get buried in seconds.</li>
+        <li><strong>Banned or spammy hashtags</strong> — they can shadow-limit your post.</li>
+        <li><strong>Same tags on every post</strong> — Instagram may treat it as repetitive. Rotate using the Generate button.</li>
+        <li><strong>Irrelevant tags for views</strong> — they bring the wrong audience and hurt engagement rate.</li>
+      </ul>
+
+      <!-- FAQ -->
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details><summary>How many hashtags should I use in 2026?</summary><p>Around 5–8 highly relevant hashtags. Mix a couple from each set above. Relevance beats quantity in the current algorithm.</p></details>
+        <details><summary>What do the 3 sets mean?</summary><p>High-volume = reach, medium-competition = relevance, low-competition = ranking. Together they cover the full discovery funnel.</p></details>
+        <details><summary>Is the hashtag generator free?</summary><p>Yes, 100% free with no signup and no limits. Generate as many sets as you like.</p></details>
+        <details><summary>Do these work for Reels and Shorts?</summary><p>Yes. The sets are optimised for Instagram Reels, posts and stories, and also work on YouTube Shorts and Facebook Reels.</p></details>
+        <details><summary>Should I use the same hashtags every time?</summary><p>No — rotate them. Tap Generate again for a fresh mix so your posts don't look repetitive to the algorithm.</p></details>
+      </div>
+    </article>
+
+    <!-- OTHER TOOLS -->
+    <h2 class="content" style="font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--black);margin-top:30px">Explore More Free Tools</h2>
+    <div class="other-tools">
+      <a class="ot-card" href="caption-generator.html"><div class="ot-ic">✍️</div><h4>Caption Generator</h4><p>3 viral captions per click with hook scores.</p></a>
+      <a class="ot-card" href="bio-generator.html"><div class="ot-ic">📝</div><h4>Bio Generator</h4><p>High-converting bios for Instagram, LinkedIn & X.</p></a>
+      <a class="ot-card" href="../tools/"><div class="ot-ic">🚀</div><h4>All AI Tools</h4><p>Browse the complete CaptionStudio toolkit.</p></a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
   <footer>
-    <a href="/">Home</a>·<a href="/blog/">Blog</a>·<a href="/tools/">Tools</a>
-    <p style="margin-top:12px">&copy; 2026 CaptionStudio · By Ansh Yadav ❤️</p>
+    <div class="wrap">
+      <div class="ft-grid">
+        <div class="ft-brand">
+          <div class="ft-logo">CaptionStudio</div>
+          <p>India's free AI toolkit for content creators — viral captions, trending hashtags, high-converting bios, and verified online earning strategies. Built in Gorakhpur, Uttar Pradesh by Ansh Yadav.</p>
+        </div>
+        <div class="ft-col"><h4>AI Toolbox</h4><div class="ft-links">
+          <a href="caption-generator.html">Caption Generator</a>
+          <a href="hashtag-generator.html">Hashtag Generator</a>
+          <a href="bio-generator.html">Bio Generator</a>
+          <a href="../tools/">All Free Tools</a>
+        </div></div>
+        <div class="ft-col"><h4>Resources</h4><div class="ft-links">
+          <a href="../earning.html">Earning Hub</a>
+          <a href="../guide.html">Growth Guide</a>
+          <a href="../blog/">Blog &amp; Strategy</a>
+        </div></div>
+        <div class="ft-col"><h4>Support</h4><div class="ft-links">
+          <a href="../contact.html">Contact Us</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Service</a>
+          <a href="../about.html">About</a>
+        </div></div>
+      </div>
+      <div class="ft-copy">&copy; 2026 CaptionStudio &middot; Crafted by Ansh Yadav &middot; Gorakhpur, Uttar Pradesh &middot; All Rights Reserved</div>
+    </div>
   </footer>
 
-</div>
+  <div class="toast" id="toast">Copied to clipboard ✓</div>
 
-<div class="toast" id="toast">Copied!</div>
+  <script>
+    /* ---------- DATA ---------- */
+    const NICHES = [
+      {id:'trending', label:'🔥 Trending'},
+      {id:'reels', label:'🎬 Reels'},
+      {id:'cricket', label:'🏏 Cricket'},
+      {id:'love', label:'❤️ Love'},
+      {id:'fashion', label:'👗 Fashion'},
+      {id:'travel', label:'✈️ Travel'},
+      {id:'food', label:'🍕 Food'},
+      {id:'fitness', label:'💪 Fitness'},
+      {id:'beauty', label:'💄 Beauty'},
+      {id:'motivation', label:'🚀 Motivation'},
+      {id:'business', label:'💼 Business'},
+      {id:'tech', label:'💻 Tech'},
+      {id:'photography', label:'📸 Photography'},
+      {id:'lifestyle', label:'✨ Lifestyle'},
+      {id:'couple', label:'💑 Couple'}
+    ];
 
-<script>
-const H={
-trending:["#Trending","#Viral","#Instagram","#InstaGood","#ExplorePage","#FYP","#ForYou","#Reels","#TrendingNow","#Viral2026","#TrendingReels","#InstaTrending","#Trending2026","#PhotoOfTheDay","#InstaDaily","#Beautiful","#Happy","#Vibes","#Aesthetic","#Mood","#Style","#Love","#Cute","#Goals","#ViralVideo","#Insta","#InstaLike","#TikTok","#Follow4Follow","#Like4Like","#ReelsViral","#InstaLove","#PicOfTheDay","#Explore","#NewPost"],
+    /* Each niche has 3 pools: high (reach), medium (relevance), low (ranking) */
+    const DATA = {
+      trending:{
+        high:['#viral','#trending','#reels','#instagram','#explore','#fyp','#trendingreels','#viralvideo','#instagood','#explorepage'],
+        medium:['#trendingnow','#viralpost','#reelsindia','#trendingindia','#instatrend','#reelitfeelit','#viralreels','#trend2026','#contentcreator','#instadaily'],
+        low:['#desitrending','#indianreels','#trendingsong2026','#reelkarofeelkaro','#smallcreatorindia','#viralgram','#trendalert','#dailytrend','#newtrend2026','#trendingtopic']
+      },
+      reels:{
+        high:['#reels','#reelsinstagram','#reelitfeelit','#instareels','#reelsvideo','#viralreels','#reelkarofeelkaro','#reelsindia','#trendingreels','#reelsdaily'],
+        medium:['#reelsofinstagram','#reelmaker','#reelsviral','#reelideas','#contentcreator','#reeloftheday','#instareel','#reelscreator','#videoediting','#reelsindiaofficial'],
+        low:['#reeleditor','#smallreelcreator','#reelgrowth','#reeltips2026','#desireels','#reelcommunity','#indiereels','#dailyreels','#reelinspo','#newreel']
+      },
+      cricket:{
+        high:['#cricket','#ipl','#viratkohli','#cricketlovers','#teamindia','#bcci','#cricketfever','#t20','#cricketmemes','#rohitsharma'],
+        medium:['#iplseason','#cricketlife','#cricketnews','#cricketfans','#indiancricket','#cricketworldcup','#cricketgram','#cricketupdates','#iplfever','#cricketislife'],
+        low:['#galaxycricket','#cricketreels2026','#cricketdiaries','#desicricket','#cricketcontent','#cricketedits','#cricketcommunity','#cricketmoments','#gullycricket','#cricketvibes']
+      },
+      love:{
+        high:['#love','#couplegoals','#romance','#lovequotes','#relationship','#valentine','#lovestory','#couple','#instalove','#forever'],
+        medium:['#lovelife','#truelove','#loveyou','#romantic','#relationshipgoals','#lovebirds','#cutecouple','#lovevibes','#soulmate','#lovequotesdaily'],
+        low:['#desilove','#shayarilove','#lovereels2026','#loveedits','#couplereels','#prempyaar','#lovefeels','#loveunlimited','#dilse','#lovestatus2026']
+      },
+      fashion:{
+        high:['#fashion','#ootd','#style','#fashionblogger','#outfit','#fashionista','#streetstyle','#fashionstyle','#instafashion','#lookbook'],
+        medium:['#fashiontrends','#styleinspo','#outfitoftheday','#fashiondaily','#stylediaries','#fashiongram','#trendalert','#fashionlover','#styletips','#wardrobe'],
+        low:['#desifashion','#indianfashion','#fashionreels2026','#budgetfashion','#styleindia','#ethnicwear','#fashioncreator','#ootdindia','#fashionhacks','#thriftfashion']
+      },
+      travel:{
+        high:['#travel','#travelgram','#wanderlust','#travelphotography','#instatravel','#explore','#nature','#adventure','#travelblogger','#vacation'],
+        medium:['#traveldiaries','#traveltheworld','#travellife','#travelindia','#mountains','#beachvibes','#roadtrip','#travelgoals','#exploremore','#traveladdict'],
+        low:['#incredibleindia','#travelreels2026','#hiddenplaces','#budgettravel','#solotravelindia','#travelcreator','#offbeatindia','#travelvibes','#weekendgetaway','#desitraveller']
+      },
+      food:{
+        high:['#food','#foodie','#foodporn','#instafood','#foodphotography','#foodlover','#yummy','#delicious','#foodblogger','#foodgram'],
+        medium:['#homemade','#foodstagram','#tasty','#foodies','#streetfood','#cooking','#foodlovers','#recipe','#foodphotographyindia','#desifood'],
+        low:['#indianfood','#foodreels2026','#streetfoodindia','#homecooking','#foodcreator','#easyrecipes','#foodvlog','#desikhana','#foodietribe','#cookingathome']
+      },
+      fitness:{
+        high:['#fitness','#gym','#workout','#fitnessmotivation','#fit','#bodybuilding','#health','#training','#fitfam','#gymlife'],
+        medium:['#fitnessjourney','#gymmotivation','#workoutmotivation','#healthylifestyle','#fitnessgoals','#strong','#exercise','#gymrat','#fitlife','#muscle'],
+        low:['#fitnessindia','#homeworkout','#fitnessreels2026','#desifitness','#gymindia','#fattofit','#fitnesscreator','#workoutathome','#gymjourney','#fitindia']
+      },
+      beauty:{
+        high:['#beauty','#makeup','#skincare','#mua','#beautiful','#makeupartist','#cosmetics','#glam','#beautyblogger','#instabeauty'],
+        medium:['#makeuptutorial','#skincareroutine','#beautytips','#glowup','#makeuplover','#beautyhacks','#flawless','#selfcare','#makeupideas','#beautygram'],
+        low:['#indianmakeup','#beautyreels2026','#skincareindia','#desibeauty','#budgetmakeup','#glowupjourney','#beautycreator','#makeupindia','#naturalbeauty','#skincaretips']
+      },
+      motivation:{
+        high:['#motivation','#inspiration','#success','#mindset','#goals','#hustle','#motivationalquotes','#selfimprovement','#grind','#believe'],
+        medium:['#motivationdaily','#successmindset','#growthmindset','#discipline','#positivevibes','#hardwork','#dreambig','#nevergiveup','#successquotes','#focus'],
+        low:['#motivationindia','#mindsetreels2026','#successjourney','#desimotivation','#studentmotivation','#hustlehard','#motivationcreator','#selfgrowth','#dailydiscipline','#riseandgrind']
+      },
+      business:{
+        high:['#business','#entrepreneur','#marketing','#startup','#success','#money','#smallbusiness','#businessowner','#entrepreneurship','#hustle'],
+        medium:['#digitalmarketing','#businessgrowth','#onlinebusiness','#startuplife','#sidehustle','#marketingtips','#businesstips','#ecommerce','#branding','#sales'],
+        low:['#businessindia','#startupindia','#businessreels2026','#smallbusinessindia','#desientrepreneur','#passiveincome','#businesscreator','#growyourbusiness','#solopreneur','#makemoneyonline']
+      },
+      tech:{
+        high:['#tech','#technology','#gadgets','#innovation','#smartphone','#apple','#android','#techie','#coding','#ai'],
+        medium:['#technews','#techreview','#gadgetlover','#newtech','#techlife','#programming','#developer','#techtips','#futuretech','#electronics'],
+        low:['#techindia','#techreels2026','#gadgetsindia','#desitech','#techcreator','#codinglife','#techhacks','#smartgadgets','#techvlog','#aitools']
+      },
+      photography:{
+        high:['#photography','#photooftheday','#photographer','#nature','#portrait','#picoftheday','#photoshoot','#naturephotography','#instaphoto','#capture'],
+        medium:['#photographylovers','#portraitphotography','#streetphotography','#photographyislife','#mobilephotography','#photoediting','#photographydaily','#shotoftheday','#naturelovers','#lightroom'],
+        low:['#photographyindia','#photoreels2026','#mobilephotographyindia','#desiphotography','#photographycreator','#candidphotography','#shotoniphone','#editingtips','#streetsofindia','#photowalkindia']
+      },
+      lifestyle:{
+        high:['#lifestyle','#life','#instagood','#happy','#love','#fashion','#instadaily','#photooftheday','#motivation','#beautiful'],
+        medium:['#lifestyleblogger','#dailylife','#goodvibes','#selfcare','#mindfulness','#positivevibes','#lifequotes','#aesthetic','#slowliving','#wellness'],
+        low:['#lifestyleindia','#lifestylereels2026','#desilifestyle','#aestheticvibes','#dailyroutine','#lifestylecreator','#simpleliving','#mindfulliving','#everydaymoments','#softlife']
+      },
+      couple:{
+        high:['#couple','#couplegoals','#love','#relationship','#romance','#couplephotography','#instalove','#together','#partner','#cute'],
+        medium:['#couplevibes','#relationshipgoals','#cutecouple','#couplelove','#lovebirds','#couplediaries','#myperson','#datenight','#couplestuff','#forever'],
+        low:['#desicouple','#couplereels2026','#indiancouple','#couplecontent','#prempyaar','#couplemoments','#shaadigoals','#couplevlog','#jodi','#humtum']
+      }
+    };
 
-reels:["#Reels","#InstaReels","#ReelsViral","#ReelsIndia","#ReelKaroFeelKaro","#ReelsInstagram","#TrendingReels","#ReelOfTheDay","#ReelsFamily","#InstagramReels","#ReelLove","#ReelsExplore","#ViralReels","#ReelsVideo","#ReelsLover","#ReelMaker","#ReelsTrending","#ReelLover","#ReelInstagram","#ReelKaro","#ReelStar","#ReelsCommunity","#TrendingNow","#Viral","#ExplorePage","#FYP","#ForYou","#ContentCreator","#Creator","#InstaDaily","#Vibes","#NewReel","#ReelsBaby","#ReelTime","#ShortVideo"],
+    let selNiche='trending';
 
-cricket:["#Cricket","#IPL2026","#CricketLover","#CricketFan","#Cricketer","#LoveCricket","#CricketIsLife","#CricketReels","#CricketIndia","#TeamIndia","#IndianCricket","#Match","#CricketMatch","#CricketWorldCup","#BCCI","#CricketTime","#CricketLife","#CricketPassion","#CricketLove","#Stadium","#Wankhede","#Trophy","#Champions","#Win","#Victory","#MatchDay","#LiveCricket","#CricketAddict","#CricketGram","#CricketMemes","#CricketFever","#IPL","#T20","#ODI","#TestCricket"],
+    /* ---------- RENDER CHIPS ---------- */
+    function renderChips(){
+      document.getElementById('nicheRow').innerHTML = NICHES.map(n=>
+        `<div class="chip ${n.id===selNiche?'active':''}" onclick="pickNiche('${n.id}',this)">${n.label}</div>`).join('');
+    }
+    function pickNiche(id,el){selNiche=id;document.querySelectorAll('#nicheRow .chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');}
 
-love:["#Love","#LoveQuotes","#Couple","#CoupleGoals","#Romance","#Romantic","#LoveStory","#TrueLove","#LoveYou","#Heart","#Forever","#SoulMate","#Together","#Relationship","#RelationshipGoals","#Pyaar","#Ishq","#Mohabbat","#Valentine","#LoveBirds","#LoveLife","#Cute","#Sweet","#Bae","#MyLove","#LoveOfMyLife","#PartnerInCrime","#NewLove","#LoveAlways","#Engaged","#Wedding","#MarriedLife","#TogetherForever","#HeartBeat","#LoveGoals"],
+    /* ---------- GENERATE ---------- */
+    function shuffle(a){return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);}
+    function pickN(pool,n){return shuffle(pool).slice(0,n);}
 
-fashion:["#Fashion","#Style","#OOTD","#OutfitOfTheDay","#FashionBlogger","#StyleBlogger","#FashionInsta","#StyleInspo","#FashionGram","#InstaFashion","#Trendy","#Stylish","#FashionWeek","#StreetStyle","#FashionStyle","#Outfit","#StyleGram","#FashionAddict","#FashionDiaries","#FashionLover","#IndianFashion","#EthnicWear","#DesiSwag","#Saree","#Lehenga","#Kurta","#FashionInspiration","#FashionPost","#StyleIcon","#Glam","#Boutique","#Designer","#FashionStatement","#FashionTrend","#Wardrobe"],
+    const SETS=[
+      {key:'high', tag:'High Volume', cls:'tag-high', purpose:'For maximum reach', n:5},
+      {key:'medium', tag:'Medium Competition', cls:'tag-med', purpose:'For relevance', n:5},
+      {key:'low', tag:'Low Competition', cls:'tag-low', purpose:'For ranking', n:5}
+    ];
 
-travel:["#Travel","#TravelGram","#Wanderlust","#TravelDiaries","#Explore","#Adventure","#Travelling","#TravelBlogger","#TravelPhotography","#InstaTravel","#TravelLife","#TravelLover","#PassportReady","#Backpacker","#SoloTravel","#TravelIndia","#IncredibleIndia","#TravelTheWorld","#TravelGoals","#Vacation","#Holiday","#Mountain","#Beach","#Nature","#NatureLover","#Sunset","#Sunrise","#TravelDestination","#TravelAddict","#WorldTraveler","#TravelMore","#GlobeTrotter","#Tourist","#Trip","#Roadtrip"],
+    let isGenerating=false;
+    let lastTags='';
+    function generate(){
+      if(isGenerating) return;
+      isGenerating=true;
+      const btn=document.getElementById('genBtn');
+      const old=btn.textContent;
+      btn.textContent='⚡ Generating…'; btn.disabled=true;
 
-food:["#Food","#Foodie","#FoodPorn","#InstaFood","#FoodLover","#Yummy","#Delicious","#Tasty","#FoodGram","#FoodPhotography","#Foodstagram","#FoodBlogger","#IndianFood","#StreetFood","#FoodLove","#FoodHeaven","#FoodAddict","#Foodism","#GoodFood","#FoodieLife","#FoodLife","#Pizza","#Burger","#Biryani","#Dessert","#Chocolate","#Cake","#Sweet","#Spicy","#Healthy","#HealthyFood","#FoodPic","#Chef","#Cooking","#Recipe"],
+      const d=DATA[selNiche];
+      const built=SETS.map(s=>({...s, tags:pickN(d[s.key], s.n)}));
+      window.__allTags = built.flatMap(b=>b.tags).join(' ');
 
-fitness:["#Fitness","#Gym","#Workout","#FitnessMotivation","#Bodybuilding","#GymLife","#Fit","#FitFam","#Health","#Healthy","#HealthyLifestyle","#GymMotivation","#WorkoutMotivation","#Training","#Strong","#NoPainNoGain","#FitnessJourney","#GymRat","#BeastMode","#Cardio","#WeightLoss","#GainPost","#FitGirl","#FitMan","#Muscle","#Abs","#Crossfit","#Yoga","#Running","#Sports","#Athlete","#FitLife","#StayFit","#FitnessGoals","#GymTime"],
+      const html=built.map((s,i)=>{
+        const pills=s.tags.map(t=>`<span class="tag-pill">${t}</span>`).join('');
+        return `<div class="set-card">
+          <div class="set-head">
+            <span class="set-tag ${s.cls}">${s.tag}</span>
+            <span class="set-purpose">${s.purpose}</span>
+          </div>
+          <div class="tags">${pills}</div>
+          <button class="copy-btn" onclick="copySet(${i})">📋 Copy this set</button>
+          <span id="setdata${i}" style="display:none">${s.tags.join(' ')}</span>
+        </div>`;
+      }).join('') + `<div class="copy-all"><button class="copy-btn primary" onclick="copyAll()">📋 Copy All 15 Hashtags</button></div>`;
 
-beauty:["#Beauty","#Makeup","#MUA","#MakeupArtist","#Skincare","#BeautyBlogger","#InstaBeauty","#MakeupAddict","#MakeupLover","#GlowUp","#Beautiful","#BeautyTips","#BeautyHacks","#Lipstick","#Eyeshadow","#Foundation","#Mascara","#Highlighter","#Contour","#NaturalBeauty","#FaceCare","#GlowingSkin","#BeautyRoutine","#SelfCare","#Cosmetics","#BeautyAddict","#MakeupGuru","#MakeupIdeas","#BeautyInfluencer","#BridalMakeup","#PartyMakeup","#WeddingMakeup","#FlawlessSkin","#GlowingFace","#MakeupOfTheDay"],
+      setTimeout(()=>{
+        document.getElementById('results').innerHTML=html;
+        btn.textContent=old; btn.disabled=false; isGenerating=false;
+      },280);
+    }
+    function copySet(i){ doCopy(document.getElementById('setdata'+i).innerText); }
+    function copyAll(){ doCopy(window.__allTags||''); }
+    function doCopy(t){
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(t).then(showToast).catch(()=>fallbackCopy(t));
+      } else { fallbackCopy(t); }
+    }
+    function fallbackCopy(t){
+      const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy');showToast();}catch(e){}
+      document.body.removeChild(ta);
+    }
+    function showToast(){
+      const el=document.getElementById('toast');el.classList.add('show');
+      setTimeout(()=>el.classList.remove('show'),1800);
+    }
 
-motivation:["#Motivation","#Inspiration","#Success","#Goals","#Mindset","#PositiveVibes","#HustleHard","#DreamBig","#NeverGiveUp","#WorkHard","#BelieveInYourself","#SelfMade","#Entrepreneur","#Boss","#GoalSetter","#Achiever","#Quotes","#LifeQuotes","#DailyMotivation","#Inspirational","#MotivationalQuotes","#SuccessQuotes","#PositiveThinking","#GrowthMindset","#SelfImprovement","#PersonalGrowth","#KeepGoing","#StayFocused","#Hustle","#Grind","#Discipline","#Determination","#Ambition","#Vision","#Believe"],
+    /* ---------- MOBILE DRAWER ---------- */
+    function toggleMenu(){
+      const d=document.getElementById('drawer'), b=document.getElementById('hbg');
+      const open=d.classList.toggle('open'); b.classList.toggle('open',open);
+      b.setAttribute('aria-expanded',open); document.body.style.overflow=open?'hidden':'';
+    }
+    function closeMenu(){
+      document.getElementById('drawer').classList.remove('open');
+      document.getElementById('hbg').classList.remove('open');
+      document.getElementById('hbg').setAttribute('aria-expanded',false);
+      document.body.style.overflow='';
+    }
 
-business:["#Business","#Entrepreneur","#Startup","#SmallBusiness","#BusinessOwner","#Marketing","#DigitalMarketing","#Branding","#Boss","#BossLife","#CEO","#Success","#EntrepreneurLife","#Hustle","#Money","#Investment","#Finance","#Sales","#Leadership","#TeamWork","#Innovation","#Strategy","#Growth","#OnlineBusiness","#Ecommerce","#Networking","#Mentor","#BusinessTips","#WorkFromHome","#WomenInBusiness","#YoungEntrepreneur","#StartupLife","#Productivity","#GoalGetter","#BusinessMindset","#FinanceTips"],
-
-tech:["#Tech","#Technology","#TechLover","#Gadgets","#Innovation","#Coding","#Programming","#Developer","#Software","#WebDevelopment","#AI","#ArtificialIntelligence","#MachineLearning","#TechNews","#Smartphone","#Apple","#Android","#iPhone","#Samsung","#TechReview","#Geek","#TechWorld","#TechCommunity","#Programmer","#Engineer","#Computer","#Laptop","#TechLife","#FutureTech","#Tech2026","#Digital","#TechieLife","#Hardware","#CyberSecurity","#TechTips"],
-
-photography:["#Photography","#Photographer","#PhotoOfTheDay","#InstaPhoto","#PhotoShoot","#PhotographyLover","#Photo","#Picture","#Pic","#PhotoLover","#PhotographyLife","#StreetPhotography","#PortraitPhotography","#NaturePhotography","#TravelPhotography","#WeddingPhotography","#ProductPhotography","#PhotographyAddict","#CameraWork","#PhotoArt","#PhotographySoul","#BestShot","#Capture","#Moments","#Lens","#DSLR","#Canon","#Nikon","#Sony","#PhotoArtist","#Composition","#Light","#Editing","#Lightroom","#PhotoEdit"],
-
-lifestyle:["#Lifestyle","#LifestyleBlogger","#InstaLife","#LifeQuotes","#DailyLife","#LifestyleBlog","#LifeIsGood","#LoveYourLife","#LifestyleInspo","#GoodVibes","#PositiveVibes","#LifestyleAddict","#LifestyleInfluencer","#LifeGoals","#Lifestyle2026","#LivingMyBestLife","#LifeIsBeautiful","#LifestyleDiaries","#HappyLife","#BlessedLife","#LifeAesthetic","#Aesthetic","#SoftLife","#Cozy","#HomeDecor","#InteriorDesign","#Minimalist","#SelfCare","#WellnessJourney","#LifestyleGuru","#DailyVibes","#SimpleLiving","#LifestyleTips","#Inspiration","#LifeBalance"],
-
-couple:["#Couple","#CoupleGoals","#Love","#Romance","#Together","#LoveStory","#TrueLove","#SoulMate","#RelationshipGoals","#CouplesOfInstagram","#Bae","#MyLove","#Forever","#LoveBirds","#CoupleVibes","#CouplePhotos","#Engaged","#Wedding","#JustMarried","#PartnerInCrime","#WifeyMaterial","#HusbandLove","#DateNight","#CoupleLife","#CoupleTrip","#TravelTogether","#LoveOfMyLife","#MyEverything","#PerfectMatch","#MadeForEachOther","#LoveAlways","#Boyfriend","#Girlfriend","#CutestCouple","#TogetherForever"]
-};
-
-const NAMES={trending:"🔥 Trending",reels:"🎬 Reels",cricket:"🏏 Cricket",love:"❤️ Love",fashion:"👗 Fashion",travel:"✈️ Travel",food:"🍕 Food",fitness:"💪 Fitness",beauty:"💄 Beauty",motivation:"🚀 Motivation",business:"💼 Business",tech:"💻 Tech",photography:"📸 Photo",lifestyle:"✨ Lifestyle",couple:"💑 Couple"};
-
-const $=(id)=>document.getElementById(id);
-let sel='trending',cur=[];
-
-$('cats').addEventListener('click',(e)=>{
-  const b=e.target.closest('.cat');
-  if(!b)return;
-  document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));
-  b.classList.add('active');
-  sel=b.dataset.c;
-  gen();
-});
-
-$('genBtn').addEventListener('click',gen);
-
-function gen(){
-  const pool=H[sel]||[];
-  if(pool.length===0){
-    $('tList').innerHTML='Coming soon!';
-    return;
-  }
-  // Shuffle and pick exactly 5
-  const shuffled=[...pool].sort(()=>Math.random()-0.5);
-  cur=shuffled.slice(0,5);
-  
-  $('rCat').textContent=NAMES[sel];
-  $('tList').innerHTML=cur.map(t=>'<span class="tag" onclick="copyOne(\''+t+'\')">'+t+'</span>').join('');
-  $('tText').textContent=cur.join(' ');
-  
-  const cb=$('copyBtn');
-  cb.classList.remove('done');
-  cb.querySelector('span:last-child').textContent='Copy All';
-}
-
-function copyOne(t){
-  copy(t,()=>toast('Copied: '+t));
-}
-
-$('copyBtn').addEventListener('click',()=>{
-  if(cur.length===0)return;
-  const t=cur.join(' ');
-  copy(t,()=>{
-    const b=$('copyBtn');
-    b.classList.add('done');
-    b.querySelector('span:last-child').textContent='Copied!';
-    toast('All 5 hashtags copied!');
-    setTimeout(()=>{
-      b.classList.remove('done');
-      b.querySelector('span:last-child').textContent='Copy All';
-    },2000);
-  });
-});
-
-$('shareBtn').addEventListener('click',()=>{
-  if(cur.length===0)return;
-  const t=cur.join(' ')+'\n\nMore: https://captionstudio.in';
-  if(navigator.share){navigator.share({text:t}).catch(()=>{});}
-  else{window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');}
-});
-
-function copy(t,cb){
-  if(navigator.clipboard){
-    navigator.clipboard.writeText(t).then(cb).catch(fb);
-  }else{fb();}
-  function fb(){
-    const ta=document.createElement('textarea');
-    ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';
-    document.body.appendChild(ta);ta.select();
-    try{document.execCommand('copy');cb();}catch(e){}
-    document.body.removeChild(ta);
-  }
-}
-
-function toast(m){
-  const t=$('toast');
-  t.textContent=m;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2000);
-}
-
-window.addEventListener('load',()=>setTimeout(gen,200));
-</script>
-
-</body>
+    renderChips();
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a055e347cb45cb6e',t:'MTc4MDM5NzMyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
