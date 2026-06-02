@@ -70,6 +70,20 @@
     .tg-btn { font-family: var(--sans); font-weight: 700; font-size: 0.9rem; background: var(--orange); color: #fff; padding: 13px 26px; border-radius: 40px; white-space: nowrap; }
     .tg-btn:hover { background: #c8380a; }
 
+    /* SEARCH */
+    .search-wrap { max-width: 560px; margin: 0 auto 30px; position: relative; }
+    .search-box { width: 100%; font-family: var(--sans); font-size: 1rem; padding: 15px 48px 15px 48px; border: 1.5px solid var(--rule); border-radius: 40px; background: #fff; color: var(--ink); outline: none; transition: 0.25s; -webkit-appearance: none; }
+    .search-box::placeholder { color: #aaa; }
+    .search-box:focus { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(232,68,10,.10); }
+    .search-icon { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: 1.05rem; pointer-events: none; color: #999; }
+    .search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); border: none; background: #f0f0f0; color: #666; width: 30px; height: 30px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: none; line-height: 1; align-items: center; justify-content: center; }
+    .search-clear.show { display: flex; }
+    .search-clear:hover { background: var(--orange); color: #fff; }
+
+    /* NO RESULTS */
+    .no-results { grid-column: 1 / -1; text-align: center; padding: 40px 0; font-family: var(--sans); color: var(--muted); }
+    .no-results strong { color: var(--ink); }
+
     /* CATEGORIES */
     .cat-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 50px; flex-wrap: wrap; }
     .cat-btn { padding: 9px 22px; border-radius: 40px; border: 1.5px solid var(--rule); font-family: var(--sans); font-size: 0.8rem; font-weight: 700; cursor: pointer; background: transparent; transition: 0.3s; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink); }
@@ -146,6 +160,13 @@
       <a class="tg-btn" href="https://t.me/skill2incomehub" target="_blank" rel="noopener">Join Telegram →</a>
     </div>
 
+    <!-- Search box (works on all devices) -->
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="search-box" class="search-box" placeholder="Search captions, shayari, IPL, tips…" autocomplete="off" aria-label="Search blog posts" />
+      <button type="button" id="search-clear" class="search-clear" aria-label="Clear search">✕</button>
+    </div>
+
     <div class="cat-row" id="categories"></div>
 
     <!-- JS fills this from data/blog.json; if it fails, fallback below shows -->
@@ -184,7 +205,7 @@
           <h4 class="ft-title">Connect</h4>
           <div class="ft-links">
             <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener">Telegram Tips</a>
-            <a href="/cdn-cgi/l/email-protection#37545647435e5859444342535e58070577505a565e5b1954585a">Email Us</a>
+            <a href="/cdn-cgi/l/email-protection#4f2c2e3f3b2620213c3b3a2b26207f7d0f28222e2623612c2022">Email Us</a>
           </div>
         </div>
       </div>
@@ -241,19 +262,61 @@
           b.onclick = function(){
             document.querySelectorAll('.cat-btn').forEach(function(x){ x.classList.remove('active'); });
             b.classList.add('active');
-            filterPosts(cat);
+            window.activeCat = cat;
+            applyFilters();
           };
           catBox.appendChild(b);
         });
 
         window.allPosts = data;
-        renderPosts(data);
+        window.activeCat = "all";
+        setupSearch();
+        applyFilters();
         document.getElementById('fallback').style.display = 'none';
       } catch (err) {
         console.warn('blog.json load failed:', err);
         // Show fallback so the page is never empty (AdSense-safe)
         document.getElementById('post-container').innerHTML = '';
         document.getElementById('fallback').style.display = 'block';
+      }
+    }
+
+    function setupSearch() {
+      var input = document.getElementById('search-box');
+      var clearBtn = document.getElementById('search-clear');
+      if (!input || input.dataset.ready) return;
+      input.dataset.ready = "1";
+      input.addEventListener('input', function(){
+        clearBtn.classList.toggle('show', input.value.length > 0);
+        applyFilters();
+      });
+      clearBtn.addEventListener('click', function(){
+        input.value = '';
+        clearBtn.classList.remove('show');
+        applyFilters();
+        input.focus();
+      });
+    }
+
+    function applyFilters() {
+      if (!window.allPosts) return;
+      var cat = window.activeCat || "all";
+      var input = document.getElementById('search-box');
+      var q = (input ? input.value : "").trim().toLowerCase();
+
+      var filtered = window.allPosts.filter(function(p){
+        var catOk = (cat === "all") || ((p.category || "").toLowerCase() === cat);
+        if (!catOk) return false;
+        if (!q) return true;
+        var hay = ((p.title || "") + " " + (p.desc || "") + " " + (p.category || "") + " " + (p.displayTag || "")).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+
+      if (filtered.length === 0) {
+        document.getElementById('post-container').innerHTML =
+          '<div class="no-results">😕 No posts found for <strong>"' + (q || cat) + '"</strong>.<br>Try another keyword or category.</div>';
+      } else {
+        renderPosts(filtered);
       }
     }
 
@@ -279,16 +342,7 @@
       }).join('');
     }
 
-    function filterPosts(category) {
-      if (category === "all") { renderPosts(window.allPosts); }
-      else {
-        renderPosts(window.allPosts.filter(function(p){
-          return (p.category || "").toLowerCase() === category;
-        }));
-      }
-    }
-
     window.addEventListener('load', loadBlog);
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a056808dcd5c84d7',t:'MTc4MDQwMzc3MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
