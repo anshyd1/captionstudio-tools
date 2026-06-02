@@ -1,302 +1,118 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free AI Caption Generator 2026 | CaptionStudio</title>
-<meta name="description" content="Free AI Instagram caption generator for Indian creators. Viral Hinglish captions with hook scores. No signup. By Ansh Yadav.">
-<meta name="keywords" content="instagram caption generator, ai caption generator, viral captions, hinglish captions, instagram reels captions">
-<link rel="canonical" href="https://captionstudio.in/tools/caption-generator.html">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Ansh Yadav">
-<link rel="icon" type="image/png" href="/favicon.png">
-<meta property="og:title" content="Free AI Caption Generator 2026 | CaptionStudio">
-<meta property="og:description" content="AI generates viral Instagram captions in 3 seconds. Hinglish, attitude, love, fitness — all niches. Free forever.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://captionstudio.in/tools/caption-generator.html">
-<meta property="og:site_name" content="CaptionStudio">
-<meta name="twitter:card" content="summary">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;background:linear-gradient(145deg,#fff 0%,#f4f7ff 45%,#edf3ff 100%);color:#151515;line-height:1.7;min-height:100vh;padding-top:50px}
-.bar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:46px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
-.bar .lg{display:flex;align-items:center;gap:8px;font-weight:900;font-size:.96rem;color:#1a1a1a;text-decoration:none}
-.bar .lg span{color:#f97316}
-.bar .lg img{width:28px;height:28px;border-radius:6px}
-.bar .nl{display:flex;gap:10px}
-.bar .nl a{color:#555;text-decoration:none;font-size:.78rem;font-weight:800;padding:3px 8px;border-radius:5px}
-.bar .nl a:hover{background:#eef4ff;color:#1d4ed8}
-.wrap{max-width:780px;margin:0 auto;padding:28px 20px 80px}
-.bc{font-size:.76rem;color:#777;margin-bottom:14px}.bc a{color:#1d4ed8;text-decoration:none}
-.hdr{text-align:center;margin-bottom:28px}
-.ctag{display:inline-block;background:#eef4ff;color:#1d4ed8;padding:4px 14px;border-radius:20px;font-size:.74rem;font-weight:900;margin-bottom:10px}
-.hdr h1{font-size:1.9rem;font-weight:950;line-height:1.24;margin-bottom:8px;letter-spacing:-.5px}
-.hdr h1 em{color:#1d4ed8;font-style:normal}
-.lead{color:#505050;font-size:.95rem;max-width:600px;margin:4px auto}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0 28px}
-.stats .st{background:#fff;border:1px solid #d9e6ff;border-radius:12px;padding:14px 8px;text-align:center}
-.stats .n{font-size:1.3rem;font-weight:950;color:#1d4ed8;line-height:1}
-.stats .l{font-size:.68rem;color:#777;text-transform:uppercase;letter-spacing:.4px;margin-top:4px;font-weight:800}
-.tool{background:#fff;border:1px solid #d9e6ff;border-radius:16px;padding:24px;margin-bottom:20px}
-.tool h2{font-size:1.15rem;font-weight:950;margin-bottom:18px;color:#102247}
-.step-row{display:flex;gap:12px;margin-bottom:14px}
-.step-row>div{flex:1}
-.fg{margin-bottom:14px}
-.fg label{display:block;font-size:.82rem;color:#888;margin-bottom:5px;font-weight:700}
-.fg select,.fg input{width:100%;padding:11px 14px;border-radius:10px;border:1px solid #d9e6ff;background:#f8faff;color:#1a1a1a;font-size:.9rem;outline:none;font-family:inherit;transition:border .2s}
-.fg select:focus,.fg input:focus{border-color:#1d4ed8}
-select option{background:#fff;color:#1a1a1a}
-.gen-btn{width:100%;padding:14px;border:none;border-radius:12px;background:linear-gradient(135deg,#1d4ed8,#f97316);color:#fff;font-size:1rem;font-weight:900;cursor:pointer;transition:transform .15s}
-.gen-btn:hover{transform:translateY(-1px)}
-.gen-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
-.loader{text-align:center;padding:32px;color:#888}
-.spinner{width:36px;height:36px;border:3px solid #d9e6ff;border-top-color:#1d4ed8;border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 10px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.res{background:#fff;border:1px solid #d9e6ff;border-radius:12px;padding:16px;margin-bottom:10px;animation:slideUp .35s ease}
-@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.res .hook{font-weight:800;color:#1d4ed8;font-size:.95rem;margin-bottom:6px}
-.res .body{font-size:.92rem;color:#333;white-space:pre-wrap;line-height:1.65}
-.res .foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px solid #eef4ff}
-.score{font-size:.78rem;padding:4px 12px;border-radius:8px;font-weight:800}
-.score.hi{background:rgba(45,122,58,.1);color:#2d7a3a}
-.score.mid{background:rgba(255,193,7,.12);color:#b00000}
-.cpbtn{padding:7px 16px;border-radius:8px;border:1px solid #d9e6ff;background:#fff;color:#1d4ed8;font-size:.78rem;font-weight:900;cursor:pointer;transition:.15s}
-.cpbtn:hover{background:#eef4ff}
-.cpbtn.copied{background:#2d7a3a;color:#fff;border-color:#2d7a3a}
-.cross{text-align:center;margin:24px 0}
-.cross a{display:inline-block;padding:10px 24px;border-radius:30px;text-decoration:none;font-weight:900;font-size:.88rem;margin:4px}
-.cross .c1{background:#eef4ff;color:#1d4ed8;border:1px solid #d9e6ff}
-.cross .c2{background:linear-gradient(135deg,#1d4ed8,#f97316);color:#fff}
-.fq{border:1px solid #d9e6ff;border-radius:10px;padding:14px 18px;margin-bottom:8px;background:#fff}
-.fq h4{font-size:.93rem;color:#1d4ed8;margin-bottom:5px}
-.fq p{font-size:.88rem;color:#444;margin:0}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#111;color:#fff;padding:10px 22px;border-radius:30px;font-size:.85rem;font-weight:800;z-index:9999;opacity:0;transition:.3s;pointer-events:none}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.note{background:rgba(29,78,216,.05);border:1px solid rgba(29,78,216,.12);border-radius:10px;padding:14px;margin-bottom:18px;font-size:.82rem;color:#1d4ed8;line-height:1.6}
-.ft{background:#1a1a1a;color:#aaa;padding:32px 24px 24px;margin-top:30px;border-top:3px solid #1d4ed8}
-.ft-i{max-width:780px;margin:0 auto}
-.ft-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px}
-.ft h4{color:#fff;font-size:.85rem;margin-bottom:8px}
-.ft a{display:block;color:#999;text-decoration:none;font-size:.8rem;padding:3px 0}
-.ft a:hover{color:#60a5fa}
-.ft-b{font-size:1rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:8px}
-.ft-b span{color:#f97316}
-.ft-b img{width:24px;height:24px;border-radius:4px}
-.ft-bt{border-top:1px solid #333;margin-top:16px;padding-top:12px;display:flex;justify-content:space-between;font-size:.76rem;color:#777;flex-wrap:wrap;gap:8px}
-@media(max-width:600px){body{padding-top:46px}.bar{height:42px;padding:0 12px}.bar .nl a{font-size:.66rem;padding:2px 5px}.wrap{padding:18px 14px 60px}.hdr h1{font-size:1.35rem}.step-row{flex-direction:column;gap:0}.stats{grid-template-columns:repeat(2,1fr)}.ft-bt{flex-direction:column;text-align:center}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="canonical" href="https://captionstudio.in/tools/caption-generator.html" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000"
+     crossorigin="anonymous"></script>
+
+  <title>Caption Generator — Viral Instagram Hooks 2026</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" />
+  <style>
+    :root { --orange: #e8440a; --orange-pale: #fff3ee; --black: #191919; --ink: #2e2e2e; --muted: #6b6b6b; --rule: #e5e5e5; --bg: #ffffff; --serif: 'Lora', Georgia, serif; --sans: 'Source Sans 3', system-ui, sans-serif; --display: 'Syne', sans-serif; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.8; font-size: 17px; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+    a { color: inherit; text-decoration: none; }
+    nav { border-bottom: 1px solid var(--rule); padding: 14px 0; background: rgba(255,255,255,.98); position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--display); font-size: 1.2rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: var(--black); }
+    .logo img { width: 30px; height: 30px; border-radius: 6px; }
+    .nav-links { display: flex; gap: 24px; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--orange); }
+    .tool-hero { padding: 60px 0 40px; text-align: center; border-bottom: 1px solid var(--rule); }
+    .kicker { font-family: var(--sans); font-size: 12px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 15px; }
+    .tool-hero h1 { font-family: var(--display); font-size: clamp(2rem, 7vw, 3.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 25px; color: var(--black); }
+    .generator-card { background: #fff; border: 1px solid var(--rule); border-radius: 20px; padding: 35px; max-width: 550px; margin: 0 auto; box-shadow: 0 15px 45px rgba(0,0,0,0.05); text-align: left; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; font-family: var(--sans); font-weight: 700; font-size: 13px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    select { width: 100%; padding: 14px 18px; border-radius: 12px; border: 1.5px solid var(--rule); font-family: var(--sans); font-size: 1rem; outline: none; background: #fafafa; cursor: pointer; }
+    .btn-gen { width: 100%; background: var(--black); color: #fff; padding: 18px; border-radius: 12px; font-family: var(--sans); font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: 0.2s; }
+    .btn-gen:hover { background: var(--orange); transform: translateY(-2px); }
+    #loading { display: none; margin: 25px 0; text-align: center; }
+    .spinner { width: 26px; height: 26px; border: 3px solid var(--orange-pale); border-top-color: var(--orange); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #results { display: none; margin-top: 30px; border-top: 1px solid var(--rule); padding-top: 25px; }
+    .res-item { background: #fafafa; border: 1px solid var(--rule); border-radius: 14px; padding: 25px; margin-bottom: 20px; }
+    .res-meta { display: flex; justify-content: space-between; font-family: var(--sans); font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 15px; }
+    .res-content { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); margin-bottom: 20px; white-space: pre-wrap; line-height: 1.7; }
+    .btn-copy { background: #fff; border: 1.5px solid var(--rule); padding: 12px; border-radius: 10px; font-family: var(--sans); font-weight: 700; font-size: 0.9rem; cursor: pointer; width: 100%; }
+    .promo-box { background: var(--orange-pale); border: 1.5px solid var(--orange); border-radius: 14px; padding: 25px; margin-top: 25px; text-align: center; }
+    .wa-btn { background: #25d366; color: #fff; padding: 12px 25px; border-radius: 40px; font-family: var(--sans); font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; }
+    .audit-card { border: 1px solid var(--rule); border-radius: 14px; margin-top: 30px; overflow: hidden; background: #fff; }
+    .audit-head { background: var(--black); color: #fff; padding: 15px; text-align: center; font-weight: 700; font-family: var(--display); font-size: 1rem; }
+    .audit-row { display: flex; justify-content: space-between; padding: 12px 20px; border-bottom: 1px solid #f5f5f5; font-family: var(--sans); font-size: 0.9rem; }
+    .audit-price { font-weight: 800; color: var(--orange); }
+    footer { background: #0d0d0d; color: #777; padding: 80px 0 40px; border-top: 1px solid #1a1a1a; text-align: center; }
+    @media (max-width: 768px) { .nav-links { display: none; } .generator-card { padding: 25px; } }
+  </style>
 </head>
 <body>
-<div class="bar"><a href="https://captionstudio.in" class="lg"><img src="/favicon.png" alt="CaptionStudio">Caption<span>Studio</span></a><div class="nl"><a href="https://captionstudio.in/tools/">Tools</a><a href="https://captionstudio.in/blog/">Blog</a><a href="https://captionstudio.in/earning.html">Earning</a><a href="https://captionstudio.in/guide.html">Guide</a></div></div>
+  <nav><div class="wrap nav-inner"><a href="../index.html" class="logo"><img src="../favicon.png"> CaptionStudio</a><div class="nav-links"><a href="../index.html">Home</a><a href="../tools/">Tools</a><a href="../blog/">Blog</a><a href="../earning.html">Earn</a></div></div></nav>
+  <main>
+    <section class="tool-hero"><div class="wrap"><p class="kicker">Advanced Modular Engine</p><h1>Viral Caption <em>Generator</em></h1>
+      <div class="generator-card">
+        <div class="form-group"><label>Choose Your Niche</label><select id="niche">
+          <option value="fitness">💪 Fitness & Gym</option><option value="food">🍔 Food & Cooking</option><option value="finance">💰 Finance & Money</option><option value="travel">✈️ Travel & Adventure</option><option value="motivation">🔥 Motivation & Success</option><option value="tech">📱 Tech & Gadgets</option>
+        </select></div>
+        <div class="form-group"><label>Select Tone</label><select id="tone">
+          <option value="viral">Viral Mix (Hinglish)</option><option value="attitude">Savage Attitude</option><option value="luxury">Luxury Aesthetic</option>
+        </select></div>
+        <button id="genBtn" class="btn-gen" onclick="generateCaptions()"><span>✨ Generate Best Caption</span></button>
+        <div id="loading"><div class="spinner"></div></div>
+        <div id="results"><div class="res-item"><div class="res-meta"><span>Unique Result</span><span id="hook-score" style="color:var(--orange);">Hook Score: 94/100</span></div><div class="res-content" id="final-cap"></div><button class="btn-copy" id="copyBtn" onclick="copyText()">📋 Copy Caption</button></div>
+          <div class="promo-box"><h4>Want Growth Any Tips?</h4><p>Talk to Ansh directly for custom strategies.</p><a href="https://wa.me/919918996096" target="_blank" class="wa-btn">Talk to Ansh</a></div>
+          <div class="audit-card"><div class="audit-head">Premium Growth Plan</div><div class="audit-row"><span>Audit + 30D Captions + Scripts</span><span class="audit-price">₹1,499</span></div></div>
+        </div>
+      </div></div></section>
+  </main>
+  <footer><div class="wrap"><p>&copy; 2024 CaptionStudio · Crafted by Ansh Yadav</p></div></footer>
+  <script>
+    const data = {
+      hooks: {
+        viral: ["POV: You finally cracked the code to growth. 🔥", "Stop scrolling! 🛑 This one secret changed my 2026.", "The honest truth that nobody tells you... 😶", "I wish I knew this earlier in my journey. 😳", "Stop gatekeeping these tips! Here's the deal. 💀"],
+        attitude: ["Results bolte hain, main nahi. 🤫💯", "Not here to compete, here to take over. ⚡", "My rules, my journey. Don't like it? Don't watch. 🦁", "Focused on goals, not the noise. 🦅", "Leveling up while they are busy making excuses. 📈"],
+        luxury: ["Quality over quantity. Always. ✨", "Elevating the game to a new level. 🥂", "Minimal effort, maximum impact. 💎", "Subtle, elegant, and effective. 🏛️", "Luxury isn't loud. It's consistent. 🥂"]
+      },
+      bodies: {
+        fitness: ["Consistency beats talent every time. Keep showing up for yourself.", "Nobody talks about the days you don't feel like working out.", "Master your discipline and watch how life changes. It's about strategy.", "If you're on the grind, take this as a sign to keep going."],
+        food: ["Exploring hidden flavors and mastering the street food game.", "The art of flavors. Elevating every bite to a premium experience.", "Focusing on the details that make a recipe worth saving.", "Best spot I've found this month! You need to try this."],
+        finance: ["Money flows where attention goes. Focus on your assets.", "The 1% mindset is about long-term vision, not quick wins.", "Cracking the financial game while others are busy spending.", "Your future self will thank you for the risks you take today."],
+        travel: ["Finding beauty in every corner of the world. One city at a time.", "Escape the ordinary and find your own path in the wild.", "Collecting memories, not things. Travel is the only therapy.", "The world is big, and I'm just getting started."],
+        motivation: ["Your success journey might be hard, but results will be worth it.", "Trust the process, even when you can't see the finish line.", "One decision away from a completely different life. Decide now.", "The grind is silent, but the success will be extremely loud."],
+        tech: ["The future is here, and it's powered by the right tools.", "Hacking my productivity with the latest AI tech trends.", "Why work hard when you can work smart with these gadgets?", "The tech game is changing fast. Are you keeping up?"]
+      },
+      ctas: ["👇 Comment 'READY' for the strategy.", "Tag a friend who needs to see this! ✅", "Save this for your next morning reminder. 💯", "Check the link in bio for more! 🔗", "Drop a '🔥' if you relate to this."]
+    };
 
-<div class="wrap">
-<nav class="bc" aria-label="Breadcrumb"><a href="https://captionstudio.in">Home</a> › <a href="https://captionstudio.in/tools/">Tools</a> › <span>Caption Generator</span></nav>
-
-<header class="hdr">
-<div class="ctag">⚡ AI Caption Generator</div>
-<h1>Viral Instagram Captions<br>in <em>3 Seconds</em></h1>
-<p class="lead">AI generates unique captions for your niche. Enter topic, pick tone — get scroll-stopping captions with hook scores. Free, no signup.</p>
-</header>
-
-<div class="stats">
-<div class="st"><div class="n">184+</div><div class="l">Captions</div></div>
-<div class="st"><div class="n">3</div><div class="l">Per Click</div></div>
-<div class="st"><div class="n">10+</div><div class="l">Categories</div></div>
-<div class="st"><div class="n">100%</div><div class="l">Free</div></div>
-</div>
-
-<div class="note"><strong>📌 How to use:</strong> ① Choose niche → ② Select tone → ③ Enter topic → ④ Hit Generate. AI captions milega with viral scores. Copy and post!</div>
-
-<div class="tool">
-<h2>🎯 Generate Captions</h2>
-<div class="step-row">
-<div class="fg"><label>📂 Niche</label>
-<select id="niche"><option value="attitude">😎 Attitude</option><option value="love">❤️ Love</option><option value="motivation">🚀 Motivation</option><option value="fitness">💪 Fitness</option><option value="funny">😂 Funny</option><option value="travel">✈️ Travel</option><option value="food">🍕 Food</option><option value="cricket">🏏 Cricket</option><option value="student">🎓 Student</option><option value="friendship">👯 Friendship</option><option value="birthday">🎂 Birthday</option><option value="fashion">👗 Fashion</option></select></div>
-<div class="fg"><label>🎨 Tone</label>
-<select id="tone"><option value="Hinglish GenZ">🇮🇳 Hinglish</option><option value="luxury premium">👑 Luxury</option><option value="storytelling">📖 Storytelling</option><option value="savage bold">🔥 Savage</option><option value="motivational">💪 Motivational</option><option value="funny witty">😂 Funny</option><option value="romantic">❤️ Romantic</option></select></div>
-</div>
-<div class="fg"><label>📝 Topic (optional — for AI personalization)</label><input type="text" id="topic" placeholder="e.g. Meri gym transformation, IPL reaction, Date night"></div>
-<button class="gen-btn" id="genBtn" onclick="generate()">⚡ Generate 3 Viral Captions</button>
-</div>
-
-<div id="results"></div>
-
-<div class="cross">
-<a href="https://captionstudio.in/tools/hashtag-generator.html" class="cross c1">#️⃣ Hashtags bhi generate karo →</a>
-<a href="https://captionstudio.in/tools/bio-generator.html" class="cross c1">👤 Bio update karo →</a>
-<a href="https://captionstudio.in/blog/viral-caption-system-2026.html" class="cross c2">📖 Viral Caption Guide →</a>
-</div>
-
-<h2 style="font-size:1.2rem;font-weight:950;margin:28px 0 14px;color:#102247">❓ FAQ</h2>
-<div class="fq"><h4>Kya yeh really AI hai?</h4><p>Haan! Google Gemini AI se real-time captions generate hote hain. Agar API down ho toh curated pack se best captions milte hain — hamesha kuch na kuch dikhega.</p></div>
-<div class="fq"><h4>Kitni baar use kar sakte hain?</h4><p>Unlimited. Koi limit nahi, koi signup nahi. Roz generate karo.</p></div>
-<div class="fq"><h4>Hinglish mein captions aayenge?</h4><p>Haan! Tone select karo — Hinglish, English, Hindi sab support hai.</p></div>
-<div class="fq"><h4>Hook score kya hai?</h4><p>Har caption ke saath viral potential score (0-100) aata hai. Zyada score = zyada viral potential.</p></div>
-</div>
-
-<div class="toast" id="toast">✅ Copied!</div>
-<footer class="ft"><div class="ft-i"><div class="ft-g">
-<div><div class="ft-b"><img src="/favicon.png" alt=""> Caption<span>Studio</span></div></div>
-<div><h4>Tools</h4><a href="https://captionstudio.in/tools/caption-generator.html">Caption Generator</a><a href="https://captionstudio.in/tools/hashtag-generator.html">Hashtag Generator</a><a href="https://captionstudio.in/tools/bio-generator.html">Bio Generator</a></div>
-<div><h4>Blog</h4><a href="https://captionstudio.in/blog/viral-caption-system-2026.html">Viral Captions</a><a href="https://captionstudio.in/blog/love-captions-2026.html">Love Captions</a><a href="https://captionstudio.in/blog/">All Blogs</a></div>
-<div><h4>Links</h4><a href="https://captionstudio.in/earning.html">Earning</a><a href="https://captionstudio.in/guide.html">Guide</a><a href="https://t.me/skill2incomehub">Telegram</a></div>
-</div><div class="ft-bt"><span>© CaptionStudio.in</span><span>Made with ❤️ in Gorakhpur</span></div></div></footer>
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI Caption Generator","applicationCategory":"Utilities","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://captionstudio.in"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://captionstudio.in/tools/"},{"@type":"ListItem","position":3,"name":"Caption Generator","item":"https://captionstudio.in/tools/caption-generator.html"}]}</script>
-
-<script>
-var PACK={attitude:[
-{h:"Silent moves, loud results.",c:"Silent moves, loud results. ⚡\nBuilding my own story, one day at a time.\nNo drama, only discipline.\n\nSave this for your next post 📌",t:"#Attitude #Sigma #Mindset",s:92},
-{h:"My vibe, my rules.",c:"My vibe, my rules. 🔥\nRespect first, ego last.\nLife taught me — less people, more peace.\n\nDouble tap if you relate 💯",t:"#Attitude #Vibes #Quotes",s:89},
-{h:"Born original, copied by many.",c:"Born original. 🔱\nCopied by many, replaced by none.\nMain apna standard set karta hoon, crowd follow nahi karta.\n\nTag someone who needs to hear this 👇",t:"#Attitude #Original #King",s:87},
-{h:"Not rude, just selective.",c:"Not rude, just selective. 😎\nEnergy matters more than attention.\nApna circle chhota rakho, standards high.\n\nSave for later 📌",t:"#Attitude #SelfRespect #Sigma",s:91},
-{h:"Built different.",c:"Built different. Period. 💪\nMain competition nahi, version upgrade karta hoon.\nEveryday better than yesterday.\n\nComment your goal for 2026 👇",t:"#Attitude #Grind #Goals",s:85},
-{h:"Private life, public confidence.",c:"Private life. Public confidence. 🖤\nJo dikhta hai woh kam hai, jo hota hai woh andar hai.\nNo flex, only facts.\n\nShare with your circle 🔄",t:"#Attitude #Private #Confident",s:88},
-{h:"King energy, no announcement.",c:"King energy, calm steps. 👑\nNo announcement needed — presence speaks.\nDuniya waise bhi notice karti hai.\n\nSave this caption 🔖",t:"#Attitude #King #Royal",s:86},
-{h:"Standards high, circle small.",c:"Standards high, circle small. 🎯\nQuality over quantity — logon mein, sapnon mein, mehnat mein.\n\nTag your real ones 👇",t:"#Attitude #Standards #Real",s:90},
-{h:"Quiet confidence, loud comeback.",c:"Quiet confidence. 🔥\nLoud comeback.\nLet them doubt. Let them watch.\nResults aayenge, noise nahi.\n\nDouble tap if you're building in silence 💯",t:"#Attitude #Comeback #Silent",s:93},
-{h:"No approval needed.",c:"No approval needed. 😤\nMain jaanta hoon kaun hoon.\nValidation kisi aur se nahi, khud se milta hai.\n\nShare with someone who needs this 🔄",t:"#Attitude #Confidence #SelfMade",s:84},
-{h:"Attitude on calm mode, focus on beast.",c:"Attitude on calm mode. 🧘\nFocus on beast mode. 🦁\nDuniya bhaag rahi hai, main apni race kar raha hoon.\n\nSave for your next reel 📌",t:"#Attitude #Focus #BeastMode",s:88},
-{h:"Access denied for average energy.",c:"Not available for average energy. ⛔\nTry leveling up first.\nMera vibe premium hai, crowd ke liye nahi.\n\nTag that one friend 👇",t:"#Attitude #Premium #VibesOnly",s:86},
-{h:"Classy face, savage goals.",c:"Classy face, savage goals. 💀\nAlways in upgrade mode.\nRest? What rest?\n\nComment 'LEGEND' if you relate 👇",t:"#Attitude #Savage #Goals",s:87},
-{h:"Too focused to explain.",c:"Too focused to explain. 🎯\nToo real to fake.\nMere actions meri introduction hain.\n\nSave this 🔖",t:"#Attitude #Focus #Real",s:85},
-{h:"Keep watching, I'm still loading.",c:"Keep watching. 👀\nI'm still loading.\nBest version abhi baaki hai.\n\nDouble tap if you're a work in progress 💯",t:"#Attitude #Loading #Grind",s:89},
-{h:"My silence has standards.",c:"My silence has standards. 🤫\nMy moves have meaning.\nKam bolna kamzori nahi, maturity hai.\n\nShare with someone 🔥",t:"#Attitude #Silence #Sigma",s:91},
-{h:"No flex, only facts.",c:"No flex, only facts. 📊\nResults coming soon.\nJab kaam bolega, caption ki zarurat nahi padegi.\n\nSave for later 📌",t:"#Attitude #Facts #Results",s:83},
-{h:"Kaam silent, result violent.",c:"Kaam silent. 💀\nResult violent. 💥\nIsliye bolta nahi, dikhata hoon.\n\nTag someone who relates 👇",t:"#Attitude #Sigma #Results",s:93},
-{h:"Simple banda, badi soch.",c:"Simple banda. Badi soch. ⚡\nApna time build kar raha hoon.\nResults aayenge — wait and watch.\n\nSave for motivation 📌",t:"#Attitude #Desi #Hustle",s:85},
-{h:"Jhukta nahi, seekhta hoon.",c:"Jhukta nahi, seekhta hoon. 🏔️\nHar challenge ne stronger banaya.\nHaar toh tab hai jab try karna band ho.\n\nComment 'NEVER GIVE UP' 👇",t:"#Attitude #NeverGiveUp #Strong",s:86}
-],love:[
-{h:"Tera pyaar meri favourite feeling hai.",c:"Tera pyaar meri favourite feeling hai. ❤️\nHar din thoda aur special lagta hai.\nTum ho toh sab kuch hai.\n\nTag your person 👇",t:"#Love #Couple #Forever",s:93},
-{h:"Tu meri chaos ka calm version hai.",c:"Tu meri chaos life ka calm version hai. 🌙\nAur main is peace ko khona nahi chahta.\n\nSend this to someone special 💕",t:"#Love #Peace #Couple",s:91},
-{h:"Pyaar loud nahi hota.",c:"Tum mile toh samjha — pyaar loud nahi hota. 💫\nKabhi-kabhi bas ek smile kaafi hoti hai.\n\nTag your love 👇",t:"#Love #SilentLove #Real",s:89},
-{h:"Tum meri favourite notification ho.",c:"Tum meri favourite notification ho. 📱\nJise ignore karna possible hi nahi.\nJo tumse message aaye, woh din ka best part hai.\n\nShare with your person 🔄",t:"#Love #Couple #Adorable",s:90},
-{h:"Distance temporary, commitment permanent.",c:"Distance temporary. 💫\nCommitment permanent. ❤️\nDoor ho toh kya? Dil paas hai.\n\nTag your long distance love 👇",t:"#Love #LongDistance #Commitment",s:88},
-{h:"Mere dil ka sabse safe place tum ho.",c:"Mere dil ka sabse safe place tum ho. 🫶\nAur main yahan lifetime rehna chahta hoon.\nNo replacement, no doubt.\n\nDouble tap if you feel this 💕",t:"#Love #Safe #Forever",s:92},
-{h:"Private love, peaceful life.",c:"Private love. 🕊️\nPeaceful life.\nDuniya ko mat dikhao — feeling ko mehsoos karo.\n\nSave for your next post 📌",t:"#Love #Private #Peaceful",s:87},
-{h:"Teri aankhon mein woh sukoon hai.",c:"Teri aankhon mein woh sukoon hai. 🌙\nJo kisi destination pe bhi nahi mila.\nTum mere safe place ho.\n\nTag your peace 👇",t:"#Love #Sukoon #Couple",s:90},
-{h:"Hamari vibe simple hai.",c:"Hamari vibe simple hai. 💫\nNo drama, only real love.\nLuxury nahi, loyalty chahiye.\n\nShare with your circle 🔄",t:"#Love #Simple #RealLove",s:85},
-{h:"Tere saath har photo candid lagti hai.",c:"Tere saath har photo candid lagti hai. 📸\nKyunki smile fake karni nahi padti.\nNatural happiness looks best.\n\nTag your photo buddy 👇",t:"#Love #Couple #Candid",s:88}
-],motivation:[
-{h:"99% log ye mistake karte hain.",c:"99% log ye mistake karte hain — give up kar dete hain success ke bilkul paas aakar. ❌\nEk aur koshish. Bas wohi farak banata hai.\n\nSave this for motivation 📌",t:"#Motivation #NeverGiveUp #Success",s:94},
-{h:"Aaj struggle, kal story.",c:"Aaj struggle. Kal story. 📖\nJo aap aaj face kar rahe ho, kal log sunenge.\nBas rukna nahi hai.\n\nShare with someone who needs this 🔄",t:"#Motivation #Struggle #ComingSoon",s:90},
-{h:"Comfort zone ne kabhi kisi ko famous nahi kiya.",c:"Comfort zone ne kabhi kisi ko famous nahi kiya. 🔥\nRisk lo. Fail ho. Try again.\nAsli growth discomfort mein hota hai.\n\nSave this 📌",t:"#Motivation #ComfortZone #Risk",s:89},
-{h:"Discipline > Motivation.",c:"Discipline > Motivation. 🧠\nMotivation aati jaati hai.\nDiscipline rehti hai.\nConsistency wins, inspiration doesn't.\n\nSave for daily reminder 📌",t:"#Motivation #Discipline #Consistency",s:95},
-{h:"₹500/day kaise kamaye?",c:"₹500/day kaise kamaye? 💰\nStep 1: Skill seekho\nStep 2: Practice karo\nStep 3: Online offer karo\nIt's that simple.\n\nSave for later 📌",t:"#Motivation #Earn #SideHustle",s:94},
-{h:"Abhi nahi toh kabhi nahi.",c:"Abhi nahi toh kabhi nahi. ⏰\nPerfect time kabhi nahi aata.\nBest time hai — NOW.\nStart today.\n\nComment 'STARTING NOW' 👇",t:"#Motivation #Now #Start",s:92},
-{h:"Sabko dikhane ka time nahi.",c:"Sabko dikhane ka time nahi. 🤫\nKhud ko prove karne ka time hai.\nResults will speak louder than words.\n\nSave this 🔖",t:"#Motivation #Prove #Silent",s:90},
-{h:"Raaste mushkil hote hain matlab manzil paas hai.",c:"Raaste mushkil hote hain. 🛤️\nMatlab manzil paas hai.\nEasy path kisi ko legendary nahi banata.\n\nShare this 🔥",t:"#Motivation #Journey #Hard",s:88}
-],fitness:[
-{h:"Body under construction, mind already strong.",c:"Body under construction. 🏗️\nMind already strong. 🧠\nTransformation loading... stay tuned.\n\nSave for your next gym post 📌",t:"#Fitness #Gym #Transformation",s:91},
-{h:"Pain today, power tomorrow.",c:"Pain today. 😤\nPower tomorrow. 💪\nEvery rep counts.\nNo shortcuts, only discipline.\n\nDouble tap if you're grinding 💯",t:"#Fitness #Pain #Power",s:89},
-{h:"Discipline is my real flex.",c:"Discipline is my real flex. 💪\nNot the muscles.\nMuscles aate jaate hain, discipline rehti hai.\n\nComment 'DISCIPLINE' 👇",t:"#Fitness #Discipline #Real",s:93},
-{h:"Sweat now, shine later.",c:"Sweat now. 💦\nShine later. ✨\nEvery drop of sweat is an investment in yourself.\n\nShare with gym community 🔄",t:"#Fitness #Sweat #Shine",s:88},
-{h:"Built not bought.",c:"Built not bought. 🏛️\nEarned not edited.\nReal transformation takes real effort.\n\nSave for motivation 📌",t:"#Fitness #Built #Real",s:90},
-{h:"My body follows my mindset.",c:"My body follows my mindset. 🧠💪\nJab dimaag strong hoga, body automatically follow karegi.\nFix your mind first.\n\nTag someone who needs this 👇",t:"#Fitness #Mindset #Body",s:92}
-],funny:[
-{h:"Indian moms jab phone check karein.",c:"Indian moms jab phone check karein. 💀\nPOV: You acting innocent but history is suspicious.\n\nTag that friend who's been caught 👇",t:"#Funny #IndianMoms #Relatable",s:94},
-{h:"Me vs my expectations.",c:"Me vs my expectations. 📉\nExpectation: Productive day\nReality: Scrolled phone for 6 hours\n\nDouble tap if you relate 💯",t:"#Funny #Expectation #Reality",s:91},
-{h:"Diet starts Monday.",c:"Diet starts Monday. 🥗\nBut today is cheat day.\nAur kal bhi.\nParso se pakka.\n\nSave for your food post 📌",t:"#Funny #Diet #CheatDay",s:90},
-{h:"Salary aati hai aur 3 din mein khatam.",c:"Salary aati hai. 💰\n3 din mein khatam. 🏃\nBaki mahina EMI aur maggi mein nikal jaata hai.\n\nTag someone who relates 👇",t:"#Funny #Salary #Broke",s:94},
-{h:"WiFi down ho jaaye.",c:"WiFi down ho jaaye. 📵\nFamily suddenly discovers I exist.\n\nShare if you relate 😂",t:"#Funny #WiFi #Family",s:90},
-{h:"Gym jaane ka plan banaya.",c:"Gym jaane ka plan banaya. 📝\nBed pe letke plan banaya.\nPlan successful raha — bed pe hi reh gaya.\n\nTag your lazy gym buddy 👇",t:"#Funny #Gym #Lazy",s:92},
-{h:"Crush ne seen karke reply nahi kiya.",c:"Crush ne seen karke reply nahi kiya. 💀\nMe: Shayad busy hogi (for the 47th time)\n\nShare with your single friend 🔄",t:"#Funny #Crush #Single",s:91},
-{h:"Group plan banao aur cancel karo.",c:"Group plan banao. 📅\nSab cancel karo. ❌\nGhar pe Netflix aur biryani. 🍗\nPerfect weekend.\n\nShare with your group 🔄",t:"#Funny #Plan #Cancel",s:91}
-],travel:[
-{h:"Mountains call, I answer.",c:"Mountains call. 🏔️\nI answer.\nThere's no WiFi in nature, but you'll find a better connection.\n\nSave for your travel post 📌",t:"#Travel #Mountains #Nature",s:89},
-{h:"Bike, chai, sunset.",c:"Bike, chai, sunset. 🏍️☕🌅\nPerfect plan.\nNo meeting can beat this feeling.\n\nTag your ride partner 👇",t:"#Travel #Bike #Sunset",s:92},
-{h:"Roads teach what classrooms cannot.",c:"Roads teach what classrooms cannot. 🛤️\nTravel = best education.\nNew places, new perspectives.\n\nShare this 🔄",t:"#Travel #Education #Roads",s:90},
-{h:"Exploring India one trip at a time.",c:"Exploring India one trip at a time. 🇮🇳\nHar state ki apni story hai.\nMeri story abhi shuru ho rahi hai.\n\nDouble tap if you love traveling 💯",t:"#Travel #India #Explore",s:85}
-],food:[
-{h:"Diet starts Monday.",c:"Diet starts Monday. 🥗\nBut today is cheat day.\nAur kal bhi.\nParso se pakka.\n\nSave for your food post 📌",t:"#Food #Diet #CheatDay",s:90},
-{h:"First we eat, then everything else.",c:"First we eat. 🍕\nThen we do everything else.\nPriorities matter.\n\nTag a foodie 👇",t:"#Food #Priorities #Foodie",s:88},
-{h:"Mom ke haath ka khana.",c:"Mom ke haath ka khana. 👩‍🍳❤️\nNo 5-star restaurant can beat this.\nEver.\n\nTag your mom 👇",t:"#Food #Mom #HomeCooked",s:93},
-{h:"Street food > Fancy restaurants.",c:"Street food > Fancy restaurants. 🍢\n₹50 ke golgappe > ₹2000 ka starter.\nProve me wrong.\n\nShare with foodie friend 🔄",t:"#Food #StreetFood #Desi",s:91},
-{h:"Ghar ka khana > everything.",c:"Ghar ka khana > everything. 🏠❤️\nBahar ka khana temporary hai.\nGhar ka khana permanent.\n\nTag mom 👇",t:"#Food #Home #GharKaKhana",s:92}
-],cricket:[
-{h:"Cricket is not a sport, it's a religion.",c:"Cricket is not a sport. 🏏\nIt's a religion. 🙏\nAur India is its biggest temple.\n\nSave for match day 📌",t:"#Cricket #India #Religion",s:92},
-{h:"King Kohli energy.",c:"King Kohli energy. 👑🔥\nWhen Kohli is on fire, bowlers shiver.\nLegends don't retire, they inspire.\n\nTag a Kohli fan 👇",t:"#Cricket #Kohli #King",s:94},
-{h:"Match day mood.",c:"Match day mood. 🏏🔥\nWork can wait.\nIndia ka match nahi dekhunga — said no Indian ever.\n\nDouble tap if you're watching 💯",t:"#Cricket #MatchDay #India",s:90},
-{h:"IPL = Indian Festival.",c:"IPL = Indian Festival. 🏏🎉\nDiwali, Holi, IPL — teen bade festivals.\nCricket, chilli chicken and crowd.\n\nTag your IPL buddy 👇",t:"#Cricket #IPL #Festival",s:89}
-],student:[
-{h:"Student today, leader tomorrow.",c:"Student today. 🎓\nLeader tomorrow. 🏆\nDreams under construction.\nBuilding phase is always messy.\n\nSave for motivation 📌",t:"#Student #Dreams #Future",s:90},
-{h:"Exam week survival mode.",c:"Exam week survival mode. 📚💀\n3 coffees, 0 sleep, 1 breakdown.\nLet's go.\n\nTag a student who relates 👇",t:"#Student #Exam #Survival",s:93},
-{h:"Attendance low, ambition high.",c:"Attendance low. 📉\nAmbition high. 🚀\nClass mein nahi, but life mein top karunga.\n\nDouble tap if you're a backbencher 💯",t:"#Student #Backbench #Ambition",s:91},
-{h:"Future CEO in college clothes.",c:"Future CEO. 🏢\nIn college clothes. 👕\nDekhna, kal sab pata chalega.\n\nComment your dream job 👇",t:"#Student #CEO #Dream",s:92}
-],friendship:[
-{h:"Dosti real, drama zero.",c:"Dosti real. 🤝\nDrama zero. 🚫\nWoh dost jinke saath silent rehna bhi comfortable hai.\n\nTag your real one 👇",t:"#Friendship #Real #Dost",s:91},
-{h:"Friends who roast you, love you.",c:"Friends who roast you. 🔥\nAre the ones who love you the most. ❤️\nToxic nahi, loyal hain.\n\nShare with your roast group 🔄",t:"#Friendship #Roast #Love",s:93},
-{h:"4 AM friend.",c:"4 AM friend. 🌙\nWoh insaan jise kabhi bhi call kar sako.\nNo questions asked.\nJust showing up.\n\nTag your 4 AM friend 👇",t:"#Friendship #4AM #Real",s:92},
-{h:"School friends > everyone.",c:"School friends > everyone. 🏫❤️\nWoh log jinhone tumhara cringiest phase dekha hai.\nAur phir bhi palle padde hain.\n\nDouble tap if you agree 💯",t:"#Friendship #School #Besties",s:89}
-],birthday:[
-{h:"Another year older, another year bolder.",c:"Another year older. 🎂\nAnother year bolder. 🔥\nLevel up ho gaya.\n\nDouble tap to wish me 💯",t:"#Birthday #LevelUp #Celebration",s:89},
-{h:"Birthday wishes accepted in cash.",c:"Birthday wishes accepted. 💰\nIn cash, UPI, or cake.\nNo fake wishes please.\n\nTag someone who owes you cake 👇",t:"#Birthday #Funny #Cash",s:92},
-{h:"Meri birthday, meri marzi.",c:"Meri birthday. 🎂\nMeri marzi. 😎\nAaj sab kuch mere hisaab se hoga.\nNo arguments.\n\nShare the birthday energy 🔄",t:"#Birthday #Marzi #Fun",s:90}
-],fashion:[
-{h:"Outfit: Checked. Confidence: Loaded.",c:"Outfit: Checked. ✅\nConfidence: Loaded. 💪\nReady to turn heads.\n\nSave for your next OOTD 📌",t:"#Fashion #OOTD #Style",s:88},
-{h:"Black fits and big dreams.",c:"Black fits. 🖤\nBig dreams. 🌟\nCalm energy.\nBlack never goes out of style.\n\nDouble tap if black is your color 💯",t:"#Fashion #Black #Minimal",s:89},
-{h:"Dressed in confidence.",c:"Dressed in confidence. ✨\nPowered by discipline. 💪\nBest accessory is your attitude.\n\nSave for your fit pic 📌",t:"#Fashion #Confidence #Attitude",s:87}
-]};
-
-var API1='https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
-var API2='https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
-var KEY1=''; // API Key 1
-var KEY2=''; // API Key 2 (fallback)
-
-function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
-
-function generate(){
-var niche=document.getElementById('niche').value;
-var tone=document.getElementById('tone').value;
-var topic=document.getElementById('topic').value.trim();
-var btn=document.getElementById('genBtn');
-var res=document.getElementById('results');
-
-if(!KEY1&&!KEY2||!topic){showPack(niche);return;}
-
-btn.disabled=true;btn.textContent='⏳ Generating...';
-res.innerHTML='<div class="loader"><div class="spinner"></div>AI captions bana raha hai...</div>';
-
-var prompt='Generate exactly 3 viral Instagram captions for Indian creators.\nNiche: '+niche+'\nTone: '+tone+'\nTopic: '+topic+'\n\nRules: First line = scroll-stopping hook. Use 2-4 emojis. Include CTA at end. 80-180 words. Feel native for Indian audience.\n\nReturn ONLY JSON: [{"hook":"first line","caption":"full caption with hook+body+CTA","hashtags":"#tag1 #tag2 #tag3 #tag4 #tag5","score":85}]\nScore = viral potential 0-100.';
-
-callAPI(prompt,KEY1).then(function(data){showAI(data);}).catch(function(){
-if(KEY2&&KEY2!==KEY1){callAPI(prompt,KEY2).then(function(data){showAI(data);}).catch(function(){showPack(niche);});}
-else{showPack(niche);}
-}).finally(function(){btn.disabled=false;btn.textContent='⚡ Generate 3 Viral Captions';});
-}
-
-function callAPI(prompt,key){
-return fetch(API1+'?key='+key,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{temperature:0.9,maxOutputTokens:2000}})}).then(function(r){if(!r.ok)throw new Error('fail');return r.json();}).then(function(data){var t=data.candidates[0].content.parts[0].text;var m=t.match(/\[[\s\S]*\]/);return JSON.parse(m?m[0]:t);});
-}
-
-function showAI(caps){
-var res=document.getElementById('results');var html='';
-caps.forEach(function(c,i){
-var sc=c.score>=80?'hi':'mid';
-html+='<div class="res"><div class="hook">🪝 '+c.hook+'</div><div class="body">'+c.caption+'</div><div class="foot"><span class="score '+sc+'">🔥 '+c.score+'/100 <span style="font-size:.68rem;padding:3px 10px;border-radius:6px;font-weight:800;margin-left:8px;background:rgba(29,78,216,.08);color:#1d4ed8">⚡ AI</span></span><button class="cpbtn" onclick="copyCap(this,'+i+')">📋 Copy</button></div><textarea style="display:none" id="c'+i+'">'+c.caption+'</textarea></div>';
-});
-res.innerHTML=html;
-}
-
-function showPack(niche){
-var pool=PACK[niche]||PACK['attitude'];
-var s=shuffle(pool.slice()).slice(0,3);
-var res=document.getElementById('results');var html='';
-s.forEach(function(c,i){
-var sc=c.s>=80?'hi':'mid';
-html+='<div class="res"><div class="hook">🪝 '+c.h+'</div><div class="body">'+c.c+'</div><div class="foot"><span class="score '+sc+'">🔥 '+c.s+'/100 <span style="font-size:.68rem;padding:3px 10px;border-radius:6px;font-weight:800;margin-left:8px;background:rgba(249,115,22,.08);color:#f97316">📦 Curated</span></span><button class="cpbtn" onclick="copyCap(this,'+i+')">📋 Copy</button></div><textarea style="display:none" id="c'+i+'">'+c.c+'</textarea></div>';
-});
-res.innerHTML=html;
-}
-
-function copyCap(btn,i){
-var text=document.getElementById('c'+i).value;
-var toast=document.getElementById('toast');
-var done=function(){btn.classList.add('copied');btn.textContent='✅ Copied!';toast.classList.add('show');setTimeout(function(){btn.classList.remove('copied');btn.textContent='📋 Copy';toast.classList.remove('show');},1500);};
-navigator.clipboard?navigator.clipboard.writeText(text).then(done).catch(function(){fb(text);done();}):(fb(text),done());
-}
-function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);}
-</script>
-</body>
+    let isGenerating = false;
+    function generateCaptions() {
+      if (isGenerating) return;
+      isGenerating = true;
+      document.getElementById('results').style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+      const niche = document.getElementById('niche').value;
+      const tone = document.getElementById('tone').value;
+      setTimeout(() => {
+        const h = data.hooks[tone][Math.floor(Math.random() * data.hooks[tone].length)];
+        const b = data.bodies[niche][Math.floor(Math.random() * data.bodies[niche].length)];
+        const c = data.ctas[Math.floor(Math.random() * data.ctas.length)];
+        document.getElementById('final-cap').innerText = `${h}\n\n${b}\n\n${c}`;
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('results').style.display = 'block';
+        isGenerating = false;
+        document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 800);
+    }
+    async function copyText() {
+      await navigator.clipboard.writeText(document.getElementById('final-cap').innerText);
+      document.getElementById('copyBtn').innerText = '✅ Copied!';
+      setTimeout(() => document.getElementById('copyBtn').innerText = '📋 Copy Caption', 2000);
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a054c34f0fb43c2e',t:'MTc4MDM4NTUzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
