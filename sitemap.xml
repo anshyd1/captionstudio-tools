@@ -3,12 +3,12 @@
 
   <sitemap>
     <loc>https://captionstudio.in/sitemap-main.xml</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </sitemap>
 
   <sitemap>
     <loc>https://captionstudio.in/sitemap-blogs.xml</loc>
-    <lastmod>2026-04-25</lastmod>
+    <lastmod>2026-06-03</lastmod>
   </sitemap>
 
   <sitemap>
@@ -17,8 +17,8 @@
   </sitemap>
 
   <sitemap>
-  <loc>https://captionstudio.in/sitemap-images.xml</loc>
-  <lastmod>2026-05-30</lastmod>
-</sitemap>
+    <loc>https://captionstudio.in/sitemap-images.xml</loc>
+    <lastmod>2026-06-03</lastmod>
+  </sitemap>
 
 </sitemapindex>
