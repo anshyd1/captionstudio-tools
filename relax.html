@@ -1,188 +1,502 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Relax Playground </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relax Zone — Breathing Exercise, Bubble Pop Game & Creator Calm Tips | CaptionStudio</title>
+  <meta name="description" content="Take a mindful break with CaptionStudio's free Relax Zone — a guided 4-7-8 breathing exercise, a calming bubble pop game, and practical tips to beat creator burnout and stay focused in 2026." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://captionstudio.in/relax.html" />
+  <link rel="icon" href="favicon.png" />
 
-<style>
-body {
-  margin: 0;
-  overflow: hidden;
-  background: #000;
-  font-family: sans-serif;
-  touch-action: none;
-}
-canvas { display: block; }
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Relax Zone — Breathing, Bubble Pop & Creator Calm Tips" />
+  <meta property="og:description" content="A free mindful break for creators: guided breathing, a calming bubble game, and burnout-beating tips." />
+  <meta property="og:url" content="https://captionstudio.in/relax.html" />
+  <meta property="og:image" content="https://captionstudio.in/img/hero-premium.jpg" />
 
-/* Top Info */
-.info {
-  position: fixed;
-  top: 10px;
-  width: 100%;
-  text-align: center;
-  color: #aaa;
-  font-size: 14px;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
 
-/* Bottom Button */
-.bigBtn {
-  position: fixed;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 16px 28px;
-  font-size: 16px;
-  border-radius: 40px;
-  border: none;
-  background: linear-gradient(45deg,#00f2ff,#ff00c8);
-  color: #fff;
-  font-weight: bold;
-}
-</style>
+  <style>
+    :root {
+      --orange: #e8440a;
+      --orange-pale: #fff3ee;
+      --black: #0d0d0d;
+      --ink: #191919;
+      --muted: #6b6b6b;
+      --rule: #e5e5e5;
+      --bg: #ffffff;
+      --calm: #2d7d8a;
+      --calm-pale: #eef9fb;
+      /* Strong system-font fallbacks so the page looks good even without Google Fonts */
+      --serif: 'Lora', Georgia, 'Times New Roman', serif;
+      --sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      --display: 'Syne', 'Segoe UI', Arial, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.7; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: 0.2s; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav { border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.97); position: sticky; top: 0; z-index: 1000; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1000px; margin: 0 auto; }
+    .logo { font-family: var(--display); font-size: 1.05rem; font-weight: 800; color: var(--ink); }
+    .nav-links { display: flex; gap: 22px; font-family: var(--sans); font-weight: 600; font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--orange); }
+    @media(max-width:640px){ .nav-links { display: none; } }
+
+    /* HERO */
+    .hero { text-align: center; padding: 70px 0 30px; }
+    .hero .eyebrow { font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--calm); font-size: 0.75rem; margin-bottom: 16px; }
+    .hero h1 { font-family: var(--display); font-size: clamp(2rem, 7vw, 3.4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 18px; }
+    .hero p { font-size: 1.12rem; color: var(--muted); max-width: 620px; margin: 0 auto; }
+
+    /* TABS */
+    .tabs { display: flex; justify-content: center; gap: 10px; margin: 24px 0 26px; flex-wrap: wrap; }
+    .tab { font-family: var(--sans); font-weight: 700; font-size: 0.85rem; padding: 11px 22px; border-radius: 40px; border: 1.5px solid var(--rule); background: #fff; cursor: pointer; transition: 0.25s; color: var(--ink); }
+    .tab.active { background: var(--calm); color: #fff; border-color: var(--calm); }
+
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    /* BREATHING */
+    .breath-stage { background: var(--calm-pale); border: 1px solid #d7eef2; border-radius: 24px; padding: 50px 20px; text-align: center; }
+    .breath-circle { width: 180px; height: 180px; border-radius: 50%; margin: 10px auto 26px; background: radial-gradient(circle at 35% 30%, #6fc6d4, var(--calm)); display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--display); font-weight: 800; font-size: 1.2rem; transition: transform 4s ease-in-out, box-shadow 4s ease-in-out; box-shadow: 0 0 0 0 rgba(45,125,138,.25); }
+    .breath-circle.inhale { transform: scale(1.45); box-shadow: 0 0 60px 18px rgba(45,125,138,.25); }
+    .breath-circle.exhale { transform: scale(0.85); }
+    .breath-phase { font-family: var(--sans); font-size: 1.05rem; color: var(--calm); font-weight: 600; min-height: 26px; }
+    .breath-count { font-family: var(--display); font-size: 2rem; color: var(--ink); margin: 6px 0 22px; }
+    .btn { font-family: var(--sans); font-weight: 700; font-size: 0.95rem; padding: 13px 30px; border-radius: 40px; border: none; cursor: pointer; background: var(--calm); color: #fff; transition: 0.2s; }
+    .btn:hover { filter: brightness(1.08); }
+
+    /* BUBBLE GAME */
+    .game-head { display: flex; justify-content: center; gap: 28px; font-family: var(--sans); font-weight: 700; margin-bottom: 16px; flex-wrap: wrap; }
+    .game-head span b { color: var(--orange); }
+    .mode-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+    .mode-btn { font-family: var(--sans); font-weight: 700; font-size: 0.8rem; padding: 9px 20px; border-radius: 40px; border: 1.5px solid var(--rule); background: #fff; cursor: pointer; transition: 0.2s; color: var(--ink); }
+    .mode-btn.active { background: var(--orange); color: #fff; border-color: var(--orange); }
+    .canvas-wrap { position: relative; }
+    #bubble-canvas { width: 100%; max-width: 100%; height: 420px; background: radial-gradient(circle at 30% 20%, #f3fbfd, #e7f4f8 45%, #f3edff); border: 1px solid var(--rule); border-radius: 22px; display: block; cursor: pointer; touch-action: none; box-shadow: inset 0 2px 20px rgba(45,125,138,.08); }
+    .game-hint { text-align: center; color: var(--muted); font-family: var(--sans); font-size: 0.9rem; margin-top: 12px; }
+
+    /* GAME OVER overlay */
+    .game-over { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(20,30,35,.55); backdrop-filter: blur(3px); border-radius: 22px; }
+    .game-over.show { display: flex; }
+    .go-card { background: #fff; border-radius: 20px; padding: 34px 30px; text-align: center; max-width: 320px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+    .go-emoji { font-size: 3rem; margin-bottom: 8px; }
+    .go-card h3 { font-family: var(--display); font-size: 1.5rem; margin-bottom: 8px; }
+    .go-card p { font-family: var(--sans); color: var(--muted); margin-bottom: 18px; }
+    .go-card p b { color: var(--orange); }
+
+    /* CONTENT */
+    .content { padding: 60px 0 30px; }
+    .content h2 { font-family: var(--display); font-size: 1.7rem; margin: 36px 0 14px; letter-spacing: -0.02em; }
+    .content h3 { font-family: var(--display); font-size: 1.2rem; margin: 26px 0 10px; }
+    .content p { margin-bottom: 16px; color: #2a2a2a; }
+    .content ul { margin: 0 0 18px 22px; }
+    .content li { margin-bottom: 9px; }
+    .content .lead { font-size: 1.15rem; color: var(--muted); }
+
+    .cta-box { background: var(--orange-pale); border: 1px solid #ffd9c9; border-radius: 18px; padding: 26px 28px; margin: 40px 0; text-align: center; }
+    .cta-box h3 { font-family: var(--display); margin-bottom: 8px; }
+    .cta-box a { display: inline-block; margin-top: 12px; background: var(--orange); color: #fff; font-family: var(--sans); font-weight: 700; padding: 12px 26px; border-radius: 40px; }
+
+    /* FOOTER */
+    footer { background: var(--black); padding: 60px 0 36px; color: #888; font-family: var(--sans); text-align: center; margin-top: 40px; }
+    .ft-logo { font-family: var(--display); font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    footer a { color: #bbb; margin: 0 10px; }
+    footer a:hover { color: var(--orange); }
+    .ft-bottom { margin-top: 22px; font-size: 0.75rem; color: #666; }
+  </style>
 </head>
-
 <body>
 
-<div class="info" id="infoText">💧 Flow Mode • Touch & Move</div>
-<canvas id="c"></canvas>
-<button class="bigBtn" onclick="nextMode()">Change Mode</button>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">CaptionStudio <span style="font-weight:400;opacity:.4;">/ Relax</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tools/caption-generator.html">AI Tools</a>
+        <a href="blog/">Blog</a>
+        <a href="earning.html">Earning Hub</a>
+      </div>
+    </div>
+  </nav>
 
-<script>
-const canvas = document.getElementById("c");
-const ctx = canvas.getContext("2d");
+  <header class="hero wrap">
+    <div class="eyebrow">🧘 Mindful Break for Creators</div>
+    <h1>Relax Zone</h1>
+    <p>Creating content all day is mentally draining. Take a 2-minute reset with a guided breathing exercise, a calming bubble-pop game, and simple tips to beat creator burnout — then get back to making your best work.</p>
+  </header>
 
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+  <main class="wrap">
 
-let mode = 0;
-let particles = [];
-let touches = {};
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(this,'breath')">🧘 Breathing</button>
+      <button class="tab" onclick="switchTab(this,'bubble')">🫧 Bubble Pop</button>
+    </div>
 
-const modes = [
-  "💧 Flow Mode • Smooth motion",
-  "🎲 Burst Mode • Random spread",
-  "🐍 Snake Mode • Trail follow",
-  "✨ Pulse Mode • Expand & fade"
-];
+    <!-- BREATHING PANEL -->
+    <section class="panel active" id="panel-breath">
+      <div class="breath-stage">
+        <div class="breath-circle" id="breathCircle">Breathe</div>
+        <div class="breath-phase" id="breathPhase">Press Start to begin the 4-7-8 exercise</div>
+        <div class="breath-count" id="breathCount"></div>
+        <button class="btn" id="breathBtn" onclick="toggleBreath()">Start</button>
+      </div>
+    </section>
 
-function nextMode() {
-  mode = (mode + 1) % 4;
-  particles = [];
-  document.getElementById("infoText").innerText = modes[mode];
-}
+    <!-- BUBBLE GAME PANEL -->
+    <section class="panel" id="panel-bubble">
+      <div class="mode-row">
+        <button class="mode-btn active" id="mode-easy" onclick="setMode('easy')">🐢 Easy · Slow</button>
+        <button class="mode-btn" id="mode-hard" onclick="setMode('hard')">⚡ Hard · Fast</button>
+      </div>
+      <div class="game-head">
+        <span>Score: <b id="bScore">0</b></span>
+        <span>Time: <b id="bTime">40</b>s</span>
+        <span>Misses: <b id="bMiss">0</b>/5</span>
+        <span>Best: <b id="bBest">0</b></span>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="bubble-canvas"></canvas>
+        <div class="game-over" id="gameOver">
+          <div class="go-card">
+            <div class="go-emoji" id="goEmoji">🎉</div>
+            <h3 id="goTitle">Time's up!</h3>
+            <p id="goMsg">You popped <b id="goScore">0</b> bubbles.</p>
+            <button class="btn" onclick="startBubble()">Play Again</button>
+          </div>
+        </div>
+      </div>
+      <p class="game-hint">Pop the bubbles 🫧 · Avoid the 💣 bomb · Don't miss 5 bubbles!</p>
+      <div style="text-align:center; margin-top:16px;">
+        <button class="btn" onclick="startBubble()">Play / Restart</button>
+      </div>
+    </section>
 
-// spawn logic per mode
-function spawn(x, y) {
+    <!-- ARTICLE CONTENT (AdSense-safe, helpful) -->
+    <article class="content">
+      <h2>Why Every Creator Needs Mindful Breaks</h2>
+      <p class="lead">If you make content for Instagram, YouTube, or any platform, your brain rarely gets to switch off. Endless scrolling, idea pressure, comparison with other creators, and the chase for views slowly build up into stress and burnout. A short, intentional break is not a waste of time — it is what keeps your creativity alive.</p>
 
-  if (mode === 0) {
-    for (let i = 0; i < 6; i++) {
-      particles.push({x,y,angle:Math.random()*6.28,life:1});
+      <p>The Relax Zone above is built for exactly these moments. When you feel stuck, overwhelmed, or simply tired after a long editing session, two minutes here can reset your focus far better than mindlessly opening another app. Both tools are completely free, work on any device, and require no signup.</p>
+
+      <h2>The 4-7-8 Breathing Technique</h2>
+      <p>The breathing tool follows the popular 4-7-8 method, a simple pattern recommended for reducing anxiety and helping the body relax. The idea is straightforward:</p>
+      <ul>
+        <li><strong>Inhale</strong> slowly through your nose for 4 seconds as the circle grows.</li>
+        <li><strong>Hold</strong> your breath gently for 7 seconds while the circle stays still.</li>
+        <li><strong>Exhale</strong> fully through your mouth for 8 seconds as the circle shrinks.</li>
+      </ul>
+      <p>Repeating this cycle three or four times slows your heart rate, lowers tension in your shoulders, and brings your attention back to the present moment. Many creators use it before filming, before a big upload, or whenever a video underperforms and frustration kicks in. Let the animated circle guide your rhythm — you don't have to count anything yourself.</p>
+
+      <h2>The Bubble Pop Game</h2>
+      <p>Sometimes your mind needs a tiny, pressure-free distraction rather than stillness. The bubble pop game gives you exactly that. Colorful bubbles drift upward, and you simply tap them to pop. There is no way to lose, no penalties, and no ads interrupting you. It is designed to be soothing rather than competitive — a gentle way to break a stressful thought loop and give your eyes a rest from text and timelines.</p>
+
+      <h2>5 Quick Tips to Beat Creator Burnout</h2>
+      <h3>1. Batch your content</h3>
+      <p>Instead of creating every single day under pressure, set aside one or two focused days to plan and record several posts at once. Batching reduces decision fatigue and frees up the rest of your week.</p>
+      <h3>2. Schedule real off-time</h3>
+      <p>Treat rest like an appointment. Block out time when you are not allowed to check analytics or reply to comments. Your audience will not disappear, and you will come back sharper.</p>
+      <h3>3. Stop comparing dashboards</h3>
+      <p>Every creator's journey moves at a different pace. Comparing your view count to someone else's highlight reel is the fastest route to discouragement. Focus on your own consistency instead.</p>
+      <h3>4. Move your body</h3>
+      <p>A short walk, a stretch, or even standing up between editing sessions resets your energy more than another cup of coffee. Physical movement directly improves mental clarity.</p>
+      <h3>5. Celebrate small wins</h3>
+      <p>Finished a tough edit? Posted on a low-motivation day? That counts. Acknowledging small progress keeps you going far longer than chasing one viral moment.</p>
+
+      <div class="cta-box">
+        <h3>Feeling refreshed? Get back to creating 🚀</h3>
+        <p>Use our free AI tools to write captions, hashtags and bios in seconds — so you spend less time stressing and more time creating.</p>
+        <a href="tools/caption-generator.html">Try the Caption Generator →</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>Is the Relax Zone really free?</h3>
+      <p>Yes. Both the breathing exercise and the bubble game are 100% free, with no login, no limits, and no charges.</p>
+      <h3>Will these tools work on my phone?</h3>
+      <p>Absolutely. Everything is mobile-friendly and works on phones, tablets and computers, even on slower connections.</p>
+      <h3>How often should I take a break?</h3>
+      <p>There's no fixed rule, but a short reset every 60–90 minutes of focused work helps most people stay productive and calm throughout the day.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="ft-logo">CaptionStudio</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="tools/caption-generator.html">AI Tools</a>
+      <a href="blog/">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="ft-bottom">&copy; 2026 CaptionStudio · Built by Ansh Yadav · Gorakhpur, UP</div>
+  </footer>
+
+  <script>
+    /* ---------- TABS ---------- */
+    function switchTab(btn, name) {
+      var tabs = document.querySelectorAll('.tab');
+      for (var i = 0; i < tabs.length; i++) tabs[i].classList.remove('active');
+      btn.classList.add('active');
+      var panels = document.querySelectorAll('.panel');
+      for (var j = 0; j < panels.length; j++) panels[j].classList.remove('active');
+      document.getElementById('panel-' + name).classList.add('active');
+      if (name === 'bubble') resizeBubble();
     }
-  }
 
-  if (mode === 1) {
-    for (let i = 0; i < 8; i++) {
-      particles.push({
-        x,y,
-        vx:(Math.random()-0.5)*4,
-        vy:(Math.random()-0.5)*4,
-        life:1
+    /* ---------- BREATHING (4-7-8) ---------- */
+    var breathRunning = false, breathTimer = null;
+    var circle = document.getElementById('breathCircle');
+    var phaseEl = document.getElementById('breathPhase');
+    var countEl = document.getElementById('breathCount');
+    var btnEl = document.getElementById('breathBtn');
+
+    function runPhase(label, secs, cls, next) {
+      if (!breathRunning) return;
+      phaseEl.textContent = label;
+      circle.className = 'breath-circle' + (cls ? ' ' + cls : '');
+      var n = secs;
+      countEl.textContent = n;
+      breathTimer = setInterval(function(){
+        if (!breathRunning) { clearInterval(breathTimer); return; }
+        n--;
+        countEl.textContent = n > 0 ? n : '';
+        if (n <= 0) { clearInterval(breathTimer); next(); }
+      }, 1000);
+    }
+    function cycle() {
+      runPhase('Breathe in…', 4, 'inhale', function(){
+        runPhase('Hold…', 7, '', function(){
+          runPhase('Breathe out…', 8, 'exhale', function(){ cycle(); });
+        });
       });
     }
-  }
-
-  if (mode === 2) {
-    particles.push({trail:[{x,y}],life:1});
-  }
-
-  if (mode === 3) {
-    particles.push({x,y,r:0,life:1});
-  }
-}
-
-// animation
-function animate() {
-  ctx.fillStyle = "rgba(0,0,0,0.12)";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-
-  particles.forEach((p,i)=>{
-
-    if (mode === 0) {
-      p.angle += 0.1;
-      p.x += Math.cos(p.angle)*2;
-      p.y += Math.sin(p.angle)*2;
-      p.life -= 0.02;
-
-      ctx.fillStyle=`rgba(0,200,255,${p.life})`;
-      ctx.fillRect(p.x,p.y,2,2);
+    function toggleBreath() {
+      breathRunning = !breathRunning;
+      if (breathRunning) { btnEl.textContent = 'Stop'; cycle(); }
+      else {
+        btnEl.textContent = 'Start';
+        clearInterval(breathTimer);
+        circle.className = 'breath-circle';
+        circle.textContent = 'Breathe';
+        phaseEl.textContent = 'Paused — press Start to continue';
+        countEl.textContent = '';
+      }
     }
 
-    if (mode === 1) {
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vx *= 0.96;
-      p.vy *= 0.96;
-      p.life -= 0.02;
+    /* ---------- BUBBLE POP GAME (glassy + bomb + miss-limit + combo + sound) ---------- */
+    var bc = document.getElementById('bubble-canvas');
+    var bx = bc.getContext('2d');
+    var CW = 0, CH = 0;                 /* CSS pixel size (used for game logic) */
+    var bubbles = [], pops = [], floaters = [];
+    var score = 0, timeLeft = 40, misses = 0, combo = 0;
+    var gameTimer = null, spawnTimer = null, animId = null, running = false;
+    var MAX_MISS = 5;
 
-      ctx.fillStyle=`rgba(255,150,0,${p.life})`;
-      ctx.fillRect(p.x,p.y,3,3);
+    /* difficulty presets */
+    var MODES = {
+      easy: { minR: 30, addR: 28, minSpd: 1.0, addSpd: 1.4, spawn: 520, time: 40, bombChance: 0.06, best: 0 },
+      hard: { minR: 18, addR: 18, minSpd: 2.6, addSpd: 3.4, spawn: 280, time: 30, bombChance: 0.12, best: 0 }
+    };
+    var curMode = 'easy';
+
+    function setMode(m) {
+      curMode = m;
+      document.getElementById('mode-easy').classList.toggle('active', m === 'easy');
+      document.getElementById('mode-hard').classList.toggle('active', m === 'hard');
+      document.getElementById('bBest').textContent = MODES[m].best;
+      startBubble();
     }
 
-    if (mode === 2) {
-      let last = p.trail[p.trail.length-1];
-      p.trail.push({x:last.x + (Math.random()-0.5)*5, y:last.y + (Math.random()-0.5)*5});
-      if (p.trail.length > 20) p.trail.shift();
+    /* soft, glassy color pairs: [light, deep] */
+    var PALETTE = [
+      ['#9be7f5','#2d9fb8'],['#ffc59e','#ff7e3d'],['#d6b8ff','#8b5cf6'],
+      ['#ffc2d6','#ff5d8f'],['#bff0c3','#34c759'],['#ffe08a','#ffb300']
+    ];
 
-      ctx.beginPath();
-      p.trail.forEach(pt=>ctx.lineTo(pt.x,pt.y));
-      ctx.strokeStyle=`rgba(0,255,150,0.5)`;
-      ctx.stroke();
-
-      p.life -= 0.02;
+    /* tiny beep using Web Audio (no file needed) */
+    var AC = null;
+    function beep(freq, dur, type) {
+      try {
+        if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)();
+        var o = AC.createOscillator(), g = AC.createGain();
+        o.type = type || 'sine'; o.frequency.value = freq;
+        o.connect(g); g.connect(AC.destination);
+        g.gain.setValueAtTime(0.18, AC.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001, AC.currentTime + dur);
+        o.start(); o.stop(AC.currentTime + dur);
+      } catch (e) {}
     }
 
-    if (mode === 3) {
-      p.r += 2;
-      p.life -= 0.02;
-
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.strokeStyle=`rgba(255,255,255,${p.life})`;
-      ctx.stroke();
+    function resizeBubble() {
+      var dpr = window.devicePixelRatio || 1;
+      CW = bc.clientWidth; CH = bc.clientHeight;
+      bc.width = Math.round(CW * dpr); bc.height = Math.round(CH * dpr);
+      bx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
-    if (p.life <= 0) particles.splice(i,1);
-  });
+    function spawnBubble() {
+      if (!running) return;
+      var cfg = MODES[curMode];
+      var r = cfg.minR + Math.random()*cfg.addR;
+      var isBomb = Math.random() < cfg.bombChance;
+      var isGold = !isBomb && Math.random() < 0.08;   /* rare golden bonus */
+      var pal = PALETTE[Math.floor(Math.random()*PALETTE.length)];
+      bubbles.push({
+        x: r + Math.random()*(CW - 2*r), y: CH + r, r: r,
+        speed: cfg.minSpd + Math.random()*cfg.addSpd,
+        light: pal[0], deep: pal[1],
+        wobble: Math.random()*Math.PI*2, amp: 0.6 + Math.random()*1.0,
+        bomb: isBomb, gold: isGold
+      });
+    }
 
-  requestAnimationFrame(animate);
-}
+    function drawGlassBubble(b) {
+      if (b.bomb) {
+        var bg = bx.createRadialGradient(b.x - b.r*0.3, b.y - b.r*0.35, b.r*0.1, b.x, b.y, b.r);
+        bg.addColorStop(0, '#666'); bg.addColorStop(1, '#111');
+        bx.beginPath(); bx.arc(b.x, b.y, b.r, 0, Math.PI*2); bx.fillStyle = bg; bx.fill();
+        bx.font = (b.r*1.1) + 'px serif'; bx.textAlign = 'center'; bx.textBaseline = 'middle';
+        bx.fillText('💣', b.x, b.y + 1);
+        return;
+      }
+      var lite = b.gold ? '#fff7cf' : b.light;
+      var deep = b.gold ? '#f4b400' : b.deep;
+      var g = bx.createRadialGradient(b.x - b.r*0.35, b.y - b.r*0.4, b.r*0.15, b.x, b.y, b.r);
+      g.addColorStop(0, 'rgba(255,255,255,0.95)');
+      g.addColorStop(0.25, lite); g.addColorStop(1, deep);
+      bx.beginPath(); bx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+      bx.fillStyle = g; bx.globalAlpha = 0.92; bx.fill(); bx.globalAlpha = 1;
+      bx.beginPath(); bx.arc(b.x, b.y, b.r-1.5, 0, Math.PI*2);
+      bx.lineWidth = b.gold ? 3 : 2; bx.strokeStyle = b.gold ? 'rgba(255,215,0,0.9)' : 'rgba(255,255,255,0.55)'; bx.stroke();
+      bx.beginPath(); bx.arc(b.x - b.r*0.32, b.y - b.r*0.34, b.r*0.30, 0, Math.PI*2);
+      bx.fillStyle = 'rgba(255,255,255,0.85)'; bx.fill();
+      bx.beginPath(); bx.arc(b.x + b.r*0.30, b.y + b.r*0.18, b.r*0.10, 0, Math.PI*2);
+      bx.fillStyle = 'rgba(255,255,255,0.5)'; bx.fill();
+      if (b.gold) { bx.font = (b.r*0.8)+'px serif'; bx.textAlign='center'; bx.textBaseline='middle'; bx.fillText('⭐', b.x, b.y+1); }
+    }
 
-// multi-touch fix
-canvas.addEventListener("touchstart", e => {
-  for (let t of e.touches) {
-    touches[t.identifier] = {x:t.clientX,y:t.clientY};
-    spawn(t.clientX,t.clientY);
-  }
-});
+    function drawEffects() {
+      for (var i = pops.length-1; i >= 0; i--) {
+        var p = pops[i]; p.life -= 0.08;
+        if (p.life <= 0) { pops.splice(i,1); continue; }
+        bx.beginPath(); bx.arc(p.x, p.y, p.r*(1.6 - p.life), 0, Math.PI*2);
+        bx.lineWidth = 3*p.life; bx.strokeStyle = p.color.replace('A', p.life); bx.stroke();
+      }
+      for (var j = floaters.length-1; j >= 0; j--) {
+        var f = floaters[j]; f.life -= 0.02; f.y -= 1;
+        if (f.life <= 0) { floaters.splice(j,1); continue; }
+        bx.globalAlpha = f.life; bx.fillStyle = f.color; bx.font = 'bold ' + f.size + 'px ' + "'Source Sans 3',sans-serif";
+        bx.textAlign = 'center'; bx.fillText(f.text, f.x, f.y); bx.globalAlpha = 1;
+      }
+    }
 
-canvas.addEventListener("touchmove", e => {
-  for (let t of e.touches) {
-    touches[t.identifier] = {x:t.clientX,y:t.clientY};
-    spawn(t.clientX,t.clientY);
-  }
-});
+    function loop() {
+      bx.clearRect(0, 0, CW, CH);
+      for (var i = bubbles.length-1; i >= 0; i--) {
+        var b = bubbles[i];
+        b.y -= b.speed; b.wobble += 0.06; b.x += Math.sin(b.wobble) * b.amp;
+        drawGlassBubble(b);
+        if (b.y + b.r < 0) {            /* floated off the top = a miss (bombs don't count) */
+          bubbles.splice(i, 1);
+          if (!b.bomb && running) registerMiss();
+        }
+      }
+      drawEffects();
+      animId = requestAnimationFrame(loop);
+    }
 
-canvas.addEventListener("touchend", e => {
-  for (let t of e.changedTouches) {
-    delete touches[t.identifier];
-  }
-});
+    function registerMiss() {
+      misses++; combo = 0;
+      document.getElementById('bMiss').textContent = misses;
+      beep(180, 0.12, 'square');
+      if (misses >= MAX_MISS) endGame(false, 'missed');
+    }
 
-// mouse
-canvas.addEventListener("mousemove", e => spawn(e.clientX,e.clientY));
+    function popAt(mx, my) {
+      for (var i = bubbles.length-1; i >= 0; i--) {
+        var b = bubbles[i];
+        var hit = b.r + 10;
+        if ((mx-b.x)*(mx-b.x) + (my-b.y)*(my-b.y) <= hit*hit) {
+          if (b.bomb) {                 /* tapped a bomb = instant game over */
+            pops.push({ x:b.x, y:b.y, r:b.r*1.6, life:1, color:'rgba(220,40,40,A)' });
+            bubbles.splice(i, 1);
+            beep(90, 0.3, 'sawtooth');
+            endGame(false, 'bomb');
+            return true;
+          }
+          var gain = b.gold ? 5 : 1;
+          combo++;
+          if (combo >= 3) gain += Math.min(combo - 2, 5);   /* combo bonus */
+          score += gain;
+          document.getElementById('bScore').textContent = score;
+          pops.push({ x:b.x, y:b.y, r:b.r, life:1, color: b.gold ? 'rgba(244,180,0,A)' : 'rgba(45,159,184,A)' });
+          floaters.push({ x:b.x, y:b.y, text:'+'+gain, life:1, size:b.gold?22:16, color:b.gold?'#f4b400':'#2d9fb8' });
+          if (combo >= 3) floaters.push({ x:b.x, y:b.y-22, text:combo+'x', life:1, size:14, color:'#e8440a' });
+          beep(b.gold ? 880 : 520 + Math.min(combo*40, 300), 0.08, 'sine');
+          bubbles.splice(i, 1);
+          return true;
+        }
+      }
+      return false;
+    }
 
-animate();
-</script>
+    function evtToCanvas(clientX, clientY) {
+      var rect = bc.getBoundingClientRect();
+      return [ (clientX - rect.left) * (CW / rect.width), (clientY - rect.top) * (CH / rect.height) ];
+    }
+    bc.addEventListener('click', function(e){ if (!running) return; var c = evtToCanvas(e.clientX, e.clientY); popAt(c[0], c[1]); });
+    bc.addEventListener('touchstart', function(e){
+      if (!running) return;
+      e.preventDefault();
+      for (var i = 0; i < e.changedTouches.length; i++) {
+        var t = e.changedTouches[i]; var c = evtToCanvas(t.clientX, t.clientY); popAt(c[0], c[1]);
+      }
+    }, {passive:false});
 
+    function endGame(won, reason) {
+      running = false;
+      clearInterval(gameTimer); clearInterval(spawnTimer);
+      var cfg = MODES[curMode];
+      if (score > cfg.best) { cfg.best = score; }
+      document.getElementById('bBest').textContent = cfg.best;
+      var emoji = '🎉', title = "Time's up!";
+      if (reason === 'bomb')   { emoji = '💥'; title = 'Boom! You hit a bomb'; }
+      if (reason === 'missed') { emoji = '😅'; title = 'You missed 5 bubbles'; }
+      document.getElementById('goEmoji').textContent = emoji;
+      document.getElementById('goTitle').textContent = title;
+      document.getElementById('goScore').textContent = score;
+      document.getElementById('gameOver').classList.add('show');
+    }
+
+    function startBubble() {
+      var cfg = MODES[curMode];
+      resizeBubble();
+      cancelAnimationFrame(animId); clearInterval(gameTimer); clearInterval(spawnTimer);
+      bubbles = []; pops = []; floaters = [];
+      score = 0; misses = 0; combo = 0; timeLeft = cfg.time; running = true;
+      document.getElementById('bScore').textContent = '0';
+      document.getElementById('bTime').textContent = cfg.time;
+      document.getElementById('bMiss').textContent = '0';
+      document.getElementById('gameOver').classList.remove('show');
+      loop();
+      spawnTimer = setInterval(spawnBubble, cfg.spawn);
+      gameTimer = setInterval(function(){
+        if (!running) return;
+        timeLeft--;
+        document.getElementById('bTime').textContent = timeLeft;
+        if (timeLeft <= 0) endGame(true, 'time');
+      }, 1000);
+    }
+
+    window.addEventListener('resize', function(){
+      if (document.getElementById('panel-bubble').classList.contains('active')) resizeBubble();
+    });
+  </script>
 </body>
-  </html>
+</html>
