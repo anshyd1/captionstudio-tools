@@ -61,11 +61,11 @@
     .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
 
     nav { border-bottom: 1px solid var(--rule); background: rgba(255,255,255,.97); position: sticky; top: 0; z-index: 100; }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1000px; margin: 0 auto; }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; gap: 8px 16px; }
     .logo { font-family: var(--display); font-size: 1.05rem; font-weight: 800; }
-    .nav-links { display: flex; gap: 20px; font-family: var(--sans); font-weight: 600; font-size: .9rem; }
+    .nav-links { display: flex; gap: 16px; font-family: var(--sans); font-weight: 600; font-size: .9rem; flex-wrap: wrap; }
     .nav-links a:hover { color: var(--orange); }
-    @media(max-width:640px){ .nav-links { display: none; } }
+    @media(max-width:640px){ .nav-inner { justify-content: center; } .nav-links { width: 100%; justify-content: center; gap: 14px; font-size: .82rem; } }
 
     .crumbs { font-family: var(--sans); font-size: .8rem; color: var(--muted); padding: 24px 0 0; }
     .crumbs a:hover { color: var(--orange); }
@@ -96,7 +96,8 @@
     .cta-box { background: #0d0d0d; color: #fff; border-radius: 16px; padding: 30px; margin: 40px 0; text-align: center; }
     .cta-box h3 { font-family: var(--display); color: #fff; margin-bottom: 8px; }
     .cta-box p { color: #bbb; font-family: var(--sans); margin-bottom: 16px; }
-    .cta-box a { display: inline-block; background: var(--orange); color: #fff; font-family: var(--sans); font-weight: 700; padding: 12px 26px; border-radius: 40px; }
+    .cta-box a { display: inline-block; background: var(--orange); color: #fff; font-family: var(--sans); font-weight: 700; padding: 12px 26px; border-radius: 40px; margin: 6px; }
+    .cta-box a.alt { background: transparent; border: 1.5px solid #fff; }
 
     .related { border-top: 1px solid var(--rule); margin-top: 40px; padding-top: 26px; }
     .related h2 { font-size: 1.3rem; }
@@ -214,8 +215,9 @@
 
       <div class="cta-box">
         <h3>Start with the free essentials &#128640;</h3>
-        <p>Captions, hashtags aur bio &mdash; teeno free tools, Indian creators ke liye banaye. No signup, koi limit nahi.</p>
+        <p>Captions, hashtags aur bio &mdash; teeno free tools, Indian creators ke liye banaye. No signup, koi limit nahi. Aur daily growth tips ke liye Telegram join karo.</p>
         <a href="../tools/caption-generator.html">Try the Free AI Tools &rarr;</a>
+        <a class="alt" href="https://t.me/skill2incomehub" target="_blank" rel="noopener">&#128242; Join Telegram</a>
       </div>
 
       <h2>Common Mistakes With AI Tools</h2>
@@ -260,5 +262,5 @@
     <div class="ft-bottom">&copy; 2026 CaptionStudio &middot; Built by Ansh Yadav &middot; Gorakhpur, UP</div>
   </footer>
 
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a05847a87f39f9b4',t:'MTc4MDQyMjQxMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
