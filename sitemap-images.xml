@@ -126,4 +126,12 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <image:image><image:loc>https://captionstudio.in/img/argentina-jersey-2026.jpg</image:loc></image:image>
 </url>
 
+
+<url>
+<loc>https://captionstudio.in/blog/fathers-day-captions-hindi-2026.html</loc>
+<image:image><image:loc>https://captionstudio.in/img/fathers-day-2026-hero.jpg</image:loc></image:image>
+<image:image><image:loc>https://captionstudio.in/img/fathers-day-2026-memories.jpg</image:loc></image:image>
+<image:image><image:loc>https://captionstudio.in/img/fathers-day-2026-superhero.jpg</image:loc></image:image>
+</url>
+
 </urlset>
