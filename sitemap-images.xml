@@ -117,4 +117,13 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <image:image><image:loc>https://captionstudio.in/img/argentina-jersey-2026.jpg</image:loc></image:image>
 </url>
 
+
+<url>
+<loc>https://captionstudio.in/blog/messi-captions-instagram-2026.html</loc>
+<image:image><image:loc>https://captionstudio.in/img/messi-captions-2026-hero.jpg</image:loc></image:image>
+<image:image><image:loc>https://captionstudio.in/img/messi-captions-argentina-team.jpg</image:loc></image:image>
+<image:image><image:loc>https://captionstudio.in/img/messi-captions-legacy.jpg</image:loc></image:image>
+<image:image><image:loc>https://captionstudio.in/img/argentina-jersey-2026.jpg</image:loc></image:image>
+</url>
+
 </urlset>
