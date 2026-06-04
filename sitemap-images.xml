@@ -134,4 +134,20 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <image:image><image:loc>https://captionstudio.in/img/fathers-day-2026-superhero.jpg</image:loc></image:image>
 </url>
 
+  <url>
+    <loc>https://captionstudio.in/blog/love-viral-captions-hinglish-2026.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/love-viral-captions-hinglish-2026-hero.jpg</image:loc>
+      <image:title>Love viral captions Hinglish 2026 hero — romantic couple sunset Instagram</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/love-viral-captions-2026-couple.jpg</image:loc>
+      <image:title>Indian couple walking colorful market fairy lights romantic</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/love-viral-captions-2026-reels.jpg</image:loc>
+      <image:title>Smartphone Instagram Reels heart emojis love theme</image:title>
+    </image:image>
+  </url>
+
 </urlset>
