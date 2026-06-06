@@ -3,12 +3,74 @@
     {
       "source": "/(.*)",
       "has": [
-        { "type": "host", "value": "www.captionstudio.in" }
+        {
+          "type": "host",
+          "value": "www.captionstudio.in"
+        }
       ],
       "destination": "https://captionstudio.in/$1",
       "permanent": true
     },
-
+    {
+      "source": "/blog/copy-paste-instagram-captions",
+      "destination": "/blog/copy-paste-instagram-captions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/copy-paste-instagram-captions/",
+      "destination": "/blog/copy-paste-instagram-captions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/captions.html",
+      "destination": "/blog/ultimate-instagram-captions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/instagram-growth.html",
+      "destination": "/blog/instagram-growth-0-to-10k.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/shayari.html",
+      "destination": "/blog/english-vs-shayari-captions-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/cricket",
+      "destination": "/blog/ipl-2026-final-captions-english-international-cricket-fans.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/cricket/",
+      "destination": "/blog/ipl-2026-final-captions-english-international-cricket-fans.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/favicon.png",
+      "destination": "/favicon.png",
+      "permanent": true
+    },
+    {
+      "source": "/blog/attitude-captions-for-reels-2026.html",
+      "destination": "/blog/attitude-captions-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-hashtags-reels.html",
+      "destination": "/blog/trending-hashtags-reels-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/data",
+      "destination": "/data/homepage-blogs.json",
+      "permanent": false
+    },
+    {
+      "source": "/data/",
+      "destination": "/data/homepage-blogs.json",
+      "permanent": false
+    },
     {
       "source": "/about",
       "destination": "/about.html",
@@ -89,7 +151,6 @@
       "destination": "/relax.html",
       "permanent": true
     },
-
     {
       "source": "/blog/blog",
       "destination": "/blog/",
@@ -160,7 +221,6 @@
       "destination": "/data/homepage-blogs.json",
       "permanent": true
     },
-
     {
       "source": "/blog/ipl-playoffs-captions-instagram.html",
       "destination": "/blog/gt-vs-rr-qualifier-2-viral-captions-2026.html",
@@ -246,7 +306,6 @@
       "destination": "/blog/best-earning-apps-students-2026.html",
       "permanent": true
     },
-
     {
       "source": "/blogs/ipl-2026-final-captions-english-international-cricket-fans.html",
       "destination": "/blog/ipl-2026-final-captions-english-international-cricket-fans.html",
@@ -257,7 +316,6 @@
       "destination": "/blog/ipl-2026-final-predictions-memes-captions.html",
       "permanent": true
     },
-
     {
       "source": "/blog/professional-development-guide/",
       "destination": "/blog/professional-development-guide.html",
@@ -269,16 +327,30 @@
       "permanent": true
     }
   ],
-
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), browsing-topics=()"
+        },
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://*.googletagmanager.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://images.unsplash.com https://www.google-analytics.com https://*.googletagmanager.com https://*.google-analytics.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://formspree.io; frame-src 'self' https://drive.google.com https://t.me https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; manifest-src 'self'; worker-src 'self' blob:; upgrade-insecure-requests"
@@ -288,45 +360,74 @@
     {
       "source": "/sw.js",
       "headers": [
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
-        { "key": "Service-Worker-Allowed", "value": "/" },
-        { "key": "Content-Type", "value": "application/javascript; charset=utf-8" }
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        }
       ]
     },
     {
       "source": "/data/(.*).json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300, must-revalidate" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=300, must-revalidate"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
       ]
     },
     {
       "source": "/img/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/(.*).(jpg|jpeg|png|gif|webp|avif|svg|ico)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/sitemap(.*).xml",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" },
-        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     }
   ],
-
   "cleanUrls": false,
   "trailingSlash": false
 }
