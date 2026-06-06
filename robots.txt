@@ -1,5 +1,5 @@
 # CaptionStudio.in — robots.txt
-# Last updated: 2026-06-04
+# Last updated: 2026-06-06
 # Strategy: SEO + GEO (Generative Engine Optimization)
 # We WANT AI engines (ChatGPT, Claude, Gemini, Perplexity) to cite our content.
 
