@@ -1,3 +1,2 @@
 # CaptionStudio - ads.txt
-# Google AdSense approval ke baad asli line yahaan auto add hogi
-placeholder.example.com, placeholder, DIRECT, placeholder
+# Google AdSense publisher ID will be added here after approval
