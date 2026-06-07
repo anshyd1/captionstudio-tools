@@ -469,13 +469,14 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 <!-- HERO -->
 <div class="hero">
   <div class="badge-row">
-    <span class="updated-badge">🟢 Published: June 7, 2026</span>
+    <span class="updated-badge" id="cs-updated-badge">🟢 Updated: <span id="cs-today-date">June 7, 2026</span></span>
     <span class="read-time-badge">⏱️ 12 min read</span>
+    <span class="read-time-badge" id="cs-countdown-badge" style="background:#fff3e0;border-color:#ffd5c2;color:#ff4d00;font-weight:700;display:none">⏱️ <span id="cs-countdown-text"></span></span>
   </div>
   <div class="skill-badge">⚽ World Cup Special · Pre-Tournament Guide</div>
   <h1>FIFA World Cup 2026 Complete Guide: <em>48 Teams, 16 Cities, 104 Matches</em></h1>
   <p class="hero-intro">
-    The biggest FIFA World Cup in history kicks off in <strong>4 days</strong>. For the first time, 48 nations compete across the United States, Canada, and Mexico — 104 matches in 39 days, ending at MetLife Stadium on July 19. Here is everything you need to follow it: the full format, every group, all 16 host cities, the broadcast list for every major country, and the storylines that will define the tournament.
+    <span id="cs-live-intro">The biggest FIFA World Cup in history kicks off in <strong>4 days</strong>.</span> For the first time, 48 nations compete across the United States, Canada, and Mexico — 104 matches in 39 days, ending at MetLife Stadium on July 19. Here is everything you need to follow it: the full format, every group, all 16 host cities, the broadcast list for every major country, and the storylines that will define the tournament.
   </p>
   <div class="hero-meta">
     <span>✍️ By CaptionStudio Football Desk</span>
@@ -592,7 +593,7 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 
   <div class="also-read">
     <span class="ar-label">📖 Also Read</span>
-    <span>Want a pre-tournament tier list? See our <a href="fifa-2026-power-rankings-all-48-teams-pre-tournament.html">FIFA 2026 Power Rankings — all 48 teams ranked before kickoff</a>.</span>
+    <span>Browsing our full caption library? Start with our <a href="fifa-world-cup-2026-captions-instagram.html">500+ FIFA World Cup 2026 captions for Instagram</a> — refreshed throughout the tournament.</span>
   </div>
 
   <!-- SECTION 3: GROUPS -->
@@ -682,9 +683,9 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
   <p>Every World Cup is a who's-who. 2026 is also a goodbye for one generation and a coronation for the next.</p>
 
   <h3>The Farewells</h3>
-  <p><strong>Lionel Messi (Argentina, 39)</strong> has stated publicly that this is his final World Cup. He arrives as the defending champion and Inter Miami captain. Every Argentina match becomes a goodbye event. The full story is in our <a href="messi-last-world-cup-2026-final-dance.html">Messi Final Dance feature</a>, and the caption library is in our <a href="messi-captions-instagram-2026.html">200+ Messi captions for Instagram</a>.</p>
+  <p><strong>Lionel Messi (Argentina, 39)</strong> has stated publicly that this is his final World Cup. He arrives as the defending champion and Inter Miami captain. Every Argentina match becomes a goodbye event. The full feature on why this tournament really is his last — Argentina's title defence, Scaloni's squad, and the road to MetLife — is in our <a href="messi-last-world-cup-2026-final-dance.html">Messi Last World Cup 2026: Argentina's Title Defence</a> piece. The matching caption library is the <a href="messi-captions-instagram-2026.html">200+ Lionel Messi captions for Instagram</a>.</p>
 
-  <p><strong>Cristiano Ronaldo (Portugal, 41)</strong> plays his fifth and last World Cup. Still chasing the only major international trophy missing from his cabinet. The dedicated piece sits at <a href="cristiano-ronaldo-fifa-2026-final-chapter-story.html">Cristiano Ronaldo: The Final Chapter</a> and the caption pack at <a href="ronaldo-captions-instagram-2026.html">170+ Cristiano Ronaldo captions</a>.</p>
+  <p><strong>Cristiano Ronaldo (Portugal, 41)</strong> plays his fifth and last World Cup. Still chasing the only major international trophy missing from his cabinet. The full caption pack — SIUUU, Portugal, GOAT debate and farewell lines — sits at <a href="ronaldo-captions-instagram-2026.html">170+ Cristiano Ronaldo captions</a>.</p>
 
   <p><strong>Luka Modrić (Croatia, 40)</strong> headlines a Croatia squad still hunting the trophy that escaped them in 2018. <strong>Thiago Silva (Brazil, 41)</strong> captains a Brazil side mixing veterans with the new generation. Pre-tournament squad lists also flag farewell minutes for senior figures across Belgium, the Netherlands and Uruguay. For the eternal GOAT debate between Messi and Ronaldo, see <a href="messi-vs-ronaldo-captions-2026.html">Messi vs Ronaldo: GOAT Debate Captions</a>.</p>
 
@@ -873,7 +874,11 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
   </div>
 
   <div class="sidebar-card">
-    <div class="sidebar-title">⚽ FIFA 2026 Caption Hubs</div>
+    <div class="sidebar-title">⚽ FIFA 2026 Cluster</div>
+    <div class="related-post">
+      <a href="messi-last-world-cup-2026-final-dance.html">Messi's Last World Cup — Title Defence</a>
+      <span>Feature · Argentina deep dive · 11 min</span>
+    </div>
     <div class="related-post">
       <a href="fifa-world-cup-2026-captions-instagram.html">500+ FIFA World Cup 2026 Captions</a>
       <span>Master pack · refreshed daily</span>
@@ -958,6 +963,72 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 <script>
 (function(){
   'use strict';
+
+  // ===== LIVE FRESHNESS ENGINE =====
+  // Page reads as fresh today / tomorrow / day after, throughout the tournament — no rebuild needed.
+  (function freshness(){
+    try{
+      var now = new Date();
+      var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var todayStr = months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+      var dEl = document.getElementById('cs-today-date');
+      if(dEl) dEl.textContent = todayStr;
+
+      // Tournament milestones
+      var open  = new Date('2026-06-11T00:00:00Z');
+      var r32   = new Date('2026-06-28T00:00:00Z');
+      var r16   = new Date('2026-07-04T00:00:00Z');
+      var qf    = new Date('2026-07-09T00:00:00Z');
+      var sf    = new Date('2026-07-14T00:00:00Z');
+      var thirdPlace = new Date('2026-07-18T00:00:00Z');
+      var fin   = new Date('2026-07-19T00:00:00Z');
+      var msInDay = 86400000;
+
+      var intro = document.getElementById('cs-live-intro');
+      var cdBadge = document.getElementById('cs-countdown-badge');
+      var cdText = document.getElementById('cs-countdown-text');
+
+      var setBadge = function(label){
+        if(cdBadge && cdText){ cdText.textContent = label; cdBadge.style.display = 'inline-flex'; }
+      };
+      var setIntro = function(html){
+        if(intro) intro.innerHTML = html;
+      };
+
+      if(now < open){
+        var d = Math.ceil((open - now) / msInDay);
+        setBadge(d + ' days to kickoff');
+        if(d === 1)      setIntro('The biggest FIFA World Cup in history kicks off <strong>tomorrow</strong>.');
+        else if(d === 2) setIntro('The biggest FIFA World Cup in history kicks off in <strong>2 days</strong>.');
+        else             setIntro('The biggest FIFA World Cup in history kicks off in <strong>' + d + ' days</strong>.');
+      } else if(now >= open && now < r32){
+        var d2 = Math.floor((now - open) / msInDay) + 1;
+        setBadge('Group Stage · Day ' + d2);
+        setIntro('The biggest FIFA World Cup in history is <strong>live</strong> — Group Stage day ' + d2 + ' of 17.');
+      } else if(now >= r32 && now < r16){
+        setBadge('Round of 32 LIVE');
+        setIntro('FIFA World Cup 2026 is <strong>live</strong> — the first-ever Round of 32 knockout phase is under way.');
+      } else if(now >= r16 && now < qf){
+        setBadge('Round of 16 LIVE');
+        setIntro('FIFA World Cup 2026 is <strong>live</strong> — Round of 16, 16 teams left fighting for the trophy.');
+      } else if(now >= qf && now < sf){
+        setBadge('Quarter-Finals LIVE');
+        setIntro('FIFA World Cup 2026 is <strong>live</strong> — Quarter-Final week, eight nations remain.');
+      } else if(now >= sf && now < thirdPlace){
+        setBadge('Semi-Finals LIVE');
+        setIntro('FIFA World Cup 2026 is <strong>live</strong> — Semi-Final week, four nations from glory.');
+      } else if(now >= thirdPlace && now < fin){
+        setBadge('Final this Sunday');
+        setIntro('The FIFA World Cup 2026 Final is <strong>this Sunday</strong> at MetLife Stadium.');
+      } else if(now.toDateString() === fin.toDateString()){
+        setBadge('FINAL · TODAY');
+        setIntro('It is <strong>Final day</strong>. MetLife Stadium. The world stops for 90 minutes.');
+      } else {
+        // Post-tournament evergreen mode
+        setIntro('The biggest FIFA World Cup in history — the complete record. 48 nations, 104 matches, ending at MetLife Stadium on July 19.');
+      }
+    } catch(e){ /* silent */ }
+  })();
 
   // Dark mode toggle
   var darkBtn = document.getElementById('dark-toggle');
