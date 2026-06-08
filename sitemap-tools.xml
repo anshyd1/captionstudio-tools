@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<!-- 🛠 TOOLS LANDING -->
-<url>
-  <loc>https://captionstudio.in/tools</loc>
-  <lastmod>2026-06-03</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
 
-<!-- ✍️ CAPTION GENERATOR -->
 <url>
   <loc>https://captionstudio.in/tools/caption-generator.html</loc>
   <lastmod>2026-06-03</lastmod>
@@ -17,7 +9,7 @@
   <priority>0.95</priority>
 </url>
 
-<!-- 🏷️ HASHTAG GENERATOR -->
+
 <url>
   <loc>https://captionstudio.in/tools/hashtag-generator.html</loc>
   <lastmod>2026-06-03</lastmod>
@@ -25,7 +17,7 @@
   <priority>0.95</priority>
 </url>
 
-<!-- 📱 BIO GENERATOR -->
+
 <url>
   <loc>https://captionstudio.in/tools/bio-generator.html</loc>
   <lastmod>2026-06-03</lastmod>
