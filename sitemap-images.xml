@@ -324,4 +324,43 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     </image:image>
   </url>
 
+  <url>
+    <loc>https://captionstudio.in/blog/usa-vs-paraguay-world-cup-2026-captions.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-usa-2026-hero.jpg</image:loc>
+      <image:title>Team USA World Cup 2026 Opener vs Paraguay</image:title>
+      <image:caption>Team USA World Cup 2026 stadium at night with fireworks and American flags for the opener against Paraguay.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-usa-2026-stadium.jpg</image:loc>
+      <image:title>SoFi Stadium World Cup 2026</image:title>
+      <image:caption>Aerial night view of a packed American World Cup 2026 stadium for Team USA's opening match.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-usa-2026-fans.jpg</image:loc>
+      <image:title>Team USA Fans Watch Party</image:title>
+      <image:caption>American soccer fans celebrating with USA flags and face paint for the World Cup 2026 opener.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-usa-2026-player.jpg</image:loc>
+      <image:title>Team USA Player Walkout</image:title>
+      <image:caption>Silhouette of a soccer player in a red and white jersey walking onto a World Cup pitch at night.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-usa-2026-watch-party.jpg</image:loc>
+      <image:title>World Cup 2026 USA Watch Party</image:title>
+      <image:caption>American friends at an outdoor World Cup 2026 watch party in USA jerseys cheering at a big screen.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-usa-2026-reaction.jpg</image:loc>
+      <image:title>USA Fans Live Reaction</image:title>
+      <image:caption>USA soccer fans reacting emotionally while watching the World Cup 2026 match.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-usa-2026-caption-card.jpg</image:loc>
+      <image:title>USA World Cup Caption Card</image:title>
+      <image:caption>Instagram caption card mockup with a Team USA World Cup 2026 caption on a neon stadium background.</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
