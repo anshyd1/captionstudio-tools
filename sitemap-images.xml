@@ -363,4 +363,29 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     </image:image>
   </url>
 
+  <url>
+    <loc>https://captionstudio.in/blog/funny-world-cup-2026-captions.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-funny-2026-hero.jpg</image:loc>
+      <image:title>Funny World Cup 2026 Watch Party</image:title>
+      <image:caption>Fans laughing and celebrating at a funny World Cup 2026 watch party with confetti.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-funny-2026-reaction.jpg</image:loc>
+      <image:title>Funny Soccer Fan Reaction</image:title>
+      <image:caption>A soccer fan reacting dramatically while watching a World Cup match at home.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-funny-2026-meme.jpg</image:loc>
+      <image:title>World Cup Watch Party Starter Pack</image:title>
+      <image:caption>Flat-lay of a soccer ball, snacks, phone and flag scarf for a World Cup watch party.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-funny-2026-caption-card.jpg</image:loc>
+      <image:title>Funny World Cup Caption Card</image:title>
+      <image:caption>Instagram caption card mockup with a funny World Cup 2026 caption on a colorful background.</image:caption>
+    </image:image>
+  </url>
+
+
 </urlset>
