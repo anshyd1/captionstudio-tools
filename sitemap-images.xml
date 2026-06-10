@@ -509,4 +509,19 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     </image:image>
   </url>
 
+
+  <url>
+    <loc>https://captionstudio.in/blog/hindi-captions-instagram.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/hindi-captions-hero.jpg</image:loc>
+      <image:title>Hindi Captions for Instagram — Evergreen Library</image:title>
+      <image:caption>Indian hands holding smartphone with chai, marigold flowers and diya — 150+ Hindi Hinglish captions for Instagram.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/hindi-captions-dosti.jpg</image:loc>
+      <image:title>Dosti Captions — Rooftop Chai Session</image:title>
+      <image:caption>Young Indian friends laughing at rooftop chai session at sunset — dosti and yaari captions for Instagram.</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
