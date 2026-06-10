@@ -489,4 +489,24 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     </image:image>
   </url>
 
+
+  <url>
+    <loc>https://captionstudio.in/blog/football-captions-instagram.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/football-captions-hero.jpg</image:loc>
+      <image:title>Football Captions for Instagram — Evergreen Library</image:title>
+      <image:caption>Classic football on green pitch grass at golden hour — 150+ evergreen football captions for Instagram.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/football-captions-squad.jpg</image:loc>
+      <image:title>Street Football Squad — Matchday Captions</image:title>
+      <image:caption>Friends playing street football at sunset — matchday and squad captions for Instagram.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/football-captions-matchday.jpg</image:loc>
+      <image:title>Goal Celebration Silhouette — Football Captions</image:title>
+      <image:caption>Football player silhouette celebrating a goal under floodlights — winning and attitude captions.</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
