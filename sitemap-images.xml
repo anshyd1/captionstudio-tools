@@ -435,4 +435,58 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     </image:image>
   </url>
 
+
+  <url>
+    <loc>https://captionstudio.in/blog/brazil-vs-morocco-world-cup-2026-captions.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/brazil-vs-morocco-2026-hero.jpg</image:loc>
+      <image:title>Brazil vs Morocco — World Cup 2026 Group C at MetLife Stadium</image:title>
+      <image:caption>Night stadium packed with Brazilian and Moroccan flags and fireworks for the Brazil vs Morocco World Cup 2026 Group C blockbuster.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/brazil-vs-morocco-2026-stadium-night.jpg</image:loc>
+      <image:title>MetLife Stadium at Night — World Cup 2026</image:title>
+      <image:caption>Aerial night view of MetLife Stadium glowing in New Jersey for the Brazil vs Morocco World Cup 2026 match.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/brazil-vs-morocco-2026-brazil-fans.jpg</image:loc>
+      <image:title>Brazil Fans — World Cup 2026</image:title>
+      <image:caption>Brazilian football fans celebrating at night with flags, samba drums and green and yellow face paint on matchday.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/brazil-vs-morocco-2026-morocco-fans.jpg</image:loc>
+      <image:title>Morocco Fans — Atlas Lions World Cup 2026</image:title>
+      <image:caption>Moroccan football fans cheering with flags, scarves and red flares in red and green national colors.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/brazil-vs-morocco-2026-players.jpg</image:loc>
+      <image:title>Brazil vs Morocco Players Silhouette</image:title>
+      <image:caption>Silhouette of two football players facing each other under floodlights before the Brazil vs Morocco World Cup 2026 kickoff.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/brazil-vs-morocco-2026-fan-reactions.jpg</image:loc>
+      <image:title>Brazil vs Morocco Watch Party Reactions</image:title>
+      <image:caption>Friends in Brazil and Morocco shirts reacting emotionally while watching the World Cup 2026 match on a big screen.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/brazil-vs-morocco-2026-caption-card.jpg</image:loc>
+      <image:title>Brazil vs Morocco Caption Card Mockup</image:title>
+      <image:caption>Instagram caption card mockup with a Brazil vs Morocco World Cup 2026 caption on a neon stadium background.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://captionstudio.in/blog/world-cup-2026-today-match-captions.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-today-2026-hero.jpg</image:loc>
+      <image:title>Today's World Cup 2026 Captions — Updated Every Match Day</image:title>
+      <image:caption>Fans of many nations with flags outside a glowing World Cup 2026 stadium at dusk — daily updated match captions page.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/wc-today-2026-watchparty.jpg</image:loc>
+      <image:title>World Cup 2026 Watch Party — Match Day</image:title>
+      <image:caption>Friends in different national team jerseys celebrating a goal at a World Cup 2026 watch party.</image:caption>
+    </image:image>
+  </url>
+
 </urlset>
