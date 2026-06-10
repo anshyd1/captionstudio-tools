@@ -562,4 +562,16 @@
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
+  <url>
+    <loc>https://captionstudio.in/blog/brazil-vs-morocco-world-cup-2026-captions.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://captionstudio.in/blog/world-cup-2026-today-match-captions.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
 </urlset>
