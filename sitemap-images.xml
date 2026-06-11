@@ -524,4 +524,17 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     </image:image>
   </url>
 
+  <url>
+    <loc>https://captionstudio.in/blog/argentina-vs-algeria-world-cup-2026-captions.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/argentina-vs-algeria-2026-hero.jpg</image:loc>
+      <image:title>Argentina vs Algeria — World Cup 2026 Group J at Arrowhead Stadium</image:title>
+      <image:caption>Night stadium packed with Argentine and Algerian flags and fireworks for the Argentina vs Algeria World Cup 2026 Group J opener.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/argentina-vs-algeria-2026-stadium-night.jpg</image:loc>
+      <image:title>Arrowhead Stadium at Night — World Cup 2026</image:title>
+      <image:caption>Aerial night view of Arrowhead Stadium glowing in Kansas City for the Argentina vs Algeria World Cup 2026 match.</image:caption>
+    </image:image>
+  </url>
 </urlset>
