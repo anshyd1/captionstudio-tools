@@ -12,6 +12,76 @@
       "permanent": true
     },
     {
+      "source": "/:path+/earning.html",
+      "destination": "/earning.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/about.html",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/contact.html",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/privacy.html",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/terms.html",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/guide.html",
+      "destination": "/guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/relax.html",
+      "destination": "/relax.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/disclaimer.html",
+      "destination": "/disclaimer.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/support.html",
+      "destination": "/support.html",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/tools",
+      "destination": "/tools",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/tools/:rest*",
+      "destination": "/tools/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/blog",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/blog/:rest*",
+      "destination": "/blog/:rest*",
+      "permanent": true
+    },
+    {
       "source": "/blog/copy-paste-instagram-captions",
       "destination": "/blog/copy-paste-instagram-captions.html",
       "permanent": true
