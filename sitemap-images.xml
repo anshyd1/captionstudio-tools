@@ -670,4 +670,35 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
       <image:caption>Vertical Pinterest pin: 160+ Messi vs Ronaldo quotes and captions for Instagram, GOAT debate edition by CaptionStudio.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://captionstudio.in/blog/instagram-hashtag-strategy-viral-reels.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/hashtag-strategy-hero.webp</image:loc>
+      <image:title>Instagram Hashtag Strategy 2026 — Why 5 Tags Beat 30</image:title>
+      <image:caption>Instagram hashtag strategy 2026 hero infographic — 5-tag rule replacing old 30-tag approach with reach impact chart.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/hashtag-5-vs-30-comparison.webp</image:loc>
+      <image:title>5 vs 30 Hashtags Reach Comparison Infographic 2026</image:title>
+      <image:caption>Side-by-side phone mockup comparing the reach impact of 5 niche hashtags vs 30 generic hashtags in 2026 Instagram algorithm.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://captionstudio.in/blog/gym-workout-captions-hinglish-instagram.html</loc>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/gym-captions-hinglish-hero.webp</image:loc>
+      <image:title>Gym Workout Captions Hinglish for Instagram — Hero</image:title>
+      <image:caption>Indian gym creator flexing biceps under dramatic warm lighting in dark moody gym interior — 250+ Hinglish gym captions for Instagram Reels.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/gym-captions-leg-day.webp</image:loc>
+      <image:title>Leg Day Funny Sore Captions Hinglish Instagram</image:title>
+      <image:caption>Indian gym creator post-leg-day exhausted moment with barbell — funny sore-day Hinglish gym captions for Instagram Reels.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://captionstudio.in/img/gym-captions-gym-girl.webp</image:loc>
+      <image:title>Gym Girl Confident Dumbbell Captions Hinglish Instagram</image:title>
+      <image:caption>Indian gym girl confidently holding dumbbells with determined expression — gym girl Hinglish captions for Instagram Reels.</image:caption>
+    </image:image>
+  </url>
 </urlset>
