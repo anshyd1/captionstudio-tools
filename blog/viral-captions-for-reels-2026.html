@@ -57,7 +57,7 @@
        }
      },
      "datePublished": "2026-04-01",
-     "dateModified": "2026-06-11"
+     "dateModified": "2026-06-15"
     }
     </script>
     
@@ -342,13 +342,50 @@
             font-family: var(--font-sans);
             font-size: 1.05rem;
             line-height: 1.6;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s, background 0.2s;
+            cursor: pointer;
+            position: relative;
         }
 
         .caption-card:hover {
             box-shadow: 0 4px 18px rgba(255,77,0,0.10);
             border-color: var(--brand-orange);
+            transform: translateY(-1px);
         }
+        .caption-card:active { transform: scale(0.995); }
+        .caption-card::after {
+            content: "📋 Tap to copy";
+            position: absolute;
+            top: 10px; right: 14px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #bbb;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .caption-card:hover::after { opacity: 1; }
+        .caption-card.copied {
+            background: #e8f7ec;
+            border-color: #34c759;
+        }
+        .caption-card.copied::after {
+            content: "✓ Copied";
+            color: #1f9d4d;
+            opacity: 1;
+        }
+        #cs-toast {
+            position: fixed; bottom: 26px; left: 50%;
+            transform: translateX(-50%) translateY(120px);
+            background: #111; color: #fff;
+            padding: 12px 24px; border-radius: 50px;
+            font-size: 0.9rem; font-weight: 600;
+            font-family: var(--font-sans);
+            box-shadow: 0 10px 40px rgba(0,0,0,.3);
+            z-index: 9999; opacity: 0; visibility: hidden;
+            transition: transform .3s ease, opacity .3s ease, visibility .3s;
+            pointer-events: none; white-space: nowrap; max-width: 90vw; text-align: center;
+        }
+        #cs-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; visibility: visible; }
 
         .caption-card .niche-tag {
             display: inline-block;
@@ -754,7 +791,7 @@
             </a>
             
             <div class="meta">
-                By <strong>Ansh Yadav</strong> &nbsp;•&nbsp; 8 min read &nbsp;•&nbsp; Updated June 2026
+                By <strong>Ansh Yadav</strong> &nbsp;•&nbsp; 9 min read &nbsp;•&nbsp; Updated June 15, 2026
             </div>
 
             <p>Agar aap Instagram Reels par views nahi la pa rahe ho, toh problem sirf content nahi — <strong>caption clarity, hook aur keywords</strong> bhi ho sakte hain. 2026 mein Instagram ek search engine ki tarah kaam kar raha hai, aur sahi keywords + hook caption aapki reel ko better discovery de sakta hai. Yahaan aapko milenge <strong>copy-paste Instagram viral captions for Reels 2026</strong>, Hinglish examples, caption formula, hashtags guide aur real strategy.</p>
@@ -817,7 +854,7 @@
                 📌 <strong>Key Insight:</strong> Log reel dekhne se pehle caption padhte hain. First line decide karti hai — scroll hoga ya reel rukegi. Isliye hook = sab kuch.
             </div>
 
-            <p><strong>Helpful next reads:</strong> <a href="instagram-viral-captions-reels-hinglish-2026.html">Hinglish viral captions</a>, <a href="trending-hashtags-reels-2026.html">trending hashtags for Reels</a>, <a href="instagram-reel-hooks-2026.html">Instagram Reel hooks</a>, and <a href="why-instagram-reels-not-getting-views-2026.html">why Reels are not getting views</a>.</p>
+            <p><strong>Helpful next reads:</strong> <a href="pov-captions-for-instagram-reels-2026.html">POV captions for reels</a>, <a href="trending-instagram-captions-2026.html">trending Instagram captions 2026</a>, <a href="instagram-viral-captions-reels-hinglish-2026.html">Hinglish viral captions</a>, <a href="trending-hashtags-reels-2026.html">trending hashtags for Reels</a>, <a href="instagram-reel-hooks-2026.html">Instagram Reel hooks</a>, and <a href="why-instagram-reels-not-getting-views-2026.html">why Reels are not getting views</a>.</p>
 
             <h2>📈 Instagram Algorithm 2026 — Kaise Kaam Karta Hai</h2>
             <p>Instagram ka algorithm ab sirf likes par depend nahi karta. Teen cheezein sabse zyada important hain:</p>
@@ -1066,6 +1103,120 @@
                 Bachelor-proof &amp; budget-friendly 💸<br>
                 Save karo, banao, thank me later 👇
             </div>
+
+            <!-- ===== FRESH 2026 TRENDING CAPTIONS (added June 2026) ===== -->
+            <h3 id="trending-2026">✨ Latest 2026 Trend Captions — POV, Main Character, Aesthetic &amp; More</h3>
+            <p style="margin:0 0 18px;color:#555;font-size:1rem;">Naye formats jo abhi viral ho rahe hain. Tap karke copy karo aur seedha reel/story par paste karo. 👇</p>
+
+            <div class="caption-card">
+                <span class="niche-tag">POV</span>
+                POV: Tum finally apne aap ko choose karte ho 🤍<br>
+                Late tha, par galat nahi.<br>
+                Save this for the day you forget 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Main Character</span>
+                Main character energy, no apologies ✨<br>
+                Story tumhari hai — supporting cast banna band karo.<br>
+                Drop a 🦋 if you felt that.
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Soft Launch</span>
+                Soft launch szn 🤍<br>
+                Naam nahi bataungi, par vibe dekh lo 👀<br>
+                Guess karo comments mein 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Aesthetic</span>
+                Slow mornings, soft light, zero rush ☕🤍<br>
+                Romanticise your ordinary days.<br>
+                Save for your next aesthetic post 📌
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Glow Up</span>
+                Same girl, upgraded mindset ✨<br>
+                Glow up tab hota hai jab tum khud pe kaam karte ho.<br>
+                Comment "GLOW" if 2026 is your year 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">GenZ</span>
+                It's giving main character but make it humble 😌<br>
+                No thoughts, just vibes 🤍<br>
+                Tag your no-thoughts partner 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Day in Life</span>
+                A quiet day that felt like a whole reset 🌿<br>
+                Romanticising the boring bits.<br>
+                Save karo apne lazy Sunday ke liye 📌
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Motivation</span>
+                Discipline &gt; motivation. Hamesha. 🔥<br>
+                Mood off ho ya on — kaam to hoga.<br>
+                Save this &amp; read it daily ✅
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Savage</span>
+                Maine react karna chhod diya 😌<br>
+                Ab sirf results bolte hain.<br>
+                🖤 #SilentMode
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Relatable</span>
+                "5 min aur" — 2 ghante baad still scrolling 😭<br>
+                Tag karo us insaan ko 👇<br>
+                (Unhe pata hai)
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Festival</span>
+                Festival fits &gt; everything ✨🪔<br>
+                Traditional but make it trending.<br>
+                Which look — Day 1 or Day 2? 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Couple</span>
+                He's the plot twist I didn't see coming 🤍<br>
+                Soft launch complete ✅<br>
+                Tag your person 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Travel</span>
+                Bag packed, notifications off, soul on 🌍<br>
+                This view healed something in me.<br>
+                Save kar lo apni next trip ke liye 📌
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Faceless</span>
+                No face, full aura 🖤<br>
+                Faceless creators 2026 mein raj kar rahe hain 🚀<br>
+                Save this if you post without showing your face 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">AI / Tools</span>
+                Ye reel maine 5 min mein banaya 🤯<br>
+                AI tools ne game palat diya.<br>
+                Comment "AI" — main tool bata deta hoon 👇
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Quotes</span>
+                Tumhari speed tumhari hai. Compare karna band. 🤍<br>
+                Bloom in your own time 🌱<br>
+                Save this reminder 📌
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Fitness</span>
+                Koi bachane nahi aayega 🏋️<br>
+                Uth, aur khud ko build kar 🔥<br>
+                Gym wale yahan? Drop a 💪
+            </div>
+            <div class="caption-card">
+                <span class="niche-tag">Short</span>
+                Soft chaos, still calm 🌙<br>
+                Healing in lowercase.<br>
+                🤍
+            </div>
+            <!-- ===== END FRESH 2026 CAPTIONS ===== -->
 
             <!-- TELEGRAM BANNER 2 -->
             <div class="tg-banner">
@@ -1334,7 +1485,59 @@
         <style>@media(max-width:760px){footer .container>div[style*="grid"]{grid-template-columns:1fr 1fr!important;gap:18px!important}}@media(max-width:420px){footer .container>div[style*="grid"]{grid-template-columns:1fr!important}}</style>
     </footer>
 
+    <div id="cs-toast" role="status" aria-live="polite" aria-atomic="true"></div>
     <script>
+        // ===== 1-tap copy for caption cards =====
+        (function(){
+            var toastEl = document.getElementById('cs-toast');
+            var toastTimer = null;
+            function showToast(msg){
+                if(!toastEl) return;
+                if(toastTimer){ clearTimeout(toastTimer); }
+                toastEl.textContent = msg;
+                toastEl.classList.add('show');
+                toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 1700);
+            }
+            function copyText(text){
+                if(navigator.clipboard && window.isSecureContext){
+                    return navigator.clipboard.writeText(text);
+                }
+                return new Promise(function(res, rej){
+                    var ta = document.createElement('textarea');
+                    ta.value = text; ta.setAttribute('readonly','');
+                    ta.style.position='fixed'; ta.style.left='-9999px';
+                    document.body.appendChild(ta); ta.select();
+                    try { document.execCommand('copy') ? res() : rej(); }
+                    catch(e){ rej(e); }
+                    document.body.removeChild(ta);
+                });
+            }
+            function cardText(card){
+                var clone = card.cloneNode(true);
+                var tag = clone.querySelector('.niche-tag');
+                if(tag) tag.remove();
+                // convert <br> to newlines
+                clone.querySelectorAll('br').forEach(function(b){ b.replaceWith('\n'); });
+                return clone.textContent.replace(/\n{2,}/g,'\n').trim();
+            }
+            document.querySelectorAll('.caption-card').forEach(function(card){
+                card.setAttribute('role','button');
+                card.setAttribute('tabindex','0');
+                function doCopy(){
+                    var txt = cardText(card);
+                    copyText(txt).then(function(){
+                        card.classList.add('copied');
+                        setTimeout(function(){ card.classList.remove('copied'); }, 1400);
+                        showToast('Caption copied — ready to paste!');
+                    }).catch(function(){ showToast('Copy failed — try again'); });
+                }
+                card.addEventListener('click', doCopy);
+                card.addEventListener('keydown', function(e){
+                    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); doCopy(); }
+                });
+            });
+        })();
+
         function toggleMenu() {
             document.getElementById('body').classList.toggle('menu-open');
         }
