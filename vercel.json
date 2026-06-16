@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
@@ -58,7 +63,7 @@
     },
     {
       "source": "/:path+/index.html",
-      "destination": "/",
+      "destination": "/:path",
       "permanent": true
     },
     {
