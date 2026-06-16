@@ -860,4 +860,16 @@ xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 </image:image>
 </url>
 
+
+<url>
+<loc>https://captionstudio.in/creator-pack.html</loc>
+<image:image><image:loc>https://captionstudio.in/img/creator-services-india-whatsapp-orders.webp</image:loc><image:title>Creator Services India WhatsApp Orders</image:title><image:caption>CaptionStudio creator services page for WhatsApp orders, content, SEO, PDFs and websites.</image:caption></image:image>
+<image:image><image:loc>https://captionstudio.in/img/content-calendar-instagram-reels-pack.webp</image:loc><image:title>Content Calendar Instagram Reels Pack</image:title><image:caption>30-day Reels calendar and caption planning service graphic.</image:caption></image:image>
+<image:image><image:loc>https://captionstudio.in/img/instagram-audit-growth-plan-india.webp</image:loc><image:title>Instagram Audit Growth Plan India</image:title><image:caption>Instagram audit and growth plan service graphic.</image:caption></image:image>
+<image:image><image:loc>https://captionstudio.in/img/seo-growth-website-content-service.webp</image:loc><image:title>SEO Growth Website Content Service</image:title><image:caption>SEO growth and website content service graphic.</image:caption></image:image>
+<image:image><image:loc>https://captionstudio.in/img/frontend-website-development-landing-page.webp</image:loc><image:title>Front-End Website Development Landing Page</image:title><image:caption>Front-end website development and landing page service graphic.</image:caption></image:image>
+<image:image><image:loc>https://captionstudio.in/img/pdf-ebook-cover-thumbnail-design.webp</image:loc><image:title>PDF eBook Cover Thumbnail Design</image:title><image:caption>PDF, eBook, cover page and thumbnail design service graphic.</image:caption></image:image>
+<image:image><image:loc>https://captionstudio.in/img/school-notes-summary-tech-tool-service.webp</image:loc><image:title>School Notes Summary Tech Tool Service</image:title><image:caption>School notes, summaries and tech tool planning service graphic.</image:caption></image:image>
+</url>
+
 </urlset>
