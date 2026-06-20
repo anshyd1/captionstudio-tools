@@ -61,6 +61,20 @@
     .blog-hero h1 { font-family: var(--display); font-size: clamp(2.2rem, 8vw, 4rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 20px; }
     .blog-hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto; }
 
+    /* STATIC EDITORIAL INTRO — gives the blog hub real readable content before JS cards load */
+    .editorial-intro { margin: 0 0 38px; display: grid; gap: 22px; }
+    .intro-card { border: 1px solid var(--rule); border-radius: 18px; padding: 24px 26px; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,.035); }
+    .intro-card h2 { font-family: var(--display); font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.2; margin-bottom: 12px; letter-spacing: -.02em; }
+    .intro-card h3 { font-family: var(--display); font-size: 1.05rem; margin: 18px 0 8px; }
+    .intro-card p { color: var(--muted); font-size: 1rem; margin-bottom: 12px; }
+    .intro-card ul { margin: 10px 0 0 20px; color: var(--muted); }
+    .intro-card li { margin: 7px 0; }
+    .hub-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 16px; }
+    .hub-links a { font-family: var(--sans); font-weight: 700; border: 1.5px solid var(--rule); border-radius: 14px; padding: 13px 14px; background: #fffaf7; }
+    .hub-links a:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-1px); }
+    .editorial-note { font-family: var(--sans); font-size: .92rem; color: var(--muted); background: var(--orange-pale); border: 1px solid #ffd9c9; border-radius: 14px; padding: 14px 16px; }
+
+
     /* TELEGRAM / TIPS BANNER (AdSense-safe, growth framing) */
     .tg-banner { background: var(--orange-pale); border: 1px solid #ffd9c9; border-radius: 18px; padding: 26px 28px; margin: 10px 0 50px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
     .tg-banner .tg-text h2 { font-family: var(--display); font-size: 1.25rem; color: var(--ink); margin-bottom: 6px; }
@@ -158,6 +172,8 @@
 </div>
 <a class="tg-btn" href="https://t.me/skill2incomehub" rel="noopener" target="_blank">Join Telegram →</a>
 </div>
+
+
 <!-- Search box (works on all devices) -->
 <div class="search-wrap">
 <span class="search-icon">🔍</span>
@@ -179,6 +195,47 @@
 <a href="../index.html">🏠 Home</a>
 </div>
 </div>
+
+<section class="editorial-intro" aria-label="About the CaptionStudio creator blog">
+  <article class="intro-card">
+    <h2>Instagram captions, hashtags and creator growth guides — organized for real posting situations.</h2>
+    <p>CaptionStudio Blog is a practical library for creators, students, small businesses and football fans who need ready-to-use captions plus simple growth strategy. Instead of publishing only random caption lists, this hub connects every guide with a clear use case: Reels hooks, Instagram SEO, bio ideas, hashtag sets, attitude captions, Hinglish captions, World Cup captions and content planning.</p>
+    <p>Use the search box below when you already know your topic, or use the category filters when you want to explore. Every article is written to help you copy faster, post cleaner and understand why a caption works — not just collect lines.</p>
+    <div class="hub-links">
+      <a href="viral-captions-for-reels-2026.html">🔥 Viral Reels captions</a>
+      <a href="trending-hashtags-reels-2026.html">#️⃣ Trending hashtags</a>
+      <a href="instagram-reel-hooks-2026.html">🎬 Reel hooks</a>
+      <a href="../tools/caption-generator.html">✍️ Free caption tool</a>
+    </div>
+  </article>
+  <article class="intro-card">
+    <h2>What you will find here</h2>
+    <ul>
+      <li><strong>Caption libraries:</strong> copy-paste captions for Reels, posts, Stories, football, love, attitude, shayari and Hinglish formats.</li>
+      <li><strong>Instagram growth guides:</strong> practical explanations of hooks, saves, shares, Instagram SEO, hashtag strategy and content consistency.</li>
+      <li><strong>Creator tools:</strong> free generators for captions, hashtags and bios, linked from relevant articles so you can create custom versions.</li>
+      <li><strong>Trend pages:</strong> timely sports and culture pages are updated or redirected when the trend becomes outdated, so users land on useful current content.</li>
+    </ul>
+    <h3>Editorial note</h3>
+    <p class="editorial-note">CaptionStudio is maintained by Ansh Yadav from Gorakhpur, Uttar Pradesh. We focus on simple, mobile-first content for Indian creators. Pages are reviewed for clarity, broken links and usefulness before major updates.</p>
+  </article>
+
+  <article class="intro-card">
+    <h2>How to use this blog for better posts</h2>
+    <p>If you are posting a Reel, start with a hook-focused guide, then open a caption library for your niche and finish with a relevant hashtag set. For example, a fitness creator can use a short motivational hook, add a caption that asks viewers to save the workout, and then choose 5–8 niche hashtags instead of stuffing unrelated tags.</p>
+    <p>If you are building a personal brand, use the bio and name-style guides first. A clear profile helps people understand who you are before they follow. After that, use caption guides to keep your posting style consistent across Reels, carousels and Stories.</p>
+    <p>If you are a small business, focus on useful captions that explain the offer, show proof and ask for one simple action. The best caption is not always the longest one; it is the one that makes the next step obvious for the reader.</p>
+    <h3>How we keep guides useful</h3>
+    <ul>
+      <li>Captions are grouped by real posting use cases like Reels, Stories, bios, hashtags and match-day posts.</li>
+      <li>Popular guides are refreshed when creators search for new examples, formats or trending topics.</li>
+      <li>Tool links are added only where they help you create a custom caption, bio or hashtag set faster.</li>
+      <li>The goal is simple: help you choose a caption quickly and understand where to use it.</li>
+    </ul>
+  </article>
+</section>
+
+
 </main>
 <footer>
 <div class="wrap">
@@ -354,5 +411,5 @@
 
     window.addEventListener('load', loadBlog);
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0c6bf0cfd415109',t:'MTc4MTU4MDczNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0d2e4c43ca94829',t:'MTc4MTcwODEwOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0c6bf0cfd415109',t:'MTc4MTU4MDczNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0d2e4c43ca94829',t:'MTc4MTcwODEwOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0e8e60cffa28fcd',t:'MTc4MTkzODg0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
