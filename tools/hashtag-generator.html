@@ -134,6 +134,10 @@
     /* TOOL CARD */
     .tool-card{background:#fff;border:1px solid var(--rule);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.06);padding:28px;margin:28px 0}
     .field-label{font-family:var(--sans);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:10px;display:block}
+
+    .text-field{width:100%;font-family:var(--sans);font-size:1rem;line-height:1.5;border:1.5px solid var(--rule);border-radius:12px;background:#fff;padding:13px 14px;margin:0 0 18px;color:var(--ink);outline:none;transition:.15s}
+    .text-field:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(232,68,10,.10)}
+    .field-help{font-family:var(--sans);font-size:.84rem;color:var(--muted);margin:-10px 0 18px}
     .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
     .chip{font-family:var(--sans);font-weight:600;font-size:.9rem;padding:9px 15px;border:1.5px solid var(--rule);border-radius:30px;background:#fafafa;cursor:pointer;transition:all .15s;user-select:none}
     .chip:hover{border-color:var(--orange);color:var(--orange)}
@@ -205,10 +209,7 @@
     .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--black);color:#fff;font-family:var(--sans);font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:30px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transition:.3s;z-index:300}
     .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
   </style>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5440521844299570"
-     crossorigin="anonymous"></script>
+  <!-- AdSense removed during approval cleanup: keep policy, contact and tool pages ad-free until review passes. -->
 </head>
 <body>
 
@@ -256,12 +257,16 @@
     <section class="tool-hero">
       <span class="eyebrow">#️⃣ Smart Reach Engine</span>
       <h1>Trending <em>Hashtag Generator</em></h1>
-      <p>Get <strong>3 strategic hashtag sets</strong> per niche — high-volume for reach, medium-competition for relevance, and low-competition for ranking. Copy-ready for Reels &amp; posts. 100% free.</p>
+      <p>Enter your post topic, choose a niche and get <strong>3 strategic hashtag sets</strong> — high-volume for reach, medium-competition for relevance, and low-competition for ranking. Copy-ready for Reels &amp; posts. 100% free.</p>
     </section>
 
     <!-- TOOL -->
     <section class="tool-card">
-      <label class="field-label">1 · Choose Your Niche</label>
+      <label class="field-label" for="hashtagTopic">1 · Your Post Topic</label>
+      <input class="text-field" id="hashtagTopic" maxlength="80" placeholder="Example: budget travel in Manali, home workout, AI tools for students" />
+      <p class="field-help">Optional: this adds one custom topic hashtag to your sets.</p>
+
+      <label class="field-label">2 · Choose Your Niche</label>
       <div class="chip-row" id="nicheRow"></div>
 
       <button class="gen-btn" id="genBtn" onclick="generate()">⚡ Generate 3 Hashtag Sets</button>
@@ -269,7 +274,7 @@
       <div class="results" id="results">
         <div class="empty-state" id="emptyState">
           <div style="font-size:2rem">#️⃣</div>
-          <p style="font-family:var(--sans);color:var(--muted);margin-top:6px;font-size:.95rem">Pick a niche, then tap <strong>Generate</strong> for 3 strategic hashtag sets.</p>
+          <p style="font-family:var(--sans);color:var(--muted);margin-top:6px;font-size:.95rem">Add a topic, pick a niche, then tap <strong>Generate</strong> for 3 strategic hashtag sets.</p>
         </div>
       </div>
     </section>
@@ -469,6 +474,10 @@
     /* ---------- GENERATE ---------- */
     function shuffle(a){return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);}
     function pickN(pool,n){return shuffle(pool).slice(0,n);}
+    function topicHashtag(raw){
+      const cleaned=(raw||'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').trim().split(/\s+/).slice(0,4).join('');
+      return cleaned ? '#'+cleaned : '';
+    }
 
     const SETS=[
       {key:'high', tag:'High Volume', cls:'tag-high', purpose:'For maximum reach', n:5},
@@ -486,7 +495,12 @@
       btn.textContent='⚡ Generating…'; btn.disabled=true;
 
       const d=DATA[selNiche];
-      const built=SETS.map(s=>({...s, tags:pickN(d[s.key], s.n)}));
+      const customTag=topicHashtag(document.getElementById('hashtagTopic')?.value||'');
+      const built=SETS.map(s=>{
+        let tags=pickN(d[s.key], s.n);
+        if(customTag && !tags.includes(customTag)) tags=[customTag, ...tags.slice(0, s.n-1)];
+        return {...s, tags};
+      });
       window.__allTags = built.flatMap(b=>b.tags).join(' ');
 
       const html=built.map((s,i)=>{

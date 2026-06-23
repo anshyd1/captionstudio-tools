@@ -141,6 +141,10 @@
     /* TOOL CARD */
     .tool-card{background:#fff;border:1px solid var(--rule);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.06);padding:28px;margin:28px 0}
     .field-label{font-family:var(--sans);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:10px;display:block}
+
+    .text-field{width:100%;font-family:var(--sans);font-size:1rem;line-height:1.5;border:1.5px solid var(--rule);border-radius:12px;background:#fff;padding:13px 14px;margin:0 0 18px;color:var(--ink);outline:none;transition:.15s}
+    .text-field:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(232,68,10,.10)}
+    .field-help{font-family:var(--sans);font-size:.84rem;color:var(--muted);margin:-10px 0 18px}
     .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
     .chip{font-family:var(--sans);font-weight:600;font-size:.9rem;padding:9px 15px;border:1.5px solid var(--rule);border-radius:30px;background:#fafafa;cursor:pointer;transition:all .15s;user-select:none}
     .chip:hover{border-color:var(--orange);color:var(--orange)}
@@ -215,10 +219,7 @@
     .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--black);color:#fff;font-family:var(--sans);font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:30px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transition:.3s;z-index:300}
     .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
   </style>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5440521844299570"
-     crossorigin="anonymous"></script>
+  <!-- AdSense removed during approval cleanup: keep policy, contact and tool pages ad-free until review passes. -->
 </head>
 <body>
 
@@ -266,12 +267,16 @@
     <section class="tool-hero">
       <span class="eyebrow">📝 200+ Bio Library</span>
       <h1>Instagram <em>Bio Generator</em></h1>
-      <p>Get <strong>5 high-converting bios</strong> per click from a library of 200+ — across 12 styles for Instagram, LinkedIn &amp; X. Copy-ready with line breaks &amp; emojis. 100% free.</p>
+      <p>Write who you are, choose a style and get <strong>5 high-converting bios</strong> from a library of 200+ — for Instagram, LinkedIn &amp; X. Copy-ready with line breaks &amp; emojis. 100% free.</p>
     </section>
 
     <!-- TOOL -->
     <section class="tool-card">
-      <label class="field-label">1 · Choose Your Bio Style</label>
+      <label class="field-label" for="bioProfile">1 · Who Are You?</label>
+      <input class="text-field" id="bioProfile" maxlength="70" placeholder="Example: Fitness coach for students, Food blogger from Lucknow, Freelance video editor" />
+      <p class="field-help">Optional: this replaces the first bio line with your own identity.</p>
+
+      <label class="field-label">2 · Choose Your Bio Style</label>
       <div class="chip-row" id="styleRow"></div>
 
       <button class="gen-btn" id="genBtn" onclick="generate()">✨ Generate 5 Bios</button>
@@ -279,7 +284,7 @@
       <div class="results" id="results">
         <div class="empty-state" id="emptyState">
           <div style="font-size:2rem">📝</div>
-          <p style="font-family:var(--sans);color:var(--muted);margin-top:6px;font-size:.95rem">Pick a style, then tap <strong>Generate</strong> for 5 ready-to-use bios.</p>
+          <p style="font-family:var(--sans);color:var(--muted);margin-top:6px;font-size:.95rem">Add your identity, pick a style, then tap <strong>Generate</strong> for 5 ready-to-use bios.</p>
         </div>
       </div>
     </section>
@@ -626,6 +631,13 @@
     /* ---------- GENERATE ---------- */
     function shuffle(a){return a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);}
     function escapeHtml(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+    function personalizeBio(b,profile){
+      const p=(profile||'').trim();
+      if(!p) return b;
+      const lines=b.split('\n');
+      lines[0]=p;
+      return lines.join('\n');
+    }
 
     let isGenerating=false;
     let lastShown={};
@@ -645,7 +657,8 @@
       const old=btn.textContent;
       btn.textContent='✨ Generating…'; btn.disabled=true;
 
-      const bios=pickFive(selStyle);
+      const profile=(document.getElementById('bioProfile')?.value||'').trim();
+      const bios=pickFive(selStyle).map(b=>personalizeBio(b,profile));
       const html=bios.map((b,i)=>{
         const chars=b.length;
         const ok = chars<=150;

@@ -130,7 +130,6 @@
     .tool-seo-row .dark{background:var(--black);color:#fff;border-color:var(--black)}
     .tool-seo-row .soft{background:#fff;color:var(--black)}
     .ad-slot,.ad-placeholder,[aria-label="Advertisement space"],#floating-ad{display:none!important;visibility:hidden!important;opacity:0!important;min-height:0!important;height:0!important;margin:0!important;padding:0!important;border:0!important;overflow:hidden!important}
-    .ad-slot.has-ad,.ad-slot:has(ins.adsbygoogle),.ad-placeholder.has-ad,.ad-placeholder:has(ins.adsbygoogle){display:block!important;visibility:visible!important;opacity:1!important;height:auto!important;min-height:90px!important;margin:24px 0!important;padding:12px!important;overflow:visible!important}
 
     @media(max-width:760px){.desktop-nav{display:none}.hbg{display:flex}}
 
@@ -149,6 +148,10 @@
     /* TOOL CARD */
     .tool-card{background:#fff;border:1px solid var(--rule);border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.06);padding:28px;margin:28px 0}
     .field-label{font-family:var(--sans);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:10px;display:block}
+
+    .text-field{width:100%;font-family:var(--sans);font-size:1rem;line-height:1.5;border:1.5px solid var(--rule);border-radius:12px;background:#fff;padding:13px 14px;margin:0 0 18px;color:var(--ink);outline:none;transition:.15s}
+    .text-field:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(232,68,10,.10)}
+    .field-help{font-family:var(--sans);font-size:.84rem;color:var(--muted);margin:-10px 0 18px}
     .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
     .chip{font-family:var(--sans);font-weight:600;font-size:.9rem;padding:9px 15px;border:1.5px solid var(--rule);border-radius:30px;background:#fafafa;cursor:pointer;transition:all .15s;user-select:none}
     .chip:hover{border-color:var(--orange);color:var(--orange)}
@@ -213,10 +216,7 @@
     .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--black);color:#fff;font-family:var(--sans);font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:30px;box-shadow:0 10px 30px rgba(0,0,0,.25);opacity:0;transition:.3s;z-index:300}
     .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
   </style>
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5440521844299570"
-     crossorigin="anonymous"></script>
+  <!-- AdSense removed during approval cleanup: keep policy, contact and tool pages ad-free until review passes. -->
 </head>
 <body>
 
@@ -264,7 +264,7 @@
     <section class="tool-hero">
       <span class="eyebrow">⚡ Advanced Modular Engine</span>
       <h1>Free Instagram <em>Caption Generator</em> for Reels</h1>
-      <p>Pick your niche, set a tone, and get <strong>3 scroll-stopping Instagram captions</strong> for Reels in seconds — each with a hook strength score. Hinglish + English. No signup, ever.</p>
+      <p>Describe your Reel, choose a niche and tone, then get <strong>3 scroll-stopping Instagram captions</strong> in seconds — each with a hook strength score. Hinglish + English. No signup, ever.</p>
     </section>
 
     <section class="tool-seo-cta" aria-label="Caption generator helper links">
@@ -279,10 +279,14 @@
 
     <!-- TOOL -->
     <section class="tool-card">
-      <label class="field-label">1 · Choose Your Niche</label>
+      <label class="field-label" for="captionTopic">1 · Describe Your Reel or Post</label>
+      <textarea class="text-field" id="captionTopic" rows="3" maxlength="120" placeholder="Example: 90-day gym transformation reel, budget Manali trip, small business launch"></textarea>
+      <p class="field-help">Optional, but specific topics create more relevant captions.</p>
+
+      <label class="field-label">2 · Choose Your Niche</label>
       <div class="chip-row" id="nicheRow"></div>
 
-      <label class="field-label">2 · Select Tone</label>
+      <label class="field-label">3 · Select Tone</label>
       <div class="chip-row" id="toneRow"></div>
 
       <button class="gen-btn" id="genBtn" onclick="generate()">✨ Generate 3 Captions</button>
@@ -290,7 +294,7 @@
       <div class="results" id="results">
         <div class="empty-state" id="emptyState">
           <div style="font-size:2rem">✍️</div>
-          <p style="font-family:var(--sans);color:var(--muted);margin-top:6px;font-size:.95rem">Pick a niche &amp; tone, then tap <strong>Generate</strong> to get 3 viral captions.</p>
+          <p style="font-family:var(--sans);color:var(--muted);margin-top:6px;font-size:.95rem">Add a topic, pick a niche &amp; tone, then tap <strong>Generate</strong> to get 3 viral captions.</p>
         </div>
       </div>
     </section>
@@ -569,10 +573,13 @@
     function pickTone(id,el){selTone=id;document.querySelectorAll('#toneRow .chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');}
 
     /* ---------- GENERATE ---------- */
-    function fill(tpl,w){
+    function fill(tpl,w,topic){
+      const custom = (topic || '').trim();
+      const thing = custom || w.thing;
+      const Thing = thing.charAt(0).toUpperCase()+thing.slice(1);
       return tpl
-        .replaceAll('{thing}', w.thing)
-        .replaceAll('{Thing}', w.thing.charAt(0).toUpperCase()+w.thing.slice(1))
+        .replaceAll('{thing}', thing)
+        .replaceAll('{Thing}', Thing)
         .replaceAll('{emoji}', w.emoji)
         .replaceAll('{goal}', w.goal)
         .replaceAll('{verb}', w.verb)
@@ -611,9 +618,10 @@
       btn.disabled=true;
 
       const w=NICHE_WORDS[selNiche];
+      const topic=(document.getElementById('captionTopic')?.value||'').trim();
       const pool=pickThree(selTone);
       const html=pool.map((item,i)=>{
-        const txt=fill(item.text,w);
+        const txt=fill(item.text,w,topic);
         const score=hookScore(txt);
         const tier = score>=90?'🔥 Elite':score>=82?'Strong':'Good';
         return `<div class="res-card">
