@@ -165,7 +165,9 @@ header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:s
 .hero-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--text4);flex-wrap:wrap;margin-bottom:25px}
 .meta-dot{color:var(--border2)}
 .hero-image-wrap{border-radius:20px;overflow:hidden;margin-bottom:45px;position:relative;height:380px}
-.hero-image-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.hero-image-wrap.vertical{height:auto}
+.hero-image-wrap img{width:100%;height:auto;display:block;transition:transform .6s}
+.hero-image-wrap.vertical img{width:100%;height:auto;display:block;object-fit:contain}
 .hero-image-wrap:hover img{transform:scale(1.03)}
 .hero-image-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.65))}
 .hero-image-caption{position:absolute;bottom:16px;left:20px;color:rgba(255,255,255,.9);font-size:12px;font-weight:600}
@@ -206,7 +208,8 @@ header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:s
 .quick-answer strong{color:var(--accent);font-family:'Syne',sans-serif}
 
 .img-wrap{margin:28px 0;position:relative}
-.img-wrap img{width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow1);aspect-ratio:1200/670;object-fit:cover}
+.img-wrap img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:var(--shadow1)}
+.img-wrap.vertical{max-width:560px;margin-left:auto;margin-right:auto}
 .img-wrap figcaption{font-size:13px;color:var(--text4);text-align:center;margin-top:8px;font-style:italic}
 .pin-it{position:absolute;top:12px;right:12px;background:#e60023;color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;text-decoration:none;opacity:0;transition:opacity .2s;z-index:2}
 .img-wrap:hover .pin-it{opacity:1}
@@ -292,6 +295,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
   .nav-links{display:none}
   .hamburger{display:flex}
   .hero-image-wrap{height:240px}
+  .hero-image-wrap.vertical{height:auto}
   .footer-top{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){
