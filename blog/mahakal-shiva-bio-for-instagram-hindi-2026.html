@@ -284,6 +284,8 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
 <div class="hook-block">
 <p>Bhai sach bataun? Indian digital creator space mein apni identity ko spiritual bio se ground karna sabse tagda permanent connection banata hai. Apne profile par Devanagari Hindi ya Sanskrit <strong>shloka ke sath Trishul 🔱 emoji</strong> lagana turant community pride aur calm attitude dikhata hai.</p>
 <span class="hook-highlight">✦ Niche diya gaya har ek bio under 150 characters (Instagram bio limit) hai aur har mobile screen par saaf dikhta hai.</span>
+</div><div class="explainer-card" style="border-left:5px solid #ea580c;background:var(--bg3);margin:20px 0;">
+<strong>🎯 Keyword Intent Clarification:</strong> This page is curated specifically for <em>bold Kattar Mahakal attitude</em> and Ujjain Mahakaleshwar status lines. If your creator branding requires calm, peaceful Himalayan meditation quotes, explore our dedicated <a href="https://captionstudio.in/blog/mahadev-bio-for-instagram-hindi-2026.html" style="color:var(--accent);font-weight:700;">Har Har Mahadev &amp; Kedarnath Bio Guide</a>.
 </div>
 <article class="explainer-card">
 <h3>⚡ Quick Answer: sabse best Mahakal bio kaunsa hai?</h3>
@@ -850,8 +852,11 @@ bio mein bas shanti</div>
     var doc = document.documentElement;
     var pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
     if(prog) prog.style.width = pct + '%';
+    var stBtn = document.getElementById('scroll-top');
+    if(stBtn) stBtn.classList.toggle('visible', doc.scrollTop > 350);
   }, {passive:true});
 })();
 </script>
+<button id="scroll-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 </body>
 </html>
