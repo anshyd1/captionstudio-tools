@@ -837,8 +837,11 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
     var doc = document.documentElement;
     var pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
     if(prog) prog.style.width = pct + '%';
+    var stBtn = document.getElementById('scroll-top');
+    if(stBtn) stBtn.classList.toggle('visible', doc.scrollTop > 350);
   }, {passive:true});
 })();
 </script>
+<button id="scroll-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 </body>
 </html>
