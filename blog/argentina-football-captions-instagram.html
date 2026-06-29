@@ -107,12 +107,12 @@ header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:s
 .mobile-menu a{font-size:14px;color:var(--text3);padding:10px 14px;border-radius:8px;font-weight:500}
 .mobile-menu a:hover{background:var(--bg3);color:var(--text)}
 
-.breadcrumb{max-width:1100px;margin:0 auto;padding:11px 5%;font-size:12px;color:var(--text4);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.breadcrumb{max-width:1240px;margin:0 auto;padding:11px 5%;font-size:12px;color:var(--text4);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .breadcrumb a{color:#ff4d00}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb .sep{color:var(--border2)}
 
-.hero{padding:45px 5% 0;max-width:1100px;margin:0 auto}
+.hero{padding:45px 5% 0;max-width:1240px;margin:0 auto}
 .badge-row{margin-bottom:14px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .updated-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;border:1px solid #c8e6c9;color:#2e7d32;padding:5px 14px;border-radius:25px;font-size:12px;font-weight:700}
 [data-theme="dark"] .updated-badge{background:#0a2010;border-color:#1a4a20;color:#66bb6a}
@@ -120,7 +120,7 @@ header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:s
 .skill-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#ff4d00,#ff8c00);color:#fff;padding:6px 16px;border-radius:25px;font-size:12px;font-weight:700;margin-bottom:14px;box-shadow:0 4px 15px rgba(255,77,0,.3)}
 .hero h1{font-size:clamp(26px,4.5vw,44px);line-height:1.15;margin-bottom:16px;letter-spacing:-.5px}
 .hero h1 em{font-style:normal;background:linear-gradient(135deg,#0d9488,#ff4d00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-intro{font-size:17px;color:var(--text3);max-width:720px;margin-bottom:20px;line-height:1.75}
+.hero-intro{font-size:17px;color:var(--text3);max-width:860px;margin-bottom:20px;line-height:1.75}
 .hero-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--text4);flex-wrap:wrap;margin-bottom:25px}
 .meta-dot{color:var(--border2)}
 .hero-image-wrap{border-radius:20px;overflow:hidden;margin-bottom:45px;position:relative;height:380px}
@@ -129,7 +129,7 @@ header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:s
 .hero-image-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.65))}
 .hero-image-caption{position:absolute;bottom:16px;left:20px;color:rgba(255,255,255,.9);font-size:12px;font-weight:600}
 
-.page-wrapper{max-width:1100px;margin:0 auto;padding:0 5% 80px;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start}
+.page-wrapper{max-width:1240px;margin:0 auto;padding:0 5% 80px;display:grid;grid-template-columns:minmax(0,820px) 300px;gap:36px;align-items:start;justify-content:center}
 .blog-main{min-width:0}
 .blog-sidebar{position:sticky;top:80px}
 
@@ -235,7 +235,7 @@ header{background:var(--nav-bg);border-bottom:1px solid var(--border);position:s
 .glass-ad-btn:hover{background:#006fa8;transform:translateY(-1px)}
 
 footer{background:var(--footer-bg);color:var(--footer-text)}
-.footer-top{max-width:1100px;margin:0 auto;padding:50px 5% 32px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px}
+.footer-top{max-width:1240px;margin:0 auto;padding:50px 5% 32px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px}
 .footer-brand .logo{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--footer-head);margin-bottom:10px}
 .footer-brand .logo span{color:#ff4d00}
 .footer-brand p{font-size:13px;line-height:1.7;margin-bottom:16px}
@@ -245,15 +245,15 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .footer-col ul a{font-size:13px;color:var(--footer-text);transition:color .2s;display:flex;align-items:center;gap:5px}
 .footer-col ul a:hover{color:#ff4d00}
-.footer-bottom{border-top:1px solid #222;max-width:1100px;margin:0 auto;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px}
+.footer-bottom{border-top:1px solid #222;max-width:1240px;margin:0 auto;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:12px}
 .footer-bottom a{color:#ff8c00}
 
 #cs-toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(120px);background:#111;color:#fff;padding:13px 26px;border-radius:50px;font-size:14px;font-weight:600;box-shadow:0 10px 40px rgba(0,0,0,.3);z-index:9999;transition:transform .3s ease,opacity .3s ease,visibility .3s;pointer-events:none;opacity:0;visibility:hidden;white-space:nowrap;max-width:90vw;text-align:center}
 #cs-toast.show{transform:translateX(-50%) translateY(0);opacity:1;visibility:visible}
 [data-theme="dark"] #cs-toast{background:#fff;color:#111}
 
-@media(max-width:900px){
-  .page-wrapper{grid-template-columns:1fr;gap:0}
+@media(max-width:1100px){
+  .page-wrapper{grid-template-columns:1fr;gap:0;max-width:900px}
   .blog-sidebar{position:static;margin-top:40px}
   .footer-top{grid-template-columns:1fr 1fr;gap:28px}
 }
@@ -1147,5 +1147,5 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 
 })();
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a13283118b5e47e9',t:'MTc4MjcxMDc0MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
