@@ -737,6 +737,145 @@
         .jump-links a:hover { border-color: var(--brand-orange); color: #111; }
 
 
+        /* MONETIZATION UPDATE: Telegram + ₹99 ebook ads */
+        .tg-earning-strip {
+            background: linear-gradient(135deg, #0f172a 0%, #111827 55%, #229ed9 100%);
+            color: #fff;
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin: 24px 0 30px;
+            font-family: var(--font-sans);
+            box-shadow: 0 14px 34px rgba(17,24,39,0.14);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .tg-earning-strip .tg-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+            padding: 5px 10px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: .02em;
+            margin-bottom: 10px;
+        }
+        .tg-earning-strip h2 {
+            color: #fff;
+            font-family: var(--font-syne);
+            margin: 0 0 8px;
+            font-size: 1.45rem;
+            line-height: 1.25;
+        }
+        .tg-earning-strip p {
+            color: rgba(255,255,255,0.88);
+            margin: 0 0 14px;
+            font-size: 1rem;
+            font-family: var(--font-sans);
+        }
+        .tg-earning-strip .tg-mini-points {
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin: 0 0 16px;
+        }
+        .tg-earning-strip .tg-mini-points span {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 999px;
+            padding: 7px 10px;
+            font-size: .86rem;
+            font-weight: 700;
+        }
+        .tg-earning-strip .tg-join-btn {
+            display:inline-block;
+            background:#fff;
+            color:#0f172a;
+            border-radius:999px;
+            padding:11px 18px;
+            text-decoration:none;
+            font-weight:900;
+        }
+        .ebook-ad-box {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffffff 45%, #eff6ff 100%);
+            border: 1px solid #fed7aa;
+            border-radius: 20px;
+            padding: 26px;
+            margin: 34px 0;
+            font-family: var(--font-sans);
+            box-shadow: 0 16px 40px rgba(0,0,0,.07);
+            position: relative;
+            overflow: hidden;
+        }
+        .ebook-ad-box:before {
+            content: '';
+            position:absolute;
+            right:-50px; top:-60px;
+            width:170px; height:170px;
+            background: rgba(255,77,0,.10);
+            border-radius: 50%;
+        }
+        .ebook-ad-box .price-badge {
+            display:inline-block;
+            background: var(--brand-orange);
+            color:#fff;
+            border-radius:999px;
+            padding:6px 12px;
+            font-weight:900;
+            font-size:.9rem;
+            margin-bottom: 12px;
+        }
+        .ebook-ad-box h2, .ebook-ad-box h3 {
+            margin: 0 0 10px;
+            font-family: var(--font-syne);
+            color:#111827;
+            line-height: 1.2;
+        }
+        .ebook-ad-box p {
+            font-family: var(--font-sans);
+            color:#374151;
+            margin: 0 0 14px;
+            font-size: 1.02rem;
+        }
+        .ebook-ad-box ul {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+            gap:8px 14px;
+            padding-left: 18px;
+            margin: 12px 0 18px;
+            font-size: .98rem;
+        }
+        .ebook-ad-actions {
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            align-items:center;
+        }
+        .ebook-buy-btn {
+            background:#111827;
+            color:#fff;
+            border-radius:999px;
+            padding:12px 18px;
+            text-decoration:none;
+            font-weight:900;
+            display:inline-block;
+        }
+        .ebook-buy-btn:hover { background: var(--brand-orange); color:#fff; }
+        .ebook-tg-link {
+            color:#229ed9;
+            font-weight:900;
+            text-decoration:none;
+        }
+        .ebook-note {
+            font-size:.86rem !important;
+            color:#6b7280 !important;
+            margin-top:10px !important;
+        }
+        @media (max-width: 520px) {
+            .tg-earning-strip, .ebook-ad-box { padding: 20px; border-radius: 16px; }
+            .tg-earning-strip h2, .ebook-ad-box h2 { font-size: 1.25rem; }
+        }
+
+
         /* QUALITY UPDATE: quick answer + comparison table + editorial note */
         .cs-quality-box {
             background: #fffaf6;
@@ -831,6 +970,20 @@
                 By <strong>Ansh Yadav</strong> &nbsp;•&nbsp; 11 min read &nbsp;•&nbsp; Updated June 21, 2026
             </div>
 
+            <!-- TOP TELEGRAM CTA: high-intent traffic capture -->
+            <div class="tg-earning-strip">
+                <span class="tg-label">FREE TELEGRAM HUB</span>
+                <h2>Freebies, earning ideas aur creator resources chahiye?</h2>
+                <p>Caption templates, hooks, useful app offers, cashback/reward updates aur practical creator growth resources ke liye Skill2Income Hub join karein.</p>
+                <div class="tg-mini-points">
+                    <span>🎣 Reel hooks</span>
+                    <span>📲 App offers</span>
+                    <span>🎁 Free resources</span>
+                    <span>🚀 Growth tips</span>
+                </div>
+                <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="tg-join-btn">Join Free Telegram →</a>
+            </div>
+
             <p>Agar aap Instagram Reels par views nahi la pa rahe ho, toh problem sirf content nahi — <strong>caption clarity, hook aur keywords</strong> bhi ho sakte hain. 2026 mein Instagram search aur discovery engine ki tarah kaam kar raha hai, aur sahi keywords + hook caption aapki reel ko better discovery de sakta hai. Yahaan aapko milenge <strong>copy-paste Instagram viral captions for Reels 2026</strong>, Hinglish examples, caption formula, hashtag guidance aur practical strategy. Best result ke liye har caption ko apne reel topic, niche aur audience ke hisaab se customize karein.</p>
 
             <div class="seo-action-box">
@@ -913,6 +1066,28 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+
+
+            <!-- EBOOK AD 1: after intent building section -->
+            <div class="ebook-ad-box" id="instagram-growth-ebook">
+                <span class="price-badge">₹99 Growth Ebook</span>
+                <h2>How to Grow Your Instagram Account: 10 Practical Tricks</h2>
+                <p>Sirf captions nahi — complete Instagram growth system chahiye? Is ebook me hooks, bio setup, reel ideas, caption formula, hashtag strategy aur 30-day action plan milega.</p>
+                <ul>
+                    <li>50+ scroll-stopping hook lines</li>
+                    <li>10 growth tricks with examples</li>
+                    <li>Caption + CTA templates</li>
+                    <li>Profile optimization checklist</li>
+                    <li>Hashtag + keyword strategy</li>
+                    <li>30-day posting roadmap</li>
+                </ul>
+                <div class="ebook-ad-actions">
+                    <a href="../instagram-growth-ebook.html" class="ebook-buy-btn">Get Ebook for ₹99 →</a>
+                    <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="ebook-tg-link">Join Telegram for freebies</a>
+                </div>
+                <p class="ebook-note">No fake guarantee — practical systems, templates aur examples jo aap apne niche ke hisaab se use kar sakte ho.</p>
             </div>
 
             <div class="img-container">
@@ -1419,6 +1594,20 @@
             </div>
 
         </section>
+
+
+
+            <!-- EBOOK AD 2: bottom conversion block -->
+            <div class="ebook-ad-box">
+                <span class="price-badge">Creator Growth Pack — ₹99</span>
+                <h2>Views aa rahe hain? Ab account growth system lagao.</h2>
+                <p>Is page se captions mil gaye. Ebook me milega: bio audit, content pillars, hooks bank, reels calendar, CTA examples aur growth tracking sheet.</p>
+                <div class="ebook-ad-actions">
+                    <a href="../instagram-growth-ebook.html" class="ebook-buy-btn">Unlock ₹99 Ebook →</a>
+                    <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener" class="ebook-tg-link">Free Telegram resources</a>
+                </div>
+                <p class="ebook-note">Best for creators, students, meme pages, personal brands aur small business pages jo Instagram growth ko seriously lena chahte hain.</p>
+            </div>
 
         <!-- MAIN CTA -->
         <section class="cta-box">
