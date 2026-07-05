@@ -10,55 +10,82 @@
     <meta name="theme-color" content="#FFDE59">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: #FFDE59; color: #000000; min-height: 100vh; line-height: 1.5; padding-bottom: 60px; }
         
+        /* BRUTALIST GRID & DOT BACKGROUND FOR DESKTOP DEPTH */
+        body {
+            background-color: #FFDE59;
+            background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
+            background-size: 28px 28px;
+            color: #000000;
+            min-height: 100vh;
+            line-height: 1.5;
+            padding-bottom: 60px;
+            overflow-x: hidden;
+        }
+
         /* Top Desi Brand Bar */
         .top-bar {
             background: #000000; color: #FFFFFF; font-weight: 900; font-size: 0.9rem;
             padding: 14px 16px; text-align: center; text-transform: uppercase; letter-spacing: 0.5px;
-            border-bottom: 4px solid #000000; box-shadow: 0 6px 0px #FF3B30;
+            border-bottom: 4px solid #000000; box-shadow: 0 6px 0px #FF3B30; position: relative; z-index: 10;
         }
         .top-bar span { color: #FFDE59; font-weight: 900; }
 
-        .container { max-width: 850px; margin: 44px auto; padding: 0 16px; text-align: center; }
+        /* ANIMATED BRUTALIST MARQUEE TICKER (Eliminates desktop emptiness!) */
+        .marquee-wrap {
+            background: #FF3B30; color: #FFFFFF; border-bottom: 4px solid #000000; border-top: 4px solid #000000;
+            padding: 10px 0; overflow: hidden; white-space: nowrap; position: relative; z-index: 10;
+            box-shadow: 0 6px 0px #000000; margin-bottom: 20px;
+        }
+        .marquee-content {
+            display: inline-block; font-size: 0.9rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;
+            animation: scroll-left 25s linear infinite;
+        }
+        .marquee-content span { margin: 0 20px; }
+        @keyframes scroll-left {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .container { max-width: 900px; margin: 30px auto 50px; padding: 0 16px; text-align: center; position: relative; z-index: 5; }
         
         /* High-Contrast Pill Badge */
         .pill-top {
-            display: inline-block; background: #FF3B30; color: #FFFFFF; border: 3px solid #000000; padding: 10px 20px;
+            display: inline-block; background: #FF3B30; color: #FFFFFF; border: 3px solid #000000; padding: 10px 22px;
             font-size: 0.9rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 26px;
-            box-shadow: 5px 5px 0px #000000;
+            box-shadow: 6px 6px 0px #000000;
         }
 
-        h1 { font-size: 3.4rem; font-weight: 900; line-height: 1.12; letter-spacing: -1px; color: #000000; margin-bottom: 20px; text-transform: uppercase; }
+        h1 { font-size: 3.6rem; font-weight: 900; line-height: 1.12; letter-spacing: -1.5px; color: #000000; margin-bottom: 20px; text-transform: uppercase; }
         h1 span {
-            background: #FFFFFF; color: #000000; padding: 0 14px; border: 4px solid #000000; box-shadow: 8px 8px 0px #FF3B30; display: inline-block; margin-top: 6px;
+            background: #FFFFFF; color: #000000; padding: 0 16px; border: 4px solid #000000; box-shadow: 8px 8px 0px #FF3B30; display: inline-block; margin-top: 8px;
         }
-        .subtitle { font-size: 1.3rem; color: #111827; max-width: 680px; margin: 0 auto 38px; font-weight: 800; line-height: 1.5; }
+        .subtitle { font-size: 1.35rem; color: #111827; max-width: 720px; margin: 0 auto 38px; font-weight: 800; line-height: 1.5; background: #FFDE59; padding: 4px; }
 
         /* Pure Desi Brutalist 3D Book Cover */
-        .book-showcase { display: flex; justify-content: center; align-items: center; margin: 30px 0 48px; perspective: 1000px; }
+        .book-showcase { display: flex; justify-content: center; align-items: center; margin: 30px 0 50px; perspective: 1000px; }
         .book-3d {
-            width: 320px; background: #FFFFFF; border: 5px solid #000000; border-radius: 0px;
-            box-shadow: 18px 18px 0px #000000, 0 15px 35px rgba(0,0,0,0.3); padding: 28px 22px; text-align: left;
+            width: 340px; background: #FFFFFF; border: 5px solid #000000; border-radius: 0px;
+            box-shadow: 20px 20px 0px #000000, 0 15px 35px rgba(0,0,0,0.3); padding: 30px 24px; text-align: left;
             position: relative; transform: rotateY(-12deg) rotateX(4deg); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;
         }
         .book-3d:hover { transform: rotateY(0deg) rotateX(0deg) scale(1.03); box-shadow: 14px 14px 0px #FF3B30, 0 20px 40px rgba(0,0,0,0.4); }
-        .book-3d::before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 16px; background: #FFDE59; border-right: 4px solid #000000; }
+        .book-3d::before { content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 18px; background: #FFDE59; border-right: 4px solid #000000; }
         
-        .b-top { background: #000000; color: #FFFFFF; border: 2px solid #000000; font-size: 0.7rem; font-weight: 900; padding: 4px 8px; display: inline-block; margin-bottom: 14px; box-shadow: 3px 3px 0px #FF3B30; text-transform: uppercase; }
-        .b-title { font-size: 2.3rem; font-weight: 900; line-height: 1.05; text-transform: uppercase; border-bottom: 4px solid #000000; margin-bottom: 12px; padding-bottom: 10px; color: #000000; letter-spacing: -1px; }
-        .b-sub { background: #FFDE59; color: #000000; border: 2px solid #000000; font-size: 0.88rem; font-weight: 800; line-height: 1.4; padding: 8px 10px; margin-bottom: 18px; box-shadow: 3px 3px 0px #000000; }
+        .b-top { background: #000000; color: #FFFFFF; border: 2px solid #000000; font-size: 0.72rem; font-weight: 900; padding: 4px 8px; display: inline-block; margin-bottom: 14px; box-shadow: 3px 3px 0px #FF3B30; text-transform: uppercase; }
+        .b-title { font-size: 2.4rem; font-weight: 900; line-height: 1.05; text-transform: uppercase; border-bottom: 4px solid #000000; margin-bottom: 12px; padding-bottom: 10px; color: #000000; letter-spacing: -1px; }
+        .b-sub { background: #FFDE59; color: #000000; border: 2px solid #000000; font-size: 0.9rem; font-weight: 800; line-height: 1.4; padding: 8px 10px; margin-bottom: 18px; box-shadow: 3px 3px 0px #000000; }
         .b-list { list-style: none; margin-bottom: 22px; }
-        .b-list li { font-size: 0.82rem; font-weight: 800; color: #000000; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+        .b-list li { font-size: 0.85rem; font-weight: 800; color: #000000; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
         .b-list li::before { content: "⚡"; color: #FF3B30; font-size: 1rem; }
-        .b-footer { background: #000000; color: #FFDE59; font-size: 0.7rem; font-weight: 900; text-align: center; padding: 8px; border: 2px solid #000000; text-transform: uppercase; }
+        .b-footer { background: #000000; color: #FFDE59; font-size: 0.72rem; font-weight: 900; text-align: center; padding: 8px; border: 2px solid #000000; text-transform: uppercase; }
 
         /* Pure Brutalist Checkout Box */
-        .price-box { background: #FFFFFF; border: 5px solid #000000; box-shadow: 14px 14px 0px #000000; border-radius: 0px; padding: 36px 24px; max-width: 520px; margin: 0 auto 50px; text-align: center; }
-        .price-box-title { font-size: 1rem; font-weight: 900; color: #000000; text-transform: uppercase; margin-bottom: 18px; border-bottom: 3px solid #000000; padding-bottom: 12px; letter-spacing: 0.5px; }
+        .price-box { background: #FFFFFF; border: 5px solid #000000; box-shadow: 16px 16px 0px #000000; border-radius: 0px; padding: 38px 26px; max-width: 540px; margin: 0 auto 50px; text-align: center; }
+        .price-box-title { font-size: 1.05rem; font-weight: 900; color: #000000; text-transform: uppercase; margin-bottom: 18px; border-bottom: 3px solid #000000; padding-bottom: 12px; letter-spacing: 0.5px; }
         .p-wrap { display: flex; align-items: baseline; justify-content: center; gap: 14px; margin: 18px 0 24px; }
-        .p-new { font-size: 4.8rem; font-weight: 900; color: #000000; line-height: 1; }
-        .p-old { font-size: 1.6rem; color: #6B7280; text-decoration: line-through; font-weight: 700; }
+        .p-new { font-size: 5rem; font-weight: 900; color: #000000; line-height: 1; }
+        .p-old { font-size: 1.7rem; color: #6B7280; text-decoration: line-through; font-weight: 700; }
         .p-off { background: #00E676; color: #000000; padding: 6px 14px; font-weight: 900; font-size: 0.95rem; border: 3px solid #000000; text-transform: uppercase; }
         
         /* ORDER BUMP / ₹49 ADD-ON BOX */
@@ -66,39 +93,90 @@
             background: #FFFBEB; border: 3px dashed #000000; padding: 18px; margin: 0 0 24px; text-align: left;
             position: relative; transition: all 0.2s;
         }
-        .order-bump.selected { background: #DCFCE7; border-style: solid; box-shadow: 5px 5px 0px #000000; }
+        .order-bump.selected { background: #DCFCE7; border-style: solid; box-shadow: 6px 6px 0px #000000; }
         .bump-header {
-            background: #FF3B30; color: #FFFFFF; font-size: 0.75rem; font-weight: 900; padding: 4px 10px;
+            background: #FF3B30; color: #FFFFFF; font-size: 0.78rem; font-weight: 900; padding: 4px 10px;
             display: inline-block; text-transform: uppercase; margin-bottom: 10px; border: 2px solid #000000;
         }
         .bump-label { display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
         .bump-checkbox { width: 22px; height: 22px; accent-color: #000000; margin-top: 2px; cursor: pointer; flex-shrink: 0; }
-        .bump-title { font-size: 0.95rem; font-weight: 900; color: #000000; line-height: 1.3; }
+        .bump-title { font-size: 0.98rem; font-weight: 900; color: #000000; line-height: 1.3; }
         .bump-title span { color: #FF3B30; text-decoration: underline; }
-        .bump-desc { font-size: 0.82rem; font-weight: 700; color: #374151; margin-top: 6px; line-height: 1.4; padding-left: 34px; }
+        .bump-desc { font-size: 0.84rem; font-weight: 700; color: #374151; margin-top: 6px; line-height: 1.4; padding-left: 34px; }
 
         .btn-buy {
-            display: block; width: 100%; background: #00E676; color: #000000; padding: 22px; border-radius: 0px; font-size: 1.3rem; font-weight: 900; text-decoration: none;
-            border: 4px solid #000000; box-shadow: 6px 6px 0px #000000; cursor: pointer; text-transform: uppercase; transition: transform 0.1s, box-shadow 0.1s;
+            display: block; width: 100%; background: #00E676; color: #000000; padding: 24px; border-radius: 0px; font-size: 1.35rem; font-weight: 900; text-decoration: none;
+            border: 4px solid #000000; box-shadow: 8px 8px 0px #000000; cursor: pointer; text-transform: uppercase; transition: transform 0.1s, box-shadow 0.1s;
         }
-        .btn-buy:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0px #000000; background: #00C853; }
+        .btn-buy:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0px #000000; background: #00C853; }
 
         /* What You Get Grid */
-        .section-title { font-size: 1.9rem; font-weight: 900; color: #000000; text-transform: uppercase; margin-bottom: 28px; letter-spacing: -0.5px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; text-align: left; }
-        .card { background: #FFFFFF; border: 4px solid #000000; border-radius: 0px; padding: 26px; box-shadow: 8px 8px 0px #000000; }
-        .card h3 { font-size: 1.2rem; font-weight: 900; color: #000000; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
-        .card h3 span { background: #FFDE59; color: #000000; font-size: 1.1rem; width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #000000; }
-        .card p { color: #374151; font-size: 0.95rem; font-weight: 700; line-height: 1.6; }
+        .section-title { font-size: 2rem; font-weight: 900; color: #000000; text-transform: uppercase; margin-bottom: 30px; letter-spacing: -0.5px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; text-align: left; margin-bottom: 50px; }
+        .card { background: #FFFFFF; border: 4px solid #000000; border-radius: 0px; padding: 28px; box-shadow: 10px 10px 0px #000000; transition: transform 0.15s; }
+        .card:hover { transform: translate(-3px, -3px); box-shadow: 13px 13px 0px #000000; }
+        .card h3 { font-size: 1.25rem; font-weight: 900; color: #000000; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; }
+        .card h3 span { background: #FFDE59; color: #000000; font-size: 1.1rem; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #000000; flex-shrink: 0; }
+        .card p { color: #374151; font-size: 0.98rem; font-weight: 700; line-height: 1.6; }
 
-        .footer { margin-top: 60px; text-align: center; font-size: 0.85rem; color: #374151; font-weight: 700; border-top: 3px solid #000000; padding-top: 24px; }
-        @media (max-width: 600px) { h1 { font-size: 2.3rem; } .p-new { font-size: 3.8rem; } .book-3d { width: 280px; } .bump-desc { padding-left: 0; } }
+        /* FOUNDER SIGNATURE & AUTHENTICITY BOX (Fills desktop space with immense trust!) */
+        .founder-box {
+            background: #FFFFFF; border: 5px solid #000000; box-shadow: 14px 14px 0px #000000; padding: 34px; max-width: 800px; margin: 0 auto 50px; text-align: left;
+            display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px;
+        }
+        .founder-text { flex: 1; min-width: 280px; }
+        .founder-text h3 { font-size: 1.4rem; font-weight: 900; color: #000000; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .founder-text p { font-size: 0.95rem; font-weight: 700; color: #374151; line-height: 1.6; }
+        .founder-sig {
+            background: #FFDE59; border: 3px solid #000000; padding: 14px 22px; text-align: center; box-shadow: 6px 6px 0px #000000;
+        }
+        .sig-name { font-family: "Georgia", serif; font-size: 1.8rem; font-weight: 900; font-style: italic; color: #000000; transform: rotate(-3deg); }
+        .sig-title { font-size: 0.75rem; font-weight: 900; text-transform: uppercase; color: #374151; margin-top: 4px; }
+
+        /* FLOATING DESKTOP BADGES (Only visible on wide screens to eliminate empty margins!) */
+        @media (min-width: 1200px) {
+            .side-badge-left {
+                position: fixed; left: 30px; top: 35%; width: 170px; background: #000000; color: #FFFFFF;
+                border: 3px solid #FF3B30; box-shadow: 6px 6px 0px #FF3B30; padding: 14px; text-align: center;
+                font-size: 0.8rem; font-weight: 900; text-transform: uppercase; z-index: 20; transform: rotate(-3deg);
+            }
+            .side-badge-left span { color: #FFDE59; font-size: 1.1rem; display: block; margin-bottom: 4px; }
+            
+            .side-badge-right {
+                position: fixed; right: 30px; top: 40%; width: 170px; background: #FFFFFF; color: #000000;
+                border: 3px solid #000000; box-shadow: 6px 6px 0px #00E676; padding: 14px; text-align: center;
+                font-size: 0.8rem; font-weight: 900; text-transform: uppercase; z-index: 20; transform: rotate(3deg);
+            }
+            .side-badge-right span { color: #00C853; font-size: 1.2rem; display: block; margin-bottom: 4px; }
+        }
+        @media (max-width: 1199px) { .side-badge-left, .side-badge-right { display: none; } }
+
+        .footer { margin-top: 40px; text-align: center; font-size: 0.88rem; color: #000000; font-weight: 800; border-top: 4px solid #000000; padding: 30px 16px; background: #FFFFFF; }
+        @media (max-width: 600px) { h1 { font-size: 2.3rem; } .p-new { font-size: 3.8rem; } .book-3d { width: 280px; } .bump-desc { padding-left: 0; } .founder-box { padding: 20px; text-align: center; } .founder-sig { width: 100%; } }
     </style>
 </head>
 <body>
 
+    <!-- FLOATING DESKTOP BADGES (Eliminates empty white space on large monitors!) -->
+    <div class="side-badge-left">
+        <span>⚡ 376,000+</span>
+        Verified Impressions on CaptionStudio.in
+    </div>
+    <div class="side-badge-right">
+        <span>🔒 100% SAFE</span>
+        Direct WhatsApp UPI & Instant Delivery
+    </div>
+
     <div class="top-bar">
         ⚡ Official Resource from <span>CaptionStudio.in Tools Hub</span> • Built for Indian Creators in 2026
+    </div>
+
+    <!-- ANIMATED BRUTALIST MARQUEE TICKER -->
+    <div class="marquee-wrap">
+        <div class="marquee-content">
+            <span>⚡ 50+ VIRAL AI PROMPTS</span> • <span>💬 WHATSAPP VASOOLI SCRIPTS</span> • <span>📈 NO-FACE CAROUSEL GROWTH ENGINE</span> • <span>🔥 95% OFF TODAY</span> • <span>⚡ CAPTIONSTUDIO.IN OFFICIAL VERIFIED SYSTEM</span> • 
+            <span>⚡ 50+ VIRAL AI PROMPTS</span> • <span>💬 WHATSAPP VASOOLI SCRIPTS</span> • <span>📈 NO-FACE CAROUSEL GROWTH ENGINE</span> • <span>🔥 95% OFF TODAY</span> • <span>⚡ CAPTIONSTUDIO.IN OFFICIAL VERIFIED SYSTEM</span>
+        </div>
     </div>
 
     <main class="container">
@@ -173,7 +251,27 @@
                 <p>Go viral using simple static carousels and CaptionStudio AI hooks. Zero camera presence or speaking required. Built for Indian algorithms in 2026.</p>
             </div>
         </div>
+
+        <!-- FOUNDER SIGNATURE & AUTHENTICITY BOX (Fills desktop margins & builds massive trust!) -->
+        <div class="founder-box">
+            <div class="founder-text">
+                <h3>✍️ A Personal Note From The Founder</h3>
+                <p>We built CaptionStudio.in from Gorakhpur, Uttar Pradesh to give Indian digital creators world-class AI tools without expensive Western software fees. This exact playbook contains the real frameworks we used to generate over <strong>376,000+ organic search impressions</strong>. No fluff, just execution.</p>
+            </div>
+            <div class="founder-sig">
+                <div class="sig-name">Ansh Yadav</div>
+                <div class="sig-title">Founder, CaptionStudio.in</div>
+            </div>
+        </div>
     </main>
+
+    <!-- ANIMATED BRUTALIST MARQUEE TICKER (Bottom) -->
+    <div class="marquee-wrap" style="margin-bottom: 0; border-bottom: none;">
+        <div class="marquee-content">
+            <span>⚡ NO-FACE CAROUSEL ENGINE</span> • <span>💬 WHATSAPP VASOOLI SCRIPTS</span> • <span>🔥 50+ VIRAL AI PROMPTS</span> • <span>🔒 INSTANT UPI DELIVERY</span> • <span>⚡ CAPTIONSTUDIO.IN OFFICIAL VERIFIED SYSTEM</span> • 
+            <span>⚡ NO-FACE CAROUSEL ENGINE</span> • <span>💬 WHATSAPP VASOOLI SCRIPTS</span> • <span>🔥 50+ VIRAL AI PROMPTS</span> • <span>🔒 INSTANT UPI DELIVERY</span> • <span>⚡ CAPTIONSTUDIO.IN OFFICIAL VERIFIED SYSTEM</span>
+        </div>
+    </div>
 
     <footer class="footer">
         © 2026 CaptionStudio.in • Built for Indian Creators from Gorakhpur, UP • All Rights Reserved.<br>
@@ -202,5 +300,5 @@
             }
         }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a16543510b0f47e2',t:'MTc4MzI0MjkwMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
