@@ -1,0 +1,108 @@
+# CaptionStudio.in — robots.txt
+# Last updated: 2026-07-06 — added /data/ disallow to stop crawl-budget waste on JSON API endpoints
+# Strategy: SEO + GEO (Generative Engine Optimization)
+# We WANT AI engines (ChatGPT, Claude, Gemini, Perplexity) to cite our content.
+
+# ============================================
+# GENERAL CRAWLERS (Google, Bing, etc.)
+# ============================================
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /data/
+
+# ============================================
+# AI SEARCH ENGINES — EXPLICITLY ALLOWED
+# These bots help users discover our content via AI.
+# ============================================
+
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google AI / Gemini
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (used as base data by many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: bingbot
+Allow: /
+
+# ByteDance (TikTok AI features)
+User-agent: Bytespider
+Allow: /
+
+# Amazon (Alexa AI, Rufus)
+User-agent: Amazonbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# DuckDuckGo (DuckAssist)
+User-agent: DuckAssistBot
+Allow: /
+
+# ============================================
+# CONTENT SIGNAL (Cloudflare Standard)
+# We grant permission for AI search + AI input.
+# AI training is denied (protect content from being trained on).
+# ============================================
+User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=no
+
+# ============================================
+# SITEMAPS
+# ============================================
+Sitemap: https://captionstudio.in/sitemap.xml
+Sitemap: https://captionstudio.in/sitemap-main.xml
+Sitemap: https://captionstudio.in/sitemap-blogs.xml
+Sitemap: https://captionstudio.in/sitemap-tools.xml
+Sitemap: https://captionstudio.in/sitemap-images.xml
