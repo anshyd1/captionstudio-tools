@@ -187,16 +187,6 @@
       "permanent": true
     },
     {
-      "source": "/blog/copy-paste-instagram-captions",
-      "destination": "/blog/copy-paste-instagram-captions.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog/copy-paste-instagram-captions/",
-      "destination": "/blog/copy-paste-instagram-captions.html",
-      "permanent": true
-    },
-    {
       "source": "/blog/category/captions.html",
       "destination": "/blog/ultimate-instagram-captions.html",
       "permanent": true
@@ -245,86 +235,6 @@
       "source": "/data/",
       "destination": "/data/homepage-blogs.json",
       "permanent": false
-    },
-    {
-      "source": "/about",
-      "destination": "/about.html",
-      "permanent": true
-    },
-    {
-      "source": "/about/",
-      "destination": "/about.html",
-      "permanent": true
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact.html",
-      "permanent": true
-    },
-    {
-      "source": "/contact/",
-      "destination": "/contact.html",
-      "permanent": true
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy.html",
-      "permanent": true
-    },
-    {
-      "source": "/privacy/",
-      "destination": "/privacy.html",
-      "permanent": true
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms.html",
-      "permanent": true
-    },
-    {
-      "source": "/terms/",
-      "destination": "/terms.html",
-      "permanent": true
-    },
-    {
-      "source": "/support",
-      "destination": "/support.html",
-      "permanent": true
-    },
-    {
-      "source": "/support/",
-      "destination": "/support.html",
-      "permanent": true
-    },
-    {
-      "source": "/earning",
-      "destination": "/earning.html",
-      "permanent": true
-    },
-    {
-      "source": "/earning/",
-      "destination": "/earning.html",
-      "permanent": true
-    },
-    {
-      "source": "/guide",
-      "destination": "/guide.html",
-      "permanent": true
-    },
-    {
-      "source": "/guide/",
-      "destination": "/guide.html",
-      "permanent": true
-    },
-    {
-      "source": "/relax",
-      "destination": "/relax.html",
-      "permanent": true
-    },
-    {
-      "source": "/relax/",
-      "destination": "/relax.html",
-      "permanent": true
     },
     {
       "source": "/blog/blog",
