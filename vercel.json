@@ -11,6 +11,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/gt-vs-csk-memes-captions-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
       "source": "/blog/gt-vs-rr-qualifier-2-viral-captions-2026.html",
       "destination": "/blog/viral-captions-for-reels-2026.html",
       "permanent": true
@@ -26,6 +31,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/ipl-2026-final-captions-english-international-cricket-fans",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
       "source": "/blog/ipl-2026-final-predictions-memes-captions.html",
       "destination": "/blog/viral-captions-for-reels-2026.html",
       "permanent": true
@@ -33,6 +43,11 @@
     {
       "source": "/blog/ipl-2026-final-rcb-pbks-captions-memes.html",
       "destination": "/blog/viral-captions-for-reels-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ipl-2026-final-rcb-pbks-captions-memes",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
@@ -177,6 +192,11 @@
       "permanent": true
     },
     {
+      "source": "/assets/blog/instagram-search-optimization-2026.webp",
+      "destination": "/blog/instagram-search-optimization-2026.webp",
+      "permanent": true
+    },
+    {
       "source": "/:path+/blog",
       "destination": "/blog",
       "permanent": true
@@ -192,13 +212,28 @@
       "permanent": true
     },
     {
+      "source": "/blog/category/captions",
+      "destination": "/blog/ultimate-instagram-captions",
+      "permanent": true
+    },
+    {
       "source": "/blog/category/instagram-growth.html",
       "destination": "/blog/instagram-growth-0-to-10k.html",
       "permanent": true
     },
     {
+      "source": "/blog/category/instagram-growth",
+      "destination": "/blog/instagram-growth-0-to-10k",
+      "permanent": true
+    },
+    {
       "source": "/blog/category/shayari.html",
       "destination": "/blog/english-vs-shayari-captions-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/category/shayari",
+      "destination": "/blog/english-vs-shayari-captions-2026",
       "permanent": true
     },
     {
@@ -317,6 +352,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/best-hashtags-for-reels-2026",
+      "destination": "/blog/trending-hashtags-reels-2026",
+      "permanent": true
+    },
+    {
       "source": "/blog/birthday-captions-2026.html",
       "destination": "/blog/english-vs-shayari-captions-2026.html#birthday",
       "permanent": true
@@ -344,6 +384,11 @@
     {
       "source": "/blog/viral-attitude-trendy-captions-hacks-2026.html",
       "destination": "/blog/100-killer-attitude-captions-hinglish-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-attitude-trendy-captions-hacks-2026",
+      "destination": "/blog/100-killer-attitude-captions-hinglish-2026",
       "permanent": true
     },
     {
@@ -389,6 +434,36 @@
     {
       "source": "/blog/sad-shayari-hindi-2026.html",
       "destination": "/blog/sad-shayari-breakup-captions-hindi-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sad-shayari-hindi-2026",
+      "destination": "/blog/sad-shayari-breakup-captions-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/img/hero-premium.webp",
+      "destination": "/img/hero-premium.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/img/instagram-content-ideas-small-business-2026.webp",
+      "destination": "/img/brand-deals-instagram-india-2026-hero.webp",
+      "permanent": true
+    },
+    {
+      "source": "/images/instagram-growth-guide.webp",
+      "destination": "/og-image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/blog/og-reels-earning.jpg",
+      "destination": "/og-image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/og-blog-banner.png",
+      "destination": "/og-image.jpg",
       "permanent": true
     }
   ],
