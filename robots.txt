@@ -1,5 +1,6 @@
 # CaptionStudio.in — robots.txt
-# Last updated: 2026-07-06 — added /data/ disallow to stop crawl-budget waste on JSON API endpoints
+# Last updated: 2026-07-07 — /data/ disallowed EXCEPT the 2 JSON files homepage JS fetches
+#   (Googlebot needs homepage-blogs.json + blog.json to render the Trending Blogs section)
 # Strategy: SEO + GEO (Generative Engine Optimization)
 # We WANT AI engines (ChatGPT, Claude, Gemini, Perplexity) to cite our content.
 
@@ -8,6 +9,8 @@
 # ============================================
 User-agent: *
 Allow: /
+Allow: /data/homepage-blogs.json
+Allow: /data/blog.json
 Disallow: /admin/
 Disallow: /private/
 Disallow: /data/
