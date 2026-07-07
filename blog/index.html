@@ -8,7 +8,7 @@
 <meta content="CaptionStudio Creator Blog — viral Instagram captions, attitude &amp; love captions, shayari, IPL trends and Instagram growth tips for Indian creators in 2026." name="description"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://captionstudio.in/blog" rel="canonical"/>
-<link href="../favicon.png" rel="icon"/>
+<link href="/favicon.png" rel="icon"/>
 <!-- Open Graph -->
 <meta content="website" property="og:type"/>
 <meta content="CaptionStudio Creator Blog — Instagram Captions &amp; Growth Tips 2026" property="og:title"/>
@@ -144,16 +144,16 @@
 <div class="overlay" onclick="toggleMenu()"></div>
 <aside class="drawer">
 <nav style="display: flex; flex-direction: column;">
-<a href="../">Home</a>
-<a href="../tools/caption-generator">AI Tools</a>
-<a href="../earning">Earning Hub</a>
-<a href="./" style="color: var(--orange);">Creator Blog</a>
+<a href="/">Home</a>
+<a href="/tools/caption-generator">AI Tools</a>
+<a href="/earning">Earning Hub</a>
+<a href="/blog" style="color: var(--orange);">Creator Blog</a>
 <a href="https://t.me/skill2incomehub" style="margin-top: 20px; background: var(--orange-pale); color: var(--orange); text-align:center;" target="_blank">Join Telegram</a>
 </nav>
 </aside>
 <nav>
 <div class="wrap nav-inner">
-<a class="logo" href="./">CaptionStudio <span style="font-weight: 400; opacity: 0.4; margin-left: 5px;">/ Blog</span></a>
+<a class="logo" href="/blog">CaptionStudio <span style="font-weight: 400; opacity: 0.4; margin-left: 5px;">/ Blog</span></a>
 <button aria-label="Menu" class="hbg" onclick="toggleMenu()">
 <span></span><span></span><span></span>
 </button>
@@ -188,11 +188,11 @@
 <h2>📖 Explore CaptionStudio</h2>
 <p>While the latest posts load, check out our most popular sections and free Instagram growth tips.</p>
 <div class="fb-links">
-<a href="../tools/caption-generator">✍️ Caption Generator</a>
-<a href="../tools/hashtag-generator">#️⃣ Hashtag Generator</a>
-<a href="../tools/bio-generator">📝 Bio Generator</a>
+<a href="/tools/caption-generator">✍️ Caption Generator</a>
+<a href="/tools/hashtag-generator">#️⃣ Hashtag Generator</a>
+<a href="/tools/bio-generator">📝 Bio Generator</a>
 <a href="https://t.me/skill2incomehub" rel="noopener" target="_blank">📲 Growth Tips on Telegram</a>
-<a href="../">🏠 Home</a>
+<a href="/">🏠 Home</a>
 </div>
 </div>
 
@@ -205,7 +205,7 @@
       <a href="viral-captions-for-reels-2026">🔥 Viral Reels captions</a>
       <a href="trending-hashtags-reels-2026">#️⃣ Trending hashtags</a>
       <a href="instagram-reel-hooks-2026">🎬 Reel hooks</a>
-      <a href="../tools/caption-generator">✍️ Free caption tool</a>
+      <a href="/tools/caption-generator">✍️ Free caption tool</a>
     </div>
   </article>
   <article class="intro-card">
@@ -247,27 +247,27 @@
 <div>
 <h4 class="ft-title">Resources</h4>
 <div class="ft-links">
-<a href="../">Home</a>
-<a href="../tools/caption-generator">Caption AI</a>
-<a href="../tools/hashtag-generator">Hashtag AI</a>
+<a href="/">Home</a>
+<a href="/tools/caption-generator">Caption AI</a>
+<a href="/tools/hashtag-generator">Hashtag AI</a>
 </div>
 </div>
 <div>
 <h4 class="ft-title">Connect</h4>
 <div class="ft-links">
 <a href="https://t.me/skill2incomehub" rel="noopener" target="_blank">Telegram Tips</a>
-<a href="mailto:captionstudio02@gmail.com">Email Us</a>
+<a href="/cdn-cgi/l/email-protection#f89b99888c9197968b8c8d9c9197c8cab89f95999194d69b9795">Email Us</a>
 </div>
 </div>
 <div>
 <h4 class="ft-title">Site</h4>
 <div class="ft-links">
-<a href="../about">About</a>
-<a href="../contact">Contact</a>
-<a href="../privacy">Privacy Policy</a>
-<a href="../terms">Terms</a>
-<a href="../disclaimer">Disclaimer</a>
-<a href="../support">Support</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+<a href="/privacy">Privacy Policy</a>
+<a href="/terms">Terms</a>
+<a href="/disclaimer">Disclaimer</a>
+<a href="/support">Support</a>
 </div>
 </div>
 </div>
@@ -276,7 +276,7 @@
       </div>
 </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function toggleMenu() { document.body.classList.toggle('menu-open'); }
 
     /* Category -> emoji + gradient (no image files needed, never breaks) */
@@ -303,7 +303,7 @@
 
     async function loadBlog() {
       try {
-        var res = await fetch('../data/blog.json', { cache: 'no-store' });
+        var res = await fetch('/data/blog.json', { cache: 'no-store' });
         if (!res.ok) throw new Error('bad status ' + res.status);
         var data = await res.json();
         if (!Array.isArray(data) || !data.length) throw new Error('empty');
@@ -393,7 +393,7 @@
           : '<span class="emoji">' + st.emoji + '</span>';
         var thumbBg = postImg ? '' : ' style="background:' + st.grad + '"';
         return '' +
-        '<a href="../' + escAttr(p.link) + '" class="post-card">' +
+        '<a href="/' + escAttr(p.link) + '" class="post-card">' +
           '<div class="post-thumb"' + thumbBg + '>' +
             tag +
             thumbInner +
