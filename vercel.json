@@ -1,6 +1,21 @@
 {
   "redirects": [
     {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
       "source": "/blog/brazil-vs-japan-world-cup-2026-preview",
       "destination": "/blog/brazil-football-captions-instagram",
       "permanent": true
