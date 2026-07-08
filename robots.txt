@@ -94,14 +94,6 @@ User-agent: DuckAssistBot
 Allow: /
 
 # ============================================
-# CONTENT SIGNAL (Cloudflare Standard)
-# We grant permission for AI search + AI input.
-# AI training is denied (protect content from being trained on).
-# ============================================
-User-agent: *
-Content-Signal: search=yes,ai-input=yes,ai-train=no
-
-# ============================================
 # SITEMAPS
 # ============================================
 Sitemap: https://captionstudio.in/sitemap.xml
