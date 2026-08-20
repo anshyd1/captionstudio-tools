@@ -82,7 +82,7 @@
     },
     {
       "source": "/blog/best-hashtags-reels",
-      "destination": "/blog/trending-hashtags-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
       "permanent": true
     },
     {
@@ -127,32 +127,32 @@
     },
     {
       "source": "/blog/birthday-captions-2026",
-      "destination": "/blog/english-vs-shayari-captions-2026#birthday",
+      "destination": "/blog/birthday-captions-instagram-2026",
       "permanent": true
     },
     {
       "source": "/blog/ai-content-creation",
-      "destination": "/blog/ai-tools-instagram-reach",
+      "destination": "/blog/instagram-reel-hooks-2026",
       "permanent": true
     },
     {
       "source": "/blog/hashtag-strategy",
-      "destination": "/blog/trending-hashtags-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
       "permanent": true
     },
     {
       "source": "/blog/instagram-bio-ideas",
-      "destination": "/blog/instagram-bio-ideas-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
       "permanent": true
     },
     {
       "source": "/blog/short-attitude-captions-one-word",
-      "destination": "/blog/100-killer-attitude-captions-hinglish-2026",
+      "destination": "/blog/attitude-captions-2026",
       "permanent": true
     },
     {
       "source": "/blog/how-to-make-reels-viral",
-      "destination": "/blog/viral-reels-strategy-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
@@ -182,12 +182,12 @@
     },
     {
       "source": "/blog/instagram-bio-examples",
-      "destination": "/blog/instagram-bio-2026-mega-guide",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
       "permanent": true
     },
     {
       "source": "/blog/instagram-bio-examples.html",
-      "destination": "/blog/instagram-bio-2026-mega-guide",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
       "permanent": true
     },
     {
@@ -288,22 +288,22 @@
     },
     {
       "source": "/blog/category/instagram-growth.html",
-      "destination": "/blog/instagram-growth-0-to-10k",
+      "destination": "/blog/instagram-growth-7-days",
       "permanent": true
     },
     {
       "source": "/blog/category/instagram-growth",
-      "destination": "/blog/instagram-growth-0-to-10k",
+      "destination": "/blog/instagram-growth-7-days",
       "permanent": true
     },
     {
       "source": "/blog/category/shayari.html",
-      "destination": "/blog/english-vs-shayari-captions-2026",
+      "destination": "/blog/hindi-captions-instagram",
       "permanent": true
     },
     {
       "source": "/blog/category/shayari",
-      "destination": "/blog/english-vs-shayari-captions-2026",
+      "destination": "/blog/hindi-captions-instagram",
       "permanent": true
     },
     {
@@ -318,7 +318,7 @@
     },
     {
       "source": "/blog/best-hashtags-reels.html",
-      "destination": "/blog/trending-hashtags-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
       "permanent": true
     },
     {
@@ -403,52 +403,52 @@
     },
     {
       "source": "/blog/best-hashtags-for-reels-2026.html",
-      "destination": "/blog/trending-hashtags-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
       "permanent": true
     },
     {
       "source": "/blog/best-hashtags-for-reels-2026",
-      "destination": "/blog/trending-hashtags-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
       "permanent": true
     },
     {
       "source": "/blog/birthday-captions-2026.html",
-      "destination": "/blog/english-vs-shayari-captions-2026#birthday",
+      "destination": "/blog/birthday-captions-instagram-2026",
       "permanent": true
     },
     {
       "source": "/blog/ai-content-creation.html",
-      "destination": "/blog/ai-tools-instagram-reach",
+      "destination": "/blog/instagram-reel-hooks-2026",
       "permanent": true
     },
     {
       "source": "/blog/hashtag-strategy.html",
-      "destination": "/blog/trending-hashtags-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
       "permanent": true
     },
     {
       "source": "/blog/instagram-bio-ideas.html",
-      "destination": "/blog/instagram-bio-ideas-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
       "permanent": true
     },
     {
       "source": "/blog/short-attitude-captions-one-word.html",
-      "destination": "/blog/100-killer-attitude-captions-hinglish-2026",
+      "destination": "/blog/attitude-captions-2026",
       "permanent": true
     },
     {
       "source": "/blog/viral-attitude-trendy-captions-hacks-2026.html",
-      "destination": "/blog/100-killer-attitude-captions-hinglish-2026",
+      "destination": "/blog/attitude-captions-2026",
       "permanent": true
     },
     {
       "source": "/blog/viral-attitude-trendy-captions-hacks-2026",
-      "destination": "/blog/100-killer-attitude-captions-hinglish-2026",
+      "destination": "/blog/attitude-captions-2026",
       "permanent": true
     },
     {
       "source": "/blog/how-to-make-reels-viral.html",
-      "destination": "/blog/viral-reels-strategy-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
@@ -467,23 +467,18 @@
       "permanent": true
     },
     {
-      "source": "/blog/professional-development-guide/",
-      "destination": "/blog/professional-development-guide",
-      "permanent": true
-    },
-    {
       "source": "/favicon.jpg",
       "destination": "/favicon.png",
       "permanent": true
     },
     {
       "source": "/blog/sad-shayari-hindi-2026.html",
-      "destination": "/blog/sad-shayari-breakup-captions-hindi-2026",
+      "destination": "/blog/hindi-captions-instagram",
       "permanent": true
     },
     {
       "source": "/blog/sad-shayari-hindi-2026",
-      "destination": "/blog/sad-shayari-breakup-captions-hindi-2026",
+      "destination": "/blog/hindi-captions-instagram",
       "permanent": true
     },
     {
@@ -509,6 +504,611 @@
     {
       "source": "/og-blog-banner.png",
       "destination": "/og-image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funny-world-cup-2026-captions",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funny-world-cup-2026-captions.html",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/spain-vs-cabo-verde-world-cup-2026-captions",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/spain-vs-cabo-verde-world-cup-2026-captions.html",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-global-captions-reels-2026",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-global-captions-reels-2026.html",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/messi-vs-ronaldo-captions-2026",
+      "destination": "/blog/messi-vs-ronaldo-quotes-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/messi-vs-ronaldo-captions-2026.html",
+      "destination": "/blog/messi-vs-ronaldo-quotes-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/world-cup-2026-opening-match-captions",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/world-cup-2026-opening-match-captions.html",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/world-cup-2026-today-match-captions",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/world-cup-2026-today-match-captions.html",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/argentina-vs-algeria-world-cup-2026-captions",
+      "destination": "/blog/argentina-football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/argentina-vs-algeria-world-cup-2026-captions.html",
+      "destination": "/blog/argentina-football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/messi-last-world-cup-2026-final-dance",
+      "destination": "/blog/messi-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/messi-last-world-cup-2026-final-dance.html",
+      "destination": "/blog/messi-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/womens-t20-world-cup-2026-captions-english",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/womens-t20-world-cup-2026-captions-english.html",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/brazil-vs-morocco-world-cup-2026-captions",
+      "destination": "/blog/brazil-football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/brazil-vs-morocco-world-cup-2026-captions.html",
+      "destination": "/blog/brazil-football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-hub",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-hub.html",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cristiano-ronaldo-fifa-2026-final-chapter-story",
+      "destination": "/blog/ronaldo-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cristiano-ronaldo-fifa-2026-final-chapter-story.html",
+      "destination": "/blog/ronaldo-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/summer-vacation-captions-instagram-2026",
+      "destination": "/blog/monsoon-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/summer-vacation-captions-instagram-2026.html",
+      "destination": "/blog/monsoon-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/usa-vs-paraguay-world-cup-2026-captions",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/usa-vs-paraguay-world-cup-2026-captions.html",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/womens-t20-world-cup-2026-captions-hindi",
+      "destination": "/blog/hindi-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/womens-t20-world-cup-2026-captions-hindi.html",
+      "destination": "/blog/hindi-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-2026-power-rankings-all-48-teams-pre-tournament",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-2026-power-rankings-all-48-teams-pre-tournament.html",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-complete-guide",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-complete-guide.html",
+      "destination": "/blog/fifa-world-cup-2026-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/england-football-captions-its-coming-home-2026",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/england-football-captions-its-coming-home-2026.html",
+      "destination": "/blog/football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/messi-hat-trick-algeria-world-cup-2026-captions",
+      "destination": "/blog/messi-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/messi-hat-trick-algeria-world-cup-2026-captions.html",
+      "destination": "/blog/messi-captions-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vamos-argentina-meaning-chants-slogans",
+      "destination": "/blog/argentina-football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vamos-argentina-meaning-chants-slogans.html",
+      "destination": "/blog/argentina-football-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/stylish-name-for-girls-instagram-2026",
+      "destination": "/blog/instagram-stylish-name-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/stylish-name-for-girls-instagram-2026.html",
+      "destination": "/blog/instagram-stylish-name-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/stylish-name-for-boys-instagram-2026",
+      "destination": "/blog/instagram-stylish-name-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/stylish-name-for-boys-instagram-2026.html",
+      "destination": "/blog/instagram-stylish-name-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-instagram-reels-not-getting-views-2026",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-instagram-reels-not-getting-views-2026.html",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mahakal-shiva-bio-for-instagram-hindi-2026",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/mahakal-shiva-bio-for-instagram-hindi-2026.html",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/english-vs-shayari-captions-2026",
+      "destination": "/blog/hindi-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/english-vs-shayari-captions-2026.html",
+      "destination": "/blog/hindi-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sanatani-bio-for-instagram-hindi-2026",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sanatani-bio-for-instagram-hindi-2026.html",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/spider-man-brand-new-day-captions-2026",
+      "destination": "/blog/spider-man-quotes-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/spider-man-brand-new-day-captions-2026.html",
+      "destination": "/blog/spider-man-quotes-instagram-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/radhe-krishna-bio-for-instagram-hindi-2026",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/radhe-krishna-bio-for-instagram-hindi-2026.html",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-vip-name-username-2026",
+      "destination": "/blog/instagram-stylish-name-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-vip-name-username-2026.html",
+      "destination": "/blog/instagram-stylish-name-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/trending-hashtags-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/trending-hashtags-reels-2026.html",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-notes-ideas-2026",
+      "destination": "/blog/short-instagram-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-notes-ideas-2026.html",
+      "destination": "/blog/short-instagram-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tiktok-bio-ideas-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tiktok-bio-ideas-2026.html",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ugc-email-pitch-template-2026",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ugc-email-pitch-template-2026.html",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-bio-ideas-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-bio-ideas-2026.html",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/1k-views-reels-caption-formula",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/1k-views-reels-caption-formula.html",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/love-captions-2026",
+      "destination": "/blog/love-viral-captions-hinglish-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/love-captions-2026.html",
+      "destination": "/blog/love-viral-captions-hinglish-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-search-optimization-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-search-optimization-2026.html",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-content-ideas-small-business",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-content-ideas-small-business.html",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/youtube-shorts-viral-guide-2026",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/youtube-shorts-viral-guide-2026.html",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/100-killer-attitude-captions-hinglish-2026",
+      "destination": "/blog/attitude-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/100-killer-attitude-captions-hinglish-2026.html",
+      "destination": "/blog/attitude-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-instagram-captions-reels-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-instagram-captions-reels-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ugc-creator-rates-2026",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ugc-creator-rates-2026.html",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-growth-0-to-10k",
+      "destination": "/blog/instagram-growth-7-days",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-growth-0-to-10k.html",
+      "destination": "/blog/instagram-growth-7-days",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-vip-bio-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-vip-bio-2026.html",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sad-shayari-breakup-captions-hindi-2026",
+      "destination": "/blog/hindi-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sad-shayari-breakup-captions-hindi-2026.html",
+      "destination": "/blog/hindi-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-caption-strategy-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-caption-strategy-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-caption-system-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-caption-system-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-hacks-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-hacks-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-reels-strategy-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-reels-strategy-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/behind-the-scenes-content-strategy-2026",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/behind-the-scenes-content-strategy-2026.html",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hinglish-instagram-captions-2026",
+      "destination": "/blog/instagram-viral-captions-reels-hinglish-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hinglish-instagram-captions-2026.html",
+      "destination": "/blog/instagram-viral-captions-reels-hinglish-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-attitude-bio-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-attitude-bio-2026.html",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-bio-2026-mega-guide",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-bio-2026-mega-guide.html",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-reels-algorithm-india-2026",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-reels-algorithm-india-2026.html",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-reels-se-paise-kaise-kamaye-2026",
+      "destination": "/blog/instagram-growth-7-days",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-reels-se-paise-kaise-kamaye-2026.html",
+      "destination": "/blog/instagram-growth-7-days",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-viral-captions-for-reels-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-viral-description-copy-paste",
+      "destination": "/blog/copy-paste-instagram-captions",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-viral-description-copy-paste.html",
+      "destination": "/blog/copy-paste-instagram-captions",
+      "permanent": true
+    },
+    {
+      "source": "/blog/jai-shri-ram-bio-for-instagram-hindi-2026",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/jai-shri-ram-bio-for-instagram-hindi-2026.html",
+      "destination": "/blog/mahadev-bio-for-instagram-hindi-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/one-word-instagram-captions-2026",
+      "destination": "/blog/short-instagram-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/one-word-instagram-captions-2026.html",
+      "destination": "/blog/short-instagram-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pov-captions-for-instagram-reels-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pov-captions-for-instagram-reels-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/trending-instagram-captions-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/trending-instagram-captions-2026.html",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     }
   ],

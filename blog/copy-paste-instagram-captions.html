@@ -737,5 +737,36 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
   if(gen){gen.addEventListener('click',function(){var topic=(document.getElementById('te-topic').value||'success').trim();var tone=document.getElementById('te-tone').value;var arr=TPL[tone]||TPL.attitude;var out=document.getElementById('te-out');out.innerHTML='';arr.forEach(function(tpl){var line=tpl.replace(/\{T\}/g,cap(topic));var d=document.createElement('div');d.className='cap';d.setAttribute('data-caption',line);d.innerHTML=line+'<button class="copy-btn" type="button" title="Copy">📋</button>';d.querySelector('.copy-btn').addEventListener('click',function(){copyText(line).then(function(){showToast('✅ Copied!');});});out.appendChild(d);});});}
 })();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1af14e1ace7752b',t:'MTc4NDAxNjk0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1af14e1ace7752b',t:'MTc4NDAxNjk0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>
+/* GA4 caption_copy tracking — universal clipboard hook (added 2026-08-20) */
+(function(){
+  if (!navigator.clipboard || !navigator.clipboard.writeText) return;
+  var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+  navigator.clipboard.writeText = function(text){
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'caption_copy', {
+          page_path: location.pathname,
+          caption_length: (text || '').length
+        });
+      }
+    } catch(e){}
+    return _w(text);
+  };
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    if (max <= 0) return;
+    var pct = (h.scrollTop / max) * 100;
+    [25,50,75].forEach(function(m){
+      if (pct >= m && !fired[m]) {
+        fired[m] = true;
+        if (typeof gtag === 'function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname});
+      }
+    });
+  }, {passive:true});
+})();
+</script>
+</body>
 </html>
