@@ -652,5 +652,36 @@ var TPL={
 function cap(s){return s.charAt(0).toUpperCase()+s.slice(1);}
 document.getElementById('te-gen').addEventListener('click',function(){var topic=(document.getElementById('te-topic').value||'baarish').trim();var tone=document.getElementById('te-tone').value;var arr=TPL[tone]||TPL.romantic;var out=document.getElementById('te-out');out.innerHTML='';arr.forEach(function(tpl){var line=tpl.replace(/\{T\}/g,cap(topic));var d=document.createElement('div');d.className='cap';d.setAttribute('data-caption',line.replace(/&amp;/g,'&'));d.innerHTML=line+'<button class="copy-btn" type="button" title="Copy">📋</button>';d.querySelector('.copy-btn').addEventListener('click',function(){navigator.clipboard.writeText(line.replace(/&amp;/g,'&')).then(function(){showToast('✅ Copied!');});});out.appendChild(d);});});
 </script>
+<script>
+/* GA4 caption_copy tracking — universal clipboard hook (added 2026-08-20) */
+(function(){
+  if (!navigator.clipboard || !navigator.clipboard.writeText) return;
+  var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+  navigator.clipboard.writeText = function(text){
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'caption_copy', {
+          page_path: location.pathname,
+          caption_length: (text || '').length
+        });
+      }
+    } catch(e){}
+    return _w(text);
+  };
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    if (max <= 0) return;
+    var pct = (h.scrollTop / max) * 100;
+    [25,50,75].forEach(function(m){
+      if (pct >= m && !fired[m]) {
+        fired[m] = true;
+        if (typeof gtag === 'function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname});
+      }
+    });
+  }, {passive:true});
+})();
+</script>
 </body>
 </html>

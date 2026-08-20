@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="hi-IN">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X490RGQB38');
+</script>
+
 
 <script>
 (function(){
@@ -764,6 +773,28 @@ footer{background:var(--footer-bg);color:var(--footer-text)}.footer-top{max-widt
       reject(new Error('copy failed'));
     });
   }var caps=document.querySelectorAll('.cap');for(var c=0;c<caps.length;c++){(function(el){var btn=el.querySelector('.copy-btn');var origBtnText=btn?btn.textContent:'';var resetTimer=null;function reset(){el.classList.remove('copied');if(btn)btn.textContent=origBtnText;}el.addEventListener('click',function(){var text=el.getAttribute('data-caption')||'';if(!text){var clone=el.cloneNode(true);var cb=clone.querySelector('.copy-btn');if(cb)cb.parentNode.removeChild(cb);text=clone.textContent.trim();}copyText(text).then(function(){if(resetTimer)clearTimeout(resetTimer);el.classList.add('copied');if(btn)btn.textContent='✓';showToast('Caption copied — paste karo! 🎯');resetTimer=setTimeout(reset,1800);}).catch(function(){var sel=window.getSelection();sel.removeAllRanges();var r=document.createRange();r.selectNodeContents(el);sel.addRange(r);showToast('Select hua — Ctrl+C ya long-press copy karo 📋');});});})(caps[c]);}var hashes=document.querySelectorAll('.hashtag-block');for(var h=0;h<hashes.length;h++){(function(el){var label=el.querySelector('.ht-copy');var origLabel=label?label.textContent:'';var resetTimer=null;function reset(){el.classList.remove('copied');if(label)label.textContent=origLabel;}el.addEventListener('click',function(){var text=el.getAttribute('data-hashtags')||'';if(!text){var clone=el.cloneNode(true);var lb=clone.querySelector('.ht-copy');if(lb)lb.parentNode.removeChild(lb);text=clone.textContent.replace(/\s+/g,' ').trim();}copyText(text).then(function(){if(resetTimer)clearTimeout(resetTimer);el.classList.add('copied');if(label)label.textContent='✓';showToast('Hashtag set copied! 🏷️');resetTimer=setTimeout(reset,1800);}).catch(function(){var sH=window.getSelection();sH.removeAllRanges();var rH=document.createRange();rH.selectNodeContents(el);sH.addRange(rH);showToast('Select hua — Ctrl+C ya long-press copy karo');});});})(hashes[h]);}var faqs=document.querySelectorAll('.faq-q');for(var f=0;f<faqs.length;f++){faqs[f].addEventListener('click',function(){var item=this.parentNode;var isOpen=item.classList.toggle('open');this.setAttribute('aria-expanded',isOpen?'true':'false');});}var shareBtns=document.querySelectorAll('[data-share]');for(var s=0;s<shareBtns.length;s++){shareBtns[s].addEventListener('click',function(){var net=this.getAttribute('data-share');var url=encodeURIComponent(window.location.href);var txt=encodeURIComponent("300+ Love Captions Hinglish 2026 — Romantic, Savage & Reel Hooks!");var u='';if(net==='whatsapp')u='https://wa.me/?text='+txt+'%20'+url;else if(net==='telegram')u='https://t.me/share/url?url='+url+'&text='+txt;else if(net==='twitter')u='https://x.com/intent/tweet?url='+url+'&text='+txt;else if(net==='facebook')u='https://www.facebook.com/sharer/sharer.php?u='+url;else if(net==='copy'){copyText(window.location.href).then(function(){showToast('Link copied — share karo 🔗');}).catch(function(){var sH=window.getSelection();sH.removeAllRanges();var rH=document.createRange();rH.selectNodeContents(el);sH.addRange(rH);showToast('Select hua — Ctrl+C ya long-press copy karo');});return;}if(u)window.open(u,'_blank','noopener,noreferrer,width=600,height=500');});}var progressEl=document.getElementById('progress-bar');var scrollTopBtn=document.getElementById('scroll-top');var ticking=false;function updateScroll(){var doc=document.documentElement;var max=doc.scrollHeight-doc.clientHeight;var pct=max>0?(doc.scrollTop/max)*100:0;if(progressEl)progressEl.style.width=pct+'%';if(scrollTopBtn)scrollTopBtn.classList.toggle('visible',pct>10);ticking=false;}window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(updateScroll);ticking=true;}},{passive:true});if(scrollTopBtn){scrollTopBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});}})();
+</script>
+<script>
+/* GA4 caption_copy + scroll_depth tracking (added 2026-08-20) */
+(function(){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+    navigator.clipboard.writeText = function(text){
+      try { if (typeof gtag === 'function') gtag('event','caption_copy',{page_path:location.pathname,caption_length:(text||'').length}); } catch(e){}
+      return _w(text);
+    };
+  }
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    if (max<=0) return;
+    var pct=(h.scrollTop/max)*100;
+    [25,50,75].forEach(function(m){
+      if (pct>=m && !fired[m]) { fired[m]=true;
+        if (typeof gtag==='function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname}); }
+    });
+  }, {passive:true});
+})();
 </script>
 </body>
 </html>

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X490RGQB38');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
@@ -1229,7 +1238,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
     <p>Aur agar tu serious creator banna chahta hai:</p>
     <ul>
       <li>📖 <a href="/blog/viral-captions-for-reels-2026">Viral Captions for Reels 2026</a> — 500+ copy-paste captions</li>
-      <li>🎯 <a href="/blog/viral-caption-strategy-2026">Viral Caption Strategy 2026</a> — frameworks + formulas</li>
+      <li>🎯 <a href="/blog/viral-captions-for-reels-2026">Viral Caption Strategy 2026</a> — frameworks + formulas</li>
       <li>💼 <a href="/blog/instagram-brand-deals-kaise-milte-hain-2026">Brand Deals Kaise Milte Hain 2026</a> — editing baad monetize karo</li>
     </ul>
 
@@ -1388,11 +1397,11 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
       <small>500+ copy-paste captions</small>
     </div>
     <div class="related-post">
-      <a href="/blog/viral-caption-strategy-2026">Viral Caption Strategy 2026</a>
+      <a href="/blog/viral-captions-for-reels-2026">Viral Caption Strategy 2026</a>
       <small>Caption framework + formulas</small>
     </div>
     <div class="related-post">
-      <a href="/blog/instagram-reels-se-paise-kaise-kamaye-2026">Reels Se Paise Kaise Kamaye 2026</a>
+      <a href="/blog/instagram-growth-7-days">Reels Se Paise Kaise Kamaye 2026</a>
       <small>Monetization complete guide</small>
     </div>
     <div class="related-post">
@@ -1400,15 +1409,15 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
       <small>3-second hooks that work</small>
     </div>
     <div class="related-post">
-      <a href="/blog/instagram-reels-algorithm-india-2026">Reels Algorithm India 2026</a>
+      <a href="/blog/instagram-reel-hooks-2026">Reels Algorithm India 2026</a>
       <small>How the algo works now</small>
     </div>
     <div class="related-post">
-      <a href="/blog/youtube-shorts-viral-guide-2026">YouTube Shorts Viral Guide 2026</a>
+      <a href="/blog/instagram-reel-hooks-2026">YouTube Shorts Viral Guide 2026</a>
       <small>Same apps work for Shorts</small>
     </div>
     <div class="related-post">
-      <a href="/blog/why-instagram-reels-not-getting-views-2026">Reels Not Getting Views?</a>
+      <a href="/blog/instagram-reel-hooks-2026">Reels Not Getting Views?</a>
       <small>Troubleshoot poor reach</small>
     </div>
   </div>
@@ -1513,5 +1522,27 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
 })();
 </script>
 
+<script>
+/* GA4 caption_copy + scroll_depth tracking (added 2026-08-20) */
+(function(){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+    navigator.clipboard.writeText = function(text){
+      try { if (typeof gtag === 'function') gtag('event','caption_copy',{page_path:location.pathname,caption_length:(text||'').length}); } catch(e){}
+      return _w(text);
+    };
+  }
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    if (max<=0) return;
+    var pct=(h.scrollTop/max)*100;
+    [25,50,75].forEach(function(m){
+      if (pct>=m && !fired[m]) { fired[m]=true;
+        if (typeof gtag==='function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname}); }
+    });
+  }, {passive:true});
+})();
+</script>
 </body>
 </html>
