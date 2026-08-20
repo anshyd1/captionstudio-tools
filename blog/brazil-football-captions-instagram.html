@@ -2,6 +2,15 @@
 
 <html lang="en">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X490RGQB38');
+</script>
+
 <script>(function(){try{var s=localStorage.getItem('csDark');var sys=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;if(s==='1'||(s===null&&sys))document.documentElement.setAttribute('data-theme','dark')}catch(e){}})();</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -374,6 +383,28 @@ document.querySelectorAll('.hashtag-block').forEach(function(el){var copy=el.que
 document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){var item=this.parentNode;var open=item.classList.toggle('open');this.setAttribute('aria-expanded',open?'true':'false')})});
 document.querySelectorAll('[data-share]').forEach(function(btn){btn.addEventListener('click',function(){var net=this.getAttribute('data-share'),url=encodeURIComponent(window.location.href),txt=encodeURIComponent('Brazil Football Captions for Instagram — Copy & Paste');var u='';if(net==='whatsapp')u='https://wa.me/?text='+txt+'%20'+url;else if(net==='telegram')u='https://t.me/share/url?url='+url+'&text='+txt;else if(net==='twitter')u='https://x.com/intent/tweet?url='+url+'&text='+txt;else if(net==='facebook')u='https://www.facebook.com/sharer/sharer.php?u='+url;else if(net==='copy'){copyText(window.location.href).then(function(){showToast('Link copied 🔗')});return}if(u)window.open(u,'_blank','noopener,noreferrer,width=600,height=500')})});
 var progress=document.getElementById('progress-bar'),scrollTopBtn=document.getElementById('scroll-top'),ticking=false;function update(){var d=document.documentElement,max=d.scrollHeight-d.clientHeight,pct=max>0?(d.scrollTop/max)*100:0;if(progress)progress.style.width=pct+'%';if(scrollTopBtn)scrollTopBtn.classList.toggle('visible',pct>10);ticking=false}window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(update);ticking=true}},{passive:true});if(scrollTopBtn)scrollTopBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})
+})();
+</script>
+<script>
+/* GA4 caption_copy + scroll_depth tracking (added 2026-08-20) */
+(function(){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+    navigator.clipboard.writeText = function(text){
+      try { if (typeof gtag === 'function') gtag('event','caption_copy',{page_path:location.pathname,caption_length:(text||'').length}); } catch(e){}
+      return _w(text);
+    };
+  }
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    if (max<=0) return;
+    var pct=(h.scrollTop/max)*100;
+    [25,50,75].forEach(function(m){
+      if (pct>=m && !fired[m]) { fired[m]=true;
+        if (typeof gtag==='function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname}); }
+    });
+  }, {passive:true});
 })();
 </script>
 </body></html>

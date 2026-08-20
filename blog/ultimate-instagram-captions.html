@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X490RGQB38');
+</script>
+
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1802,7 +1811,7 @@
           <li><a href="/blog/copy-paste-instagram-captions"><b>Copy Paste Captions:</b></a> broad all-category caption library for love, funny, travel, savage, one-word and more.</li>
           <li><a href="/blog/viral-captions-for-reels-2026"><b>Viral Reels Captions:</b></a> Reels hooks, CTA lines and watch-time focused captions.</li>
           <li><a href="/blog/attitude-captions-2026"><b>Attitude Captions:</b></a> deep page for boys, girls, savage, sigma and royal attitude lines.</li>
-          <li><a href="/blog/short-instagram-captions-2026"><b>Short Captions</b></a> and <a href="/blog/one-word-instagram-captions-2026"><b>One Word Captions</b></a>: minimal captions for clean posts.</li>
+          <li><a href="/blog/short-instagram-captions-2026"><b>Short Captions</b></a> and <a href="/blog/short-instagram-captions-2026"><b>One Word Captions</b></a>: minimal captions for clean posts.</li>
         </ul>
       </div>
     </section>
@@ -1868,7 +1877,7 @@
     <li><a href="/tools/bio-generator" style="color:#7c3aed;font-weight:700;text-decoration:none">👑 Bio Generator</a></li>
     <li><a href="/blog/instagram-reel-hooks-2026" style="color:#7c3aed;font-weight:700;text-decoration:none">🎬 Reel Hooks 2026</a></li>
     <li><a href="/blog/hindi-captions-instagram" style="color:#7c3aed;font-weight:700;text-decoration:none">🇮🇳 Hindi Captions</a></li>
-    <li><a href="/blog/english-vs-shayari-captions-2026" style="color:#7c3aed;font-weight:700;text-decoration:none">💔 Shayari Captions</a></li>
+    <li><a href="/blog/hindi-captions-instagram" style="color:#7c3aed;font-weight:700;text-decoration:none">💔 Shayari Captions</a></li>
   </ul>
 </section>
 <footer>
@@ -1965,5 +1974,27 @@
       setSections('all'); applySearch();
     })();
   </script>
+<script>
+/* GA4 caption_copy + scroll_depth tracking (added 2026-08-20) */
+(function(){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+    navigator.clipboard.writeText = function(text){
+      try { if (typeof gtag === 'function') gtag('event','caption_copy',{page_path:location.pathname,caption_length:(text||'').length}); } catch(e){}
+      return _w(text);
+    };
+  }
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    if (max<=0) return;
+    var pct=(h.scrollTop/max)*100;
+    [25,50,75].forEach(function(m){
+      if (pct>=m && !fired[m]) { fired[m]=true;
+        if (typeof gtag==='function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname}); }
+    });
+  }, {passive:true});
+})();
+</script>
 </body>
   </html>

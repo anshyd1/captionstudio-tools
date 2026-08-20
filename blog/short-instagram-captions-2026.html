@@ -1,4 +1,13 @@
 <!DOCTYPE html><html lang="en-IN"><head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X490RGQB38');
+</script>
+
 <meta charset="utf-8">
 <meta content="width=device-width,initial-scale=1.0" name="viewport">
 <meta content="#ea580c" name="theme-color">
@@ -424,7 +433,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
 <span class="read-time-badge">⏱️ 10 min deep copy guide</span>
 </div>
 <h1>300+ <em>Short Instagram Captions</em> (2026) | Attitude, Aesthetic, Love & Reels</h1>
-<p class="intent-note"><strong>Note:</strong> For only one-word captions like “Glow”, “Rare” or “Savage”, use our <a href="/blog/one-word-instagram-captions-2026">dedicated one-word captions guide</a>. This page focuses on short multi-word captions.</p>
+<p class="intent-note"><strong>Note:</strong> For only one-word captions like “Glow”, “Rare” or “Savage”, use our <a href="/blog/short-instagram-captions-2026">dedicated one-word captions guide</a>. This page focuses on short multi-word captions.</p>
 
 <section class="explainer-card" style="margin:20px 0; border:1px solid var(--border); padding:20px; border-radius:12px;">
   <h2 style="font-size:22px; margin-bottom:10px;">Why Short Captions Rule Instagram in 2026</h2>
@@ -531,7 +540,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
     </div>
 
     <p>
-      For a complete creator breakdown on how to grow your Instagram reach using captions and keywords, check out our comprehensive guides on <a href="/blog/instagram-search-optimization-2026">Instagram search optimization 2026</a> and <a href="/blog/instagram-growth-0-to-10k">Instagram growth 0 to 10K</a>.
+      For a complete creator breakdown on how to grow your Instagram reach using captions and keywords, check out our comprehensive guides on <a href="/blog/instagram-hashtag-strategy-viral-reels">Instagram search optimization 2026</a> and <a href="/blog/instagram-growth-7-days">Instagram growth 0 to 10K</a>.
     </p>
 
     <div class="mini-grid" style="margin-top:20px;">
@@ -1368,4 +1377,26 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
 
 <button id="scroll-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
+<script>
+/* GA4 caption_copy + scroll_depth tracking (added 2026-08-20) */
+(function(){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+    navigator.clipboard.writeText = function(text){
+      try { if (typeof gtag === 'function') gtag('event','caption_copy',{page_path:location.pathname,caption_length:(text||'').length}); } catch(e){}
+      return _w(text);
+    };
+  }
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    if (max<=0) return;
+    var pct=(h.scrollTop/max)*100;
+    [25,50,75].forEach(function(m){
+      if (pct>=m && !fired[m]) { fired[m]=true;
+        if (typeof gtag==='function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname}); }
+    });
+  }, {passive:true});
+})();
+</script>
 </body></html>

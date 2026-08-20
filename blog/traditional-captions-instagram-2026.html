@@ -2,6 +2,15 @@
 
 <html lang="en-IN">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X490RGQB38');
+</script>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
@@ -300,6 +309,28 @@
 <div aria-atomic="true" aria-live="polite" id="cs-toast" role="status"></div>
 <script>
 (function(){'use strict';var darkBtn=document.getElementById('dark-toggle');if(darkBtn){darkBtn.addEventListener('click',function(){var cur=document.documentElement.getAttribute('data-theme');if(cur==='dark'){document.documentElement.removeAttribute('data-theme');try{localStorage.setItem('csDark','0');}catch(e){}darkBtn.textContent='🌙 Dark';}else{document.documentElement.setAttribute('data-theme','dark');try{localStorage.setItem('csDark','1');}catch(e){}darkBtn.textContent='☀️ Light';}});if(document.documentElement.getAttribute('data-theme')==='dark')darkBtn.textContent='☀️ Light';}var hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobile-menu');function closeMobileMenu(){if(mobileMenu)mobileMenu.classList.remove('open');if(hamburger){hamburger.classList.remove('is-open');hamburger.setAttribute('aria-expanded','false');}}if(hamburger&&mobileMenu){hamburger.addEventListener('click',function(){var isOpen=mobileMenu.classList.toggle('open');hamburger.classList.toggle('is-open');hamburger.setAttribute('aria-expanded',isOpen?'true':'false');});Array.prototype.forEach.call(mobileMenu.querySelectorAll('a'),function(a){a.addEventListener('click',closeMobileMenu);});}var toastEl=document.getElementById('cs-toast'),toastTimer=null;function showToast(msg){if(!toastEl)return;if(toastTimer){clearTimeout(toastTimer);toastTimer=null;}toastEl.textContent=msg;toastEl.classList.add('show');toastTimer=setTimeout(function(){toastEl.classList.remove('show');},1800);}function copyText(text){if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(text);}return new Promise(function(resolve,reject){var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{var ok=document.execCommand('copy');document.body.removeChild(ta);ok?resolve():reject(new Error('copy failed'));}catch(e){document.body.removeChild(ta);reject(e);}});}window.copyCaption=function(el){var text=el.textContent.trim();copyText(text).then(function(){var orig=el.textContent;el.classList.add('copied');el.textContent=text+' ✓ Copied';setTimeout(function(){el.classList.remove('copied');el.textContent=orig;},1400);showToast('Caption copied — ready to paste!');}).catch(function(){showToast('Copy failed — try again');});};Array.prototype.forEach.call(document.querySelectorAll('.faq-q'),function(btn){btn.addEventListener('click',function(){var item=this.parentNode;var isOpen=item.classList.toggle('open');this.setAttribute('aria-expanded',isOpen?'true':'false');});});Array.prototype.forEach.call(document.querySelectorAll('[data-share]'),function(btn){btn.addEventListener('click',function(){var net=this.getAttribute('data-share');var url=encodeURIComponent(window.location.href);var txt=encodeURIComponent((document.title||'Traditional Captions 2026').replace(/\s*\|\s*CaptionStudio.*$/,''));var u='';if(net==='whatsapp')u='https://wa.me/?text='+txt+'%20'+url;else if(net==='telegram')u='https://t.me/share/url?url='+url+'&text='+txt;else if(net==='twitter')u='https://x.com/intent/tweet?url='+url+'&text='+txt;else if(net==='facebook')u='https://www.facebook.com/sharer/sharer.php?u='+url;else if(net==='copy'){copyText(window.location.href).then(function(){showToast('Link copied — share anywhere 🔗');});return;}if(u)window.open(u,'_blank','noopener,noreferrer,width=600,height=500');});});var progressEl=document.getElementById('progress-bar'),scrollTopBtn=document.getElementById('scroll-top'),ticking=false;function updateScroll(){var doc=document.documentElement;var max=doc.scrollHeight-doc.clientHeight;var pct=max>0?(doc.scrollTop/max)*100:0;if(progressEl){progressEl.style.width=pct+'%';progressEl.setAttribute('aria-valuenow',Math.round(pct));}if(scrollTopBtn)scrollTopBtn.classList.toggle('visible',pct>10);ticking=false;}window.addEventListener('scroll',function(){if(!ticking){window.requestAnimationFrame(updateScroll);ticking=true;}},{passive:true});if(scrollTopBtn){scrollTopBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});}})();
+</script>
+<script>
+/* GA4 caption_copy + scroll_depth tracking (added 2026-08-20) */
+(function(){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+    navigator.clipboard.writeText = function(text){
+      try { if (typeof gtag === 'function') gtag('event','caption_copy',{page_path:location.pathname,caption_length:(text||'').length}); } catch(e){}
+      return _w(text);
+    };
+  }
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    if (max<=0) return;
+    var pct=(h.scrollTop/max)*100;
+    [25,50,75].forEach(function(m){
+      if (pct>=m && !fired[m]) { fired[m]=true;
+        if (typeof gtag==='function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname}); }
+    });
+  }, {passive:true});
+})();
 </script>
 </body>
 </html>

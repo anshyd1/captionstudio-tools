@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X490RGQB38');
+</script>
+
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){try{var s=localStorage.getItem('csDark');var sys=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;if(s==='1'||s==='true'||s==='dark'||(s===null&&sys))document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
 <title>Education Captions for Instagram Reels 2026</title>
@@ -284,4 +293,26 @@ document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('clic
 var ham=document.getElementById('hamburger'),menu=document.getElementById('mobile-menu');function closeMenu(){if(menu&&menu.classList.contains('open')){menu.classList.remove('open');ham.setAttribute('aria-expanded','false')}}if(ham)ham.addEventListener('click',function(e){e.stopPropagation();var open=menu.classList.toggle('open');ham.setAttribute('aria-expanded',open?'true':'false')});document.addEventListener('click',function(e){if(menu&&menu.classList.contains('open')&&!menu.contains(e.target)&&!ham.contains(e.target))closeMenu()});document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
 var dark=document.getElementById('dark-toggle');if(dark)dark.addEventListener('click',function(){var is=document.documentElement.getAttribute('data-theme')==='dark';if(is){document.documentElement.removeAttribute('data-theme');localStorage.setItem('csDark','0');dark.textContent='🌙'}else{document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('csDark','1');dark.textContent='☀️'}});
 var topBtn=document.getElementById('scroll-top'),bar=document.getElementById('progress-bar');window.addEventListener('scroll',function(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;var pct=max>0?(h.scrollTop/max*100):0;bar.style.width=pct+'%';topBtn.style.display=h.scrollTop>450?'block':'none'});topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
-</script></body></html>
+</script><script>
+/* GA4 caption_copy + scroll_depth tracking (added 2026-08-20) */
+(function(){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    var _w = navigator.clipboard.writeText.bind(navigator.clipboard);
+    navigator.clipboard.writeText = function(text){
+      try { if (typeof gtag === 'function') gtag('event','caption_copy',{page_path:location.pathname,caption_length:(text||'').length}); } catch(e){}
+      return _w(text);
+    };
+  }
+  var fired = {};
+  window.addEventListener('scroll', function(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    if (max<=0) return;
+    var pct=(h.scrollTop/max)*100;
+    [25,50,75].forEach(function(m){
+      if (pct>=m && !fired[m]) { fired[m]=true;
+        if (typeof gtag==='function') gtag('event','scroll_depth',{depth:m,page_path:location.pathname}); }
+    });
+  }, {passive:true});
+})();
+</script>
+</body></html>
