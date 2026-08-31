@@ -191,6 +191,31 @@
       "permanent": true
     },
     {
+      "source": "/blog/ai-tools-instagram-reach",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/email-writing-guide",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/faceless-instagram-earn-money",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-brand-deals-kaise-milte-hain-2026",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/new-era-ai-2026",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
