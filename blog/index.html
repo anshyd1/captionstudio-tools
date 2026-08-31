@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en-IN">
 <head>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X490RGQB38"></script>
@@ -607,7 +607,7 @@
         var tag = p.displayTag ? '<span class="tag">' + p.displayTag + '</span>' : '';
         var postImg = p.img || p.image || '';
         var thumbInner = postImg
-          ? '<img src="../' + escAttr(postImg) + '" alt="' + escAttr(p.title) + '" loading="lazy" onerror="this.parentNode.style.background=\'' + st.grad + '\';this.outerHTML=\'<span class=&quot;emoji&quot; width="1200" height="675">' + st.emoji + '</span>\';">'
+          ? '<img src="../' + escAttr(postImg) + '" alt="' + escAttr(p.title) + '" loading="lazy" onerror="this.parentNode.style.background=\'' + st.grad + '\';this.outerHTML=\'<span class=&quot;emoji&quot; width="1200" height="675" alt="CaptionStudio">' + st.emoji + '</span>\';">'
           : '<span class="emoji">' + st.emoji + '</span>';
         var thumbBg = postImg ? '' : ' style="background:' + st.grad + '"';
         var metaLine = [formatDate(p.date), p.readTime].filter(Boolean).join(' · ');
