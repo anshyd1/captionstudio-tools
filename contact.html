@@ -71,7 +71,7 @@
   </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Lora:ital,wght@0,400;0,700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Lora:ital,wght@0,400;0,700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=optional" rel="stylesheet"/>
 <style>
     :root {
       --orange: #ff4d00;
@@ -83,7 +83,7 @@
       --bg: #ffffff;
       --serif: 'Lora', Georgia, serif;
       --sans: 'Source Sans 3', system-ui, sans-serif;
-      --display: 'Syne', sans-serif;
+      --display: 'Syne','Syne-fb', sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -290,7 +290,18 @@
     .ft-copy { color: #444; font-size: 0.8rem; margin-top: 16px; }
   </style>
   <!-- AdSense removed during approval cleanup: keep policy, contact and tool pages ad-free until review passes. -->
-</head>
+<style id="cs-font-fallback">
+@font-face{font-family:'DMS-fb';src:local('Arial');size-adjust:103.6%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Syne-fb';src:local('Arial');size-adjust:112.6%;ascent-override:96%;descent-override:22%;line-gap-override:0%}
+</style><style id="cs-nav-cls-fix">
+/* CLS fix: reserve navbar height so late font/layout does not push the page down */
+.navbar,header.navbar{min-height:64px}
+.nav-content{min-height:64px;align-items:center}
+.nav-links{flex-wrap:nowrap;min-height:40px}
+@media(max-width:1100px){.nav-links{flex-wrap:wrap}}
+.nav-logo{min-height:35px}
+.breadcrumb{min-height:43px}
+</style></head>
 <body>
 <nav class="top">
 <div class="nav-inner">

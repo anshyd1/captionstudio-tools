@@ -68,10 +68,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&family=Syne:wght@600;700;800&display=optional" rel="stylesheet">
 
   <style>
-    :root{--orange:#e8440a;--orange-pale:#fff3ee;--black:#191919;--ink:#2e2e2e;--muted:#6b6b6b;--rule:#e5e5e5;--bg:#ffffff;--serif:'Lora',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;--display:'Syne',sans-serif}
+    :root{--orange:#e8440a;--orange-pale:#fff3ee;--black:#191919;--ink:#2e2e2e;--muted:#6b6b6b;--rule:#e5e5e5;--bg:#ffffff;--serif:'Lora',Georgia,serif;--sans:'Source Sans 3',system-ui,sans-serif;--display:'Syne','Syne-fb',sans-serif}
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.7;-webkit-font-smoothing:antialiased}
     a{color:inherit;text-decoration:none}
@@ -150,7 +150,10 @@
   <!-- AdSense removed during approval cleanup: keep policy, contact and tool pages ad-free until review passes. -->
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5440521844299570" crossorigin="anonymous"></script>
-</head>
+<style id="cs-font-fallback">
+@font-face{font-family:'DMS-fb';src:local('Arial');size-adjust:103.6%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Syne-fb';src:local('Arial');size-adjust:112.6%;ascent-override:96%;descent-override:22%;line-gap-override:0%}
+</style></head>
 <body>
   <nav>
     <div class="wrap nav-inner">

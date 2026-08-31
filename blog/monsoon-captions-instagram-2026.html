@@ -74,7 +74,7 @@
 
 <link rel="icon" href="https://captionstudio.in/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="https://captionstudio.in/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=optional" rel="stylesheet">
 
 <style>
 :root{--bg:#fff;--fg:#0f172a;--muted:#475569;--line:#e2e8f0;--card:#f8fafc;--brand:#0d9488;--brand2:#ff4d00;--shadow:0 4px 24px rgba(0,0,0,.06)}
@@ -192,7 +192,15 @@ footer{border-top:1px solid var(--line);padding:36px 18px 20px;color:var(--muted
 .related-guides a{display:block;padding:7px 0;color:#1d4ed8;text-decoration:none;font-size:14.5px;line-height:1.45;border-bottom:1px solid #eef1f6}
 .related-guides a:hover{text-decoration:underline}
 </style>
-</head>
+<style id="cs-nav-cls-fix">
+/* CLS fix: reserve navbar height so late font/layout does not push the page down */
+.navbar,header.navbar{min-height:64px}
+.nav-content{min-height:64px;align-items:center}
+.nav-links{flex-wrap:nowrap;min-height:40px}
+@media(max-width:1100px){.nav-links{flex-wrap:wrap}}
+.nav-logo{min-height:35px}
+.breadcrumb{min-height:43px}
+</style></head>
 <body>
 <div id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 <button id="scroll-top" type="button" aria-label="Scroll to top">↑</button>

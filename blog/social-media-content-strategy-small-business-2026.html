@@ -1204,7 +1204,15 @@
 .related-guides a{display:block;padding:7px 0;color:#1d4ed8;text-decoration:none;font-size:14.5px;line-height:1.45;border-bottom:1px solid #eef1f6}
 .related-guides a:hover{text-decoration:underline}
 </style>
-</head>
+<style id="cs-nav-cls-fix">
+/* CLS fix: reserve navbar height so late font/layout does not push the page down */
+.navbar,header.navbar{min-height:64px}
+.nav-content{min-height:64px;align-items:center}
+.nav-links{flex-wrap:nowrap;min-height:40px}
+@media(max-width:1100px){.nav-links{flex-wrap:wrap}}
+.nav-logo{min-height:35px}
+.breadcrumb{min-height:43px}
+</style></head>
 
 <body>
   <a class="skip-link" href="#main">Skip to article</a>

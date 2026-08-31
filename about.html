@@ -84,7 +84,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;500;600;700&display=optional" rel="stylesheet" media="print" onload="this.media='all'" />
 
   <style>
     :root {
@@ -97,7 +97,7 @@
       --bg: #ffffff;
       --serif: 'Lora', Georgia, serif;
       --sans: 'Source Sans 3', system-ui, sans-serif;
-      --display: 'Syne', sans-serif;
+      --display: 'Syne','Syne-fb', sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -375,7 +375,18 @@
     }
   </style>
   <!-- AdSense removed during approval cleanup: keep policy, contact and tool pages ad-free until review passes. -->
-</head>
+<style id="cs-font-fallback">
+@font-face{font-family:'DMS-fb';src:local('Arial');size-adjust:103.6%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Syne-fb';src:local('Arial');size-adjust:112.6%;ascent-override:96%;descent-override:22%;line-gap-override:0%}
+</style><style id="cs-nav-cls-fix">
+/* CLS fix: reserve navbar height so late font/layout does not push the page down */
+.navbar,header.navbar{min-height:64px}
+.nav-content{min-height:64px;align-items:center}
+.nav-links{flex-wrap:nowrap;min-height:40px}
+@media(max-width:1100px){.nav-links{flex-wrap:wrap}}
+.nav-logo{min-height:35px}
+.breadcrumb{min-height:43px}
+</style></head>
 <body>
 
 <!-- NAV -->

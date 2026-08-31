@@ -34,7 +34,15 @@ header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);borde
 .related-guides a{display:block;padding:7px 0;color:#1d4ed8;text-decoration:none;font-size:14.5px;line-height:1.45;border-bottom:1px solid #eef1f6}
 .related-guides a:hover{text-decoration:underline}
 </style>
-</head><body>
+<style id="cs-nav-cls-fix">
+/* CLS fix: reserve navbar height so late font/layout does not push the page down */
+.navbar,header.navbar{min-height:64px}
+.nav-content{min-height:64px;align-items:center}
+.nav-links{flex-wrap:nowrap;min-height:40px}
+@media(max-width:1100px){.nav-links{flex-wrap:wrap}}
+.nav-logo{min-height:35px}
+.breadcrumb{min-height:43px}
+</style></head><body>
 <div id="progress-bar" role="progressbar" aria-label="Reading progress"></div><button id="scroll-top" type="button" aria-label="Scroll to top">↑</button>
 <header><div class="nav-top"><a class="nav-logo" href="../" aria-label="CaptionStudio Home"><img src="../favicon.png" alt="CaptionStudio logo" width="24" height="24" loading="lazy">Caption<span>Studio</span></a><ul class="nav-links"><li><a href="../">Home</a></li><li><a href="../tools/">Tools</a></li><li><a href="../blog/" class="active">Blog</a></li><li><a href="../guide">Guide</a></li><li><a href="../earning">Earning</a></li><li><a href="https://instagram.com/ansh7.0k" class="btn-nav" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#feda75,#d62976,#962fbf)">Follow @ansh7.0k</a></li></ul><div class="nav-right-controls"><button id="dark-toggle" type="button" aria-label="Toggle dark mode">🌙</button><button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button></div></div><nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="../">Home</a><a href="../tools/">Tools</a><a href="../blog/">Blog</a><a href="../guide">Guide</a><a href="../earning">Earning Hub</a><a href="../about">About</a><a href="https://instagram.com/ansh7.0k" target="_blank" rel="noopener" style="color:#d62976;font-weight:900">Follow @ansh7.0k</a></nav></header>
 <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../">Home</a><span class="sep">›</span><a href="../blog/">Blog</a><span class="sep">›</span><span aria-current="page">Education Captions</span></nav>

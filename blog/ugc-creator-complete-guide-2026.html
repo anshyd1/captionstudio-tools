@@ -58,17 +58,17 @@
     <!-- ===== FONTS ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=optional" rel="stylesheet">
 
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth}
-        body{font-family:'DM Sans',sans-serif;background:#faf9f6;color:#111;line-height:1.8}
-        h1,h2,h3,h4{font-family:'Syne',sans-serif}
+        body{font-family:'DM Sans','DMS-fb',sans-serif;background:#faf9f6;color:#111;line-height:1.8}
+        h1,h2,h3,h4{font-family:'Syne','Syne-fb',sans-serif}
         img{max-width:100%;height:auto}
 
         nav{display:flex;justify-content:space-between;align-items:center;padding:14px 5%;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000;flex-wrap:wrap;gap:10px}
-        .nav-logo{font-weight:bold;color:#111;font-size:18px;text-decoration:none;font-family:'Syne'}
+        .nav-logo{font-weight:bold;color:#111;font-size:18px;text-decoration:none;font-family:'Syne','Syne-fb'}
         .nav-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
         .nav-links a{text-decoration:none;color:#555;font-size:14px;font-weight:500;transition:color .3s}
         .nav-links a:hover{color:#ff4d00}
@@ -105,13 +105,13 @@
         .calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-top:20px}
         .calc-item{background:rgba(255,255,255,.2);padding:22px;border-radius:15px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);text-align:center}
         .calc-item .label{font-size:13px;opacity:.85;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
-        .calc-item .value{font-size:2.2rem;font-weight:800;font-family:'Syne';margin-bottom:5px}
+        .calc-item .value{font-size:2.2rem;font-weight:800;font-family:'Syne','Syne-fb';margin-bottom:5px}
         .calc-item .sublabel{font-size:11px;opacity:.75;margin-top:5px}
         
         .case-table{overflow-x:auto;margin:25px 0}
         .case-table table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05)}
         .case-table thead tr{background:#ff4d00;color:#fff}
-        .case-table th{padding:15px;text-align:left;font-family:'Syne';font-size:14px}
+        .case-table th{padding:15px;text-align:left;font-family:'Syne','Syne-fb';font-size:14px}
         .case-table td{padding:15px;border-bottom:1px solid #eee;font-size:14px}
         .case-table tbody tr:last-child td{border-bottom:none}
         
@@ -171,7 +171,18 @@
 .author-box .ab-links a:hover{text-decoration:underline}
 @media(max-width:560px){.author-box{flex-direction:column;gap:12px}}
 </style>
-</head>
+<style id="cs-font-fallback">
+@font-face{font-family:'DMS-fb';src:local('Arial');size-adjust:103.6%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Syne-fb';src:local('Arial');size-adjust:112.6%;ascent-override:96%;descent-override:22%;line-gap-override:0%}
+</style><style id="cs-nav-cls-fix">
+/* CLS fix: reserve navbar height so late font/layout does not push the page down */
+.navbar,header.navbar{min-height:64px}
+.nav-content{min-height:64px;align-items:center}
+.nav-links{flex-wrap:nowrap;min-height:40px}
+@media(max-width:1100px){.nav-links{flex-wrap:wrap}}
+.nav-logo{min-height:35px}
+.breadcrumb{min-height:43px}
+</style></head>
 <body>
 
 <header>
@@ -587,18 +598,18 @@ Best regards,<br>
             <div style="content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%);animation:shimmer 4s ease-in-out infinite;z-index:1"></div>
             <div style="position:relative;z-index:2">
                 <div style="display:inline-block;background:rgba(255,255,255,.2);color:#fff;padding:5px 18px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:18px">💎 Premium Service by Ansh Yadav</div>
-                <h2 style="color:#fff;font-size:1.8rem;margin-bottom:8px;font-family:'Syne'">UGC Portfolio Website Banwao! 🚀</h2>
+                <h2 style="color:#fff;font-size:1.8rem;margin-bottom:8px;font-family:'Syne','Syne-fb'">UGC Portfolio Website Banwao! 🚀</h2>
                 <p style="color:rgba(255,255,255,.9);font-size:15px;margin-bottom:25px">Professional portfolio se brands impress karo — CaptionStudio quality guaranteed!</p>
                 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:25px 0">
                     <div style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:20px 15px;text-align:center">
                         <div style="color:rgba(255,255,255,.8);font-size:12px;font-weight:700;margin-bottom:6px">STARTER</div>
-                        <div style="color:#fff;font-family:'Syne';font-size:1.6rem;font-weight:800;margin-bottom:8px">₹999</div>
+                        <div style="color:#fff;font-family:'Syne','Syne-fb';font-size:1.6rem;font-weight:800;margin-bottom:8px">₹999</div>
                         <div style="color:rgba(255,255,255,.7);font-size:11px;line-height:1.5">Portfolio Page<br>Video Showcase<br>Contact Form</div>
                     </div>
                     <div style="background:rgba(255,255,255,.15);border:2px solid #fff;border-radius:16px;padding:20px 15px;position:relative;transform:scale(1.03);text-align:center">
                         <span style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#fff;color:#ff4d00;font-size:10px;font-weight:800;padding:3px 12px;border-radius:10px">⭐ BEST</span>
                         <div style="color:rgba(255,255,255,.8);font-size:12px;font-weight:700;margin-bottom:6px">PRO</div>
-                        <div style="color:#fff;font-family:'Syne';font-size:1.6rem;font-weight:800;margin-bottom:8px">₹2,499</div>
+                        <div style="color:#fff;font-family:'Syne','Syne-fb';font-size:1.6rem;font-weight:800;margin-bottom:8px">₹2,499</div>
                         <div style="color:rgba(255,255,255,.7);font-size:11px;line-height:1.5">Full Website<br>SEO Optimized<br>Analytics Dashboard</div>
                     </div>
                 </div>

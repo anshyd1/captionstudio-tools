@@ -26,7 +26,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;600&display=optional" rel="stylesheet" />
 
   <style>
     :root {
@@ -42,7 +42,7 @@
       /* Strong system-font fallbacks so the page looks good even without Google Fonts */
       --serif: 'Lora', Georgia, 'Times New Roman', serif;
       --sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      --display: 'Syne', 'Segoe UI', Arial, sans-serif;
+      --display: 'Syne','Syne-fb', 'Segoe UI', Arial, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.7; overflow-x: hidden; }
@@ -121,7 +121,18 @@
     .ft-bottom { margin-top: 22px; font-size: 0.75rem; color: #666; }
   </style>
   <!-- AdSense removed on noindex/utility page for approval safety. -->
-</head>
+<style id="cs-font-fallback">
+@font-face{font-family:'DMS-fb';src:local('Arial');size-adjust:103.6%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Syne-fb';src:local('Arial');size-adjust:112.6%;ascent-override:96%;descent-override:22%;line-gap-override:0%}
+</style><style id="cs-nav-cls-fix">
+/* CLS fix: reserve navbar height so late font/layout does not push the page down */
+.navbar,header.navbar{min-height:64px}
+.nav-content{min-height:64px;align-items:center}
+.nav-links{flex-wrap:nowrap;min-height:40px}
+@media(max-width:1100px){.nav-links{flex-wrap:wrap}}
+.nav-logo{min-height:35px}
+.breadcrumb{min-height:43px}
+</style></head>
 <body>
 
   <nav>

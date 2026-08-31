@@ -88,7 +88,7 @@
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Source+Sans+3:wght@400;600&amp;display=optional" rel="stylesheet"/>
 <style>
     :root {
       --orange: #e8440a;
@@ -100,7 +100,7 @@
       --bg: #ffffff;
       --serif: 'Lora', Georgia, serif;
       --sans: 'Source Sans 3', sans-serif;
-      --display: 'Syne', sans-serif;
+      --display: 'Syne','Syne-fb', sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -209,7 +209,10 @@
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5440521844299570"
      crossorigin="anonymous"></script>
-</head>
+<style id="cs-font-fallback">
+@font-face{font-family:'DMS-fb';src:local('Arial');size-adjust:103.6%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'Syne-fb';src:local('Arial');size-adjust:112.6%;ascent-override:96%;descent-override:22%;line-gap-override:0%}
+</style></head>
 <body>
 <div class="overlay" onclick="toggleMenu()"></div>
 <aside class="drawer">
