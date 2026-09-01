@@ -1212,6 +1212,18 @@
 @media(max-width:1100px){.nav-links{flex-wrap:wrap}}
 .nav-logo{min-height:35px}
 .breadcrumb{min-height:43px}
+
+        /* Responsive table wrapper — prevents horizontal page overflow on mobile */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 2rem 0;
+        }
+        .table-wrap > table {
+            margin: 0;
+            min-width: 100%;
+        }
 </style></head>
 
 <body>
@@ -1509,7 +1521,7 @@
             </p>
 
             <div class="table-scroll" role="region" aria-label="Small business content pillars table" tabindex="0">
-              <table>
+              <div class="table-wrap"><table>
                 <thead>
                   <tr>
                     <th>Pillar</th>
@@ -1550,7 +1562,7 @@
                     <td>Caption CTA, pinned post, Story sticker</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
             <p>
@@ -1571,7 +1583,7 @@
             </p>
 
             <div class="table-scroll" role="region" aria-label="Platform strategy table" tabindex="0">
-              <table>
+              <div class="table-wrap"><table>
                 <thead>
                   <tr>
                     <th>Platform</th>
@@ -1612,7 +1624,7 @@
                     <td>Weekly tips, offers, launch updates, customer stories.</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
             <div class="warning-box">
@@ -1782,7 +1794,7 @@
             </p>
 
             <div class="table-scroll" role="region" aria-label="30 day social media calendar table" tabindex="0">
-              <table>
+              <div class="table-wrap"><table>
                 <thead>
                   <tr>
                     <th>Week</th>
@@ -1822,7 +1834,7 @@
                     <td>Monthly offer, booking, or email signup CTA</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
             <div class="tip-box">
@@ -1887,7 +1899,7 @@
             </p>
 
             <div class="table-scroll" role="region" aria-label="Small business content examples table" tabindex="0">
-              <table>
+              <div class="table-wrap"><table>
                 <thead>
                   <tr>
                     <th>Business type</th>
@@ -1934,7 +1946,7 @@
                     <td>“Tap the link or save this for later.”</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
             <div class="insight-box">
@@ -1995,7 +2007,7 @@
             </p>
 
             <div class="table-scroll" role="region" aria-label="Social media metrics table" tabindex="0">
-              <table>
+              <div class="table-wrap"><table>
                 <thead>
                   <tr>
                     <th>Metric</th>
@@ -2035,7 +2047,7 @@
                     <td>Refine audience, offer, and CTA specificity.</td>
                   </tr>
                 </tbody>
-              </table>
+              </table></div>
             </div>
 
             <div class="tip-box">

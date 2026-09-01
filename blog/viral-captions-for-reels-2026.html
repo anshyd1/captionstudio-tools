@@ -1770,7 +1770,7 @@ Comment "SAME" 👇</div>
 <h2 id="caption-length-guide">📏 Caption Kitni Lambi Honi Chahiye — Format Guide</h2>
 <p>Sabse common sawaal. Answer content type pe depend karta hai, ek fixed number nahi hota. Ye table use karo:</p>
 <div class="vc-tblwrap">
-<table class="vc-tbl">
+<div class="table-wrap"><table class="vc-tbl">
 <thead><tr><th>Content type</th><th>Best length</th><th>Hook zaroori?</th><th>CTA</th></tr></thead>
 <tbody>
 <tr><td>Reels (entertainment)</td><td>1–2 lines</td><td class="vc-yes">Haan</td><td>Comment / Tag</td></tr>
@@ -1780,7 +1780,7 @@ Comment "SAME" 👇</div>
 <tr><td>Story</td><td>1 line</td><td class="vc-no">Nahi</td><td>Poll / DM</td></tr>
 <tr><td>Personal / storytelling</td><td>6–10 lines</td><td class="vc-yes">Haan</td><td>Share / Follow</td></tr>
 </tbody>
-</table>
+</table></div>
 </div>
 <div class="vc-callout">
 <h3>Rule of thumb</h3>
@@ -2064,7 +2064,19 @@ Viral Strategy
                 <a href="../privacy">Privacy</a> · <a href="../terms">Terms</a> · <a href="../disclaimer">Disclaimer</a> · <a href="../contact">Contact</a>
 </p>
 </div>
-<style>@media(max-width:760px){footer .container>div[style*="grid"]{grid-template-columns:1fr 1fr!important;gap:18px!important}}@media(max-width:420px){footer .container>div[style*="grid"]{grid-template-columns:1fr!important}}</style>
+<style>@media(max-width:760px){footer .container>div[style*="grid"]{grid-template-columns:1fr 1fr!important;gap:18px!important}}@media(max-width:420px){footer .container>div[style*="grid"]{grid-template-columns:1fr!important}}
+        /* Responsive table wrapper — prevents horizontal page overflow on mobile */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 2rem 0;
+        }
+        .table-wrap > table {
+            margin: 0;
+            min-width: 100%;
+        }
+</style>
 </footer>
 <div aria-atomic="true" aria-live="polite" id="cs-toast" role="status"></div>
 <script>

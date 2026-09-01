@@ -1120,6 +1120,18 @@
 @media(max-width:1100px){.nav-links{flex-wrap:wrap}}
 .nav-logo{min-height:35px}
 .breadcrumb{min-height:43px}
+
+        /* Responsive table wrapper — prevents horizontal page overflow on mobile */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 2rem 0;
+        }
+        .table-wrap > table {
+            margin: 0;
+            min-width: 100%;
+        }
 </style></head>
 <body>
 
@@ -1308,7 +1320,7 @@
 
             <h3>2.1 Niche Selection (The Foundation)</h3>
 
-            <table class="stats-table">
+            <div class="table-wrap"><table class="stats-table">
                 <thead>
                     <tr>
                         <th>Niche Type</th>
@@ -1338,7 +1350,7 @@
                         <td>⭐⭐⭐⭐ High</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
 
             <div class="warning-box">
                 <h4>⚠️ Common Mistake to Avoid</h4>
@@ -1374,7 +1386,7 @@
 
             <h3>3.1 Optimal Reel Length Strategy</h3>
 
-            <table class="stats-table">
+            <div class="table-wrap"><table class="stats-table">
                 <thead>
                     <tr>
                         <th>Reel Length</th>
@@ -1399,7 +1411,7 @@
                         <td>⭐⭐⭐ 40-50%</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
 
             <div class="pro-tip">
                 <h4>💡 Pro Tip: Trending Audio Strategy</h4>
@@ -1485,7 +1497,7 @@
 
             <h3>5.1 The 3-Tier Hashtag Strategy</h3>
 
-            <table class="stats-table">
+            <div class="table-wrap"><table class="stats-table">
                 <thead>
                     <tr>
                         <th>Hashtag Count</th>
@@ -1510,7 +1522,7 @@
                         <td>❌ Looks spammy</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
 
             <div class="pro-tip">
                 <h4>💡 Pro Tip: Hashtag Rotation</h4>
@@ -1593,7 +1605,7 @@
 
             <h3>7.1 Key Metrics to Track</h3>
 
-            <table class="stats-table">
+            <div class="table-wrap"><table class="stats-table">
                 <thead>
                     <tr>
                         <th>Metric</th>
@@ -1623,7 +1635,7 @@
                         <td>Increasing trend</td>
                     </tr>
                 </tbody>
-            </table>
+            </table></div>
 
             <div class="warning-box">
                 <h4>⚠️ Don't Delete Everything!</h4>

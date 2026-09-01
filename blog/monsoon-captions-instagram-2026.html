@@ -200,6 +200,18 @@ footer{border-top:1px solid var(--line);padding:36px 18px 20px;color:var(--muted
 @media(max-width:1100px){.nav-links{flex-wrap:wrap}}
 .nav-logo{min-height:35px}
 .breadcrumb{min-height:43px}
+
+        /* Responsive table wrapper — prevents horizontal page overflow on mobile */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 2rem 0;
+        }
+        .table-wrap > table {
+            margin: 0;
+            min-width: 100%;
+        }
 </style></head>
 <body>
 <div id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
@@ -463,14 +475,14 @@ footer{border-top:1px solid var(--line);padding:36px 18px 20px;color:var(--muted
     <div class="cap" data-caption="Save this for your next monsoon reel. 💾">Save this for your next monsoon reel. 💾<button class="copy-btn" aria-label="Copy">📋</button></div>
     <div class="cap" data-caption="Baarish wali reel ke liye ye sound try karo. 🎵">Baarish wali reel ke liye ye sound try karo. 🎵<button class="copy-btn" aria-label="Copy">📋</button></div>
   </div>
-  <table class="data-table">
+  <div class="table-wrap"><table class="data-table">
     <tr><th>Reel Idea</th><th>Vibe</th></tr>
     <tr><td>Chai banate hue + rain sound</td><td>Cozy ASMR</td></tr>
     <tr><td>Window pe boondein slow-mo</td><td>Aesthetic</td></tr>
     <tr><td>Walking in rain transition</td><td>Cinematic</td></tr>
     <tr><td>Pakode recipe + baarish bg</td><td>Food</td></tr>
     <tr><td>Get-ready-with-me for rainy day</td><td>GRWM</td></tr>
-  </table>
+  </table></div>
 
   <!-- 12 HASHTAGS -->
   <span class="section-label">12 · Hashtags</span>
@@ -510,7 +522,7 @@ footer{border-top:1px solid var(--line);padding:36px 18px 20px;color:var(--muted
   <span class="section-label">Match Guide</span>
   <h2>Konsi Photo pe Konsa Monsoon Caption?</h2>
   <p>Sahi caption choose karne ka sabse aasan tareeka — apni photo/reel ka type dekho aur us hisaab se category pick karo. Niche table me har common monsoon post ke liye best category di hai:</p>
-  <table class="data-table">
+  <div class="table-wrap"><table class="data-table">
     <tr><th>Photo / Reel Type</th><th>Best Caption Category</th><th>Example</th></tr>
     <tr><td>Khidki pe boondein + chai</td><td>Chai &amp; Rain</td><td>"Cloudy with a chance of chai. ☕"</td></tr>
     <tr><td>Couple ek umbrella me</td><td>Couple / Romantic</td><td>"Ek umbrella, do log, infinite memories. ☂️❤️"</td></tr>
@@ -519,7 +531,7 @@ footer{border-top:1px solid var(--line);padding:36px 18px 20px;color:var(--muted
     <tr><td>Slow-mo rain reel</td><td>Aesthetic / Reel Hook</td><td>"let it pour. ☔"</td></tr>
     <tr><td>Emotional / sad mood</td><td>Shayari</td><td>"Baarish ki har boond kuch keh jaati hai. 🌧️"</td></tr>
     <tr><td>Funny / relatable masti</td><td>Funny</td><td>"Baarish: aayi, bheegaya, gayi. 😂"</td></tr>
-  </table>
+  </table></div>
   <p>Yeh chhota sa system follow karoge to har monsoon post ka caption seconds me ready ho jaayega — aur har caption photo ke mood se perfectly match karega, jo saves aur shares dono badhata hai.</p>
 
   <h3>Best time to post monsoon content in 2026</h3>

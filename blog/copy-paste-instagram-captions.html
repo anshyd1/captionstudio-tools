@@ -164,6 +164,18 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 @media(max-width:1100px){.nav-links{flex-wrap:wrap}}
 .nav-logo{min-height:35px}
 .breadcrumb{min-height:43px}
+
+        /* Responsive table wrapper — prevents horizontal page overflow on mobile */
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 2rem 0;
+        }
+        .table-wrap > table {
+            margin: 0;
+            min-width: 100%;
+        }
 </style></head>
 <body>
 <div aria-valuemax="100" aria-valuemin="0" id="progress-bar" role="progressbar"></div>
@@ -221,13 +233,13 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 <h2>Before vs After: Make It More Specific</h2>
 <p>A generic line becomes stronger when it includes context, emotion and a clear use case.</p>
 <div style="overflow-x:auto;margin:18px 0 30px">
-<table style="width:100%;border-collapse:collapse;background:var(--bg2,#fff);border:1px solid var(--border,#eee);border-radius:14px;overflow:hidden;font-size:14px">
+<div class="table-wrap"><table style="width:100%;border-collapse:collapse;background:var(--bg2,#fff);border:1px solid var(--border,#eee);border-radius:14px;overflow:hidden;font-size:14px">
 <thead><tr><th style="padding:12px;text-align:left;background:#111;color:#fff">Generic</th><th style="padding:12px;text-align:left;background:#111;color:#fff">Better</th><th style="padding:12px;text-align:left;background:#111;color:#fff">Why It Works</th></tr></thead>
 <tbody><tr><td>Nice pic</td><td>Main character mood, no explanation needed.</td><td>Adds personality</td></tr>
 <tr><td>Travel day</td><td>Bag packed, notifications off, soul on.</td><td>Adds mood + context</td></tr>
 <tr><td>Gym time</td><td>Mood off ho ya on — workout toh hoga.</td><td>Relatable niche tone</td></tr>
 <tr><td>New post</td><td>Save this caption for your next photo dump.</td><td>Clear use case</td></tr></tbody>
-</table>
+</table></div>
 </div>
 </section>
 <!-- GEO: direct answer block for AI/featured snippet -->
@@ -530,23 +542,23 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 <span class="section-label">16 · Customize</span>
 <h2 id="customize-caption-copy">How to Make a Copied Caption Feel Original</h2>
 <p>The fastest way to avoid a copy-paste feel is to change one detail. Add your city, friend name, niche, outfit, mood, goal, food item, travel place or Reel topic. A caption like “main character mood” becomes better when it says “main character mood after a long exam week.”</p>
-<table class="mini-table"><thead><tr><th>Copied line</th><th>Quick edit</th></tr></thead><tbody>
+<div class="table-wrap"><table class="mini-table"><thead><tr><th>Copied line</th><th>Quick edit</th></tr></thead><tbody>
 <tr><td>Main character mood.</td><td>Main character mood after Monday survived.</td></tr>
 <tr><td>Soft reset.</td><td>Soft reset after a heavy week.</td></tr>
 <tr><td>No big caption.</td><td>No big caption, just Jaipur evenings.</td></tr>
 <tr><td>You're my favourite notification.</td><td>You're still my favourite notification after all this time.</td></tr>
-</tbody></table>
+</tbody></table></div>
 <span class="section-label">17 · Mood Map</span>
 <h2 id="caption-by-mood">Choose a Caption by Mood</h2>
 <p>Caption copy works better when it matches the mood of the post. A selfie does not need the same caption as a travel Reel. A sad post should not sound like an attitude line. Before copying, decide the mood first: confident, soft, funny, emotional, aesthetic, romantic or casual. Then pick a line from the closest section.</p>
 <p>If you are unsure, choose a simple caption instead of a dramatic one. A clean line like “A little proof that today was good” works on more posts than a forced savage caption. A caption should support the photo, not fight with it.</p>
-<table class="mini-table"><thead><tr><th>Mood</th><th>Use it for</th><th>Caption style</th></tr></thead><tbody>
+<div class="table-wrap"><table class="mini-table"><thead><tr><th>Mood</th><th>Use it for</th><th>Caption style</th></tr></thead><tbody>
 <tr><td>Attitude</td><td>Selfie, gym, bold post</td><td>Short, confident, clean</td></tr>
 <tr><td>Love</td><td>Couple photo, date, anniversary</td><td>Soft, personal, not too long</td></tr>
 <tr><td>Funny</td><td>Meme, casual Reel, friends</td><td>Relatable and conversational</td></tr>
 <tr><td>Aesthetic</td><td>Photo dump, travel, cafe, sunset</td><td>Minimal and calm</td></tr>
 <tr><td>Sad</td><td>Mood post, night photo, poetry</td><td>Honest, not over-dramatic</td></tr>
-</tbody></table>
+</tbody></table></div>
 <span class="section-label">18 · Photo Dump</span>
 <h2 id="photo-dump-captions">Photo Dump Caption Copy</h2>
 <p>Photo dumps usually feel casual, so the caption should not sound like a formal quote. Use these lines when you are posting multiple photos from the week, a trip, a cafe day, college moments, random selfies or a “life lately” carousel.</p>
@@ -613,12 +625,12 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 <h2 id="what-not-to-copy">What You Should Not Copy Blindly</h2>
 <p>Do not copy captions that include someone else’s personal story, private details, brand results, health claims, money claims or emotional confession. Short mood captions are fine to copy. Long personal captions should be rewritten in your own words. If the caption says “I made ₹50,000 in 7 days” and that is not true for you, do not use it.</p>
 <p>Also avoid copying a caption that does not match the post. A savage caption on a family photo looks strange. A sad caption on a funny Reel confuses people. A long motivational caption on a simple selfie can feel heavy. Keep the caption aligned with the visual.</p>
-<table class="mini-table"><thead><tr><th>Do copy</th><th>Avoid copying blindly</th></tr></thead><tbody>
+<div class="table-wrap"><table class="mini-table"><thead><tr><th>Do copy</th><th>Avoid copying blindly</th></tr></thead><tbody>
 <tr><td>Short mood lines</td><td>Personal life stories</td></tr>
 <tr><td>Funny one-liners</td><td>Fake income or result claims</td></tr>
 <tr><td>Aesthetic captions</td><td>Health or legal advice</td></tr>
 <tr><td>General love lines</td><td>Someone else’s private confession</td></tr>
-</tbody></table>
+</tbody></table></div>
 <!-- 26 HASHTAGS -->
 <span class="section-label">13 · Hashtags</span>
 <h2 id="hashtags">Safe 3–5 Hashtag Sets</h2>
@@ -637,14 +649,14 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 <span class="section-label">Data · Which captions perform best</span>
 <h2>Caption Type vs Engagement (2026)</h2>
 <p>Based on patterns across Indian creator pages, here is how caption types compare on saves and shares — the metrics Instagram rewards most in 2026.</p>
-<table class="data-table">
+<div class="table-wrap"><table class="data-table">
 <tr><th>Caption Type</th><th>Best For</th><th>Save Rate</th></tr>
 <tr><td>Attitude / Savage</td><td>Selfies, gym, bold posts</td><td>High</td></tr>
 <tr><td>Relatable Funny</td><td>Reels, memes</td><td>Very High</td></tr>
 <tr><td>Emotional / Sad</td><td>Aesthetic, story posts</td><td>High</td></tr>
 <tr><td>Hinglish (mix)</td><td>Indian audience, all niches</td><td>Very High</td></tr>
 <tr><td>One-word / Short</td><td>Bio, quick posts</td><td>Medium</td></tr>
-</table>
+</table></div>
 <!-- People Also Ask (GEO) -->
 <span class="section-label">People Also Ask</span>
 <div class="paa">
