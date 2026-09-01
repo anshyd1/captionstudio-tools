@@ -104,8 +104,14 @@ def changed_urls(ref: str = "HEAD~1") -> list[str]:
 
 def check_key() -> bool:
     print(f"Checking {KEY_LOCATION} ...")
+    # Cloudflare fronts this domain and 403s the default urllib user-agent,
+    # so send a normal browser UA. IndexNow's own fetcher is unaffected.
+    req = urllib.request.Request(
+        KEY_LOCATION,
+        headers={"User-Agent": "Mozilla/5.0 (compatible; CaptionStudio-IndexNow/1.0)"},
+    )
     try:
-        with urllib.request.urlopen(KEY_LOCATION, timeout=20) as r:
+        with urllib.request.urlopen(req, timeout=20) as r:
             body = r.read().decode().strip()
             ok = (r.status == 200 and body == KEY)
             print(f"  HTTP {r.status} | body={body!r}")
