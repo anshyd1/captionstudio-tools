@@ -49,12 +49,20 @@ def git_lastmod_for_url(loc: str) -> str:
             creation = cre_out[-1].strip() if cre_out else last
         except:
             creation = last
-        # If last is bulk date 2026-08-31 and file was created earlier, use creation to de-bulk
-        # Keep 2026-09-01 for files genuinely updated on 01 Sep (recent 16)
+        # Check if last commit is minor template fix (not content) — then use creation
+        try:
+            last_msg = subprocess.check_output(
+                ["git", "log", "-1", "--format=%s", "--", str(f)],
+                cwd=ROOT, text=True
+            ).strip()
+        except:
+            last_msg = ""
+        minor_keywords = ["Fix mobile table overflow", "Retire 10 trend pages", "Retarget bio pages", "Resolve merge conflict", "Fix desktop CLS", "SEO round", "Fix 5 remaining 404s"]
+        is_minor = any(k in last_msg for k in minor_keywords)
+        # If last is 01 Sep or 31 Aug minor, use creation to de-bulk (honest content date)
+        if is_minor and creation != last and creation < last:
+            return creation
         if last == "2026-08-31" and creation != last and creation < last:
-            # check if file had a meaningful update on 31 Aug (check diff stat)
-            # if file was in SEO round but only metadata, prefer creation
-            # Use creation to restore diversity (pre-bulk dates)
             return creation
         return last or creation
     except:
