@@ -3,39 +3,39 @@
 
 <!-- 🏠 HOMEPAGE -->
 <url>
-  <loc>https://captionstudio.in/</loc>
-  <lastmod>2026-07-13</lastmod>
+    <loc>https://captionstudio.in/</loc>
+    <lastmod>2026-03-31</lastmod>
   <changefreq>daily</changefreq>
   <priority>1.0</priority>
 </url>
 
 <!-- 📚 SECTIONS (no trailing slash to match Vercel cleanURLs) -->
 <url>
-  <loc>https://captionstudio.in/blog</loc>
-  <lastmod>2026-06-26</lastmod>
+    <loc>https://captionstudio.in/blog</loc>
+    <lastmod>2026-04-01</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.95</priority>
 </url>
 
 <url>
-  <loc>https://captionstudio.in/tools</loc>
-  <lastmod>2026-06-26</lastmod>
+    <loc>https://captionstudio.in/tools</loc>
+    <lastmod>2026-03-31</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 
 <!-- 💎 IMPORTANT PAGES -->
 <url>
-  <loc>https://captionstudio.in/guide</loc>
-  <lastmod>2026-06-26</lastmod>
+    <loc>https://captionstudio.in/guide</loc>
+    <lastmod>2026-04-05</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.85</priority>
 </url>
 
 <!-- 📄 SECONDARY -->
 <url>
-  <loc>https://captionstudio.in/about</loc>
-  <lastmod>2026-06-26</lastmod>
+    <loc>https://captionstudio.in/about</loc>
+    <lastmod>2026-04-03</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.55</priority>
 </url>
@@ -43,8 +43,8 @@
 <!-- ⚖️ LEGAL -->
 
 <url>
-  <loc>https://captionstudio.in/terms</loc>
-  <lastmod>2026-06-26</lastmod>
+    <loc>https://captionstudio.in/terms</loc>
+    <lastmod>2026-04-03</lastmod>
   <changefreq>yearly</changefreq>
   <priority>0.30</priority>
 </url>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://captionstudio.in/contact</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
