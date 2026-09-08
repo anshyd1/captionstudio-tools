@@ -2,107 +2,58 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.captionstudio.in"
+        }
+      ],
       "destination": "https://captionstudio.in/$1",
       "permanent": true
     },
     {
-      "source": "/:path+/about.html",
-      "destination": "/about",
+      "source": "/blog/fathers-day-captions-hindi-2026",
+      "destination": "/blog/hindi-captions-instagram",
       "permanent": true
     },
     {
-      "source": "/:path+/blog",
-      "destination": "/blog",
+      "source": "/blog/football-captions-instagram",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
-      "source": "/:path+/blog/:rest*",
-      "destination": "/blog/:rest*",
+      "source": "/blog/messi-captions-instagram-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
-      "source": "/:path+/contact.html",
-      "destination": "/contact",
+      "source": "/blog/ronaldo-captions-instagram-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
-      "source": "/:path+/disclaimer.html",
-      "destination": "/disclaimer",
-      "permanent": true
-    },
-    {
-      "source": "/:path+/earning.html",
-      "destination": "/earning",
-      "permanent": true
-    },
-    {
-      "source": "/:path+/guide.html",
-      "destination": "/guide",
-      "permanent": true
-    },
-    {
-      "source": "/:path+/index.html",
-      "destination": "/:path",
-      "permanent": true
-    },
-    {
-      "source": "/:path+/privacy.html",
+      "source": "/privacy-policy",
       "destination": "/privacy",
       "permanent": true
     },
     {
-      "source": "/:path+/relax.html",
-      "destination": "/relax",
-      "permanent": true
-    },
-    {
-      "source": "/:path+/support.html",
-      "destination": "/support",
-      "permanent": true
-    },
-    {
-      "source": "/:path+/terms.html",
+      "source": "/terms-and-conditions",
       "destination": "/terms",
       "permanent": true
     },
     {
-      "source": "/:path+/tools",
-      "destination": "/tools",
+      "source": "/terms-of-service",
+      "destination": "/terms",
       "permanent": true
     },
     {
-      "source": "/:path+/tools/:rest*",
-      "destination": "/tools/:rest*",
+      "source": "/blog/gt-vs-csk-memes-captions-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
-      "source": "/blog/1k-views-reels-caption-formula",
-      "destination": "/blog/instagram-reel-hooks-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/about",
-      "destination": "/about",
-      "permanent": true
-    },
-    {
-      "source": "/blog/ai-content-creation",
-      "destination": "/blog/instagram-reel-hooks-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/ai-tools-instagram-reach",
-      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
-      "permanent": true
-    },
-    {
-      "source": "/blog/attitude-captions-for-reels-2026",
-      "destination": "/blog/attitude-captions-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/best-hashtags-for-reels-2026",
-      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "source": "/index.html",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -111,23 +62,113 @@
       "permanent": true
     },
     {
+      "source": "/blog/guide",
+      "destination": "/guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/earning",
+      "destination": "/earning",
+      "permanent": true
+    },
+    {
+      "source": "/blog/about",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/blog/contact",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/blog/support",
+      "destination": "/support",
+      "permanent": true
+    },
+    {
+      "source": "/blog/privacy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/blog/terms",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/blog/relax",
+      "destination": "/relax",
+      "permanent": true
+    },
+    {
       "source": "/blog/birthday-captions-2026",
       "destination": "/blog/birthday-captions-instagram-2026",
       "permanent": true
     },
     {
-      "source": "/blog/blog",
-      "destination": "/blog/",
+      "source": "/blog/ai-content-creation",
+      "destination": "/blog/instagram-reel-hooks-2026",
       "permanent": true
     },
     {
-      "source": "/blog/blog/",
-      "destination": "/blog/",
+      "source": "/blog/hashtag-strategy",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-bio-ideas",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-make-reels-viral",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-reels-ideas",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
       "source": "/blog/capcut-reels-editing-guide",
       "destination": "/guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-make-youtube-shorts",
+      "destination": "/guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-instagram-reels-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-bio-examples",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ai-tools-instagram-reach",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/email-writing-guide",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/faceless-instagram-earn-money",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/new-era-ai-2026",
+      "destination": "/blog/social-media-content-strategy-small-business-2026",
       "permanent": true
     },
     {
@@ -146,198 +187,28 @@
       "permanent": true
     },
     {
-      "source": "/blog/contact",
-      "destination": "/contact",
-      "permanent": true
-    },
-    {
-      "source": "/blog/data",
-      "destination": "/data/homepage-blogs.json",
-      "permanent": true
-    },
-    {
-      "source": "/blog/earning",
-      "destination": "/earning",
-      "permanent": true
-    },
-    {
-      "source": "/blog/email-writing-guide",
-      "destination": "/blog/social-media-content-strategy-small-business-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/english-vs-shayari-captions-2026",
-      "destination": "/blog/hindi-captions-instagram",
-      "permanent": true
-    },
-    {
-      "source": "/blog/faceless-instagram-earn-money",
-      "destination": "/blog/ugc-creator-complete-guide-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/fathers-day-captions-hindi-2026",
-      "destination": "/blog/hindi-captions-instagram",
-      "permanent": true
-    },
-    {
       "source": "/blog/favicon.png",
       "destination": "/favicon.png",
       "permanent": true
     },
     {
-      "source": "/blog/fifa-world-cup-2026-hub",
-      "destination": "/blog/viral-captions-for-reels-2026",
+      "source": "/data",
+      "destination": "/data/homepage-blogs.json",
       "permanent": true
     },
     {
-      "source": "/blog/football-captions-instagram",
-      "destination": "/blog/viral-captions-for-reels-2026",
+      "source": "/data/",
+      "destination": "/data/homepage-blogs.json",
       "permanent": true
     },
     {
-      "source": "/blog/funny-world-cup-2026-captions",
-      "destination": "/blog/viral-captions-for-reels-2026",
+      "source": "/blog/blog",
+      "destination": "/blog/",
       "permanent": true
     },
     {
-      "source": "/blog/gt-vs-csk-memes-captions-2026",
-      "destination": "/blog/viral-captions-for-reels-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/guide",
-      "destination": "/guide",
-      "permanent": true
-    },
-    {
-      "source": "/blog/hashtag-strategy",
-      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
-      "permanent": true
-    },
-    {
-      "source": "/blog/how-to-make-reels-viral",
-      "destination": "/blog/viral-captions-for-reels-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/how-to-make-youtube-shorts",
-      "destination": "/guide",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-attitude-bio-2026",
-      "destination": "/blog/best-instagram-bio-copy-paste-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-bio-2026-mega-guide",
-      "destination": "/blog/best-instagram-bio-copy-paste-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-bio-examples",
-      "destination": "/blog/best-instagram-bio-copy-paste-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-bio-ideas",
-      "destination": "/blog/best-instagram-bio-copy-paste-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-bio-ideas-2026",
-      "destination": "/blog/best-instagram-bio-copy-paste-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-growth-0-to-10k",
-      "destination": "/blog/instagram-growth-7-days",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-notes-ideas-2026",
-      "destination": "/blog/short-instagram-captions-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-vip-bio-2026",
-      "destination": "/blog/best-instagram-bio-copy-paste-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/instagram-vip-name-username-2026",
-      "destination": "/blog/instagram-stylish-name-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/love-captions-2026",
-      "destination": "/blog/love-viral-captions-hinglish-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/messi-captions-instagram-2026",
-      "destination": "/blog/viral-captions-for-reels-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/messi-vs-ronaldo-captions-2026",
-      "destination": "/blog/viral-captions-for-reels-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/new-era-ai-2026",
-      "destination": "/blog/social-media-content-strategy-small-business-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/og-reels-earning.jpg",
-      "destination": "/og-image.jpg",
-      "permanent": true
-    },
-    {
-      "source": "/blog/privacy",
-      "destination": "/privacy",
-      "permanent": true
-    },
-    {
-      "source": "/blog/relax",
-      "destination": "/relax",
-      "permanent": true
-    },
-    {
-      "source": "/blog/ronaldo-captions-instagram-2026",
-      "destination": "/blog/viral-captions-for-reels-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/sad-shayari-hindi-2026",
-      "destination": "/blog/hindi-captions-instagram",
-      "permanent": true
-    },
-    {
-      "source": "/blog/short-attitude-captions-one-word",
-      "destination": "/blog/attitude-captions-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/sitemap.xml",
-      "destination": "/sitemap.xml",
-      "permanent": true
-    },
-    {
-      "source": "/blog/support",
-      "destination": "/support",
-      "permanent": true
-    },
-    {
-      "source": "/blog/terms",
-      "destination": "/terms",
-      "permanent": true
-    },
-    {
-      "source": "/blog/tiktok-bio-ideas-2026",
-      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "source": "/blog/blog/",
+      "destination": "/blog/",
       "permanent": true
     },
     {
@@ -351,8 +222,108 @@
       "permanent": true
     },
     {
+      "source": "/blog/sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/blog/data",
+      "destination": "/data/homepage-blogs.json",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-hashtags-for-reels-2026",
+      "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/favicon.jpg",
+      "destination": "/favicon.png",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sad-shayari-hindi-2026",
+      "destination": "/blog/hindi-captions-instagram",
+      "permanent": true
+    },
+    {
+      "source": "/img/hero-premium.webp",
+      "destination": "/img/hero-premium.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/images/instagram-growth-guide.webp",
+      "destination": "/og-image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/blog/og-reels-earning.jpg",
+      "destination": "/og-image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/og-blog-banner.png",
+      "destination": "/og-image.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/blog/funny-world-cup-2026-captions",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/messi-vs-ronaldo-captions-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-hub",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-vip-name-username-2026",
+      "destination": "/blog/instagram-stylish-name-2026",
+      "permanent": true
+    },
+    {
       "source": "/blog/trending-hashtags-reels-2026",
       "destination": "/blog/instagram-hashtag-strategy-viral-reels",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-notes-ideas-2026",
+      "destination": "/blog/short-instagram-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tiktok-bio-ideas-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ugc-email-pitch-template-2026",
+      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-bio-ideas-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/1k-views-reels-caption-formula",
+      "destination": "/blog/instagram-reel-hooks-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/love-captions-2026",
+      "destination": "/blog/love-viral-captions-hinglish-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/youtube-shorts-viral-guide-2026",
+      "destination": "/blog/instagram-reel-hooks-2026",
       "permanent": true
     },
     {
@@ -361,8 +332,13 @@
       "permanent": true
     },
     {
-      "source": "/blog/ugc-email-pitch-template-2026",
-      "destination": "/blog/ugc-creator-complete-guide-2026",
+      "source": "/blog/instagram-growth-0-to-10k",
+      "destination": "/blog/instagram-growth-7-days",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-vip-bio-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
       "permanent": true
     },
     {
@@ -381,73 +357,103 @@
       "permanent": true
     },
     {
-      "source": "/blog/viral-instagram-reels-2026",
-      "destination": "/blog/viral-captions-for-reels-2026",
-      "permanent": true
-    },
-    {
-      "source": "/blog/viral-reels-ideas",
-      "destination": "/blog/viral-captions-for-reels-2026",
-      "permanent": true
-    },
-    {
       "source": "/blog/viral-reels-strategy-2026",
       "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
-      "source": "/blog/youtube-shorts-viral-guide-2026",
-      "destination": "/blog/instagram-reel-hooks-2026",
+      "source": "/blog/hinglish-instagram-captions-2026",
+      "destination": "/blog/instagram-viral-captions-reels-hinglish-2026",
       "permanent": true
     },
     {
-      "source": "/data",
-      "destination": "/data/homepage-blogs.json",
+      "source": "/blog/instagram-attitude-bio-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
       "permanent": true
     },
     {
-      "source": "/data/",
-      "destination": "/data/homepage-blogs.json",
+      "source": "/blog/instagram-bio-2026-mega-guide",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
       "permanent": true
     },
     {
-      "source": "/favicon.jpg",
-      "destination": "/favicon.png",
+      "source": "/blog/one-word-instagram-captions-2026",
+      "destination": "/blog/short-instagram-captions-2026",
       "permanent": true
     },
     {
-      "source": "/images/instagram-growth-guide.webp",
-      "destination": "/og-image.jpg",
+      "source": "/blog/trending-instagram-captions-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     },
     {
-      "source": "/img/hero-premium.webp",
-      "destination": "/img/hero-premium.jpg",
+      "source": "/:path+/earning.html",
+      "destination": "/earning",
       "permanent": true
     },
     {
-      "source": "/index.html",
-      "destination": "/",
+      "source": "/:path+/about.html",
+      "destination": "/about",
       "permanent": true
     },
     {
-      "source": "/og-blog-banner.png",
-      "destination": "/og-image.jpg",
+      "source": "/:path+/contact.html",
+      "destination": "/contact",
       "permanent": true
     },
     {
-      "source": "/privacy-policy",
+      "source": "/:path+/privacy.html",
       "destination": "/privacy",
       "permanent": true
     },
     {
-      "source": "/terms-and-conditions",
+      "source": "/:path+/terms.html",
       "destination": "/terms",
       "permanent": true
     },
     {
-      "source": "/terms-of-service",
-      "destination": "/terms",
+      "source": "/:path+/guide.html",
+      "destination": "/guide",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/relax.html",
+      "destination": "/relax",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/disclaimer.html",
+      "destination": "/disclaimer",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/support.html",
+      "destination": "/support",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/index.html",
+      "destination": "/:path",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/tools",
+      "destination": "/tools",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/tools/:rest*",
+      "destination": "/tools/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/blog",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/blog/:rest*",
+      "destination": "/blog/:rest*",
       "permanent": true
     }
   ],
