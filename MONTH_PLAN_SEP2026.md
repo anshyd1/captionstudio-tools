@@ -155,3 +155,22 @@ Tum bolo:
 Dono me Vercel 2 min me live.
 
 *Plan by live GSC + Git + Live site cross-verification • 06 Sep 2026*
+
+---
+
+## ✅ ACTUAL — 08 Sep 2026 (Day 3 DONE)
+
+**Planned:** Creator Note (attitude) + 3 internal links
+**Actually DONE (pushed 0771e38 LIVE 13:10 GMT):**
+- ✅ attitude Creator Note 120w Hinglish (Gorakhpur tier-2)
+- ✅ aesthetic Creator Note 125w (behen Pinterest) — Day 2 catch-up bhi done
+- ✅ viral +3 links (aesthetic, attitude, love-viral) → orphan 1→0, links 363→366
+- ✅ sitemap 3× 2026-09-08 (freshness 60d→0d)
+- ✅ schema 35/35 sync, visible + data/json sync
+- ✅ vercel 90 stable, homepage 200, deep scan 4/4 PASS
+
+**Live verified:** `curl -I captionstudio.in` 200, sitemap 3×09-08, Creator Notes live, links live
+**Pending P1:** 12 canonical, 1 more Creator Note (love-viral) → 09 Sep
+
+**Next:** 09 Sep Day 4 — love-viral Creator Note + 12 canonical + GSC note (see PLAN_09Sep.md)
+
