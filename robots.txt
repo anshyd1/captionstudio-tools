@@ -14,6 +14,9 @@ Allow: /data/blog.json
 Disallow: /admin/
 Disallow: /private/
 Disallow: /data/
+Disallow: /playbook
+Disallow: /ad-studio
+Disallow: /creator-pack
 
 # ============================================
 # AI SEARCH ENGINES — EXPLICITLY ALLOWED

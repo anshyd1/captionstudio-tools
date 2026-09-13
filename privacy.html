@@ -39,8 +39,11 @@
     nav { display: flex; gap: 20px; align-items: center; }
     nav a { font-size: 14px; font-weight: 500; color: #555; transition: color 0.2s; text-decoration: none; }
     nav a:hover { color: #c97b2b; }
-    nav .cta-nav { background: #c97b2b; color: #fff; padding: 8px 18px; border-radius: 50px; font-weight: 600; font-size: 13px; }
-    nav .cta-nav:hover { background: #b06920; color: #fff; }
+    .nav-hbg { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+    .nav-hbg span { width: 22px; height: 2px; background: #1a1a2e; border-radius: 2px; display: block; transition: transform .25s, opacity .25s; }
+    .nav-hbg.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hbg.open span:nth-child(2) { opacity: 0; }
+    .nav-hbg.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .container { max-width: 760px; margin: 0 auto; padding: 40px 20px 60px; }
     h1 { font-size: 32px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
     .last-updated { font-size: 14px; color: #999; margin-bottom: 30px; }
@@ -52,7 +55,14 @@
     .trust-line { text-align: center; font-size: 12px; color: #888; margin-top: 30px; padding: 16px; background: #f5f5f5; border-radius: 8px; }
     footer { background: #1a1a2e; color: #aaa; padding: 32px 20px 20px; text-align: center; font-size: 13px; }
     footer a { color: #f5a623; }
-    @media (max-width:480px) { h1 { font-size: 26px; } .container { padding: 24px 16px 40px; } nav a:not(.cta-nav) { display: none; } }
+    @media (max-width:480px) {
+      h1 { font-size: 26px; }
+      .container { padding: 24px 16px 40px; }
+      nav { position: fixed; top: 57px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; gap: 0; padding: 0; max-height: 0; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,.08); transition: max-height .3s ease; z-index: 999; }
+      nav.open { max-height: 260px; padding: 10px 0; }
+      nav a { width: 100%; padding: 12px 20px; }
+      .nav-hbg { display: flex; }
+    }
   </style>
   <!-- AdSense removed during approval cleanup: keep policy, contact and tool pages ad-free until review passes. -->
 </head>
@@ -60,12 +70,14 @@
 <header>
 <div class="header-inner">
 <a class="logo" href="https://captionstudio.in/">Caption<span>Studio</span></a>
-<nav>
+<nav id="navLinks">
 <a href="https://captionstudio.in/blog/">📝 Blog</a>
 <a href="https://captionstudio.in/about">About</a>
 <a href="https://captionstudio.in/contact">Contact</a>
-<a class="cta-nav" href="https://8444120353574.gumroad.com/l/imfvmh" rel="noopener" target="_blank">🔥 Bundle ₹99</a>
 </nav>
+<button class="nav-hbg" id="navHbg" aria-label="Toggle menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('open'));">
+<span></span><span></span><span></span>
+</button>
 </div>
 </header>
 <div class="container">

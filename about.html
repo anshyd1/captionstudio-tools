@@ -124,10 +124,20 @@
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
     .logo { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 1.15rem; font-weight: 800; color: var(--black); }
     .logo img { width: 30px; height: 30px; border-radius: 6px; }
-    .nav-links { display: flex; gap: 20px; }
+    .nav-links { display: flex; gap: 20px; align-items: center; }
     .nav-links a { font-family: var(--sans); font-size: 0.92rem; font-weight: 600; color: var(--ink); }
     .nav-links a:hover { color: var(--orange); }
-    @media (max-width: 600px) { .nav-links a:not(:last-child) { display: none; } }
+    .nav-hbg { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+    .nav-hbg span { width: 22px; height: 2px; background: var(--black); border-radius: 2px; display: block; transition: transform .25s, opacity .25s; }
+    .nav-hbg.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hbg.open span:nth-child(2) { opacity: 0; }
+    .nav-hbg.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 600px) {
+      .nav-links { position: fixed; top: 62px; left: 0; right: 0; background: #fff; flex-direction: column; align-items: flex-start; gap: 0; padding: 0; max-height: 0; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,.08); transition: max-height .3s ease; z-index: 999; }
+      .nav-links.open { max-height: 320px; padding: 10px 0; }
+      .nav-links a { width: 100%; padding: 12px 24px; }
+      .nav-hbg { display: flex; }
+    }
 
     /* HERO */
     .hero { padding: 70px 0 50px; text-align: center; }
@@ -396,12 +406,15 @@
       <img src="favicon.png" alt="CaptionStudio Logo" width="30" height="30" />
       CaptionStudio
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="tools/">Tools</a>
       <a href="blog/">Blog</a>
       <a href="earning">Earn</a>
       <a href="contact">Contact</a>
     </div>
+    <button class="nav-hbg" id="navHbg" aria-label="Toggle menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('open'));">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -443,14 +456,14 @@
   <p>Our platform combines three pillars that work together to power your content journey:</p>
   <ul>
     <li><strong><a href="tools/">10+ Free AI Tools</a></strong> — Caption generator, hashtag generator, bio generator, hook generator, content idea generator, and more. All free, no signup required.</li>
-    <li><strong><a href="blog/">75+ Strategy Guides</a></strong> — Deep-dive blogs on Instagram growth, viral reel strategies, AI tools, earning methods, and trend analysis — updated weekly.</li>
+    <li><strong><a href="blog/">35+ Strategy Guides</a></strong> — Deep-dive blogs on Instagram growth, viral reel strategies, AI tools, earning methods, and trend analysis — updated weekly.</li>
     <li><strong><a href="earning">Verified Earning Methods</a></strong> — Practical, tested ways for Indian students and creators to build real online income in 2026.</li>
   </ul>
 
   <div class="stats">
-    <div class="stat"><div class="stat-n">75+</div><div class="stat-l">Guides Published</div></div>
+    <div class="stat"><div class="stat-n">35+</div><div class="stat-l">Guides Published</div></div>
     <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Free AI Tools</div></div>
-    <div class="stat"><div class="stat-n">5K+</div><div class="stat-l">Free Video Assets</div></div>
+    <div class="stat"><div class="stat-n">Free</div><div class="stat-l">Motion Graphics Pack</div></div>
   </div>
 
   <h2>What Makes Us Different</h2>
