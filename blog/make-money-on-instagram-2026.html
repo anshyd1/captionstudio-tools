@@ -155,6 +155,16 @@ footer{border-top:1px solid #e5e7eb;margin-top:38px;padding:24px 0 38px;font-siz
 footer a{color:#64748b;text-decoration:none}
 #toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:#0f172a;color:#fff;font-size:13.5px;font-weight:600;padding:11px 22px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:99}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.cookie-banner{position:fixed;bottom:16px;left:16px;right:16px;max-width:520px;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:16px 18px;box-shadow:0 16px 40px rgba(0,0,0,.14);font-size:13.5px;color:#1e293b;line-height:1.6;z-index:900;display:none}
+.cookie-banner.show{display:block;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.cookie-banner a{color:#f97316;text-decoration:underline}
+.cookie-banner-row{display:flex;gap:10px;margin-top:12px}
+.cookie-banner button{flex:1;border:0;padding:9px 14px;border-radius:999px;font-family:inherit;font-weight:600;font-size:13px;cursor:pointer}
+.cookie-accept{background:#0f172a;color:#fff}
+.cookie-accept:hover{background:#f97316}
+.cookie-decline{background:transparent;border:1px solid #e5e7eb!important;color:#64748b}
+@media(max-width:520px){.cookie-banner{left:10px;right:10px;bottom:10px;max-width:none}}
 @media(max-width:640px){.hero-img .tag{display:none}}
 @media(max-width:700px){.site-head .nav{display:none}.hamburger{display:flex}}
 </style>
@@ -191,7 +201,7 @@ footer a{color:#64748b;text-decoration:none}
     <h1>How to Make Money on Instagram in 2026: <span class="h1-u">Real US Rates</span></h1>
     <p class="sub">Every "passive income" reel is lying about the math — so here’s the honest version. This guide covers the <b>5 real revenue streams</b> (brand deals, affiliate, UGC, digital products, memberships), <b>US pricing per follower tier</b>, the <b>best affiliate programs</b>, and a <b>follower-to-income table</b> with realistic ranges. No hype — you’ll know exactly where your first $500 comes from.</p>
     <div class="hero-img">
-      <img src="https://captionstudio.in/img/make-money-instagram-2026-hero.webp" alt="Creator reading a brand collaboration DM on Instagram with rising earnings chart and dollar icons, global creator monetization 2026" width="1200" height="630" fetchpriority="high" decoding="async">
+      <img src="https://captionstudio.in/img/make-money-instagram-2026-hero.webp" alt="Two young content creators celebrating an Instagram brand collaboration offer and a rising earnings chart on a laptop, global creator monetization 2026" width="1200" height="630" fetchpriority="high" decoding="async">
       <span class="tag">Global Edition · CaptionStudio</span>
     </div>
     <div class="btns">
@@ -324,16 +334,35 @@ Main Ansh, CaptionStudio ka founder. Jab maine 2024 me apna pehla UGC gig US bra
   <div class="wrap">
     <b>CaptionStudio</b> · Creator growth toolkit · <a href="https://captionstudio.in/">Home</a> ·
     <a href="https://captionstudio.in/tools">Tools</a> · <a href="https://captionstudio.in/about">About</a> ·
-    <a href="https://captionstudio.in/terms">Terms</a> · <a href="https://captionstudio.in/privacy">Privacy</a><br>
+    <a href="https://captionstudio.in/terms">Terms</a> · <a href="https://captionstudio.in/privacy">Privacy</a> · <a href="https://captionstudio.in/contact">Contact</a><br>
     © 2026 CaptionStudio. All rights reserved.
   </div>
 </footer>
 <div id="toast" role="status" aria-live="polite">✅ Copied!</div>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie notice">
+  We use cookies for analytics &amp; to improve your experience. By using CaptionStudio you agree to our
+  <a href="https://captionstudio.in/privacy">Privacy Policy</a>.
+  <div class="cookie-banner-row">
+    <button class="cookie-accept" onclick="acceptCookies()">Accept</button>
+    <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+  </div>
+</div>
 <script>
 function doCopy(t){var d=function(){toast('✅ Copied to clipboard!');};
  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(d).catch(function(){legacy(t);d();});}else{legacy(t);d();}}
 function legacy(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
 function toast(m){var el=document.getElementById('toast');el.textContent=m;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('show');},1500);}
+(function initCookie(){
+  var banner=document.getElementById('cookieBanner');
+  if(!banner)return;
+  try{
+    if(!localStorage.getItem('cs_cookie_choice')){
+      setTimeout(function(){banner.classList.add('show');},1200);
+    }
+  }catch(e){}
+})();
+function acceptCookies(){try{localStorage.setItem('cs_cookie_choice','accept');}catch(e){}document.getElementById('cookieBanner').classList.remove('show');}
+function declineCookies(){try{localStorage.setItem('cs_cookie_choice','decline');}catch(e){}document.getElementById('cookieBanner').classList.remove('show');}
 (function(){
   var ham=document.getElementById('hamBtn'), menu=document.getElementById('mobileMenu');
   if(!ham||!menu)return;
