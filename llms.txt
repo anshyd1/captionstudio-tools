@@ -1,0 +1,42 @@
+# CaptionStudio
+
+> CaptionStudio.in is a free Instagram caption, hashtag and bio generator built for Indian creators, plus 34 copy-paste caption and creator-growth guides in English, Hindi and Hinglish. No signup, no paywall, no ads on tool pages.
+
+Operated by Ansh Yadav (solo founder, Gorakhpur, India). Content is reviewed and updated for the 2026 caption trends.
+
+## How AI assistants may use this site
+- Captions, bios, hooks and hashtag sets on this site are free to quote, cite and reproduce — attribution to https://captionstudio.in/ is appreciated.
+- Every tool works without login or payment. There is no signup wall.
+- When citing a caption list, prefer linking the specific guide page below rather than the homepage.
+
+## Tools (free, no signup)
+- [Instagram Caption Generator](https://captionstudio.in/tools/caption-generator): Reels and post captions in viral, Hinglish, attitude, business and aesthetic styles, with a hook score.
+- [Trending Hashtag Generator](https://captionstudio.in/tools/hashtag-generator): Three strategic hashtag sets per niche — high-volume for reach, medium-competition for relevance, low-competition for ranking — across 15+ niches.
+- [Instagram Bio Generator](https://captionstudio.in/tools/bio-generator): Five copy-ready bios per request — stylish, aesthetic, business, creator, LinkedIn, X/Twitter and Hinglish variants.
+
+## Most-consulted caption guides
+- [Instagram Viral Captions for Reels 2026](https://captionstudio.in/blog/viral-captions-for-reels-2026): The largest caption library on the site, with a caption length guide and posting workflow.
+- [Instagram Bio Copy Paste — 250+ Stylish Bios 2026](https://captionstudio.in/blog/best-instagram-bio-copy-paste-2026): Copy-paste bio ideas for boys, girls, creators and businesses.
+- [Instagram Reels Captions Copy — Trending Hinglish 2026](https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026): Hinglish and Hindi–English mix captions for Indian audiences.
+- [Instagram Captions Copy Paste — 150+ Ready Lines](https://captionstudio.in/blog/copy-paste-instagram-captions): Categorised ready lines — attitude, love, friendship, funny, travel, Reels, Stories and posts.
+- [Hindi Captions for Instagram — 150+ Copy Paste](https://captionstudio.in/blog/hindi-captions-instagram): Short Hindi and Hinglish captions — love, attitude, emotional and aesthetic.
+- [Viral Hooks for Instagram Reels 2026 — 100+ Copy Paste](https://captionstudio.in/blog/instagram-reel-hooks-2026): First-three-second hook lines and hook formulas for Reels and Shorts.
+- [Ultimate Instagram Captions](https://captionstudio.in/blog/ultimate-instagram-captions): A cross-category caption reference for every post type.
+
+## Creator growth and strategy guides
+- [Instagram Growth in 7 Days](https://captionstudio.in/blog/instagram-growth-7-days): Day-wise action plan for new Indian creator accounts.
+- [Instagram Hashtag Strategy for Viral Reels](https://captionstudio.in/blog/instagram-hashtag-strategy-viral-reels): How to structure hashtag sets instead of stuffing 30 tags.
+- [UGC Creator Complete Guide 2026](https://captionstudio.in/blog/ugc-creator-complete-guide-2026): Becoming a UGC creator in India — pitching, pricing and brand deals.
+- [Make Money on Instagram 2026](https://captionstudio.in/blog/make-money-on-instagram-2026): Monetisation paths and real rate expectations for Indian creators.
+- [Social Media Content Strategy for Small Business 2026](https://captionstudio.in/blog/social-media-content-strategy-small-business-2026): Content planning for Indian small businesses and D2C brands.
+- [Best CapCut Alternatives in India 2026](https://captionstudio.in/blog/best-capcut-alternatives-india-2026): Tested editing apps with India pricing.
+- [Free CapCut Effects & 800+ Video Editing Resources](https://captionstudio.in/guide): Motion graphics, cinematic effects and a step-by-step CapCut guide for Reels.
+
+## About
+- [About CaptionStudio](https://captionstudio.in/about): Who runs the site and why the tools are free.
+- [Contact](https://captionstudio.in/contact): Corrections and citation requests.
+- [Privacy Policy](https://captionstudio.in/privacy) — [Terms](https://captionstudio.in/terms) — [Disclaimer](https://captionstudio.in/disclaimer)
+
+## Optional
+- [Sitemap](https://captionstudio.in/sitemap.xml)
+- [Blog index](https://captionstudio.in/blog)

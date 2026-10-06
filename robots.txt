@@ -99,6 +99,12 @@ Allow: /
 # ============================================
 # SITEMAPS
 # ============================================
+# ============================================
+# AI / GEO
+# ============================================
+# llms.txt: https://captionstudio.in/llms.txt
+#   (structured summary for AI assistants - tools, top guides, citation policy)
+
 Sitemap: https://captionstudio.in/sitemap.xml
 Sitemap: https://captionstudio.in/sitemap-main.xml
 Sitemap: https://captionstudio.in/sitemap-blogs.xml
