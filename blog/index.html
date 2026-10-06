@@ -7,6 +7,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -219,7 +228,7 @@
 <nav style="display: flex; flex-direction: column;">
 <a href="/">Home</a>
 <a href="/tools/caption-generator">AI Tools</a>
-<a href="/earning">Creator Guide</a>
+<a href="/earning">Creator Guides</a>
 <a href="/blog" style="color: var(--orange);">Creator Blog</a>
 <a href="https://t.me/skill2incomehub" style="margin-top: 20px; background: var(--orange-pale); color: var(--orange); text-align:center;" target="_blank">Join Telegram</a>
 </nav>
@@ -357,7 +366,7 @@
 <div class="ft-links">
 <a href="/about">About</a>
 <a href="/contact">Contact</a>
-<a href="/privacy">Privacy Policy</a>
+<a href="../editorial-policy">Editorial Policy</a><a href="/privacy">Privacy Policy</a>
 <a href="/terms">Terms</a>
 <a href="/disclaimer">Disclaimer</a>
 <a href="/support">Support</a>
@@ -655,5 +664,6 @@
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

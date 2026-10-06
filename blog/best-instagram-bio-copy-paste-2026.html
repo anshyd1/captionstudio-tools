@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -1179,6 +1188,7 @@ Risk lene se nahi darta 🎢</span><div class="card-actions"><button class="copy
     <a href="/blog/">Blog</a>
     <a href="/tools/">Free Tools</a>
     <a href="/about">About</a>
+    <a href="/editorial-policy">Editorial Policy</a>
     <a href="/contact">Contact</a>
   </div>
   <p class="footer-copy">&copy; 2026 CaptionStudio.in | Made with 💕 by Ansh Yadav</p>
@@ -1256,5 +1266,6 @@ bt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   <button onclick="document.getElementById('bb-sticky-pill').style.display='none'" style="background: transparent; border: none; color: #9D8781; font-size: 1.1rem; cursor: pointer; padding: 0 4px; line-height: 1;">&times;</button>
 </div>
 
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

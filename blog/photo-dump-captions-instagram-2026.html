@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -1490,7 +1499,7 @@
      </h5>
 <ul>
 <li>
-<a href="../privacy">
+<a href="../editorial-policy">Editorial Policy</a><a href="../privacy">
         Privacy
        </a>
 </li>
@@ -1546,5 +1555,6 @@
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

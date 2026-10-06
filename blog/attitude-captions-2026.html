@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -238,7 +247,7 @@ body{
   <div class="nl">
     <a href="https://captionstudio.in/tools/">Tools</a>
     <a href="https://captionstudio.in/blog/">Blog</a>
-    <a href="https://captionstudio.in/earning">Earning</a>
+    <a href="https://captionstudio.in/earning">Creator Guides</a>
     <a href="https://captionstudio.in/guide">Guide</a>
   </div>
 </div>
@@ -1193,7 +1202,7 @@ That your success becomes the only noise 📢</div><button class="cpbtn" data-c=
   <p style="font-family: 'Source Sans 3', sans-serif; font-size: 1rem; color: #6b6b6b; margin-bottom: 15px;">
     Sirf captions copy mat karo, seekho kaise aap in tools ka use karke mahine ka ₹10,000+ earn kar sakte ho.
   </p>
-  <a href="https://captionstudio.in/earning" style="font-weight: 700; color: #e8440a; text-decoration: underline;">Full Earning Guide Padhein &rarr;</a>
+  <a href="https://captionstudio.in/earning" style="font-weight: 700; color: #e8440a; text-decoration: underline;">Creator Guides</a>
 </div>
 
 <!-- Footer -->
@@ -1250,10 +1259,10 @@ That your success becomes the only noise 📢</div><button class="cpbtn" data-c=
       </div>
       <div class="ft-c">
         <h4>🔗 Links</h4>
-        <a href="https://captionstudio.in/earning">Earning Hub</a>
+        <a href="https://captionstudio.in/earning">Creator Guides</a>
         <a href="https://captionstudio.in/guide">Video Assets</a>
         <a href="https://captionstudio.in/about">About</a>
-        <a href="https://captionstudio.in/privacy">Privacy</a>
+        <a href="../editorial-policy">Editorial Policy</a><a href="https://captionstudio.in/privacy">Privacy</a>
         <a href="https://captionstudio.in/terms">Terms</a>
       </div>
     </div>
@@ -1402,5 +1411,6 @@ That your success becomes the only noise 📢</div><button class="cpbtn" data-c=
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

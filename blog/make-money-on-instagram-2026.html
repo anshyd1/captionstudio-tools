@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -189,6 +198,7 @@ footer a{color:#64748b;text-decoration:none}
     <a href="https://captionstudio.in/tools/bio-generator">👤 Bio Builder</a>
     <a href="https://captionstudio.in/blog">📚 Blog</a>
   </div>
+<a href="/editorial-policy" style="font-size:14px">Editorial Policy</a>
 </header>
 <main class="wrap">
   <div class="crumb"><a href="https://captionstudio.in/">Home</a> <span style="color:#d1d5db">›</span> <a href="https://captionstudio.in/blog">Blog</a> <span style="color:#d1d5db">›</span> How to Make Money on Instagram in 2026</div>
@@ -386,5 +396,6 @@ document.addEventListener('click',function(e){
   }
 });
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

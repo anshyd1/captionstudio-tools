@@ -6,6 +6,15 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
     gtag('js', new Date());
     gtag('config', 'G-X490RGQB38');
   </script>
@@ -54,17 +63,36 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"Are all CaptionStudio tools free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every tool — caption generator, hashtag generator and bio generator — is 100% free with no signup and no limits."}},
-      {"@type":"Question","name":"Do I need to create an account?","acceptedAnswer":{"@type":"Answer","text":"No. There is no login or signup. Just open any tool and start generating instantly."}},
-      {"@type":"Question","name":"Do the tools work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes, every tool is fully mobile-friendly and works on slow connections too."}}
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are all CaptionStudio tools free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every tool — caption generator, hashtag generator and bio generator — is 100% free with no signup and no limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is no login or signup. Just open any tool and start generating instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the tools work on mobile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, every tool is fully mobile-friendly and works on slow connections too."
+      }
+    }
+  ]
+}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,7 +189,7 @@
       <div class="desktop-nav">
         <a href="/tools">Tools</a>
         <a href="/blog/">Blog</a>
-        <a href="/earning">Guide</a>
+        <a href="/earning">Creator Guides</a>
         <a href="/about">About</a>
         <a href="/tools/caption-generator" class="nav-cta">Try a Tool</a>
       </div>
@@ -177,7 +205,7 @@
       <a href="/tools/caption-generator">Caption Generator</a>
       <a href="/tools/hashtag-generator">Hashtag Generator</a>
       <a href="/tools/bio-generator">Bio Generator</a>
-      <a href="/earning">Creator Guide</a>
+      <a href="/earning">Creator Guides</a>
       <a href="/blog/">Blog &amp; Strategy</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
@@ -297,7 +325,7 @@
       <div class="ft-grid">
         <div class="ft-brand">
           <div class="ft-logo">CaptionStudio</div>
-          <p>India's free smart toolkit for content creators — viral captions, trending hashtags, high-converting bios, and verified online earning strategies. Built in Gorakhpur, Uttar Pradesh by Ansh Yadav.</p>
+          <p>India's free smart toolkit for content creators — viral captions, trending hashtags, high-converting bios, and creator growth guides. Built in Gorakhpur, Uttar Pradesh by Ansh Yadav.</p>
         </div>
         <div class="ft-col"><h4>Creator Toolbox</h4><div class="ft-links">
           <a href="/tools/caption-generator">Caption Generator</a>
@@ -306,13 +334,13 @@
           <a href="/tools">All Free Tools</a>
         </div></div>
         <div class="ft-col"><h4>Resources</h4><div class="ft-links">
-          <a href="/earning">Creator Guide</a>
+          <a href="/earning">Creator Guides</a>
           <a href="/guide">Growth Guide</a>
           <a href="/blog/">Blog &amp; Strategy</a>
         </div></div>
         <div class="ft-col"><h4>Support</h4><div class="ft-links">
           <a href="/contact">Contact Us</a>
-          <a href="/privacy">Privacy Policy</a>
+          <a href="../editorial-policy">Editorial Policy</a><a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
           <a href="/about">About</a>
         </div></div>
@@ -356,5 +384,6 @@
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

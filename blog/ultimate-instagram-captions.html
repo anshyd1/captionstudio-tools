@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -1949,7 +1958,7 @@
     <b>CaptionStudio</b><br/>
     <div class="small">© 2026 CaptionStudio • Instagram captions Hinglish • Copy-Paste Viral Captions</div>
     <div class="small" style="margin-top:12px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-      <a href="/privacy" style="color:#ddd;text-decoration:none">Privacy</a>
+      <a href="../editorial-policy">Editorial Policy</a><a href="/privacy" style="color:#ddd;text-decoration:none">Privacy</a>
       <a href="/terms" style="color:#ddd;text-decoration:none">Terms</a>
       <a href="/contact" style="color:#ddd;text-decoration:none">Contact</a>
       <a href="/blog/" style="color:#ddd;text-decoration:none">Blog</a>
@@ -2061,5 +2070,6 @@
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
   </html>

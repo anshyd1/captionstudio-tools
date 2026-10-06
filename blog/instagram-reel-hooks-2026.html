@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -359,7 +368,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
         <li><a href="https://captionstudio.in/blog" class="active">Blog</a></li>
         <li><a href="https://captionstudio.in/tools">Tools</a></li>
         <li><a href="https://captionstudio.in/guide">Guide</a></li>
-        <li><a href="https://captionstudio.in/earning">Earning</a></li>
+        <li><a href="https://captionstudio.in/earning">Creator Guides</a></li>
         <li><a href="https://captionstudio.in/about">About</a></li>
         <li><a href="https://captionstudio.in/tools/caption-generator" class="btn-nav">⚡ Caption Tool</a></li>
       </ul>
@@ -376,7 +385,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
     <a href="https://captionstudio.in/blog">Blog</a>
     <a href="https://captionstudio.in/tools">Tools</a>
     <a href="https://captionstudio.in/guide">Guide</a>
-    <a href="https://captionstudio.in/earning">Earning</a>
+    <a href="https://captionstudio.in/earning">Creator Guides</a>
     <a href="https://captionstudio.in/about">About</a>
     <a href="https://captionstudio.in/contact">Contact</a>
     <a href="https://captionstudio.in/tools/caption-generator">⚡ Caption Generator</a>
@@ -1057,7 +1066,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
         <li><a href="https://captionstudio.in/blog">📚 Blog</a></li>
         <li><a href="https://captionstudio.in/tools">⚡ Tools</a></li>
         <li><a href="https://captionstudio.in/guide">📖 Guide</a></li>
-        <li><a href="https://captionstudio.in/earning">💸 Earning Hub</a></li>
+        <li><a href="https://captionstudio.in/earning">Creator Guides</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1071,7 +1080,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
     <div class="footer-col">
       <h5>Legal</h5>
       <ul>
-        <li><a href="https://captionstudio.in/privacy">🔒 Privacy</a></li>
+        <li><a href="../editorial-policy">Editorial Policy</a><a href="https://captionstudio.in/privacy">🔒 Privacy</a></li>
         <li><a href="https://captionstudio.in/terms">📋 Terms</a></li>
         <li><a href="https://captionstudio.in/disclaimer">⚖️ Disclaimer</a></li>
       </ul>
@@ -1264,5 +1273,6 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:50px 5% 22px
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

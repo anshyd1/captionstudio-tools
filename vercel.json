@@ -32,6 +32,16 @@
       "permanent": true
     },
     {
+      "source": "/playbook.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/playbook",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
       "source": "/blog/fifa-world-cup-2026-captions-instagram",
       "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true

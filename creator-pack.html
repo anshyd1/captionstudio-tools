@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -724,7 +733,7 @@
     <a class="brand" href="./">Caption<span>Studio</span></a>
     <div class="navlinks">
       <a href="blog/">Blog</a>
-      <a href="earning">Earning</a>
+      <a href="earning">Creator Guides</a>
       <a class="wa" href="https://wa.me/919918996096?text=Hi%20CaptionStudio%2C%20I%20want%20creator%20service%20details" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </nav>
@@ -954,7 +963,7 @@
         <a href="blog/youtube-shorts-viral-guide-2026">YouTube Shorts</a>
         <a href="blog/education-captions-for-instagram-reels-2026">Education Captions</a>
         <a href="blog/ugc-creator-complete-guide-2026">UGC Creator Guide</a>
-        <a href="earning">Earning Hub</a>
+        <a href="earning">Creator Guides</a>
         <a href="contact">Contact</a>
       </div>
     </section>
@@ -984,7 +993,26 @@
     </section>
   </main>
 
-  <footer>
+  <section class="section container">
+  <h2>How working together runs</h2>
+  <p><strong>1. Message.</strong> Send what you need — a website, an SEO clean-up, PDF templates or a content calendar — plus your deadline.</p>
+  <p><strong>2. Scope and quote.</strong> You get a written scope with a fixed price and a delivery date. No hourly surprises.</p>
+  <p><strong>3. Build.</strong> Work happens in stages; you see a draft link before anything is finalised.</p>
+  <p><strong>4. Revisions.</strong> One revision round is included for text and layout.</p>
+  <p><strong>5. Handover.</strong> You get the files, the domain/DNS access stays yours, and you get a short written note on how to update things yourself.</p>
+
+  <h2>Who this is for</h2>
+  <p>Small businesses, coaching institutes, clinics, local retailers and independent creators in India who need a website or content system but do not want an agency retainer. If your requirement is a one-page site, a template pack, or a content calendar you can run yourself, it fits. If you need a large custom web application, this is not the right fit and we will say so.</p>
+
+  <h2>FAQ</h2>
+  <p><strong>Do you work with clients outside India?</strong> Yes, remotely.</p>
+  <p><strong>Who owns the delivered files?</strong> You do — the website code, the PDFs and the calendars become yours on delivery.</p>
+  <p><strong>Do you guarantee Google rankings?</strong> No. SEO work here is technical clean-up, content structure and fixes based on Search Console data. Nobody can honestly guarantee rankings.</p>
+  <p><strong>Is this connected to the free tools on this site?</strong> Only in that the same person builds both. The free tools are free and stay free; this page is the paid service side.</p>
+  <p><strong>How do I get pricing?</strong> Send your requirement on WhatsApp and you get a fixed quote.</p>
+</section>
+
+<footer>
     <div class="footer-grid">
       <div>
         <h3>CaptionStudio.in</h3>
@@ -1006,6 +1034,7 @@
       <div>
         <h4>Company</h4>
         <a href="about">About</a>
+            <a href="editorial-policy">Editorial Policy</a>
         <a href="contact">Contact</a>
         <a href="privacy">Privacy</a>
         <a href="terms">Terms</a>
@@ -1013,5 +1042,6 @@
     </div>
     <div class="bottom">© 2026 CaptionStudio · Payment/details discussed on WhatsApp · Built by Ansh Yadav</div>
   </footer>
+<script src="cookie-consent.js" defer></script>
 </body>
 </html>

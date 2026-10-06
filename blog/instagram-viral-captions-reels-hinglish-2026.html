@@ -7,6 +7,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -376,8 +385,8 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 <li><a href="../tools">⚡ Tools</a></li>
 <li><a aria-current="page" class="active" href="../blog">✍️ Blog</a></li>
 <li><a href="../guide">📖 Guide</a></li>
-<li><a href="../earning">💸 Earning</a></li>
-<li><a href="../relax">😌 Relax</a></li>
+<li><a href="../earning">Creator Guides</a></li>
+<li><a href="../relax">Creator Calm</a></li>
 <li><a href="../about">👥 About</a></li>
 <li><a href="../contact">📬 Contact</a></li>
 <li><a class="btn-nav" href="../tools/caption-generator">⚡ Caption Tool</a></li>
@@ -394,8 +403,8 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 <a href="../tools">⚡ Tools</a>
 <a href="../blog">✍️ Blog</a>
 <a href="../guide">📖 Guide</a>
-<a href="../earning">💸 Earning</a>
-<a href="../relax">😌 Relax</a>
+<a href="../earning">Creator Guides</a>
+<a href="../relax">Creator Calm</a>
 <a href="../about">👥 About</a>
 <a href="../contact">📬 Contact</a>
 <a href="../support">🛠 Support</a>
@@ -1113,7 +1122,7 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
 <li><a href="../about">👥 About Us</a></li>
 <li><a href="../contact">📬 Contact</a></li>
 <li><a href="../support">🛠 Support</a></li>
-<li><a href="../privacy">🔒 Privacy</a></li>
+<li><a href="../editorial-policy">Editorial Policy</a><a href="../privacy">🔒 Privacy</a></li>
 <li><a href="../terms">📋 Terms</a></li>
 <li><a href="../sitemap.xml">🗺️ Sitemap</a></li>
 </ul>
@@ -1329,5 +1338,6 @@ function copyCaption(card){
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

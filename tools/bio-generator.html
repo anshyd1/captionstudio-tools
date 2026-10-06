@@ -8,6 +8,15 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
     gtag('js', new Date());
     gtag('config', 'G-X490RGQB38');
   </script>
@@ -57,34 +66,67 @@
   </script>
 
   <!-- WebApplication Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "CaptionStudio Instagram Bio Generator",
-    "url": "https://captionstudio.in/tools/bio-generator",
-    "description": "Free Instagram bio generator for stylish, attitude, aesthetic, business, creator, LinkedIn, Twitter/X and Hinglish bios.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Web",
-    "offers": {"@type":"Offer","price":"0","priceCurrency":"INR"},
-    "featureList": "Instagram bio generator, stylish bios, business bios, creator bios, LinkedIn bios, Twitter/X bios, Hinglish bios",
-    "inLanguage": ["en-IN", "hi-IN"]
-  }
-  </script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CaptionStudio Instagram Bio Generator",
+  "url": "https://captionstudio.in/tools/bio-generator",
+  "description": "Free Instagram bio generator for stylish, attitude, aesthetic, business, creator, LinkedIn, Twitter/X and Hinglish bios.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "featureList": "Instagram bio generator, stylish bios, business bios, creator bios, LinkedIn bios, Twitter/X bios, Hinglish bios",
+  "inLanguage": [
+    "en-IN",
+    "hi-IN"
+  ],
+  "datePublished": "2026-03-31",
+  "dateModified": "2026-09-15"
+}</script>
 
   <!-- FAQPage Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"How long can an Instagram bio be?","acceptedAnswer":{"@type":"Answer","text":"An Instagram bio can be up to 150 characters. Keep it short, clear and benefit-driven so people instantly understand who you are."}},
-      {"@type":"Question","name":"Is the bio generator free?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is 100% free with no signup. Generate unlimited bios from a library of 200+ across 12 styles."}},
-      {"@type":"Question","name":"Will line breaks and emojis work on Instagram?","acceptedAnswer":{"@type":"Answer","text":"Yes. Copy the bio, paste it into your Instagram bio field, and the line breaks and emojis will display correctly on mobile."}},
-      {"@type":"Question","name":"Can I use these bios for LinkedIn and Twitter?","acceptedAnswer":{"@type":"Answer","text":"Yes. There are dedicated LinkedIn and Twitter/X styles, plus styles that work across all social platforms."}}
-    ]
-  }
-  </script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long can an Instagram bio be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An Instagram bio can be up to 150 characters. Keep it short, clear and benefit-driven so people instantly understand who you are."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the bio generator free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it is 100% free with no signup. Generate unlimited bios from a library of 200+ across 12 styles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will line breaks and emojis work on Instagram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Copy the bio, paste it into your Instagram bio field, and the line breaks and emojis will display correctly on mobile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these bios for LinkedIn and Twitter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There are dedicated LinkedIn and Twitter/X styles, plus styles that work across all social platforms."
+      }
+    }
+  ]
+}</script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -240,6 +282,7 @@
         <a href="../blog/">Blog</a>
         <a href="../guide">Guide</a>
         <a href="../about">About</a>
+            <a href="../editorial-policy">Editorial Policy</a>
         <a href="bio-generator" class="nav-cta">Bio Generator</a>
       </div>
       <button class="hbg" id="hbg" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
@@ -260,6 +303,7 @@
       <a href="../guide">Creator Guide</a>
       <a href="../blog/">Blog &amp; Strategy</a>
       <a href="../about">About</a>
+            <a href="../editorial-policy">Editorial Policy</a>
       <a href="../contact">Contact</a>
       <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener">Telegram Community</a>
     </div>
@@ -376,7 +420,7 @@
       <div class="ft-grid">
         <div class="ft-brand">
           <div class="ft-logo">CaptionStudio</div>
-          <p>India's free smart toolkit for content creators — viral captions, trending hashtags, high-converting bios, and verified online earning strategies. Built in Gorakhpur, Uttar Pradesh by Ansh Yadav.</p>
+          <p>India's free smart toolkit for content creators — viral captions, trending hashtags, high-converting bios, and creator growth guides. Built in Gorakhpur, Uttar Pradesh by Ansh Yadav.</p>
         </div>
         <div class="ft-col"><h4>Creator Toolbox</h4><div class="ft-links">
           <a href="caption-generator">Caption Generator</a>
@@ -394,6 +438,7 @@
           <a href="../privacy">Privacy Policy</a>
           <a href="../terms">Terms of Service</a>
           <a href="../about">About</a>
+            <a href="../editorial-policy">Editorial Policy</a>
         </div></div>
       </div>
       <div class="ft-copy">&copy; 2026 CaptionStudio &middot; Crafted by Ansh Yadav &middot; Gorakhpur, Uttar Pradesh &middot; All Rights Reserved</div>
@@ -771,5 +816,6 @@ document.addEventListener('click', function(e){
   if (typeof gtag === 'function') gtag('event','tool_generate',{tool_name:'bio-generator'});
 }, true);
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

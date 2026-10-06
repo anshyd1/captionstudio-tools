@@ -21,6 +21,15 @@
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
 gtag('js', new Date());
 gtag('config', 'G-X490RGQB38');
 </script>
@@ -188,7 +197,7 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 <li><a href="../tools">⚡ Tools</a></li>
 <li><a class="active" href="../blog">✍️ Blog</a></li>
 <li><a href="../guide">📖 Guide</a></li>
-<li><a href="../earning">💸 Earning</a></li>
+<li><a href="../earning">Creator Guides</a></li>
 <li><a href="../tools/caption-generator">⚡ Tool</a></li>
 </ul>
 <div class="nav-right-controls">
@@ -197,7 +206,7 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 </div>
 </div>
 <nav aria-label="Mobile navigation" class="mobile-menu" id="mobile-menu">
-<a href="../">🏠 Home</a><a href="../tools">⚡ Tools</a><a href="../blog">✍️ Blog</a><a href="../guide">📖 Guide</a><a href="../earning">💸 Earning</a><a href="../tools/caption-generator">⚡ Tool</a>
+<a href="../">🏠 Home</a><a href="../tools">⚡ Tools</a><a href="../blog">✍️ Blog</a><a href="../guide">📖 Guide</a><a href="../earning">Creator Guides</a><a href="../tools/caption-generator">⚡ Tool</a>
 </nav>
 </header>
 <div aria-label="Breadcrumb" class="breadcrumb">
@@ -737,7 +746,7 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
 <strong style="display:block;color:var(--fg);margin-bottom:8px">Important Pages</strong>
 <a href="../about" style="display:block;margin:6px 0;text-decoration:none">About CaptionStudio</a>
 <a href="../contact" style="display:block;margin:6px 0;text-decoration:none">Contact / Support</a>
-<a href="../privacy" style="display:block;margin:6px 0;text-decoration:none">Privacy Policy</a>
+<a href="../editorial-policy">Editorial Policy</a><a href="../privacy" style="display:block;margin:6px 0;text-decoration:none">Privacy Policy</a>
 <a href="../terms" style="display:block;margin:6px 0;text-decoration:none">Terms &amp; Conditions</a>
 <a href="../disclaimer" style="display:block;margin:6px 0;text-decoration:none">Disclaimer</a>
 </div>
@@ -825,5 +834,6 @@ footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;colo
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

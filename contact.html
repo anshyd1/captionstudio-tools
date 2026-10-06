@@ -7,6 +7,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -322,8 +331,9 @@
 <div class="nav-links" id="navLinks">
 <a href="tools/">Tools</a>
 <a href="blog/">Blog</a>
-<a href="earning">Earn</a>
+<a href="earning">Creator Guides</a>
 <a href="about">About</a>
+            <a href="editorial-policy">Editorial Policy</a>
 </div>
 <button class="nav-hbg" id="navHbg" aria-label="Toggle menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('open'));">
 <span></span><span></span><span></span>
@@ -399,13 +409,33 @@
 <p>Average response time: <strong>under 24 hours</strong>. Telegram messages usually answered within 2-4 hours. Email business inquiries on weekdays. Weekend pe thoda slow — patience rakh!</p>
 <h2>Our Office</h2>
 <p>CaptionStudio fully remote-first hai. Headquarters: <strong>Gorakhpur, Uttar Pradesh, India</strong>. No physical office address — sab kuch online se hi handle hota hai. Cost saving = free tools for creators.</p>
+<h2>Who you are writing to</h2>
+<p>CaptionStudio is run by <strong>Ansh Yadav</strong>, an independent developer and content writer based in Gorakhpur, Uttar Pradesh, India. There is no call centre and no support queue — messages are read and answered by the person who builds the tools. That is why replies are usually fast, and why they are slower on weekends.</p>
+<p><b>Business name:</b> CaptionStudio.in (sole proprietorship, India)<br>
+<b>Operating since:</b> March 2026<br>
+<b>Response time:</b> typically 24–48 hours on working days<br>
+<b>Languages:</b> English and Hindi</p>
+
+<h2>Contact FAQ</h2>
+<p><b>I found a caption that is wrong, offensive, or duplicated. What do I send?</b><br>Send the exact page URL and the line itself. Content corrections are prioritised over everything else and are usually fixed within the same week. The process is described in our <a href="/editorial-policy">Editorial Policy</a>.</p>
+<p><b>A tool is not working on my phone.</b><br>Include your device model, browser, and which generator you used. If a button does nothing, say which button — that detail alone usually identifies the bug.</p>
+<p><b>Can I republish your caption lists on my website, app or channel?</b><br>Short quotations with a link back to the source page are fine. Republishing a full list is not — see the copyright section of our <a href="/disclaimer">Disclaimer</a>. For licensing, email us with what you need and where it will appear.</p>
+<p><b>Do you do paid promotions, sponsored posts or guest articles?</b><br>We do not publish paid guest posts or sponsored in-article links, because that would compromise the guides. Advertising on the site runs through Google AdSense and is handled by the network.</p>
+<p><b>Do you offer caption writing or social media management as a service?</b><br>Occasionally, for brands and small businesses. Mention your brand, scope and timeline in your message.</p>
+<p><b>I want to report a privacy concern or request data deletion.</b><br>Email with the subject line "Privacy request". Most requests are resolved immediately, because the site stores almost no personal data. See the <a href="/privacy">Privacy Policy</a> for what is and is not collected.</p>
+<p><b>How do I get a reply faster?</b><br>Telegram is the fastest route. Email is better for anything that needs a written record, such as a licensing or partnership discussion.</p>
+
+<h2>Corrections policy</h2>
+<p>If we publish something inaccurate, we fix the page rather than quietly deleting it, and we update the page's "last updated" date. Substantive corrections are noted in the guide itself when the change alters the advice. You can request a correction using either contact method above.</p>
 </main>
 <footer>
 <div class="wrap">
 <p>© 2026 CaptionStudio · Built in Gorakhpur by <strong style="color:#fff">Ansh Yadav</strong></p>
-<p style="margin-top:10px"><a href="about">About</a> · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></p>
+<p style="margin-top:10px"><a href="about">About</a>
+            <a href="editorial-policy">Editorial Policy</a> · <a href="privacy">Privacy</a> · <a href="terms">Terms</a></p>
 <div class="ft-copy">India's free AI toolkit for content creators · est. 2024</div>
 </div>
 </footer>
+<script src="cookie-consent.js" defer></script>
 </body>
 </html>

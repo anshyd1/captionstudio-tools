@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -936,10 +945,11 @@
         </button>
         <div class="nav-links">
             <a href="./" class="nav-home-btn">← Home</a>
-            <a href="earning">Earning 💰</a>
+            <a href="earning">Creator Guides</a>
             <a href="guide" class="active">Guide 📈</a>
             <a href="blog/">Blog</a>
             <a href="about">About</a>
+            <a href="editorial-policy">Editorial Policy</a>
             <a href="contact">Contact</a>
         </div>
     </nav>
@@ -1598,10 +1608,10 @@ It is crucial to handle these resources responsibly—while many are shared as "
         <!-- Column 3: Creator Tools -->
         <div class="footer-col">
             <h4>Creator Resources</h4>
-            <a href="earning">💰 How to Earn</a>
+            <a href="earning">Creator Guides</a>
             <a href="guide">📈 Growth Tips</a>
             <a href="tools/">🎨 Editing Tools</a>
-            <a href="relax">🎧 Music & SFX</a>
+            <a href="relax">Creator Calm</a>
         </div>
 
         <!-- Column 4: Community -->
@@ -1749,5 +1759,6 @@ It is crucial to handle these resources responsibly—while many are shared as "
         document.getElementById('checklist-fill').style.width = ((checked / total) * 100) + '%';
     }
 </script>
+<script src="cookie-consent.js" defer></script>
 </body>
     </html>

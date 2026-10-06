@@ -6,6 +6,15 @@
 <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
       gtag('js', new Date());
       gtag('config', 'G-X490RGQB38');
     </script>
@@ -1185,7 +1194,7 @@ article.container img,figure img{max-width:100%;height:auto}
 <a href="../tools/caption-generator">🔥 Caption Generator</a>
 <a href="../blog">📚 Blog / Strategy</a>
 <a href="../guide">📈 Growth Tips</a>
-<a href="../relax">😌 Relax Mode</a>
+<a href="../relax">Creator Calm</a>
 <a href="https://t.me/skill2incomehub" target="_blank" rel="nofollow sponsored noopener noreferrer">✈️ Telegram Community</a>
 </div>
 <article class="container">
@@ -2129,7 +2138,7 @@ Viral Strategy
 <p style="margin-bottom: 8px;border-top:1px solid #eee;padding-top:16px">© 2026 CaptionStudio • Gorakhpur, UP • Founder: Ansh Yadav</p>
 <p style="font-size: 0.85rem; color: #777; margin-top: 10px;">
                 CaptionStudio helps you create <a href="../tools/caption-generator">viral captions</a>, hashtags and learn creator tools and content systems for social media success. |
-                <a href="../privacy">Privacy</a> · <a href="../terms">Terms</a> · <a href="../disclaimer">Disclaimer</a> · <a href="../contact">Contact</a>
+                <a href="../editorial-policy">Editorial Policy</a><a href="../privacy">Privacy</a> · <a href="../terms">Terms</a> · <a href="../disclaimer">Disclaimer</a> · <a href="../contact">Contact</a>
 </p>
 </div>
 <style>@media(max-width:760px){footer .container>div[style*="grid"]{grid-template-columns:1fr 1fr!important;gap:18px!important}}@media(max-width:420px){footer .container>div[style*="grid"]{grid-template-columns:1fr!important}}
@@ -2237,5 +2246,6 @@ document.addEventListener('click',function(e){
   <button onclick="document.getElementById('bb-sticky-pill').style.display='none'" style="background: transparent; border: none; color: #9D8781; font-size: 1.1rem; cursor: pointer; padding: 0 4px; line-height: 1;">&times;</button>
 </div>
 
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

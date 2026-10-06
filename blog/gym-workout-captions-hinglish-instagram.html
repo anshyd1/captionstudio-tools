@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -296,8 +305,8 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
       <li><a href="../tools/">&#9889; Tools</a></li>
       <li><a href="../blog/" class="active">&#9999;&#65039; Blog</a></li>
       <li><a href="../guide">&#128214; Guide</a></li>
-      <li><a href="../earning">&#128184; Earning</a></li>
-      <li><a href="../relax">&#128524; Relax</a></li>
+      <li><a href="../earning">Creator Guides</a></li>
+      <li><a href="../relax">Creator Calm</a></li>
       <li><a href="../about">&#128101; About</a></li>
       <li><a href="../contact">&#128236; Contact</a></li>
       <li><a href="https://t.me/skill2incomehub" class="btn-nav" target="_blank" rel="noopener noreferrer">&#9992;&#65039; Telegram</a></li>
@@ -314,8 +323,8 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
     <a href="../tools/">&#9889; Tools</a>
     <a href="../blog/">&#9999;&#65039; Blog</a>
     <a href="../guide">&#128214; Guide</a>
-    <a href="../earning">&#128184; Earning Hub</a>
-    <a href="../relax">&#128524; Relax Zone</a>
+    <a href="../earning">Creator Guides</a>
+    <a href="../relax">Creator Calm</a>
     <a href="../about">&#128101; About</a>
     <a href="../contact">&#128236; Contact</a>
     <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer" style="color:#0088cc;font-weight:700">&#9992;&#65039; Join Telegram</a>
@@ -957,7 +966,7 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
         <li><a href="../blog/">📚 Blog</a></li>
         <li><a href="../tools/">⚡ Tools</a></li>
         <li><a href="../guide">📖 Guide</a></li>
-        <li><a href="../earning">💸 Earning Hub</a></li>
+        <li><a href="../earning">Creator Guides</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -971,7 +980,7 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
     <div class="footer-col">
       <h5>Legal</h5>
       <ul>
-        <li><a href="../privacy">🔒 Privacy</a></li>
+        <li><a href="../editorial-policy">Editorial Policy</a><a href="../privacy">🔒 Privacy</a></li>
         <li><a href="../terms">📋 Terms</a></li>
         <li><a href="../disclaimer">⚖️ Disclaimer</a></li>
       </ul>
@@ -1187,5 +1196,6 @@ footer{background:var(--footer-bg);color:var(--footer-text)}
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

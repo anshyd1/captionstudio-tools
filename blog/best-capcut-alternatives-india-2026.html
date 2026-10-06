@@ -6,6 +6,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
@@ -500,8 +509,8 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
       <li><a href="../tools/">⚡ Tools</a></li>
       <li><a href="../blog/" class="active">✍️ Blog</a></li>
       <li><a href="../guide">📖 Guide</a></li>
-      <li><a href="../earning">💸 Earning</a></li>
-      <li><a href="../relax">😌 Relax</a></li>
+      <li><a href="../earning">Creator Guides</a></li>
+      <li><a href="../relax">Creator Calm</a></li>
       <li><a href="../about">👥 About</a></li>
       <li><a href="../contact">📬 Contact</a></li>
       <li><a href="https://t.me/skill2incomehub" class="btn-nav" target="_blank" rel="noopener noreferrer">✈️ Telegram</a></li>
@@ -518,12 +527,12 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
     <a href="../tools/">⚡ Tools</a>
     <a href="../blog/">✍️ Blog</a>
     <a href="../guide">📖 Guide</a>
-    <a href="../earning">💸 Earning Hub</a>
-    <a href="../relax">😌 Relax Zone</a>
+    <a href="../earning">Creator Guides</a>
+    <a href="../relax">Creator Calm</a>
     <a href="../about">👥 About</a>
     <a href="../contact">📬 Contact</a>
     <a href="../support">🛠 Support</a>
-    <a href="../privacy">🔒 Privacy</a>
+    <a href="../editorial-policy">Editorial Policy</a><a href="../privacy">🔒 Privacy</a>
     <a href="../terms">📋 Terms</a>
     <a href="https://t.me/skill2incomehub" target="_blank" rel="noopener noreferrer" style="color:#0088cc;font-weight:700">✈️ Join Telegram</a>
   </nav>
@@ -1494,7 +1503,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
         <li><a href="../blog/">📚 Blog</a></li>
         <li><a href="../tools/">⚡ Tools</a></li>
         <li><a href="../guide">📖 Guide</a></li>
-        <li><a href="../earning">💸 Earning Hub</a></li>
+        <li><a href="../earning">Creator Guides</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1593,5 +1602,6 @@ footer{background:var(--footer-bg);color:var(--footer-text);margin-top:40px}
   }, {passive:true});
 })();
 </script>
+<script src="../cookie-consent.js" defer></script>
 </body>
 </html>

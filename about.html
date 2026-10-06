@@ -8,6 +8,15 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    gtag('consent', 'default', {
+      ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    }, { region: ['IN', 'PK', 'BD', 'NP', 'LK'] });
     gtag('js', new Date());
     gtag('config', 'G-X490RGQB38');
   </script>
@@ -409,7 +418,7 @@
     <div class="nav-links" id="navLinks">
       <a href="tools/">Tools</a>
       <a href="blog/">Blog</a>
-      <a href="earning">Earn</a>
+      <a href="earning">Creator Guides</a>
       <a href="contact">Contact</a>
     </div>
     <button class="nav-hbg" id="navHbg" aria-label="Toggle menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('open'); this.classList.toggle('open'); this.setAttribute('aria-expanded', this.classList.contains('open'));">
@@ -457,7 +466,7 @@
   <ul>
     <li><strong><a href="tools/">10+ Free AI Tools</a></strong> — Caption generator, hashtag generator, bio generator, hook generator, content idea generator, and more. All free, no signup required.</li>
     <li><strong><a href="blog/">35+ Strategy Guides</a></strong> — Deep-dive blogs on Instagram growth, viral reel strategies, AI tools, earning methods, and trend analysis — updated weekly.</li>
-    <li><strong><a href="earning">Verified Earning Methods</a></strong> — Practical, tested ways for Indian students and creators to build real online income in 2026.</li>
+    <li><strong><a href="earning">Creator Guides</a></strong> — Practical, tested ways for Indian students and creators to build real online income in 2026.</li>
   </ul>
 
   <div class="stats">
@@ -552,6 +561,7 @@
       <div class="ft-col">
         <h4>Company</h4>
         <a href="about">About</a>
+            <a href="editorial-policy">Editorial Policy</a>
         <a href="contact">Contact</a>
         <a href="privacy">Privacy</a>
         <a href="terms">Terms</a>
@@ -563,5 +573,6 @@
   </div>
 </footer>
 
+<script src="cookie-consent.js" defer></script>
 </body>
 </html>
