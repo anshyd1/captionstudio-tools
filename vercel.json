@@ -12,6 +12,26 @@
       "permanent": true
     },
     {
+      "source": "/diwaok",
+      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "permanent": false
+    },
+    {
+      "source": "/play",
+      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "permanent": false
+    },
+    {
+      "source": "/game",
+      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "permanent": false
+    },
+    {
+      "source": "/download-app",
+      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "permanent": false
+    },
+    {
       "source": "/blog/fathers-day-captions-hindi-2026",
       "destination": "/blog/hindi-captions-instagram",
       "permanent": true
