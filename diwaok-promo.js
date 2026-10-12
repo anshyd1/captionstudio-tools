@@ -78,6 +78,15 @@
     }
   });
 
+  // Also cover hold-to-copy / Ctrl+C / execCommand copies (fires the "copy" event).
+  var lastToastAt = 0;
+  document.addEventListener('copy', function() {
+    var now = Date.now();
+    if (now - lastToastAt < 2500) return;
+    lastToastAt = now;
+    setTimeout(showCopyToast, 300);
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function() {
       setTimeout(createFloatingBar, 800);

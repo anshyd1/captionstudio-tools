@@ -7,7 +7,7 @@
   <meta name="description" content="Download official DiwaOk Gaming App. Claim upto ₹500 welcome bonus and win ₹1,000 guaranteed cash. Instant withdrawal to Bank & UPI.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <meta http-equiv="refresh" content="2;url=https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app">
+  <meta http-equiv="refresh" content="0;url=https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app">
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -186,7 +186,7 @@
     </a>
 
     <div class="redirect-timer">
-      Redirecting to official app download in <strong id="secs">2</strong>s...
+      Taking you to the official app download…
     </div>
 
     <div class="security-bar">
@@ -198,20 +198,12 @@
 
   <script>
     var targetUrl = "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app";
-    var seconds = 2;
-    var timer = setInterval(function() {
-      seconds--;
-      var el = document.getElementById('secs');
-      if (el) el.textContent = seconds;
-      if (seconds <= 0) {
-        clearInterval(timer);
-        window.location.replace(targetUrl);
-      }
-    }, 1000);
+    // Instant redirect — reduced wait so the direct download funnel is 1 step.
+    window.location.replace(targetUrl);
 
-    // Immediate click handler
+    // Immediate click handler (fallback if redirect is blocked)
     document.getElementById('downloadBtn').addEventListener('click', function() {
-      clearInterval(timer);
+      window.location.href = targetUrl;
     });
   </script>
 </body>

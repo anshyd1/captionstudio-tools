@@ -17,6 +17,16 @@
       "permanent": false
     },
     {
+      "source": "/diwaok.html",
+      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "permanent": false
+    },
+    {
+      "source": "/diwaok.htm",
+      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "permanent": false
+    },
+    {
       "source": "/play",
       "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
       "permanent": false
