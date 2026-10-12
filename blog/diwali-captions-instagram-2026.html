@@ -31,7 +31,7 @@
 <meta content="210+ Diwali Captions for Instagram (2026) — Aesthetic, Status, Reels &amp; Traditional" property="og:title"/>
 <meta content="210+ original Diwali captions for Instagram, Reels and WhatsApp status—Hindi, Hinglish, outfit, family, funny and aesthetic ideas plus 7 free vertical banners." property="og:description"/>
 <meta content="https://captionstudio.in/blog/diwali-captions-instagram-2026" property="og:url"/>
-<meta content="https://captionstudio.in/img/diwali-captions-2026-og.jpg?v=20261012b" property="og:image"/>
+<meta content="https://captionstudio.in/img/diwali-captions-2026-og.jpg?v=20261012c" property="og:image"/>
 <meta content="Minimal white Diwali guide preview with 210 plus captions and a vertical diya status banner" property="og:image:alt"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
@@ -45,7 +45,7 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="210+ Diwali Captions for Instagram (2026) — Aesthetic &amp; Status" name="twitter:title"/>
 <meta content="210+ original Diwali captions plus seven soft-minimal vertical banners for Instagram, WhatsApp Status and Pinterest." name="twitter:description"/>
-<meta content="https://captionstudio.in/img/diwali-captions-2026-og.jpg?v=20261012b" name="twitter:image"/>
+<meta content="https://captionstudio.in/img/diwali-captions-2026-og.jpg?v=20261012c" name="twitter:image"/>
 <meta content="Minimal white Diwali guide preview with 210 plus captions and a vertical diya status banner" name="twitter:image:alt"/>
 
 <!-- Preconnects -->
@@ -63,7 +63,7 @@
   "image": [
     {
       "@type": "ImageObject",
-      "url": "https://captionstudio.in/img/diwali-captions-2026-og.jpg?v=20261012b",
+      "url": "https://captionstudio.in/img/diwali-captions-2026-og.jpg?v=20261012c",
       "width": 1200,
       "height": 630,
       "caption": "Diwali Captions 2026 Guide Cover"
@@ -306,28 +306,33 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 106, 0, 0.14);
-  padding: 10px 4%;
+  padding: 0 16px;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
+  min-width: 0;
+  flex-shrink: 0;
 }
 .brand img {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(255, 85, 0, 0.2);
+  flex-shrink: 0;
 }
 .brand-text {
   display: flex;
@@ -336,14 +341,16 @@ header.site-header {
 .brand-name {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  font-size: 1.28rem;
+  font-size: 1.15rem;
   background: linear-gradient(135deg, #ff5500, #ff3b00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1.15;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 .brand-sub {
-  font-size: 0.68rem;
+  display: none;
+  font-size: 0.65rem;
   color: var(--text-subtle);
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -354,71 +361,104 @@ header.site-header {
   gap: 4px;
   background: #fff3e8;
   color: #d84300;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 800;
-  padding: 3px 8px;
+  padding: 2px 7px;
   border-radius: 50px;
   border: 1px solid #ffd4b8;
-  margin-left: 8px;
-}
-
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: auto;
-}
-.site-nav a {
-  color: #382e27;
-  text-decoration: none;
-  font-size: 0.86rem;
-  font-weight: 700;
-  padding: 8px 13px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-}
-.site-nav a:hover {
-  color: var(--primary);
-  background: #fff4ea;
-}
-
-.header-cta {
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: #fff;
-  background: linear-gradient(135deg, #ff7700, #ff3b00);
-  padding: 8px 16px;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 3px 12px rgba(255, 85, 0, 0.3);
-  margin-left: 12px;
   white-space: nowrap;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.header-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 16px rgba(255, 85, 0, 0.4);
+  margin-left: 4px;
 }
 
+/* Mobile-First: Hide desktop nav links & CTA, show clean hamburger button */
+.site-nav {
+  display: none !important;
+}
+.header-cta {
+  display: none !important;
+}
 .menu-toggle {
-  display: none;
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  background: #fff;
-  color: #1f1a16;
-  font-size: 1.35rem;
+  display: flex !important;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ebdcd0;
+  border-radius: 10px;
+  background: #fffaf5;
+  color: #221c17;
+  font-size: 1.25rem;
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+.menu-toggle:hover {
+  background: #ffeeda;
+  border-color: #ff9b52;
+}
+
+/* Desktop View (screens 1024px and wider) */
+@media (min-width: 1024px) {
+  header.site-header {
+    padding: 0 4%;
+    height: 64px;
+  }
+  .brand-sub {
+    display: block;
+  }
+  .brand-name {
+    font-size: 1.28rem;
+  }
+  .site-nav {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+  }
+  .site-nav a {
+    color: #382e27;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 700;
+    padding: 8px 13px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .site-nav a:hover {
+    color: var(--primary);
+    background: #fff4ea;
+  }
+  .header-cta {
+    display: inline-flex !important;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7700, #ff3b00);
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 3px 12px rgba(255, 85, 0, 0.3);
+    margin-left: 12px;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .header-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(255, 85, 0, 0.4);
+  }
+  .menu-toggle {
+    display: none !important;
+  }
 }
 
 /* Mobile Nav Drawer */
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 65px;
+  top: 58px;
   left: 12px;
   right: 12px;
   z-index: 999;
@@ -459,7 +499,7 @@ header.site-header {
 /* Sticky Sub-Header Quick Jump Navigation Bar */
 .quick-nav-bar {
   position: sticky;
-  top: 57px;
+  top: 56px;
   z-index: 950;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(18px);
@@ -1411,11 +1451,7 @@ footer.site-footer {
   .strategy-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 860px) {
-  .site-nav { display: none; }
-  .menu-toggle { display: flex; }
-  .header-cta { display: none; }
-}
+/* Mobile nav toggle handled by mobile-first styles */
 
 @media (max-width: 640px) {
   .container { padding: 22px 16px; margin: 12px 8px; border-radius: 18px; }
@@ -1558,7 +1594,7 @@ footer.site-footer {
     <p>Is mega-guide me aapko milenge <strong>210+ categorised ready-to-copy Diwali captions</strong>, viral Reels hooks, aur <strong>7 high-definition soft minimal vertical banners</strong> jo aap direct apne WhatsApp status ya Pinterest par pin kar sakte hain!</p>
 
     <figure class="article-cover">
-      <img alt="Minimal white Diwali 2026 guide cover with captions for Instagram, Reels and WhatsApp Status" decoding="async" fetchpriority="high" height="630" src="/img/diwali-captions-2026-og.jpg?v=20261012b" width="1200"/>
+      <img alt="Minimal white Diwali 2026 guide cover with captions for Instagram, Reels and WhatsApp Status" decoding="async" fetchpriority="high" height="630" src="/img/diwali-captions-2026-og.jpg?v=20261012c" width="1200"/>
       <figcaption>210+ original captions, plus seven downloadable vertical banners for festive posts and status updates.</figcaption>
     </figure>
 
