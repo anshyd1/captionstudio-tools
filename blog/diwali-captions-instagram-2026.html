@@ -432,6 +432,11 @@ header.site-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
+  animation: slideDownNav 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes slideDownNav {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .mobile-nav a {
   min-height: 46px;
@@ -4361,10 +4366,21 @@ footer.site-footer {
     });
   }
 
-  // 2. Mobile Menu Toggle Drawer
+  // 2. Mobile Menu Toggle Drawer with Auto-Close on Scroll
   var menuToggle = document.getElementById('menuToggle');
   var mobileNav = document.getElementById('mobileNav');
   var menuIcon = document.getElementById('menuIcon');
+
+  function closeMobileMenu() {
+    if (mobileNav && mobileNav.classList.contains('is-open')) {
+      mobileNav.classList.remove('is-open');
+      if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open navigation');
+      }
+      if (menuIcon) menuIcon.textContent = '☰';
+    }
+  }
 
   if (menuToggle && mobileNav) {
     menuToggle.addEventListener('click', function(e) {
@@ -4375,19 +4391,36 @@ footer.site-footer {
       if (menuIcon) menuIcon.textContent = isOpen ? '✕' : '☰';
     });
 
+    // Close when clicking any link inside the mobile drawer
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close on outside click
     document.addEventListener('click', function(e) {
       if (mobileNav.classList.contains('is-open') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
-        mobileNav.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        if (menuIcon) menuIcon.textContent = '☰';
+        closeMobileMenu();
       }
     });
 
+    // Close automatically when user scrolls the page
+    window.addEventListener('scroll', function() {
+      if (mobileNav.classList.contains('is-open')) {
+        closeMobileMenu();
+      }
+    }, { passive: true });
+
+    // Close on touch drag outside the menu
+    window.addEventListener('touchmove', function(e) {
+      if (mobileNav.classList.contains('is-open') && !mobileNav.contains(e.target) && !menuToggle.contains(e.target)) {
+        closeMobileMenu();
+      }
+    }, { passive: true });
+
+    // Close on Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
-        mobileNav.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        if (menuIcon) menuIcon.textContent = '☰';
+        closeMobileMenu();
         menuToggle.focus();
       }
     });
