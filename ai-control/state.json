@@ -2,15 +2,27 @@
   "schema_version": 1,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-13T14:49:08Z",
+  "last_agent_update": "2026-10-13T15:08:29Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
     "max_low_risk_fixes_per_day_across_agents": 2,
     "max_new_articles_per_week": 3,
     "direct_push_rule": "Only small, reversible, evidence-backed fixes after tests and production smoke check.",
-    "approval_required_for": ["site-wide templates or navigation", "tracking or consent changes", "deleting content", "bulk SEO edits", "new article publication", "changes without reliable before/after evidence"],
-    "stop_conditions": ["API credentials missing or invalid", "GA4/GSC coverage incomplete for a comparison", "unexpected deploy failure", "repository has changed since inspection"]
+    "approval_required_for": [
+      "site-wide templates or navigation",
+      "tracking or consent changes",
+      "deleting content",
+      "bulk SEO edits",
+      "new article publication",
+      "changes without reliable before/after evidence"
+    ],
+    "stop_conditions": [
+      "API credentials missing or invalid",
+      "GA4/GSC coverage incomplete for a comparison",
+      "unexpected deploy failure",
+      "repository has changed since inspection"
+    ]
   },
   "queue": [
     {
@@ -49,8 +61,28 @@
       "source": "GitHub commit + live browser verification",
       "commit": "https://github.com/anshyd1/captionstudio-tools/commit/1e09254039cf1720dc27ae76b04c8de12f0dc269",
       "summary": "Dashboard layout, mobile visibility, link status handling and GSC missing-date chart fixed.",
-      "checks": ["desktop 1440x900", "mobile 390x844", "HTTP 404 has no SEO score", "live deployment verified"],
+      "checks": [
+        "desktop 1440x900",
+        "mobile 390x844",
+        "HTTP 404 has no SEO score",
+        "live deployment verified"
+      ],
       "next_agent": "Investigate measurement drop with evidence; establish comparable per-page trend history."
+    },
+    {
+      "id": "2026-10-13-multipage-control-centre",
+      "date_ist": "2026-10-13",
+      "status": "verified",
+      "source": "GitHub commit plus desktop/mobile live browser verification",
+      "commit": "https://github.com/anshyd1/captionstudio-tools/commit/e97905ca33cfb8a43e553780be3939c78aebadb0",
+      "summary": "Public seven-page agent control centre, model-neutral guide, bounded task queue, page baseline and honest attendance shipped.",
+      "checks": [
+        "7 clean routes return 200",
+        "desktop 1440x900 and mobile 390x844 render",
+        "live JSON and plain-text guide accessible",
+        "checker reports HTTP 404 without SEO score"
+      ],
+      "next_agent": "Owner will supply GA4/GSC access privately. Refresh the snapshot with real API data, validate comparable windows, append a new page-history sample and investigate 6 Oct measurement change. Never add API keys to public files."
     }
   ],
   "data_sources": {
