@@ -164,7 +164,7 @@ path.drawline{transition:stroke-dashoffset 1.6s ease}
   .hero>div:last-child{display:none} /* photo mobile par nahi — jagah number ko */
   #kpiTop{grid-template-columns:1fr!important}
   #kpiTop .kpi:nth-child(2){display:none}
-  #overview{order:1}
+  #overview{order:0}
   .sec{margin-top:18px}
   .kpis{grid-template-columns:1fr 1fr;gap:10px}
   .kpi{padding:15px 13px;border-radius:16px}
@@ -253,6 +253,17 @@ body.menuopen #navToggle .mbars i:nth-child(3){transform:translateY(-6.4px) rota
   .foot{grid-template-columns:1fr;padding:20px 16px}
   .secimg{aspect-ratio:16/7}
 }
+@media(min-width:1101px) and (max-width:1500px){
+  #navToggle{display:flex}
+  .topright{margin-left:0}
+  #navLinks{position:fixed;top:64px;right:14px;left:auto;width:min(400px,calc(100vw - 28px));max-height:calc(100vh - 80px);overflow-y:auto;background:#fff;border:1px solid #eee0d6;border-radius:16px;box-shadow:0 18px 44px rgba(30,15,5,.16);padding:10px;display:none;flex-direction:column;z-index:101}
+  #navLinks.open{display:flex}
+  #navLinks a{padding:13px 12px;font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .bar i,.hero img,.dot,.livebar{animation:none}
+}
 </style>
 </head>
 <body>
@@ -261,9 +272,9 @@ body.menuopen #navToggle .mbars i:nth-child(3){transform:translateY(-6.4px) rota
   <a class="brand2" href="#overview"><img src="/img/dash-logo.jpg" alt="CaptionStudio"><span>CaptionStudio <b>Dashboard</b></span></a>
   <button id="navToggle" aria-label="Menu" aria-expanded="false"><span class="mbars"><i></i><i></i><i></i></span><span class="mlabel">Menu</span></button>
   <nav id="navLinks">
-    <a href="#overview">Overview</a><a href="#findings">Findings</a><a href="#week">7 Din Ka Kaam</a><a href="#plan">Plan</a><a href="#pages">Saare Page</a><a href="#keywords">Keywords</a><a href="#sources">Traffic</a><a href="#tasks">Kaam Ki List</a><a href="#publish">Naya Article</a><a href="#checker">Link Checker</a>
+    <a href="#overview">Overview</a><a href="#findings">Findings</a><a href="#week">7 Din Ka Kaam</a><a href="#plan">Plan</a><a href="#pages">Tracked Pages</a><a href="#keywords">Keywords</a><a href="#sources">Traffic</a><a href="#tasks">Kaam Ki List</a><a href="#publish">Naya Article</a><a href="#checker">Link Checker</a>
   </nav>
-  <div class="topright">Pichhle 28 Din <span>● LIVE</span></div>
+  <div class="topright">Dashboard snapshot <span id="snapshotDate"></span></div>
 </header>
 <nav class="tabbar">
   <a href="#overview">Overview</a><a href="#findings">Findings</a><a href="#plan">Plan</a><a href="#pages">Page</a><a href="#keywords">Keywords</a><a href="#tasks">Kaam</a><a href="#publish">Article</a><a href="#checker">Checker</a>
@@ -272,14 +283,6 @@ body.menuopen #navToggle .mbars i:nth-child(3){transform:translateY(-6.4px) rota
 
 
 <main class="main">
-<a href="#overview" title="Overview">▦</a><a href="#pages" title="Page">▤</a><a href="#keywords" title="Keywords">⌕</a><a href="#sources" title="Traffic">◔</a><a href="#tasks" title="Kaam">✓</a><a href="#publish" title="Naya Article">✎</a><a href="#checker" title="Link Check">◎</a></div>
-
-
-
-
-
-
-
 <div class="livebar"></div>
 
 <section class="hero">
@@ -295,11 +298,11 @@ body.menuopen #navToggle .mbars i:nth-child(3){transform:translateY(-6.4px) rota
 <section class="sec" id="overview">
 <img loading="lazy" decoding="async" class="secimg" src="/img/dash-growth.jpg" alt="Growth chart">
 <h2>Overview — Badi Tasveer</h2>
-<p class="sub">Uske neeche wale number usse pehle wale 28 din se tulna mein hain. Hara matlab badha, laal matlab gira (Position mein ulta hota hai — chhota number badiya).</p>
+<p class="sub">Number apne pichhle period se tulna mein hain. Analytics aur Google Search ki latest available dates alag ho sakti hain. Hara matlab behtar, laal matlab kharab (Position mein chhota number badiya).</p>
 <div class="kpis" id="kpis"></div>
 <div style="margin-top:18px">
-<h3>Roj Ka Traffic (28 din)</h3>
-<p class="sub"><span style="color:var(--o);font-weight:900">—</span> Page Views (Analytics) &nbsp;&nbsp;<span style="color:#191919;font-weight:900">—</span> Search Clicks (Google)</p>
+<h3>Roj Ka Traffic</h3>
+<p class="sub"><span style="color:var(--o);font-weight:900">—</span> Page Views (Analytics) &nbsp;&nbsp;<span style="color:#191919;font-weight:900">—</span> Search Clicks (Google; latest available dates only)</p>
 <div id="chart"></div>
 <p class="sub" id="chartNote"></p>
 </div>
@@ -327,8 +330,8 @@ body.menuopen #navToggle .mbars i:nth-child(3){transform:translateY(-6.4px) rota
 
 <section class="sec reveal" id="pages">
 <img loading="lazy" decoding="async" class="secimg" src="/img/dash-pages.jpg" alt="Top pages">
-<h2>Saare Page — Khol Ke Dekho Kahan Kya Ho Raha Hai</h2>
-<p class="sub">Kisi bhi page par click karo — uska pura haal khul jayega: kitne log aaye, Google me kaisa dikh raha hai, SEO score, aur kya theek karna hai.</p>
+<h2>Tracked Pages (<span id="trackedCount"></span>) — Kahan Kya Ho Raha Hai</h2>
+<p class="sub">Ye Analytics aur Google Search se mile top pages hain, poori site ki list nahi. Kisi page par click karo — uske available views, search aur SEO details khul jayenge.</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0">
 <input id="psearch" placeholder="Page dhundo... jaise bio, caption, tools" style="flex:1;min-width:190px">
 <button class="chipbtn on" data-f="all">Sab</button><button class="chipbtn" data-f="star">★ Sabse Badiya</button><button class="chipbtn" data-f="good">Achha</button><button class="chipbtn" data-f="mid">Dhyan Do</button><button class="chipbtn" data-f="bad">Kamzor</button>
@@ -383,8 +386,8 @@ body.menuopen #navToggle .mbars i:nth-child(3){transform:translateY(-6.4px) rota
 
 <section class="sec reveal" id="checker">
 <img loading="lazy" decoding="async" class="secimg" src="/img/dash-checker.jpg" alt="Link checker">
-<h2>Link Checker — Koi Bhi Page Khol Ke Test Karo</h2>
-<p class="sub">CaptionStudio ka koi bhi link daalo — title, description, content, photo, SEO score sab turant check hoga.</p>
+<h2>Link Checker — CaptionStudio Page Test Karo</h2>
+<p class="sub">Sirf isi website ka link daalo — pehle HTTP status check hoga, phir title, description aur basic SEO checks dikhenge.</p>
 <input id="curl" value="https://captionstudio.in/" placeholder="https://captionstudio.in/blog/...">
 <button class="btn" style="margin-top:8px" onclick="scanURL()">Check Karo</button>
 <div id="cout" style="margin-top:12px"></div>
@@ -408,8 +411,8 @@ Owner ko report sirf: kya badla, kya kamzor hai, kya aage karna hai.</pre></deta
 
 <footer class="foot">
   <div class="fbrand"><img src="/img/dash-logo.jpg" alt="CaptionStudio logo"><div><b>CaptionStudio</b><span>Website Dashboard</span></div></div>
-  <nav class="flinks"><a href="#overview">Overview</a><a href="#pages">Saare Page</a><a href="#keywords">Keywords</a><a href="#tasks">Kaam Ki List</a><a href="#publish">Naya Article</a><a href="#checker">Link Checker</a></nav>
-  <div class="fmeta"><span class="fdot"></span> Saare system chal rahe hain<br><span>Data: Google Search + Analytics · Roz update hota hai</span></div>
+  <nav class="flinks"><a href="#overview">Overview</a><a href="#pages">Tracked Pages</a><a href="#keywords">Keywords</a><a href="#tasks">Kaam Ki List</a><a href="#publish">Naya Article</a><a href="#checker">Link Checker</a></nav>
+  <div class="fmeta">Dashboard snapshot<br><span>Data: Google Search + Analytics · update ka waqt upar dikhaya gaya hai</span></div>
   <button class="topbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Upar</button>
 </footer>
 <p class="sub" style="text-align:center;margin:16px 0">CaptionStudio Dashboard · Tumhari website, tumhare number · <a href="https://captionstudio.in/">captionstudio.in</a></p>
@@ -420,9 +423,16 @@ Owner ko report sirf: kya badla, kya kamzor hai, kya aage karna hai.</pre></deta
 <script>
 const P=JSON.parse(document.getElementById('dash-data').textContent);const D=P.data;
 const fmt=n=>Number(n||0).toLocaleString('en-IN');
-function delta(now,prev,suffix){now=Number(now);prev=Number(prev);if(!prev)return '<span class="delta">—</span>';let ch=((now-prev)/prev*100);let goodUp=ch>=0;if(suffix==='pos')goodUp=ch<=0;return '<span class="delta '+(goodUp?'good':'bad')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(1)+'% pichhle 28 din se</span>'}
-let g=D.generated_at||P.generated_at;let _g1=document.getElementById('gen1');if(_g1)_g1.innerText=new Date(P.generated_at).toLocaleString('en-IN');document.querySelectorAll('.genx').forEach(e=>e.innerText=new Date(P.generated_at).toLocaleString('en-IN'));document.getElementById('gen2').innerText=new Date(P.generated_at).toLocaleString('en-IN');
-if(D.ga_daily&&D.ga_daily.length){let a=D.ga_daily[0].date,b=D.ga_daily[D.ga_daily.length-1].date;document.getElementById('range').innerText=a+' se '+b+' tak ka haal — Google Search aur Analytics ke asli number. Koi andaza nahi.'}
+function delta(now,prev,suffix){now=Number(now);prev=Number(prev);if(!prev)return '<span class="delta">—</span>';let ch=((now-prev)/prev*100);let goodUp=ch>=0;if(suffix==='pos')goodUp=ch<=0;return '<span class="delta '+(goodUp?'good':'bad')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(1)+'% pichhle period se</span>'}
+let g=D.generated_at||P.generated_at;
+let updated=new Date(g).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',dateStyle:'medium',timeStyle:'short'})+' IST';
+document.getElementById('snapshotDate').textContent=updated;
+let _g1=document.getElementById('gen1');if(_g1)_g1.innerText=updated;document.querySelectorAll('.genx').forEach(e=>e.innerText=updated);document.getElementById('gen2').innerText=updated;
+if(D.ga_daily&&D.ga_daily.length){
+ let gaStart=D.ga_daily[0].date,gaEnd=D.ga_daily[D.ga_daily.length-1].date;
+ let searchDates=D.gsc_daily||[];
+ document.getElementById('range').innerText='Analytics: '+gaStart+' se '+gaEnd+(searchDates.length?' · Google Search: '+searchDates[0].date+' se '+searchDates[searchDates.length-1].date:' · Google Search data abhi nahi hai')+'. Search ke naye din der se aa sakte hain.';
+}
 // KPI
 (function(){
  let gt=D.ga_total, gp=D.ga_total_prev, st=D.gsc_total, sp=D.gsc_total_prev;
@@ -442,10 +452,14 @@ if(D.ga_daily&&D.ga_daily.length){let a=D.ga_daily[0].date,b=D.ga_daily[D.ga_dai
  let a=D.ga_daily||[], b={};(D.gsc_daily||[]).forEach(x=>b[x.date]=x.clicks);
  let max=Math.max(...a.map(x=>x.views),1);let W=900,H=210,pad=28;
  let pts=a.map((x,i)=>[pad+i*(W-2*pad)/Math.max(a.length-1,1), H-18-(x.views/max)*(H-48)]);
- let pts2=a.map((x,i)=>{let v=b[x.date]||0;return [pad+i*(W-2*pad)/Math.max(a.length-1,1), H-18-(v/max)*(H-48)]});
+ let pts2=a.map((x,i)=>Object.prototype.hasOwnProperty.call(b,x.date)?[pad+i*(W-2*pad)/Math.max(a.length-1,1), H-18-(b[x.date]/max)*(H-48)]:null);
  let line=p=>p.map((x,i)=>(i?'L':'M')+x[0].toFixed(1)+','+x[1].toFixed(1)).join(' ');
- document.getElementById('chart').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;border:1px solid var(--line);border-radius:14px;background:#fff"><path d="'+line(pts)+' L '+(W-pad)+','+(H-18)+' L '+pad+','+(H-18)+' Z" fill="rgba(249,115,22,.12)"/><path d="'+line(pts)+'" fill="none" stroke="#e8440a" stroke-width="2.5"/><path d="'+line(pts2)+'" fill="none" stroke="#191919" stroke-width="2"/></svg>';
- document.getElementById('chartNote').innerText='Sabse zyada views ek din me '+fmt(max)+' — graph me upar-niche normal hai, achanak seedha girna hi khatra hai.';
+ // A missing Search date is not a day with zero clicks. Break the line at missing dates.
+ let searchLine='',hasPrevious=false;
+ pts2.forEach(point=>{if(!point){hasPrevious=false;return}searchLine+=(hasPrevious?' L ':' M ')+point[0].toFixed(1)+','+point[1].toFixed(1);hasPrevious=true});
+ document.getElementById('chart').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;border:1px solid var(--line);border-radius:14px;background:#fff"><path d="'+line(pts)+' L '+(W-pad)+','+(H-18)+' L '+pad+','+(H-18)+' Z" fill="rgba(249,115,22,.12)"/><path d="'+line(pts)+'" fill="none" stroke="#e8440a" stroke-width="2.5"/><path d="'+searchLine+'" fill="none" stroke="#191919" stroke-width="2"/></svg>';
+ let pending=a.filter(x=>!Object.prototype.hasOwnProperty.call(b,x.date)).length;
+ document.getElementById('chartNote').innerText='Sabse zyada views ek din me '+fmt(max)+'. '+(pending?pending+' din ka Search data abhi available nahi hai — graph me zero nahi dikhaya gaya.':'Search aur Analytics ki sabhi dates available hain.');
 })();
 // merged pages
 function basePath(u){return u.replace('https://captionstudio.in','').split('#')[0]||'/'}
@@ -460,6 +474,7 @@ let PAGES=allPaths.map(p=>{let ga=GA[p]||{views:0,sessions:0},gs=GS[p]||{clicks:
  else if(ga.views<25&&gs.imp<60){status='bad';label='Kamzor'}
  else if(gs.imp>=100&&gs.ctr<6){status='bad';label='Kamzor'}
  return {p,ga,gs,seo,status,label}}).sort((a,b)=>(b.ga.views+b.gs.clicks)-(a.ga.views+a.gs.clicks));
+document.getElementById('trackedCount').textContent=PAGES.length;
 // insights
 (function(){
  let downP=PAGES.filter(x=>x.status==='bad').slice(0,3);let star=PAGES.filter(x=>x.status==='star').slice(0,2);
@@ -514,13 +529,27 @@ function checkTopic(){
  let hits=(P.blogs||[]).filter(b=>{let t=b.title.toLowerCase();return words.filter(w=>t.includes(w)).length>=2});
  out.innerHTML=hits.length?'<span class="pill p-bad">Ruko — Milta-Julta Hai</span><p style="margin-top:8px">Ye pehle se lagbhag hai:</p><ul>'+hits.map(h=>'<li><a href="https://captionstudio.in/'+h.link+'" target="_blank">'+h.title+'</a></li>').join('')+'</ul><p class="sub">Wahi banana hai to usi purane ko behtar karo — naya banaya to dono Google me takrayenge (spam jaisa lagega).</p>':'<span class="pill p-good">Naya Topic Hai</span><p class="sub" style="margin-top:8px">Aisa koi article list me nahi mila. Plan banao, natural review karo, Tue/Thu/Sat 7 PM live karo.</p>';
 }
-// link checker
+// Browser se sirf apni site ke HTML pages check ho sakte hain; external sites ke liye server-side checker chahiye.
 async function scanURL(){
- let u=document.getElementById('curl').value.trim();let out=document.getElementById('cout');out.innerHTML='Check ho raha hai...';
- try{let t0=Date.now();let r=await fetch(u);let ms=Date.now()-t0;let h=await r.text();let d=new DOMParser().parseFromString(h,'text/html');
- let title=(d.querySelector('title')||{}).textContent||'';let desc=(d.querySelector('meta[name="description"]')||{}).content||'';let h1=d.querySelectorAll('h1').length;let words=(d.body?d.body.innerText:'').trim().split(/\s+/).length;let imgs=[...d.querySelectorAll('img')];let noalt=imgs.filter(i=>!(i.getAttribute('alt')||'').trim()).length;let canon=!!d.querySelector('link[rel="canonical"]');let sch=d.querySelectorAll('script[type="application/ld+json"]').length;let og=!!d.querySelector('meta[property="og:image"]');
- let s=100,iss=[];if(!title){s-=15;iss.push('Title nahi hai')}else if(title.length<30||title.length>65){s-=5;iss.push('Title '+title.length+' akshar — 40-60 rakho')}if(!desc){s-=15;iss.push('Description nahi hai — click kam milega')}else if(desc.length<100||desc.length>165){s-=5;iss.push('Description '+desc.length+' akshar — 140-160 rakho')}if(h1!==1){s-=10;iss.push('H1 count '+h1+' — sirf 1 chahiye')}if(!canon)s-=5,iss.push('Canonical nahi hai');if(words<300){s-=15;iss.push('Content bahut kam: '+words+' shabd')}else if(words<800){s-=7;iss.push('Content kam: '+words+' shabd — 800+ karo')}if(noalt){s-=7;iss.push(noalt+' photo par naam (ALT) nahi hai')}if(!sch){s-=7;iss.push('Schema nahi hai')}if(!og){s-=5;iss.push('Share photo (OG) nahi hai')}if(ms>3000){s-=6;iss.push('Page slow: '+ms+'ms')}
- out.innerHTML='<div style="font-size:44px;font-weight:900;color:var(--o)">'+s+'/100</div><p><b>'+title+'</b></p><p class="sub">'+(desc||'Description nahi hai')+'</p><p class="sub">'+ms+'ms · '+fmt(words)+' shabd · H1 '+h1+' · Photo '+imgs.length+'</p>'+(iss.length?'<h3>Kya Theek Karna Hai</h3><ul>'+iss.map(i=>'<li>'+i+'</li>').join('')+'</ul>':'<p>✅ Koi bada issue nahi mila.</p>')}catch(e){out.innerHTML='<p>Check nahi hua — link theek se daalo.</p>'}
+ const input=document.getElementById('curl').value.trim(),out=document.getElementById('cout');
+ let url;
+ try{url=new URL(input,location.href)}catch(e){out.textContent='Valid URL daalo.';return}
+ if(url.origin!==location.origin||!['http:','https:'].includes(url.protocol)){
+  out.textContent='Sirf isi website ke link check ho sakte hain; doosri website browser se check nahi ho sakti.';return;
+ }
+ out.textContent='Check ho raha hai...';
+ try{
+  const t0=Date.now(),r=await fetch(url.href),ms=Date.now()-t0;
+  if(!r.ok){out.textContent='Link nahi khula — HTTP '+r.status+(r.status===404?' (page nahi mila).':'.')+' SEO score nahi diya gaya.';return}
+  if(!(r.headers.get('content-type')||'').includes('text/html')){out.textContent='Link chal raha hai (HTTP '+r.status+'), lekin ye HTML page nahi hai.';return}
+  let h=await r.text(),d=new DOMParser().parseFromString(h,'text/html');
+  let title=(d.querySelector('title')||{}).textContent||'',desc=(d.querySelector('meta[name="description"]')||{}).content||'';
+  let h1=d.querySelectorAll('h1').length,words=(d.body?d.body.innerText:'').trim().split(/\s+/).length,imgs=[...d.querySelectorAll('img')];
+  let noalt=imgs.filter(i=>!(i.getAttribute('alt')||'').trim()).length,canon=!!d.querySelector('link[rel="canonical"]'),sch=d.querySelectorAll('script[type="application/ld+json"]').length,og=!!d.querySelector('meta[property="og:image"]');
+  let s=100,iss=[];if(!title){s-=15;iss.push('Title nahi hai')}else if(title.length<30||title.length>65){s-=5;iss.push('Title '+title.length+' akshar — 40-60 rakho')}if(!desc){s-=15;iss.push('Description nahi hai — click kam milega')}else if(desc.length<100||desc.length>165){s-=5;iss.push('Description '+desc.length+' akshar — 140-160 rakho')}if(h1!==1){s-=10;iss.push('H1 count '+h1+' — sirf 1 chahiye')}if(!canon)s-=5,iss.push('Canonical nahi hai');if(words<300){s-=15;iss.push('Content bahut kam: '+words+' shabd')}else if(words<800){s-=7;iss.push('Content kam: '+words+' shabd — 800+ karo')}if(noalt){s-=7;iss.push(noalt+' photo par naam (ALT) nahi hai')}if(!sch){s-=7;iss.push('Schema nahi hai')}if(!og){s-=5;iss.push('Share photo (OG) nahi hai')}if(ms>3000){s-=6;iss.push('Page slow: '+ms+'ms')}
+  const escapeHTML=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  out.innerHTML='<p class="sub">HTTP '+r.status+(r.redirected?' · Redirect ke baad khula':'')+' · Basic SEO checks (full audit nahi)</p><div style="font-size:44px;font-weight:900;color:var(--o)">'+s+'/100</div><p><b>'+escapeHTML(title)+'</b></p><p class="sub">'+escapeHTML(desc||'Description nahi hai')+'</p><p class="sub">'+ms+'ms · '+fmt(words)+' shabd · H1 '+h1+' · Photo '+imgs.length+'</p>'+(iss.length?'<h3>Kya Theek Karna Hai</h3><ul>'+iss.map(i=>'<li>'+i+'</li>').join('')+'</ul>':'<p>✅ Basic SEO checks me koi bada issue nahi mila.</p>');
+ }catch(e){out.textContent='Link check nahi hua — network ya browser error. Dobara try karo.'}
 }
 // findings / pichhle 7 din / khud ka plan
 (function(){
@@ -540,11 +569,15 @@ async function scanURL(){
  // Chart ki line kheenchti hui ayegi
  document.querySelectorAll('#chart path').forEach(function(p){try{let L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;p.classList.add('drawline');requestAnimationFrame(()=>{p.style.strokeDashoffset='0'})}catch(e){}});
  // Scroll par hisse ubhar ke ayenge
- let io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.06});
- document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ // Large mobile tables can exceed the viewport by many screens: a percentage threshold can never be reached.
+ if('IntersectionObserver' in window){
+  let io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+ }else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
 })();
 // commits (dashboard apne khud ke commit nahi dikhayega, sirf website ke asli badlav)
-document.getElementById('commits').innerHTML='<div class="tablewrap"><table><thead><tr><th>Date</th><th>Website Me Badlav</th></tr></thead><tbody>'+(P.commits||[]).filter(c=>!/jarvis|ai-control|ai-agent|dashboard/i.test(c.msg)).map(c=>'<tr><td>'+c.date+'</td><td>'+c.msg+'</td></tr>').join('')+'</tbody></table></div>';
+let websiteCommits=(P.commits||[]).filter(c=>!/jarvis|ai-control|ai-agent|dashboard/i.test(c.msg));
+document.getElementById('commits').innerHTML=websiteCommits.length?'<div class="tablewrap"><table><thead><tr><th>Date</th><th>Website Me Badlav</th></tr></thead><tbody>'+websiteCommits.map(c=>'<tr><td>'+c.date+'</td><td>'+c.msg+'</td></tr>').join('')+'</tbody></table></div>':'<p class="sub">Is snapshot mein website commit entries available nahi hain.</p>';
 
 
 // --- Ek navigation: hamburger + tabbar + scroll par highlight ---
