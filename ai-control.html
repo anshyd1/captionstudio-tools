@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>AI Control — CaptionStudio</title>
+<meta name="description" content="Private AI control for CaptionStudio owner.">
+<style>
+:root{--orange:#e8440a;--orange2:#f97316;--pale:#fff3ee;--ink:#191919;--muted:#6b6b6b;--line:#e5e5e5}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#fff;color:var(--ink);line-height:1.6}
+.top{border-bottom:1px solid var(--line);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;max-width:980px;margin:0 auto}
+.logo{font-weight:900;font-size:20px}.logo span{color:var(--orange)}
+.wrap{max-width:980px;margin:0 auto;padding:20px}
+.card{border:1px solid #ffe3d9;border-radius:16px;padding:20px;margin-bottom:16px;background:#fff;box-shadow:0 4px 24px rgba(232,68,10,.06)}
+h1{font-size:24px;line-height:1.3}h2{font-size:17px;margin-bottom:8px}h3{font-size:15px;margin:14px 0 6px}
+.muted{color:var(--muted);font-size:13.5px}
+.btn{display:block;width:100%;background:var(--orange);color:#fff;border:none;padding:12px 16px;border-radius:10px;font-weight:700;cursor:pointer;margin:7px 0;font-size:15px}
+.btn.light{background:var(--pale);color:#c2410c;border:1px solid #fed7aa}
+input{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;font-size:15px}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;margin:10px 0}
+.step{background:var(--orange);color:#fff;padding:7px 11px;border-radius:99px;font-weight:700}.arr{color:#fdba74}
+.save{background:#191919;color:#fff;border-radius:16px;padding:20px;margin-bottom:16px}.save code{background:#292524;padding:3px 8px;border-radius:6px;color:#fdba74;word-break:break-all}
+.score{font-size:46px;font-weight:900;color:var(--orange)}
+.HIGH{color:#dc2626}.MED{color:#d97706}.badge{font-size:11px;background:#ffedd5;padding:2px 8px;border-radius:99px;white-space:nowrap}
+li{margin:7px 0 7px 18px}a{color:var(--orange)}
+pre{white-space:pre-wrap;background:var(--pale);border:1px solid #ffe3d9;padding:12px;border-radius:10px;font-size:12.5px;overflow:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.pill{border:1px solid #ffe3d9;background:#fff7ed;border-radius:12px;padding:12px;font-size:13.5px}
+.ok{color:#15803d;font-weight:700}
+</style>
+</head>
+<body>
+<div class="top"><div class="logo">Caption<span>Studio</span> · AI Control</div><span class="badge">Apni Website Par · Koi Third-Party Nahi</span></div>
+<div class="wrap">
+
+<div class="save">
+<h1 style="color:#fff">Bas Ye Ek Link Save Kar Lo</h1>
+<p style="color:#d6d3d1;font-size:14px;margin:8px 0">Ye tumhari apni website ka link hai:</p>
+<p><code>https://captionstudio.in/ai-control</code></p>
+<p style="color:#d6d3d1;font-size:13.5px;margin-top:10px">Ye leak ho jaye to bhi koi problem nahi — is page mein koi PAT, koi API key hai hi nahi. Saari keys AI ke paas server par hain. Tumhara kaam sirf topic ya link dena hai.</p>
+</div>
+
+<div class="card">
+<h2>Pipeline — Tum Bolo, AI Karega</h2>
+<div class="flow"><span class="step">1 Create</span><span class="arr">→</span><span class="step">2 Review 85+</span><span class="arr">→</span><span class="step">3 Image</span><span class="arr">→</span><span class="step">4 Publish</span><span class="arr">→</span><span class="step">5 Index</span><span class="arr">→</span><span class="step">6 Track</span></div>
+<p class="muted">Naya article: Create 20-30 min + Review 10 min + Image 5 min + Publish/Index 5 min = <b>40-50 min mein live</b>. Publish ka best time: <b>Tue / Thu / Sat shaam 7 PM IST</b>. Uske baad 24 ghante, 7 din aur 28 din par GA4 + GSC se track hoga — traffic nahi aaya to page "WEAK" bolke Daily List mein aa jayega.</p>
+<div class="grid" style="margin-top:12px">
+<div class="pill"><span class="ok">✅ GitHub</span><br>Repo connect hai</div>
+<div class="pill"><span class="ok">✅ Google Search Console</span><br>Owner access, live data</div>
+<div class="pill"><span class="ok">✅ GA4 Analytics</span><br>Property connect, live data</div>
+<div class="pill">📅 Report kab update hua:<br><b id="gen">...</b></div>
+</div>
+</div>
+
+<div class="card">
+<h2>Naya Article — Topic Likh Do Bas</h2>
+<input id="topic" placeholder="Jaise: Birthday Captions for Best Friend, Attitude Bio for Boys...">
+<button class="btn" onclick="plan()">Plan Banao — Title, Outline, Image, Kab Publish</button>
+<div id="planout"></div>
+<p class="muted">Plan ban jaye to AI ko bolo: <b>"ye plan live karo"</b> — wo likhega, achhi white-orange minimal image banayega, review karke live karega, index karega.</p>
+</div>
+
+<div class="card">
+<h2>Link Review — SEO Score (Live Scan)</h2>
+<input id="url" value="https://captionstudio.in/" placeholder="https://captionstudio.in/blog/...">
+<button class="btn" onclick="scan()">Is Link Ka Score Dekho</button>
+<div id="out"></div>
+<p class="muted">Score 85 se kam hai to publish/review pass nahi — pehle usi page par dikhe hue fix karo.</p>
+</div>
+
+<div class="card">
+<h2>Asli Data — GA4 + Google Search (AI Update Karta Hai)</h2>
+<button class="btn light" onclick="showData()">Top Pages Aur Keywords Dekho</button>
+<div id="dataout"></div>
+</div>
+
+<div class="card">
+<h2>Daily Task List</h2>
+<p class="muted">Har naya AI agent yahi list padhke kaam uthata hai. Agent isay GitHub se update karta rahega.</p>
+<div id="tasks"><p class="muted">Load ho raha hai...</p></div>
+</div>
+
+<div class="card">
+<h2>Hafte Ka Calendar</h2>
+<div id="cal"></div>
+</div>
+
+<div class="card">
+<h2>Naye AI Ke Liye Ek Link</h2>
+<p class="muted">Koi bhi naya AI aaye, use bas ye dena hai. Wo yahi padhke purana kaam, rules aur pending list samajh jayega:</p>
+<p style="margin:10px 0"><code style="background:#fff3ee;padding:4px 8px;border-radius:6px">https://captionstudio.in/ai-agent</code></p>
+<p class="muted">Report file: <a href="/ai-report.json" target="_blank">/ai-report.json</a> — isme bhi koi secret nahi hai.</p>
+</div>
+
+<p class="muted" style="text-align:center;padding:10px">CaptionStudio · Apni site, apna control · Koi third-party dashboard nahi</p>
+</div>
+
+<script>
+let REPORT=null;
+async function load(){
+  try{ REPORT=await (await fetch('/ai-report.json',{cache:'no-store'})).json();
+    document.getElementById('gen').innerText=new Date(REPORT.generated_at).toLocaleString('en-IN');
+    renderTasks(); renderCal();
+  }catch(e){ document.getElementById('tasks').innerHTML='<p>Report load nahi hua — AI ko bolo report update karo.</p>'; }
+}
+function renderTasks(){
+  if(!REPORT) return;
+  document.getElementById('tasks').innerHTML='<ul>'+REPORT.tasks.map(t=>'<li><b class="'+t.priority+'">['+t.priority+']</b> <span class="badge">'+t.category+'</span> '+t.title+' <span style="color:#78716c">'+(t.detail||'')+'</span> '+(t.status==='done'?'✅ Done':'')+'</li>').join('')+'</ul>';
+}
+function renderCal(){
+  if(!REPORT||!REPORT.calendar) return;
+  document.getElementById('cal').innerHTML='<ul>'+REPORT.calendar.map(c=>'<li><b>'+c.day+'</b> — '+c.work+'</li>').join('')+'</ul>';
+}
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,70)}
+function plan(){
+  let t=document.getElementById('topic').value.trim(); if(!t){alert('Pehle topic likho');return}
+  let s=slug(t)+'-2026';
+  document.getElementById('planout').innerHTML=
+  '<h3>URL</h3><p>https://captionstudio.in/blog/'+s+'</p>'+
+  '<h3>Title Ideas</h3><ul><li>'+t+' 2026 — Copy-Paste Viral Lines + Hook Formula</li><li>Best '+t+' for Instagram Reels (Hinglish + English)</li><li>'+t+': 100+ Ready Lines Jo Views Layengi</li></ul>'+
+  '<h3>Outline</h3><ul><li>H1: topic + 2026 + benefit</li><li>Intro 100 words</li><li>H2: Copy-Paste Best Lines</li><li>H2: Hook Formula</li><li>H2: Hashtag Set (3-5)</li><li>H2: Aam Galtiyan</li><li>H2: FAQ (5 sawal) + Schema</li><li>Related tools/blog ke 3-5 internal links</li></ul>'+
+  '<h3>Image (AI banayega)</h3><pre>White and orange minimal Instagram creator illustration, young Indian creator holding smartphone with caption text bubbles, clean white background, soft orange accents (#e8440a), flat modern vector, premium minimal, no clutter\nFile: '+s+'.webp | Size: 1200x675 aur 1200x630 | ALT: '+t+' — best Instagram captions 2026</pre>'+
+  '<h3>Kab Live Karein</h3><p>Agla <b>Tue / Thu / Sat, shaam 7:00 PM IST</b> · Kul time 40-50 min · Review mein <b>SEO Score 85+</b> lazmi</p>'+
+  '<h3>Live Ke Baad</h3><ul><li>Sitemap mein hai ya nahi check</li><li>Google Search mein index request</li><li>24 ghante / 7 din / 28 din par GA4 + Search data track</li></ul>'+
+  '<p class="muted">Ab AI ko bolo: <b>"ye plan live karo"</b></p>';
+}
+async function scan(){
+  let u=document.getElementById('url').value.trim(); let out=document.getElementById('out');
+  out.innerHTML='<p>Scan ho raha hai...</p>';
+  try{
+    let t0=Date.now(); let r=await fetch(u); let ms=Date.now()-t0; let html=await r.text();
+    let d=new DOMParser().parseFromString(html,'text/html');
+    let title=(d.querySelector('title')||{}).textContent||'';
+    let desc=(d.querySelector('meta[name="description"]')||{}).content||'';
+    let h1=d.querySelectorAll('h1').length; let h2=d.querySelectorAll('h2').length;
+    let words=(d.body?d.body.innerText:'').trim().split(/\s+/).length;
+    let imgs=[...d.querySelectorAll('img')]; let noalt=imgs.filter(i=>!(i.getAttribute('alt')||'').trim()).length;
+    let canon=!!d.querySelector('link[rel="canonical"]'); let schema=d.querySelectorAll('script[type="application/ld+json"]').length;
+    let og=!!d.querySelector('meta[property="og:image"]'); let links=d.querySelectorAll('a[href]').length;
+    let score=100, iss=[];
+    if(!title){score-=15;iss.push('Title missing hai')}
+    else if(title.length<30||title.length>65){score-=5;iss.push('Title '+title.length+' char hai — 40-60 ke beech rakho: '+title)}
+    if(!desc){score-=15;iss.push('Meta description missing — CTR kharab hoga')}
+    else if(desc.length<100||desc.length>165){score-=5;iss.push('Meta description '+desc.length+' char — 140-160 rakho')}
+    if(h1!==1){score-=10;iss.push('H1 count '+h1+' hai — sirf 1 hona chahiye')}
+    if(!canon){score-=5;iss.push('Canonical missing')}
+    if(words<300){score-=15;iss.push('Content bahut patla: '+words+' words — 800+ karo')}
+    else if(words<800){score-=7;iss.push('Content kam hai: '+words+' words — 800+ karo')}
+    if(noalt){score-=7;iss.push(noalt+' image mein ALT missing hai')}
+    if(!schema){score-=7;iss.push('Schema (JSON-LD) missing hai')}
+    if(!og){score-=5;iss.push('OG image missing hai')}
+    if(ms>3000){score-=6;iss.push('Page slow hai: '+ms+'ms')}
+    let grade=score>=85?'A — Excellent, publish ke liye ready':score>=70?'B — Good, chhote fix baki':score>=50?'C — Weak, fix zaruri':'D — Bahut weak, turant fix';
+    out.innerHTML='<div class="score">'+score+'/100</div><p><b>'+grade+'</b> · '+ms+'ms · '+words+' words · H1 '+h1+' · H2 '+h2+' · Images '+imgs.length+'</p><p><b>Title:</b> '+title+'</p><p class="muted">'+(desc||'Meta nahi hai')+'</p>'+(iss.length?'<h3>Kya Kharab / Weak Hai</h3><ul>'+iss.map(i=>'<li>'+i+'</li>').join('')+'</ul>':'<p>✅ Koi bada issue nahi mila</p>');
+  }catch(e){ out.innerHTML='<p>Scan fail — link sahi hai ya nahi check karo. ('+e.message+')</p>'; }
+}
+function showData(){
+  if(!REPORT){alert('Report load ho raha hai, 2 sec ruko');return}
+  let g=REPORT.gsc_top_pages||[], a=REPORT.ga4_top_pages||[];
+  document.getElementById('dataout').innerHTML=
+  '<h3>Search Se Aane Wale (28 din)</h3><ul>'+g.map(x=>'<li><b>'+x.clicks+' clicks</b> · '+x.impressions+' logon ko dikha · CTR '+x.ctr+'% · Position '+x.position+' — '+x.page.replace('https://captionstudio.in','')+'</li>').join('')+'</ul>'+
+  '<h3>Visitors (GA4, 28 din)</h3><ul>'+a.map(x=>'<li><b>'+x.views+' views</b> · '+x.sessions+' sessions — '+x.page+'</li>').join('')+'</ul>'+
+  '<p class="muted">Ye data AI har report mein fresh karke yahi update karega. Detail ke liye AI ko bolo "aaj ka report do".</p>';
+}
+load();
+</script>
+</body>
+</html>
