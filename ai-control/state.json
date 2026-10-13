@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
   "last_agent_update": "2026-10-13T15:39:28Z",
@@ -18,7 +18,7 @@
       "changes without reliable before/after evidence"
     ],
     "stop_conditions": [
-      "API credentials missing or invalid",
+      "Fresh private API work blocked if credentials are missing; continue safe public read-only diagnosis",
       "GA4/GSC coverage incomplete for a comparison",
       "unexpected deploy failure",
       "repository has changed since inspection"
@@ -31,7 +31,7 @@
       "status": "investigate",
       "title": "24 June 2026 Google Search visibility collapse ka root cause verify karo",
       "evidence": "Equal 7-day windows 17–23 Jun vs 25 Jun–1 Jul: GSC 5,541→665 clicks (-88.0%) and 183,667→4,279 impressions (-97.7%); GA4 2,677→903 views (-66.3%). Not just GA4 tagging. Google officially began a global spam update 24 Jun 09:00 PDT (16:00 UTC), but GA4 organic sessions slowed around 10–15 UTC; correlation is not proof of cause.",
-      "next": "Read /ai-control/research-june24.txt. Check Manual Actions/Security Issues and Indexing UI, then deployed server/Cloudflare/DNS evidence around 10–16 UTC. Audit a small affected-page sample against Google spam policies and review generic redirects; get owner approval before risky changes.",
+      "next": "Read /ai-control/research-june24.txt. Owner reports no Manual Action as of 13 Oct (not independently verified); check Security Issues and Indexing UI if access permits, then deployed server/Cloudflare/DNS evidence around 10–16 UTC. Audit a small affected-page sample against Google spam policies and review generic redirects; get owner approval before risky changes.",
       "approval_required_for_change": true
     },
     {
@@ -49,7 +49,16 @@
       "status": "waiting_for_new_data",
       "title": "Per-page trends ka second comparable snapshot collect karo",
       "evidence": "page-history.json mein abhi sirf 13 Oct ka baseline hai.",
-      "next": "GA4/GSC API access milne par same-duration windows se fresh snapshot append karo; tabhi page-level rise/fall claim karo.",
+      "next": "With private API access, export comparable complete 7d/28d GSC page/query data and GA4 organic engagement; append a second per-page sample with matching definitions. Until then, no rise/fall claims or numeric target.",
+      "approval_required_for_change": false
+    },
+    {
+      "id": "traffic-engagement-baseline",
+      "priority": "P1",
+      "status": "waiting_for_private_access",
+      "title": "Qualified search traffic + real engagement baseline establish karo",
+      "evidence": "Public GSC daily snapshot has 25 dates and only top-query rows; page-history has one baseline. No verified non-branded 28d comparator, organic engaged-session counts or tool-use event baseline.",
+      "next": "Securely obtain authorised GSC/GA4 access; export two complete 28-day and two complete 7-day comparable windows by query/page and organic engagement; document branded rule, tagging/consent coverage and event definitions. Set a numeric target only after validation.",
       "approval_required_for_change": false
     },
     {
@@ -76,7 +85,12 @@
         "HTTP 404 has no SEO score",
         "live deployment verified"
       ],
-      "next_agent": "Investigate measurement drop with evidence; establish comparable per-page trend history."
+      "next_agent": "Investigate measurement drop with evidence; establish comparable per-page trend history.",
+      "agent_name": "Legacy agent (name not recorded)",
+      "agent_id": null,
+      "identity_verified": false,
+      "started_at": null,
+      "ended_at": null
     },
     {
       "id": "2026-10-13-multipage-control-centre",
@@ -91,7 +105,12 @@
         "live JSON and plain-text guide accessible",
         "checker reports HTTP 404 without SEO score"
       ],
-      "next_agent": "Owner will supply GA4/GSC access privately. Refresh the snapshot with real API data, validate comparable windows, append a new page-history sample and investigate 6 Oct measurement change. Never add API keys to public files."
+      "next_agent": "Owner will supply GA4/GSC access privately. Refresh the snapshot with real API data, validate comparable windows, append a new page-history sample and investigate 6 Oct measurement change. Never add API keys to public files.",
+      "agent_name": "Legacy agent (name not recorded)",
+      "agent_id": null,
+      "identity_verified": false,
+      "started_at": null,
+      "ended_at": null
     }
   ],
   "data_sources": {
@@ -100,5 +119,55 @@
     "ga4_property_id": "526303859",
     "gsc_property": "sc-domain:captionstudio.in",
     "credential_storage": "Never put access tokens, OAuth secrets or service account JSON in these public files."
+  },
+  "agent_identity_policy": {
+    "self_select_name": true,
+    "name_rule": "Pick a short distinctive display name on first session; reuse it on future sessions when possible. Check existing session_log to avoid confusing collisions.",
+    "agent_id_rule": "Create a stable lowercase slug plus a short unique suffix. Same display name does not prove same agent.",
+    "proof_rule": "Display name is self-declared; only GitHub commit, dated evidence, tests and live verification support a verified-work claim."
+  },
+  "first_open_behavior": {
+    "default": "Read guide, choose own name, check data freshness and last handoff, then begin safe read-only diagnosis without routine questions.",
+    "questions_only_when": "Private API/repo access is missing, a risky action needs owner approval, or a required goal is truly ambiguous. Ask one specific question after stating what was already checked.",
+    "no_tools": "Provide evidence-backed read-only findings and a proposed next action. Do not claim a refresh, edit or attendance."
+  },
+  "owner_reported_manual_actions": {
+    "status": "none_reported",
+    "reported_at_ist": "2026-10-13",
+    "source": "owner statement in conversation",
+    "independently_verified": false,
+    "note": "No reported manual action does not rule out algorithmic ranking effects."
+  },
+  "goals": {
+    "priority": "Grow qualified search traffic AND useful engagement; monetisation is downstream, never at the cost of spam risk.",
+    "north_star": {
+      "name": "Non-branded Google Web clicks to useful landing pages",
+      "window": "complete rolling 28 days vs preceding complete 28 days",
+      "baseline_status": "pending: current public snapshot has only 25 GSC daily dates and only top queries",
+      "target_rule": "Set a numeric target only after two comparable complete windows; seek sustained improvement, not one-day spikes."
+    },
+    "supporting": [
+      {
+        "name": "GSC impressions and clicks by query/page",
+        "window": "complete 7d and 28d windows",
+        "why": "Find lost visibility and intent-specific opportunities."
+      },
+      {
+        "name": "GA4 organic engaged sessions and engagement time",
+        "window": "complete 7d and 28d windows",
+        "why": "Confirm visitors find the page useful; current snapshot has session duration, not a verified engaged-session baseline."
+      },
+      {
+        "name": "Meaningful tool use / CTA events",
+        "window": "tracked after event instrumentation is verified",
+        "why": "Traffic alone is not success if visitors cannot complete their task."
+      }
+    ],
+    "quality_guardrails": [
+      "No bulk AI articles or overlapping keyword pages just to increase traffic",
+      "No misleading CTR titles, forced dwell time or manipulative redirects",
+      "New content only for distinct intent with original user value and owner approval",
+      "No manual action reported by owner as of 2026-10-13; algorithmic spam-update effect remains unconfirmed"
+    ]
   }
 }

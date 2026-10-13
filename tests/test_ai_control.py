@@ -53,12 +53,20 @@ def main():
                     assert page.locator('[data-nav].active').count() == 1, route
                     assert page.locator('#app h1').count() == 1, route
                     assert page.evaluate('document.documentElement.scrollWidth') <= w, (label, route)
+                    assert page.locator('nav.sectionNav a').count() >= 1, (label, route)
+                    assert page.locator('.nextStep a').count() == 1, (label, route)
+                    first_jump = page.locator('nav.sectionNav a').first
+                    section_id = first_jump.get_attribute('href')[1:]
+                    first_jump.click()
+                    assert page.evaluate('location.hash') == '#' + section_id
+                    assert page.locator('#' + section_id).count() == 1
                     if route == '':
                         assert page.locator('.hero').bounding_box()['y'] < 390
                         expect(page.locator('#app')).to_contain_text('5,977')
                         expect(page.locator('#app')).to_contain_text('Verified historical change')
                         expect(page.locator('#app')).to_contain_text('5,541 clicks')
                         expect(page.locator('#app')).to_contain_text('GSC data')
+                        expect(page.locator('#app')).to_contain_text('Numeric baseline and target pending')
                     if route == 'pages':
                         expect(page.locator('#pageCount')).to_contain_text('62 of 62')
                         expect(page.locator('#app')).to_contain_text('One baseline')
@@ -69,10 +77,15 @@ def main():
                         expect(page.locator('#pageDetail')).to_contain_text('Waiting for another comparable')
                     if route == 'worklog':
                         expect(page.locator('#app')).to_contain_text('1 verified day')
-                        expect(page.locator('#app')).to_contain_text('Unverified historic notes')
+                        expect(page.locator('#app')).to_contain_text('Historical notes (not attendance)')
+                        expect(page.locator('#attendanceCount')).to_contain_text('1 verified IST day')
+                        page.locator('#agentFilter').select_option('legacy')
+                        assert page.locator('#attendanceRows .event').count() == 2
+                        expect(page.locator('#attendanceRows')).to_contain_text('Start: Not recorded')
                     if route == 'agent':
                         expect(page.locator('#app')).to_contain_text('https://captionstudio.in/ai-control/agent')
                         expect(page.locator('#app')).to_contain_text('No scheduler is configured')
+                        expect(page.locator('#app')).to_contain_text('Choose a distinctive self-declared agent name')
                     if route == 'checker':
                         page.locator('#checkUrl').fill(base + '/missing-page')
                         page.locator('#urlForm button').click()
