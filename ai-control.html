@@ -1,582 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>JARVIS — CaptionStudio</title>
-<meta name="description" content="CaptionStudio owner AI control.">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Dashboard — CaptionStudio</title>
+<meta name="description" content="CaptionStudio website dashboard">
 <style>
-:root{--o:#e8440a;--o2:#f97316;--pale:#fff3ee;--ink:#191919;--mut:#6b6b6b;--line:#ffe3d9}
+:root{--o:#e8440a;--o2:#f97316;--pale:#fff3ee;--soft:#fff8f4;--ink:#191919;--mut:#6f6a66;--line:#f0ddd4;--green:#14804a;--gbg:#eaf7ef;--red:#c0271a;--rbg:#fdecea;--amber:#9a6206;--abg:#fff4d6}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#fff;color:var(--ink);line-height:1.6}
-.wrap{max-width:900px;margin:0 auto;padding:24px 18px 40px}
-.center{text-align:center}
-.orb{width:110px;height:110px;margin:8px auto;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff7ed,#ffedd5 45%,#fed7aa);border:2px solid #fdba74;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--o);letter-spacing:1px;box-shadow:0 0 0 10px #fff7ed,0 0 42px rgba(249,115,22,.35);animation:pulse 2.6s infinite}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.045)}100%{transform:scale(1)}}
-h1{font-size:25px}.mut{color:var(--mut);font-size:13.5px}
-.card{border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0;background:#fff;box-shadow:0 4px 24px rgba(232,68,10,.06)}
-h2{font-size:17px;margin-bottom:8px}h3{font-size:15px;margin:14px 0 6px}
-input{width:100%;padding:14px;border:1.5px solid #fed7aa;border-radius:12px;margin:7px 0;font-size:15.5px;outline:none}
-input:focus{border-color:var(--o2);box-shadow:0 0 0 4px rgba(249,115,22,.12)}
-.btn{display:block;width:100%;background:var(--o);color:#fff;border:none;padding:13px;border-radius:11px;font-weight:800;cursor:pointer;margin:7px 0;font-size:15px}
-.btn.light{background:var(--pale);color:#c2410c;border:1px solid #fed7aa}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:12px}
-.pill{border:1px solid var(--line);background:#fff7ed;border-radius:12px;padding:12px;font-size:13.5px}
-.ok{color:#15803d;font-weight:800}
-.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;margin:10px 0}
-.step{background:var(--o);color:#fff;padding:7px 11px;border-radius:99px;font-weight:700}.arr{color:#fdba74}
-.score{font-size:48px;font-weight:900;color:var(--o)}
-.HIGH{color:#dc2626}.MED{color:#d97706}.badge{font-size:11px;background:#ffedd5;padding:2px 8px;border-radius:99px;white-space:nowrap}
-li{margin:7px 0 7px 18px}a{color:var(--o)}
-pre{white-space:pre-wrap;background:var(--pale);border:1px solid var(--line);padding:12px;border-radius:10px;font-size:12.5px;overflow:auto}
-.say{background:#191919;color:#fff;border-radius:14px;padding:16px;font-size:14px}.say b{color:#fdba74}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#fff;color:var(--ink);font-size:14.5px;line-height:1.55}
+a{color:var(--o);text-decoration:none}
+.shell{display:flex;min-height:100vh}
+/* sidebar */
+.side{width:236px;flex:0 0 236px;border-right:1px solid var(--line);padding:20px 14px;position:sticky;top:0;height:100vh;background:#fff}
+.brand{font-weight:900;font-size:19px;padding:2px 10px 4px}.brand span{color:var(--o)}
+.brandsub{font-size:12px;color:var(--mut);padding:0 10px 16px}
+.nav a{display:flex;gap:9px;align-items:center;padding:10px;border-radius:10px;color:#333;font-weight:600;margin:2px 0}
+.nav a:hover,.nav a.on{background:var(--pale);color:var(--o)}
+.sidecard{margin-top:18px;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:13px;font-size:12.5px;color:var(--mut)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px}
+/* main */
+.main{flex:1;min-width:0;padding:24px;max-width:1180px;margin:0 auto}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:center;background:linear-gradient(180deg,#fff,#fff8f4);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 10px 35px rgba(232,68,10,.07)}
+.hero img{width:100%;border-radius:16px;display:block}
+h1{font-size:26px;line-height:1.2;letter-spacing:-.3px}h2{font-size:18px;margin-bottom:6px}h3{font-size:15px}
+.sub{color:var(--mut);font-size:13.5px}
+.sec{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 5px 25px rgba(232,68,10,.05)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin-top:14px}
+.kpi{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff}
+.kpi .lab{font-size:12px;color:var(--mut);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.kpi .num{font-size:27px;font-weight:900;margin:4px 0}
+.delta{font-size:12.5px;font-weight:700}.up{color:var(--red)}.down{color:var(--green)}
+/* traffic context me upar= badiya for views/clicks; JS sahi class dega */
+.good{color:var(--green)}.bad{color:var(--red)}
+.pill{display:inline-block;padding:3px 9px;border-radius:99px;font-size:11.5px;font-weight:800;white-space:nowrap}
+.p-good{background:var(--gbg);color:var(--green)}.p-mid{background:var(--abg);color:var(--amber)}.p-bad{background:var(--rbg);color:var(--red)}.p-info{background:var(--pale);color:var(--o)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;color:var(--mut);font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;padding:10px 8px;border-bottom:1px solid var(--line)}
+td{padding:11px 8px;border-bottom:1px solid #f7e9e1;vertical-align:top}
+tr.row{cursor:pointer}tr.row:hover{background:#fff8f4}
+.tablewrap{overflow-x:auto}
+.btn{background:var(--o);color:#fff;border:none;padding:11px 16px;border-radius:10px;font-weight:800;cursor:pointer}
+.btn.light{background:var(--pale);color:#b33406;border:1px solid #fed7aa}
+.chipbtn{background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:99px;cursor:pointer;font-weight:700}
+.chipbtn.on{background:var(--o);color:#fff;border-color:var(--o)}
+input,select{padding:11px 12px;border:1px solid #ead9d0;border-radius:10px;font-size:14.5px}
+input:focus{outline:none;border-color:var(--o2);box-shadow:0 0 0 4px rgba(249,115,22,.12)}
+.bar{height:9px;background:#ffeadf;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--o),var(--o2))}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.mini{border:1px solid var(--line);border-radius:14px;padding:15px;background:var(--soft)}
+li{margin:6px 0 6px 18px}
+.scorechip{font-weight:900;padding:4px 9px;border-radius:9px;background:var(--pale);color:var(--o)}
+details{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0;background:#fff}
+summary{cursor:pointer;font-weight:800}
+.mobnav{display:none}
+@media(max-width:860px){.side{display:none}.hero{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.main{padding:14px}.mobnav{display:flex;gap:8px;overflow-x:auto;padding:10px 2px;position:sticky;top:0;background:#fff;z-index:5}.mobnav a{white-space:nowrap;background:var(--pale);padding:8px 12px;border-radius:99px;color:#9a3412;font-weight:700}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="shell">
+<aside class="side">
+<div class="brand">Caption<span>Studio</span></div>
+<div class="brandsub">Website Dashboard</div>
+<nav class="nav">
+<a href="#overview" class="on">▦ &nbsp;Overview</a>
+<a href="#pages">▤ &nbsp;Saare Page</a>
+<a href="#keywords">⌕ &nbsp;Keywords</a>
+<a href="#sources">◔ &nbsp;Traffic Kahan Se</a>
+<a href="#tasks">✓ &nbsp;Kaam Ki List</a>
+<a href="#publish">✎ &nbsp;Naya Article Plan</a>
+<a href="#checker">◎ &nbsp;Link Checker</a>
+<a href="#updates">↻ &nbsp;Roz Ke Updates</a>
+</nav>
+<div class="sidecard"><span class="dot"></span><b style="color:#222">Sab system chal rahe hain</b><br>Google Search data<br>Analytics data<br>Website scan data<br><br>Last update:<br><b style="color:#222" id="gen1">—</b></div>
+<div class="sidecard">Ye page sirf dekhne ke liye hai. Isme koi password ya key nahi hai.<br><br><a href="https://captionstudio.in/" target="_blank">← Website kholo</a></div>
+</aside>
 
-<div class="center">
-<div class="orb">JARVIS</div>
-<h1>CaptionStudio <span style="color:var(--o)">JARVIS</span></h1>
-<p class="mut">Tumhara ek hi link. Dashboard bhi yehi, AI ka dimag bhi yehi, saara project bhi yehi.<br>Is page mein koi PAT / API key nahi hai — leak ho jaye to bhi safe hai.</p>
-<p class="mut" id="gen"></p>
+<main class="main">
+<div class="mobnav"><a href="#overview">Overview</a><a href="#pages">Page</a><a href="#keywords">Keywords</a><a href="#sources">Traffic</a><a href="#tasks">Kaam</a><a href="#publish">Naya Article</a><a href="#checker">Link Check</a><a href="#updates">Updates</a></div>
+
+<section class="hero">
+<div>
+<h1>Website kaisi chal rahi hai,<br><span style="color:var(--o)">ek nazar mein sab.</span></h1>
+<p class="sub" style="margin-top:8px" id="range">Pichhle 28 din ka haal — Google Search aur Analytics ke asli number. Koi andaza nahi.</p>
+<p style="margin-top:12px" id="headline"></p>
+<div class="kpis" id="kpiTop" style="grid-template-columns:1fr 1fr"></div>
+</div>
+<div><img src="/img/dashboard-hero.jpg" alt="CaptionStudio dashboard — website growth chart aur creator tools"></div>
+</section>
+
+<section class="sec" id="overview">
+<h2>Overview — Badi Tasveer</h2>
+<p class="sub">Uske neeche wale number usse pehle wale 28 din se tulna mein hain. Hara matlab badha, laal matlab gira (Position mein ulta hota hai — chhota number badiya).</p>
+<div class="kpis" id="kpis"></div>
+<div style="margin-top:18px">
+<h3>Roj Ka Traffic (28 din)</h3>
+<p class="sub"><span style="color:var(--o);font-weight:900">—</span> Page Views (Analytics) &nbsp;&nbsp;<span style="color:#191919;font-weight:900">—</span> Search Clicks (Google)</p>
+<div id="chart"></div>
+<p class="sub" id="chartNote"></p>
+</div>
+<h3 style="margin-top:16px">Dashboard Kya Keh Raha Hai</h3>
+<div class="grid3" id="insights"></div>
+</section>
+
+<section class="sec" id="pages">
+<h2>Saare Page — Khol Ke Dekho Kahan Kya Ho Raha Hai</h2>
+<p class="sub">Kisi bhi page par click karo — uska pura haal khul jayega: kitne log aaye, Google me kaisa dikh raha hai, SEO score, aur kya theek karna hai.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:14px 0">
+<input id="psearch" placeholder="Page dhundo... jaise bio, caption, tools" style="flex:1;min-width:190px">
+<button class="chipbtn on" data-f="all">Sab</button><button class="chipbtn" data-f="star">★ Sabse Badiya</button><button class="chipbtn" data-f="good">Achha</button><button class="chipbtn" data-f="mid">Dhyan Do</button><button class="chipbtn" data-f="bad">Kamzor</button>
+</div>
+<div class="tablewrap"><table><thead><tr><th>Page</th><th>Views</th><th>Search Click</th><th>Dikhna</th><th>CTR</th><th>Position</th><th>SEO</th><th>Haal</th></tr></thead><tbody id="prows"></tbody></table></div>
+<div id="pdetail" style="margin-top:14px"></div>
+</section>
+
+<section class="sec" id="keywords">
+<h2>Keywords — Google Par Kis Shabd Se Log Aa Rahe Hain</h2>
+<p class="sub">"Mauka" matlab: bahut logo ko dikh raha hai par click kam mil rahe hain — title/description sudharne se click badhenge. "Upar Lane Wala" matlab position 5-15 par hai, thodi mehnat se upar ayega.</p>
+<div class="tablewrap"><table><thead><tr><th>Shabd (Query)</th><th>Page</th><th>Click</th><th>Dikhna</th><th>CTR</th><th>Pos.</th><th>Haal</th></tr></thead><tbody id="krows"></tbody></table></div>
+</section>
+
+<section class="sec" id="sources">
+<h2>Traffic Kahan Se Aa Raha Hai</h2>
+<div class="grid2">
+<div class="mini"><h3>Raste (Channel)</h3><div id="channels"></div></div>
+<div class="mini"><h3>Device</h3><div id="devices"></div><h3 style="margin-top:14px">Google Search — Device</h3><div id="gdevices"></div></div>
+</div>
+<div class="grid2" style="margin-top:14px">
+<div class="mini"><h3>Source / Medium</h3><div id="sourcesList"></div></div>
+<div class="mini"><h3>Desh</h3><div id="countries"></div></div>
+</div>
+</section>
+
+<section class="sec" id="tasks">
+<h2>Kaam Ki List</h2>
+<p class="sub">Ye wo kaam hain jo website ko behtar karenge. Ho jaye to agent isay yahi "Done" karke dikhayega.</p>
+<p style="margin:10px 0" id="tasksum"></p>
+<div id="tasklist"></div>
+</section>
+
+<section class="sec" id="publish">
+<h2>Naya Article — Kab, Kaise, Spam Na Ho Iska Dhyan</h2>
+<div class="grid3">
+<div class="mini"><h3>Kab Publish Karein</h3><ul><li><b>Tue / Thu / Sat, shaam 7 baje</b> (Indian audience sabse active)</li><li>Hafte me <b>zyada se zyada 3</b> — roz-roz daalna spam lag sakta hai</li><li>Publish ke baad 24 ghante, 7 din, 28 din par yahi dashboard par number dekho</li></ul></div>
+<div class="mini"><h3>Google Ko Spam Na Lage</h3><ul><li>Har article ka maksad alag — wahi purani lines ghuma ke mat daalo</li><li>Keyword ghusana nahi, baat samajh aani chahiye</li><li>Apne asli example, photo, tajurba daalo</li><li>Title me wahi likho jo andar sach me hai</li></ul></div>
+<div class="mini"><h3>Natural Review (Publish Se Pehle)</h3><ul><li>Ek baar zor se padhke dekho — bolchal jaisa lage</li><li>Robot jaisi line ho to insaan jaisi banao</li><li>Tareekh, daam, jankari dobara check karo</li><li>3-5 sahi jagah par apne dusre page ke link do</li><li>Photo apni/asli ho, uspar sahi naam (ALT) likho</li></ul></div>
+</div>
+<h3 style="margin-top:16px">Topic Pehle Se Hai To Nahi? Yahi Check Karo</h3>
+<input id="topic" placeholder="Naye article ka topic likho... jaise: birthday captions best friend">
+<button class="btn" style="margin-top:8px" onclick="checkTopic()">Check Karo — Duplicate To Nahi?</button>
+<div id="topicout" style="margin-top:10px"></div>
+<h3 style="margin-top:18px">Ab Tak Ke Saare Article (<span id="blogcount"></span>)</h3>
+<div id="blogs"></div>
+</section>
+
+<section class="sec" id="checker">
+<h2>Link Checker — Koi Bhi Page Khol Ke Test Karo</h2>
+<p class="sub">CaptionStudio ka koi bhi link daalo — title, description, content, photo, SEO score sab turant check hoga.</p>
+<input id="curl" value="https://captionstudio.in/" placeholder="https://captionstudio.in/blog/...">
+<button class="btn" style="margin-top:8px" onclick="scanURL()">Check Karo</button>
+<div id="cout" style="margin-top:12px"></div>
+</section>
+
+<section class="sec" id="updates">
+<h2>Roz Ke Updates — Kya Badla, Kab Badla</h2>
+<p class="sub">AI (agent) roz yahi page fresh data se update karega: number, kamzor page, nayi list. Tumhe sirf khol ke dekhna hai.</p>
+<p style="margin:10px 0"><b>Is baar update:</b> <span id="gen2"></span></p>
+<div id="commits"></div>
+<details><summary>Agent Ke Liye Kaam Ka Tareeka (padhne ke liye)</summary>
+<pre style="white-space:pre-wrap;font-size:12.5px;margin-top:10px">1. Roz pehle taza GA4 + Search data lo, is dashboard ko update karo.
+2. Jo page kamzor hai ya traffic gira hai, use Kaam Ki List me sabse upar rakho.
+3. Naya article: topic pehle duplicate check, phir likho, natural review, SEO 85+, apni image, tabhi publish (Tue/Thu/Sat 7 PM). Spam wala kaam bilkul nahi.
+4. Publish ke baad: sitemap/index check, 24h/7d/28d par number is dashboard me dikhao.
+5. Koi password/API key is page me kabhi mat likho — wo agent ke private paas hai.
+Owner ko report sirf: kya badla, kya kamzor hai, kya aage karna hai.</pre></details>
+</section>
+
+<p class="sub" style="text-align:center;margin:16px 0">CaptionStudio Dashboard · Tumhari website, tumhare number · <a href="https://captionstudio.in/">captionstudio.in</a></p>
+</main>
 </div>
 
-<div class="card">
-<h2>JARVIS Ko Bolo — Kaam Shuru Hoga</h2>
-<input id="cmd" placeholder='Bolo: "naya article banao Diwali captions par" ya link paste karo, ya "aaj ka report do"'>
-<button class="btn" onclick="jarvis()">Samjho Aur Karo</button>
-<div class="say" id="say">JARVIS: Main online hu. Teeno system connect hain — GitHub, Search Console, GA4. Bas hukum do.</div>
-<div id="cmdout"></div>
-</div>
-
-<div class="card">
-<h2>System Ka Haal</h2>
-<div class="flow"><span class="step">1 Create</span><span class="arr">→</span><span class="step">2 Review 85+</span><span class="arr">→</span><span class="step">3 Image</span><span class="arr">→</span><span class="step">4 Publish</span><span class="arr">→</span><span class="step">5 Index</span><span class="arr">→</span><span class="step">6 Track</span></div>
-<p class="mut">Naya article 40-50 min mein live: Create 20-30 + Review 10 + Image 5 + Publish/Index 5 min. Best time <b>Tue/Thu/Sat 7 PM IST</b>. Phir 24h / 7d / 28d track — traffic nahi aaya to WEAK bolke list mein aayega.</p>
-<div class="grid">
-<div class="pill"><span class="ok">● ONLINE</span><br>GitHub Repo</div>
-<div class="pill"><span class="ok">● ONLINE</span><br>Search Console</div>
-<div class="pill"><span class="ok">● ONLINE</span><br>GA4 Analytics</div>
-<div class="pill"><span class="ok">● ONLINE</span><br>SEO Scanner (isi page mein)</div>
-</div>
-<div style="margin-top:12px">
-<button class="btn light" onclick="showData()">Asli Data Dekho — Kaunsi Page Chal Rahi Hai, Kaunsi Weak Hai</button>
-<div id="dataout"></div>
-</div>
-</div>
-
-<div class="card">
-<h2>Daily Task List — JARVIS Ka Dimag</h2>
-<p class="mut">Har naya AI agent yahi list padhke kaam uthata hai. Kaam hota jayega, JARVIS isay update karta jayega.</p>
-<div id="tasks"></div>
-<h3>Hafte Ka Calendar</h3>
-<div id="cal"></div>
-</div>
-
-<div class="card" id="agent">
-<h2>Agent Ke Liye (Isi Page Ke Andar)</h2>
-<p class="mut">Koi bhi naya AI aaye, use sirf ye ek link dena hai — wo ye section padhke sab samajh jayega:</p>
-<pre id="agenttext">SITE: https://captionstudio.in/
-OWNER LINK (sirf ek): https://captionstudio.in/ai-control
-REPO: github.com/anshyd1/captionstudio-tools (Static HTML, cleanUrls, Vercel + Cloudflare)
-SITEMAP: https://captionstudio.in/sitemap.xml
-
-KAAM KA TAREEKA:
-1. Isi page ka data (tasks, GA4, GSC) padho — pichla kaam wahi milega.
-2. Naya link/topic mile to scan karo, score 0-100 do. 85 se kam = publish nahi, pehle fix.
-3. Naya article: Create -> Review 85+ -> Image (white-orange minimal, WebP, ALT) -> GitHub se Publish -> Search mein Index -> 24h/7d/28d Track.
-4. Kaam ke baad isi page ka data aur Daily List update karo, taki agla agent wahi se uthaye.
-5. User ko Hinglish mein report: score pehle -> ab, kya kharab tha, kya weak hai, kya next hai.
-
-SEO SCORE: Technical 25 + Title/Meta/H1 25 + Content (800+ shabdon) 20 + Links/ALT 15 + OG/Schema 15 = 100
-RULE: PAT/API key kabhi kisi page, file ya chat mein mat likho. Wo sirf agent ke private vault (.env/secrets) mein hai, is website par nahi.
-OWNER SIRF BOLEGA: "kaam karo" / "naya article banao: topic" / "is link ko check karo: link" / "aaj ka report do"</pre>
-</div>
-
-<p class="mut center">CaptionStudio JARVIS · Apni website, apna AI · Teesri koi site nahi</p>
-</div>
-
-<script id="jarvis-data" type="application/json">{
-  "generated_at": "2026-10-13T08:53:11+00:00",
-  "site": "https://captionstudio.in/",
-  "connections": {
-    "github": "Connected — anshyd1/captionstudio-tools",
-    "gsc": "Connected — sc-domain:captionstudio.in (siteOwner)",
-    "ga4": "Connected — Property 526303859, stream G-X490RGQB38"
-  },
-  "note": "Ye report AI agent GitHub se update karta hai. Is file mein koi PAT/API key nahi hai — leak ho jaye to bhi safe hai.",
-  "ga4_top_pages": [
-    {
-      "page": "/blog/best-instagram-bio-copy-paste-2026",
-      "views": "3398",
-      "sessions": "2561"
-    },
-    {
-      "page": "/blog/viral-captions-for-reels-2026",
-      "views": "896",
-      "sessions": "824"
-    },
-    {
-      "page": "/",
-      "views": "353",
-      "sessions": "294"
-    },
-    {
-      "page": "/tools/caption-generator",
-      "views": "252",
-      "sessions": "207"
-    },
-    {
-      "page": "/blog/best-capcut-alternatives-india-2026",
-      "views": "154",
-      "sessions": "143"
-    },
-    {
-      "page": "/tools/bio-generator",
-      "views": "133",
-      "sessions": "116"
-    },
-    {
-      "page": "/blog/instagram-reel-hooks-2026",
-      "views": "124",
-      "sessions": "102"
-    },
-    {
-      "page": "/tools/hashtag-generator",
-      "views": "103",
-      "sessions": "91"
-    },
-    {
-      "page": "/blog/hindi-captions-instagram",
-      "views": "98",
-      "sessions": "89"
-    },
-    {
-      "page": "/blog",
-      "views": "54",
-      "sessions": "34"
-    },
-    {
-      "page": "/blog/instagram-stylish-name-2026",
-      "views": "47",
-      "sessions": "45"
-    },
-    {
-      "page": "/blog/instagram-viral-captions-reels-hinglish-2026",
-      "views": "43",
-      "sessions": "43"
-    }
-  ],
-  "gsc_top_pages": [
-    {
-      "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-      "clicks": 734,
-      "impressions": 4036,
-      "ctr": 18.19,
-      "position": 4.1
-    },
-    {
-      "page": "https://captionstudio.in/",
-      "clicks": 101,
-      "impressions": 449,
-      "ctr": 22.49,
-      "position": 3.6
-    },
-    {
-      "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-      "clicks": 37,
-      "impressions": 402,
-      "ctr": 9.2,
-      "position": 6.5
-    },
-    {
-      "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
-      "clicks": 11,
-      "impressions": 2858,
-      "ctr": 0.38,
-      "position": 4.7
-    },
-    {
-      "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
-      "clicks": 8,
-      "impressions": 110,
-      "ctr": 7.27,
-      "position": 4.8
-    },
-    {
-      "page": "https://captionstudio.in/blog/ultimate-instagram-captions",
-      "clicks": 2,
-      "impressions": 56,
-      "ctr": 3.57,
-      "position": 3.4
-    },
-    {
-      "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
-      "clicks": 1,
-      "impressions": 2825,
-      "ctr": 0.04,
-      "position": 4.7
-    },
-    {
-      "page": "https://captionstudio.in/about",
-      "clicks": 0,
-      "impressions": 28,
-      "ctr": 0,
-      "position": 1.8
-    },
-    {
-      "page": "https://captionstudio.in/blog",
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 1.8
-    },
-    {
-      "page": "https://captionstudio.in/blog/",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    },
-    {
-      "page": "https://captionstudio.in/blog/aesthetic-instagram-captions-2026",
-      "clicks": 0,
-      "impressions": 24,
-      "ctr": 0,
-      "position": 6.1
-    },
-    {
-      "page": "https://captionstudio.in/blog/attitude-captions-2026",
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 2
-    }
-  ],
-  "tasks": [
-    {
-      "id": 1,
-      "priority": "HIGH",
-      "category": "Setup",
-      "title": "Sirf GA4 Property ID baki hai (GitHub PAT + GSC dono connect ho gaye)",
-      "detail": "GitHub connected, GSC siteOwner connected. GA4 ke liye numeric Property ID chahiye. | DONE: GA4 Property 526303859 API se khud mil gaya (CaptionStudio property, stream G-X490RGQB38)",
-      "status": "done",
-      "source": "system-setup"
-    },
-    {
-      "id": 2,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/tools — Title bahut lamba (69 char) — Google mein katega",
-      "detail": "60 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 3,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/tools — Meta description lamba (180 char)",
-      "detail": "160 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 4,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/guide — Title bahut lamba (81 char) — Google mein katega",
-      "detail": "60 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 5,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/guide — Meta description lamba (207 char)",
-      "detail": "160 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 6,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/earning — Title bahut lamba (73 char) — Google mein katega",
-      "detail": "60 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 7,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/earning — Meta description lamba (189 char)",
-      "detail": "160 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 8,
-      "priority": "MED",
-      "category": "Content",
-      "title": "https://captionstudio.in/earning — Content kam hai: 401 words",
-      "detail": "800+ words karo, sub-headings, examples, FAQ add karo",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 9,
-      "priority": "MED",
-      "category": "Schema",
-      "title": "https://captionstudio.in/earning — JSON-LD Schema missing",
-      "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 10,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/about — Title bahut lamba (76 char) — Google mein katega",
-      "detail": "60 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 11,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/about — Meta description lamba (200 char)",
-      "detail": "160 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 12,
-      "priority": "MED",
-      "category": "Social",
-      "title": "https://captionstudio.in/terms — OG image missing",
-      "detail": "1200x630 share image add karo",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 13,
-      "priority": "MED",
-      "category": "Schema",
-      "title": "https://captionstudio.in/terms — JSON-LD Schema missing",
-      "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 14,
-      "priority": "MED",
-      "category": "Schema",
-      "title": "https://captionstudio.in/privacy — JSON-LD Schema missing",
-      "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 15,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/contact — Title bahut lamba (74 char) — Google mein katega",
-      "detail": "60 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 16,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/disclaimer — Title bahut chhota (26 char): Disclaimer — CaptionStudio",
-      "detail": "40-60 char karo, keyword + benefit add karo",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 17,
-      "priority": "MED",
-      "category": "Schema",
-      "title": "https://captionstudio.in/disclaimer — JSON-LD Schema missing",
-      "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 18,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/editorial-policy — Title bahut lamba (66 char) — Google mein katega",
-      "detail": "60 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 19,
-      "priority": "MED",
-      "category": "Schema",
-      "title": "https://captionstudio.in/editorial-policy — JSON-LD Schema missing",
-      "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 20,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/blog/diwali-captions-instagram-2026 — Title bahut lamba (80 char) — Google mein katega",
-      "detail": "60 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 21,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/blog/diwali-captions-instagram-2026 — Meta description lamba (198 char)",
-      "detail": "160 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 22,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/blog/make-money-on-instagram-2026 — Meta description lamba (177 char)",
-      "detail": "160 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 23,
-      "priority": "MED",
-      "category": "SEO On-Page",
-      "title": "https://captionstudio.in/blog/traditional-captions-instagram-2026 — Meta description lamba (181 char)",
-      "detail": "160 char ke andar rakho",
-      "status": "open",
-      "source": "initial-scan"
-    },
-    {
-      "id": 24,
-      "priority": "HIGH",
-      "category": "Traffic/GSC",
-      "title": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions — 2858 impressions, CTR sirf 0.38%",
-      "detail": "Fragment (#) URL par data bant raha hai — canonical/anchor structure check karo, main page par CTR sudharo (GSC live data)",
-      "status": "open",
-      "source": "gsc-live"
-    },
-    {
-      "id": 25,
-      "priority": "MED",
-      "category": "Traffic/GSC",
-      "title": "Hinglish page position 6.5 hai (402 imp, CTR 9.2%) — Top 3 mein push karo",
-      "detail": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026 — title/meta + internal links strong karo",
-      "status": "open",
-      "source": "gsc-live"
-    },
-    {
-      "id": 26,
-      "priority": "MED",
-      "category": "Index/Track",
-      "title": "GA4 Property ID abhi baki hai",
-      "detail": "User se numeric Property ID lo, phir service account email ko GA4 Viewer do — tabhi GA4 track chalega. Tracking ID site par hai: G-X490RGQB38 | DONE: GA4 Property 526303859 API se khud mil gaya (CaptionStudio property, stream G-X490RGQB38)",
-      "status": "done",
-      "source": "gsc-live"
-    },
-    {
-      "id": 27,
-      "priority": "HIGH",
-      "category": "Traffic/GA4",
-      "title": "GA4 #1 page: /blog/best-instagram-bio-copy-paste-2026 — 3398 views/28din",
-      "detail": "Ye page sabse zyada traffic la raha hai — isko aur strong karo, related bio pages se internal link + CTA tools ki taraf lagao",
-      "status": "open",
-      "source": "ga4-live"
-    }
-  ],
-  "calendar": [
-    {
-      "day": "Mangalvar (Tue)",
-      "work": "Naya article 7 PM live"
-    },
-    {
-      "day": "Budhvar (Wed)",
-      "work": "24h track + review fix"
-    },
-    {
-      "day": "Guruvar (Thu)",
-      "work": "Naya article 7 PM live"
-    },
-    {
-      "day": "Shukravar (Fri)",
-      "work": "Index check + weak page fix"
-    },
-    {
-      "day": "Shanivar (Sat)",
-      "work": "Naya article / trending pack 7 PM"
-    },
-    {
-      "day": "Ravivar (Sun)",
-      "work": "GA4+GSC hafta report, Daily List update"
-    }
-  ]
-}</script>
+<script id="dash-data" type="application/json">{"generated_at": "2026-10-13T09:07:53+00:00", "data": {"ga_total": {"screenPageViews": "5971", "sessions": "4346", "totalUsers": "3757", "averageSessionDuration": "105.97430190727106", "bounceRate": "0.42314772204325818"}, "ga_total_prev": {"screenPageViews": "7550", "sessions": "5619", "totalUsers": "5045", "averageSessionDuration": "73.863745253603852", "bounceRate": "0.50044491902473753"}, "gsc_total": {"clicks": 833, "impressions": 5505, "ctr": 15.13, "position": 4.1}, "gsc_total_prev": {"clicks": 2385, "impressions": 10899, "ctr": 21.88, "position": 3.3}, "ga_daily": [{"date": "2026-09-16", "views": 232, "sessions": 179, "users": 164}, {"date": "2026-09-17", "views": 257, "sessions": 201, "users": 193}, {"date": "2026-09-18", "views": 281, "sessions": 189, "users": 184}, {"date": "2026-09-19", "views": 263, "sessions": 189, "users": 183}, {"date": "2026-09-20", "views": 290, "sessions": 211, "users": 201}, {"date": "2026-09-21", "views": 252, "sessions": 180, "users": 167}, {"date": "2026-09-22", "views": 282, "sessions": 193, "users": 189}, {"date": "2026-09-23", "views": 276, "sessions": 190, "users": 178}, {"date": "2026-09-24", "views": 260, "sessions": 199, "users": 190}, {"date": "2026-09-25", "views": 278, "sessions": 197, "users": 189}, {"date": "2026-09-26", "views": 293, "sessions": 218, "users": 206}, {"date": "2026-09-27", "views": 314, "sessions": 215, "users": 205}, {"date": "2026-09-28", "views": 277, "sessions": 194, "users": 183}, {"date": "2026-09-29", "views": 297, "sessions": 222, "users": 205}, {"date": "2026-09-30", "views": 290, "sessions": 224, "users": 213}, {"date": "2026-10-01", "views": 256, "sessions": 172, "users": 167}, {"date": "2026-10-02", "views": 330, "sessions": 214, "users": 199}, {"date": "2026-10-03", "views": 257, "sessions": 204, "users": 191}, {"date": "2026-10-04", "views": 297, "sessions": 226, "users": 217}, {"date": "2026-10-05", "views": 237, "sessions": 180, "users": 173}, {"date": "2026-10-06", "views": 92, "sessions": 53, "users": 50}, {"date": "2026-10-07", "views": 37, "sessions": 33, "users": 31}, {"date": "2026-10-08", "views": 63, "sessions": 48, "users": 45}, {"date": "2026-10-09", "views": 40, "sessions": 26, "users": 25}, {"date": "2026-10-10", "views": 54, "sessions": 29, "users": 26}, {"date": "2026-10-11", "views": 51, "sessions": 34, "users": 34}, {"date": "2026-10-12", "views": 113, "sessions": 44, "users": 36}, {"date": "2026-10-13", "views": 2, "sessions": 2, "users": 2}], "gsc_daily": [{"date": "2026-09-16", "clicks": 45, "impressions": 285, "ctr": 15.79, "position": 3.7}, {"date": "2026-09-17", "clicks": 50, "impressions": 286, "ctr": 17.48, "position": 3.4}, {"date": "2026-09-18", "clicks": 39, "impressions": 260, "ctr": 15.0, "position": 3.3}, {"date": "2026-09-19", "clicks": 43, "impressions": 266, "ctr": 16.17, "position": 3.2}, {"date": "2026-09-20", "clicks": 54, "impressions": 290, "ctr": 18.62, "position": 3.4}, {"date": "2026-09-21", "clicks": 35, "impressions": 248, "ctr": 14.11, "position": 3.6}, {"date": "2026-09-22", "clicks": 38, "impressions": 223, "ctr": 17.04, "position": 3.8}, {"date": "2026-09-23", "clicks": 33, "impressions": 187, "ctr": 17.65, "position": 3.7}, {"date": "2026-09-24", "clicks": 31, "impressions": 215, "ctr": 14.42, "position": 3.7}, {"date": "2026-09-25", "clicks": 28, "impressions": 235, "ctr": 11.91, "position": 4.1}, {"date": "2026-09-26", "clicks": 33, "impressions": 225, "ctr": 14.67, "position": 4.1}, {"date": "2026-09-27", "clicks": 28, "impressions": 231, "ctr": 12.12, "position": 4.2}, {"date": "2026-09-28", "clicks": 27, "impressions": 213, "ctr": 12.68, "position": 4.0}, {"date": "2026-09-29", "clicks": 38, "impressions": 214, "ctr": 17.76, "position": 6.0}, {"date": "2026-09-30", "clicks": 39, "impressions": 200, "ctr": 19.5, "position": 4.5}, {"date": "2026-10-01", "clicks": 26, "impressions": 201, "ctr": 12.94, "position": 3.8}, {"date": "2026-10-02", "clicks": 43, "impressions": 220, "ctr": 19.55, "position": 3.5}, {"date": "2026-10-03", "clicks": 21, "impressions": 212, "ctr": 9.91, "position": 3.9}, {"date": "2026-10-04", "clicks": 22, "impressions": 178, "ctr": 12.36, "position": 6.8}, {"date": "2026-10-05", "clicks": 19, "impressions": 204, "ctr": 9.31, "position": 5.2}, {"date": "2026-10-06", "clicks": 45, "impressions": 212, "ctr": 21.23, "position": 4.0}, {"date": "2026-10-07", "clicks": 27, "impressions": 177, "ctr": 15.25, "position": 4.7}, {"date": "2026-10-08", "clicks": 23, "impressions": 163, "ctr": 14.11, "position": 4.4}, {"date": "2026-10-09", "clicks": 22, "impressions": 193, "ctr": 11.4, "position": 3.8}, {"date": "2026-10-10", "clicks": 24, "impressions": 167, "ctr": 14.37, "position": 4.4}], "ga_pages": [{"dims": ["/blog/best-instagram-bio-copy-paste-2026"], "vals": ["3307", "2491", "126.59562421156164", "0.28261742272179846"]}, {"dims": ["/blog/viral-captions-for-reels-2026"], "vals": ["819", "755", "32.034142544370866", "0.57218543046357617"]}, {"dims": ["/"], "vals": ["337", "280", "28.165894639285717", "0.31071428571428572"]}, {"dims": ["/tools/caption-generator"], "vals": ["238", "196", "59.753362581632643", "0.056122448979591837"]}, {"dims": ["/blog/best-capcut-alternatives-india-2026"], "vals": ["152", "141", "21.250017851063831", "0.53900709219858156"]}, {"dims": ["/tools/bio-generator"], "vals": ["130", "113", "114.22480805309735", "0.21238938053097345"]}, {"dims": ["/blog/instagram-reel-hooks-2026"], "vals": ["120", "98", "44.845003", "0.43877551020408162"]}, {"dims": ["/blog/hindi-captions-instagram"], "vals": ["96", "88", "90.863659113636359", "0.44318181818181818"]}, {"dims": ["/tools/hashtag-generator"], "vals": ["96", "84", "551.66126464285719", "0.14285714285714285"]}, {"dims": ["/blog"], "vals": ["53", "33", "13.998111181818183", "0.24242424242424243"]}, {"dims": ["/blog/instagram-stylish-name-2026"], "vals": ["44", "42", "21.883612785714284", "0.11904761904761904"]}, {"dims": ["/blog/instagram-viral-captions-reels-hinglish-2026"], "vals": ["40", "40", "48.457494049999994", "0.35"]}, {"dims": ["/blog/mahadev-bio-for-instagram-hindi-2026"], "vals": ["35", "25", "134.726088", "0.16"]}, {"dims": ["/tools"], "vals": ["29", "23", "80.063581304347821", "0.17391304347826086"]}, {"dims": ["/blog/copy-paste-instagram-captions"], "vals": ["28", "26", "69.132626346153842", "0.61538461538461542"]}, {"dims": ["/blog/instagram-bio-for-boys-2026"], "vals": ["25", "20", "56.263695399999996", "0.05"]}, {"dims": ["/blog/instagram-growth-7-days"], "vals": ["22", "15", "39.3513612", "0.2"]}, {"dims": ["/blog/diwali-captions-instagram-2026"], "vals": ["20", "3", "1993.3825530000001", "0"]}, {"dims": ["/blog/instagram-hashtag-strategy-viral-reels"], "vals": ["20", "21", "10.306025190476189", "0.76190476190476186"]}, {"dims": ["/blog/instagram-bio-for-girls-2026"], "vals": ["16", "13", "96.613975615384632", "0.23076923076923078"]}, {"dims": ["/blog/short-instagram-captions-2026"], "vals": ["14", "14", "1.1608085", "1"]}, {"dims": ["/guide"], "vals": ["14", "14", "1.4039548571428571", "0.7857142857142857"]}, {"dims": ["/blog/aesthetic-instagram-captions-2026"], "vals": ["13", "12", "13.294367333333334", "0.66666666666666663"]}, {"dims": ["/blog/attitude-captions-2026"], "vals": ["11", "8", "66.744356625", "0.375"]}, {"dims": ["/blog/instagram-search-optimization-2026"], "vals": ["11", "11", "0.44773863636363642", "1"]}, {"dims": ["/blog/love-viral-captions-hinglish-2026"], "vals": ["11", "11", "0.15241018181818181", "0.90909090909090906"]}, {"dims": ["/blog/make-money-on-instagram-2026"], "vals": ["10", "10", "1.3074511999999998", "0.9"]}, {"dims": ["/blog/professional-development-guide"], "vals": ["10", "10", "0.5387532", "1"]}, {"dims": ["/blog/birthday-captions-instagram-2026"], "vals": ["9", "9", "24.995632666666666", "0.33333333333333331"]}, {"dims": ["/blog/real-estate-instagram-captions-2026"], "vals": ["9", "8", "264.428752", "0.125"]}, {"dims": ["/blog/brazil-vs-morocco-world-cup-2026-captions"], "vals": ["8", "8", "1.1041905", "1"]}, {"dims": ["/blog/cristiano-ronaldo-fifa-2026-final-chapter-story"], "vals": ["8", "8", "1.865484375", "1"]}, {"dims": ["/blog/instagram-reels-algorithm-india-2026"], "vals": ["8", "7", "0.63204999999999989", "0.8571428571428571"]}, {"dims": ["/blog/wedding-captions-for-instagram-2026"], "vals": ["8", "8", "7.537288875", "0.75"]}, {"dims": ["/blog/world-cup-2026-opening-match-captions"], "vals": ["8", "8", "1.14078125", "1"]}, {"dims": ["/blog/100-killer-attitude-captions-hinglish-2026"], "vals": ["7", "7", "0.37329985714285713", "1"]}, {"dims": ["/blog/behind-the-scenes-content-strategy-2026"], "vals": ["7", "6", "15.73137", "0.66666666666666663"]}, {"dims": ["/blog/messi-last-world-cup-2026-final-dance"], "vals": ["7", "7", "0", "1"]}, {"dims": ["/blog/photo-dump-captions-instagram-2026"], "vals": ["7", "9", "97.149634222222232", "0.55555555555555558"]}, {"dims": ["/blog/usa-vs-paraguay-world-cup-2026-captions"], "vals": ["7", "7", "0.5909915714285715", "1"]}, {"dims": ["/about"], "vals": ["6", "6", "58.145232", "0.66666666666666663"]}, {"dims": ["/blog/argentina-vs-algeria-world-cup-2026-captions"], "vals": ["6", "6", "0", "1"]}, {"dims": ["/blog/fifa-world-cup-2026-complete-guide"], "vals": ["6", "6", "1.227838", "1"]}, {"dims": ["/blog/ultimate-instagram-captions"], "vals": ["6", "6", "57.929052500000004", "0.16666666666666666"]}, {"dims": ["/blog/viral-attitude-trendy-captions-hacks-2026"], "vals": ["6", "6", "0", "1"]}, {"dims": ["/blog/world-cup-2026-today-match-captions"], "vals": ["6", "6", "0.87990933333333332", "1"]}, {"dims": ["/blog/spider-man-quotes-instagram-2026"], "vals": ["5", "4", "69.78878325", "0"]}, {"dims": ["/blog/ai-manipulation-guide"], "vals": ["4", "4", "0", "1"]}, {"dims": ["/blog/friendship-day-captions-instagram-2026"], "vals": ["4", "4", "1.44581425", "1"]}, {"dims": ["/blog/master-ai-guide-2026"], "vals": ["4", "4", "1.30986575", "1"]}], "ga_channels": [{"dims": ["Organic Search"], "vals": ["3179", "4385"]}, {"dims": ["Direct"], "vals": ["603", "791"]}, {"dims": ["Referral"], "vals": ["314", "470"]}, {"dims": ["AI Assistant"], "vals": ["201", "316"]}, {"dims": ["Unassigned"], "vals": ["3", "7"]}, {"dims": ["Organic Social"], "vals": ["2", "2"]}], "ga_sources": [{"dims": ["bing / organic"], "vals": ["1157", "1625"]}, {"dims": ["duckduckgo / organic"], "vals": ["787", "1069"]}, {"dims": ["google / organic"], "vals": ["787", "1077"]}, {"dims": ["(direct) / (none)"], "vals": ["603", "791"]}, {"dims": ["privacywall.org / referral"], "vals": ["284", "424"]}, {"dims": ["chatgpt.com / ai-assistant"], "vals": ["197", "299"]}, {"dims": ["in.search.yahoo.com / referral"], "vals": ["195", "293"]}, {"dims": ["emea.search.yahoo.com / referral"], "vals": ["134", "200"]}, {"dims": ["uk.search.yahoo.com / referral"], "vals": ["41", "57"]}, {"dims": ["ecosia.org / organic"], "vals": ["22", "31"]}, {"dims": ["yahoo / organic"], "vals": ["17", "21"]}, {"dims": ["quendu.com / referral"], "vals": ["14", "23"]}, {"dims": ["search.brave.com / referral"], "vals": ["10", "15"]}, {"dims": ["yandex / organic"], "vals": ["6", "11"]}, {"dims": ["chatgpt.com / referral"], "vals": ["4", "6"]}, {"dims": ["perplexity.ai / ai-assistant"], "vals": ["4", "17"]}, {"dims": ["(not set)"], "vals": ["2", "6"]}, {"dims": ["facebook.com / referral"], "vals": ["2", "2"]}, {"dims": ["agent55.com / referral"], "vals": ["1", "1"]}, {"dims": ["perplexity / (not set)"], "vals": ["1", "1"]}], "ga_device": [{"dims": ["mobile"], "vals": ["3551", "5028"]}, {"dims": ["desktop"], "vals": ["781", "916"]}, {"dims": ["tablet"], "vals": ["17", "27"]}], "ga_country": [{"dims": ["India"], "vals": ["3750", "5308"]}, {"dims": ["Singapore"], "vals": ["216", "218"]}, {"dims": ["United States"], "vals": ["96", "113"]}, {"dims": ["China"], "vals": ["56", "56"]}, {"dims": ["Vietnam"], "vals": ["28", "28"]}, {"dims": ["Pakistan"], "vals": ["21", "35"]}, {"dims": ["Bangladesh"], "vals": ["16", "20"]}, {"dims": ["Brazil"], "vals": ["9", "6"]}, {"dims": ["France"], "vals": ["9", "8"]}, {"dims": ["Germany"], "vals": ["9", "20"]}, {"dims": ["Japan"], "vals": ["9", "9"]}, {"dims": ["Netherlands"], "vals": ["8", "20"]}, {"dims": ["New Zealand"], "vals": ["8", "9"]}, {"dims": ["Saudi Arabia"], "vals": ["8", "8"]}, {"dims": ["United Arab Emirates"], "vals": ["8", "9"]}], "gsc_pages": [{"page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 689, "impressions": 3848, "ctr": 17.91, "position": 4.2}, {"page": "https://captionstudio.in/", "clicks": 95, "impressions": 420, "ctr": 22.62, "position": 3.7}, {"page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 34, "impressions": 379, "ctr": 8.97, "position": 6.4}, {"page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 11, "impressions": 2761, "ctr": 0.4, "position": 4.8}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions", "clicks": 8, "impressions": 107, "ctr": 7.48, "position": 4.9}, {"page": "https://captionstudio.in/blog/ultimate-instagram-captions", "clicks": 2, "impressions": 50, "ctr": 4.0, "position": 3.6}, {"page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh", "clicks": 1, "impressions": 2728, "ctr": 0.04, "position": 4.7}, {"page": "https://captionstudio.in/about", "clicks": 0, "impressions": 26, "ctr": 0, "position": 1.8}, {"page": "https://captionstudio.in/blog", "clicks": 0, "impressions": 10, "ctr": 0, "position": 1.8}, {"page": "https://captionstudio.in/blog/", "clicks": 0, "impressions": 1, "ctr": 0, "position": 2}, {"page": "https://captionstudio.in/blog/aesthetic-instagram-captions-2026", "clicks": 0, "impressions": 24, "ctr": 0, "position": 6.1}, {"page": "https://captionstudio.in/blog/attitude-captions-2026", "clicks": 0, "impressions": 1, "ctr": 0, "position": 2}, {"page": "https://captionstudio.in/blog/behind-the-scenes-content-strategy-2026", "clicks": 0, "impressions": 1, "ctr": 0, "position": 2}, {"page": "https://captionstudio.in/blog/best-capcut-alternatives-india-2026", "clicks": 0, "impressions": 7, "ctr": 0, "position": 5.3}, {"page": "https://captionstudio.in/blog/best-captions-boys-2026", "clicks": 0, "impressions": 18, "ctr": 0, "position": 9.3}, {"page": "https://captionstudio.in/blog/best-instagram-bio-copy-paste-2026", "clicks": 0, "impressions": 2, "ctr": 0, "position": 4.5}, {"page": "https://captionstudio.in/blog/college-life-captions-instagram-2026", "clicks": 0, "impressions": 115, "ctr": 0, "position": 1.1}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#attitude", "clicks": 0, "impressions": 51, "ctr": 0, "position": 5.9}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#caption-copy-intent", "clicks": 0, "impressions": 52, "ctr": 0, "position": 5.9}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#friendship", "clicks": 0, "impressions": 50, "ctr": 0, "position": 5.9}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#funny", "clicks": 0, "impressions": 3, "ctr": 0, "position": 6}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#love", "clicks": 0, "impressions": 46, "ctr": 0, "position": 6.0}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#posts-copy", "clicks": 0, "impressions": 52, "ctr": 0, "position": 5.9}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#reels-copy", "clicks": 0, "impressions": 52, "ctr": 0, "position": 5.9}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#stories-copy", "clicks": 0, "impressions": 49, "ctr": 0, "position": 6.0}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#tool", "clicks": 0, "impressions": 1, "ctr": 0, "position": 5}, {"page": "https://captionstudio.in/blog/copy-paste-instagram-captions#travel", "clicks": 0, "impressions": 4, "ctr": 0, "position": 5.8}, {"page": "https://captionstudio.in/blog/education-captions-for-instagram-reels-2026", "clicks": 0, "impressions": 5, "ctr": 0, "position": 4.8}, {"page": "https://captionstudio.in/blog/funny-captions-for-instagram-hindi-2026", "clicks": 0, "impressions": 156, "ctr": 0, "position": 3.5}, {"page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026", "clicks": 0, "impressions": 357, "ctr": 0, "position": 2.4}, {"page": "https://captionstudio.in/blog/gym-workout-captions-hinglish-instagram", "clicks": 0, "impressions": 1, "ctr": 0, "position": 46}, {"page": "https://captionstudio.in/blog/hindi-captions-instagram", "clicks": 0, "impressions": 16, "ctr": 0, "position": 4}, {"page": "https://captionstudio.in/blog/instagram-bio-for-boys-2026", "clicks": 0, "impressions": 39, "ctr": 0, "position": 11.9}, {"page": "https://captionstudio.in/blog/instagram-bio-for-girls-2026", "clicks": 0, "impressions": 1, "ctr": 0, "position": 10}, {"page": "https://captionstudio.in/blog/instagram-growth-7-days", "clicks": 0, "impressions": 1, "ctr": 0, "position": 32}, {"page": "https://captionstudio.in/blog/instagram-hashtag-strategy-viral-reels", "clicks": 0, "impressions": 3, "ctr": 0, "position": 2.7}, {"page": "https://captionstudio.in/blog/instagram-reel-hooks-2026", "clicks": 0, "impressions": 11, "ctr": 0, "position": 8.1}, {"page": "https://captionstudio.in/blog/instagram-reel-hooks-2026#data", "clicks": 0, "impressions": 1, "ctr": 0, "position": 7}, {"page": "https://captionstudio.in/blog/instagram-reel-hooks-2026#formula", "clicks": 0, "impressions": 1, "ctr": 0, "position": 7}, {"page": "https://captionstudio.in/blog/instagram-stylish-name-2026", "clicks": 0, "impressions": 1, "ctr": 0, "position": 2}, {"page": "https://captionstudio.in/blog/love-viral-captions-hinglish-2026", "clicks": 0, "impressions": 23, "ctr": 0, "position": 5.7}, {"page": "https://captionstudio.in/blog/mahadev-bio-for-instagram-hindi-2026", "clicks": 0, "impressions": 1, "ctr": 0, "position": 6}, {"page": "https://captionstudio.in/blog/mirror-selfie-captions-for-instagram-2026", "clicks": 0, "impressions": 137, "ctr": 0, "position": 2.4}, {"page": "https://captionstudio.in/blog/monsoon-captions-instagram-2026", "clicks": 0, "impressions": 27, "ctr": 0, "position": 1.8}, {"page": "https://captionstudio.in/blog/photo-dump-captions-instagram-2026", "clicks": 0, "impressions": 42, "ctr": 0, "position": 1.1}, {"page": "https://captionstudio.in/blog/real-estate-instagram-captions-2026", "clicks": 0, "impressions": 3, "ctr": 0, "position": 8}, {"page": "https://captionstudio.in/blog/short-instagram-captions-2026", "clicks": 0, "impressions": 9, "ctr": 0, "position": 1.8}, {"page": "https://captionstudio.in/blog/social-media-content-strategy-small-business-2026", "clicks": 0, "impressions": 1, "ctr": 0, "position": 1}, {"page": "https://captionstudio.in/blog/traditional-captions-instagram-2026", "clicks": 0, "impressions": 10, "ctr": 0, "position": 3.7}, {"page": "https://captionstudio.in/blog/ugc-creator-complete-guide-2026", "clicks": 0, "impressions": 1, "ctr": 0, "position": 7}], "gsc_queries": [{"query": "viral caption", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 93, "impressions": 329, "ctr": 28.27, "position": 2.1}, {"query": "caption studio", "page": "https://captionstudio.in/", "clicks": 69, "impressions": 295, "ctr": 23.39, "position": 2.1}, {"query": "instagram viral captions", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 65, "impressions": 943, "ctr": 6.89, "position": 6.3}, {"query": "viral captions", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 53, "impressions": 230, "ctr": 23.04, "position": 3.2}, {"query": "instagram viral captions for reels 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 47, "impressions": 262, "ctr": 17.94, "position": 4.3}, {"query": "viral caption for instagram", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 44, "impressions": 364, "ctr": 12.09, "position": 4.1}, {"query": "instagram viral caption 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 34, "impressions": 81, "ctr": 41.98, "position": 1.5}, {"query": "viral description for instagram", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 30, "impressions": 117, "ctr": 25.64, "position": 2.7}, {"query": "instagram trending captions 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 29, "impressions": 73, "ctr": 39.73, "position": 2.4}, {"query": "instagram viral caption copy 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 23, "impressions": 47, "ctr": 48.94, "position": 2}, {"query": "viral insta caption", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 21, "impressions": 110, "ctr": 19.09, "position": 3.7}, {"query": "ig viral caption", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 19, "impressions": 33, "ctr": 57.58, "position": 1.7}, {"query": "viral insta captions", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 19, "impressions": 45, "ctr": 42.22, "position": 2.6}, {"query": "viral instagram captions 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 17, "impressions": 45, "ctr": 37.78, "position": 2.0}, {"query": "captionstudio", "page": "https://captionstudio.in/", "clicks": 15, "impressions": 47, "ctr": 31.91, "position": 1.5}, {"query": "instagram viral captions for reels 2026", "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 15, "impressions": 185, "ctr": 8.11, "position": 6.3}, {"query": "instagram viral video caption copy and paste", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 15, "impressions": 28, "ctr": 53.57, "position": 2.0}, {"query": "instagram captions viral", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 14, "impressions": 32, "ctr": 43.75, "position": 2.9}, {"query": "instagram viral description copy and paste", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 13, "impressions": 46, "ctr": 28.26, "position": 2.4}, {"query": "viral captions for instagram reels 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 11, "impressions": 49, "ctr": 22.45, "position": 2.1}, {"query": "instagram caption copy 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 10, "impressions": 62, "ctr": 16.13, "position": 2.4}, {"query": "instagram caption viral", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 9, "impressions": 48, "ctr": 18.75, "position": 3.4}, {"query": "instagram trending caption 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 9, "impressions": 30, "ctr": 30.0, "position": 2.0}, {"query": "instagram reels viral caption 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 8, "impressions": 16, "ctr": 50.0, "position": 2.1}, {"query": "viral caption instagram 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 8, "impressions": 17, "ctr": 47.06, "position": 1.8}, {"query": "instagram reels captions copy trending", "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 7, "impressions": 39, "ctr": 17.95, "position": 4.2}, {"query": "instagram viral video caption", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 7, "impressions": 30, "ctr": 23.33, "position": 2.9}, {"query": "viral captions for instagram 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 5, "impressions": 14, "ctr": 35.71, "position": 2}, {"query": "viral caption for instagram reels 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 4, "impressions": 21, "ctr": 19.05, "position": 1.9}, {"query": "instagram viral captions 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 3, "impressions": 8, "ctr": 37.5, "position": 1.8}, {"query": "insta viral captions", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 2, "impressions": 66, "ctr": 3.03, "position": 6.3}, {"query": "instagram viral caption copy and paste", "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 2, "impressions": 4, "ctr": 50.0, "position": 3.2}, {"query": "instagram viral captions", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 2, "impressions": 943, "ctr": 0.21, "position": 6.3}, {"query": "instagram viral captions for reels 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 2, "impressions": 261, "ctr": 0.77, "position": 4.7}, {"query": "viral captions for instagram reels 2026", "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 2, "impressions": 28, "ctr": 7.14, "position": 9.3}, {"query": "viral insta caption 2026", "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 2, "impressions": 19, "ctr": 10.53, "position": 6.5}, {"query": "viral words for instagram", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 2, "impressions": 20, "ctr": 10.0, "position": 4.8}, {"query": "instagram caption copy", "page": "https://captionstudio.in/blog/copy-paste-instagram-captions", "clicks": 1, "impressions": 2, "ctr": 50.0, "position": 20.5}, {"query": "instagram caption copy 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 1, "impressions": 62, "ctr": 1.61, "position": 2.4}, {"query": "instagram captions viral", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 1, "impressions": 31, "ctr": 3.23, "position": 2.9}, {"query": "instagram viral caption 2026", "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 1, "impressions": 7, "ctr": 14.29, "position": 6.7}, {"query": "instagram viral caption copy 2026", "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026", "clicks": 1, "impressions": 15, "ctr": 6.67, "position": 9.3}, {"query": "instagram viral caption copy 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 1, "impressions": 47, "ctr": 2.13, "position": 2.1}, {"query": "instagram viral caption copy and paste", "page": "https://captionstudio.in/blog/copy-paste-instagram-captions", "clicks": 1, "impressions": 3, "ctr": 33.33, "position": 4.7}, {"query": "instagram viral description copy and paste", "page": "https://captionstudio.in/blog/copy-paste-instagram-captions", "clicks": 1, "impressions": 31, "ctr": 3.23, "position": 5.5}, {"query": "most viral instagram captions", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 1, "impressions": 8, "ctr": 12.5, "position": 3.1}, {"query": "viral captions for instagram reels 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 1, "impressions": 49, "ctr": 2.04, "position": 2.1}, {"query": "viral description for instagram", "page": "https://captionstudio.in/blog/copy-paste-instagram-captions", "clicks": 1, "impressions": 1, "ctr": 100, "position": 2}, {"query": "viral insta caption", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions", "clicks": 1, "impressions": 66, "ctr": 1.52, "position": 3.9}, {"query": "viral insta caption 2026", "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026", "clicks": 1, "impressions": 17, "ctr": 5.88, "position": 1}], "gsc_device": [{"device": "MOBILE", "clicks": 761, "impressions": 4947, "ctr": 15.38, "position": 3.8}, {"device": "DESKTOP", "clicks": 60, "impressions": 510, "ctr": 11.76, "position": 6.7}, {"device": "TABLET", "clicks": 12, "impressions": 48, "ctr": 25.0, "position": 3.8}]}, "seo": {"/blog/best-instagram-bio-copy-paste-2026": {"score": 100, "issues": [], "words": 5900, "ms": 297, "title": "Instagram Bio Copy Paste — 250+ Stylish Bios 2026"}, "/blog/viral-captions-for-reels-2026": {"score": 98, "issues": [{"s": "warning", "c": "SEO On-Page", "issue": "Meta description lamba (168 char)", "fix": "160 char ke andar rakho"}], "words": 4940, "ms": 305, "title": "Instagram Viral Captions for Reels 2026"}, "/": {"score": 100, "issues": [], "words": 2703, "ms": 538, "title": "CaptionStudio — Free Instagram Caption, Hashtag & Bio Generator"}, "/tools/caption-generator": {"score": 97, "issues": [{"s": "warning", "c": "SEO On-Page", "issue": "Title bahut lamba (91 char) — Google mein katega", "fix": "60 char ke andar rakho"}], "words": 1518, "ms": 87, "title": "Free Instagram Caption Generator for Reels 2026 — Hinglish & Viral Captions | CaptionStudio"}, "/blog/best-capcut-alternatives-india-2026": {"score": 100, "issues": [], "words": 3998, "ms": 357, "title": "Best CapCut Alternatives India 2026: 10 Apps Tested"}, "/tools/bio-generator": {"score": 95, "issues": [{"s": "warning", "c": "SEO On-Page", "issue": "Title bahut lamba (94 char) — Google mein katega", "fix": "60 char ke andar rakho"}, {"s": "warning", "c": "SEO On-Page", "issue": "Meta description lamba (213 char)", "fix": "160 char ke andar rakho"}], "words": 1358, "ms": 104, "title": "Free Instagram Bio Generator 2026 — Stylish, Business, Creator & Hinglish Bios | CaptionStudio"}, "/blog/instagram-reel-hooks-2026": {"score": 100, "issues": [], "words": 4765, "ms": 529, "title": "Viral Hooks for Instagram Reels 2026 — 100+ Copy Paste"}, "/blog/hindi-captions-instagram": {"score": 100, "issues": [], "words": 2746, "ms": 203, "title": "Hindi Captions for Instagram — 150+ Copy Paste (2026)"}, "/tools/hashtag-generator": {"score": 95, "issues": [{"s": "warning", "c": "SEO On-Page", "issue": "Title bahut lamba (66 char) — Google mein katega", "fix": "60 char ke andar rakho"}, {"s": "warning", "c": "SEO On-Page", "issue": "Meta description lamba (203 char)", "fix": "160 char ke andar rakho"}], "words": 1249, "ms": 173, "title": "Free Trending Hashtag Generator for Instagram 2026 | CaptionStudio"}, "/blog": {"score": 100, "issues": [], "words": 893, "ms": 87, "title": "Blog — CaptionStudio Creator Insights"}, "/blog/instagram-stylish-name-2026": {"score": 100, "issues": [], "words": 2856, "ms": 550, "title": "Stylish Name for Instagram — Fancy Fonts & Symbols 2026"}, "/blog/instagram-viral-captions-reels-hinglish-2026": {"score": 100, "issues": [], "words": 3777, "ms": 217, "title": "Instagram Reels Captions Copy — Trending Hinglish 2026"}, "/blog/mahadev-bio-for-instagram-hindi-2026": {"score": 100, "issues": [], "words": 3077, "ms": 512, "title": "150+ Mahadev Bio for Instagram in Hindi (2026)"}, "/tools": {"score": 95, "issues": [{"s": "warning", "c": "SEO On-Page", "issue": "Title bahut lamba (69 char) — Google mein katega", "fix": "60 char ke andar rakho"}, {"s": "warning", "c": "SEO On-Page", "issue": "Meta description lamba (180 char)", "fix": "160 char ke andar rakho"}], "words": 1143, "ms": 607, "title": "Free Creator Tools — Caption, Hashtag & Bio Generator | CaptionStudio"}}, "tasks": [{"id": 1, "priority": "HIGH", "category": "Setup", "title": "Sirf GA4 Property ID baki hai (GitHub PAT + GSC dono connect ho gaye)", "detail": "GitHub connected, GSC siteOwner connected. GA4 ke liye numeric Property ID chahiye. | DONE: GA4 Property 526303859 API se khud mil gaya (CaptionStudio property, stream G-X490RGQB38)", "status": "done", "source": "system-setup"}, {"id": 2, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/tools — Title bahut lamba (69 char) — Google mein katega", "detail": "60 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 3, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/tools — Meta description lamba (180 char)", "detail": "160 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 4, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/guide — Title bahut lamba (81 char) — Google mein katega", "detail": "60 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 5, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/guide — Meta description lamba (207 char)", "detail": "160 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 6, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/earning — Title bahut lamba (73 char) — Google mein katega", "detail": "60 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 7, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/earning — Meta description lamba (189 char)", "detail": "160 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 8, "priority": "MED", "category": "Content", "title": "https://captionstudio.in/earning — Content kam hai: 401 words", "detail": "800+ words karo, sub-headings, examples, FAQ add karo", "status": "open", "source": "initial-scan"}, {"id": 9, "priority": "MED", "category": "Schema", "title": "https://captionstudio.in/earning — JSON-LD Schema missing", "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega", "status": "open", "source": "initial-scan"}, {"id": 10, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/about — Title bahut lamba (76 char) — Google mein katega", "detail": "60 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 11, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/about — Meta description lamba (200 char)", "detail": "160 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 12, "priority": "MED", "category": "Social", "title": "https://captionstudio.in/terms — OG image missing", "detail": "1200x630 share image add karo", "status": "open", "source": "initial-scan"}, {"id": 13, "priority": "MED", "category": "Schema", "title": "https://captionstudio.in/terms — JSON-LD Schema missing", "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega", "status": "open", "source": "initial-scan"}, {"id": 14, "priority": "MED", "category": "Schema", "title": "https://captionstudio.in/privacy — JSON-LD Schema missing", "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega", "status": "open", "source": "initial-scan"}, {"id": 15, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/contact — Title bahut lamba (74 char) — Google mein katega", "detail": "60 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 16, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/disclaimer — Title bahut chhota (26 char): Disclaimer — CaptionStudio", "detail": "40-60 char karo, keyword + benefit add karo", "status": "open", "source": "initial-scan"}, {"id": 17, "priority": "MED", "category": "Schema", "title": "https://captionstudio.in/disclaimer — JSON-LD Schema missing", "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega", "status": "open", "source": "initial-scan"}, {"id": 18, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/editorial-policy — Title bahut lamba (66 char) — Google mein katega", "detail": "60 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 19, "priority": "MED", "category": "Schema", "title": "https://captionstudio.in/editorial-policy — JSON-LD Schema missing", "detail": "Article/FAQ/Breadcrumb schema add karo — rich result milega", "status": "open", "source": "initial-scan"}, {"id": 20, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/blog/diwali-captions-instagram-2026 — Title bahut lamba (80 char) — Google mein katega", "detail": "60 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 21, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/blog/diwali-captions-instagram-2026 — Meta description lamba (198 char)", "detail": "160 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 22, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/blog/make-money-on-instagram-2026 — Meta description lamba (177 char)", "detail": "160 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 23, "priority": "MED", "category": "SEO On-Page", "title": "https://captionstudio.in/blog/traditional-captions-instagram-2026 — Meta description lamba (181 char)", "detail": "160 char ke andar rakho", "status": "open", "source": "initial-scan"}, {"id": 24, "priority": "HIGH", "category": "Traffic/GSC", "title": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions — 2858 impressions, CTR sirf 0.38%", "detail": "Fragment (#) URL par data bant raha hai — canonical/anchor structure check karo, main page par CTR sudharo (GSC live data)", "status": "open", "source": "gsc-live"}, {"id": 25, "priority": "MED", "category": "Traffic/GSC", "title": "Hinglish page position 6.5 hai (402 imp, CTR 9.2%) — Top 3 mein push karo", "detail": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026 — title/meta + internal links strong karo", "status": "open", "source": "gsc-live"}, {"id": 26, "priority": "MED", "category": "Index/Track", "title": "GA4 Property ID abhi baki hai", "detail": "User se numeric Property ID lo, phir service account email ko GA4 Viewer do — tabhi GA4 track chalega. Tracking ID site par hai: G-X490RGQB38 | DONE: GA4 Property 526303859 API se khud mil gaya (CaptionStudio property, stream G-X490RGQB38)", "status": "done", "source": "gsc-live"}, {"id": 27, "priority": "HIGH", "category": "Traffic/GA4", "title": "GA4 #1 page: /blog/best-instagram-bio-copy-paste-2026 — 3398 views/28din", "detail": "Ye page sabse zyada traffic la raha hai — isko aur strong karo, related bio pages se internal link + CTA tools ki taraf lagao", "status": "open", "source": "ga4-live"}], "blogs": [{"title": "210+ Diwali Captions for Instagram 2026 | Reels, Wishes & WhatsApp Status", "link": "blog/diwali-captions-instagram-2026", "category": "Seasonal", "date": "2026-10-12"}, {"title": "How to Make Money on Instagram in 2026: Real US Rates", "link": "blog/make-money-on-instagram-2026", "category": "earning", "date": "2026-10-12"}, {"title": "140+ Photo Dump Captions for Instagram 2026 | Funny, Aesthetic & Life Lately", "link": "blog/photo-dump-captions-instagram-2026", "category": "Captions", "date": "2026-10-12"}, {"title": "100+ College Life Captions for Instagram 2026 | Campus, Hostel & Friends", "link": "blog/college-life-captions-instagram-2026", "category": "Captions", "date": "2026-10-12"}, {"title": "160+ Group Photo Captions for Instagram 2026 | Friends, Squad, Class & Cousins", "link": "blog/group-photo-captions-instagram-2026", "category": "Captions", "date": "2026-10-12"}, {"title": "180+ Traditional Captions for Instagram 2026 | Saree, Kurti, Ethnic & Desi Outfit", "link": "blog/traditional-captions-instagram-2026", "category": "Captions", "date": "2026-10-12"}, {"title": "180+ Mirror Selfie Captions for Instagram (2026) | Short, Funny, Aesthetic & Attitude", "link": "blog/mirror-selfie-captions-for-instagram-2026", "category": "Captions", "date": "2026-10-12"}, {"title": "150+ Mahadev Bio for Instagram in Hindi (2026) | Har Har Mahadev & Kedarnath Guide", "link": "blog/mahadev-bio-for-instagram-hindi-2026", "category": "Spiritual", "date": "2026-10-12"}, {"title": "150+ Wedding Captions for Instagram (2026) | Aesthetic, Short & Romantic", "link": "blog/wedding-captions-for-instagram-2026", "category": "Aesthetics", "date": "2026-10-12"}, {"title": "Spider-Man Quotes for Instagram 2026: Peter Parker, Miles & MJ", "link": "blog/spider-man-quotes-instagram-2026", "category": "Entertainment", "date": "2026-10-12"}, {"title": "100+ Viral Reel Hooks for Instagram & YouTube Shorts 2026 (Copy-Paste)", "link": "blog/instagram-reel-hooks-2026", "category": "growth", "date": "2026-10-12"}, {"title": "150+ Aesthetic Instagram Captions 2026 — Soft Girl, Dark, Baddie, Coquette, Y2K (Copy Paste)", "link": "blog/aesthetic-instagram-captions-2026", "category": "captions", "date": "2026-10-12"}, {"title": "10 Best CapCut Alternatives India 2026 — Free + Paid Video Editing Apps for Reels", "link": "blog/best-capcut-alternatives-india-2026", "category": "guide", "date": "2026-10-12"}, {"title": "Education Captions for Instagram Reels 2026", "link": "blog/education-captions-for-instagram-reels-2026", "category": "education", "date": "2026-10-12"}, {"title": "250+ Gym & Workout Captions Hinglish for Instagram — Beast Mode, Motivation, Sore (Copy Paste 2026)", "link": "blog/gym-workout-captions-hinglish-instagram", "category": "captions", "date": "2026-10-12"}, {"title": "Instagram Hashtag Strategy 2026: Why 5 Tags Beat 30 + 50 Niche Hashtag Packs", "link": "blog/instagram-hashtag-strategy-viral-reels", "category": "growth", "date": "2026-10-12"}, {"title": "150+ Hindi Captions for Instagram — Attitude, Love, Dosti & Funny (Copy Paste)", "link": "blog/hindi-captions-instagram", "category": "captions", "date": "2026-10-12"}, {"title": "500+ Birthday Captions for Instagram (Hindi, Hinglish & English) 2026", "link": "blog/birthday-captions-instagram-2026", "category": "captions", "date": "2026-10-12"}, {"title": "300+ Monsoon Captions for Instagram 2026 — Baarish, Rain, Hindi & Hinglish (Copy Paste)", "link": "blog/monsoon-captions-instagram-2026", "category": "captions", "date": "2026-10-12"}, {"title": "400+ Funny Captions for Instagram Hindi 2026 — Hinglish, Desi & Short", "link": "blog/funny-captions-for-instagram-hindi-2026", "category": "captions", "date": "2026-10-12"}, {"title": "220+ Best Captions for Boys 2026 — Hinglish Attitude, Stylish & Cool", "link": "blog/best-captions-boys-2026", "category": "captions", "date": "2026-10-12"}, {"title": "300+ Love Captions Hinglish 2026 — Romantic, Savage, Couple & Reel Hooks (One-Tap Copy)", "link": "blog/love-viral-captions-hinglish-2026", "category": "instagram", "date": "2026-10-12"}, {"title": "Attitude Captions 2026 😎🔥 (Best Instagram Attitude Lines for Boys & Girls)", "link": "blog/attitude-captions-2026", "category": "instagram", "date": "2026-10-12"}, {"title": "Best Instagram Bio Copy Paste 2026 🔥 (VIP, Attitude, Stylish & Aesthetic Bio)", "link": "blog/best-instagram-bio-copy-paste-2026", "category": "instagram", "date": "2026-10-12"}, {"title": "Short Instagram Captions 2026: 300 Short Captions for Every Mood", "link": "blog/short-instagram-captions-2026", "category": "captions", "date": "2026-10-12"}, {"title": "Instagram Stylish Name 2026: 300+ Stylish Names for Boys, Girls, VIP & Attitude Profiles", "link": "blog/instagram-stylish-name-2026", "category": "growth", "date": "2026-10-12"}, {"title": "Instagram Bio for Girls 2026: 250 Stylish, Cute, Attitude & VIP Bios", "link": "blog/instagram-bio-for-girls-2026", "category": "growth", "date": "2026-10-12"}, {"title": "Instagram Bio for Boys 2026: 250 Stylish, Attitude & VIP Bios", "link": "blog/instagram-bio-for-boys-2026", "category": "growth", "date": "2026-10-12"}, {"title": "Real Estate Instagram Captions 2026: 150 Captions for Agents, Listings & Reels", "link": "blog/real-estate-instagram-captions-2026", "category": "captions", "date": "2026-10-12"}, {"title": "Social Media Content Strategy for Small Businesses in 2026", "link": "blog/social-media-content-strategy-small-business-2026", "category": "growth", "date": "2026-10-12"}, {"title": "Instagram Growth in 7 Days", "link": "blog/instagram-growth-7-days", "category": "growth", "date": "2026-10-12"}, {"title": "Instagram Viral Captions for Reels in Hinglish 2026", "link": "blog/instagram-viral-captions-reels-hinglish-2026", "category": "captions", "date": "2026-10-12"}, {"title": "150+ Copy Paste Instagram Captions 2026 (1-Tap Copy)", "link": "blog/copy-paste-instagram-captions", "category": "captions", "date": "2026-10-12"}, {"title": "UGC Creator Complete Guide 2026", "link": "blog/ugc-creator-complete-guide-2026", "category": "growth", "date": "2026-10-12"}, {"title": "Ultimate Instagram Captions", "link": "blog/ultimate-instagram-captions", "category": "captions", "date": "2026-10-12"}, {"title": "Viral Captions for Reels 2026", "link": "blog/viral-captions-for-reels-2026", "category": "captions", "date": "2026-10-12"}], "commits": [{"date": "2026-10-13", "msg": "Merge JARVIS one-link"}, {"date": "2026-10-13", "msg": "feat(jarvis): single-link JARVIS on own domain — dashboard+agent+project in one page"}, {"date": "2026-10-13", "msg": "Merge branch 'ai/ai-control-2026-10-13' — AI Control apni website par live"}, {"date": "2026-10-13", "msg": "feat(ai-control): add owner AI control page on own domain (no third-party, leak-safe)"}, {"date": "2026-10-12", "msg": "fix(ui & seo): site-wide mobile header alignment & fresh Q4 2026 schema lastmod updates"}, {"date": "2026-10-12", "msg": "fix(ui): mobile header nav alignment & minimal soft white-orange aesthetic images for homepage cards"}, {"date": "2026-10-12", "msg": "feat(seo): link Diwali 2026 page across all 34 blogs with festive callouts & related guides"}, {"date": "2026-10-12", "msg": "feat(design): replace blog hero covers with minimal soft white and orange aesthetic photography"}, {"date": "2026-10-12", "msg": "chore(seo): update sitemap index lastmod dates to 2026-10-12"}, {"date": "2026-10-12", "msg": "fix(ux): auto-close hamburger menu on scroll, touch drag & link navigation"}]}</script>
 <script>
-const D=JSON.parse(document.getElementById('jarvis-data').textContent);
-document.getElementById('gen').innerText='Aakhiri update: '+new Date(D.generated_at).toLocaleString('en-IN')+' · Ye data JARVIS (AI) update karta hai';
-function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,70)}
-function tasksHTML(){return '<ul>'+D.tasks.map(t=>'<li><b class="'+t.priority+'">['+t.priority+']</b> <span class="badge">'+t.category+'</span> '+t.title+' <span style="color:#78716c">'+(t.detail||'')+'</span> '+(t.status==='done'?'✅ Done':'')+'</li>').join('')+'</ul>'}
-document.getElementById('tasks').innerHTML=tasksHTML();
-document.getElementById('cal').innerHTML='<ul>'+(D.calendar||[]).map(c=>'<li><b>'+c.day+'</b> — '+c.work+'</li>').join('')+'</ul>';
-function showData(){
- let g=D.gsc_top_pages||[],a=D.ga4_top_pages||[];
- document.getElementById('dataout').innerHTML='<h3>Search Se (28 din)</h3><ul>'+g.map(x=>'<li><b>'+x.clicks+' clicks</b> · '+x.impressions+' ko dikha · CTR '+x.ctr+'% · Position '+x.position+' — '+x.page.replace('https://captionstudio.in','')+'</li>').join('')+'</ul><h3>Visitors GA4 (28 din)</h3><ul>'+a.map(x=>'<li><b>'+x.views+' views</b> · '+x.sessions+' sessions — '+x.page+'</li>').join('')+'</ul>';
+const P=JSON.parse(document.getElementById('dash-data').textContent);const D=P.data;
+const fmt=n=>Number(n||0).toLocaleString('en-IN');
+function delta(now,prev,suffix){now=Number(now);prev=Number(prev);if(!prev)return '<span class="delta">—</span>';let ch=((now-prev)/prev*100);let goodUp=ch>=0;if(suffix==='pos')goodUp=ch<=0;return '<span class="delta '+(goodUp?'good':'bad')+'">'+(ch>=0?'▲':'▼')+' '+Math.abs(ch).toFixed(1)+'% pichhle 28 din se</span>'}
+let g=D.generated_at||P.generated_at;document.getElementById('gen1').innerText=new Date(P.generated_at).toLocaleString('en-IN');document.getElementById('gen2').innerText=new Date(P.generated_at).toLocaleString('en-IN');
+if(D.ga_daily&&D.ga_daily.length){let a=D.ga_daily[0].date,b=D.ga_daily[D.ga_daily.length-1].date;document.getElementById('range').innerText=a+' se '+b+' tak ka haal — Google Search aur Analytics ke asli number. Koi andaza nahi.'}
+// KPI
+(function(){
+ let gt=D.ga_total, gp=D.ga_total_prev, st=D.gsc_total, sp=D.gsc_total_prev;
+ let down = Number(gt.screenPageViews) < Number(gp.screenPageViews);
+ document.getElementById('headline').innerHTML = down? '<span class="pill p-bad">Dhyan Do</span> <span class="sub">Pichhle mahine ke mukable is baar log kam aaye hain. Neeche kamzor page diye hain — pehle unhe theek karna hai.</span>' : '<span class="pill p-good">Badha Hai</span> <span class="sub">Traffic pichhle mahine se upar hai. Jo chal raha hai use aur strong karo.</span>';
+ document.getElementById('kpiTop').innerHTML='<div class="kpi"><div class="lab">Sabse Chalti Page</div><div class="num" style="font-size:16px;line-height:1.35">'+(D.ga_pages[0]?D.ga_pages[0].dims[0]:'-')+'</div><div class="sub">'+fmt(D.ga_pages[0]?D.ga_pages[0].vals[0]:0)+' views</div></div><div class="kpi"><div class="lab">Ek Nazar</div><div class="sub" style="margin-top:6px">Roz ke number, kamzor page aur aage ka kaam — sab isi page par. Kuch samajh na aaye to agent ko bolo "aaj ka report do".</div></div>';
+ let cards=[
+  ['Page Views',gt.screenPageViews,gp.screenPageViews,''],['Aane Wale (Sessions)',gt.sessions,gp.sessions,''],['Log (Users)',gt.totalUsers,gp.totalUsers,''],
+  ['Search Click',st.clicks,sp.clicks,''],['Search Me Dikhna',st.impressions,sp.impressions,''],['Search Position',st.position,sp.position,'pos']
+ ];
+ document.getElementById('kpis').innerHTML=cards.map(c=>'<div class="kpi"><div class="lab">'+c[0]+'</div><div class="num">'+fmt(c[1])+'</div>'+delta(c[1],c[2],c[3])+'</div>').join('')+
+ '<div class="kpi"><div class="lab">Search CTR</div><div class="num">'+st.ctr+'%</div><span class="sub">Position '+st.position+'</span></div>'+
+ '<div class="kpi"><div class="lab">Time Rukte Hain</div><div class="num">'+Math.round(gt.averageSessionDuration)+'s</div><span class="sub">Bounce '+(Number(gt.bounceRate)*100).toFixed(0)+'%</span></div>';
+})();
+// chart
+(function(){
+ let a=D.ga_daily||[], b={};(D.gsc_daily||[]).forEach(x=>b[x.date]=x.clicks);
+ let max=Math.max(...a.map(x=>x.views),1);let W=900,H=210,pad=28;
+ let pts=a.map((x,i)=>[pad+i*(W-2*pad)/Math.max(a.length-1,1), H-18-(x.views/max)*(H-48)]);
+ let pts2=a.map((x,i)=>{let v=b[x.date]||0;return [pad+i*(W-2*pad)/Math.max(a.length-1,1), H-18-(v/max)*(H-48)]});
+ let line=p=>p.map((x,i)=>(i?'L':'M')+x[0].toFixed(1)+','+x[1].toFixed(1)).join(' ');
+ document.getElementById('chart').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;border:1px solid var(--line);border-radius:14px;background:#fff"><path d="'+line(pts)+' L '+(W-pad)+','+(H-18)+' L '+pad+','+(H-18)+' Z" fill="rgba(249,115,22,.12)"/><path d="'+line(pts)+'" fill="none" stroke="#e8440a" stroke-width="2.5"/><path d="'+line(pts2)+'" fill="none" stroke="#191919" stroke-width="2"/></svg>';
+ document.getElementById('chartNote').innerText='Sabse zyada views ek din me '+fmt(max)+' — graph me upar-niche normal hai, achanak seedha girna hi khatra hai.';
+})();
+// merged pages
+function basePath(u){return u.replace('https://captionstudio.in','').split('#')[0]||'/'}
+let GA={},GS={};(D.ga_pages||[]).forEach(r=>GA[r.dims[0]]={views:+r.vals[0],sessions:+r.vals[1],dur:+r.vals[2],bounce:+r.vals[3]});
+(D.gsc_pages||[]).forEach(r=>{let p=basePath(r.page);if(!GS[p])GS[p]={clicks:0,imp:0,posW:0};GS[p].clicks+=r.clicks;GS[p].imp+=r.impressions;GS[p].posW+=r.position*r.impressions});
+Object.keys(GS).forEach(p=>{let x=GS[p];x.ctr=x.imp?x.clicks/x.imp*100:0;x.pos=x.imp?x.posW/x.imp:0});
+let allPaths=[...new Set([...Object.keys(GA),...Object.keys(GS)])];
+let PAGES=allPaths.map(p=>{let ga=GA[p]||{views:0,sessions:0},gs=GS[p]||{clicks:0,imp:0,ctr:0,pos:0},seo=P.seo[p]||{};
+ let status='mid',label='Dhyan Do';
+ if((ga.views>=250||gs.clicks>=40)&&(!seo.score||seo.score>=85)&&(gs.pos===0||gs.pos<=6)){status='star';label='★ Sabse Badiya'}
+ else if((ga.views>=60||gs.clicks>=10)&&(!seo.score||seo.score>=85)){status='good';label='Achha'}
+ else if(ga.views<25&&gs.imp<60){status='bad';label='Kamzor'}
+ else if(gs.imp>=100&&gs.ctr<6){status='bad';label='Kamzor'}
+ return {p,ga,gs,seo,status,label}}).sort((a,b)=>(b.ga.views+b.gs.clicks)-(a.ga.views+a.gs.clicks));
+// insights
+(function(){
+ let downP=PAGES.filter(x=>x.status==='bad').slice(0,3);let star=PAGES.filter(x=>x.status==='star').slice(0,2);
+ let ins=[];
+ star.forEach(x=>ins.push(['p-good','Chal Raha Hai','<b>'+x.p+'</b> — '+fmt(x.ga.views)+' views, '+fmt(x.gs.clicks)+' search click. Ise aur strong karo, isse milte page isse jodo.']));
+ downP.forEach(x=>ins.push(['p-bad','Kamzor Hai','<b>'+x.p+'</b> — traffic/search dono kam. Title, content ya link — pehle isay dekho.']));
+ let opp=(D.gsc_queries||[]).filter(q=>q.impressions>=90&&q.ctr<9).slice(0,2);
+ opp.forEach(q=>ins.push(['p-mid','Mauka Hai','"'+q.query+'" — '+fmt(q.impressions)+' logo ko dikha par click sirf '+q.clicks+'. Title sudharo, click badhenge.']));
+ if(!ins.length)ins.push(['p-good','Sab Theek','Koi bada khatra nahi dikha. Naye article plan par kaam karo.']);
+ document.getElementById('insights').innerHTML=ins.map(i=>'<div class="mini"><span class="pill '+i[0]+'">'+i[1]+'</span><p style="margin-top:8px">'+i[2]+'</p></div>').join('');
+})();
+let filter='all';
+function renderPages(){
+ let q=(document.getElementById('psearch').value||'').toLowerCase();
+ let rows=PAGES.filter(x=>(filter==='all'||x.status===filter)&&x.p.toLowerCase().includes(q));
+ document.getElementById('prows').innerHTML=rows.map((x,i)=>'<tr class="row" onclick="detail('+PAGES.indexOf(x)+')"><td><b>'+x.p+'</b><br><span style="color:var(--mut);font-size:12px">'+(x.seo.title||'')+'</span></td><td>'+fmt(x.ga.views)+'</td><td>'+fmt(x.gs.clicks)+'</td><td>'+fmt(x.gs.imp)+'</td><td>'+(x.gs.imp?x.gs.ctr.toFixed(1)+'%':'—')+'</td><td>'+(x.gs.pos?x.gs.pos.toFixed(1):'—')+'</td><td>'+(x.seo.score?'<span class="scorechip">'+x.seo.score+'</span>':'—')+'</td><td><span class="pill p-'+(x.status==='star'?'good':x.status)+'">'+x.label+'</span></td></tr>').join('')||'<tr><td colspan="8">Kuch nahi mila</td></tr>';
 }
-async function scanURL(u){
- let out=document.getElementById('cmdout'); out.innerHTML='<p>Scan ho raha hai...</p>';
- try{
-  let t0=Date.now();let r=await fetch(u);let ms=Date.now()-t0;let html=await r.text();
-  let d=new DOMParser().parseFromString(html,'text/html');
-  let title=(d.querySelector('title')||{}).textContent||'';let desc=(d.querySelector('meta[name="description"]')||{}).content||'';
-  let h1=d.querySelectorAll('h1').length;let words=(d.body?d.body.innerText:'').trim().split(/\s+/).length;
-  let imgs=[...d.querySelectorAll('img')];let noalt=imgs.filter(i=>!(i.getAttribute('alt')||'').trim()).length;
-  let canon=!!d.querySelector('link[rel="canonical"]');let sch=d.querySelectorAll('script[type="application/ld+json"]').length;let og=!!d.querySelector('meta[property="og:image"]');
-  let s=100,iss=[];
-  if(!title){s-=15;iss.push('Title missing')}else if(title.length<30||title.length>65){s-=5;iss.push('Title '+title.length+' char — 40-60 rakho')}
-  if(!desc){s-=15;iss.push('Meta description missing — CTR kharab hoga')}else if(desc.length<100||desc.length>165){s-=5;iss.push('Meta '+desc.length+' char — 140-160 rakho')}
-  if(h1!==1){s-=10;iss.push('H1 count '+h1+' — sirf 1 chahiye')}
-  if(!canon){s-=5;iss.push('Canonical missing')}
-  if(words<300){s-=15;iss.push('Content patla: '+words+' words — 800+ karo')}else if(words<800){s-=7;iss.push('Content kam: '+words+' words — 800+ karo')}
-  if(noalt){s-=7;iss.push(noalt+' image mein ALT missing')}
-  if(!sch){s-=7;iss.push('Schema missing')}
-  if(!og){s-=5;iss.push('OG image missing')}
-  if(ms>3000){s-=6;iss.push('Slow hai: '+ms+'ms')}
-  let g=s>=85?'A — Ready':s>=70?'B — Good, chhote fix':s>=50?'C — Weak, fix zaruri':'D — Bahut weak';
-  out.innerHTML='<div class="score">'+s+'/100</div><p><b>'+g+'</b> · '+ms+'ms · '+words+' words</p><p><b>Title:</b> '+title+'</p>'+(iss.length?'<h3>Kya Kharab Hai</h3><ul>'+iss.map(i=>'<li>'+i+'</li>').join('')+'</ul>':'<p>✅ Sab badhiya hai</p>')+'<p class="mut">AI ko bolo: "is link ko fix karo" — wo yahi fix karke dobara score dikhayega.</p>';
- }catch(e){out.innerHTML='<p>Scan fail — link theek se paste karo.</p>'}
+document.getElementById('psearch').addEventListener('input',renderPages);
+document.querySelectorAll('[data-f]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-f]').forEach(x=>x.classList.remove('on'));b.classList.add('on');filter=b.dataset.f;renderPages()}));
+function detail(i){
+ let x=PAGES[i];let iss=(x.seo.issues||[]).map(z=>'<li><b>'+z.c+':</b> '+z.issue+'<br><span style="color:var(--mut)">Salah: '+z.fix+'</span></li>').join('');
+ document.getElementById('pdetail').innerHTML='<div class="mini"><h3>'+x.p+'</h3><p class="sub">'+(x.seo.title||'')+'</p><div class="kpis"><div class="kpi"><div class="lab">Views</div><div class="num">'+fmt(x.ga.views)+'</div></div><div class="kpi"><div class="lab">Aane Wale</div><div class="num">'+fmt(x.ga.sessions)+'</div></div><div class="kpi"><div class="lab">Search Click</div><div class="num">'+fmt(x.gs.clicks)+'</div></div><div class="kpi"><div class="lab">Dikhna</div><div class="num">'+fmt(x.gs.imp)+'</div></div><div class="kpi"><div class="lab">CTR</div><div class="num">'+(x.gs.imp?x.gs.ctr.toFixed(1)+'%':'—')+'</div></div><div class="kpi"><div class="lab">Position</div><div class="num">'+(x.gs.pos?x.gs.pos.toFixed(1):'—')+'</div></div><div class="kpi"><div class="lab">SEO Score</div><div class="num">'+(x.seo.score||'—')+'</div></div><div class="kpi"><div class="lab">Content</div><div class="num" style="font-size:18px">'+(x.seo.words?fmt(x.seo.words)+' shabd':'—')+'</div></div></div>'+(iss?'<h3 style="margin-top:12px">Kya Theek Karna Hai</h3><ul>'+iss+'</ul>':'<p style="margin-top:10px">✅ SEO me koi bada issue nahi mila.</p>')+'<p style="margin-top:10px"><a href="https://captionstudio.in'+x.p+'" target="_blank">Page kholo →</a> &nbsp; Agent ko bolo: <b>"is page ko theek karo: '+x.p+'"</b></p></div>';
+ document.getElementById('pdetail').scrollIntoView({behavior:'smooth',block:'nearest'});
 }
-function plan(t){
- let s=slug(t)+'-2026';
- document.getElementById('cmdout').innerHTML='<h3>Naya Article Ka Plan</h3><p><b>URL:</b> https://captionstudio.in/blog/'+s+'</p><ul><li>'+t+' 2026 — Copy-Paste Viral Lines + Hook Formula</li><li>Best '+t+' for Instagram Reels (Hinglish + English)</li></ul><h3>Image (JARVIS banayega)</h3><pre>White and orange minimal Instagram creator illustration, Indian creator holding smartphone with caption bubbles, clean white background, orange accents (#e8440a), flat premium minimal, no clutter\nFile: '+s+'.webp (1200x675) | ALT: '+t+' — best Instagram captions 2026</pre><p><b>Kab live:</b> Agla Tue/Thu/Sat 7 PM IST · 40-50 min mein · Review score 85+ lazmi</p><p class="mut">Ab chat mein AI ko bolo: <b>"ye plan live karo"</b> — baaki JARVIS sambhal lega.</p>';
+renderPages();
+// keywords
+(function(){
+ let rows=(D.gsc_queries||[]).map(q=>{let s='Achha',c='p-good';if(q.impressions>=90&&q.ctr<9){s='Mauka';c='p-mid'}if(q.position>=5&&q.position<=15&&q.impressions>=50){s='Upar Lane Wala';c='p-mid'}if(q.position<=3&&q.clicks>=20){s='Strong';c='p-good'}return {...q,s,c}}).sort((a,b)=>b.impressions-a.impressions).slice(0,30);
+ document.getElementById('krows').innerHTML=rows.map(q=>'<tr><td><b>'+q.query+'</b></td><td>'+basePath(q.page)+'</td><td>'+fmt(q.clicks)+'</td><td>'+fmt(q.impressions)+'</td><td>'+q.ctr+'%</td><td>'+q.position+'</td><td><span class="pill '+q.c+'">'+q.s+'</span></td></tr>').join('');
+})();
+function bars(el,rows,nameIdx,valIdx){
+ let max=Math.max(...rows.map(r=>+r.vals[valIdx]),1);
+ document.getElementById(el).innerHTML=rows.map(r=>'<div style="margin:9px 0"><div style="display:flex;justify-content:space-between"><span>'+r.dims[nameIdx]+'</span><b>'+fmt(r.vals[valIdx])+'</b></div><div class="bar"><i style="width:'+(+r.vals[valIdx]/max*100)+'%"></i></div></div>').join('');
 }
-function jarvis(){
- let v=document.getElementById('cmd').value.trim();let say=document.getElementById('say');
- if(!v){say.innerHTML='JARVIS: Kuch to bolo — topic, link, ya "aaj ka report do".';return}
- let low=v.toLowerCase();
- if(v.includes('http')){say.innerHTML='JARVIS: Link mil gaya, scan kar raha hu...';scanURL(v.match(/https?:\/\/[^\s]+/)[0]);return}
- if(low.includes('report')||low.includes('aaj')){say.innerHTML='JARVIS: Ye raha aaj ka sach — data niche khol diya hai.';showData();document.getElementById('cmdout').innerHTML='';return}
- if(low.includes('kaam karo')||low.includes('task')||low.includes('list')){say.innerHTML='JARVIS: Daily List ka sabse upar wala HIGH kaam hi pehla kaam hai. AI ko chat mein "kaam karo" bolo, wo yahi se uthayega.';document.getElementById('cmdout').innerHTML=tasksHTML();return}
- let topic=v.replace(/naya article banao:?/i,'').replace(/article banao:?/i,'').trim()||v;
- say.innerHTML='JARVIS: Topic samajh gaya — <b>'+topic+'</b>. Plan bana diya hai, niche dekho.';
- plan(topic);
+bars('channels',D.ga_channels||[],0,1);bars('devices',D.ga_device||[],0,1);bars('sourcesList',D.ga_sources||[],0,1);bars('countries',D.ga_country||[],0,1);
+document.getElementById('gdevices').innerHTML=(D.gsc_device||[]).map(x=>'<p><b>'+x.device+'</b> — '+fmt(x.clicks)+' click, '+fmt(x.impressions)+' dikhna, CTR '+x.ctr+'%</p>').join('');
+// tasks
+(function(){
+ let t=P.tasks||[];let open=t.filter(x=>x.status!=='done');
+ document.getElementById('tasksum').innerHTML='<span class="pill p-bad">'+open.length+' baki kaam</span> <span class="pill p-good">'+(t.length-open.length)+' ho gaya</span>';
+ document.getElementById('tasklist').innerHTML=t.map(x=>'<details '+(x.status!=='done'&&x.priority==='HIGH'?'open':'')+'><summary>'+(x.status==='done'?'✅ ':'')+'<span class="'+x.priority+'">['+x.priority+']</span> '+x.title+'</summary><p class="sub" style="margin-top:6px">'+(x.detail||'')+'<br>Udgam (source): '+x.source+'</p></details>').join('');
+})();
+// blogs + duplicate check
+(function(){
+ document.getElementById('blogcount').innerText=(P.blogs||[]).length;
+ document.getElementById('blogs').innerHTML='<div class="tablewrap"><table><thead><tr><th>Article</th><th>Type</th><th>Date</th></tr></thead><tbody>'+(P.blogs||[]).map(b=>'<tr><td><a href="https://captionstudio.in/'+b.link+'" target="_blank">'+b.title+'</a></td><td>'+b.category+'</td><td>'+b.date+'</td></tr>').join('')+'</tbody></table></div>';
+})();
+function checkTopic(){
+ let v=document.getElementById('topic').value.trim().toLowerCase();let out=document.getElementById('topicout');
+ if(!v){out.innerHTML='Pehle topic likho.';return}
+ let words=v.split(/\s+/).filter(w=>w.length>3);
+ let hits=(P.blogs||[]).filter(b=>{let t=b.title.toLowerCase();return words.filter(w=>t.includes(w)).length>=2});
+ out.innerHTML=hits.length?'<span class="pill p-bad">Ruko — Milta-Julta Hai</span><p style="margin-top:8px">Ye pehle se lagbhag hai:</p><ul>'+hits.map(h=>'<li><a href="https://captionstudio.in/'+h.link+'" target="_blank">'+h.title+'</a></li>').join('')+'</ul><p class="sub">Wahi banana hai to usi purane ko behtar karo — naya banaya to dono Google me takrayenge (spam jaisa lagega).</p>':'<span class="pill p-good">Naya Topic Hai</span><p class="sub" style="margin-top:8px">Aisa koi article list me nahi mila. Plan banao, natural review karo, Tue/Thu/Sat 7 PM live karo.</p>';
 }
-document.getElementById('cmd').addEventListener('keydown',e=>{if(e.key==='Enter')jarvis()});
+// link checker
+async function scanURL(){
+ let u=document.getElementById('curl').value.trim();let out=document.getElementById('cout');out.innerHTML='Check ho raha hai...';
+ try{let t0=Date.now();let r=await fetch(u);let ms=Date.now()-t0;let h=await r.text();let d=new DOMParser().parseFromString(h,'text/html');
+ let title=(d.querySelector('title')||{}).textContent||'';let desc=(d.querySelector('meta[name="description"]')||{}).content||'';let h1=d.querySelectorAll('h1').length;let words=(d.body?d.body.innerText:'').trim().split(/\s+/).length;let imgs=[...d.querySelectorAll('img')];let noalt=imgs.filter(i=>!(i.getAttribute('alt')||'').trim()).length;let canon=!!d.querySelector('link[rel="canonical"]');let sch=d.querySelectorAll('script[type="application/ld+json"]').length;let og=!!d.querySelector('meta[property="og:image"]');
+ let s=100,iss=[];if(!title){s-=15;iss.push('Title nahi hai')}else if(title.length<30||title.length>65){s-=5;iss.push('Title '+title.length+' akshar — 40-60 rakho')}if(!desc){s-=15;iss.push('Description nahi hai — click kam milega')}else if(desc.length<100||desc.length>165){s-=5;iss.push('Description '+desc.length+' akshar — 140-160 rakho')}if(h1!==1){s-=10;iss.push('H1 count '+h1+' — sirf 1 chahiye')}if(!canon)s-=5,iss.push('Canonical nahi hai');if(words<300){s-=15;iss.push('Content bahut kam: '+words+' shabd')}else if(words<800){s-=7;iss.push('Content kam: '+words+' shabd — 800+ karo')}if(noalt){s-=7;iss.push(noalt+' photo par naam (ALT) nahi hai')}if(!sch){s-=7;iss.push('Schema nahi hai')}if(!og){s-=5;iss.push('Share photo (OG) nahi hai')}if(ms>3000){s-=6;iss.push('Page slow: '+ms+'ms')}
+ out.innerHTML='<div style="font-size:44px;font-weight:900;color:var(--o)">'+s+'/100</div><p><b>'+title+'</b></p><p class="sub">'+(desc||'Description nahi hai')+'</p><p class="sub">'+ms+'ms · '+fmt(words)+' shabd · H1 '+h1+' · Photo '+imgs.length+'</p>'+(iss.length?'<h3>Kya Theek Karna Hai</h3><ul>'+iss.map(i=>'<li>'+i+'</li>').join('')+'</ul>':'<p>✅ Koi bada issue nahi mila.</p>')}catch(e){out.innerHTML='<p>Check nahi hua — link theek se daalo.</p>'}
+}
+// commits (dashboard apne khud ke commit nahi dikhayega, sirf website ke asli badlav)
+document.getElementById('commits').innerHTML='<div class="tablewrap"><table><thead><tr><th>Date</th><th>Website Me Badlav</th></tr></thead><tbody>'+(P.commits||[]).filter(c=>!/jarvis|ai-control|ai-agent|dashboard/i.test(c.msg)).map(c=>'<tr><td>'+c.date+'</td><td>'+c.msg+'</td></tr>').join('')+'</tbody></table></div>';
 </script>
-</body>
-</html>
+</body></html>
