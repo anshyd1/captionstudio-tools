@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-13T16:26:49Z",
+  "last_agent_update": "2026-10-13T16:28:48Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -198,13 +198,13 @@
       "agent_name": "Agent Atlas",
       "agent_id": "raahi-20261013-a6c1",
       "identity_verified": false,
-      "status": "partial",
+      "status": "verified",
       "started_at": null,
       "ended_at": null,
       "logged_at": "2026-10-13T16:26:49Z",
-      "source": "Independent public GET redirect checks and local guide/state/UI updates; deployment pending",
-      "commit": null,
-      "summary": "Corrected agent-onboarding English-name rule and redirect-verification protocol after reviewing a prompt-free agent test.",
+      "source": "GitHub commit, Vercel success status, independent live redirect GETs and eight-route desktop/mobile production verification",
+      "commit": "https://github.com/anshyd1/captionstudio-tools/commit/3c4c12f1217eec567c9783b3e4b63881ce48bdc4",
+      "summary": "English agent naming and first-reply rule, redirect-chain verification and return navigation correction deployed and verified.",
       "observations": [
         "The tested Agent Setu delayed its self-introduction until the end, despite the existing first-reply rule.",
         "It correctly disclosed read-only access, checked dated snapshot and avoided unauthorised changes.",
@@ -220,10 +220,15 @@
       "checks": [
         "Live clean Argentina and Brazil pages: 1 redirect then HTTP 200 at viral captions page",
         "Live .html variants: 2 redirects then HTTP 200 at same page",
-        "Local code/JSON/browser tests and production verification pending"
+        "node --check ai-control/app.js, JSON validation and local eight-route Playwright tests passed desktop/mobile",
+        "GitHub origin/main 3c4c12f and public Vercel status success",
+        "Live state.json exposes English-name-only rule; Agent Start shows English name and FIRST owner-facing reply instruction",
+        "Live desktop 1440x900/mobile 390x844: all eight routes, correct nav, historical Raahi + new Atlas labels, no JS errors or horizontal overflow",
+        "Agent Start onward link now returns to /ai-control (not /ai-control/overview)"
       ],
-      "outcome": "Partial until change is pushed and live-verified. The external read-only report was useful but contained a material 404 error; no external agent blame or SEO change assigned.",
-      "next_agent": "Introduce with an English name immediately. Use GET and full redirect chain before reporting 404; verify final content relevance separately. Re-check any unusual status and avoid treating title length as proof. Refresh GA4/GSC privately before causal claims."
+      "outcome": "Verified public protocol correction. External agent read-only behavior was partly useful, but its 404 report did not reproduce under independent final-GET checks. No external agent session was imported as authenticated or verified work. One unique IST work day remains; no session hours inferred.",
+      "next_agent": "Use a distinct short English name and introduce it in the first owner-facing reply after opening the guide. Diagnose safely, verify full GET redirect chain and final content before declaring a 404; title length alone is not an SEO defect. Preserve historical names and require secure private data and evidence before attribution or risky fixes.",
+      "verified_at": "2026-10-13T16:28:48Z"
     }
   ],
   "data_sources": {
