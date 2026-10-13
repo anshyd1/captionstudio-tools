@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-13T15:39:28Z",
+  "last_agent_update": "2026-10-13T15:57:52Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -111,6 +111,41 @@
       "identity_verified": false,
       "started_at": null,
       "ended_at": null
+    },
+    {
+      "id": "2026-10-13-raahi-navigation-goals",
+      "date_ist": "2026-10-13",
+      "agent_name": "Agent Raahi",
+      "agent_id": "raahi-20261013-a6c1",
+      "identity_verified": false,
+      "status": "partial",
+      "started_at": null,
+      "ended_at": null,
+      "logged_at": "2026-10-13T15:57:52Z",
+      "source": "Local Git commit and desktop/mobile Playwright tests; GitHub push blocked by missing credentials; no live deployment",
+      "local_commit": "514cf8746e34d24179cdfa47f02a0affbadac1fb",
+      "commit": null,
+      "summary": "Implemented self-named agent attendance, per-page section navigation, first-open protocol and traffic/engagement goals locally; not deployed.",
+      "observations": [
+        "Two legacy verified sessions have no recorded author or timestamps; kept unknown.",
+        "Public GSC snapshot has 25 daily dates and page-history has one baseline; no honest complete non-branded 28-day comparator or verified GA4 engaged-session baseline.",
+        "Owner reports no Manual Action; this was not independently verified.",
+        "GitHub HTTPS push failed because no write credentials are available in this environment."
+      ],
+      "actions": [
+        "Added self-selected identity policy and dated agent/date attendance filters with proof, outcome and next step fields.",
+        "Added on-page jumps and next-step guidance to seven routes, plus measured traffic and engagement goal plan.",
+        "Updated public agent guide, state queue, safety caveats and desktop/mobile regression coverage."
+      ],
+      "checks": [
+        "node --check ai-control/app.js passed",
+        "python -m json.tool ai-control/state.json passed",
+        "python tests/test_ai_control.py passed on desktop 1440x900 and mobile 390x844 across seven routes",
+        "git diff --check passed",
+        "GitHub push failed; production deployment NOT verified"
+      ],
+      "outcome": "Partial: local code tested and committed; not pushed, not live, not counted as a verified work day. No new GA4/GSC data or SEO changes.",
+      "next_agent": "Obtain private authorised GitHub write access. Fetch/check origin/main, push implementation and handoff commits, run desktop/mobile checks and verify production JSON/JS/live pages. Only then mark this session verified with actual GitHub commit and deployment proof; do not invent timestamps. Fresh analytics refresh needs separate secure GA4/GSC access."
     }
   ],
   "data_sources": {

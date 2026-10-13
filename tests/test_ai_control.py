@@ -82,10 +82,17 @@ def main():
                         page.locator('#agentFilter').select_option('legacy')
                         assert page.locator('#attendanceRows .event').count() == 2
                         expect(page.locator('#attendanceRows')).to_contain_text('Start: Not recorded')
+                        page.locator('#agentFilter').select_option('raahi-20261013-a6c1')
+                        assert page.locator('#attendanceRows .event').count() == 1
+                        expect(page.locator('#attendanceRows')).to_contain_text('Local commit (not deployed)')
+                        expect(page.locator('#attendanceCount')).to_contain_text('0 verified IST day')
+                        page.locator('#dateFilter').select_option('2026-10-13')
+                        expect(page.locator('#attendanceRows')).to_contain_text('Agent Raahi')
                     if route == 'agent':
                         expect(page.locator('#app')).to_contain_text('https://captionstudio.in/ai-control/agent')
                         expect(page.locator('#app')).to_contain_text('No scheduler is configured')
                         expect(page.locator('#app')).to_contain_text('Choose a distinctive self-declared agent name')
+                        expect(page.locator('#app')).to_contain_text('Latest unverified session')
                     if route == 'checker':
                         page.locator('#checkUrl').fill(base + '/missing-page')
                         page.locator('#urlForm button').click()
