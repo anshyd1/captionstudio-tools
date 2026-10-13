@@ -666,6 +666,34 @@
       "destination": "/playbook.html"
     },
     {
+      "source": "/ai-control",
+      "destination": "/ai-control.html"
+    },
+    {
+      "source": "/ai-control/pages",
+      "destination": "/ai-control/pages.html"
+    },
+    {
+      "source": "/ai-control/search",
+      "destination": "/ai-control/search.html"
+    },
+    {
+      "source": "/ai-control/plan",
+      "destination": "/ai-control/plan.html"
+    },
+    {
+      "source": "/ai-control/worklog",
+      "destination": "/ai-control/worklog.html"
+    },
+    {
+      "source": "/ai-control/checker",
+      "destination": "/ai-control/checker.html"
+    },
+    {
+      "source": "/ai-control/agent",
+      "destination": "/ai-control/agent.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/404.html"
     }

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
+  "mode": "on_open",
+  "last_agent_update": "2026-10-13T14:49:08Z",
+  "daily_policy": {
+    "start_with_data_check": true,
+    "max_low_risk_fixes_per_session": 2,
+    "max_low_risk_fixes_per_day_across_agents": 2,
+    "max_new_articles_per_week": 3,
+    "direct_push_rule": "Only small, reversible, evidence-backed fixes after tests and production smoke check.",
+    "approval_required_for": ["site-wide templates or navigation", "tracking or consent changes", "deleting content", "bulk SEO edits", "new article publication", "changes without reliable before/after evidence"],
+    "stop_conditions": ["API credentials missing or invalid", "GA4/GSC coverage incomplete for a comparison", "unexpected deploy failure", "repository has changed since inspection"]
+  },
+  "queue": [
+    {
+      "id": "measurement-2026-10-06",
+      "priority": "P0",
+      "status": "investigate",
+      "title": "6 Oct ke baad GA4 views drop ki wajah verify karo",
+      "evidence": "GA4 daily views 5 Oct 237, 6 Oct 92, 7 Oct 37; GSC data ka lag alag hai.",
+      "next": "Same dates par GA4 event counts, consent state, GSC clicks aur top landing pages compare karo. Proof ke bina consent code mat badlo.",
+      "approval_required_for_change": true
+    },
+    {
+      "id": "page-history-baseline",
+      "priority": "P1",
+      "status": "waiting_for_new_data",
+      "title": "Per-page trends ka second comparable snapshot collect karo",
+      "evidence": "page-history.json mein abhi sirf 13 Oct ka baseline hai.",
+      "next": "GA4/GSC API access milne par same-duration windows se fresh snapshot append karo; tabhi page-level rise/fall claim karo.",
+      "approval_required_for_change": false
+    },
+    {
+      "id": "seo-tools-title",
+      "priority": "P2",
+      "status": "open",
+      "title": "/tools title/description evaluate karo",
+      "evidence": "Previous scan suggests title and description length issue; inspect live metadata and query intent first.",
+      "next": "Current SERP/query data validate karo, then one-page reversible metadata fix only if evidence supports it.",
+      "approval_required_for_change": false
+    }
+  ],
+  "session_log": [
+    {
+      "id": "2026-10-13-dashboard-fix",
+      "date_ist": "2026-10-13",
+      "status": "verified",
+      "source": "GitHub commit + live browser verification",
+      "commit": "https://github.com/anshyd1/captionstudio-tools/commit/1e09254039cf1720dc27ae76b04c8de12f0dc269",
+      "summary": "Dashboard layout, mobile visibility, link status handling and GSC missing-date chart fixed.",
+      "checks": ["desktop 1440x900", "mobile 390x844", "HTTP 404 has no SEO score", "live deployment verified"],
+      "next_agent": "Investigate measurement drop with evidence; establish comparable per-page trend history."
+    }
+  ],
+  "data_sources": {
+    "public_snapshot": "/ai-control/snapshot.json",
+    "page_history": "/ai-control/page-history.json",
+    "ga4_property_id": null,
+    "gsc_property": null,
+    "credential_storage": "Never put access tokens, OAuth secrets or service account JSON in these public files."
+  }
+}

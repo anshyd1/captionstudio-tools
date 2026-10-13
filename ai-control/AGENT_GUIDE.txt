@@ -1,0 +1,45 @@
+CAPTIONSTUDIO AGENT ENTRY — start here
+Canonical link: https://captionstudio.in/ai-control/agent
+Repository: https://github.com/anshyd1/captionstudio-tools (production: main -> Vercel)
+Status: PUBLIC READ / AUTHORISED WRITE. This page is an instruction and handoff, not an autonomous scheduler.
+
+1. READ BEFORE WORK
+- Read /ai-control/snapshot.json (latest published GA4/GSC snapshot), /ai-control/state.json (queue, caps, verified sessions), and /ai-control/page-history.json (page-level observations).
+- Read the repository source and recent commits before editing. Treat the public snapshot as possibly stale; note generated_at and each source's last available date.
+- Never treat absent GSC data as zero clicks. Never claim a page rose/fell from just one per-page snapshot. Never confuse total site views with Google-only clicks.
+- Read the last verified session and unfinished queue item. Follow the next-agent handoff; check if another agent already worked today before choosing work.
+
+2. TOOLS AND CREDENTIALS
+- To inspect fresh GA4 and GSC data, you need a GA4 property, verified GSC property, and owner-provided access in YOUR secure agent environment. Credentials are not in this public website.
+- To edit/push, you need authorised GitHub repository write access in YOUR secure agent environment. Do not put PATs, service-account keys or raw OAuth credentials in HTML, JSON, commits or public logs.
+- If fresh APIs or write access are unavailable, do read-only diagnosis, mark metrics as snapshot-only, provide a proposed patch/plan, and stop. Do not claim an update, commit, deploy or attendance for work not done.
+
+3. EACH SESSION — MODE: ON OPEN (NO BACKGROUND SCHEDULER)
+A. Establish IST date and log the session start in your own working notes. Fetch latest repo state and read the three public files above. Verify generated_at freshness and GA4/GSC coverage individually.
+B. Observe: look at 7-day and 28-day site-level trends, then landing pages, queries, CTR, rank, engagement time, bounce/engagement metrics when available. Distinguish measurement outages from real search losses. Compare equal-duration complete windows only. Annotate observation date and evidence.
+C. Prioritise: choose at most 2 safe, high-leverage issues for this session. Typical order: broken measurement or indexing -> high-traffic pages with engagement loss -> high-impression/low-CTR queries -> internal links and content clarity -> new content only when unique intent is verified. Avoid mass edits and keyword stuffing.
+D. Work: inspect live page, save before evidence, make a small reversible change, test locally, check title/H1/canonical/mobile/rendering/links, then deploy only if authorised. Site-wide UI, tracking/consent, deletions, bulk SEO, and new article publication require owner approval. No surprise direct push for risky work.
+E. Verify: check the commit and production HTTP/browser result. SEO/engagement outcomes are NOT immediate; schedule 24h/7d/28d follow-up. If deploy fails, stop and report rather than declaring success.
+F. Handoff: update /ai-control/state.json session_log + queue + next_agent; if fresh verified metrics exist update /ai-control/snapshot.json and append an honestly labelled comparable sample to /ai-control/page-history.json. Commit the handoff with the implementation, so next agent sees it. If nothing changed, don't fake a commit.
+
+4. WORK PACING
+- Normal session: observe first, then 0–2 low-risk, evidence-backed fixes. Shared daily cap: 2 fixes across ALL agents; check today's session_log before selecting work. Do not change pages just to meet a quota.
+- Max 3 genuinely distinct new articles per week, each needs owner approval and originality review. Publishing frequency is a ceiling, not a target.
+- Do not simultaneously rewrite many titles, change site-wide templates or reverse consent settings without a controlled experiment and approval.
+- Track one hypothesis, action, expected effect, baseline, verification date and outcome per task.
+
+5. WHAT TO RECORD IN STATE.JSON
+- queue item: id, priority, status, evidence, next action, whether approval is required.
+- session_log item: unique id, date_ist, status (verified / blocked / partial), source/commit link when applicable, short summary, tests, and next_agent.
+- Attendance on the public Work Log counts only verified session_log entries; historical notes without evidence are not counted as completed work.
+- If you cannot write to repo, give owner a concise handoff. Do NOT edit a rendered browser page and claim persistence.
+
+6. PAGE TREND RULES
+- page-history.json starts with one baseline. Append a new sample only with source, collection timestamp, GA4/GSC ranges and identical duration/definitions for comparable metrics.
+- Prefer per-page 7d vs previous 7d and 28d vs previous 28d once APIs provide data; tag GSC lag. Mark pages with a sudden change only when you have at least two comparable samples.
+- For engagement focus, assess search intent match, first-screen clarity, navigation to related tools/pages, reading experience, meaningful interaction, and real engagement metrics. Do not inflate time-on-page artificially or add friction.
+
+7. SHORT OWNER REPORT AFTER EVERY SESSION
+Date / Data freshness / Observations with proof / Chosen tasks / Changes + commit + tests / Metrics to watch + date / Blockers + owner approval needed / Next-agent instructions.
+
+This public guide is model-agnostic. Opening a link alone cannot grant GitHub or Analytics access and cannot run a scheduled job. The agent must have tools and credentials supplied privately by the owner.
