@@ -30,8 +30,8 @@
       "priority": "P0",
       "status": "investigate",
       "title": "24 June 2026 Google Search visibility collapse ka root cause verify karo",
-      "evidence": "Equal 7-day windows 17–23 Jun vs 25 Jun–1 Jul: GSC 5,541→665 clicks (-88.0%) and 183,667→4,279 impressions (-97.7%); GA4 2,677→903 views (-66.3%). Not just GA4 tagging.",
-      "next": "Read /ai-control/research-june24.txt. Check Search Console Manual Actions/Security Issues and June indexing history; review Vercel/Cloudflare/DNS and historical canonicals/redirects. Test one hypothesis before changing SEO.",
+      "evidence": "Equal 7-day windows 17–23 Jun vs 25 Jun–1 Jul: GSC 5,541→665 clicks (-88.0%) and 183,667→4,279 impressions (-97.7%); GA4 2,677→903 views (-66.3%). Not just GA4 tagging. Google officially began a global spam update 24 Jun 09:00 PDT (16:00 UTC), but GA4 organic sessions slowed around 10–15 UTC; correlation is not proof of cause.",
+      "next": "Read /ai-control/research-june24.txt. Check Manual Actions/Security Issues and Indexing UI, then deployed server/Cloudflare/DNS evidence around 10–16 UTC. Audit a small affected-page sample against Google spam policies and review generic redirects; get owner approval before risky changes.",
       "approval_required_for_change": true
     },
     {

@@ -2732,7 +2732,7 @@
         "level": "bad",
         "tag": "API se verified · P0",
         "title": "24 June 2026: Google Search visibility ekdum giri",
-        "detail": "Same-length 7-day windows me Search clicks 5,541→665 (-88%), impressions 183,667→4,279 (-97.7%). GA4 views bhi 2,677→903 gire. Historical GA4 tracking incomplete tha, lekin GSC collapse asli hai. Cause abhi verify karna hai; /ai-control/research-june24.txt dekho.",
+        "detail": "Same-length 7-day windows me Search clicks 5,541→665 (-88%), impressions 183,667→4,279 (-97.7%). GA4 views bhi 2,677→903 gire. Historical GA4 tracking incomplete tha, lekin GSC collapse asli hai. Cause abhi verify karna hai; /ai-control/research-june24.txt dekho. Google ka official spam update bhi 24 June ko shuru hua; ye strong clue hai, confirmed penalty nahi. GA4 hourly slowdown official start se pehle bhi dikhta hai.",
         "status": "investigate",
         "verified_at": "2026-10-13",
         "source": "GA4 Data API + GSC Search Analytics API"
@@ -2806,7 +2806,7 @@
         "after": "25 Jun–1 Jul: 665 clicks · 4,279 impressions",
         "clicks_change_pct": -88.0,
         "impressions_change_pct": -97.7,
-        "cause": "Unknown; requires Search Console and deployment history check",
+        "cause": "Unknown. Google June 24 spam update coincides; GA4 slowdown partly predates official rollout start.",
         "evidence_url": "/ai-control/research-june24.txt"
       }
     ]
@@ -2816,7 +2816,7 @@
       "when": "Sabse Pehle — evidence check",
       "title": "24 June Search visibility break ki wajah isolate karo",
       "why": "GSC clicks -88% aur impressions -97.7% same-length windows me; ye sirf GA4 tagging issue nahi.",
-      "work": "Manual Actions/Security Issues, indexing messages, deployed URL/canonical history aur non-seasonal query losses verify karo. Bina saboot bulk edits mat karo."
+      "work": "Manual Actions/Security Issues aur indexing history dekho; 10–16 UTC deployed server/Cloudflare changes verify karo. Small page sample ko spam policies ke against audit karo. Bulk edits/redirects bina approval mat karo."
     },
     {
       "when": "Sabse Pehle — 24/48 Ghante",
