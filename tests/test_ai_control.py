@@ -1,6 +1,7 @@
 """Multi-page control centre browser regression test.
 Run: pip install playwright && python -m playwright install chromium && python tests/test_ai_control.py
 """
+import json
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -9,7 +10,7 @@ from threading import Thread
 from playwright.sync_api import expect, sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-ROUTES = ('', 'pages', 'search', 'plan', 'worklog', 'checker', 'agent')
+ROUTES = ('', 'pages', 'search', 'plan', 'impact', 'worklog', 'checker', 'agent')
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -75,6 +76,18 @@ def main():
                         page.locator('#pageSearch').fill('')
                         page.locator('#pageRows [data-path]').first.click()
                         expect(page.locator('#pageDetail')).to_contain_text('Waiting for another comparable')
+                    if route == 'impact':
+                        expect(page.locator('#app')).to_contain_text('Weekly directional balance')
+                        expect(page.locator('#app')).to_contain_text('0 up · 4 down · 0 flat')
+                        expect(page.locator('#app')).to_contain_text('1,442 → 267')
+                        expect(page.locator('#app')).to_contain_text('222 → 182')
+                        expect(page.locator('#app')).to_contain_text('34 → 44')
+                        expect(page.locator('#app')).to_contain_text('Owner review · five questions')
+                        expect(page.locator('#app')).to_contain_text('28d comparison requires 56')
+                        expect(page.locator('#app')).to_contain_text('No verified revenue')
+                        expect(page.locator('#app')).to_contain_text('Confirmed agent-caused harm')
+                        expect(page.locator('#app')).to_contain_text('Agent Raahi')
+                        expect(page.locator('#app')).to_contain_text('not assessed')
                     if route == 'worklog':
                         expect(page.locator('#app')).to_contain_text('1 verified day')
                         expect(page.locator('#app')).to_contain_text('Historical notes (not attendance)')
@@ -83,7 +96,7 @@ def main():
                         assert page.locator('#attendanceRows .event').count() == 2
                         expect(page.locator('#attendanceRows')).to_contain_text('Start: Not recorded')
                         page.locator('#agentFilter').select_option('raahi-20261013-a6c1')
-                        assert page.locator('#attendanceRows .event').count() == 1
+                        assert page.locator('#attendanceRows .event').count() == 2
                         expect(page.locator('#attendanceRows')).to_contain_text('View commit')
                         expect(page.locator('#attendanceRows')).to_contain_text('Verified implementation and deployment')
                         expect(page.locator('#attendanceCount')).to_contain_text('1 verified IST day')
@@ -94,6 +107,7 @@ def main():
                         expect(page.locator('#app')).to_contain_text('No scheduler is configured')
                         expect(page.locator('#app')).to_contain_text('Choose a distinctive self-declared agent name')
                         expect(page.locator('#app')).to_contain_text('Last verified handoff')
+                        expect(page.locator('#app')).to_contain_text('Latest unverified session')
                         expect(page.locator('#app')).to_contain_text('Introduce yourself first')
                         expect(page.locator('#app')).to_contain_text('tools you actually have')
                     if route == 'checker':
@@ -116,11 +130,21 @@ def main():
                     page.locator('.menuBtn').click()
                     assert page.locator('.menuBtn').get_attribute('aria-expanded') == 'true'
                     assert page.locator('.side').is_visible()
+                if label == 'desktop':
+                    # A missing GSC day invalidates a weekly comparison; it must not become zero.
+                    modified = json.loads((ROOT / 'ai-control/snapshot.json').read_text())
+                    modified['data']['gsc_daily'] = [x for x in modified['data']['gsc_daily'] if x['date'] != '2026-10-06']
+                    page.route('**/ai-control/snapshot.json', lambda route: route.fulfill(json=modified))
+                    page.goto(base + '/ai-control/impact', wait_until='domcontentloaded')
+                    expect(page.locator('#topFresh')).to_contain_text('Updated')
+                    expect(page.locator('#section-impact-4')).to_contain_text('A date is missing or repeated')
+                    expect(page.locator('#section-impact-4')).to_contain_text('1,442 → 267')
+                    page.unroute_all()
                 guide = page.request.get(base + '/ai-control/AGENT_GUIDE.txt')
                 assert guide.status == 200 and 'READ BEFORE WORK' in guide.text()
                 research = page.request.get(base + '/ai-control/research-june24.txt')
                 assert research.status == 200 and '5,541' in research.text()
-                print(f'{label}: 7 routes, data, navigation, trends, worklog, agent guide, checks OK')
+                print(f'{label}: 8 routes, data, navigation, trends, worklog, agent guide, checks OK')
                 page.close()
             browser.close()
     finally:

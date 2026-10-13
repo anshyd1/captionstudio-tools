@@ -45,12 +45,19 @@ F. Handoff: append ONE honest /ai-control/state.json session_log entry with agen
 - Current public snapshot has only 25 GSC daily dates, top-query rows and one per-page baseline; no complete before/after 28-day non-branded baseline, verified engaged-session count or goal number. Label all missing baselines PENDING. Set a numeric target only after two complete comparable windows. Monetisation comes later.
 - Do not chase rankings with overlapping low-value scaled content, keyword stuffing, deceptive titles, irrelevant redirects or artificially inflated dwell time. Original useful content needs owner approval before publishing.
 
-7. PAGE TREND RULES
+7. PUBLIC IMPACT TRACKER AND ACCOUNTABILITY
+- Read /ai-control/impact: daily compares two complete consecutive dates, weekly compares complete 7 vs prior 7 days, monthly needs complete 28 vs prior 28 days PER SOURCE. Exclude the snapshot collection day as possibly partial. Check GSC and GA4 freshness independently; never fill missing dates with zero. The public data is not a live scheduled monitor.
+- Keep GA4 all-channel sessions/views distinct from GSC total clicks/impressions. Daily GA4 organic engaged sessions, non-branded complete page/query windows, conversions and revenue have not been verified here. A red metric is a directional observation, NOT monetary loss or evidence an agent caused it. A green verified deploy is NOT a traffic win.
+- For EACH significant change, add an impact_reviews entry linked to the session_id with scope, hypothesis, expected signal, exact affected URL/query, commit/deployment evidence, baseline and 24h/7d/28d due dates. At follow-up, add equal-duration complete before/after by source, check measurement/seasonality/updates, record observed result, causal confidence, verdict and repair/next action. Keep outcome_status pending until enough evidence. Only a documented strongly supported harmful change may be labeled confirmed_harm; never assign blame from calendar coincidence.
+- Be ready to answer the owner’s five review questions: affected URL/query and before window; exact commit and deploy; expected user/search signal and due date; measured equal-length after window with tracking checked; confounders, confidence and correction plan.
+- If access is unavailable, mark impact pending and describe what is blocked. Do not mark a traffic decline as natural either without evidence; possible technical, measurement, seasonal, external ranking and agent-change explanations should be investigated. Praise clean verified execution separately from independently verified outcome.
+
+8. PAGE TREND RULES
 - page-history.json starts with one baseline. Append a new sample only with source, collection timestamp, GA4/GSC ranges and identical duration/definitions for comparable metrics.
 - Prefer per-page 7d vs previous 7d and 28d vs previous 28d once APIs provide data; tag GSC lag. Mark pages with a sudden change only when you have at least two comparable samples.
 - For engagement focus, assess search intent match, first-screen clarity, navigation to related tools/pages, reading experience, meaningful interaction, and real engagement metrics. Do not inflate time-on-page artificially or add friction.
 
-8. SHORT OWNER REPORT AFTER EVERY SESSION
-Date / Data freshness / Observations with proof / Chosen tasks / Changes + commit + tests / Metrics to watch + date / Blockers + owner approval needed / Next-agent instructions.
+9. SHORT OWNER REPORT AFTER EVERY SESSION
+Date / Data freshness / Observations with proof / Chosen tasks / Changes + commit + tests / Impact review status and due dates / Metrics to watch / Blockers + owner approval needed / Next-agent instructions.
 
 This public guide is model-agnostic. Opening a link alone cannot grant GitHub or Analytics access and cannot run a scheduled job. The agent must have tools and credentials supplied privately by the owner.

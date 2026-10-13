@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-13T16:04:40Z",
+  "last_agent_update": "2026-10-13T16:13:42Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -153,6 +153,40 @@
       "outcome": "Verified implementation and deployment on 13 Oct 2026. One existing verified IST work day still; now three verified sessions on that day. No new GA4/GSC data, numeric traffic target, SEO or analytics-tag changes. No session hours inferred.",
       "next_agent": "After the first self-named truthful introduction, read the latest state and refresh only with secure authorised GA4/GSC access. Verify complete 7/28-day GSC page/query and GA4 organic engagement windows; pursue June visibility and October measurement P0 investigations without assuming a spam penalty. Small verified changes only; approval before risky edits. Record actual future timestamps and independent deployment proof.",
       "verified_at": "2026-10-13T16:04:40Z"
+    },
+    {
+      "id": "2026-10-13-raahi-impact-tracker",
+      "date_ist": "2026-10-13",
+      "agent_name": "Agent Raahi",
+      "agent_id": "raahi-20261013-a6c1",
+      "identity_verified": false,
+      "status": "partial",
+      "started_at": null,
+      "ended_at": null,
+      "logged_at": "2026-10-13T16:13:42Z",
+      "source": "Local implementation and desktop/mobile Playwright checks; production push and live verification pending",
+      "commit": null,
+      "summary": "Built evidence-gated daily/weekly/28-day impact tracker and agent accountability review locally; deployment pending.",
+      "observations": [
+        "Published GA4 all-channel sessions 1,442→267 (-81.5%) comparing Sep29–Oct5 vs Oct6–12; GA4 measurement failure remains a P0 possibility.",
+        "Published GSC total clicks 222→182 (-18.0%) comparing Sep27–Oct3 vs Oct4–10; different dates and definitions from GA4.",
+        "Published snapshot has no complete 56-day history, non-branded 28-day comparator, organic engaged-session series or financial baseline.",
+        "No evidence presently links the June Search collapse or October tracking decline to Agent Raahi; cause remains unresolved."
+      ],
+      "actions": [
+        "Added a public daily, weekly and rolling 28-day outcome tracker with source-specific complete contiguous windows, partial-day exclusion and explicit pending states.",
+        "Separated red/green traffic direction from verified agent delivery and evidence-backed causal review; no automatic blame or invented revenue.",
+        "Added an eight-route navigation link, overview entry point, review policy, incident context and desktop/mobile missing-day regression test."
+      ],
+      "checks": [
+        "node --check ai-control/app.js passed",
+        "python -m json.tool ai-control/state.json passed",
+        "python tests/test_ai_control.py passed across eight routes on desktop 1440x900 and mobile 390x844, including a missing GSC day",
+        "git diff --check passed",
+        "Production verification pending"
+      ],
+      "outcome": "Partial: ready locally, not yet published. Observed metric declines are historical and not an agent verdict.",
+      "next_agent": "After authorised push, verify live /ai-control/impact, state.json and all eight routes desktop/mobile; only then promote this session to verified. Refresh GA4/GSC securely to investigate P0 declines and publish complete comparable organic engagement + GSC page/query evidence. Do not infer profit, a penalty, agent blame or scheduler."
     }
   ],
   "data_sources": {
@@ -213,5 +247,41 @@
       "New content only for distinct intent with original user value and owner approval",
       "No manual action reported by owner as of 2026-10-13; algorithmic spam-update effect remains unconfirmed"
     ]
-  }
+  },
+  "impact_policy": {
+    "purpose": "Public observation and agent accountability; no automatic assignment of blame, revenue, or ranking causality.",
+    "windows": "Daily = latest two complete consecutive dates; weekly = last 7 vs prior 7; monthly = last 28 vs prior 28, per source. Exclude collection day and missing dates; never fill GSC gaps with zero.",
+    "direction": "Green/red means metric direction only. Separate GA4 all-channel sessions/views from GSC total clicks/impressions; different dates and definitions cannot be summed into a single business score.",
+    "agent_ratings": "Delivery verified is about tested commits and live checks; confirmed benefit/harm needs change-level before/after, comparable page/query and engagement evidence, confounders and a documented causal rationale. Pending != failure.",
+    "financial": "Revenue, costs, profit and conversion baselines are unavailable; do not call traffic differences monetary gain/loss.",
+    "update_protocol": "On each authorised refresh, publish source collection time and complete windows, then review due impacts at 24h/7d/28d. Record affected URL/query, original hypothesis, commit, before/after, tracking checks, external factors, confidence, verdict, repair/next step. No scheduler exists."
+  },
+  "impact_reviews": [
+    {
+      "id": "impact-raahi-control-2026-10-13",
+      "session_id": "2026-10-13-raahi-navigation-goals",
+      "change_title": "Public control centre & agent workflow",
+      "change_date_ist": "2026-10-13",
+      "scope": "Agent onboarding, navigation, work log and measurement protocol; no SEO, content, consent or analytics-tag edit.",
+      "expected_signal": "Better transparency and safer evidence-led work; no immediate increase in organic clicks promised.",
+      "observed_effect": null,
+      "outcome_status": "pending",
+      "causal_confidence": "not assessed",
+      "causal_reason": "Only one page-history baseline and no post-change comparable GSC/GA4 engagement window. The June Search decline predates this release.",
+      "next_review": "After complete 7d and 28d post-release windows (not earlier than 20 Oct / 10 Nov 2026, plus GSC lag), when secure analytics access is available."
+    },
+    {
+      "id": "impact-raahi-tracker-2026-10-13",
+      "session_id": "2026-10-13-raahi-impact-tracker",
+      "change_title": "Public impact tracker",
+      "change_date_ist": "2026-10-13",
+      "scope": "Control-centre dashboard only; no SEO, consent, tag or content change.",
+      "expected_signal": "Owner can see dated traffic directions and agent follow-ups; no instant search traffic increase promised.",
+      "observed_effect": null,
+      "outcome_status": "pending",
+      "causal_confidence": "not assessed",
+      "causal_reason": "No post-release comparable metrics yet; public tracker itself does not cause or cure search visibility losses.",
+      "next_review": "After deployment smoke test, then after complete 7d/28d source windows if fresh secure access is available."
+    }
+  ]
 }

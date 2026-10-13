@@ -682,6 +682,10 @@
       "destination": "/ai-control/plan.html"
     },
     {
+      "source": "/ai-control/impact",
+      "destination": "/ai-control/impact.html"
+    },
+    {
       "source": "/ai-control/worklog",
       "destination": "/ai-control/worklog.html"
     },
