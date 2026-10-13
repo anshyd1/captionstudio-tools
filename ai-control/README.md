@@ -14,7 +14,7 @@ Public, model-agnostic, **on-open** agent handoff + owner dashboard. **Not** an 
 | `/ai-control/checker` | `checker.html` | Same-origin page/topic checks |
 | `/ai-control/agent` | `agent.html` | Link to give an AI agent |
 
-The agent can fetch `/ai-control/AGENT_GUIDE.txt` without JS, then read `snapshot.json`, `state.json`, and `page-history.json` (all public). The HTML contains an `agent-guide` meta tag and static fallback links. `app.js` renders the dashboards client-side. `vercel.json` maps the clean URLs.
+The agent can fetch `/ai-control/AGENT_GUIDE.txt` without JS, then read `snapshot.json`, `state.json`, `page-history.json`, and the verified 24 June research note `research-june24.txt` (all public). The HTML contains an `agent-guide` meta tag and static fallback links. `app.js` renders the dashboards client-side. `vercel.json` maps the clean URLs.
 
 ## Data / update contract
 

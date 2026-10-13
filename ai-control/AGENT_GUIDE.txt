@@ -4,7 +4,7 @@ Repository: https://github.com/anshyd1/captionstudio-tools (production: main -> 
 Status: PUBLIC READ / AUTHORISED WRITE. This page is an instruction and handoff, not an autonomous scheduler.
 
 1. READ BEFORE WORK
-- Read /ai-control/snapshot.json (latest published GA4/GSC snapshot), /ai-control/state.json (queue, caps, verified sessions), and /ai-control/page-history.json (page-level observations).
+- Read /ai-control/snapshot.json (latest published GA4/GSC snapshot), /ai-control/state.json (queue, caps, verified sessions), /ai-control/page-history.json (page-level observations), and /ai-control/research-june24.txt (verified historical Search break and unresolved cause).
 - Read the repository source and recent commits before editing. Treat the public snapshot as possibly stale; note generated_at and each source's last available date.
 - Never treat absent GSC data as zero clicks. Never claim a page rose/fell from just one per-page snapshot. Never confuse total site views with Google-only clicks.
 - Read the last verified session and unfinished queue item. Follow the next-agent handoff; check if another agent already worked today before choosing work.

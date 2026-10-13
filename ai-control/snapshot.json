@@ -2730,6 +2730,15 @@
     "findings": [
       {
         "level": "bad",
+        "tag": "API se verified · P0",
+        "title": "24 June 2026: Google Search visibility ekdum giri",
+        "detail": "Same-length 7-day windows me Search clicks 5,541→665 (-88%), impressions 183,667→4,279 (-97.7%). GA4 views bhi 2,677→903 gire. Historical GA4 tracking incomplete tha, lekin GSC collapse asli hai. Cause abhi verify karna hai; /ai-control/research-june24.txt dekho.",
+        "status": "investigate",
+        "verified_at": "2026-10-13",
+        "source": "GA4 Data API + GSC Search Analytics API"
+      },
+      {
+        "level": "bad",
         "tag": "Pehle Ye Pakdo",
         "title": "6 Oct ke baad Analytics ke views achanak gire",
         "detail": "Roz 230-330 views se seedha 37-92 par aa gaya, lekin Google Search ke click utne nahi gire. Shak hai ki 6 Oct wale consent wale badlav se ginna (measurement) kam hua hai — pehle saboot, phir badlav.",
@@ -2788,9 +2797,27 @@
           "AdSense/consent wala bada badlav gaya — Analytics girne ke shak ki jad yahi ho sakti hai"
         ]
       }
+    ],
+    "verified_events": [
+      {
+        "date": "2026-06-24",
+        "title": "Google Search visibility collapse",
+        "before": "17–23 Jun: 5,541 clicks · 183,667 impressions",
+        "after": "25 Jun–1 Jul: 665 clicks · 4,279 impressions",
+        "clicks_change_pct": -88.0,
+        "impressions_change_pct": -97.7,
+        "cause": "Unknown; requires Search Console and deployment history check",
+        "evidence_url": "/ai-control/research-june24.txt"
+      }
     ]
   },
   "plan": [
+    {
+      "when": "Sabse Pehle — evidence check",
+      "title": "24 June Search visibility break ki wajah isolate karo",
+      "why": "GSC clicks -88% aur impressions -97.7% same-length windows me; ye sirf GA4 tagging issue nahi.",
+      "work": "Manual Actions/Security Issues, indexing messages, deployed URL/canonical history aur non-seasonal query losses verify karo. Bina saboot bulk edits mat karo."
+    },
     {
       "when": "Sabse Pehle — 24/48 Ghante",
       "title": "Views girne ki jad pakdo",

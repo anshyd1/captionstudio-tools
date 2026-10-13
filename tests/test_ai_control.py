@@ -56,6 +56,8 @@ def main():
                     if route == '':
                         assert page.locator('.hero').bounding_box()['y'] < 390
                         expect(page.locator('#app')).to_contain_text('5,977')
+                        expect(page.locator('#app')).to_contain_text('Verified historical change')
+                        expect(page.locator('#app')).to_contain_text('5,541 clicks')
                         expect(page.locator('#app')).to_contain_text('GSC data')
                     if route == 'pages':
                         expect(page.locator('#pageCount')).to_contain_text('62 of 62')
@@ -93,6 +95,8 @@ def main():
                     assert page.locator('.side').is_visible()
                 guide = page.request.get(base + '/ai-control/AGENT_GUIDE.txt')
                 assert guide.status == 200 and 'READ BEFORE WORK' in guide.text()
+                research = page.request.get(base + '/ai-control/research-june24.txt')
+                assert research.status == 200 and '5,541' in research.text()
                 print(f'{label}: 7 routes, data, navigation, trends, worklog, agent guide, checks OK')
                 page.close()
             browser.close()

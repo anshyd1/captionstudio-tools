@@ -1,0 +1,20 @@
+VERIFIED INVESTIGATION — 24 JUNE 2026 GOOGLE SEARCH VISIBILITY BREAK
+Source: read-only GA4 Data API (property 526303859) and Search Console Search Analytics API (sc-domain:captionstudio.in), checked 13 October 2026. No private credential is in this file.
+
+Like-for-like seven-day windows (transition day 24 June excluded):
+Before: 17–23 June 2026. After: 25 June–1 July 2026.
+GSC web clicks: 5,541 -> 665 (-88.0%).
+GSC web impressions: 183,667 -> 4,279 (-97.7%).
+GSC CTR: 3.02% -> 15.54%. This rises because impressions fell even faster than clicks; it is not a demonstrated SEO improvement.
+GA4 page views: 2,677 -> 903 (-66.3%). GA4 sessions: 1,774 -> 616 (-65.3%).
+GA4 google / organic sessions: 1,536 -> 540 (-64.8%).
+
+This was broad: non-seasonal query 'instagram caption copy' went from 318 clicks / 15,494 impressions to 2 clicks / 19 impressions. The viral-captions page went from 1,515 to 526 GSC clicks. Copy-paste captions went from 476 to 4. India mobile/desktop and other countries also declined. Father's Day seasonality alone cannot explain this.
+
+Historical GA4 coverage was incomplete. In the June 21 repository version, the GA4 measurement ID was absent from five sampled high-GSC pages (copy-paste captions, Argentina football, Father's Day Hindi, Messi captions, reel hooks) but present on viral captions. GA4's historical total was therefore an undercount for those pages. Missing tags do NOT explain the simultaneous loss of GSC impressions. The current repository's 37 remaining blog HTML pages all include the ID.
+
+The cause of the June event remains UNKNOWN. Historical Vercel cleanUrls was false on June 24. Several nearby GitHub commits modified an England article and sitemaps; a large sitemap rebuild at 11:35 UTC is not proof of causation. Today URL Inspection reports three sampled surviving pages indexed and self-canonical, which does not reconstruct their June status. GA4 property uses UTC; GA4 and GSC calendar-day boundaries differ.
+
+NEXT AGENT: (1) Check Search Console UI Manual Actions, Security Issues, Pages/Indexing history and messages around June 24. (2) Check Vercel/Cloudflare/DNS deployment changes around that date and historical canonical/redirect behaviour for high-loss .html pages. (3) Segment non-seasonal lost queries/pages. (4) Form and test ONE hypothesis before editing; no bulk title changes, new-content burst or blind consent changes. Keep the separate October 6 analytics drop as a second investigation.
+
+On-open agent protocol: https://captionstudio.in/ai-control/AGENT_GUIDE.txt

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-13T15:08:29Z",
+  "last_agent_update": "2026-10-13T15:39:28Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -25,6 +25,15 @@
     ]
   },
   "queue": [
+    {
+      "id": "gsc-2026-06-24-collapse",
+      "priority": "P0",
+      "status": "investigate",
+      "title": "24 June 2026 Google Search visibility collapse ka root cause verify karo",
+      "evidence": "Equal 7-day windows 17–23 Jun vs 25 Jun–1 Jul: GSC 5,541→665 clicks (-88.0%) and 183,667→4,279 impressions (-97.7%); GA4 2,677→903 views (-66.3%). Not just GA4 tagging.",
+      "next": "Read /ai-control/research-june24.txt. Check Search Console Manual Actions/Security Issues and June indexing history; review Vercel/Cloudflare/DNS and historical canonicals/redirects. Test one hypothesis before changing SEO.",
+      "approval_required_for_change": true
+    },
     {
       "id": "measurement-2026-10-06",
       "priority": "P0",
@@ -88,8 +97,8 @@
   "data_sources": {
     "public_snapshot": "/ai-control/snapshot.json",
     "page_history": "/ai-control/page-history.json",
-    "ga4_property_id": null,
-    "gsc_property": null,
+    "ga4_property_id": "526303859",
+    "gsc_property": "sc-domain:captionstudio.in",
     "credential_storage": "Never put access tokens, OAuth secrets or service account JSON in these public files."
   }
 }
