@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-13T16:15:40Z",
+  "last_agent_update": "2026-10-13T16:26:49Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -191,6 +191,39 @@
       "outcome": "Verified published control-centre feature. Public dated historical traffic signals are visible, but financial benefit/loss and agent-caused gain/harm are unmeasured. Four verified sessions still represent one unique IST work day; no hours inferred.",
       "next_agent": "First introduce name and real access. Refresh GA4/GSC securely; compare full 7d/28d windows by page/query and organic engagement with source-specific lag. Resolve June visibility and October measurement P0 before a cause verdict. At due dates review impact_reviews with before/after, tracking checks, confounders and confidence; update only with proof. No scheduler or numeric revenue baseline exists.",
       "verified_at": "2026-10-13T16:15:40Z"
+    },
+    {
+      "id": "2026-10-13-atlas-agent-verification-rules",
+      "date_ist": "2026-10-13",
+      "agent_name": "Agent Atlas",
+      "agent_id": "raahi-20261013-a6c1",
+      "identity_verified": false,
+      "status": "partial",
+      "started_at": null,
+      "ended_at": null,
+      "logged_at": "2026-10-13T16:26:49Z",
+      "source": "Independent public GET redirect checks and local guide/state/UI updates; deployment pending",
+      "commit": null,
+      "summary": "Corrected agent-onboarding English-name rule and redirect-verification protocol after reviewing a prompt-free agent test.",
+      "observations": [
+        "The tested Agent Setu delayed its self-introduction until the end, despite the existing first-reply rule.",
+        "It correctly disclosed read-only access, checked dated snapshot and avoided unauthorised changes.",
+        "Its claim that Argentina/Brazil clean football URLs were 404 was contradicted by independent GET with redirects: clean URLs redirect once to /blog/viral-captions-for-reels-2026 (HTTP 200); .html URLs redirect twice to that same HTTP 200 page. Relevance of the many-to-one redirect still merits review.",
+        "Sitemap currently has 36 URL entries; omission of World-Cup URLs does not by itself establish a cause of the June traffic decline.",
+        "/tools decoded visible title is 69 characters, not 73 raw HTML characters; length alone does not demonstrate an SEO fault."
+      ],
+      "actions": [
+        "Required new agent display names to use short English names with Latin letters and preserved historical names, including the former Agent Raahi label.",
+        "Clarified that the self-introduction must be in the FIRST chat reply, not postponed until after investigation.",
+        "Added redirect-chain/final-GET and decoded-title verification rules before adding unconfirmed claims to public work queues."
+      ],
+      "checks": [
+        "Live clean Argentina and Brazil pages: 1 redirect then HTTP 200 at viral captions page",
+        "Live .html variants: 2 redirects then HTTP 200 at same page",
+        "Local code/JSON/browser tests and production verification pending"
+      ],
+      "outcome": "Partial until change is pushed and live-verified. The external read-only report was useful but contained a material 404 error; no external agent blame or SEO change assigned.",
+      "next_agent": "Introduce with an English name immediately. Use GET and full redirect chain before reporting 404; verify final content relevance separately. Re-check any unusual status and avoid treating title length as proof. Refresh GA4/GSC privately before causal claims."
     }
   ],
   "data_sources": {
@@ -202,16 +235,18 @@
   },
   "agent_identity_policy": {
     "self_select_name": true,
-    "name_rule": "Pick a short distinctive display name on first session; reuse it on future sessions when possible. Check existing session_log to avoid confusing collisions.",
+    "name_rule": "Choose a short distinctive English display name using Latin letters only, in the format Agent + English name (examples: Agent Atlas, Agent Max, Agent Nova). Check session_log to avoid collisions; reuse the same agent_id in future sessions. Do not rewrite historical agent names.",
     "agent_id_rule": "Create a stable lowercase slug plus a short unique suffix. Same display name does not prove same agent.",
-    "proof_rule": "Display name is self-declared; only GitHub commit, dated evidence, tests and live verification support a verified-work claim."
+    "proof_rule": "Display name is self-declared; only GitHub commit, dated evidence, tests and live verification support a verified-work claim.",
+    "english_display_name_only_for_new_sessions": true,
+    "historical_entries_immutable": true
   },
   "first_open_behavior": {
     "default": "Read guide, choose own name, check data freshness and last handoff, then begin safe read-only diagnosis without routine questions.",
     "questions_only_when": "Private API/repo access is missing, a risky action needs owner approval, or a required goal is truly ambiguous. Ask one specific question after stating what was already checked.",
     "no_tools": "Provide evidence-backed read-only findings and a proposed next action. Do not claim a refresh, edit or attendance.",
-    "first_reply": "Immediately introduce your chosen agent_name and stable agent_id in the owner conversation; state only capabilities actually available in this session, explicit missing permissions/data, the first safe check you are starting now, and when/how you will hand off proof. No generic claim of push, analytics access or autonomous monitoring. Then begin safe checks without waiting for routine approval.",
-    "example_hindi": "Namaste sir, main [apna chuna hua agent naam], ID [stable ID]. Is session mein mere paas [sach mein available tools/access] hain; [missing access] nahi hai. Main abhi [pehla safe evidence check] shuru kar raha hoon. Tested changes aur dated proof work log mein dunga; risky kaam ya missing access par specific approval/access poochhunga."
+    "first_reply": "The FIRST chat response after receiving the link must immediately state a self-chosen English agent_name and stable agent_id, actual capabilities and limitations, and the first safe evidence check being started. Do not delay the introduction until after tool use or a later reply. Do not claim write/API access, authentication or monitoring from opening a URL.",
+    "example_hindi": "Namaste sir, main Agent Atlas hoon, ID [stable ID]. Is session mein [real tools] se [safe tasks] kar sakta hoon; [missing private access] nahi hai. Main abhi [first safe check] kar raha hoon. Proof aur next step share karunga; risky change se pehle approval loonga."
   },
   "owner_reported_manual_actions": {
     "status": "none_reported",
@@ -287,5 +322,20 @@
       "causal_reason": "No post-release comparable metrics yet; public tracker itself does not cause or cure search visibility losses.",
       "next_review": "Production smoke check complete; review 7d/28d comparable results not before 20 Oct / 10 Nov 2026 plus GSC lag, if secure fresh access exists."
     }
-  ]
+  ],
+  "agent_aliases": [
+    {
+      "agent_id": "raahi-20261013-a6c1",
+      "former_name": "Agent Raahi",
+      "current_name": "Agent Atlas",
+      "changed_on_ist": "2026-10-13",
+      "reason": "Owner asked for English agent display names. Historical work-log labels remain unchanged.",
+      "identity_verified": false
+    }
+  ],
+  "agent_verification_rules": {
+    "redirects": "For a broken-URL claim, use GET and report initial status, every redirect hop, final URL, final HTTP status and final page relevance. A 308 to a live 200 destination is not a 404. Repeat or cross-check anomalous results.",
+    "seo_titles": "Title character count alone is not a ranking defect. Decode HTML entities and check query intent, SERP, CTR and user value before suggesting a title edit.",
+    "external_agent_reports": "A self-declared agent narrative or workspace-only note is not a public verified work session. Cross-check live claims independently before adding them to the queue or attributing harm."
+  }
 }

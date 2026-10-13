@@ -96,8 +96,10 @@ def main():
                         assert page.locator('#attendanceRows .event').count() == 2
                         expect(page.locator('#attendanceRows')).to_contain_text('Start: Not recorded')
                         page.locator('#agentFilter').select_option('raahi-20261013-a6c1')
-                        assert page.locator('#attendanceRows .event').count() == 2
+                        assert page.locator('#attendanceRows .event').count() == 3
                         expect(page.locator('#attendanceRows')).to_contain_text('View commit')
+                        expect(page.locator('#attendanceRows')).to_contain_text('Agent Atlas')
+                        expect(page.locator('#attendanceRows')).to_contain_text('Agent Raahi')
                         expect(page.locator('#attendanceRows')).to_contain_text('Verified implementation and deployment')
                         expect(page.locator('#attendanceRows')).to_contain_text('Verified published control-centre feature')
                         expect(page.locator('#attendanceCount')).to_contain_text('1 verified IST day')
@@ -106,10 +108,13 @@ def main():
                     if route == 'agent':
                         expect(page.locator('#app')).to_contain_text('https://captionstudio.in/ai-control/agent')
                         expect(page.locator('#app')).to_contain_text('No scheduler is configured')
-                        expect(page.locator('#app')).to_contain_text('Choose a distinctive self-declared agent name')
+                        expect(page.locator('#app')).to_contain_text('Choose a distinctive English agent name')
                         expect(page.locator('#app')).to_contain_text('Last verified handoff')
                         expect(page.locator('#app')).to_contain_text('Introduce yourself first')
                         expect(page.locator('#app')).to_contain_text('tools you actually have')
+                        expect(page.locator('#app')).to_contain_text('FIRST owner-facing chat reply')
+                        expect(page.locator('#app')).to_contain_text('Latest unverified session')
+                        assert page.locator('.nextStep a').get_attribute('href') == '/ai-control'
                     if route == 'checker':
                         page.locator('#checkUrl').fill(base + '/missing-page')
                         page.locator('#urlForm button').click()
