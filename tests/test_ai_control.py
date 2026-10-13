@@ -99,6 +99,7 @@ def main():
                         assert page.locator('#attendanceRows .event').count() == 2
                         expect(page.locator('#attendanceRows')).to_contain_text('View commit')
                         expect(page.locator('#attendanceRows')).to_contain_text('Verified implementation and deployment')
+                        expect(page.locator('#attendanceRows')).to_contain_text('Verified published control-centre feature')
                         expect(page.locator('#attendanceCount')).to_contain_text('1 verified IST day')
                         page.locator('#dateFilter').select_option('2026-10-13')
                         expect(page.locator('#attendanceRows')).to_contain_text('Agent Raahi')
@@ -107,7 +108,6 @@ def main():
                         expect(page.locator('#app')).to_contain_text('No scheduler is configured')
                         expect(page.locator('#app')).to_contain_text('Choose a distinctive self-declared agent name')
                         expect(page.locator('#app')).to_contain_text('Last verified handoff')
-                        expect(page.locator('#app')).to_contain_text('Latest unverified session')
                         expect(page.locator('#app')).to_contain_text('Introduce yourself first')
                         expect(page.locator('#app')).to_contain_text('tools you actually have')
                     if route == 'checker':
