@@ -125,7 +125,7 @@
       "source": "Local Git commit and desktop/mobile Playwright tests; GitHub push blocked by missing credentials; no live deployment",
       "local_commit": "514cf8746e34d24179cdfa47f02a0affbadac1fb",
       "commit": null,
-      "summary": "Implemented self-named agent attendance, per-page section navigation, first-open protocol and traffic/engagement goals locally; not deployed.",
+      "summary": "Implemented self-named agent introduction and attendance, per-page section navigation, first-open protocol and traffic/engagement goals locally; not deployed.",
       "observations": [
         "Two legacy verified sessions have no recorded author or timestamps; kept unknown.",
         "Public GSC snapshot has 25 daily dates and page-history has one baseline; no honest complete non-branded 28-day comparator or verified GA4 engaged-session baseline.",
@@ -135,7 +135,8 @@
       "actions": [
         "Added self-selected identity policy and dated agent/date attendance filters with proof, outcome and next step fields.",
         "Added on-page jumps and next-step guidance to seven routes, plus measured traffic and engagement goal plan.",
-        "Updated public agent guide, state queue, safety caveats and desktop/mobile regression coverage."
+        "Updated public agent guide, state queue, safety caveats and desktop/mobile regression coverage.",
+        "Added explicit first-reply introduction contract: agent announces self-selected name, real capabilities/limits and immediate first check in the owner conversation."
       ],
       "checks": [
         "node --check ai-control/app.js passed",
@@ -145,7 +146,7 @@
         "GitHub push failed; production deployment NOT verified"
       ],
       "outcome": "Partial: local code tested and committed; not pushed, not live, not counted as a verified work day. No new GA4/GSC data or SEO changes.",
-      "next_agent": "Obtain private authorised GitHub write access. Fetch/check origin/main, push implementation and handoff commits, run desktop/mobile checks and verify production JSON/JS/live pages. Only then mark this session verified with actual GitHub commit and deployment proof; do not invent timestamps. Fresh analytics refresh needs separate secure GA4/GSC access."
+      "next_agent": "When given the link, introduce your self-selected name, stable ID, real available capabilities and immediate safe check in the owner conversation before working. Obtain private authorised GitHub write access; fetch/check origin/main, push local commits, run desktop/mobile and verify production JSON/JS/live pages. Only then mark work verified with pushed commit and deployment proof; never invent timestamps. Fresh metrics need separate secure GA4/GSC access."
     }
   ],
   "data_sources": {
@@ -164,7 +165,9 @@
   "first_open_behavior": {
     "default": "Read guide, choose own name, check data freshness and last handoff, then begin safe read-only diagnosis without routine questions.",
     "questions_only_when": "Private API/repo access is missing, a risky action needs owner approval, or a required goal is truly ambiguous. Ask one specific question after stating what was already checked.",
-    "no_tools": "Provide evidence-backed read-only findings and a proposed next action. Do not claim a refresh, edit or attendance."
+    "no_tools": "Provide evidence-backed read-only findings and a proposed next action. Do not claim a refresh, edit or attendance.",
+    "first_reply": "Immediately introduce your chosen agent_name and stable agent_id in the owner conversation; state only capabilities actually available in this session, explicit missing permissions/data, the first safe check you are starting now, and when/how you will hand off proof. No generic claim of push, analytics access or autonomous monitoring. Then begin safe checks without waiting for routine approval.",
+    "example_hindi": "Namaste sir, main [apna chuna hua agent naam], ID [stable ID]. Is session mein mere paas [sach mein available tools/access] hain; [missing access] nahi hai. Main abhi [pehla safe evidence check] shuru kar raha hoon. Tested changes aur dated proof work log mein dunga; risky kaam ya missing access par specific approval/access poochhunga."
   },
   "owner_reported_manual_actions": {
     "status": "none_reported",

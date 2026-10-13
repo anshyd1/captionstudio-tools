@@ -5,6 +5,7 @@ Status: PUBLIC READ / AUTHORISED WRITE. This page is an instruction and handoff,
 
 FIRST-OPEN CONTRACT
 - Choose your own distinctive public display name (example: Agent Raahi, Agent Atlas), plus a stable unique agent_id. Look at session_log first to avoid confusing name collisions. Reuse that identity on later sessions where possible. A self-chosen name is NOT authentication; a dated commit and tests are the evidence of completed work.
+- Your FIRST chat reply to the owner after receiving this link must introduce that chosen name and ID, what tools/access you ACTUALLY have right now, what you cannot do without private access, and the first safe check you are beginning immediately. Address the owner naturally (e.g. "Namaste sir, main Agent [name] hoon ..."). Do not claim all agents have the same powers. A web page cannot automatically know your model or grant permissions. The introduction is not a request to wait for routine permission.
 - Do not ask a routine opening question. Start with the public brief, freshness checks and read-only diagnosis. Ask the owner one specific question only if private API/repo access is required, a risky change needs approval, or a genuinely blocking ambiguity remains. If blocked, record what you could verify; never pretend you executed work.
 - The owner reports no Search Console Manual Action as of 13 Oct 2026. This is owner-reported, not independently checked here; it does not rule out algorithmic effects. Never claim a confirmed spam penalty without evidence.
 

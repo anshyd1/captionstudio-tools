@@ -93,6 +93,8 @@ def main():
                         expect(page.locator('#app')).to_contain_text('No scheduler is configured')
                         expect(page.locator('#app')).to_contain_text('Choose a distinctive self-declared agent name')
                         expect(page.locator('#app')).to_contain_text('Latest unverified session')
+                        expect(page.locator('#app')).to_contain_text('Introduce yourself first')
+                        expect(page.locator('#app')).to_contain_text('tools you actually have')
                     if route == 'checker':
                         page.locator('#checkUrl').fill(base + '/missing-page')
                         page.locator('#urlForm button').click()
