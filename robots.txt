@@ -16,6 +16,9 @@ Disallow: /private/
 Disallow: /data/
 Disallow: /ad-studio
 Disallow: /creator-pack
+Disallow: /ai-control
+Disallow: /ai-agent
+Disallow: /ai-report.json
 
 # ============================================
 # AI SEARCH ENGINES — EXPLICITLY ALLOWED
