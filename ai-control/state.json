@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-13T16:28:48Z",
+  "last_agent_update": "2026-10-14T13:30:51Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -30,7 +30,7 @@
       "priority": "P0",
       "status": "investigate",
       "title": "24 June 2026 Google Search visibility collapse ka root cause verify karo",
-      "evidence": "Equal 7-day windows 17–23 Jun vs 25 Jun–1 Jul: GSC 5,541→665 clicks (-88.0%) and 183,667→4,279 impressions (-97.7%); GA4 2,677→903 views (-66.3%). Not just GA4 tagging. Google officially began a global spam update 24 Jun 09:00 PDT (16:00 UTC), but GA4 organic sessions slowed around 10–15 UTC; correlation is not proof of cause.",
+      "evidence": "Equal 7-day windows 17–23 Jun vs 25 Jun–1 Jul: GSC 5,541→665 clicks (-88.0%) and 183,667→4,279 impressions (-97.7%); GA4 2,677→903 views (-66.3%). Not just GA4 tagging. Google officially began a global spam update 24 Jun 09:00 PDT (16:00 UTC), but GA4 organic sessions slowed around 10–15 UTC; correlation is not proof of cause. Fresh GSC API 14 Oct: the 8 pruned vs-match/guide slugs (argentina-vs-algeria, brazil-vs-morocco, usa-vs-paraguay, cristiano-ronaldo-fifa, fifa-world-cup-2026-complete-guide, messi-last-world-cup, world-cup-2026-opening-match, world-cup-2026-today-match) return zero rows for 2026-09-16 to 2026-10-13, matching their live 404 and zero internal links; no generic redirect restoration is evidence-backed. June cause remains unknown.",
       "next": "Read /ai-control/research-june24.txt. Owner reports no Manual Action as of 13 Oct (not independently verified); check Security Issues and Indexing UI if access permits, then deployed server/Cloudflare/DNS evidence around 10–16 UTC. Audit a small affected-page sample against Google spam policies and review generic redirects; get owner approval before risky changes.",
       "approval_required_for_change": true
     },
@@ -39,8 +39,8 @@
       "priority": "P0",
       "status": "investigate",
       "title": "6 Oct ke baad GA4 views drop ki wajah verify karo",
-      "evidence": "GA4 daily views 5 Oct 237, 6 Oct 92, 7 Oct 37; GSC data ka lag alag hai.",
-      "next": "Same dates par GA4 event counts, consent state, GSC clicks aur top landing pages compare karo. Proof ke bina consent code mat badlo.",
+      "evidence": "Fresh GA4/GSC API 14 Oct (service account, read-only): GA4 Sep29-Oct5 vs Oct6-12 sessions 1,442->267 (-81.5%) across ALL channels (Organic Search 1,025->146, Direct 212->72, Referral 122->16), all countries (India 1,225->221, -82.0%; Pakistan/Bangladesh granted-region also fell) and hourly break after ~06 UTC on 6 Oct (Oct5 06-23 UTC sessions 149 vs Oct6 06-23 UTC 22; 00-05 UTC near-identical 35 vs 33), while GSC clicks only -18.0% in source-specific 7d windows. Root-cause defect found in repo: 53 pages pass Consent Mode region as a separate third gtag argument `}, { region: [...] })`, which Google's documented syntax ignores (region must be inside the params object); one page (diwali) has no region grant at all. Result: analytics_storage stayed denied for every region until banner Accept. Cause verdict for the GA4 drop: strongly supported measurement defect, pending post-deploy recovery confirmation.",
+      "next": "Owner approval + GitHub push required (tracking/consent change). Prepared locally 14 Oct: move region inside the consent params object on 54 pages. After production deploy, verify GA4 hourly/country sessions at 24h and complete 7d; only then mark this P0 closed. Do not treat pre-fix GA4 as real traffic loss.",
       "approval_required_for_change": true
     },
     {
@@ -229,6 +229,45 @@
       "outcome": "Verified public protocol correction. External agent read-only behavior was partly useful, but its 404 report did not reproduce under independent final-GET checks. No external agent session was imported as authenticated or verified work. One unique IST work day remains; no session hours inferred.",
       "next_agent": "Use a distinct short English name and introduce it in the first owner-facing reply after opening the guide. Diagnose safely, verify full GET redirect chain and final content before declaring a 404; title length alone is not an SEO defect. Preserve historical names and require secure private data and evidence before attribution or risky fixes.",
       "verified_at": "2026-10-13T16:28:48Z"
+    },
+    {
+      "id": "2026-10-14-meridian-consent-fix",
+      "date_ist": "2026-10-14",
+      "agent_name": "Agent Meridian",
+      "agent_id": "meridian-20261014-m4k8",
+      "identity_verified": false,
+      "status": "partial",
+      "started_at": "2026-10-14T18:50:21+05:30",
+      "ended_at": "2026-10-14T19:02:03+05:30",
+      "logged_at": "2026-10-14T13:30:51Z",
+      "source": "Owner-supplied Google service account used read-only in agent environment (never committed) + GA4 Data API property 526303859 + GSC Search Analytics API sc-domain:captionstudio.in + live GET checks + public GitHub history. GitHub push unavailable in this environment, so this entry is partial until an authorised push and live verification.",
+      "commit": null,
+      "local_commit": null,
+      "summary": "Attendance recorded and Oct 6 GA4 measurement root cause isolated to a Consent Mode region syntax defect; reversible fix prepared on 54 pages, pending owner approval and production deploy.",
+      "observations": [
+        "GSC service account lists sc-domain:captionstudio.in as siteOwner and GA4 property 526303859 returns data (read-only API test 14 Oct); no credential or token is stored in this repo.",
+        "GA4 Sep29-Oct5 vs Oct6-12: sessions 1,442->267 (-81.5%) in every channel and country, India 1,225->221 (-82.0%); hourly sessions Oct5 06-23 UTC 149 vs Oct6 22, with 00-05 UTC unchanged (35 vs 33). GSC source-specific 7d clicks 222->182 (-18.0%); fresh GSC daily now reaches 13 Oct (39/65/34 clicks on 11/12/13 Oct) while complete GA4 13 Oct is only 42 sessions.",
+        "53 pages passed region as a separate third gtag argument, which Google documentation does not recognise (region belongs inside the params object); blog/diwali-captions-instagram-2026.html had no region grant. Live sampled pages still carry GA ID G-X490RGQB38, so a missing tag is not the explanation.",
+        "Argentina/Brazil football redirect slugs still 308 to the viral page (200); the 8 pruned vs-match/guide slugs are 404 and return zero GSC rows 16 Sep-13 Oct, so no redirect restoration was made."
+      ],
+      "actions": [
+        "Recorded this attendance entry as partial (not verified) because GitHub write access is unavailable in this environment.",
+        "Prepared one bounded reversible fix: Consent Mode region syntax corrected on 54 HTML pages; no content, title, redirect, deletion or new-article change.",
+        "Updated the Oct 6 queue evidence and added a pending impact review with 24h/7d/28d post-deploy checks."
+      ],
+      "checks": [
+        "GA4/GSC API read-only access test passed 14 Oct (GSC siteOwner listing for sc-domain:captionstudio.in; GA4 runReport 200 on property 526303859)",
+        "Consent scan after fix: 54 HTML pages carry region inside the consent params object; 0 pages retain the separate-argument pattern",
+        "Headless Chromium dataLayer proof: before = consent default with region as an ignored 4th element; after = region inside the params object (Google documented syntax)",
+        "Equal-window GA4/GSC recomputation plus hourly Oct 5-7, country, channel, device, source and event analysis from fresh API data",
+        "Full GET redirect chains cross-checked with curl and Python for football redirect and pruned 404 slugs",
+        "node --check ai-control/app.js passed",
+        "python -m json.tool ai-control/state.json passed",
+        "python tests/test_ai_control.py passed (desktop 1440x900 and mobile 390x844, eight routes)",
+        "git diff --check passed; no credential, token or service-account email pattern in the committed diff"
+      ],
+      "outcome": "Partial until authorised push and live deploy verification. Root cause of the Oct 6 GA4 drop is strongly supported as a measurement defect, not yet confirmed by post-fix recovery. No verified attendance day is claimed from a local commit alone.",
+      "next_agent": "Get owner approval, push this commit, verify production consent snippet and GA4 hourly recovery at 24h/7d/28d, then update this entry to verified with the implementation commit link. Refresh page-history with a second complete comparable sample (GA window ending 14 Oct completes after 15 Oct) and keep June cause unknown pending Search Console UI evidence."
     }
   ],
   "data_sources": {
@@ -326,6 +365,19 @@
       "causal_confidence": "not assessed",
       "causal_reason": "No post-release comparable metrics yet; public tracker itself does not cause or cure search visibility losses.",
       "next_review": "Production smoke check complete; review 7d/28d comparable results not before 20 Oct / 10 Nov 2026 plus GSC lag, if secure fresh access exists."
+    },
+    {
+      "id": "impact-meridian-consent-2026-10-14",
+      "session_id": "2026-10-14-meridian-consent-fix",
+      "change_title": "Consent Mode region syntax fix (prepared, pending deploy)",
+      "change_date_ist": "2026-10-14",
+      "scope": "54 HTML pages: region ['IN','PK','BD','NP','LK'] moved inside the gtag consent default params object (Google documented syntax); diwali page gains the missing region grant. No content, title, redirect or UI change.",
+      "expected_signal": "GA4 sessions/page views and caption_copy/tool_generate event counts recover toward the pre-6-Oct baseline (GA4 sessions ~180-220/day) within 24h-7d after deploy, with no matching GSC change required. GSC is the control: Google demand did not fall 80%.",
+      "observed_effect": null,
+      "outcome_status": "pending",
+      "causal_confidence": "strongly supported for the measurement defect; recovery not yet observed",
+      "causal_reason": "Hourly GA4 break after the 6 Oct 05:31 UTC consent deploy, uniform -80% across granted and denied regions/channels/devices while GSC fell only -18%, plus a documented gtag syntax defect on all sampled pages. Post-deploy recovery is still required before closing the P0.",
+      "next_review": "24h, 7d and 28d after production deploy is verified live (deploy date not yet known; local commit alone does not start the clock)."
     }
   ],
   "agent_aliases": [

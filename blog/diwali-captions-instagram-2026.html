@@ -11,6 +11,11 @@
     analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
     wait_for_update: 500
   });
+  gtag('consent', 'default', {
+    ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted',
+    analytics_storage: 'granted',
+    region: ['IN', 'PK', 'BD', 'NP', 'LK']
+  });
   gtag('js', new Date());
   gtag('config', 'G-X490RGQB38');
 </script>
