@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-14T14:05:00Z",
+  "last_agent_update": "2026-10-14T14:10:00Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -327,12 +327,12 @@
       "agent_name": "Agent Meridian",
       "agent_id": "meridian-20261014-m4k8",
       "identity_verified": false,
-      "status": "partial",
+      "status": "verified",
       "started_at": "2026-10-14T19:59:00+05:30",
-      "ended_at": "2026-10-14T20:05:00+05:30",
+      "ended_at": "2026-10-14T20:10:00+05:30",
       "logged_at": "2026-10-14T14:05:00Z",
-      "source": "Owner screenshot and direct instruction in chat 14 Oct (dashboard samajh nahi aa raha, ek nazar mein samajh aaye aisa do) + local Playwright verification. Push/live verification follow in the next commit.",
-      "commit": null,
+      "source": "GitHub commit 9dd59bd + Vercel success + live production browser verification (desktop + mobile) 14 Oct.",
+      "commit": "https://github.com/anshyd1/captionstudio-tools/commit/9dd59bd8182da446481a85bc232bf3bd21779027",
       "local_commit": null,
       "summary": "Overview page par sabse upar aasan Roman-Hindi owner dashboard lagaya: 4 bade dabbe (Google traffic, ginoti, sabse bada kaam, aakhiri kaam) aur 3 bade button (kaam dekho, plan dekho, traffic dekho). Owner ke sketch/visual aur bahar-puchho wale niyam bhi state aur guide mein likhe.",
       "observations": [
@@ -348,10 +348,13 @@
         "node --check ai-control/app.js passed",
         "python -m json.tool ai-control/state.json passed",
         "python tests/test_ai_control.py passed (desktop 1440x900 aur mobile 390x844, eight routes)",
-        "Headless browser mein owner card sabse upar sahi numbers ke saath dikha (182 clicks, dated snapshot range ke saath)"
+        "Headless browser mein owner card sabse upar sahi numbers ke saath dikha (182 clicks, dated snapshot range ke saath)",
+        "GitHub origin/main includes 9dd59bd and Vercel reports success",
+        "Live /ai-control par owner card sabse upar dikha, 3 button maujood, mobile 390x844 par koi side-scroll nahi"
       ],
-      "outcome": "Partial until pushed and live-verified. Isse traffic nahi badhega — ye sirf owner ke samajhne ke liye hai, aur yahi iska kaam hai.",
-      "next_agent": "Simple dashboard ko pehle rakho aur uske shabdon ko data ke saath sach rakho. Sketch banana ho to 7-din/1-mahina wala niyam yaad rakho. Bahar ki cheez badalne se pehle owner se puchho; scan bina puche karte raho."
+      "outcome": "Verified live 14 Oct 2026. Dashboard ab owner ko ek nazar mein samajh aayega; traffic par iska koi seedha asar nahi hai aur na hi daava hai.",
+      "next_agent": "Simple dashboard ko pehle rakho aur uske shabdon ko data ke saath sach rakho. Sketch banana ho to 7-din/1-mahina wala niyam yaad rakho. Bahar ki cheez badalne se pehle owner se puchho; scan bina puche karte raho.",
+      "verified_at": "2026-10-14T14:10:00Z"
     }
   ],
   "data_sources": {
