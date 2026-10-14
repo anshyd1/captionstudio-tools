@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-14T13:35:55Z",
+  "last_agent_update": "2026-10-14T13:45:00Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -42,6 +42,15 @@
       "evidence": "Fresh GA4/GSC API 14 Oct (service account, read-only): GA4 Sep29-Oct5 vs Oct6-12 sessions 1,442->267 (-81.5%) across ALL channels (Organic Search 1,025->146, Direct 212->72, Referral 122->16), all countries (India 1,225->221, -82.0%; Pakistan/Bangladesh granted-region also fell) and hourly break after ~06 UTC on 6 Oct (Oct5 06-23 UTC sessions 149 vs Oct6 06-23 UTC 22; 00-05 UTC near-identical 35 vs 33), while GSC clicks only -18.0% in source-specific 7d windows. Root-cause defect found in repo: 53 pages pass Consent Mode region as a separate third gtag argument `}, { region: [...] })`, which Google's documented syntax ignores (region must be inside the params object); one page (diwali) has no region grant at all. Result: analytics_storage stayed denied for every region until banner Accept. Cause verdict for the GA4 drop: strongly supported measurement defect, pending post-deploy recovery confirmation.",
       "next": "Deployed 14 Oct (commit 0aac4b8, Vercel success, live consent snippet verified). Verify GA4 hourly/country sessions at 24h (15 Oct), complete 7d (21 Oct) and 28d (11 Nov IST); only then mark this P0 closed. Do not treat pre-fix GA4 dip as real traffic loss in any baseline.",
       "approval_required_for_change": true
+    },
+    {
+      "id": "viral-core-decline",
+      "priority": "P1",
+      "status": "investigate",
+      "title": "Mukhya viral page ki girawat roko — site ke 86% click-loss ki jad yahi hai",
+      "evidence": "Fresh GSC API 14 Oct, complete 28d windows 19 Aug-15 Sep vs 16 Sep-13 Oct: /blog/viral-captions-for-reels-2026 clicks 1,997->776 (-1,221 of the site total -1,414). Query 'viral captions' position 1.7->3.4 (clicks 351->58); 'instagram viral captions' position 4.4->6.2; 'viral caption' impressions 1,223->413. Site weekly GSC clicks: peak 5,541 (17-23 Jun) -> 234 (7-13 Oct), -95.8% from record; latest week +8.8% (215->234) is stabilisation, not a boost. This one page still supplies ~80% of Google clicks (concentration risk). Fragment (#) URL CTR rows are a GSC reporting artefact — do not chase them.",
+      "next": "16 Oct: deep audit of the viral page (SERP intent for 'viral captions' vs 'for reels' variants, content sections, freshness, competitors) BEFORE any title edit. First evidence-backed fix targeted 21 Oct, second refresh 24 Oct, Hinglish de-cannibalisation check 28 Oct. Measure 7/28d by query. Owner plan: /captionstudio-traffic-boost-plan (workspace) and this queue.",
+      "approval_required_for_change": false
     },
     {
       "id": "page-history-baseline",
@@ -272,6 +281,42 @@
       "outcome": "Verified implementation and deployment on 14 Oct 2026; this is the second verified IST work day. Traffic outcome is still pending: GA4 recovery must be measured at 24h/7d/28d after deploy before the Oct 6 P0 is closed. June 24 Search cause remains unknown.",
       "next_agent": "At 24h (15 Oct), complete 7d (21 Oct) and 28d (11 Nov 2026) check GA4 hourly/country/channel sessions against the pre-6-Oct baseline and GSC as control; close measurement-2026-10-06 only if GA4 recovers. Append a second comparable page-history sample once a complete equal-length window exists. Keep June cause unknown pending Search Console UI Manual Actions/Security/Indexing evidence; owner reports none as of 13 Oct, not independently verified.",
       "verified_at": "2026-10-14T13:35:55Z"
+    },
+    {
+      "id": "2026-10-14-meridian-traffic-seo",
+      "date_ist": "2026-10-14",
+      "agent_name": "Agent Meridian",
+      "agent_id": "meridian-20261014-m4k8",
+      "identity_verified": false,
+      "status": "partial",
+      "started_at": "2026-10-14T19:13:45+05:30",
+      "ended_at": "2026-10-14T19:17:11+05:30",
+      "logged_at": "2026-10-14T13:45:00Z",
+      "source": "Owner instruction in chat (full permission for SEO/internal-link work within guide guardrails) + GA4/GSC read-only API 14 Oct + full internal-link crawl of 50 sitemap URLs + repo state. Implementation commit follows in this same push; verified status requires the live follow-up check.",
+      "commit": null,
+      "local_commit": null,
+      "summary": "Owner-facing traffic truth, boost plan and one advanced-SEO internal-link fix: CapCut page linked from Guide and Reel Hooks. Core finding recorded — one viral page caused 86% of the 28-day click loss.",
+      "observations": [
+        "Traffic boost has NOT happened yet: weekly GSC clicks 5,541 (peak, 17-23 Jun) -> 234 (7-13 Oct), -95.8% from record; 28d total clicks 2,385->971 (-59%). Latest week 215->234 (+8.8%) is stabilisation only.",
+        "Non-branded baseline established from full query export: 727 vs 1,884 clicks (-61%, 16 Sep-13 Oct vs 19 Aug-15 Sep, branded rule documented). One page, /blog/viral-captions-for-reels-2026, lost 1,221 of the site's 1,414 lost clicks.",
+        "Internal-link crawl (50 sitemap pages): tools pages already have 33-42 inlinks (linking is not their problem; rank is). Fewest inlinks: best-capcut-alternatives 2, mahadev-bio 3, spider-man 3. The CapCut-focused /guide page did not link to the CapCut alternatives article at all.",
+        "Oct13 sessions built the control-centre system (dashboards, trackers, rules) with no direct traffic work; working method changed to 80% page/query improvement, no new articles for two weeks, every fix measured at 7/28 days."
+      ],
+      "actions": [
+        "Added two contextual internal links to /blog/best-capcut-alternatives-india-2026 (guide.html CapCut section; reel-hooks related-guides list). This is the second and last fix of 14 Oct across all agents (consent fix was the first).",
+        "Wrote the owner plan (system samjhaya, agent-wise yogdan, traffic record, dated chart 15 Oct-11 Nov, proposed target 727->900 non-branded clicks) and recorded the viral-core-decline P1 queue item for the next agent.",
+        "Established the north-star baseline in goals from two comparable complete GSC windows (was pending since 13 Oct)."
+      ],
+      "checks": [
+        "Fresh GA4/GSC API windows recomputed 14 Oct (weekly series Jun-Oct, two complete 28d windows, page/query loss analysis)",
+        "Internal-link crawl of all 50 sitemap URLs (inlinks counted per page)",
+        "node --check ai-control/app.js passed",
+        "python -m json.tool ai-control/state.json passed",
+        "python tests/test_ai_control.py passed (desktop 1440x900 and mobile 390x844, eight routes)",
+        "git diff --check passed; no credential pattern in diff"
+      ],
+      "outcome": "Partial until this commit is pushed and the two live links are verified. No traffic increase is claimed; recovery and link impact are due 21 Oct / 11 Nov.",
+      "next_agent": "15 Oct: consent 24h GA4 recovery check. 16 Oct: viral page deep audit before any title change. Follow the dated chart in the state queue (viral fix 21 Oct, refresh 24 Oct, Hinglish check 28 Oct, reviews 31 Oct/11 Nov). No new articles until a GSC query without a page is proven."
     }
   ],
   "data_sources": {
@@ -308,7 +353,7 @@
     "north_star": {
       "name": "Non-branded Google Web clicks to useful landing pages",
       "window": "complete rolling 28 days vs preceding complete 28 days",
-      "baseline_status": "pending: current public snapshot has only 25 GSC daily dates and only top queries",
+      "baseline_status": "established 14 Oct 2026 from full GSC query export: non-branded clicks 727 (16 Sep-13 Oct 2026) vs 1,884 (19 Aug-15 Sep 2026), branded rule = query contains 'caption studio'/'captionstudio'; query-dimension export undercounts anonymised queries equally in both windows. Owner-proposed target 900 for 14 Oct-10 Nov pending owner approval in chat; seek sustained recovery, not spikes.",
       "target_rule": "Set a numeric target only after two comparable complete windows; seek sustained improvement, not one-day spikes."
     },
     "supporting": [
@@ -382,6 +427,19 @@
       "causal_confidence": "strongly supported for the measurement defect; recovery not yet observed",
       "causal_reason": "Hourly GA4 break after the 6 Oct 05:31 UTC consent deploy, uniform -80% across granted and denied regions/channels/devices while GSC fell only -18%, plus a documented gtag syntax defect on all sampled pages. Post-deploy recovery is still required before closing the P0.",
       "next_review": "Production deploy verified 14 Oct 2026 ~19:04 IST. Review GA4 recovery at 24h (15 Oct), complete 7d (21 Oct) and 28d (11 Nov 2026); GSC is the control and needs no matching jump."
+    },
+    {
+      "id": "impact-meridian-capcut-links-2026-10-14",
+      "session_id": "2026-10-14-meridian-traffic-seo",
+      "change_title": "Internal links to CapCut alternatives page from Guide and Reel Hooks",
+      "change_date_ist": "2026-10-14",
+      "scope": "Two contextual links: guide.html (CapCut resources guide) and blog/instagram-reel-hooks-2026.html (related-guides list) now link to /blog/best-capcut-alternatives-india-2026, which had only 2 inlinks from the 50 sitemap pages — the fewest of any content page. No other text changed.",
+      "expected_signal": "CapCut page inlinks 2->4 from topically relevant pages; GSC impressions/clicks for the page begin or grow within 7-28 days; GA4 views (154/28d baseline, mostly non-Google) hold or improve.",
+      "observed_effect": null,
+      "outcome_status": "pending",
+      "causal_confidence": "not assessed",
+      "causal_reason": "Deployed 14 Oct; no post-change complete GSC window yet (GSC lag). Page previously earned 154 GA4 views with only 7 GSC impressions in the old snapshot baseline.",
+      "next_review": "Interim GA4 check 20 Oct; GSC verdict at complete 7d (21 Oct) and 28d (11 Nov 2026) windows."
     }
   ],
   "agent_aliases": [
