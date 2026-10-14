@@ -2,7 +2,7 @@
   "schema_version": 2,
   "purpose": "Public, model-agnostic handoff. This is not a scheduler or a secret store.",
   "mode": "on_open",
-  "last_agent_update": "2026-10-14T13:48:00Z",
+  "last_agent_update": "2026-10-14T14:05:00Z",
   "daily_policy": {
     "start_with_data_check": true,
     "max_low_risk_fixes_per_session": 2,
@@ -320,6 +320,38 @@
       "outcome": "Verified delivery on 14 Oct 2026 (planning, core-decline record, baseline and internal-link fix live). Traffic impact pending measurement at 21 Oct / 11 Nov; no boost is claimed yet — boost is the work ahead, starting with the viral page.",
       "next_agent": "15 Oct consent 24h check; 16 Oct viral page deep audit (no blind title edit); 20 Oct impact reviews + second page-history sample; 21 Oct consent 7d verdict and first viral fix if audit proves it; 24 Oct viral refresh; 28 Oct Hinglish differentiation; 31 Oct honest monthly report; 11 Nov 28d verdict. Proposed owner target: non-branded clicks 727 -> 900 by 10 Nov.",
       "verified_at": "2026-10-14T13:48:00Z"
+    },
+    {
+      "id": "2026-10-14-meridian-simple-dashboard",
+      "date_ist": "2026-10-14",
+      "agent_name": "Agent Meridian",
+      "agent_id": "meridian-20261014-m4k8",
+      "identity_verified": false,
+      "status": "partial",
+      "started_at": "2026-10-14T19:59:00+05:30",
+      "ended_at": "2026-10-14T20:05:00+05:30",
+      "logged_at": "2026-10-14T14:05:00Z",
+      "source": "Owner screenshot and direct instruction in chat 14 Oct (dashboard samajh nahi aa raha, ek nazar mein samajh aaye aisa do) + local Playwright verification. Push/live verification follow in the next commit.",
+      "commit": null,
+      "local_commit": null,
+      "summary": "Overview page par sabse upar aasan Roman-Hindi owner dashboard lagaya: 4 bade dabbe (Google traffic, ginoti, sabse bada kaam, aakhiri kaam) aur 3 bade button (kaam dekho, plan dekho, traffic dekho). Owner ke sketch/visual aur bahar-puchho wale niyam bhi state aur guide mein likhe.",
+      "observations": [
+        "Owner ko Work Log page samajh nahi aaya (screenshot saboot). Mushkil angrezi dashboard owner ke liye pehli dikkat thi, data ki nahi.",
+        "Aaj ke 2 SEO fix (consent, CapCut link) ke baad ye teesri site-change hai — ye SEO fix nahi, owner ke seedhe order par ki gayi UI asani hai; ye baat is log mein khule taur par likhi gayi hai taaki ginoti saaf rahe."
+      ],
+      "actions": [
+        "ai-control/app.js overview mein owner-simple card sabse upar lagaya (data snapshot/state se khud banta hai, haath se number nahi likhe).",
+        "Owner rules state.json aur AGENT_GUIDE.txt mein jode: (1) simple dashboard hamesha pehle, (2) sketch/visual sirf samjhane ke liye, kaam ke 7 din ke andar hatao, mahine-wale review par zyada se zyada 1 mahina, asal data sirf JSON files mein, (3) is link ke bahar kuch badalna ho to owner se puchho, bina puche sirf scan/padhna allowed hai.",
+        "Tests mein owner-card ki nayi ummeed jodi; purana hero-first wala check hataya."
+      ],
+      "checks": [
+        "node --check ai-control/app.js passed",
+        "python -m json.tool ai-control/state.json passed",
+        "python tests/test_ai_control.py passed (desktop 1440x900 aur mobile 390x844, eight routes)",
+        "Headless browser mein owner card sabse upar sahi numbers ke saath dikha (182 clicks, dated snapshot range ke saath)"
+      ],
+      "outcome": "Partial until pushed and live-verified. Isse traffic nahi badhega — ye sirf owner ke samajhne ke liye hai, aur yahi iska kaam hai.",
+      "next_agent": "Simple dashboard ko pehle rakho aur uske shabdon ko data ke saath sach rakho. Sketch banana ho to 7-din/1-mahina wala niyam yaad rakho. Bahar ki cheez badalne se pehle owner se puchho; scan bina puche karte raho."
     }
   ],
   "data_sources": {
@@ -459,5 +491,11 @@
     "redirects": "For a broken-URL claim, use GET and report initial status, every redirect hop, final URL, final HTTP status and final page relevance. A 308 to a live 200 destination is not a 404. Repeat or cross-check anomalous results.",
     "seo_titles": "Title character count alone is not a ranking defect. Decode HTML entities and check query intent, SERP, CTR and user value before suggesting a title edit.",
     "external_agent_reports": "A self-declared agent narrative or workspace-only note is not a public verified work session. Cross-check live claims independently before adding them to the queue or attributing harm."
+  },
+  "owner_rules": {
+    "simple_dashboard_first": "Overview page par sabse upar aasan Hindi (Roman) mein 4 bade dabbe aur 3 bade button hamesha rakho: Google traffic, ginoti ki haalat, sabse bada kaam, aakhiri kaam. Owner ko pehle wahi dikhe, details baad mein.",
+    "temporary_visuals": "Sketch/visual sirf samjhane ke liye bana sakte ho; wo asal data nahi hai. Kaam khatm hone par sketch 7 din ke andar hata do; agar koi visual mahine-bhar ke review ke liye hai to zyada se zyada 1 mahina rakho. Asal aur pakka data sirf snapshot.json, state.json aur page-history.json mein rahega.",
+    "outside_website_ask_first": "Is research/control link ke bahar website ke bahar kuch bhi badalna, post karna ya hatana ho to pehle owner se puchho. Bina puche sirf padhna aur scan karna (read-only) allowed hai — scan karte raho.",
+    "owner_instruction_2026_10_14": "Owner ne 14 Oct ko kaha: dashboard aisa do jo koi bhi ek baar mein samjhe. Upar wala simple dashboard isiliye banaya gaya hai; use hatana mat, data badle to shabdon ko bhi sach ke hisab se badlo."
   }
 }

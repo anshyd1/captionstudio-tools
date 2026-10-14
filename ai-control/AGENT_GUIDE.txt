@@ -61,3 +61,8 @@ F. Handoff: append ONE honest /ai-control/state.json session_log entry with agen
 Date / Data freshness / Observations with proof / Chosen tasks / Changes + commit + tests / Impact review status and due dates / Metrics to watch / Blockers + owner approval needed / Next-agent instructions.
 
 This public guide is model-agnostic. Opening a link alone cannot grant GitHub or Analytics access and cannot run a scheduled job. The agent must have tools and credentials supplied privately by the owner.
+
+OWNER RULES (added 14 Oct 2026 on owner instruction)
+- SIMPLE DASHBOARD FIRST: The overview page opens with a plain Roman-Hindi owner card (4 big boxes + 3 big buttons: work done, plan ahead, traffic). Keep it first and truthful; update its words when the data changes. Details stay below it.
+- TEMPORARY VISUALS: A sketch/visual may be generated only to explain. It is never the record. Delete a working sketch within 7 days of the work ending; a visual kept for a monthly review may live at most 1 month. Permanent data lives only in snapshot.json, state.json and page-history.json.
+- OUTSIDE THIS LINK, ASK FIRST: Do not change, post or delete anything outside this website/research link system without asking the owner. Read-only reading and scanning needs no permission — keep scanning.

@@ -62,7 +62,9 @@ def main():
                     assert page.evaluate('location.hash') == '#' + section_id
                     assert page.locator('#' + section_id).count() == 1
                     if route == '':
-                        assert page.locator('.hero').bounding_box()['y'] < 390
+                        expect(page.locator('#app')).to_contain_text('ek nazar mein saari baat')
+                        expect(page.locator('#app')).to_contain_text('Viral page bachana')
+                        expect(page.locator('#app')).to_contain_text('Kisne kya kaam kiya')
                         expect(page.locator('#app')).to_contain_text('5,977')
                         expect(page.locator('#app')).to_contain_text('Verified historical change')
                         expect(page.locator('#app')).to_contain_text('5,541 clicks')
