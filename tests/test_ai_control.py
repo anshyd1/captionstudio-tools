@@ -89,9 +89,10 @@ def main():
                         expect(page.locator('#app')).to_contain_text('Agent Raahi')
                         expect(page.locator('#app')).to_contain_text('not assessed')
                     if route == 'worklog':
-                        expect(page.locator('#app')).to_contain_text('1 verified day')
+                        expect(page.locator('#app')).to_contain_text('2 verified days')
                         expect(page.locator('#app')).to_contain_text('Historical notes (not attendance)')
-                        expect(page.locator('#attendanceCount')).to_contain_text('1 verified IST day')
+                        expect(page.locator('#attendanceCount')).to_contain_text('2 verified IST day')
+                        expect(page.locator('#app')).to_contain_text('Agent Meridian')
                         page.locator('#agentFilter').select_option('legacy')
                         assert page.locator('#attendanceRows .event').count() == 2
                         expect(page.locator('#attendanceRows')).to_contain_text('Start: Not recorded')
