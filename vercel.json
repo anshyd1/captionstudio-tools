@@ -13,32 +13,32 @@
     },
     {
       "source": "/diwaok",
-      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "destination": "https://t.me/skill2incomehub",
       "permanent": false
     },
     {
       "source": "/diwaok.html",
-      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "destination": "https://t.me/skill2incomehub",
       "permanent": false
     },
     {
       "source": "/diwaok.htm",
-      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "destination": "https://t.me/skill2incomehub",
       "permanent": false
     },
     {
       "source": "/play",
-      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "destination": "https://t.me/skill2incomehub",
       "permanent": false
     },
     {
       "source": "/game",
-      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "destination": "https://t.me/skill2incomehub",
       "permanent": false
     },
     {
       "source": "/download-app",
-      "destination": "https://diwaokshare.club?pid=324558753&channel=2010001&pkg=com.diwaok.app",
+      "destination": "https://t.me/skill2incomehub",
       "permanent": false
     },
     {
@@ -554,6 +554,86 @@
     {
       "source": "/:path+/blog/:rest*",
       "destination": "/blog/:rest*",
+      "permanent": true
+    },
+    {
+      "source": "/telegram",
+      "destination": "https://t.me/skill2incomehub",
+      "permanent": false
+    },
+    {
+      "source": "/join",
+      "destination": "https://t.me/skill2incomehub",
+      "permanent": false
+    },
+    {
+      "source": "/blog/behind-the-scenes-content-strategy-2026",
+      "destination": "/blog/telegram-earning-channels-india-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-reels-algorithm-india-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/100-killer-attitude-captions-hinglish-2026",
+      "destination": "/blog/attitude-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/argentina-vs-algeria-world-cup-2026-captions",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cristiano-ronaldo-fifa-2026-final-chapter-story",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/world-cup-2026-opening-match-captions",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/best-instagram-captions-reels-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/brazil-vs-morocco-world-cup-2026-captions",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fifa-world-cup-2026-complete-guide",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-search-optimization-2026",
+      "destination": "/blog/best-instagram-bio-copy-paste-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/instagram-viral-captions-for-reels-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/usa-vs-paraguay-world-cup-2026-captions",
+      "destination": "/blog/viral-captions-for-reels-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/viral-attitude-trendy-captions-hacks-2026",
+      "destination": "/blog/attitude-captions-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog/england-football-captions-its-coming-home-2026",
+      "destination": "/blog/viral-captions-for-reels-2026",
       "permanent": true
     }
   ],
