@@ -107,6 +107,9 @@ footer{background:#111;color:#fff;padding:50px 5%;font-size:14px}.footer-inner{m
   #dark-toggle { padding: 5px 8px !important; font-size: 11px !important; }
 }
 </style>
+  <meta name="p:domain_verify" content="5a8c4edbc759e99bcece5dbc826f21cb"/>
+  <meta name="pinterest-rich-pin" content="true"/>
+  <meta property="og:image:alt" content="Stylish Name for Instagram — Fancy Fonts &amp; Symbols 2026 — Pinterest &amp; Instagram Guide by CaptionStudio"/>
 </head>
 <body>
 <div id="progress-bar" role="progressbar" aria-label="Reading progress"></div>
@@ -860,5 +863,54 @@ generateNames();
 </script>
 <script src="../cookie-consent.js" defer></script>
 <script src="../diwaok-promo.js" defer></script>
+
+<style id="cs-pinterest-pin-css">
+.cs-pin-wrap-auto { position: relative; display: block; }
+.cs-pin-auto-btn {
+  position: absolute; top: 10px; right: 10px; z-index: 6;
+  background: #e60023; color: #ffffff !important; text-decoration: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px; font-weight: 800; line-height: 1;
+  padding: 7px 12px; border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(230, 0, 35, 0.32);
+  opacity: 0.94; transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.cs-pin-auto-btn:hover { opacity: 1; transform: scale(1.04); }
+@media (max-width: 600px) {
+  .cs-pin-auto-btn { font-size: 11px; padding: 6px 10px; top: 8px; right: 8px; }
+}
+</style>
+<script id="cs-pinterest-pin-js">
+(function(){
+  function initPinButtons(){
+    var imgs = document.querySelectorAll('main img[data-pin-media], .hero-image-wrap img, article img[data-pin-media], figure img[data-pin-media]');
+    imgs.forEach(function(img){
+      if (img.width > 0 && img.width < 140) return;
+      var parent = img.parentElement;
+      if (!parent) return;
+      if (parent.querySelector('.pin-it, .cs-pin-btn, .cs-pin-auto-btn')) return;
+      var media = img.getAttribute('data-pin-media') || img.currentSrc || img.src;
+      if (!media || media.indexOf('favicon') !== -1 || media.indexOf('logo') !== -1) return;
+      var url = img.getAttribute('data-pin-url') || window.location.href.split('?')[0].replace(/\.html$/, '');
+      var desc = img.getAttribute('data-pin-description') || img.getAttribute('alt') || document.title;
+      var cs = window.getComputedStyle(parent);
+      if (cs.position === 'static') parent.style.position = 'relative';
+      var a = document.createElement('a');
+      a.className = 'cs-pin-auto-btn';
+      a.href = 'https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(url) +
+               '&media=' + encodeURIComponent(media) +
+               '&description=' + encodeURIComponent(desc);
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.setAttribute('aria-label', 'Save image to Pinterest');
+      a.textContent = '📌 Pin';
+      parent.appendChild(a);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initPinButtons);
+  else initPinButtons();
+})();
+</script>
+
 </body>
 </html>

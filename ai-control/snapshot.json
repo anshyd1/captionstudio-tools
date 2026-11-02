@@ -1,147 +1,33 @@
 {
-  "generated_at": "2026-10-13T10:03:09+00:00",
+  "generated_at": "2026-11-02T11:45:00+00:00",
   "data": {
     "ga_total": {
-      "screenPageViews": "5977",
-      "sessions": "4348",
-      "totalUsers": "3761",
-      "averageSessionDuration": "105.95365973597056",
-      "bounceRate": "0.42295308187672492"
+      "screenPageViews": "5377",
+      "sessions": "3669",
+      "totalUsers": "3274",
+      "averageSessionDuration": "101.7563079422186",
+      "bounceRate": "0.39002452984464431"
     },
     "ga_total_prev": {
-      "screenPageViews": "7550",
-      "sessions": "5619",
-      "totalUsers": "5045",
-      "averageSessionDuration": "73.863745253603852",
-      "bounceRate": "0.50044491902473753"
+      "screenPageViews": "7492",
+      "sessions": "5631",
+      "totalUsers": "4835",
+      "averageSessionDuration": "97.5922238082046",
+      "bounceRate": "0.43686734150239742"
     },
     "gsc_total": {
-      "clicks": 833,
-      "impressions": 5505,
-      "ctr": 15.13,
+      "clicks": 684,
+      "impressions": 5502,
+      "ctr": 12.43,
       "position": 4.1
     },
     "gsc_total_prev": {
-      "clicks": 2385,
-      "impressions": 10899,
-      "ctr": 21.88,
-      "position": 3.3
+      "clicks": 1338,
+      "impressions": 7261,
+      "ctr": 18.43,
+      "position": 3.5
     },
     "ga_daily": [
-      {
-        "date": "2026-09-16",
-        "views": 232,
-        "sessions": 179,
-        "users": 164
-      },
-      {
-        "date": "2026-09-17",
-        "views": 257,
-        "sessions": 201,
-        "users": 193
-      },
-      {
-        "date": "2026-09-18",
-        "views": 281,
-        "sessions": 189,
-        "users": 184
-      },
-      {
-        "date": "2026-09-19",
-        "views": 263,
-        "sessions": 189,
-        "users": 183
-      },
-      {
-        "date": "2026-09-20",
-        "views": 290,
-        "sessions": 211,
-        "users": 201
-      },
-      {
-        "date": "2026-09-21",
-        "views": 252,
-        "sessions": 180,
-        "users": 167
-      },
-      {
-        "date": "2026-09-22",
-        "views": 282,
-        "sessions": 193,
-        "users": 189
-      },
-      {
-        "date": "2026-09-23",
-        "views": 276,
-        "sessions": 190,
-        "users": 178
-      },
-      {
-        "date": "2026-09-24",
-        "views": 260,
-        "sessions": 199,
-        "users": 190
-      },
-      {
-        "date": "2026-09-25",
-        "views": 278,
-        "sessions": 197,
-        "users": 189
-      },
-      {
-        "date": "2026-09-26",
-        "views": 293,
-        "sessions": 218,
-        "users": 206
-      },
-      {
-        "date": "2026-09-27",
-        "views": 314,
-        "sessions": 215,
-        "users": 205
-      },
-      {
-        "date": "2026-09-28",
-        "views": 277,
-        "sessions": 194,
-        "users": 183
-      },
-      {
-        "date": "2026-09-29",
-        "views": 297,
-        "sessions": 222,
-        "users": 205
-      },
-      {
-        "date": "2026-09-30",
-        "views": 290,
-        "sessions": 224,
-        "users": 213
-      },
-      {
-        "date": "2026-10-01",
-        "views": 256,
-        "sessions": 172,
-        "users": 167
-      },
-      {
-        "date": "2026-10-02",
-        "views": 330,
-        "sessions": 214,
-        "users": 199
-      },
-      {
-        "date": "2026-10-03",
-        "views": 257,
-        "sessions": 204,
-        "users": 191
-      },
-      {
-        "date": "2026-10-04",
-        "views": 297,
-        "sessions": 226,
-        "users": 217
-      },
       {
         "date": "2026-10-05",
         "views": 237,
@@ -192,138 +78,126 @@
       },
       {
         "date": "2026-10-13",
-        "views": 8,
-        "sessions": 6,
-        "users": 6
+        "views": 66,
+        "sessions": 42,
+        "users": 40
+      },
+      {
+        "date": "2026-10-14",
+        "views": 139,
+        "sessions": 102,
+        "users": 99
+      },
+      {
+        "date": "2026-10-15",
+        "views": 262,
+        "sessions": 185,
+        "users": 174
+      },
+      {
+        "date": "2026-10-16",
+        "views": 272,
+        "sessions": 185,
+        "users": 177
+      },
+      {
+        "date": "2026-10-17",
+        "views": 308,
+        "sessions": 198,
+        "users": 187
+      },
+      {
+        "date": "2026-10-18",
+        "views": 263,
+        "sessions": 192,
+        "users": 176
+      },
+      {
+        "date": "2026-10-19",
+        "views": 195,
+        "sessions": 148,
+        "users": 142
+      },
+      {
+        "date": "2026-10-20",
+        "views": 276,
+        "sessions": 189,
+        "users": 179
+      },
+      {
+        "date": "2026-10-21",
+        "views": 245,
+        "sessions": 176,
+        "users": 166
+      },
+      {
+        "date": "2026-10-22",
+        "views": 207,
+        "sessions": 155,
+        "users": 146
+      },
+      {
+        "date": "2026-10-23",
+        "views": 204,
+        "sessions": 151,
+        "users": 141
+      },
+      {
+        "date": "2026-10-24",
+        "views": 281,
+        "sessions": 198,
+        "users": 191
+      },
+      {
+        "date": "2026-10-25",
+        "views": 226,
+        "sessions": 157,
+        "users": 147
+      },
+      {
+        "date": "2026-10-26",
+        "views": 266,
+        "sessions": 147,
+        "users": 143
+      },
+      {
+        "date": "2026-10-27",
+        "views": 235,
+        "sessions": 166,
+        "users": 156
+      },
+      {
+        "date": "2026-10-28",
+        "views": 286,
+        "sessions": 177,
+        "users": 163
+      },
+      {
+        "date": "2026-10-29",
+        "views": 239,
+        "sessions": 167,
+        "users": 160
+      },
+      {
+        "date": "2026-10-30",
+        "views": 267,
+        "sessions": 183,
+        "users": 179
+      },
+      {
+        "date": "2026-10-31",
+        "views": 220,
+        "sessions": 168,
+        "users": 160
+      },
+      {
+        "date": "2026-11-01",
+        "views": 233,
+        "sessions": 182,
+        "users": 177
       }
     ],
     "gsc_daily": [
-      {
-        "date": "2026-09-16",
-        "clicks": 45,
-        "impressions": 285,
-        "ctr": 15.79,
-        "position": 3.7
-      },
-      {
-        "date": "2026-09-17",
-        "clicks": 50,
-        "impressions": 286,
-        "ctr": 17.48,
-        "position": 3.4
-      },
-      {
-        "date": "2026-09-18",
-        "clicks": 39,
-        "impressions": 260,
-        "ctr": 15.0,
-        "position": 3.3
-      },
-      {
-        "date": "2026-09-19",
-        "clicks": 43,
-        "impressions": 266,
-        "ctr": 16.17,
-        "position": 3.2
-      },
-      {
-        "date": "2026-09-20",
-        "clicks": 54,
-        "impressions": 290,
-        "ctr": 18.62,
-        "position": 3.4
-      },
-      {
-        "date": "2026-09-21",
-        "clicks": 35,
-        "impressions": 248,
-        "ctr": 14.11,
-        "position": 3.6
-      },
-      {
-        "date": "2026-09-22",
-        "clicks": 38,
-        "impressions": 223,
-        "ctr": 17.04,
-        "position": 3.8
-      },
-      {
-        "date": "2026-09-23",
-        "clicks": 33,
-        "impressions": 187,
-        "ctr": 17.65,
-        "position": 3.7
-      },
-      {
-        "date": "2026-09-24",
-        "clicks": 31,
-        "impressions": 215,
-        "ctr": 14.42,
-        "position": 3.7
-      },
-      {
-        "date": "2026-09-25",
-        "clicks": 28,
-        "impressions": 235,
-        "ctr": 11.91,
-        "position": 4.1
-      },
-      {
-        "date": "2026-09-26",
-        "clicks": 33,
-        "impressions": 225,
-        "ctr": 14.67,
-        "position": 4.1
-      },
-      {
-        "date": "2026-09-27",
-        "clicks": 28,
-        "impressions": 231,
-        "ctr": 12.12,
-        "position": 4.2
-      },
-      {
-        "date": "2026-09-28",
-        "clicks": 27,
-        "impressions": 213,
-        "ctr": 12.68,
-        "position": 4.0
-      },
-      {
-        "date": "2026-09-29",
-        "clicks": 38,
-        "impressions": 214,
-        "ctr": 17.76,
-        "position": 6.0
-      },
-      {
-        "date": "2026-09-30",
-        "clicks": 39,
-        "impressions": 200,
-        "ctr": 19.5,
-        "position": 4.5
-      },
-      {
-        "date": "2026-10-01",
-        "clicks": 26,
-        "impressions": 201,
-        "ctr": 12.94,
-        "position": 3.8
-      },
-      {
-        "date": "2026-10-02",
-        "clicks": 43,
-        "impressions": 220,
-        "ctr": 19.55,
-        "position": 3.5
-      },
-      {
-        "date": "2026-10-03",
-        "clicks": 21,
-        "impressions": 212,
-        "ctr": 9.91,
-        "position": 3.9
-      },
       {
         "date": "2026-10-04",
         "clicks": 22,
@@ -372,6 +246,153 @@
         "impressions": 167,
         "ctr": 14.37,
         "position": 4.4
+      },
+      {
+        "date": "2026-10-11",
+        "clicks": 39,
+        "impressions": 236,
+        "ctr": 16.53,
+        "position": 3.9
+      },
+      {
+        "date": "2026-10-12",
+        "clicks": 66,
+        "impressions": 270,
+        "ctr": 24.44,
+        "position": 3.0
+      },
+      {
+        "date": "2026-10-13",
+        "clicks": 38,
+        "impressions": 229,
+        "ctr": 16.59,
+        "position": 2.9
+      },
+      {
+        "date": "2026-10-14",
+        "clicks": 36,
+        "impressions": 223,
+        "ctr": 16.14,
+        "position": 3.4
+      },
+      {
+        "date": "2026-10-15",
+        "clicks": 21,
+        "impressions": 188,
+        "ctr": 11.17,
+        "position": 3.3
+      },
+      {
+        "date": "2026-10-16",
+        "clicks": 21,
+        "impressions": 193,
+        "ctr": 10.88,
+        "position": 3.4
+      },
+      {
+        "date": "2026-10-17",
+        "clicks": 20,
+        "impressions": 238,
+        "ctr": 8.4,
+        "position": 4.5
+      },
+      {
+        "date": "2026-10-18",
+        "clicks": 16,
+        "impressions": 181,
+        "ctr": 8.84,
+        "position": 4.3
+      },
+      {
+        "date": "2026-10-19",
+        "clicks": 19,
+        "impressions": 235,
+        "ctr": 8.09,
+        "position": 4.6
+      },
+      {
+        "date": "2026-10-20",
+        "clicks": 14,
+        "impressions": 217,
+        "ctr": 6.45,
+        "position": 5.0
+      },
+      {
+        "date": "2026-10-21",
+        "clicks": 8,
+        "impressions": 129,
+        "ctr": 6.2,
+        "position": 4.9
+      },
+      {
+        "date": "2026-10-22",
+        "clicks": 6,
+        "impressions": 159,
+        "ctr": 3.77,
+        "position": 4.9
+      },
+      {
+        "date": "2026-10-23",
+        "clicks": 42,
+        "impressions": 315,
+        "ctr": 13.33,
+        "position": 3.7
+      },
+      {
+        "date": "2026-10-24",
+        "clicks": 18,
+        "impressions": 193,
+        "ctr": 9.33,
+        "position": 3.5
+      },
+      {
+        "date": "2026-10-25",
+        "clicks": 17,
+        "impressions": 150,
+        "ctr": 11.33,
+        "position": 3.9
+      },
+      {
+        "date": "2026-10-26",
+        "clicks": 14,
+        "impressions": 127,
+        "ctr": 11.02,
+        "position": 4.0
+      },
+      {
+        "date": "2026-10-27",
+        "clicks": 13,
+        "impressions": 178,
+        "ctr": 7.3,
+        "position": 5.0
+      },
+      {
+        "date": "2026-10-28",
+        "clicks": 29,
+        "impressions": 205,
+        "ctr": 14.15,
+        "position": 3.5
+      },
+      {
+        "date": "2026-10-29",
+        "clicks": 17,
+        "impressions": 179,
+        "ctr": 9.5,
+        "position": 4.2
+      },
+      {
+        "date": "2026-10-30",
+        "clicks": 31,
+        "impressions": 182,
+        "ctr": 17.03,
+        "position": 4.2
+      },
+      {
+        "date": "2026-10-31",
+        "clicks": 17,
+        "impressions": 181,
+        "ctr": 9.39,
+        "position": 4.4
       }
     ],
     "ga_pages": [
@@ -380,10 +401,10 @@
           "/blog/best-instagram-bio-copy-paste-2026"
         ],
         "vals": [
-          "3309",
-          "2492",
-          "126.58111567977528",
-          "0.2825040128410915"
+          "3165",
+          "2430",
+          "108.67882842098767",
+          "0.36213991769547327"
         ]
       },
       {
@@ -391,10 +412,10 @@
           "/blog/viral-captions-for-reels-2026"
         ],
         "vals": [
-          "820",
-          "756",
-          "32.00223464021164",
-          "0.57275132275132279"
+          "386",
+          "339",
+          "45.474540106194688",
+          "0.35988200589970504"
         ]
       },
       {
@@ -402,32 +423,10 @@
           "/"
         ],
         "vals": [
-          "337",
-          "280",
-          "28.165894639285717",
-          "0.31071428571428572"
-        ]
-      },
-      {
-        "dims": [
-          "/tools/caption-generator"
-        ],
-        "vals": [
-          "238",
-          "196",
-          "59.753362581632651",
-          "0.056122448979591837"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/best-capcut-alternatives-india-2026"
-        ],
-        "vals": [
-          "154",
-          "142",
-          "21.268287535211268",
-          "0.53521126760563376"
+          "370",
+          "324",
+          "35.754206604938268",
+          "0.29012345679012347"
         ]
       },
       {
@@ -435,21 +434,32 @@
           "/tools/bio-generator"
         ],
         "vals": [
-          "130",
-          "113",
-          "114.22480805309735",
-          "0.21238938053097345"
+          "289",
+          "248",
+          "122.63111387903226",
+          "0.19758064516129031"
         ]
       },
       {
         "dims": [
-          "/blog/instagram-reel-hooks-2026"
+          "/tools/caption-generator"
         ],
         "vals": [
-          "120",
-          "98",
-          "44.845003",
-          "0.43877551020408162"
+          "263",
+          "199",
+          "55.144364256281406",
+          "0.06030150753768844"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/best-capcut-alternatives-india-2026"
+        ],
+        "vals": [
+          "126",
+          "114",
+          "37.945969903508768",
+          "0.48245614035087719"
         ]
       },
       {
@@ -457,10 +467,10 @@
           "/blog/hindi-captions-instagram"
         ],
         "vals": [
-          "96",
-          "88",
-          "90.863659113636359",
-          "0.44318181818181818"
+          "118",
+          "104",
+          "68.47709225",
+          "0.39423076923076922"
         ]
       },
       {
@@ -468,76 +478,21 @@
           "/tools/hashtag-generator"
         ],
         "vals": [
-          "96",
-          "84",
-          "551.66126464285719",
-          "0.14285714285714285"
+          "70",
+          "55",
+          "80.2255538909091",
+          "0.072727272727272724"
         ]
       },
       {
         "dims": [
-          "/blog"
+          "/blog/instagram-reel-hooks-2026"
         ],
         "vals": [
-          "53",
-          "33",
-          "13.998111181818183",
-          "0.24242424242424243"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/instagram-stylish-name-2026"
-        ],
-        "vals": [
-          "44",
-          "42",
-          "21.883612785714284",
-          "0.11904761904761904"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/instagram-viral-captions-reels-hinglish-2026"
-        ],
-        "vals": [
-          "40",
-          "40",
-          "48.457494049999994",
-          "0.35"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/mahadev-bio-for-instagram-hindi-2026"
-        ],
-        "vals": [
-          "35",
-          "25",
-          "134.726088",
-          "0.16"
-        ]
-      },
-      {
-        "dims": [
-          "/tools"
-        ],
-        "vals": [
-          "29",
-          "23",
-          "80.063581304347821",
-          "0.17391304347826086"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/copy-paste-instagram-captions"
-        ],
-        "vals": [
-          "28",
-          "26",
-          "69.132626346153842",
-          "0.61538461538461542"
+          "51",
+          "43",
+          "35.457867953488375",
+          "0.2558139534883721"
         ]
       },
       {
@@ -545,21 +500,65 @@
           "/blog/instagram-bio-for-boys-2026"
         ],
         "vals": [
-          "25",
-          "20",
-          "56.263695399999996",
-          "0.05"
+          "49",
+          "44",
+          "80.46268304545454",
+          "0.22727272727272727"
         ]
       },
       {
         "dims": [
-          "/blog/instagram-growth-7-days"
+          "/tools"
         ],
         "vals": [
-          "22",
-          "15",
-          "39.3513612",
-          "0.2"
+          "47",
+          "38",
+          "79.177914552631577",
+          "0.078947368421052627"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/copy-paste-instagram-captions"
+        ],
+        "vals": [
+          "40",
+          "38",
+          "59.912251789473679",
+          "0.36842105263157893"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/instagram-stylish-name-2026"
+        ],
+        "vals": [
+          "36",
+          "35",
+          "25.0617898",
+          "0.17142857142857143"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/mahadev-bio-for-instagram-hindi-2026"
+        ],
+        "vals": [
+          "32",
+          "25",
+          "94.67690936",
+          "0.16"
+        ]
+      },
+      {
+        "dims": [
+          "/blog"
+        ],
+        "vals": [
+          "29",
+          "19",
+          "21.655383999999998",
+          "0"
         ]
       },
       {
@@ -567,164 +566,21 @@
           "/blog/diwali-captions-instagram-2026"
         ],
         "vals": [
-          "20",
-          "3",
-          "1993.3825530000001",
-          "0"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/instagram-hashtag-strategy-viral-reels"
-        ],
-        "vals": [
-          "20",
-          "21",
-          "10.306025190476189",
-          "0.76190476190476186"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/instagram-bio-for-girls-2026"
-        ],
-        "vals": [
-          "16",
-          "13",
-          "96.613975615384632",
-          "0.23076923076923078"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/short-instagram-captions-2026"
-        ],
-        "vals": [
-          "14",
-          "14",
-          "1.1608085",
-          "1"
-        ]
-      },
-      {
-        "dims": [
-          "/guide"
-        ],
-        "vals": [
-          "14",
-          "14",
-          "1.4039548571428571",
-          "0.7857142857142857"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/aesthetic-instagram-captions-2026"
-        ],
-        "vals": [
-          "13",
+          "29",
           "12",
-          "13.294367333333334",
-          "0.66666666666666663"
+          "519.91177341666662",
+          "0.25"
         ]
       },
       {
         "dims": [
-          "/blog/attitude-captions-2026"
+          "/blog/behind-the-scenes-content-strategy-2026"
         ],
         "vals": [
-          "11",
-          "8",
-          "66.744356625",
-          "0.375"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/instagram-search-optimization-2026"
-        ],
-        "vals": [
-          "11",
-          "11",
-          "0.44773863636363642",
-          "1"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/love-viral-captions-hinglish-2026"
-        ],
-        "vals": [
-          "11",
-          "11",
-          "0.15241018181818181",
-          "0.90909090909090906"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/make-money-on-instagram-2026"
-        ],
-        "vals": [
-          "10",
-          "10",
-          "1.3074511999999998",
-          "0.9"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/professional-development-guide"
-        ],
-        "vals": [
-          "10",
-          "10",
-          "0.5387532",
-          "1"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/birthday-captions-instagram-2026"
-        ],
-        "vals": [
-          "9",
-          "9",
-          "24.995632666666666",
-          "0.33333333333333331"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/real-estate-instagram-captions-2026"
-        ],
-        "vals": [
-          "9",
-          "8",
-          "264.428752",
-          "0.125"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/brazil-vs-morocco-world-cup-2026-captions"
-        ],
-        "vals": [
-          "8",
-          "8",
-          "1.1041905",
-          "1"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/cristiano-ronaldo-fifa-2026-final-chapter-story"
-        ],
-        "vals": [
-          "8",
-          "8",
-          "1.865484375",
-          "1"
+          "22",
+          "18",
+          "10.554955055555556",
+          "0.55555555555555558"
         ]
       },
       {
@@ -732,32 +588,98 @@
           "/blog/instagram-reels-algorithm-india-2026"
         ],
         "vals": [
-          "8",
-          "7",
-          "0.63204999999999989",
+          "17",
+          "14",
+          "7.2935375714285717",
           "0.8571428571428571"
         ]
       },
       {
         "dims": [
-          "/blog/usa-vs-paraguay-world-cup-2026-captions"
+          "/blog/100-killer-attitude-captions-hinglish-2026"
         ],
         "vals": [
-          "8",
-          "8",
-          "0.517117625",
+          "13",
+          "13",
+          "0.2010076153846154",
           "1"
         ]
       },
       {
         "dims": [
-          "/blog/wedding-captions-for-instagram-2026"
+          "/blog/instagram-bio-for-girls-2026"
+        ],
+        "vals": [
+          "10",
+          "10",
+          "33.1074988",
+          "0.3"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/instagram-viral-captions-reels-hinglish-2026"
+        ],
+        "vals": [
+          "10",
+          "10",
+          "36.5877586",
+          "0.6"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/ultimate-instagram-captions"
+        ],
+        "vals": [
+          "10",
+          "10",
+          "73.2624271",
+          "0.1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/argentina-vs-algeria-world-cup-2026-captions"
+        ],
+        "vals": [
+          "9",
+          "9",
+          "0.75086611111111112",
+          "0.88888888888888884"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/love-viral-captions-hinglish-2026"
+        ],
+        "vals": [
+          "9",
+          "8",
+          "3.708843625",
+          "0.75"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/birthday-captions-instagram-2026"
         ],
         "vals": [
           "8",
+          "9",
+          "19.052239444444446",
+          "0.66666666666666663"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/mahakal-shiva-bio-for-instagram-hindi-2026"
+        ],
+        "vals": [
           "8",
-          "7.537288875",
-          "0.75"
+          "5",
+          "6.1173774",
+          "0.6"
         ]
       },
       {
@@ -773,90 +695,79 @@
       },
       {
         "dims": [
-          "/blog/100-killer-attitude-captions-hinglish-2026"
+          "/blog/brazil-vs-morocco-world-cup-2026-captions"
         ],
         "vals": [
           "7",
+          "6",
+          "1.4722758333333335",
+          "0.83333333333333337"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/instagram-growth-7-days"
+        ],
+        "vals": [
           "7",
-          "0.37329985714285713",
+          "5",
+          "76.4399116",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/best-instagram-captions-reels-2026"
+        ],
+        "vals": [
+          "6",
+          "6",
+          "0.88400766666666664",
           "1"
         ]
       },
       {
         "dims": [
-          "/blog/behind-the-scenes-content-strategy-2026"
+          "/blog/cristiano-ronaldo-fifa-2026-final-chapter-story"
         ],
         "vals": [
-          "7",
           "6",
-          "15.73137",
-          "0.66666666666666663"
+          "6",
+          "1.179373",
+          "1"
         ]
       },
       {
         "dims": [
-          "/blog/messi-last-world-cup-2026-final-dance"
+          "/blog/instagram-search-optimization-2026"
         ],
         "vals": [
-          "7",
-          "7",
+          "6",
+          "6",
+          "1.3899973333333333",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/instagram-viral-captions-for-reels-2026"
+        ],
+        "vals": [
+          "6",
+          "6",
+          "6.1246891666666663",
+          "0.83333333333333337"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/usa-vs-paraguay-world-cup-2026-captions"
+        ],
+        "vals": [
+          "6",
+          "6",
           "0",
           "1"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/photo-dump-captions-instagram-2026"
-        ],
-        "vals": [
-          "7",
-          "9",
-          "97.149634222222232",
-          "0.55555555555555558"
-        ]
-      },
-      {
-        "dims": [
-          "/about"
-        ],
-        "vals": [
-          "6",
-          "6",
-          "58.145232",
-          "0.66666666666666663"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/argentina-vs-algeria-world-cup-2026-captions"
-        ],
-        "vals": [
-          "6",
-          "6",
-          "0",
-          "1"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/fifa-world-cup-2026-complete-guide"
-        ],
-        "vals": [
-          "6",
-          "6",
-          "1.227838",
-          "1"
-        ]
-      },
-      {
-        "dims": [
-          "/blog/ultimate-instagram-captions"
-        ],
-        "vals": [
-          "6",
-          "6",
-          "57.929052500000004",
-          "0.16666666666666666"
         ]
       },
       {
@@ -866,19 +777,162 @@
         "vals": [
           "6",
           "6",
+          "1.2398605",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/england-football-captions-its-coming-home-2026"
+        ],
+        "vals": [
+          "5",
+          "5",
+          "0.8549134",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/group-photo-captions-instagram-2026"
+        ],
+        "vals": [
+          "5",
+          "5",
+          "8.6915957999999982",
+          "0.6"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/instagram-hashtag-strategy-viral-reels"
+        ],
+        "vals": [
+          "5",
+          "5",
+          "21.641913",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/real-estate-instagram-captions-2026"
+        ],
+        "vals": [
+          "5",
+          "5",
+          "30.610893799999996",
+          "0.6"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/aesthetic-instagram-captions-2026"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "34.6156075",
+          "0.25"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/ai-tools-make-money"
+        ],
+        "vals": [
+          "4",
+          "4",
           "0",
           "1"
         ]
       },
       {
         "dims": [
-          "/blog/world-cup-2026-today-match-captions"
+          "/blog/fifa-world-cup-2026-global-captions-reels-2026"
         ],
         "vals": [
-          "6",
-          "6",
-          "0.87990933333333332",
+          "4",
+          "4",
+          "0",
           "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/instagram-content-ideas-small-business"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/ipl-2026-final-rcb-pbks-captions-memes"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "1.13783625",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/pov-captions-for-instagram-reels-2026"
+        ],
+        "vals": [
+          "4",
+          "2",
+          "15.4646365",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/professional-development-guide"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "1.346883",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/support"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "1.95635325",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/funny-captions-for-instagram-hindi-2026"
+        ],
+        "vals": [
+          "3",
+          "3",
+          "50.349539666666665",
+          "0.33333333333333331"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/photo-dump-captions-instagram-2026"
+        ],
+        "vals": [
+          "3",
+          "5",
+          "9.5903748",
+          "0.6"
         ]
       },
       {
@@ -886,43 +940,296 @@
           "/blog/spider-man-quotes-instagram-2026"
         ],
         "vals": [
-          "5",
-          "4",
-          "69.78878325",
-          "0"
+          "3",
+          "2",
+          "102.4813795",
+          "0.5"
         ]
       },
       {
         "dims": [
-          "/blog/ai-manipulation-guide"
+          "/blog/telegram-earning-channels-india-2026"
         ],
         "vals": [
-          "4",
-          "4",
+          "3",
+          "2",
+          "360.3682595",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/earning"
+        ],
+        "vals": [
+          "3",
+          "3",
+          "7.4030743333333335",
+          "0.33333333333333331"
+        ]
+      },
+      {
+        "dims": [
+          "/404"
+        ],
+        "vals": [
+          "2",
+          "2",
           "0",
           "1"
         ]
       },
       {
         "dims": [
-          "/blog/friendship-day-captions-instagram-2026"
+          "/about"
         ],
         "vals": [
-          "4",
-          "4",
-          "1.44581425",
+          "2",
+          "2",
+          "19.4700885",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/best-instagram-bio-copy-paste-2026 dev"
+        ],
+        "vals": [
+          "2",
+          "1",
+          "100.247213",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/fifa-world-cup-2026-complete-guide"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "3.0729735",
           "1"
         ]
       },
       {
         "dims": [
-          "/blog/master-ai-guide-2026"
+          "/blog/jai-shri-ram-bio-for-instagram-hindi-2026"
         ],
         "vals": [
-          "4",
-          "4",
-          "1.30986575",
+          "2",
+          "2",
+          "2.432063",
           "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/messi-last-world-cup-2026-final-dance"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/monsoon-captions-instagram-2026"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "6.6386285",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/short-instagram-captions-2026"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "0.445098",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/ugc-creator-complete-guide-2026"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "3.4576375",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/wedding-captions-for-instagram-2026"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "45.017241500000004",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/gamer-instagram-bio"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "0.6203415",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/guide"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "4.8288495",
+          "0.5"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/best-captions-boys-2026"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "18.403566",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/best-earning-apps-students-2026"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/college-life-captions-instagram-2026"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "156.143628",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/education-captions-for-instagram-reels-2026"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "200.524791",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/english-vs-shayari-captions-2026"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "2.744917",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/frog-chai-sigma-comments-trend-explained"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/instagram-brand-deals-kaise-milte-hain-2026"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/mirror-selfie-captions-for-instagram-2026"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "20.601041",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/blog/stylish-name-for-instagram"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "4.018086",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "/contact"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "6.124017",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/privacy"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "5.790558",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "/terms"
+        ],
+        "vals": [
+          "1",
+          "1",
+          "5.582231",
+          "0"
         ]
       }
     ],
@@ -932,17 +1239,9 @@
           "Organic Search"
         ],
         "vals": [
-          "3179",
-          "4386"
-        ]
-      },
-      {
-        "dims": [
-          "Direct"
-        ],
-        "vals": [
-          "606",
-          "796"
+          "2802",
+          "2461",
+          "3919"
         ]
       },
       {
@@ -950,8 +1249,19 @@
           "Referral"
         ],
         "vals": [
-          "314",
-          "470"
+          "358",
+          "286",
+          "517"
+        ]
+      },
+      {
+        "dims": [
+          "Direct"
+        ],
+        "vals": [
+          "328",
+          "310",
+          "522"
         ]
       },
       {
@@ -959,17 +1269,9 @@
           "AI Assistant"
         ],
         "vals": [
-          "201",
-          "316"
-        ]
-      },
-      {
-        "dims": [
-          "Unassigned"
-        ],
-        "vals": [
-          "4",
-          "7"
+          "209",
+          "198",
+          "395"
         ]
       },
       {
@@ -977,8 +1279,19 @@
           "Organic Social"
         ],
         "vals": [
-          "2",
-          "2"
+          "22",
+          "22",
+          "23"
+        ]
+      },
+      {
+        "dims": [
+          "Unassigned"
+        ],
+        "vals": [
+          "3",
+          "3",
+          "1"
         ]
       }
     ],
@@ -988,17 +1301,9 @@
           "bing / organic"
         ],
         "vals": [
-          "1157",
-          "1625"
-        ]
-      },
-      {
-        "dims": [
-          "google / organic"
-        ],
-        "vals": [
-          "788",
-          "1078"
+          "1126",
+          "987",
+          "1576"
         ]
       },
       {
@@ -1006,8 +1311,19 @@
           "duckduckgo / organic"
         ],
         "vals": [
-          "787",
-          "1069"
+          "783",
+          "685",
+          "1037"
+        ]
+      },
+      {
+        "dims": [
+          "google / organic"
+        ],
+        "vals": [
+          "424",
+          "394",
+          "643"
         ]
       },
       {
@@ -1015,8 +1331,9 @@
           "(direct) / (none)"
         ],
         "vals": [
-          "606",
-          "796"
+          "328",
+          "310",
+          "522"
         ]
       },
       {
@@ -1024,8 +1341,9 @@
           "privacywall.org / referral"
         ],
         "vals": [
-          "284",
-          "424"
+          "324",
+          "253",
+          "466"
         ]
       },
       {
@@ -1033,8 +1351,9 @@
           "chatgpt.com / ai-assistant"
         ],
         "vals": [
-          "197",
-          "299"
+          "209",
+          "198",
+          "395"
         ]
       },
       {
@@ -1042,8 +1361,9 @@
           "in.search.yahoo.com / referral"
         ],
         "vals": [
-          "195",
-          "293"
+          "197",
+          "167",
+          "288"
         ]
       },
       {
@@ -1051,8 +1371,9 @@
           "emea.search.yahoo.com / referral"
         ],
         "vals": [
-          "134",
-          "200"
+          "157",
+          "136",
+          "234"
         ]
       },
       {
@@ -1060,8 +1381,9 @@
           "uk.search.yahoo.com / referral"
         ],
         "vals": [
-          "41",
-          "57"
+          "54",
+          "49",
+          "72"
         ]
       },
       {
@@ -1069,8 +1391,9 @@
           "ecosia.org / organic"
         ],
         "vals": [
+          "28",
           "22",
-          "31"
+          "37"
         ]
       },
       {
@@ -1078,8 +1401,9 @@
           "yahoo / organic"
         ],
         "vals": [
-          "17",
-          "21"
+          "22",
+          "20",
+          "27"
         ]
       },
       {
@@ -1087,8 +1411,9 @@
           "quendu.com / referral"
         ],
         "vals": [
-          "14",
-          "23"
+          "16",
+          "16",
+          "26"
         ]
       },
       {
@@ -1096,17 +1421,29 @@
           "search.brave.com / referral"
         ],
         "vals": [
-          "10",
-          "15"
+          "9",
+          "9",
+          "12"
         ]
       },
       {
         "dims": [
-          "yandex / organic"
+          "Pinterest / organic"
+        ],
+        "vals": [
+          "8",
+          "8",
+          "9"
+        ]
+      },
+      {
+        "dims": [
+          "m.facebook.com / referral"
         ],
         "vals": [
           "6",
-          "11"
+          "6",
+          "6"
         ]
       },
       {
@@ -1115,23 +1452,6 @@
         ],
         "vals": [
           "4",
-          "6"
-        ]
-      },
-      {
-        "dims": [
-          "perplexity.ai / ai-assistant"
-        ],
-        "vals": [
-          "4",
-          "17"
-        ]
-      },
-      {
-        "dims": [
-          "(not set)"
-        ],
-        "vals": [
           "3",
           "6"
         ]
@@ -1141,15 +1461,57 @@
           "facebook.com / referral"
         ],
         "vals": [
-          "2",
-          "2"
+          "4",
+          "4",
+          "4"
         ]
       },
       {
         "dims": [
-          "agent55.com / referral"
+          "hisearchhola.com / referral"
         ],
         "vals": [
+          "4",
+          "4",
+          "6"
+        ]
+      },
+      {
+        "dims": [
+          "instagram.com / referral"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      {
+        "dims": [
+          "yandex / organic"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      {
+        "dims": [
+          "(not set)"
+        ],
+        "vals": [
+          "2",
+          "2",
+          "0"
+        ]
+      },
+      {
+        "dims": [
+          "aidp.byteintl.net / referral"
+        ],
+        "vals": [
+          "1",
           "1",
           "1"
         ]
@@ -1159,6 +1521,17 @@
           "perplexity / (not set)"
         ],
         "vals": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      {
+        "dims": [
+          "rd.search.yahoo.com / referral"
+        ],
+        "vals": [
+          "1",
           "1",
           "1"
         ]
@@ -1170,8 +1543,9 @@
           "mobile"
         ],
         "vals": [
-          "3553",
-          "5033"
+          "3125",
+          "2773",
+          "4686"
         ]
       },
       {
@@ -1179,8 +1553,9 @@
           "desktop"
         ],
         "vals": [
-          "782",
-          "917"
+          "544",
+          "494",
+          "668"
         ]
       },
       {
@@ -1189,7 +1564,8 @@
         ],
         "vals": [
           "17",
-          "27"
+          "14",
+          "23"
         ]
       }
     ],
@@ -1199,8 +1575,9 @@
           "India"
         ],
         "vals": [
-          "3753",
-          "5313"
+          "3417",
+          "3055",
+          "5109"
         ]
       },
       {
@@ -1208,8 +1585,9 @@
           "Singapore"
         ],
         "vals": [
-          "217",
-          "219"
+          "61",
+          "61",
+          "62"
         ]
       },
       {
@@ -1217,26 +1595,9 @@
           "United States"
         ],
         "vals": [
-          "96",
-          "113"
-        ]
-      },
-      {
-        "dims": [
-          "China"
-        ],
-        "vals": [
-          "56",
-          "56"
-        ]
-      },
-      {
-        "dims": [
-          "Vietnam"
-        ],
-        "vals": [
-          "28",
-          "28"
+          "24",
+          "21",
+          "25"
         ]
       },
       {
@@ -1244,8 +1605,19 @@
           "Pakistan"
         ],
         "vals": [
-          "21",
-          "35"
+          "22",
+          "19",
+          "30"
+        ]
+      },
+      {
+        "dims": [
+          "Vietnam"
+        ],
+        "vals": [
+          "19",
+          "19",
+          "19"
         ]
       },
       {
@@ -1253,8 +1625,9 @@
           "Bangladesh"
         ],
         "vals": [
-          "16",
-          "20"
+          "14",
+          "14",
+          "14"
         ]
       },
       {
@@ -1262,53 +1635,39 @@
           "Brazil"
         ],
         "vals": [
-          "9",
-          "6"
-        ]
-      },
-      {
-        "dims": [
-          "France"
-        ],
-        "vals": [
-          "9",
+          "11",
+          "11",
           "8"
         ]
       },
       {
         "dims": [
-          "Germany"
+          "China"
         ],
         "vals": [
           "9",
-          "20"
-        ]
-      },
-      {
-        "dims": [
-          "Japan"
-        ],
-        "vals": [
           "9",
           "9"
         ]
       },
       {
         "dims": [
-          "Netherlands"
+          "Nepal"
         ],
         "vals": [
-          "8",
-          "20"
+          "7",
+          "7",
+          "14"
         ]
       },
       {
         "dims": [
-          "New Zealand"
+          "Philippines"
         ],
         "vals": [
-          "8",
-          "9"
+          "7",
+          "6",
+          "7"
         ]
       },
       {
@@ -1316,83 +1675,115 @@
           "Saudi Arabia"
         ],
         "vals": [
-          "8",
-          "8"
+          "6",
+          "6",
+          "9"
         ]
       },
       {
         "dims": [
-          "United Arab Emirates"
+          "Benin"
         ],
         "vals": [
-          "8",
-          "9"
+          "5",
+          "2",
+          "5"
+        ]
+      },
+      {
+        "dims": [
+          "Japan"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      {
+        "dims": [
+          "Russia"
+        ],
+        "vals": [
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      {
+        "dims": [
+          "Mexico"
+        ],
+        "vals": [
+          "3",
+          "3",
+          "3"
         ]
       }
     ],
     "gsc_pages": [
       {
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 689,
-        "impressions": 3848,
-        "ctr": 17.91,
-        "position": 4.2
-      },
-      {
-        "page": "https://captionstudio.in/",
-        "clicks": 95,
-        "impressions": 420,
-        "ctr": 22.62,
-        "position": 3.7
-      },
-      {
-        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-        "clicks": 34,
-        "impressions": 379,
-        "ctr": 8.97,
-        "position": 6.4
-      },
-      {
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
-        "clicks": 11,
-        "impressions": 2761,
-        "ctr": 0.4,
-        "position": 4.8
-      },
-      {
-        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
-        "clicks": 8,
-        "impressions": 107,
-        "ctr": 7.48,
-        "position": 4.9
-      },
-      {
-        "page": "https://captionstudio.in/blog/ultimate-instagram-captions",
-        "clicks": 2,
-        "impressions": 50,
-        "ctr": 4.0,
-        "position": 3.6
-      },
-      {
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
-        "clicks": 1,
-        "impressions": 2728,
-        "ctr": 0.04,
+        "clicks": 433,
+        "impressions": 3346,
+        "ctr": 12.94,
         "position": 4.7
       },
       {
+        "page": "https://captionstudio.in/",
+        "clicks": 226,
+        "impressions": 1067,
+        "ctr": 21.18,
+        "position": 2.9
+      },
+      {
+        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
+        "clicks": 10,
+        "impressions": 132,
+        "ctr": 7.58,
+        "position": 5.5
+      },
+      {
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
+        "clicks": 7,
+        "impressions": 74,
+        "ctr": 9.46,
+        "position": 5.6
+      },
+      {
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 6,
+        "impressions": 2225,
+        "ctr": 0.27,
+        "position": 5.1
+      },
+      {
+        "page": "https://captionstudio.in/blog/ultimate-instagram-captions",
+        "clicks": 3,
+        "impressions": 62,
+        "ctr": 4.84,
+        "position": 5.0
+      },
+      {
         "page": "https://captionstudio.in/about",
-        "clicks": 0,
-        "impressions": 26,
-        "ctr": 0,
-        "position": 1.8
+        "clicks": 1,
+        "impressions": 55,
+        "ctr": 1.82,
+        "position": 2.2
+      },
+      {
+        "page": "https://captionstudio.in/tools/caption-generator",
+        "clicks": 1,
+        "impressions": 32,
+        "ctr": 3.12,
+        "position": 2.2
       },
       {
         "page": "https://captionstudio.in/blog",
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 5,
         "ctr": 0,
-        "position": 1.8
+        "position": 4.4
       },
       {
         "page": "https://captionstudio.in/blog/",
@@ -1404,140 +1795,147 @@
       {
         "page": "https://captionstudio.in/blog/aesthetic-instagram-captions-2026",
         "clicks": 0,
-        "impressions": 24,
+        "impressions": 19,
         "ctr": 0,
-        "position": 6.1
+        "position": 3.2
       },
       {
         "page": "https://captionstudio.in/blog/attitude-captions-2026",
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 2
-      },
-      {
-        "page": "https://captionstudio.in/blog/behind-the-scenes-content-strategy-2026",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 2
-      },
-      {
-        "page": "https://captionstudio.in/blog/best-capcut-alternatives-india-2026",
-        "clicks": 0,
-        "impressions": 7,
-        "ctr": 0,
-        "position": 5.3
+        "position": 5
       },
       {
         "page": "https://captionstudio.in/blog/best-captions-boys-2026",
         "clicks": 0,
-        "impressions": 18,
+        "impressions": 5,
         "ctr": 0,
-        "position": 9.3
+        "position": 5.4
       },
       {
         "page": "https://captionstudio.in/blog/best-instagram-bio-copy-paste-2026",
         "clicks": 0,
-        "impressions": 2,
+        "impressions": 4,
         "ctr": 0,
-        "position": 4.5
+        "position": 5.5
       },
       {
         "page": "https://captionstudio.in/blog/college-life-captions-instagram-2026",
         "clicks": 0,
-        "impressions": 115,
+        "impressions": 77,
         "ctr": 0,
-        "position": 1.1
+        "position": 1.2
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#attitude",
         "clicks": 0,
-        "impressions": 51,
+        "impressions": 31,
         "ctr": 0,
-        "position": 5.9
+        "position": 6.1
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#caption-copy-intent",
         "clicks": 0,
-        "impressions": 52,
+        "impressions": 34,
         "ctr": 0,
-        "position": 5.9
+        "position": 6.1
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#friendship",
         "clicks": 0,
-        "impressions": 50,
-        "ctr": 0,
-        "position": 5.9
-      },
-      {
-        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#funny",
-        "clicks": 0,
-        "impressions": 3,
+        "impressions": 32,
         "ctr": 0,
         "position": 6
       },
       {
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#funny",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 7
+      },
+      {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#love",
         "clicks": 0,
-        "impressions": 46,
+        "impressions": 23,
         "ctr": 0,
-        "position": 6.0
+        "position": 5.8
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#posts-copy",
         "clicks": 0,
-        "impressions": 52,
+        "impressions": 34,
         "ctr": 0,
-        "position": 5.9
+        "position": 6.1
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#reels-copy",
         "clicks": 0,
-        "impressions": 52,
+        "impressions": 34,
         "ctr": 0,
-        "position": 5.9
+        "position": 6.1
+      },
+      {
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#savage",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#stories-copy",
         "clicks": 0,
-        "impressions": 49,
+        "impressions": 30,
         "ctr": 0,
-        "position": 6.0
+        "position": 5.9
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#tool",
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 5,
         "ctr": 0,
-        "position": 5
+        "position": 5.8
       },
       {
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#travel",
         "clicks": 0,
         "impressions": 4,
         "ctr": 0,
-        "position": 5.8
+        "position": 7.2
+      },
+      {
+        "page": "https://captionstudio.in/blog/cristiano-ronaldo-fifa-2026-final-chapter-story.html",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://captionstudio.in/blog/diwali-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 5.5
       },
       {
         "page": "https://captionstudio.in/blog/education-captions-for-instagram-reels-2026",
         "clicks": 0,
-        "impressions": 5,
+        "impressions": 1,
         "ctr": 0,
-        "position": 4.8
+        "position": 7
       },
       {
         "page": "https://captionstudio.in/blog/funny-captions-for-instagram-hindi-2026",
         "clicks": 0,
-        "impressions": 156,
+        "impressions": 107,
         "ctr": 0,
-        "position": 3.5
+        "position": 3
       },
       {
         "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
         "clicks": 0,
-        "impressions": 357,
+        "impressions": 387,
         "ctr": 0,
         "position": 2.4
       },
@@ -1546,28 +1944,21 @@
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 46
+        "position": 2
       },
       {
         "page": "https://captionstudio.in/blog/hindi-captions-instagram",
         "clicks": 0,
-        "impressions": 16,
+        "impressions": 14,
         "ctr": 0,
-        "position": 4
+        "position": 4.4
       },
       {
         "page": "https://captionstudio.in/blog/instagram-bio-for-boys-2026",
         "clicks": 0,
-        "impressions": 39,
+        "impressions": 37,
         "ctr": 0,
-        "position": 11.9
-      },
-      {
-        "page": "https://captionstudio.in/blog/instagram-bio-for-girls-2026",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 10
+        "position": 8.3
       },
       {
         "page": "https://captionstudio.in/blog/instagram-growth-7-days",
@@ -1581,483 +1972,490 @@
         "clicks": 0,
         "impressions": 3,
         "ctr": 0,
-        "position": 2.7
+        "position": 1
       },
       {
         "page": "https://captionstudio.in/blog/instagram-reel-hooks-2026",
         "clicks": 0,
-        "impressions": 11,
+        "impressions": 2,
         "ctr": 0,
-        "position": 8.1
-      },
-      {
-        "page": "https://captionstudio.in/blog/instagram-reel-hooks-2026#data",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 7
-      },
-      {
-        "page": "https://captionstudio.in/blog/instagram-reel-hooks-2026#formula",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 7
+        "position": 1.5
       },
       {
         "page": "https://captionstudio.in/blog/instagram-stylish-name-2026",
         "clicks": 0,
-        "impressions": 1,
+        "impressions": 2,
         "ctr": 0,
-        "position": 2
+        "position": 5
       },
       {
         "page": "https://captionstudio.in/blog/love-viral-captions-hinglish-2026",
         "clicks": 0,
-        "impressions": 23,
+        "impressions": 21,
         "ctr": 0,
-        "position": 5.7
-      },
-      {
-        "page": "https://captionstudio.in/blog/mahadev-bio-for-instagram-hindi-2026",
-        "clicks": 0,
-        "impressions": 1,
-        "ctr": 0,
-        "position": 6
+        "position": 5.0
       },
       {
         "page": "https://captionstudio.in/blog/mirror-selfie-captions-for-instagram-2026",
         "clicks": 0,
-        "impressions": 137,
+        "impressions": 135,
         "ctr": 0,
         "position": 2.4
       },
       {
         "page": "https://captionstudio.in/blog/monsoon-captions-instagram-2026",
         "clicks": 0,
-        "impressions": 27,
+        "impressions": 13,
         "ctr": 0,
-        "position": 1.8
+        "position": 1.1
       },
       {
         "page": "https://captionstudio.in/blog/photo-dump-captions-instagram-2026",
         "clicks": 0,
-        "impressions": 42,
+        "impressions": 47,
         "ctr": 0,
-        "position": 1.1
+        "position": 1.3
       },
       {
         "page": "https://captionstudio.in/blog/real-estate-instagram-captions-2026",
         "clicks": 0,
         "impressions": 3,
         "ctr": 0,
-        "position": 8
+        "position": 8.7
       },
       {
         "page": "https://captionstudio.in/blog/short-instagram-captions-2026",
         "clicks": 0,
         "impressions": 9,
         "ctr": 0,
-        "position": 1.8
+        "position": 2.8
       },
       {
         "page": "https://captionstudio.in/blog/social-media-content-strategy-small-business-2026",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 1
+        "position": 10
       },
       {
         "page": "https://captionstudio.in/blog/traditional-captions-instagram-2026",
         "clicks": 0,
-        "impressions": 10,
+        "impressions": 2,
         "ctr": 0,
-        "position": 3.7
+        "position": 4
       },
       {
-        "page": "https://captionstudio.in/blog/ugc-creator-complete-guide-2026",
+        "page": "https://captionstudio.in/blog/ugc-email-pitch-template-2026.html",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 96
+      },
+      {
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 2141,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 2133,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 2214,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 2189,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "page": "https://captionstudio.in/blog/why-instagram-reels-not-getting-views-2026.html",
         "clicks": 0,
         "impressions": 1,
         "ctr": 0,
-        "position": 7
+        "position": 8
+      },
+      {
+        "page": "https://captionstudio.in/guide",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 4.4
+      },
+      {
+        "page": "https://captionstudio.in/relax",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "page": "https://captionstudio.in/terms",
+        "clicks": 0,
+        "impressions": 15,
+        "ctr": 0,
+        "position": 3.3
+      },
+      {
+        "page": "https://captionstudio.in/tools",
+        "clicks": 0,
+        "impressions": 28,
+        "ctr": 0,
+        "position": 2.9
+      },
+      {
+        "page": "https://captionstudio.in/tools/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1.5
+      },
+      {
+        "page": "https://captionstudio.in/tools/bio-generator",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "page": "https://captionstudio.in/tools/hashtag-generator",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 24.4
       }
     ],
     "gsc_queries": [
       {
-        "query": "viral caption",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 93,
-        "impressions": 329,
-        "ctr": 28.27,
-        "position": 2.1
-      },
-      {
         "query": "caption studio",
         "page": "https://captionstudio.in/",
-        "clicks": 69,
-        "impressions": 295,
-        "ctr": 23.39,
-        "position": 2.1
-      },
-      {
-        "query": "instagram viral captions",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 65,
-        "impressions": 943,
-        "ctr": 6.89,
-        "position": 6.3
-      },
-      {
-        "query": "viral captions",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 53,
-        "impressions": 230,
-        "ctr": 23.04,
-        "position": 3.2
+        "clicks": 166,
+        "impressions": 821,
+        "ctr": 20.22,
+        "position": 2.5
       },
       {
         "query": "instagram viral captions for reels 2026",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 47,
-        "impressions": 262,
-        "ctr": 17.94,
-        "position": 4.3
-      },
-      {
-        "query": "viral caption for instagram",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 44,
-        "impressions": 364,
-        "ctr": 12.09,
-        "position": 4.1
-      },
-      {
-        "query": "instagram viral caption 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 34,
-        "impressions": 81,
-        "ctr": 41.98,
-        "position": 1.5
-      },
-      {
-        "query": "viral description for instagram",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 30,
-        "impressions": 117,
-        "ctr": 25.64,
-        "position": 2.7
-      },
-      {
-        "query": "instagram trending captions 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 29,
-        "impressions": 73,
-        "ctr": 39.73,
-        "position": 2.4
-      },
-      {
-        "query": "instagram viral caption copy 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 23,
-        "impressions": 47,
-        "ctr": 48.94,
-        "position": 2
-      },
-      {
-        "query": "viral insta caption",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 21,
-        "impressions": 110,
-        "ctr": 19.09,
-        "position": 3.7
-      },
-      {
-        "query": "ig viral caption",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 19,
-        "impressions": 33,
-        "ctr": 57.58,
-        "position": 1.7
-      },
-      {
-        "query": "viral insta captions",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 19,
-        "impressions": 45,
-        "ctr": 42.22,
-        "position": 2.6
-      },
-      {
-        "query": "viral instagram captions 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 17,
-        "impressions": 45,
-        "ctr": 37.78,
-        "position": 2.0
+        "clicks": 52,
+        "impressions": 223,
+        "ctr": 23.32,
+        "position": 3.3
       },
       {
         "query": "captionstudio",
         "page": "https://captionstudio.in/",
-        "clicks": 15,
-        "impressions": 47,
-        "ctr": 31.91,
-        "position": 1.5
+        "clicks": 50,
+        "impressions": 128,
+        "ctr": 39.06,
+        "position": 1.8
       },
       {
-        "query": "instagram viral captions for reels 2026",
-        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-        "clicks": 15,
-        "impressions": 185,
-        "ctr": 8.11,
-        "position": 6.3
-      },
-      {
-        "query": "instagram viral video caption copy and paste",
+        "query": "viral caption",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 15,
-        "impressions": 28,
-        "ctr": 53.57,
-        "position": 2.0
+        "clicks": 48,
+        "impressions": 460,
+        "ctr": 10.43,
+        "position": 4.2
       },
       {
-        "query": "instagram captions viral",
+        "query": "instagram viral captions",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 14,
-        "impressions": 32,
-        "ctr": 43.75,
-        "position": 2.9
+        "clicks": 45,
+        "impressions": 573,
+        "ctr": 7.85,
+        "position": 6.1
       },
       {
-        "query": "instagram viral description copy and paste",
+        "query": "viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 39,
+        "impressions": 280,
+        "ctr": 13.93,
+        "position": 4.9
+      },
+      {
+        "query": "instagram viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 24,
+        "impressions": 67,
+        "ctr": 35.82,
+        "position": 1.8
+      },
+      {
+        "query": "viral caption for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 21,
+        "impressions": 355,
+        "ctr": 5.92,
+        "position": 5.4
+      },
+      {
+        "query": "viral description for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 19,
+        "impressions": 90,
+        "ctr": 21.11,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 18,
+        "impressions": 52,
+        "ctr": 34.62,
+        "position": 2.8
+      },
+      {
+        "query": "viral instagram captions 2026",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 13,
-        "impressions": 46,
-        "ctr": 28.26,
-        "position": 2.4
+        "impressions": 30,
+        "ctr": 43.33,
+        "position": 2.1
+      },
+      {
+        "query": "viral insta caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 12,
+        "impressions": 114,
+        "ctr": 10.53,
+        "position": 5.3
+      },
+      {
+        "query": "ig viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 11,
+        "impressions": 41,
+        "ctr": 26.83,
+        "position": 3.7
+      },
+      {
+        "query": "instagram trending captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 11,
+        "impressions": 58,
+        "ctr": 18.97,
+        "position": 2.7
       },
       {
         "query": "viral captions for instagram reels 2026",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 11,
-        "impressions": 49,
-        "ctr": 22.45,
-        "position": 2.1
-      },
-      {
-        "query": "instagram caption copy 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 10,
-        "impressions": 62,
-        "ctr": 16.13,
-        "position": 2.4
+        "impressions": 34,
+        "ctr": 29.41,
+        "position": 3.0
       },
       {
-        "query": "instagram caption viral",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 9,
-        "impressions": 48,
-        "ctr": 18.75,
-        "position": 3.4
-      },
-      {
-        "query": "instagram trending caption 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 9,
-        "impressions": 30,
-        "ctr": 30.0,
-        "position": 2.0
-      },
-      {
-        "query": "instagram reels viral caption 2026",
+        "query": "instagram captions viral",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 8,
-        "impressions": 16,
-        "ctr": 50.0,
-        "position": 2.1
-      },
-      {
-        "query": "viral caption instagram 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 8,
-        "impressions": 17,
-        "ctr": 47.06,
-        "position": 1.8
-      },
-      {
-        "query": "instagram reels captions copy trending",
-        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-        "clicks": 7,
-        "impressions": 39,
-        "ctr": 17.95,
-        "position": 4.2
-      },
-      {
-        "query": "instagram viral video caption",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 7,
-        "impressions": 30,
-        "ctr": 23.33,
-        "position": 2.9
-      },
-      {
-        "query": "viral captions for instagram 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 5,
-        "impressions": 14,
-        "ctr": 35.71,
-        "position": 2
+        "impressions": 36,
+        "ctr": 22.22,
+        "position": 3.8
       },
       {
         "query": "viral caption for instagram reels 2026",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 8,
+        "impressions": 19,
+        "ctr": 42.11,
+        "position": 3
+      },
+      {
+        "query": "viral insta captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 8,
+        "impressions": 39,
+        "ctr": 20.51,
+        "position": 3.3
+      },
+      {
+        "query": "instagram trending caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 5,
+        "impressions": 21,
+        "ctr": 23.81,
+        "position": 2.2
+      },
+      {
+        "query": "instagram reels viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 4,
+        "impressions": 14,
+        "ctr": 28.57,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 4,
+        "impressions": 37,
+        "ctr": 10.81,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral video caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 4,
+        "impressions": 39,
+        "ctr": 10.26,
+        "position": 5.2
+      },
+      {
+        "query": "viral caption instagram 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 4,
         "impressions": 21,
         "ctr": 19.05,
-        "position": 1.9
+        "position": 2
       },
       {
         "query": "instagram viral captions 2026",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 3,
-        "impressions": 8,
-        "ctr": 37.5,
-        "position": 1.8
+        "impressions": 11,
+        "ctr": 27.27,
+        "position": 2
       },
       {
-        "query": "insta viral captions",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "query": "instagram viral captions for reels 2026",
+        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
+        "clicks": 3,
+        "impressions": 34,
+        "ctr": 8.82,
+        "position": 5.8
+      },
+      {
+        "query": "instagram reels captions copy trending",
+        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
         "clicks": 2,
-        "impressions": 66,
-        "ctr": 3.03,
-        "position": 6.3
+        "impressions": 32,
+        "ctr": 6.25,
+        "position": 4.7
       },
       {
         "query": "instagram viral caption copy and paste",
         "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
         "clicks": 2,
-        "impressions": 4,
-        "ctr": 50.0,
-        "position": 3.2
+        "impressions": 10,
+        "ctr": 20.0,
+        "position": 5.5
       },
       {
-        "query": "instagram viral captions",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
-        "clicks": 2,
-        "impressions": 943,
-        "ctr": 0.21,
-        "position": 6.3
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/about",
+        "clicks": 1,
+        "impressions": 49,
+        "ctr": 2.04,
+        "position": 1.9
       },
       {
-        "query": "instagram viral captions for reels 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
-        "clicks": 2,
-        "impressions": 261,
-        "ctr": 0.77,
-        "position": 4.7
-      },
-      {
-        "query": "viral captions for instagram reels 2026",
-        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-        "clicks": 2,
-        "impressions": 28,
-        "ctr": 7.14,
-        "position": 9.3
-      },
-      {
-        "query": "viral insta caption 2026",
-        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-        "clicks": 2,
-        "impressions": 19,
-        "ctr": 10.53,
-        "position": 6.5
-      },
-      {
-        "query": "viral words for instagram",
+        "query": "insta viral captions",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
-        "clicks": 2,
-        "impressions": 20,
-        "ctr": 10.0,
-        "position": 4.8
+        "clicks": 1,
+        "impressions": 30,
+        "ctr": 3.33,
+        "position": 6.5
       },
       {
         "query": "instagram caption copy",
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
         "clicks": 1,
-        "impressions": 2,
-        "ctr": 50.0,
-        "position": 20.5
+        "impressions": 1,
+        "ctr": 100,
+        "position": 11
       },
       {
         "query": "instagram caption copy 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 1,
-        "impressions": 62,
-        "ctr": 1.61,
-        "position": 2.4
+        "impressions": 26,
+        "ctr": 3.85,
+        "position": 4
       },
       {
-        "query": "instagram captions viral",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "query": "instagram caption viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 1,
-        "impressions": 31,
-        "ctr": 3.23,
-        "position": 2.9
+        "impressions": 43,
+        "ctr": 2.33,
+        "position": 4.9
       },
       {
-        "query": "instagram viral caption 2026",
-        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-        "clicks": 1,
-        "impressions": 7,
-        "ctr": 14.29,
-        "position": 6.7
-      },
-      {
-        "query": "instagram viral caption copy 2026",
-        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
-        "clicks": 1,
-        "impressions": 15,
-        "ctr": 6.67,
-        "position": 9.3
-      },
-      {
-        "query": "instagram viral caption copy 2026",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
-        "clicks": 1,
-        "impressions": 47,
-        "ctr": 2.13,
-        "position": 2.1
-      },
-      {
-        "query": "instagram viral caption copy and paste",
+        "query": "instagram post copy and paste",
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
         "clicks": 1,
-        "impressions": 3,
-        "ctr": 33.33,
-        "position": 4.7
+        "impressions": 1,
+        "ctr": 100,
+        "position": 11
+      },
+      {
+        "query": "instagram trending captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 1,
+        "impressions": 57,
+        "ctr": 1.75,
+        "position": 3.3
+      },
+      {
+        "query": "instagram viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 1,
+        "impressions": 569,
+        "ctr": 0.18,
+        "position": 6.1
       },
       {
         "query": "instagram viral description copy and paste",
         "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
         "clicks": 1,
-        "impressions": 31,
-        "ctr": 3.23,
-        "position": 5.5
+        "impressions": 12,
+        "ctr": 8.33,
+        "position": 5.8
       },
       {
-        "query": "most viral instagram captions",
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 100,
+        "position": 2
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 1,
-        "impressions": 8,
-        "ctr": 12.5,
-        "position": 3.1
+        "impressions": 12,
+        "ctr": 8.33,
+        "position": 5.2
+      },
+      {
+        "query": "vairal caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 33.33,
+        "position": 5.3
       },
       {
         "query": "viral captions for instagram reels 2026",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
         "clicks": 1,
-        "impressions": 49,
-        "ctr": 2.04,
-        "position": 2.1
+        "impressions": 34,
+        "ctr": 2.94,
+        "position": 3.2
       },
       {
         "query": "viral description for instagram",
@@ -2068,43 +2466,1699 @@
         "position": 2
       },
       {
-        "query": "viral insta caption",
-        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
-        "clicks": 1,
-        "impressions": 66,
-        "ctr": 1.52,
-        "position": 3.9
-      },
-      {
-        "query": "viral insta caption 2026",
+        "query": "viral words for instagram",
         "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
         "clicks": 1,
-        "impressions": 17,
-        "ctr": 5.88,
+        "impressions": 13,
+        "ctr": 7.69,
+        "position": 5.2
+      },
+      {
+        "query": "aesthetic caption copy and paste",
+        "page": "https://captionstudio.in/blog/aesthetic-instagram-captions-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "attitude कॅप्शन",
+        "page": "https://captionstudio.in/blog/attitude-captions-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
         "position": 1
+      },
+      {
+        "query": "best caption for group photos",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "best caption for instagram post",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "best viral instagram caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "brotherhood captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "camera roll captions for instagram",
+        "page": "https://captionstudio.in/blog/photo-dump-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "camera roll lately captions",
+        "page": "https://captionstudio.in/blog/photo-dump-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "caption designer",
+        "page": "https://captionstudio.in/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 12
+      },
+      {
+        "query": "caption for a group photo with friends",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "caption for classmates group photo",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "caption for college photo",
+        "page": "https://captionstudio.in/blog/college-life-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "caption for cousin group photo",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "caption for friends group photo instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "caption for girls group pic",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "caption for group of friends",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "caption for group photo",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "caption for group photo with colleagues",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "caption for group reel on instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "caption for ladies gang",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "caption for ladies group",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "caption for mirror selfie for boys",
+        "page": "https://captionstudio.in/blog/mirror-selfie-captions-for-instagram-2026",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "caption for trio",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "caption for workmates group photo",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "caption hindi",
+        "page": "https://captionstudio.in/blog/funny-captions-for-instagram-hindi-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "query": "caption studio ai",
+        "page": "https://captionstudio.in/",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "captions for girls group",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "captions for girls group photo",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captions for instagram post for friends group",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "captions for ladies group photo",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captions for school friends group photo",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captions studio",
+        "page": "https://captionstudio.in/",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/blog/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/guide",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/relax",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/terms",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/tools",
+        "clicks": 0,
+        "impressions": 22,
+        "ctr": 0,
+        "position": 2.2
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/tools/",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/tools/bio-generator",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/tools/caption-generator",
+        "clicks": 0,
+        "impressions": 24,
+        "ctr": 0,
+        "position": 1.0
+      },
+      {
+        "query": "captionstudio",
+        "page": "https://captionstudio.in/tools/hashtag-generator",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "captionxstudio",
+        "page": "https://captionstudio.in/",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 2.6
+      },
+      {
+        "query": "classmates quotes",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "college caption",
+        "page": "https://captionstudio.in/blog/college-life-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "college photo caption",
+        "page": "https://captionstudio.in/blog/college-life-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3.5
+      },
+      {
+        "query": "cousins group photo captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "decent bio for instagram for boy",
+        "page": "https://captionstudio.in/blog/instagram-bio-for-boys-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "do",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "friend group captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "friends group captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "gang caption for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "girls gang caption",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "girls group captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "give me a viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "give me a viral caption for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "give me a viral caption for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "give me a viral caption for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "give me a viral caption for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "give me a viral caption for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "give me a viral caption for instagram",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "give me latest one",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "query": "group captions",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "group captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "group photo caption for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "group photo captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "group pic caption",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "group pic quotes",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "growth on instagram",
+        "page": "https://captionstudio.in/blog/instagram-growth-7-days",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 32
+      },
+      {
+        "query": "gym mirror selfie captions",
+        "page": "https://captionstudio.in/blog/mirror-selfie-captions-for-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "hashtag generator",
+        "page": "https://captionstudio.in/tools/hashtag-generator",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 103
+      },
+      {
+        "query": "high school friends caption",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "high school friends captions for instagram",
+        "page": "https://captionstudio.in/blog/group-photo-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "hindi english mix caption for instagram",
+        "page": "https://captionstudio.in/blog/hindi-captions-instagram",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "hinglish captions for instagram for girl",
+        "page": "https://captionstudio.in/blog/ultimate-instagram-captions",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "ig viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "ig viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "ig viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "ig viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "ig viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "insta bio for private account",
+        "page": "https://captionstudio.in/blog/instagram-bio-for-boys-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "insta viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 29,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "query": "insta viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 29,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "query": "insta viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "query": "insta viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "query": "insta viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 29,
+        "ctr": 0,
+        "position": 6.5
+      },
+      {
+        "query": "instagram caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 4.0
+      },
+      {
+        "query": "instagram caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 4.0
+      },
+      {
+        "query": "instagram caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 26,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "instagram caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 25,
+        "ctr": 0,
+        "position": 4.0
+      },
+      {
+        "query": "instagram caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 26,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "query": "instagram caption generator",
+        "page": "https://captionstudio.in/",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 86.4
+      },
+      {
+        "query": "instagram caption trending 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "instagram caption viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 32,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "instagram caption viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram caption viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 32,
+        "ctr": 0,
+        "position": 5.1
+      },
+      {
+        "query": "instagram caption viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram caption viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram captions viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram captions viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram captions viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram captions viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram captions viral",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram copy caption",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      },
+      {
+        "query": "instagram copy caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 9.7
+      },
+      {
+        "query": "instagram copy caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "instagram copy caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "instagram copy caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "instagram copy caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "instagram copy caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": 0,
+        "position": 9.5
+      },
+      {
+        "query": "instagram new bio for boy",
+        "page": "https://captionstudio.in/blog/instagram-bio-for-boys-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 51
+      },
+      {
+        "query": "instagram new viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "instagram reels viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram reels viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram reels viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram reels viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram reels viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram trending caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram trending caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram trending caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram trending caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram trending caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram trending captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 54,
+        "ctr": 0,
+        "position": 3.2
+      },
+      {
+        "query": "instagram trending captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 54,
+        "ctr": 0,
+        "position": 3.2
+      },
+      {
+        "query": "instagram trending captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 57,
+        "ctr": 0,
+        "position": 3.3
+      },
+      {
+        "query": "instagram trending captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 56,
+        "ctr": 0,
+        "position": 3.2
+      },
+      {
+        "query": "instagram trending viral captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "instagram viral caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "instagram viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 2.1
+      },
+      {
+        "query": "instagram viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 2.1
+      },
+      {
+        "query": "instagram viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 2.1
+      },
+      {
+        "query": "instagram viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 2.1
+      },
+      {
+        "query": "instagram viral caption 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 43,
+        "ctr": 0,
+        "position": 2.1
+      },
+      {
+        "query": "instagram viral caption copy 2026",
+        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 6
+      },
+      {
+        "query": "instagram viral caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 50,
+        "ctr": 0,
+        "position": 2.9
+      },
+      {
+        "query": "instagram viral caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 50,
+        "ctr": 0,
+        "position": 2.9
+      },
+      {
+        "query": "instagram viral caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 52,
+        "ctr": 0,
+        "position": 2.9
+      },
+      {
+        "query": "instagram viral caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 50,
+        "ctr": 0,
+        "position": 2.9
+      },
+      {
+        "query": "instagram viral caption copy 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 52,
+        "ctr": 0,
+        "position": 2.9
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#attitude",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#caption-copy-intent",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#friendship",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#love",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#posts-copy",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#reels-copy",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#stories-copy",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "query": "instagram viral caption copy trending",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "instagram viral caption copy trending",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "instagram viral caption copy trending",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "instagram viral caption copy trending",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "instagram viral caption copy trending",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "instagram viral caption copy trending",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 8
+      },
+      {
+        "query": "instagram viral caption download",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026",
+        "clicks": 0,
+        "impressions": 26,
+        "ctr": 0,
+        "position": 8.4
+      },
+      {
+        "query": "instagram viral caption download",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "query": "instagram viral caption download",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "query": "instagram viral caption download",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "query": "instagram viral caption download",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "query": "instagram viral caption download",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 14,
+        "ctr": 0,
+        "position": 9.4
+      },
+      {
+        "query": "instagram viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 546,
+        "ctr": 0,
+        "position": 6.1
+      },
+      {
+        "query": "instagram viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 546,
+        "ctr": 0,
+        "position": 6.1
+      },
+      {
+        "query": "instagram viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 569,
+        "ctr": 0,
+        "position": 6.1
+      },
+      {
+        "query": "instagram viral captions",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 563,
+        "ctr": 0,
+        "position": 6.1
+      },
+      {
+        "query": "instagram viral captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 2.2
+      },
+      {
+        "query": "instagram viral captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": 0,
+        "position": 2.2
+      },
+      {
+        "query": "instagram viral captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 2.2
+      },
+      {
+        "query": "instagram viral captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 2.2
+      },
+      {
+        "query": "instagram viral captions 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 2.2
+      },
+      {
+        "query": "instagram viral captions for reels 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 213,
+        "ctr": 0,
+        "position": 3.6
+      },
+      {
+        "query": "instagram viral captions for reels 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 213,
+        "ctr": 0,
+        "position": 3.6
+      },
+      {
+        "query": "instagram viral captions for reels 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 223,
+        "ctr": 0,
+        "position": 3.7
+      },
+      {
+        "query": "instagram viral captions for reels 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 223,
+        "ctr": 0,
+        "position": 3.7
+      },
+      {
+        "query": "instagram viral captions for reels 2026",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 221,
+        "ctr": 0,
+        "position": 3.7
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#attitude",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#caption-copy-intent",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 5.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#friendship",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#love",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#posts-copy",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 5.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#reels-copy",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 5.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#stories-copy",
+        "clicks": 0,
+        "impressions": 10,
+        "ctr": 0,
+        "position": 5.5
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 37,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 37,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral description copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 37,
+        "ctr": 0,
+        "position": 3.8
+      },
+      {
+        "query": "instagram viral reel caption copy",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 11
+      },
+      {
+        "query": "instagram viral reel caption copy and paste",
+        "page": "https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram viral video caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 5.4
+      },
+      {
+        "query": "instagram viral video caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 5.4
+      },
+      {
+        "query": "instagram viral video caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 5.4
+      },
+      {
+        "query": "instagram viral video caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 5.4
+      },
+      {
+        "query": "instagram viral video caption",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 19,
+        "ctr": 0,
+        "position": 5.4
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#attitude",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#caption-copy-intent",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#friendship",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#love",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#posts-copy",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#reels-copy",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions#stories-copy",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": 0,
+        "position": 10
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-length-guide",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#caption-workflow-2026",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#copy-paste-captions",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#hinglish-captions-2026",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 5.2
+      },
+      {
+        "query": "instagram viral video caption copy and paste",
+        "page": "https://captionstudio.in/blog/viral-captions-for-reels-2026#sept-2026-fresh",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 5.4
+      },
+      {
+        "query": "khud ki post ke liye caption in english",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "khud ki post ke liye caption in english",
+        "page": "https://captionstudio.in/blog/ultimate-instagram-captions",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "life lately photo dump captions",
+        "page": "https://captionstudio.in/blog/photo-dump-captions-instagram-2026",
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "query": "lines for reels",
+        "page": "https://captionstudio.in/blog/copy-paste-instagram-captions",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 2.5
       }
     ],
     "gsc_device": [
       {
         "device": "MOBILE",
-        "clicks": 761,
-        "impressions": 4947,
-        "ctr": 15.38,
-        "position": 3.8
+        "clicks": 603,
+        "impressions": 4873,
+        "ctr": 12.37,
+        "position": 4.0
       },
       {
         "device": "DESKTOP",
-        "clicks": 60,
-        "impressions": 510,
-        "ctr": 11.76,
-        "position": 6.7
+        "clicks": 73,
+        "impressions": 577,
+        "ctr": 12.65,
+        "position": 5.1
       },
       {
         "device": "TABLET",
-        "clicks": 12,
-        "impressions": 48,
-        "ctr": 25.0,
-        "position": 3.8
+        "clicks": 8,
+        "impressions": 52,
+        "ctr": 15.38,
+        "position": 3.4
       }
     ]
   },
@@ -2508,220 +4562,500 @@
   ],
   "blogs": [
     {
+      "title": "250+ 2026 Recap & New Year 2027 Captions for Instagram (Reels & Photo Dump)",
+      "desc": "Copy 250+ viral 2026 Recap Reel hooks, December photo dump lines & Welcome 2027 captions in Hinglish, Hindi & English.",
+      "category": "captions",
+      "displayTag": "🎞️ 2026 RECAP",
+      "date": "2026-11-02",
+      "readTime": "13 min read",
+      "img": "images/blog/hero-2026-recap-new-year-2027-captions.webp",
+      "link": "blog/2026-recap-new-year-2027-captions-instagram"
+    },
+    {
+      "title": "300+ Jai Shree Ram, Mahakal & Radhe Krishna Bio for Instagram in Hindi 2026",
+      "excerpt": "Copy royal Hindi & soulful Hinglish Instagram bios for Shree Ram, Mahadev, Radhe Krishna, Dwarkadhish, Hanuman & Khatu Shyam devotees + 1-Click Bio Maker.",
+      "link": "blog/jai-shree-ram-mahakal-radhe-krishna-bio-instagram-2026",
+      "category": "bio",
+      "tag": "🚩 Sanatani Bio",
+      "date": "November 2026",
+      "readTime": "7 min read",
+      "featured": true
+    },
+    {
+      "title": "12 Best Earning Apps for Students Without Investment in India 2026 (Direct UPI)",
+      "excerpt": "Compare 12 verified zero-investment apps for Indian students (GroMo, EarnKaro, Funngro, CashKaro & Telegram tasks) with realistic monthly UPI payouts.",
+      "link": "blog/best-earning-apps-for-students-without-investment-2026",
+      "category": "growth",
+      "tag": "💸 Student Earning",
+      "date": "November 2026",
+      "readTime": "8 min read",
+      "featured": true
+    },
+    {
+      "title": "150+ Trending AI Photo Editing Prompts for Instagram Boys & Girls 2026 (4K Copy-Paste)",
+      "excerpt": "Create ultra-realistic 4K DSLR portraits on Google Gemini & ChatGPT — Old Money, Urban Café, Royal Ethnic, Winter Hill Station & Couple Duo prompts.",
+      "link": "blog/trending-ai-photo-editing-prompts-instagram-2026",
+      "category": "hinglish",
+      "tag": "🤖 4K AI Prompts",
+      "date": "November 2026",
+      "readTime": "7 min read",
+      "featured": true
+    },
+    {
+      "title": "Happy Diwali Wishes, Festive Instagram Bio, Notes & 3D AI Prompts 2026 (300+ Copy Paste)",
+      "link": "blog/happy-diwali-wishes-quotes-bio-reels-2026",
+      "img": "img/diwali-2026-wishes-hero.jpg",
+      "image": "img/diwali-2026-wishes-hero.jpg",
+      "category": "Festive",
+      "displayTag": "🪔 TRENDING · DIWALI 2026",
+      "desc": "300+ ready-to-copy Happy Diwali 2026 wishes in Hindi, Hinglish & English, festive VIP Instagram bios, 60-char Notes, and viral 3D AI photo editing prompts.",
+      "readTime": "7 min",
+      "date": "2026-11-01",
+      "hot": true
+    },
+    {
+      "title": "Best Telegram Earning Channels in India 2026 — Earn ₹500 to ₹2,000 Daily (Zero Investment)",
+      "link": "blog/telegram-earning-channels-india-2026",
+      "img": "og-image.jpg",
+      "image": "og-image.jpg",
+      "category": "Earning",
+      "displayTag": "🔴 LIVE · DAILY EARNING 2026",
+      "desc": "Join the #1 verified Telegram earning hub for Indian students and creators. Daily ₹500–₹2,000 zero-investment tasks, AI side hustles, and live UPI payment proofs.",
+      "readTime": "6 min",
+      "date": "2026-11-01",
+      "hot": true
+    },
+    {
       "title": "210+ Diwali Captions for Instagram 2026 | Reels, Wishes & WhatsApp Status",
       "link": "blog/diwali-captions-instagram-2026",
+      "img": "img/diwali-captions-2026-og.jpg?v=20261012c",
+      "image": "img/diwali-captions-2026-og.jpg?v=20261012c",
       "category": "Seasonal",
-      "date": "2026-10-12"
+      "displayTag": "🪔 NEW · DIWALI 2026",
+      "desc": "213 original captions for Diwali Instagram posts, Reels and WhatsApp Status—Hindi, Hinglish, outfit, family, funny and aesthetic ideas, plus 7 free vertical banners.",
+      "readTime": "10 min",
+      "date": "2026-10-12",
+      "hot": true
     },
     {
       "title": "How to Make Money on Instagram in 2026: Real US Rates",
       "link": "blog/make-money-on-instagram-2026",
+      "img": "img/make-money-instagram-2026-hero.webp?v=20261012c",
+      "image": "img/make-money-instagram-2026-hero.webp?v=20261012c",
       "category": "earning",
-      "date": "2026-10-12"
+      "displayTag": "💵 GLOBAL · EARNING",
+      "desc": "Real US brand deal rates, UGC pricing, affiliate commissions, digital products and a follower-to-income table for making money on Instagram in 2026 — practical steps, no hype.",
+      "readTime": "11 min",
+      "date": "2026-10-12",
+      "hot": true
     },
     {
       "title": "140+ Photo Dump Captions for Instagram 2026 | Funny, Aesthetic & Life Lately",
       "link": "blog/photo-dump-captions-instagram-2026",
+      "image": "img/photo-dump-captions-hero-2026.webp?v=20261012c",
       "category": "Captions",
-      "date": "2026-10-12"
+      "displayTag": "📸 NEW · PHOTO DUMP",
+      "desc": "144 original photo dump captions for life lately, monthly recaps, weekends, friends, travel, funny, aesthetic, late posts and camera-roll carousels.",
+      "readTime": "13 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/photo-dump-captions-hero-2026.webp?v=20261012c"
     },
     {
       "title": "100+ College Life Captions for Instagram 2026 | Campus, Hostel & Friends",
       "link": "blog/college-life-captions-instagram-2026",
+      "image": "img/college-life-captions-hero-2026.webp?v=20261012c",
       "category": "Captions",
-      "date": "2026-10-12"
+      "displayTag": "🎓 NEW · COLLEGE LIFE",
+      "desc": "100+ original college life captions for campus, canteen, hostel, friends, exams, college fests, farewell, short posts and natural Hinglish lines.",
+      "readTime": "12 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/college-life-captions-hero-2026.webp?v=20261012c"
     },
     {
       "title": "160+ Group Photo Captions for Instagram 2026 | Friends, Squad, Class & Cousins",
       "link": "blog/group-photo-captions-instagram-2026",
+      "image": "img/group-photo-captions-hero-2026.webp",
       "category": "Captions",
-      "date": "2026-10-12"
+      "displayTag": "👥 NEW · GROUP PHOTOS",
+      "desc": "160+ original group photo captions for friends, squads, class, college, cousins, office teams, funny candids, short posts and Hinglish status lines.",
+      "readTime": "12 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/group-photo-captions-hero-2026.webp"
     },
     {
       "title": "180+ Traditional Captions for Instagram 2026 | Saree, Kurti, Ethnic & Desi Outfit",
       "link": "blog/traditional-captions-instagram-2026",
+      "image": "img/traditional-captions-hero-2026.webp",
       "category": "Captions",
-      "date": "2026-10-12"
+      "displayTag": "👗 NEW · TRADITIONAL",
+      "desc": "180+ traditional captions for Instagram 2026 — saree, kurti, lehenga, ethnic wear, desi look, boys, girls and couple captions. Copy-paste lines in English, Hindi-style and Hinglish.",
+      "readTime": "12 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/traditional-captions-hero-2026.webp"
     },
     {
       "title": "180+ Mirror Selfie Captions for Instagram (2026) | Short, Funny, Aesthetic & Attitude",
       "link": "blog/mirror-selfie-captions-for-instagram-2026",
+      "image": "img/mirror-selfie-captions-hero-2026.webp",
       "category": "Captions",
-      "date": "2026-10-12"
+      "displayTag": "🪞 NEW · MIRROR SELFIE",
+      "desc": "182 copy-paste mirror selfie captions for Instagram — short, funny, aesthetic, girls, boys, gym, bathroom, fit-check and one-word lines.",
+      "readTime": "11 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/mirror-selfie-captions-hero-2026.webp"
     },
     {
       "title": "150+ Mahadev Bio for Instagram in Hindi (2026) | Har Har Mahadev & Kedarnath Guide",
       "link": "blog/mahadev-bio-for-instagram-hindi-2026",
+      "image": "img/mahadev-pin-1.webp",
       "category": "Spiritual",
-      "date": "2026-10-12"
+      "displayTag": "🏔️ NEW · MAHADEV BIOS",
+      "desc": "Exhaustive 2026 creator guide to Mahadev Bio for Instagram in Hindi — 160+ Har Har Mahadev bios, Kedarnath peace quotes, Om Namah Shivaya shlokas & AdSense strategy.",
+      "readTime": "14 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/mahadev-pin-1.webp"
     },
     {
       "title": "150+ Wedding Captions for Instagram (2026) | Aesthetic, Short & Romantic",
       "link": "blog/wedding-captions-for-instagram-2026",
+      "image": "img/wedding-captions-hero-2026.webp",
       "category": "Aesthetics",
-      "date": "2026-10-12"
+      "displayTag": "💍 NEW · WEDDING COPY",
+      "desc": "165+ trending wedding captions for Instagram 2026 — short minimalist vows, bride solo aesthetics, golden hour sunset lines & reception hard launches.",
+      "readTime": "8 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/wedding-captions-hero-2026.webp"
     },
     {
       "title": "Spider-Man Quotes for Instagram 2026: Peter Parker, Miles & MJ",
       "link": "blog/spider-man-quotes-instagram-2026",
+      "image": "img/01-spider-man-quotes-instagram-2026.webp",
       "category": "Entertainment",
-      "date": "2026-10-12"
+      "displayTag": "🕷️ NEW · QUOTES",
+      "desc": "200+ Spider-Man quote-style lines for Instagram Reels, Pinterest pins, WhatsApp status, bios, DP captions and fan edits — Peter Parker, Miles, MJ, funny and emotional lines.",
+      "readTime": "12 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/01-spider-man-quotes-instagram-2026.webp"
     },
     {
       "title": "100+ Viral Reel Hooks for Instagram & YouTube Shorts 2026 (Copy-Paste)",
       "link": "blog/instagram-reel-hooks-2026",
+      "image": "img/reel-hooks-hero.webp",
       "category": "growth",
-      "date": "2026-10-12"
+      "displayTag": "🪝 100+ HOOKS · 2026 DATA",
+      "desc": "100+ viral Reel hooks across 9 categories — question, shock, story, POV, contrarian. Built from 2026 OpusClip data on 50M+ clips. Copy-paste ready for Instagram + YouTube Shorts.",
+      "readTime": "11 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/reel-hooks-hero.webp"
     },
     {
       "title": "150+ Aesthetic Instagram Captions 2026 — Soft Girl, Dark, Baddie, Coquette, Y2K (Copy Paste)",
       "link": "blog/aesthetic-instagram-captions-2026",
+      "image": "img/aesthetic-hero-moodboard.webp",
       "category": "captions",
-      "date": "2026-10-12"
+      "displayTag": "🌸 AESTHETIC · 160+ LINES",
+      "desc": "150+ original copy-paste aesthetic Instagram captions for 2026 — soft girl, dark whimsigoth, baddie, coquette, Y2K, clean girl, dark academia & poetic. Pure English, Pinterest-trending vibes.",
+      "readTime": "8 min",
+      "date": "2026-10-12",
+      "hot": true,
+      "img": "img/aesthetic-hero-moodboard.webp"
     },
     {
       "title": "10 Best CapCut Alternatives India 2026 — Free + Paid Video Editing Apps for Reels",
+      "desc": "CapCut banned in India? Yahaan 10 best tested alternatives — Instagram Edits (Meta), VN Editor, InShot, KineMaster, Filmora aur more. Legally available, India pricing, no VPN needed.",
       "link": "blog/best-capcut-alternatives-india-2026",
+      "img": "img/best-video-editing-apps-india-2026-hero.webp",
+      "date": "2026-10-12",
+      "displayTag": "🎬 EDITING APPS · INDIA TESTED",
       "category": "guide",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "15 min",
+      "image": "img/best-video-editing-apps-india-2026-hero.webp"
     },
     {
       "title": "Education Captions for Instagram Reels 2026",
+      "desc": "Instantly copy 180+ education captions for student life, teacher posts, exam season, study motivation and Reel hooks. Updated June 2026.",
       "link": "blog/education-captions-for-instagram-reels-2026",
+      "img": "img/education-captions-reels-2026-hero.webp",
+      "date": "2026-10-12",
+      "displayTag": "📚 EDUCATION · 180+ CAPTIONS",
       "category": "education",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "9 min",
+      "image": "img/education-captions-reels-2026-hero.webp"
     },
     {
       "title": "250+ Gym & Workout Captions Hinglish for Instagram — Beast Mode, Motivation, Sore (Copy Paste 2026)",
+      "desc": "250+ gym & workout captions in Hinglish — beast mode, motivation, funny sore, six pack, leg day, gym selfie, transformation, gym girl & couple. 5-tag hashtag formula included. 1-tap copy.",
       "link": "blog/gym-workout-captions-hinglish-instagram",
+      "img": "img/gym-captions-hinglish-hero.webp",
+      "date": "2026-10-12",
+      "displayTag": "💪 GYM · HINGLISH",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "11 min",
+      "image": "img/gym-captions-hinglish-hero.webp"
     },
     {
       "title": "Instagram Hashtag Strategy 2026: Why 5 Tags Beat 30 + 50 Niche Hashtag Packs",
+      "desc": "Meta limits Reels to 5 hashtags in 2026. The new 5-tag formula + 50+ niche hashtag packs (copy paste) + free hashtag generator. Data-backed from Meta 2026 update & 18M-post analysis.",
       "link": "blog/instagram-hashtag-strategy-viral-reels",
+      "img": "img/hashtag-strategy-hero.webp",
+      "date": "2026-10-12",
+      "displayTag": "🔥 STRATEGY · HASHTAG 2026",
       "category": "growth",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "12 min",
+      "image": "img/hashtag-strategy-hero.webp"
     },
     {
       "title": "150+ Hindi Captions for Instagram — Attitude, Love, Dosti & Funny (Copy Paste)",
+      "desc": "150+ Hindi & Hinglish captions — attitude, love, dosti, zindagi, funny, motivational & short captions. Har mood, har season ke liye. One-tap copy.",
       "link": "blog/hindi-captions-instagram",
+      "img": "img/hindi-captions-hero.jpg",
+      "date": "2026-10-12",
+      "displayTag": "🇮🇳 EVERGREEN",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "9 min",
+      "image": "img/hindi-captions-hero.jpg"
     },
     {
       "title": "500+ Birthday Captions for Instagram (Hindi, Hinglish & English) 2026",
+      "desc": "Copy 500+ birthday captions for Instagram 2026 in Hindi, Hinglish and English — short, funny, self birthday, bestie, friends, family, love, cake cutting, countdown and birthday dump captions.",
       "link": "blog/birthday-captions-instagram-2026",
+      "img": "img/birthday-captions-instagram-2026-hero.webp",
+      "date": "2026-10-12",
+      "displayTag": "🎂 BIRTHDAY",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "20 min",
+      "image": "img/birthday-captions-instagram-2026-hero.webp"
     },
     {
-      "title": "300+ Monsoon Captions for Instagram 2026 — Baarish, Rain, Hindi & Hinglish (Copy Paste)",
-      "link": "blog/monsoon-captions-instagram-2026",
       "category": "captions",
-      "date": "2026-10-12"
+      "date": "2026-10-12",
+      "desc": "300+ monsoon & baarish captions for Instagram 2026 — romantic, attitude, funny, chai, travel, aesthetic & shayari in Hindi, Hinglish & English. Plus monsoon hashtags, reel ideas and a free caption generator. 1-tap copy.",
+      "displayTag": "🌧️ MONSOON SPECIAL",
+      "hot": true,
+      "img": "img/monsoon-captions-2026-hero.webp",
+      "link": "blog/monsoon-captions-instagram-2026",
+      "readTime": "15 min",
+      "title": "300+ Monsoon Captions for Instagram 2026 — Baarish, Rain, Hindi & Hinglish (Copy Paste)",
+      "image": "img/monsoon-captions-2026-hero.webp"
     },
     {
       "title": "400+ Funny Captions for Instagram Hindi 2026 — Hinglish, Desi & Short",
+      "desc": "Copy 400+ funny captions for Instagram Hindi 2026 — Hinglish, desi, relatable, student, friends, family, selfie, food, office and short funny captions with one-tap copy.",
       "link": "blog/funny-captions-for-instagram-hindi-2026",
+      "img": "img/funny-captions-instagram-hindi-2026-hero.webp",
+      "date": "2026-10-12",
+      "displayTag": "😂 FUNNY HINDI",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "16 min",
+      "image": "img/funny-captions-instagram-hindi-2026-hero.webp"
     },
     {
       "title": "220+ Best Captions for Boys 2026 — Hinglish Attitude, Stylish & Cool",
+      "desc": "Copy 220+ best captions for boys 2026 in Hinglish: attitude, stylish, short, gym, love, sad, royal, bike, selfie and desi captions for Instagram.",
       "link": "blog/best-captions-boys-2026",
+      "date": "2026-10-12",
+      "displayTag": "😎 BOYS HINGLISH",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "12 min",
+      "img": "img/best-captions-boys-2026-hero.jpg",
+      "image": "img/best-captions-boys-2026-hero.jpg"
     },
     {
       "title": "300+ Love Captions Hinglish 2026 — Romantic, Savage, Couple & Reel Hooks (One-Tap Copy)",
+      "desc": "300+ love captions in Hinglish for Instagram 2026 — romantic, savage, couple, flirty, reel hooks, WhatsApp status. Hindi-English mix captions for real Indian creators. One-tap copy, zero signup.",
       "link": "blog/love-viral-captions-hinglish-2026",
+      "img": "img/love-captions-hinglish-2026-hero.jpg",
+      "date": "2026-10-12",
+      "displayTag": "❤️ LOVE VIRAL",
       "category": "instagram",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "14 min",
+      "image": "img/love-captions-hinglish-2026-hero.jpg"
     },
     {
       "title": "Attitude Captions 2026 😎🔥 (Best Instagram Attitude Lines for Boys & Girls)",
+      "desc": "300+ attitude captions for Instagram in 2026 — stylish, savage, royal, cool, VIP, Hinglish and confidence-filled captions for boys, girls, reels and posts.",
       "link": "blog/attitude-captions-2026",
+      "img": "img/attitude-captions-2026-hero.jpg?v=20261012c",
+      "date": "2026-10-12",
+      "displayTag": "😎 ATTITUDE",
       "category": "instagram",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "8 min",
+      "image": "img/attitude-captions-2026-hero.jpg?v=20261012c"
     },
     {
       "title": "Best Instagram Bio Copy Paste 2026 🔥 (VIP, Attitude, Stylish & Aesthetic Bio)",
+      "desc": "250+ best Instagram bio copy paste ideas 2026 – VIP, attitude, stylish, love, aesthetic & professional bios for boys and girls. One-tap copy ready lines.",
       "link": "blog/best-instagram-bio-copy-paste-2026",
+      "date": "2026-10-12",
+      "displayTag": "🔥 NEW",
       "category": "instagram",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "12 min",
+      "img": "img/instagram-bio-for-boys-2026-hero.jpg",
+      "image": "img/instagram-bio-for-boys-2026-hero.jpg"
     },
     {
       "title": "Short Instagram Captions 2026: 300 Short Captions for Every Mood",
+      "desc": "Copy short Instagram captions for attitude, love, sad, funny, aesthetic, selfie, travel, gym, friends, and Reels posts.",
       "link": "blog/short-instagram-captions-2026",
+      "date": "2026-10-12",
+      "displayTag": "⚡ SHORT CAPTIONS",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "13 min",
+      "img": "img/caption-copy-pinterest-short.webp?v=20261012c",
+      "image": "img/caption-copy-pinterest-short.webp?v=20261012c"
     },
     {
       "title": "Instagram Stylish Name 2026: 300+ Stylish Names for Boys, Girls, VIP & Attitude Profiles",
+      "desc": "Copy Instagram stylish name ideas for boys, girls, attitude profiles, VIP accounts, royal style, gamer names, aesthetic names, and Hinglish names.",
       "link": "blog/instagram-stylish-name-2026",
+      "date": "2026-10-12",
+      "displayTag": "✨ STYLISH NAME",
       "category": "growth",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "14 min",
+      "img": "img/stylish-name-vip-2026-hero.jpg",
+      "image": "img/stylish-name-vip-2026-hero.jpg"
     },
     {
       "title": "Instagram Bio for Girls 2026: 250 Stylish, Cute, Attitude & VIP Bios",
+      "desc": "Copy stylish Instagram bio ideas for girls, including cute bios, attitude bios, VIP bios, royal bios, aesthetic bios, classy bios, emoji bios, and Hinglish bios.",
       "link": "blog/instagram-bio-for-girls-2026",
+      "date": "2026-10-12",
+      "displayTag": "💖 GIRLS BIO",
       "category": "growth",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "13 min",
+      "img": "img/stylish-name-girls-2026-hero.jpg",
+      "image": "img/stylish-name-girls-2026-hero.jpg"
     },
     {
       "title": "Instagram Bio for Boys 2026: 250 Stylish, Attitude & VIP Bios",
+      "desc": "Copy stylish Instagram bio ideas for boys, including attitude bios, VIP bios, royal bios, savage bios, gym bios, gamer bios, and Hinglish bios.",
       "link": "blog/instagram-bio-for-boys-2026",
+      "img": "img/instagram-bio-for-boys-2026-hero.jpg",
+      "date": "2026-10-12",
+      "displayTag": "😎 BOYS BIO",
       "category": "growth",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "13 min",
+      "image": "img/instagram-bio-for-boys-2026-hero.jpg"
     },
     {
       "title": "Real Estate Instagram Captions 2026: 150 Captions for Agents, Listings & Reels",
+      "desc": "Copy real estate Instagram captions for agents, listings, open houses, sold posts, luxury homes, rentals, neighborhoods, and Reels.",
       "link": "blog/real-estate-instagram-captions-2026",
+      "date": "2026-10-12",
+      "displayTag": "🏡 REAL ESTATE",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "15 min",
+      "img": "img/professional-development-guide-2026-hero.jpg",
+      "image": "img/professional-development-guide-2026-hero.jpg"
     },
     {
       "title": "Social Media Content Strategy for Small Businesses in 2026",
+      "desc": "Build a simple content system with pillars, Reels, captions, calendars, proof posts, and customer-focused social media ideas.",
       "link": "blog/social-media-content-strategy-small-business-2026",
+      "date": "2026-10-12",
+      "displayTag": "📈 SMALL BUSINESS",
       "category": "growth",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "16 min",
+      "img": "img/viral-strategy-planning-2026.jpg",
+      "image": "img/viral-strategy-planning-2026.jpg"
     },
     {
       "title": "Instagram Growth in 7 Days",
+      "desc": "Follow a simple 7-day Instagram growth plan with profile fixes, Reels ideas, captions, and engagement steps.",
       "link": "blog/instagram-growth-7-days",
+      "date": "2026-10-12",
+      "displayTag": "📈 7-DAY GROWTH",
       "category": "growth",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "12 min",
+      "img": "img/viral-success-story-2026.jpg",
+      "image": "img/viral-success-story-2026.jpg"
     },
     {
       "title": "Instagram Viral Captions for Reels in Hinglish 2026",
+      "desc": "Get viral Hinglish captions for Instagram Reels with attitude, emotion, hooks, and engagement-friendly lines.",
       "link": "blog/instagram-viral-captions-reels-hinglish-2026",
+      "img": "img/hinglish-captions-2026-hero.jpg",
+      "date": "2026-10-12",
+      "displayTag": "🔥 HINGLISH REELS",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "12 min",
+      "image": "img/hinglish-captions-2026-hero.jpg"
     },
     {
       "title": "150+ Copy Paste Instagram Captions 2026 (1-Tap Copy)",
+      "desc": "150+ copy-paste Instagram caption ideas for Reels, posts and Stories — attitude, love, funny, short, Hindi and Hinglish.",
       "link": "blog/copy-paste-instagram-captions",
+      "date": "2026-10-12",
+      "displayTag": "📋 COPY PASTE",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "11 min",
+      "img": "img/copy-paste-instagram-captions-2026-hero.jpg",
+      "image": "img/copy-paste-instagram-captions-2026-hero.jpg"
     },
     {
       "title": "UGC Creator Complete Guide 2026",
+      "desc": "Learn how to start as a UGC creator with content examples, portfolio tips, brand pitch ideas, and beginner steps.",
       "link": "blog/ugc-creator-complete-guide-2026",
+      "date": "2026-10-12",
+      "displayTag": "🎬 UGC CREATOR",
       "category": "growth",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "16 min",
+      "img": "img/professional-networking-indian-creators-2026.jpg",
+      "image": "img/professional-networking-indian-creators-2026.jpg"
     },
     {
       "title": "Ultimate Instagram Captions",
+      "desc": "A complete Instagram captions guide with ideas for attitude, love, friends, selfies, Reels, and daily posts.",
       "link": "blog/ultimate-instagram-captions",
+      "date": "2026-10-12",
+      "displayTag": "🔥 CAPTIONS",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "16 min",
+      "img": "img/viral-captions-reels-2026-hero.jpg",
+      "image": "img/viral-captions-reels-2026-hero.jpg"
     },
     {
       "title": "Viral Captions for Reels 2026",
+      "desc": "Get viral caption ideas for Reels with hooks, attitude, emotion, comments, saves, and share-friendly lines.",
       "link": "blog/viral-captions-for-reels-2026",
+      "img": "img/viral-caption-hero.jpg",
+      "date": "2026-10-12",
+      "displayTag": "📱 REELS CAPTIONS",
       "category": "captions",
-      "date": "2026-10-12"
+      "hot": true,
+      "readTime": "12 min",
+      "image": "img/viral-caption-hero.jpg"
     }
   ],
   "commits": [],
@@ -2813,58 +5147,58 @@
   },
   "plan": [
     {
-      "when": "Sabse Pehle — evidence check",
-      "title": "24 June Search visibility break ki wajah isolate karo",
-      "why": "GSC clicks -88% aur impressions -97.7% same-length windows me; ye sirf GA4 tagging issue nahi.",
-      "work": "Manual Actions/Security Issues aur indexing history dekho; 10–16 UTC deployed server/Cloudflare changes verify karo. Small page sample ko spam policies ke against audit karo. Bulk edits/redirects bina approval mat karo."
+      "when": "DONE — 02 Nov 2026 (Commits bf14029, 8efc5d9 & Live Refresh)",
+      "title": "74-File Sitewide SEO Refresh + Pinterest Direct Push + 2026 Recap Pillar LIVE",
+      "why": "5 Top-3 pages (group-photo, mirror-selfie, funny-hindi, college-life, photo-dump) par 772 impressions aur 0 clicks the kyunki H1 ke turant baad promo text snippet mein aa raha tha + 5 pages me JS SyntaxError tha + /blog aur Girls Bio raw HTML me khali the.",
+      "work": "Sab fix karke deploy kar diya: H1 ke baad pure intro + data-nosnippet, JS SyntaxError repaired, /blog (42 SSR cards) + Girls Bio (3,250w SSR), #1 Bio & #1 Reels par Traffic Bridges, Pinterest p:domain_verify + 215 images data-pin-* + /ai-control/pinterest Studio + naya 2026 Recap & 2027 New Year Mega Pillar live!"
     },
     {
-      "when": "Sabse Pehle — 24/48 Ghante",
-      "title": "Views girne ki jad pakdo",
-      "why": "Roj ke views 268 se girke 52 rah gaye hain, lekin Search click utne nahi gire.",
-      "work": "Analytics (GA4) aur Search (GSC) ko page-page milao. 6 Oct ke consent wale badlav ko check karo. Saboot mile bina design/content mat badlo."
+      "when": "CHECK #1 — 05 Nov se 09 Nov 2026 (7-Day CTR & Indexing Check)",
+      "title": "5 Rescued Top-3 Zero-Click Pages + Girls Bio + 6 New Pillars ka GSC CTR & Impressions check karo",
+      "why": "02 Nov ko SERP snippet poisoning aur JS copy bug hataya gaya hai. 7 din me Google naya title/snippet cache karega.",
+      "work": "`python3 scripts/seo_agent_check.py` chalao. Check karo: group-photo (388 impr), mirror-selfie (142 impr), funny-hindi (115 impr), college-life (78 impr), photo-dump (49 impr) par CTR 0% se 5-12% hua ya nahi, aur Girls Bio + 2026 Recap index hokar impressions lene lage ya nahi."
     },
     {
-      "when": "Isi Hafte",
-      "title": "SEO sudharo: /tools/bio-generator",
-      "why": "Score 95/100 hai — title/description/content me kami hai.",
-      "work": "Title bahut lamba (94 char) — Google mein katega → 60 char ke andar rakho"
+      "when": "WEEK 1–2 DAILY — Roz 5–8 Pins (Owner / Pinterest Studio)",
+      "title": "Pinterest Direct Push Studio (/ai-control/pinterest) se roz 5–8 visuals push karo",
+      "why": "GSC Image Search me abhi sirf 9 impressions the jabki site par 215+ rich-alt images aur Pinterest domain verification active hai.",
+      "work": "`https://captionstudio.in/ai-control/pinterest` kholo -> Wedding, Girls Bio, 2026 Recap, Ram/Mahakal Bio aur AI Prompts ke cards par 'Direct Push to Pinterest' daba kar roz 5–8 pins boards me publish karo (ek din me 25+ spam mat karna)."
     },
     {
-      "when": "Isi Hafte",
-      "title": "SEO sudharo: /tools/hashtag-generator",
-      "why": "Score 95/100 hai — title/description/content me kami hai.",
-      "work": "Title bahut lamba (66 char) — Google mein katega → 60 char ke andar rakho"
+      "when": "BUILD #1 — 10 Nov se 14 Nov 2026 (Winter & Mountain Travel Pillar)",
+      "title": "Naya Deep Pillar #1: /blog/winter-mountain-trip-captions-instagram-2026 (3,500+ words)",
+      "why": "Nov–Jan India me Manali, Shimla, Kashmir, foggy chai, bonfire aur winter road-trip captions ki peak demand hoti hai.",
+      "work": "Static HTML lists + 4 soft White/Red/Gold custom WebP/JPG images + 1-click Copy + Pinterest data-pin-* + 5-col Mega Footer ke saath publish karo aur viral-captions + photo-dump + group-photo se link jodo."
     },
     {
-      "when": "Isi Hafte",
-      "title": "SEO sudharo: /tools",
-      "why": "Score 95/100 hai — title/description/content me kami hai.",
-      "work": "Title bahut lamba (69 char) — Google mein katega → 60 char ke andar rakho"
+      "when": "BUILD #2 — 16 Nov se 20 Nov 2026 (Bio Silo Child Pillar — Feeds off 3,248-View #1 Page)",
+      "title": "Naya Deep Pillar #2: /blog/attitude-instagram-bio-hinglish-2026 (Boys & Girls Hinglish Bio)",
+      "why": "Site ka 70% GA4 traffic (/blog/best-instagram-bio-copy-paste-2026) Bio cluster me hai — iska direct Hinglish Attitude child page turant internal clicks aur Google rankings pakdega.",
+      "work": "300+ static crawlable Hinglish + Devanagari attitude bios + 3-line stacks + 4 custom images banao aur #1 Bio Magnet ke top switcher me link add karo."
     },
     {
-      "when": "Isi Hafte",
-      "title": "Mauka pakdo: \"instagram viral captions\"",
-      "why": "943 logo ko dikha, click sirf 65 (CTR 6.89%, position 6.3).",
-      "work": "Us page ka title aur description aisa banao ki dekhte hi click karne ka man kare — jhoota vaada nahi."
+      "when": "CHECK #2 — 18 Nov 2026 (14-Day Mid-Month Grow vs Down Audit)",
+      "title": "Equal 14-day GSC + GA4 comparison run karo aur Pos 5–10 pages ko Top 3 me push karo",
+      "why": "Dekhna zaroori hai kaunse pages grow hue (▲) aur kaunse atke hue hain (▼) bina andaze ke.",
+      "work": "`python3 scripts/seo_agent_check.py --update-snapshot` chalao. Agar viral-captions-for-reels-2026 par 'instagram viral captions' abhi bhi Pos 4–6 par ho toh fresh Reel Hooks FAQ aur internal anchors tighten karo."
     },
     {
-      "when": "Isi Hafte",
-      "title": "Mauka pakdo: \"instagram viral captions for reels 2026\"",
-      "why": "185 logo ko dikha, click sirf 15 (CTR 8.11%, position 6.3).",
-      "work": "Us page ka title aur description aisa banao ki dekhte hi click karne ka man kare — jhoota vaada nahi."
+      "when": "BUILD #3 — 22 Nov se 26 Nov 2026 (Spiritual Cluster Expansion)",
+      "title": "Naya Deep Pillar #3: /blog/radhe-krishna-khatu-shyam-bio-instagram-2026",
+      "why": "Devotional bios (Radhe Krishna, Vrindavan, Khatu Shyam) me competition low aur engagement/save rate sabse high hai.",
+      "work": "3,500+ words static HTML + Devanagari/English bios + 4 custom images + Pinterest push cards add karo."
     },
     {
-      "when": "Isi Hafte",
-      "title": "Star page ko aur bada karo: /blog/best-instagram-bio-copy-paste-2026",
-      "why": "Ye page sabse zyada log la raha hai.",
-      "work": "Isse milte-julte pages se isko link do, aur is page se tools ki taraf saaf rasta (CTA) lagao."
+      "when": "BUILD #4 & #5 — 28 Nov se 08 Dec 2026 (Creator Earning + AI Reel Script Prompts)",
+      "title": "Publish /blog/instagram-theme-page-earning-guide-india-2026 & /blog/chatgpt-prompts-for-instagram-reels-scripts-2026",
+      "why": "High-RPM AdSense + @skill2incomehub Telegram ke liye natural, non-aggressive student/creator funnel banata hai.",
+      "work": "Real INR (₹) numbers, step-by-step roadmap, copy-paste ChatGPT Hinglish script prompts, aur soft data-nosnippet Telegram CTA ke saath live karo."
     },
     {
-      "when": "Tue / Thu / Sat — 7 PM",
-      "title": "Naya article tabhi, jab sach me naya ho",
-      "why": "Roz-roz wahi ghumana Google ko spam lagta hai.",
-      "work": "Pehle Dashboard par duplicate check, phir likho, natural review, SEO 85+, apni photo — tab live. Publish ke baad 24h/7d/28d par number dekho."
+      "when": "CHECK #3 — 30 Nov / 02 Dec 2026 (Full 28-Day Monthly Impact Review)",
+      "title": "Complete 28d vs Prior 28d Impact Review (/ai-control/impact & page-history Sample #3)",
+      "why": "AGENT_GUIDE rule ke mutabik complete 28-day window par har impact_review ka confirmed_benefit / pending / repair फैसला record karna.",
+      "work": "GSC + GA4 28d pull karke snapshot.json, page-history.json Sample #3, aur state.json impact_reviews update karke commit karo."
     }
   ]
 }

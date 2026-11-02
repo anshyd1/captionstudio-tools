@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "note": "Initial baseline only. Comparable per-page trend requires another verified snapshot with the same-length date windows. Missing metrics are not zero.",
+  "note": "Contains Oct 13 baseline (28d GA4) and Nov 2 verified live API sample (28d GA4 + 28d GSC). /ai-control/pages automatically computes per-page % Grow vs Down.",
   "samples": [
     {
       "recorded_at": "2026-10-13T10:03:09+00:00",
@@ -384,6 +384,553 @@
           "sessions": 84,
           "clicks": 0,
           "impressions": 0
+        }
+      }
+    },
+    {
+      "recorded_at": "2026-11-02T11:45:00+00:00",
+      "ga_range": [
+        "2026-10-05",
+        "2026-11-01"
+      ],
+      "gsc_range": [
+        "2026-10-04",
+        "2026-10-31"
+      ],
+      "pages": {
+        "/": {
+          "views": 370,
+          "sessions": 324,
+          "clicks": 226,
+          "impressions": 1067
+        },
+        "/404": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/about": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 1,
+          "impressions": 55
+        },
+        "/blog": {
+          "views": 29,
+          "sessions": 19,
+          "clicks": 0,
+          "impressions": 6
+        },
+        "/blog/": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/100-killer-attitude-captions-hinglish-2026": {
+          "views": 13,
+          "sessions": 13,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/aesthetic-instagram-captions-2026": {
+          "views": 4,
+          "sessions": 4,
+          "clicks": 0,
+          "impressions": 19
+        },
+        "/blog/ai-manipulation-guide": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/ai-tools-make-money": {
+          "views": 4,
+          "sessions": 4,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/argentina-vs-algeria-world-cup-2026-captions": {
+          "views": 9,
+          "sessions": 9,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/attitude-captions-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 2
+        },
+        "/blog/behind-the-scenes-content-strategy-2026": {
+          "views": 22,
+          "sessions": 18,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/best-capcut-alternatives-india-2026": {
+          "views": 126,
+          "sessions": 114,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/best-captions-boys-2026": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 5
+        },
+        "/blog/best-earning-apps-students-2026": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/best-instagram-bio-copy-paste-2026": {
+          "views": 3165,
+          "sessions": 2430,
+          "clicks": 0,
+          "impressions": 4
+        },
+        "/blog/best-instagram-bio-copy-paste-2026 dev": {
+          "views": 2,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/best-instagram-captions-reels-2026": {
+          "views": 6,
+          "sessions": 6,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/birthday-captions-instagram-2026": {
+          "views": 8,
+          "sessions": 9,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/brazil-vs-morocco-world-cup-2026-captions": {
+          "views": 7,
+          "sessions": 6,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/college-life-captions-instagram-2026": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 77
+        },
+        "/blog/copy-paste-instagram-captions": {
+          "views": 40,
+          "sessions": 38,
+          "clicks": 7,
+          "impressions": 304
+        },
+        "/blog/cristiano-ronaldo-fifa-2026-final-chapter-story": {
+          "views": 6,
+          "sessions": 6,
+          "clicks": 0,
+          "impressions": 1
+        },
+        "/blog/diwali-captions-instagram-2026": {
+          "views": 29,
+          "sessions": 12,
+          "clicks": 0,
+          "impressions": 2
+        },
+        "/blog/education-captions-for-instagram-reels-2026": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 1
+        },
+        "/blog/england-football-captions-its-coming-home-2026": {
+          "views": 5,
+          "sessions": 5,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/english-vs-shayari-captions-2026": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/fifa-world-cup-2026-complete-guide": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/fifa-world-cup-2026-global-captions-reels-2026": {
+          "views": 4,
+          "sessions": 4,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/friendship-day-captions-instagram-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/frog-chai-sigma-comments-trend-explained": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/funny-captions-for-instagram-hindi-2026": {
+          "views": 3,
+          "sessions": 3,
+          "clicks": 0,
+          "impressions": 107
+        },
+        "/blog/group-photo-captions-instagram-2026": {
+          "views": 5,
+          "sessions": 5,
+          "clicks": 0,
+          "impressions": 387
+        },
+        "/blog/gym-workout-captions-hinglish-instagram": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 1
+        },
+        "/blog/hindi-captions-instagram": {
+          "views": 118,
+          "sessions": 104,
+          "clicks": 0,
+          "impressions": 14
+        },
+        "/blog/instagram-bio-for-boys-2026": {
+          "views": 49,
+          "sessions": 44,
+          "clicks": 0,
+          "impressions": 37
+        },
+        "/blog/instagram-bio-for-girls-2026": {
+          "views": 10,
+          "sessions": 10,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/instagram-brand-deals-kaise-milte-hain-2026": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/instagram-content-ideas-small-business": {
+          "views": 4,
+          "sessions": 4,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/instagram-growth-7-days": {
+          "views": 7,
+          "sessions": 5,
+          "clicks": 0,
+          "impressions": 1
+        },
+        "/blog/instagram-hashtag-strategy-viral-reels": {
+          "views": 5,
+          "sessions": 5,
+          "clicks": 0,
+          "impressions": 3
+        },
+        "/blog/instagram-reel-hooks-2026": {
+          "views": 51,
+          "sessions": 43,
+          "clicks": 0,
+          "impressions": 2
+        },
+        "/blog/instagram-reels-algorithm-india-2026": {
+          "views": 17,
+          "sessions": 14,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/instagram-search-optimization-2026": {
+          "views": 6,
+          "sessions": 6,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/instagram-stylish-name-2026": {
+          "views": 36,
+          "sessions": 35,
+          "clicks": 0,
+          "impressions": 2
+        },
+        "/blog/instagram-viral-captions-for-reels-2026": {
+          "views": 6,
+          "sessions": 6,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/instagram-viral-captions-reels-hinglish-2026": {
+          "views": 10,
+          "sessions": 10,
+          "clicks": 10,
+          "impressions": 132
+        },
+        "/blog/ipl-2026-final-rcb-pbks-captions-memes": {
+          "views": 4,
+          "sessions": 4,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/jai-shri-ram-bio-for-instagram-hindi-2026": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/love-viral-captions-hinglish-2026": {
+          "views": 9,
+          "sessions": 8,
+          "clicks": 0,
+          "impressions": 21
+        },
+        "/blog/mahadev-bio-for-instagram-hindi-2026": {
+          "views": 32,
+          "sessions": 25,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/mahakal-shiva-bio-for-instagram-hindi-2026": {
+          "views": 8,
+          "sessions": 5,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/make-money-on-instagram-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/master-ai-guide-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/messi-last-world-cup-2026-final-dance": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/mirror-selfie-captions-for-instagram-2026": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 135
+        },
+        "/blog/monsoon-captions-instagram-2026": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 13
+        },
+        "/blog/photo-dump-captions-instagram-2026": {
+          "views": 3,
+          "sessions": 5,
+          "clicks": 0,
+          "impressions": 47
+        },
+        "/blog/pov-captions-for-instagram-reels-2026": {
+          "views": 4,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/professional-development-guide": {
+          "views": 4,
+          "sessions": 4,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/real-estate-instagram-captions-2026": {
+          "views": 5,
+          "sessions": 5,
+          "clicks": 0,
+          "impressions": 3
+        },
+        "/blog/short-instagram-captions-2026": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 9
+        },
+        "/blog/social-media-content-strategy-small-business-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 1
+        },
+        "/blog/spider-man-quotes-instagram-2026": {
+          "views": 3,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/stylish-name-for-instagram": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/telegram-earning-channels-india-2026": {
+          "views": 3,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/traditional-captions-instagram-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 2
+        },
+        "/blog/ugc-creator-complete-guide-2026": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/ugc-email-pitch-template-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 7
+        },
+        "/blog/ultimate-instagram-captions": {
+          "views": 10,
+          "sessions": 10,
+          "clicks": 3,
+          "impressions": 62
+        },
+        "/blog/usa-vs-paraguay-world-cup-2026-captions": {
+          "views": 6,
+          "sessions": 6,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/viral-attitude-trendy-captions-hacks-2026": {
+          "views": 6,
+          "sessions": 6,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/viral-captions-for-reels-2026": {
+          "views": 386,
+          "sessions": 339,
+          "clicks": 439,
+          "impressions": 14248
+        },
+        "/blog/wedding-captions-for-instagram-2026": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/why-instagram-reels-not-getting-views-2026": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 1
+        },
+        "/blog/world-cup-2026-opening-match-captions": {
+          "views": 8,
+          "sessions": 8,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/blog/world-cup-2026-today-match-captions": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/contact": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/earning": {
+          "views": 3,
+          "sessions": 3,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/gamer-instagram-bio": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/guide": {
+          "views": 2,
+          "sessions": 2,
+          "clicks": 0,
+          "impressions": 5
+        },
+        "/privacy": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/relax": {
+          "views": 0,
+          "sessions": 0,
+          "clicks": 0,
+          "impressions": 1
+        },
+        "/support": {
+          "views": 4,
+          "sessions": 4,
+          "clicks": 0,
+          "impressions": 0
+        },
+        "/terms": {
+          "views": 1,
+          "sessions": 1,
+          "clicks": 0,
+          "impressions": 15
+        },
+        "/tools": {
+          "views": 47,
+          "sessions": 38,
+          "clicks": 0,
+          "impressions": 30
+        },
+        "/tools/bio-generator": {
+          "views": 289,
+          "sessions": 248,
+          "clicks": 0,
+          "impressions": 4
+        },
+        "/tools/caption-generator": {
+          "views": 263,
+          "sessions": 199,
+          "clicks": 1,
+          "impressions": 32
+        },
+        "/tools/hashtag-generator": {
+          "views": 70,
+          "sessions": 55,
+          "clicks": 0,
+          "impressions": 5
         }
       }
     }

@@ -266,7 +266,11 @@
 <style id="cs-font-fallback">
 @font-face{font-family:'DMS-fb';src:local('Arial');size-adjust:103.6%;ascent-override:92%;descent-override:24%;line-gap-override:0%}
 @font-face{font-family:'Syne-fb';src:local('Arial');size-adjust:112.6%;ascent-override:96%;descent-override:22%;line-gap-override:0%}
-</style></head>
+</style>  <meta name="p:domain_verify" content="5a8c4edbc759e99bcece5dbc826f21cb"/>
+  <meta name="pinterest-rich-pin" content="true"/>
+
+<style id="cs-tools-overflow-guard">html, body { max-width: 100vw; overflow-x: clip; }</style>
+</head>
 <body>
 
   <!-- NAV -->
@@ -956,5 +960,32 @@ document.addEventListener('click', function(e){
 </script>
 <script src="../cookie-consent.js" defer></script>
 <script src="../diwaok-promo.js" defer></script>
+
+<script id="cs-url-preset-loader">
+(function(){
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var mode = (params.get('mode') || params.get('style') || params.get('niche') || '').toLowerCase();
+    if (!mode) return;
+    window.addEventListener('DOMContentLoaded', function(){
+      var selects = document.querySelectorAll('select');
+      selects.forEach(function(sel){
+        Array.from(sel.options).forEach(function(opt){
+          var v = (opt.value + ' ' + opt.text).toLowerCase();
+          if (v.indexOf(mode) !== -1) sel.value = opt.value;
+        });
+      });
+      var chips = document.querySelectorAll('[data-style],[data-category],[data-vibe],[data-tone],button');
+      chips.forEach(function(ch){
+        var txt = ((ch.getAttribute('data-style')||'') + ' ' + (ch.getAttribute('data-vibe')||'') + ' ' + ch.textContent).toLowerCase();
+        if (txt.indexOf(mode) !== -1 && ch.tagName === 'BUTTON' && txt.length < 28 && txt.indexOf('generate') === -1) {
+          try { ch.click(); } catch(e){}
+        }
+      });
+    });
+  } catch(e){}
+})();
+</script>
+
 </body>
 </html>
