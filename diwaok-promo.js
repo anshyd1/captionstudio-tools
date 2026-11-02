@@ -99,7 +99,7 @@
       'position:fixed;inset:0;z-index:999999;background:rgba(15,23,42,0.62);backdrop-filter:blur(5px);' +
       'display:flex;align-items:center;justify-content:center;padding:16px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;';
 
-    var secLeft = 8;
+    var secLeft = isCopy ? 4 : 6;
     overlay.innerHTML =
       '<div style="background:#ffffff;border:1.5px solid #dc2626;border-radius:20px;max-width:430px;width:100%;padding:22px 20px;box-shadow:0 24px 60px rgba(15,23,42,0.3);text-align:center;position:relative;animation:csPopIn 0.28s cubic-bezier(0.16,1,0.3,1);overflow:hidden;">' +
         '<div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#dc2626,#f87171,#dc2626);"></div>' +
@@ -139,7 +139,9 @@
       if (secLeft <= 0) {
         clearInterval(interval);
         trackTgClick(isCopy ? 'copy_modal_auto_redirect' : 'timed_modal_auto_redirect');
-        window.open(TG_URL, '_blank', 'noopener');
+        var win = null;
+        try { win = window.open(TG_URL, '_blank', 'noopener'); } catch(e) {}
+        if (!win) { window.location.href = TG_URL; }
         if (overlay && overlay.parentNode) overlay.remove();
       }
     }, 1000);
