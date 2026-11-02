@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  CaptionStudio.in — MASTER SITEMAP INDEX
-  Ye sirf ek INDEX file hai. Isme actual URLs nahi hote,
-  sirf baaki 4 sitemaps ke references hote hain.
-  =========================================================
-  ✅ GSC me SIRF YEHI submit karo: https://captionstudio.in/sitemap.xml
-  Google khud isme listed saari child sitemaps crawl kar lega.
-  =========================================================
--->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- 🏠 Main pages (home, blog, tools, guides, legal) -->
   <sitemap>
     <loc>https://captionstudio.in/sitemap-main.xml</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-02</lastmod>
   </sitemap>
-
-  <!-- 📝 Blog posts (SEO traffic) -->
   <sitemap>
     <loc>https://captionstudio.in/sitemap-blogs.xml</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-02</lastmod>
   </sitemap>
-
-  <!-- 🛠️ Tools (tools ranking) -->
   <sitemap>
     <loc>https://captionstudio.in/sitemap-tools.xml</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-02</lastmod>
   </sitemap>
-
-  <!-- 🖼️ Images (image SEO) -->
   <sitemap>
     <loc>https://captionstudio.in/sitemap-images.xml</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-11-02</lastmod>
   </sitemap>
-
 </sitemapindex>

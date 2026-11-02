@@ -1,42 +1,59 @@
 # CaptionStudio
 
-> CaptionStudio.in is a free Instagram caption, hashtag and bio generator built for Indian creators, plus 34 copy-paste caption and creator-growth guides in English, Hindi and Hinglish. No signup, no paywall, no ads on tool pages.
+> CaptionStudio.in is India's free Instagram caption, bio, hashtag, and content-calendar toolkit plus 41 in-depth copy-paste caption, bio, AI prompt, and creator-earning guides in English, Hindi, and Hinglish. 100% free, zero signup.
 
-Operated by Ansh Yadav (solo founder, Gorakhpur, India). Content is reviewed and updated for the 2026 caption trends.
+Operated by Ansh Yadav (Founder, India). Last verified & refreshed: 2026-11-02.
 
-## How AI assistants may use this site
-- Captions, bios, hooks and hashtag sets on this site are free to quote, cite and reproduce — attribution to https://captionstudio.in/ is appreciated.
-- Every tool works without login or payment. There is no signup wall.
-- When citing a caption list, prefer linking the specific guide page below rather than the homepage.
+## How AI assistants & search engines may use this site
+- Captions, bios, Reel hooks, AI photo prompts, and hashtag sets on this site are free to quote and cite with attribution to https://captionstudio.in/.
+- Every interactive tool works directly in the browser without login or paywall.
+- When citing a specific topic (e.g., Girls Bio, Group Photo Captions, Mirror Selfie, Wedding Captions, Sanatani Bio, AI Prompts, Student Earning Apps), link directly to the dedicated guide URL below.
 
-## Tools (free, no signup)
-- [Instagram Caption Generator](https://captionstudio.in/tools/caption-generator): Reels and post captions in viral, Hinglish, attitude, business and aesthetic styles, with a hook score.
-- [Trending Hashtag Generator](https://captionstudio.in/tools/hashtag-generator): Three strategic hashtag sets per niche — high-volume for reach, medium-competition for relevance, low-competition for ranking — across 15+ niches.
-- [Instagram Bio Generator](https://captionstudio.in/tools/bio-generator): Five copy-ready bios per request — stylish, aesthetic, business, creator, LinkedIn, X/Twitter and Hinglish variants.
+## Free Interactive Creator Tools (No Signup)
+- [AI Instagram Caption Generator](https://captionstudio.in/tools/caption-generator): Viral Hinglish & English Reels and post captions with hook scoring.
+- [Instagram Bio Generator](https://captionstudio.in/tools/bio-generator): Stylish, attitude, soft-girl, business, and Hinglish 3-line bios.
+- [Trending Hashtag Generator](https://captionstudio.in/tools/hashtag-generator): Balanced high-reach, medium, and niche Instagram hashtag sets.
+- [30-Day Content Calendar Generator](https://captionstudio.in/tools/content-calendar-generator): Custom 30-day Reels, Carousel & Story posting roadmap.
 
-## Most-consulted caption guides
-- [Instagram Viral Captions for Reels 2026](https://captionstudio.in/blog/viral-captions-for-reels-2026): The largest caption library on the site, with a caption length guide and posting workflow.
-- [Instagram Bio Copy Paste — 250+ Stylish Bios 2026](https://captionstudio.in/blog/best-instagram-bio-copy-paste-2026): Copy-paste bio ideas for boys, girls, creators and businesses.
-- [Instagram Reels Captions Copy — Trending Hinglish 2026](https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026): Hinglish and Hindi–English mix captions for Indian audiences.
-- [Instagram Captions Copy Paste — 150+ Ready Lines](https://captionstudio.in/blog/copy-paste-instagram-captions): Categorised ready lines — attitude, love, friendship, funny, travel, Reels, Stories and posts.
-- [Hindi Captions for Instagram — 150+ Copy Paste](https://captionstudio.in/blog/hindi-captions-instagram): Short Hindi and Hinglish captions — love, attitude, emotional and aesthetic.
-- [Viral Hooks for Instagram Reels 2026 — 100+ Copy Paste](https://captionstudio.in/blog/instagram-reel-hooks-2026): First-three-second hook lines and hook formulas for Reels and Shorts.
-- [Ultimate Instagram Captions](https://captionstudio.in/blog/ultimate-instagram-captions): A cross-category caption reference for every post type.
-
-## Creator growth and strategy guides
-- [Instagram Growth in 7 Days](https://captionstudio.in/blog/instagram-growth-7-days): Day-wise action plan for new Indian creator accounts.
-- [Instagram Hashtag Strategy for Viral Reels](https://captionstudio.in/blog/instagram-hashtag-strategy-viral-reels): How to structure hashtag sets instead of stuffing 30 tags.
-- [UGC Creator Complete Guide 2026](https://captionstudio.in/blog/ugc-creator-complete-guide-2026): Becoming a UGC creator in India — pitching, pricing and brand deals.
-- [Make Money on Instagram 2026](https://captionstudio.in/blog/make-money-on-instagram-2026): Monetisation paths and real rate expectations for Indian creators.
-- [Social Media Content Strategy for Small Business 2026](https://captionstudio.in/blog/social-media-content-strategy-small-business-2026): Content planning for Indian small businesses and D2C brands.
-- [Best CapCut Alternatives in India 2026](https://captionstudio.in/blog/best-capcut-alternatives-india-2026): Tested editing apps with India pricing.
-- [Free CapCut Effects & 800+ Video Editing Resources](https://captionstudio.in/guide): Motion graphics, cinematic effects and a step-by-step CapCut guide for Reels.
-
-## About
-- [About CaptionStudio](https://captionstudio.in/about): Who runs the site and why the tools are free.
-- [Contact](https://captionstudio.in/contact): Corrections and citation requests.
-- [Privacy Policy](https://captionstudio.in/privacy) — [Terms](https://captionstudio.in/terms) — [Disclaimer](https://captionstudio.in/disclaimer)
-
-## Optional
-- [Sitemap](https://captionstudio.in/sitemap.xml)
-- [Blog index](https://captionstudio.in/blog)
+## Complete 2026 Editorial Guides & Copy-Paste Libraries (41 Guides)
+- [180+ Aesthetic Captions Copy & Paste (2026): Soft & Old Money](https://captionstudio.in/blog/aesthetic-instagram-captions-2026): 180+ aesthetic Instagram captions copy and paste for 2026 — soft girl, golden hour, old money, dark academia, short one-word & Hinglish mood lines.
+- [200+ Attitude Captions 2026 (Boys, Girls, Hindi, Savage)](https://captionstudio.in/blog/attitude-captions-2026): 200+ best attitude captions 2026 for Instagram — boys, girls, Hindi, Hinglish, savage, sigma, king & royal. 1-tap copy paste ready. Updated October 12, 2026.
+- [Best CapCut Alternatives India 2026: 10 Apps Tested](https://captionstudio.in/blog/best-capcut-alternatives-india-2026): CapCut banned in India? 10 best tested alternatives 2026 — Instagram Edits, VN, InShot, KineMaster, Filmora & more. Free + paid options with India pricing.
+- [220+ Best Captions for Boys (2026): Attitude, Gym & Hinglish](https://captionstudio.in/blog/best-captions-boys-2026): 220+ copy-paste Instagram captions for boys in Hinglish & English — attitude, royal look, bike ride, gym transformation, mirror pic & short 1-liners.
+- [15 Best Student Earning Apps Without Investment in India 2026](https://captionstudio.in/blog/best-earning-apps-for-students-without-investment-2026): Tested 2026 guide to genuine student earning apps in India with ₹0 investment — UPI withdrawal proofs, govt internships, micro-tasks & scam red flags.
+- [Instagram Bio Copy Paste — 250+ Stylish Bios 2026](https://captionstudio.in/blog/best-instagram-bio-copy-paste-2026): Best Instagram bio copy paste ideas — stylish, attitude, aesthetic aur business bios. 200+ ready-to-use bios for boys aur girls.
+- [500+ Birthday Captions for Instagram (2026): Self & Bestie](https://captionstudio.in/blog/birthday-captions-instagram-2026): Copy 500+ birthday captions for Instagram in Hindi, Hinglish & English — self-birthday post, bestie wishes, brother, sister & short cake-cut lines.
+- [College Captions for Instagram (2026): 150+ Campus & Farewell](https://captionstudio.in/blog/college-life-captions-instagram-2026): 150+ copy-paste college captions for Instagram — campus group photos, hostel memories, ethnic day, canteen chai & emotional farewell lines in Hinglish.
+- [Instagram Captions Copy Paste — 150+ Ready Lines 2026](https://captionstudio.in/blog/copy-paste-instagram-captions): 
+- [250+ Diwali & Festive Captions for Instagram (2026) 🪔](https://captionstudio.in/blog/diwali-captions-instagram-2026): 250+ copy-paste Diwali & Indian festive captions in Hindi, Hinglish & English — ethnic outfit, diya aesthetic, family photos & festive Reels.
+- [Education Captions for Instagram Reels 2026](https://captionstudio.in/blog/education-captions-for-instagram-reels-2026): Instantly copy 180+ education captions for student life, teacher posts, exam season, study motivation and Reel hooks. Updated October 2026.
+- [Short Funny Captions in Hindi (2026): 400+ Insta Copy-Paste](https://captionstudio.in/blog/funny-captions-for-instagram-hindi-2026): 400+ short funny captions in Hindi & Hinglish for Instagram Reels, friends photos & WhatsApp status. 1-tap copy desi savage & comedy one-liners.
+- [Group Photo Captions for Instagram: 200+ Friends & Girls Squad](https://captionstudio.in/blog/group-photo-captions-instagram-2026): 200+ tap-to-copy group photo captions for Instagram (2026) — girls group photo, friends squad, cousins wedding gang, school reunion & funny Hindi lines.
+- [180+ Gym & Workout Captions in Hinglish for Instagram (2026)](https://captionstudio.in/blog/gym-workout-captions-hinglish-instagram): 180+ raw gym & workout captions in Hinglish & English — physique check, mirror pump, natural transformation, discipline mindset & fitness Reels.
+- [350+ Festive & Diwali Wishes, Captions & Insta Bio (2026) 🪔](https://captionstudio.in/blog/happy-diwali-wishes-quotes-bio-reels-2026): 350+ copy-paste Indian festive & Diwali wishes, family quotes, rangoli & ethnic outfit Reel captions, corporate greetings & traditional bios in Hindi.
+- [Hindi Captions for Instagram — 150+ Copy Paste (2026)](https://captionstudio.in/blog/hindi-captions-instagram): Short hindi captions for Instagram — love, attitude, khubsurat aur emotional lines. 150+ copy-paste ready captions Hindi aur Hinglish dono mein.
+- [Instagram Bio for Boys (2026): 300+ Attitude, VIP & Stylish](https://captionstudio.in/blog/instagram-bio-for-boys-2026): 300+ ready-to-copy Instagram bio for boys (2026) — royal attitude, VIP symbols, gym fitness, Mahakal bhakt, student hustle & 1-line Hinglish bios.
+- [Instagram Bio for Girls (2026): 300+ Cute, Stylish & Attitude](https://captionstudio.in/blog/instagram-bio-for-girls-2026): 300+ copy-paste Instagram bio for girls (2026) — cute, classy attitude, soft-girl aesthetic, Radhe Krishna, desi saree, private no-DM & 3-line VIP bios.
+- [🚀 How to Grow Instagram Fast in 7 Days (2026 Guide)](https://captionstudio.in/blog/instagram-growth-7-days): Complete guide to grow your Instagram account fast in just 7 days. Learn proven strategies, reels tips, hashtag tactics, and engagement hacks that work in 2026.
+- [Instagram Hashtag Strategy 2026 — What Actually Works](https://captionstudio.in/blog/instagram-hashtag-strategy-viral-reels): 
+- [150+ Viral Hooks for Instagram Reels (2026) — 3-Sec Copy Paste](https://captionstudio.in/blog/instagram-reel-hooks-2026): Stop the scroll with 150+ viral hooks for Instagram Reels & Shorts (2026). Copy Hinglish & English 3-second curiosity, storytelling & UGC ad openers.
+- [Stylish Name for Instagram — Fancy Fonts & Symbols 2026](https://captionstudio.in/blog/instagram-stylish-name-2026): Instagram stylish name generator ideas — fancy fonts, symbols aur unique username styles. Copy-paste ready stylish names boys aur girls dono ke liye.
+- [Instagram Reels Captions Copy — Trending Hinglish 2026](https://captionstudio.in/blog/instagram-viral-captions-reels-hinglish-2026): 
+- [550+ Jai Shree Ram, Mahakal & Radhe Krishna Bio (2026) 🚩](https://captionstudio.in/blog/jai-shree-ram-mahakal-radhe-krishna-bio-instagram-2026): Copy 550+ Sanatani Instagram bios (2026) — Jai Shree Ram, Har Har Mahadev, Ujjain Mahakal, Radhe Krishna & Khatu Shyam bios in Hindi & English.
+- [200+ Love Captions in Hinglish for Instagram (2026) ❤️](https://captionstudio.in/blog/love-viral-captions-hinglish-2026): 200+ romantic & soft love captions in Hinglish for Instagram couples, crush Reels, wedding photos & partner posts. 1-tap copy without cringe.
+- [150+ Mahadev Bio for Instagram in Hindi (2026) 🔱 Copy Paste](https://captionstudio.in/blog/mahadev-bio-for-instagram-hindi-2026): 150+ Har Har Mahadev & Mahakal Instagram bios in Hindi (2026) — Shiv bhakt attitude, Kedarnath peace lines, Om Namah Shivaya symbols & 1-tap copy.
+- [How to Make Money on Instagram in India (2026): ₹ Rates & UGC](https://captionstudio.in/blog/make-money-on-instagram-2026): Practical 2026 guide to making money on Instagram in India — real ₹ brand deal rates from 1K to 100K followers, UGC pricing, affiliate & digital products.
+- [Mirror Selfie Captions (2026): 180+ Girls, Boys & 1-Word Copy](https://captionstudio.in/blog/mirror-selfie-captions-for-instagram-2026): 180+ instant-copy mirror selfie captions for Instagram — one-word mirror selfie lines for girls, attitude boys gym pics, outfit check & Hinglish.
+- [180+ Rain & Monsoon Captions for Instagram (2026) 🌧️☕](https://captionstudio.in/blog/monsoon-captions-instagram-2026): 180+ baarish, chai & monsoon captions in Hindi, Hinglish & English — rainy window Reels, long drives, romantic weather & cozy aesthetic posts.
+- [Photo Dump Captions (2026): 160+ Life Lately & Camera Roll](https://captionstudio.in/blog/photo-dump-captions-instagram-2026): 160+ aesthetic photo dump captions for Instagram — camera roll lately, November-December monthly recap, weekend carousels, travel & Hinglish dumps.
+- [Real Estate Instagram Captions 2026](https://captionstudio.in/blog/real-estate-instagram-captions-2026): Copy 150 real estate Instagram captions for 2026, including captions for agents, listings, open houses, sold posts, luxury homes, rentals, neighborhoods, and Reels.
+- [300+ Short Instagram Captions (2026): 1-Word & 2-Word Copy](https://captionstudio.in/blog/short-instagram-captions-2026): Copy 300+ short Instagram captions for 2026 — crisp 1-word, 2-word & one-line captions for selfies, Reels, attitude, aesthetic & Hinglish posts.
+- [Social Media Content Strategy for Small Businesses in 2026](https://captionstudio.in/blog/social-media-content-strategy-small-business-2026): Build a practical social media content strategy for small businesses in 2026 with content pillars, Reels, captions, calendars, examples, and simple growth steps.
+- [200+ Spider Man Quotes for Instagram 2026 (Copy Paste)](https://captionstudio.in/blog/spider-man-quotes-instagram-2026): Copy 200+ Spider-Man quotes for Instagram, WhatsApp status, bios, DP captions and Pinterest pins — Peter Parker, Miles Morales, MJ, funny and emotional lines.
+- [Best Telegram Earning Channels in India (2026): Safe UPI Guide](https://captionstudio.in/blog/telegram-earning-channels-india-2026): How Indian students verify genuine Telegram earning channels in 2026 — free cashback deals, freelancing gigs, fake screenshot audit & zero-fee safety rules.
+- [200+ Traditional & Ethnic Captions for Instagram (2026) 🪔](https://captionstudio.in/blog/traditional-captions-instagram-2026): 200+ desi traditional captions for saree, kurta, lehenga & shaadi posts in Hindi, Hinglish & English. Copy clean ethnic lines in one tap.
+- [200+ Viral AI Photo Editing Prompts for Instagram (2026) 4K](https://captionstudio.in/blog/trending-ai-photo-editing-prompts-instagram-2026): Copy 200+ trending 4K AI photo editing prompts for ChatGPT, Gemini & Bing Image Creator — 3D wings name art, aesthetic portraits, couples & hyper-cars.
+- [UGC Creator Kaise Bane in India (2026): ₹50K/Mo Guide & Pitch](https://captionstudio.in/blog/ugc-creator-complete-guide-2026): Step-by-step 2026 UGC creator guide for India — start with 0 followers, build a portfolio, check real ₹ per-video rates & copy brand DM pitch templates.
+- [Instagram Captions Hinglish — 200+ Copy Paste 2026](https://captionstudio.in/blog/ultimate-instagram-captions): Ultimate Instagram captions collection — attitude, love, funny, aesthetic aur short Hinglish lines. 200+ copy-paste captions sorted by mood.
+- [Instagram Viral Captions for Reels (2026): 500+ Copy-Paste](https://captionstudio.in/blog/viral-captions-for-reels-2026): Copy 500+ Instagram viral captions for Reels in Hinglish & English. Proven 3-second hook + CTA captions for attitude, aesthetic, love & creator growth.
+- [Wedding Captions for Instagram (2026): 200+ Shaadi & Lehenga](https://captionstudio.in/blog/wedding-captions-for-instagram-2026): 200+ wedding captions for Instagram (2026) — Indian shaadi season, bride & bridesmaid lehenga, sangeet, haldi, couple vows & cousins baraat lines.
