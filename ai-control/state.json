@@ -91,6 +91,29 @@
   ],
   "session_log": [
     {
+      "id": "sess-2026-11-03-atlas-webp-june24-audit",
+      "date_ist": "2026-11-03",
+      "agent_name": "Agent Atlas",
+      "agent_id": "atlas-20261102-s6p9",
+      "status": "verified",
+      "started_at": "2026-11-03T04:15:00+05:30",
+      "ended_at": "2026-11-03T04:52:00+05:30",
+      "observations": [
+        "Pre-June-24 GSC forensic pull (01-23 June 2026: ~10,193 clicks / 304k impr) vs Post-June-24 (25 June-01 July: 665 clicks / 4,279 impr) confirmed compound drop: Google June 24, 2026 Global Spam Update + 105-page scaled match/caption overlap + .html/clean URL split + 50 football URLs 301-redirected onto /blog/viral-captions-for-reels-2026 (Soft-404 topical dilution).",
+        "Homepage (/) 28d GSC query breakdown proved 213 of 227 clicks (93.8%) are branded ('caption studio' 163, 'captionstudio' 50), while '/' H1 ('Free Smart Caption Generator...') cannibalized /tools/caption-generator ('instagram caption generator' stuck at Pos 86.4) and #trendingBlogs rendered 3 empty skeleton divs in static HTML.",
+        "Live Google URL Inspection API showed core hubs indexed (crawled Nov 1-3) while newer pillars sat in 'Discovered - currently not indexed' due to empty static #trendingBlogs on '/'; deep image audit caught 4 broken image paths on instagram-bio-for-girls-2026 and 0 images on #1 GA4 page best-instagram-bio-copy-paste-2026 & instagram-stylish-name-2026."
+      ],
+      "actions": [
+        "Generated 10 new soft White/Red/Gold 1200x675 WebP+JPG visuals + converted 73 local assets to .webp; upgraded 256/256 (100.0%) local content <img> tags across 49 indexable pages to .webp with width/height, alt, ImageObject JSON-LD & rebuilt 244-image sitemap-images.xml.",
+        "Built consolidated 3,043-word evergreen hub /blog/football-captions-instagram (4 WebP visuals, 5 schemas) and repointed 33 legacy football/Messi/Ronaldo/World Cup redirects + 12 mismatched redirects in vercel.json to un-poison /blog/viral-captions-for-reels-2026 (50 -> 11 pure Reels redirects).",
+        "Differentiated Homepage H1 from /tools/caption-generator, added crawlable Kaam-Wale Tool/Pillar anchor bar, SSR pre-rendered 12 WebP cards inside #trendingBlogs on index.html, fixed 5 broken image paths, and expanded /ai-control/pinterest to 70 1-click push cards."
+      ],
+      "summary": "Pre-June-24 & Homepage Forensic Fix + 100% WebP Image SEO (256/256 imgs, 10 new visuals) + Football Hub Redirect Un-Poisoning + Homepage SSR Grid + 70-Card Pinterest Studio",
+      "checks": "49/49 indexable pages 0 SEO/broken-img issues; 256/256 local images serving .webp (100%); 5/5 XML sitemaps valid; 32/32 Playwright 4-viewport checks PASS (1440, 768, 390, 360).",
+      "outcome": "Deployed to production main, submitted sitemaps & updated URLs to GSC/Indexing API/IndexNow; 7d/28d non-branded click & indexing review scheduled.",
+      "next_agent": "On 2026-11-09 run `python3 scripts/seo_agent_check.py` + URL Inspection on Sanatani Bio, Student Earning Apps, 2026 Recap, and Football Captions Hub to verify transition from Discovered -> Indexed, and check 7d CTR on viral-captions-for-reels-2026 after Soft-404 redirect cleanup."
+    },
+    {
       "id": "2026-10-13-dashboard-fix",
       "date_ist": "2026-10-13",
       "status": "verified",
@@ -506,6 +529,16 @@
     "update_protocol": "On each authorised refresh, publish source collection time and complete windows, then review due impacts at 24h/7d/28d. Record affected URL/query, original hypothesis, commit, before/after, tracking checks, external factors, confidence, verdict, repair/next step. No scheduler exists."
   },
   "impact_reviews": [
+    {
+      "id": "ir-2026-11-03-webp-homepage-redirect-unpoison",
+      "session_id": "sess-2026-11-03-atlas-webp-june24-audit",
+      "scope": "Homepage (/) H1 differentiation + 12-card SSR #trendingBlogs + vercel.json 45-redirect topical cleanup + /blog/football-captions-instagram + 100% WebP Image SEO (10 new visuals, 244 sitemap images)",
+      "hypothesis": "Un-poisoning /blog/viral-captions-for-reels-2026 from 33 football Soft-404 redirects, eliminating '/' vs /tools/caption-generator H1 cannibalization, SSR pre-rendering 12 priority pillars on '/', and adding 100% WebP + ImageObject SEO on #1 Bio & Stylish Name hubs will accelerate indexing of unindexed pillars and lift non-branded Google Search + Google Images + Pinterest clicks.",
+      "expected_signal": "Transition of unindexed pillars to 'Submitted and indexed' within 7-14d; improved non-branded impressions/rank on /tools/caption-generator, /blog/viral-captions-for-reels-2026, /blog/football-captions-instagram, /blog/best-instagram-bio-copy-paste-2026, and Google Images.",
+      "due_7d": "2026-11-10",
+      "due_28d": "2026-12-01",
+      "outcome_status": "pending"
+    },
     {
       "id": "impact-raahi-control-2026-10-13",
       "session_id": "2026-10-13-raahi-navigation-goals",
