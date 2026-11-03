@@ -12,39 +12,9 @@
       "permanent": true
     },
     {
-      "source": "/diwaok",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
-    },
-    {
-      "source": "/diwaok.html",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
-    },
-    {
-      "source": "/diwaok.htm",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
-    },
-    {
       "source": "/blog/football-captions-instagram.html",
       "destination": "/blog/football-captions-instagram",
       "permanent": true
-    },
-    {
-      "source": "/play",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
-    },
-    {
-      "source": "/game",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
-    },
-    {
-      "source": "/download-app",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
     },
     {
       "source": "/blog/fathers-day-captions-hindi-2026",
@@ -552,16 +522,6 @@
       "permanent": true
     },
     {
-      "source": "/telegram",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
-    },
-    {
-      "source": "/join",
-      "destination": "https://t.me/skill2incomehub",
-      "permanent": false
-    },
-    {
       "source": "/blog/behind-the-scenes-content-strategy-2026",
       "destination": "/blog/instagram-growth-7-days",
       "permanent": true
@@ -633,7 +593,7 @@
     },
     {
       "source": "/blog/professional-development-guide",
-      "destination": "/blog/motivation-captions-2026",
+      "destination": "/blog/instagram-growth-7-days",
       "permanent": true
     },
     {
@@ -683,7 +643,7 @@
     },
     {
       "source": "/blog/success-mindset-2026",
-      "destination": "/blog/motivation-captions-2026",
+      "destination": "/blog/instagram-growth-7-days",
       "permanent": true
     },
     {

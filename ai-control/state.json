@@ -91,6 +91,29 @@
   ],
   "session_log": [
     {
+      "id": "sess-2026-11-03-atlas-adsense-eeat-dedup-audit",
+      "date_ist": "2026-11-03",
+      "agent_name": "Agent Atlas",
+      "agent_id": "atlas-20261102-s6p9",
+      "status": "verified",
+      "started_at": "2026-11-03T08:50:00+05:30",
+      "ended_at": "2026-11-03T09:12:00+05:30",
+      "observations": [
+        "Owner spotted repeated Homepage images (insta-bio-copy-paste-hero repeated 5x because 4 newer blog.json entries lacked 'image' key; hinglish-viral-reels-hero repeated 2x) and missing/old images on /blog (blog/index.html read p.img before p.image, and #post-container + #fallback DOM nodes were missing on blog/index.html causing JS null style error).",
+        "AdSense & Policy audit uncovered critical blockers: diwaok.html had real-money bonus claims ('Win ₹1,000 Guaranteed'), diwaok-promo.js still injected a full-screen z-index:999999 copy-intercept popup + sticky bottom bar across 44 pages, 44 pages had 'Mobile Se Roz ₹500–₹2,000' banners, 2026-recap had pub-ID typo ca-pub-5440521844295570, 2 blogs lacked Consent Mode v2, privacy.html lacked DoubleClick DART + adssettings.google.com + India DPDP Act 2023 disclosures, and contact/index.html duplicated contact.html.",
+        "Cannibalization & thin-content scan caught 7 overlapping Title/H1 pairs (ultimate-instagram-captions targeting Hinglish Copy Paste, 2 Diwali titles, 2 Mahadev/Sanatani titles, Boys vs Attitude, Make Money US vs India H1), 2 broken internal links, and instagram-stylish-name-2026 having only 1,076 static words."
+      ],
+      "actions": [
+        "Generated 4 more unique 1200x675 WebP+JPG visuals and mapped 43/43 unique .webp paths to BOTH 'img' and 'image' (+ 'desc'/'displayTag') in data/blog.json; restored /blog search + category tabs + 43-card SSR WebP grid (0 duplicates) and updated / #trendingBlogs to 12 non-overlapping cards (21/21 unique images on /).",
+        "De-cannibalized 7 overlapping Title/H1 pairs, fixed 2 broken internal links, and SSR-expanded instagram-stylish-name-2026 above 1,500+ static words (0 thin blog pages across all 43 articles).",
+        "Applied full AdSense & E-E-A-T readiness: neutralized diwaok.html & diwaok-promo.js popups/sticky bar, removed /diwaok & /play external Telegram redirects, softened 44 inline banners to educational skill framing, fixed ca-pub-5440521844299570 + Consent Mode v2 across 43/43 blogs, deduplicated contact/index.html, upgraded privacy.html (DoubleClick DART + adssettings + DPDP 2023), and added visible E-E-A-T Author/Editorial boxes across 43/43 blogs."
+      ],
+      "summary": "Zero-Repeat Homepage/Blog JSON WebP Fix + Cannibalization & Duplicate Content Cleanup + Full AdSense Policy & E-E-A-T Readiness Upgrade",
+      "checks": "Hydrated Playwright 32/32 PASS across 1440/768/390/360px; '/' 21/21 unique images (0 dups); '/blog' 43/43 unique WebP cards (0 dups, 0 JS errors); 0 broken internal links; 0 blog pages <1,500w; 43/43 Consent Mode v2 + E-E-A-T box + exact ca-pub-9570.",
+      "outcome": "Committed and deployed to production main; full itemized pending owner checklist delivered.",
+      "next_agent": "Run `python3 scripts/seo_agent_check.py` on 2026-11-09 to verify indexing of new/updated pillars and GSC CTR lift; do not re-introduce popups, sticky bottom bars, or daily rupee income promises before/after AdSense review."
+    },
+    {
       "id": "sess-2026-11-03-atlas-webp-june24-audit",
       "date_ist": "2026-11-03",
       "agent_name": "Agent Atlas",

@@ -110,3 +110,10 @@ Sitemap: https://captionstudio.in/sitemap-main.xml
 Sitemap: https://captionstudio.in/sitemap-blogs.xml
 Sitemap: https://captionstudio.in/sitemap-tools.xml
 Sitemap: https://captionstudio.in/sitemap-images.xml
+
+# Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Google-Display-Ads-Bot
+Allow: /
