@@ -347,11 +347,6 @@
       "permanent": true
     },
     {
-      "source": "/img/hero-premium.webp",
-      "destination": "/img/hero-premium.jpg",
-      "permanent": true
-    },
-    {
       "source": "/images/instagram-growth-guide.webp",
       "destination": "/og-image.jpg",
       "permanent": true
@@ -547,12 +542,12 @@
       "permanent": true
     },
     {
-      "source": "/:path+/blog",
+      "source": "/:path((?!images).*)/blog",
       "destination": "/blog",
       "permanent": true
     },
     {
-      "source": "/:path+/blog/:rest*",
+      "source": "/:path((?!images).*)/blog/:rest*",
       "destination": "/blog/:rest*",
       "permanent": true
     },
