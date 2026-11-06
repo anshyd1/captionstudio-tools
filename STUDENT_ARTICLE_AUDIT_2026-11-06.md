@@ -1,33 +1,37 @@
-# Student Article Audit & Action Plan — 6 November 2026
+# Student article — content, design and SEO audit
+**Date:** 6 November 2026
+**Scope:** `/blog/instagram-bio-for-students` and directly related metadata/links. This is not a full-site or AdSense account audit.
 
-Scope: `/blog/instagram-bio-for-students`, its direct navigation and metadata, selected related links, 8 existing Pinterest images. This is not a full-domain technical or AdSense audit.
+## What changed in this round
+- Redesigned the student page with a responsive editorial hero, clearer navigation, larger readable headings, an optional community card and a genuine author/editorial box linked to About and Editorial Policy.
+- Replaced oversized, interruptive vertical pins with compact in-context save cards next to the relevant sections. Pinterest draft buttons remain optional; no pins were automatically published.
+- Expanded the page to 500 actual copyable examples: 80 existing examples plus 420 newly written examples in 21 interest-based collections. Case-folded, punctuation-normalised exact-duplicate check returned zero. This does not prove every line is semantically unique; human review remains useful.
+- Shortened the previous repetitive guidance from 40 to 25 sections and added category-based exploration. Static HTML remains in the response even when the collections are closed.
+- Added a newly generated, compressed WebP editorial hero and JPG social preview, and updated page listing, internal link label, image sitemap and metadata.
 
-## What changed
-- Expanded the article from roughly 914 to approximately 5,476 visible words (count includes headings, image captions, bios and article copy; excludes scripts, styles, navigation and footer). It contains 80 copyable examples and 40 short practical guidance sections, including privacy, copy troubleshooting, language, accessibility and profile formatting. A long word count does not guarantee rankings.
-- Moved 8 Pinterest images out of a single gallery and placed them beside relevant content: short, college, Hinglish, funny, motivational, exams, aesthetic and creative-student sections. Images keep their native portrait ratio; they are lazy-loaded with width and height specified. Pinterest buttons open draft pins; they do not automatically publish.
-- Retained topic-specific links to the main bio guide, college captions, Hindi captions, tools, policy and contact. No global sitewide bio-link injection.
-- Updated listing's estimated reading time and kept existing title, meta description, canonical, open graph, Article schema, author and sitemap entries. Copy and Pinterest events remain subject to GA4 and consent configuration.
-
-## Checks
-| Item | Status | Detail |
+## SEO and UX chart
+| Area | Check performed | Result / limitation |
 |---|---|---|
-| Content and count | Pass | 80 copy examples, 8 image figures, about 5,476 visible words using a local HTML text parser. |
-| H1 and headings | Pass, basic | One H1; topic and guide headings are present. Not a full semantic/accessibility audit. |
-| Canonical and Article schema | Pass, basic | Canonical present and JSON-LD parses. Google rich-result eligibility not tested. |
-| In-page links | Pass, static | All fragment targets exist in the HTML. |
-| Internal destinations | Pass, local | Linked root-relative pages have local files or directories; production status may differ. |
-| Sitemap | Pass, syntax | Blog and image sitemap parse; previously submitted sitemap contained this URL. No new Google crawl is implied. |
-| Mobile and desktop | Pass, local Chromium | 360, 390, 768 and 1440 px: no page-level horizontal overflow, one H1, eight image cards, no observed JS errors. Sampled images loaded. This is not a real-device test. |
-| Copy | Pass, local | Tested first example using clipboard at 390 px. Other buttons share the same handler. |
-| Google indexing | Pending | At earlier URL Inspection the URL was unknown to Google; sitemap submission returned 204. This is not proof of indexing. Recheck later after Google has crawled. |
-| GA4 and Pinterest | Pending | Verify real production copy event, category parameter, Pinterest outbound clicks and visits with UTMs. Pinterest pins were not published. |
-| Performance / Core Web Vitals | Pending | Lab PageSpeed and field CrUX not measured. Eight portrait images add page weight despite lazy loading; monitor mobile performance. |
-| AdSense | Pending | No account review, ad inventory, policy review or approval status was checked in this update. Approval is not guaranteed. |
+| Title and description | Count claim matches 500 actual copy buttons | Pass; Google can rewrite snippets. |
+| Canonical / robots | Self-referencing canonical, index/follow | Present; canonical selection by Google is not verified. |
+| Structure | One H1, category sections and a writing guide | Pass basic check; complete accessibility audit pending. |
+| Schema | Article JSON-LD parsed successfully; links to author About | Basic syntax pass only; rich-results test not run. |
+| Links | In-page anchors resolve to IDs; prior local audit checked related page targets | Pass locally; production crawl not complete. |
+| Images | 8 existing topical pins remain; new hero in WebP/JPG; dimensions set | Local browser check passed; image sitemap XML parses. |
+| Duplicate text | 500 examples checked after case/punctuation normalization | Zero exact-normalized duplicates; similar meanings may still exist. |
+| Mobile / desktop | Local Chromium at 360, 390, 768, 1440 px | No horizontal overflow or observed JS errors; copy action tested on one collection. Not a real-device or cross-browser audit. |
+| Privacy and consent | Consent script included; community link user initiated | Legal compliance, regional defaults and GA4 DebugView require separate review. |
+| Indexing | Earlier Search Console URL Inspection returned unknown; sitemap was submitted | Pending Google crawl; sitemap acceptance does not guarantee indexing. |
+| Performance | Lazy images, dimensions, compact pins | Lighthouse / PageSpeed and field Core Web Vitals not measured; check before drawing conclusions. |
+| AdSense | Policy and account status not examined in this round | Pending. Approval is not guaranteed; avoid claims of approval readiness. |
+| GA4 / Pinterest | Existing copy event and placement-based community click retained | Validate live in GA4 DebugView; no Pinterest account access or pin publishing occurred. |
+
+## Evidence boundaries
+The visible text count is roughly 6,904 words by a basic HTML parser including headings and the 500 examples, while excluding scripts, styles, nav and footer. Some examples have similar themes; no language model or automated test can guarantee semantic distinctness. Word count and title numbers do not guarantee ranking or clicks. The new student-specific content is a hypothesis based on broader bio demand; dedicated student-query demand was not verified.
 
 ## Next round
-1. Verify deployed production page, images and mobile copy experience; do not assume a GitHub push means deployment succeeded.
-2. Recheck Search Console URL Inspection after Google has had time; use the Search Console UI to request indexing if appropriate. Do not use the Google Indexing API for ordinary caption/bio articles.
-3. Collect 7–14 days of finalised Google, Bing and GA4 data; check search queries, landing sessions and copy events before claiming improvement.
-4. In GA4 DebugView verify `caption_copy`, `copy_type` and `bio_category` under relevant consent; register event-scoped custom dimensions only if reporting requires them. Test Pinterest links and UTM attribution after publishing real Pins.
-5. Review all article text for genuinely helpful differentiation, unnecessary repetition and factual accuracy; shorten or restructure sections that don't help users. Five thousand words is a user-requested format, not a Google ranking requirement.
-6. Next, run a separate full-domain SEO, navigation and AdSense-readiness audit and prioritise verified issues. Avoid creating unrelated or overlapping bio pages.
+1. Verify production deployment and test the copy buttons, navigation, Pinterest links and Telegram event in a real browser.
+2. Use Search Console URL Inspection after crawling; submit a normal indexing request in the Search Console UI if appropriate. The Indexing API is not for ordinary articles.
+3. Review 7–14 days of finalised GSC, Bing and GA4 data: impressions, queries, landing sessions, copies by category, and Pinterest UTM visits. Verify event parameters in DebugView before trusting reports.
+4. Run Lighthouse/PageSpeed and field-data checks, then fix measurable mobile performance issues. Review the 500 examples for meaning overlap and remove weak lines rather than padding content.
+5. Run a separate sitewide audit of header/footer links, ad layout, author identity, privacy, policy pages, AdSense account state and unrelated page quality. Do not claim AdSense approval without the account's actual status.
