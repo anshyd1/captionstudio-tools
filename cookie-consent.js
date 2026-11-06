@@ -71,3 +71,5 @@
   }
 
   window.csCookieConsent = { reset: function () { set(''); location.reload(); } };
+
+})();

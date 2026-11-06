@@ -945,7 +945,8 @@
     </image:image>
 
     <image:image><image:loc>https://captionstudio.in/images/blog/premium-mahadev-bio-ideas.webp</image:loc></image:image>
-  </url>
+  <image:image><image:loc>https://captionstudio.in/images/blog/mahadev-hero-mobile-safe.webp</image:loc></image:image>
+</url>
   <url>
     <loc>https://captionstudio.in/blog/make-money-on-instagram-2026</loc>
     <image:image>
@@ -1400,4 +1401,5 @@
       <image:caption>Vibrant Indian cultural fusion wedding closeup of bride hands with intricate dark henna mehndi design</image:caption>
     </image:image>
   </url>
+  <url><loc>https://captionstudio.in/blog/instagram-bio-for-students</loc><image:image><image:loc>https://captionstudio.in/images/blog/student-instagram-bio-ideas.webp</image:loc></image:image></url>
 </urlset>
