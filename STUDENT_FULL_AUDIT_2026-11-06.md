@@ -1,7 +1,7 @@
 # Student article — detailed audit, 6 November 2026
 
 **Page:** https://captionstudio.in/blog/instagram-bio-for-students
-**Scope:** this article, its directly linked pages and relevant Search Console status. Not a full-domain audit. Live production observations are from before the latest logo/image fix; local tests are from after it. No AdSense account or Pinterest account access was available.
+**Scope:** this article, its directly linked pages and relevant Search Console status. Not a full-domain audit. The latest fix was pushed as commit 3087941. Production HTTP verification found the restored logo markup and enlarged-image CSS; visual and interaction tests were run locally. No AdSense account or Pinterest account access was available.
 
 ## Executive summary
 Two visual failures were caused by the previous redesign: the site's real logo was replaced with a star mark; Pinterest artwork was compressed to tiny 64–70 px thumbnails. Both are corrected in this change. The page is online and discoverable in a submitted sitemap, but Search Console currently reports **Discovered – currently not indexed**. There are 500 copyable entries and eight contextual image cards. More text or a bigger count cannot guarantee rankings or approval.
