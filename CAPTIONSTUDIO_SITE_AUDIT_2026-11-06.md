@@ -1,0 +1,44 @@
+# CaptionStudio detailed website audit — 6 November 2026
+
+## Scope and limitations
+Static scan of 76 repository HTML files including 45 files in `blog/` (one is the index), five XML sitemap files, robots.txt and 140 distinct same-domain link paths. Live HTTP checks follow redirects. Sampled Google Search Console/GA4/Bing reports are dated below, not a real-time feed. The scan is not a complete UX, policy, security or index coverage audit; HTTP 200 doesn't prove a page is useful or indexed. Crawling and fragment checks cannot reliably identify JavaScript-created targets or user interactions.
+
+## Executive priorities
+1. **P0 — Credentials:** GitHub PAT and Bing API key were shared in chat. Revoke and regenerate them, review access and use least-privilege credentials. Never publish secrets in the repository.
+2. **P0 — Indexing/measurement:** Student article inspection on 6 Nov showed “Discovered – currently not indexed,” with known sitemaps. Accepted sitemap submission is not indexing. Data is delayed and page-level Google URL coverage has not been checked for every page.
+3. **P1 — Broken navigation fixed:** Birthday page's Birthday Hashtags jump lacked its target; Instagram growth page's caption-generator CTA pointed to missing homepage `#generator`; two creator-pack links labelled YouTube Shorts actually redirected to Instagram Reel Hooks. Fixed target ID, sent CTA to `/tools/caption-generator`, and labelled/link-matched the Reel Hooks resource. The old public redirect remains; review its inbound search traffic and original intent before changing it.
+4. **P1 — Stale dashboard and regression:** Public Control Centre snapshot is dated 2 Nov, and page itself warns it is stale. The real browser regression script started but failed on missing expected text `Viral page bachana`; it stopped at that first assertion. This may be stale test expectations or a changed interface, not proof the entire app is broken. Do not call the test suite passed; review and update expectations after deciding intended interface.
+5. **P1 — Consent and ads:** Site has consent code; for IN/PK/BD/NP/LK the current region-specific defaults grant storage before a choice. Review policy/legal implications, disclosure, GA4/ads behavior and account settings with appropriate expertise. Student page has no AdSense script; other articles do. Site-specific AdSense status, ad rendering and approval are unverified. Ads.txt returns 200; this is not approval proof.
+6. **P1 — Performance:** 279,594-byte Diwali HTML and 202,587-byte Jai Shree Ram/Mahakal/Radhe Krishna HTML are large uncompressed source files; raw size alone is not a CWV diagnosis. Student image responsive variants reduced total eight-image transfer size by about 29% at 800px and 74% at 400px compared with original WebPs, when those candidates are selected. Browser chooses based on viewport/DPR and lazy loading; savings are not LCP or total-page metrics. PageSpeed API returned HTTP 429, so CWV, real field performance and Lighthouse score remain unmeasured.
+7. **P1 — Content quality and intent:** Student page has 500 entries, one normalised exact duplicate scan found none; surface-level token matching is not semantic quality review. Birthday article contains a visitor-visible 'SEO Fact Box' aimed at keywords rather than readers; rewrite or remove after editorial review. Check finance/earning articles for current evidence, clear disclaimers and unsupported earnings claims. Do not create new overlapping URLs merely to increase page count.
+8. **P2 — Robots rules:** `bingbot` and several named AI crawlers have explicit `Allow: /` groups, separate from the wildcard group that disallows `/data/`, `/ai-control` etc. Those named bots may not inherit wildcard disallows. These paths are public, not access-controlled; robots is not a security boundary. Decide desired crawler policy before changing it; do not unintentionally block useful indexing or ads crawlers.
+
+## Technical findings and counts
+- 76/76 scanned HTML files contain title and one H1. Four lack a meta description: `diwaok.html`, `contact/index.html`, `ai-control/research-plan.html`, `ai-control/pinterest.html`; these are archived/noindex, redirected or control pages, so missing descriptions are not automatically priority defects.
+- Nine control-centre files lack a canonical. Assess noindex/control strategy before adding canonicals. Duplicate titles/descriptions found only on control overview variants; duplicated canonicals include contact, archived and control variants and are not automatically errors.
+- One image without an `alt` attribute found on `ad-studio.html` gallery modal; its dynamically shown content needs a meaningful dynamic description and accessible modal controls, not a generic empty fix without testing.
+- All 140 tested distinct internal paths returned final HTTP 200 after following redirects at audit time. Many `.html` links redirect to extensionless URLs; this is extra navigation, not 140 broken pages. One legacy YouTube Shorts URL redirected to an Instagram-specific page and was misleading in two internal links; fixed internally. A final 200 can still be an irrelevant page or soft error.
+- Static fragment crawl found 32 missing targets across 52 target pages. Two were confirmed ordinary broken jumps and fixed. Thirty others are share/unlock action-style fragment links (6 each on five articles); they may be JS hooks and require interaction tests, not automatic removal.
+- XML parsed successfully. `sitemap-blogs.xml` lists 44 article URLs, matching the 44 article files when `blog/index.html` is excluded. Sitemap-image XML contains repeated image locations, which can legitimately occur for images used on different pages; not counted as duplicate-page errors.
+- 12 HTML files have under 300 extracted words, primarily control, archived and 404 pages. This does not mean 12 thin SEO pages; no fixed minimum word count exists.
+- Student page previous logo/image fix and 400/800px responsive variants are live in the tested HTML. Local Chromium tested at 360, 390, 768 and 1440 widths, no observed horizontal overflow/JS error. Copy test and keyboard Enter on one collection passed. No complete screen-reader audit.
+
+## Traffic and demand snapshot, 3–5 November (previously fetched; refresh needed)
+- GA4: 159 + 163 + 173 = **495 sessions**; previous 31 Oct–2 Nov = 499. These are not strictly all post-deployment: 3 Nov contains hours before the 3 Nov change. GA4 and GSC use different reporting systems and time zones.
+- GA4 channels: Bing organic 172 sessions, DuckDuckGo 116, Google organic 48, Pinterest 11. GA4 `caption_copy`: 144 events / 63 users; `tool_generate`: 29 / 15. Tracking/consent may mean undercounting.
+- Telegram custom click: 7 events / 6 users. Automatic outbound click events overlap; do not sum them. Without impression denominators, invite-link joins or cost, CTR, actual joins and ROI are unknown.
+- Google Search Console: 3 Nov 9 clicks/154 impressions; 4 Nov 18/168; 5 Nov 10/114. Recent dates may be incomplete. Student page “discovered, not indexed” inspection does not describe the whole site.
+- Bing query example in latest returned 30 Oct bucket: “instagram bio” 114 clicks / 411 impressions. Bucket range not independently established. Main bio page drives substantial Bing traffic; avoid deleting or merging URLs without per-page indexing and query evidence.
+
+## Action plan
+**Now:** ship the tested student responsive images and three confirmed navigation corrections; verify live. Revoke exposed credentials. Record verification and update regression test based on intended UX, not merely deleting failing assertions.
+
+**Next:** review student indexing in GSC, request normal URL inspection if appropriate; check important legacy redirect intents; manually test share/unlock buttons and mobile copy flows. Verify GA4 DebugView for `caption_copy`, bio categories, Telegram and Pinterest events. Compare joins separately. Review current AdSense site status, account-specific notices and consent setup.
+
+**After enough complete data:** compare equal date windows and landing/query intent; editorial review the dominant main bio page, viral reels and birthday pages; audit factual/financial claims. Re-measure with PageSpeed/field data when available. Publish relevant Pinterest pins manually with distinct UTM only with account access; publishing and results are not verified. Revisit overlapping/new page opportunities after query and URL inspection.
+
+## Sources and context
+- Google people-first content and word count: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+- Google Indexing API eligibility: https://developers.google.com/search/apis/indexing-api/v3/using-api
+- Google Publisher Policies: https://support.google.com/adsense/answer/10502938?hl=en
+- GSC/GA4/Bing figures are historical API snapshots from the current session; they are not claimed as fresh data for 6 Nov.
