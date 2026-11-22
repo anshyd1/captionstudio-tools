@@ -909,7 +909,7 @@
     },
     {
       "source": "/author/ansh-yadav",
-      "destination": "/author-ansh-yadav.html"
+      "destination": "/author/ansh-yadav.html"
     },
     {
       "source": "/(.*)",
