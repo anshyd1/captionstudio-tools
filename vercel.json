@@ -908,6 +908,10 @@
       "destination": "/ai-control/agent.html"
     },
     {
+      "source": "/author/ansh-yadav",
+      "destination": "/author-ansh-yadav.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/404.html"
     }
